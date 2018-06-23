@@ -1,0 +1,17 @@
+name: Zaga Bracers
+description: Arms protection forged from Nayzaga trophies.
+icon: /assets/icons/armours/ZagaBracers.png
+type: Arms
+strength: Shock
+weakness: Frost
+cells: Technique
+tier: 4
+resistance:
+  0: 58
+  1: 63
+  2: 68
+  3: 73
+  4: 78
+perks:
+  - name: Aetheric Attunement
+    value: 1

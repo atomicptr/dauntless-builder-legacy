@@ -1,0 +1,17 @@
+name: Zaga Greaves
+description: Leg and foot protection forged from Nayzaga trophies.
+icon: /assets/icons/armours/ZagaGreaves.png
+type: Legs
+strength: Shock
+weakness: Frost
+cells: Mobility
+tier: 4
+resistance:
+  0: 58
+  1: 63
+  2: 68
+  3: 73
+  4: 78
+perks:
+  - name: Medic
+    value: 1
