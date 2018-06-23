@@ -28,6 +28,6 @@ unique_effects:
     to: 5
   - name: SeventhHitWoundDamage
     description: The seventh hit in a row deals +300 Wound damage.
-    value: 200
+    value: 300
     from: 6
     to: 10

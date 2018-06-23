@@ -20,15 +20,14 @@ power:
 perks:
   - name: Evasive Fury
     value: 1
-    from: 0
-    to: 5
-  - name: Evasive Fury
-    value: 2
-    from: 6
-    to: 10
-  - name: Barbed
-    value: 2
 unique_effects:
   - name: TenthHitBonusDamage
     description: The tenth hit in quick succession deals 150 bonus damage.
     value: 150
+    from: 0
+    to: 5
+  - name: TenthHitBonusDamage
+    description: The tenth hit in quick succession deals 250 bonus damage.
+    value: 250
+    from: 6
+    to: 10
