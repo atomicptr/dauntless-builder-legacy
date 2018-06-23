@@ -1,0 +1,17 @@
+name: Kharabak Plate
+description: Torso protection forged from Kharabak trophies.
+icon: /assets/icons/armours/KharabakPlate.png
+type: Torso
+strength: null
+weakness: null
+cells: Mobility
+tier: 4
+resistance:
+  0: 70
+  1: 75
+  2: 80
+  3: 85
+  4: 90
+perks:
+  - name: Bladestorm
+    value: 1

@@ -1,0 +1,17 @@
+name: Pangar Boots
+description: Leg and foot protection forged from Pangar trophies.
+icon: /assets/icons/armours/PangarBoots.png
+type: Legs
+strength: Frost
+weakness: Blaze
+cells: Defence
+tier: 4
+resistance:
+  0: 66
+  1: 70
+  2: 74
+  3: 78
+  4: 82
+perks:
+  - name: Endurance
+    value: 1
