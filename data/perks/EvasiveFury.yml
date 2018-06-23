@@ -18,5 +18,5 @@ effects:
     description: 20% Attack Speed for 8 seconds after dodging through an attack
     value: 0.2
   6:
-    description: 25% Attack Speed for 8 seconds after dodging through an attack
+    description: 25% Attack Speed for 16 seconds after dodging through an attack
     value: 0.25
