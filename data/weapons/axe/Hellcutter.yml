@@ -1,0 +1,17 @@
+name: Hellcutter
+description: A Slayer's axe forged with Hellion trophies.
+icon: /assets/icons/weapons/axe/Hellcutter.png
+type: Axe
+damage: Slashing
+elemental: Blaze
+cells: [Power, Power]
+tier: 4
+power:
+  0: 264
+  1: 284
+  2: 304
+  3: 324
+  4: 344
+perks:
+  - name: Overpower
+    value: 2

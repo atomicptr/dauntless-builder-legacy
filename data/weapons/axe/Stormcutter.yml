@@ -1,0 +1,18 @@
+name: Stormcutter
+description: A Slayer's axe forged with Stormclaw trophies.
+icon: /assets/icons/weapons/axe/Stormcutter.png
+type: Axe
+damage: Slashing
+elemental: Shock
+cells: [Power, Mobility]
+tier: 4
+power:
+  0: 264
+  1: 284
+  2: 304
+  3: 324
+  4: 344
+unique_effects:
+  - name: DodgeMeterGain
+    description: After dodging through an attack the next weapon attack has 200% meter gain.
+    value: 300

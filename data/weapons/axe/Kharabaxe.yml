@@ -1,0 +1,18 @@
+name: Kharabaxe
+description: A Slayer's axe forged with Kharabak trophies.
+icon: /assets/icons/weapons/axe/Kharabaxe.png
+type: Axe
+damage: Slashing
+elemental: null
+cells: [Power, Technique]
+tier: 4
+power:
+  0: 280
+  1: 300
+  2: 320
+  3: 340
+  4: 360
+unique_effects:
+  - name: ComboFinisherDamage
+    description: Combo finishers deal 200 bonus damage.
+    value: 200

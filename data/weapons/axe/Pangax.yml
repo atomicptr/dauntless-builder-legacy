@@ -1,0 +1,17 @@
+name: Pangax
+description: A Slayer's axe forged with Pangar trophies.
+icon: /assets/icons/weapons/axe/Pangax.png
+type: Axe
+damage: Slashing
+elemental: Frost
+cells: [Power, Defence]
+tier: 4
+power:
+  0: 248
+  1: 268
+  2: 288
+  3: 308
+  4: 328
+perks:
+  - name: Aetherhunter
+    value: 2
