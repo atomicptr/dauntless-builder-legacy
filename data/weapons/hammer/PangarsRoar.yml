@@ -1,0 +1,17 @@
+name: Pangar's Roar
+description: A Slayer's hammer forged with Pangar trophies.
+icon: /assets/icons/weapons/hammer/PangarsRoar.png
+type: Hammer
+damage: Blunt
+elemental: Frost
+cells: [Power, Defence]
+tier: 4
+power:
+  0: 248
+  1: 268
+  2: 288
+  3: 308
+  4: 328
+perks:
+  - name: Aetherhunter
+    value: 2

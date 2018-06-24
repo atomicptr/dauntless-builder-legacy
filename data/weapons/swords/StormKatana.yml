@@ -1,0 +1,18 @@
+name: Storm Katana
+description: A Slayer's sword forged with Stormclaw trophies.
+icon: /assets/icons/weapons/swords/StormKatana.png
+type: Sword
+damage: Slashing
+elemental: Shock
+cells: [Technique, Mobility]
+tier: 4
+power:
+  0: 264
+  1: 284
+  2: 304
+  3: 324
+  4: 344
+unique_effects:
+  - name: DodgeMeterGain
+    description: After dodging through an attack the next weapon attack has 200% meter gain.
+    value: 300

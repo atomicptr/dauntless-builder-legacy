@@ -1,0 +1,16 @@
+name: Pangar's Tooth
+description: A Slayer's war pike forged with Pangar trophies.
+icon: /assets/icons/weapons/warpike/PangarsTooth.png
+type: War Pike
+damage: Piercing
+elemental: Frost
+cells: [Technique, Defence]
+tier: 4
+power:
+  0: 248
+  1: 268
+  2: 288
+  3: 308
+  4: 328
+  - name: Aetherhunter
+    value: 2

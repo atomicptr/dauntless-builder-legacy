@@ -1,0 +1,18 @@
+name: Stormhammer
+description: A Slayer's hammer forged with Stormclaw trophies.
+icon: /assets/icons/weapons/hammer/Stormhammer.png
+type: Hammer
+damage: Blunt
+elemental: Shock
+cells: [Power, Mobility]
+tier: 4
+power:
+  0: 264
+  1: 284
+  2: 304
+  3: 324
+  4: 344
+unique_effects:
+  - name: BlastdodgeReload
+    description: Reloads 4 Hammer Ammo after Blastdodging through an attack.
+    value: 4
