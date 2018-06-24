@@ -12,5 +12,6 @@ power:
   2: 320
   3: 340
   4: 360
+perks:
   - name: Bladestorm
     value: 2
