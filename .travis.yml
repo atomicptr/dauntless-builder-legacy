@@ -10,6 +10,7 @@ before_script:
 script:
 - yarn build-data
 - yarn build-frontend
+- yarn test
 after_script:
 - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./.travis/pr_after_script.sh; fi'
 - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./.travis/after_script.sh; fi'

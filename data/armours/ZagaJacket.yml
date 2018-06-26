@@ -1,6 +1,6 @@
 name: Zaga Jacket
 description: Torso protection forged from Nayzaga trophies.
-icon: /assets/icons/armours/ZagaVest.png
+#icon: /assets/icons/armours/ZagaVest.png
 type: Torso
 strength: Shock
 weakness: Frost

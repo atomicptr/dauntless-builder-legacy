@@ -1,6 +1,6 @@
 name: Shockjaw Vest
 description: Torso protection forged from Shockjaw trophies.
-icon: /assets/icons/armours/ShockjawVest.png
+#icon: /assets/icons/armours/ShockjawVest.png
 type: Torso
 strength: Shock
 weakness: Frost

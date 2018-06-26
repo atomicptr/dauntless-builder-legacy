@@ -1,6 +1,6 @@
 name: Shockjaw Mask
 description: Head protection forged from Shockjaw trophies.
-icon: /assets/icons/armours/ShockjawMask.png
+#icon: /assets/icons/armours/ShockjawMask.png
 type: Head
 strength: Shock
 weakness: Frost

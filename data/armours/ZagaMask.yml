@@ -1,6 +1,6 @@
 name: Zaga Mask
 description: Head protection forged from Nayzaga trophies.
-icon: /assets/icons/armours/ZagaMask.png
+#icon: /assets/icons/armours/ZagaMask.png
 type: Head
 strength: Shock
 weakness: Frost

@@ -1,6 +1,6 @@
 name: Zaga Bracers
 description: Arms protection forged from Nayzaga trophies.
-icon: /assets/icons/armours/ZagaBracers.png
+#icon: /assets/icons/armours/ZagaBracers.png
 type: Arms
 strength: Shock
 weakness: Frost

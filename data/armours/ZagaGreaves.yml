@@ -1,6 +1,6 @@
 name: Zaga Greaves
 description: Leg and foot protection forged from Nayzaga trophies.
-icon: /assets/icons/armours/ZagaGreaves.png
+#icon: /assets/icons/armours/ZagaGreaves.png
 type: Legs
 strength: Shock
 weakness: Frost
