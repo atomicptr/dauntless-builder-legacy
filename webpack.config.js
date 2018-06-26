@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    mode: process.argv.indexOf("--production") > -1 ? "production" : "development",
     devtool: 'source-map',
     output: {
         libraryTarget: "umd",
