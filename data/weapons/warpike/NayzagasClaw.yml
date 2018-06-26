@@ -1,0 +1,18 @@
+name: Nayzaga's Claw
+description: A Slayer's war pike forged with Nayzaga trophies.
+icon: /assets/icons/weapons/warpike/NayzagasClaw.png
+type: War Pike
+damage: Piercing
+elemental: Shock
+cells: [Utility, Mobility]
+tier: 4
+power:
+  0: 232
+  1: 252
+  2: 272
+  3: 292
+  4: 312
+unique_effects:
+  - name: WoundedPartsLifesteal
+    description: +5% Lifesteal vs Wounded parts.
+    value: 1.05

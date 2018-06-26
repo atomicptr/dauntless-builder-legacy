@@ -1,0 +1,17 @@
+name: Stormhelm
+description: Head protection forged from Stormclaw trophies.
+icon: /assets/icons/armours/Stormhelm.png
+type: Head
+strength: Shock
+weakness: Blaze
+cells: Technique
+tier: 4
+resistance:
+  0: 66
+  1: 71
+  2: 76
+  3: 81
+  4: 86
+perks:
+  - name: Energized
+    value: 1

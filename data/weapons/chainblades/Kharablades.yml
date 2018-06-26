@@ -1,0 +1,17 @@
+name: Kharablades
+description: A Slayer's chain blades forged with Kharabak trophies.
+icon: /assets/icons/weapons/chainblades/Kharablades.png
+type: Chain Blades
+damage: Slashing
+elemental: null
+cells: [Technique, Mobility]
+tier: 4
+power:
+  0: 280
+  1: 300
+  2: 320
+  3: 340
+  4: 360
+perks:
+  - name: Bladestorm
+    value: 2

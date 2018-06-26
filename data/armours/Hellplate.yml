@@ -1,0 +1,17 @@
+name: Hellplate
+description: Torso protection forged from Hellion trophies.
+icon: /assets/icons/armours/Hellplate.png
+type: Torso
+strength: Blaze
+weakness: Frost
+cells: Utility
+tier: 4
+resistance:
+  0: 66
+  1: 71
+  2: 76
+  3: 81
+  4: 86
+perks:
+  - name: Fortress
+    value: 1

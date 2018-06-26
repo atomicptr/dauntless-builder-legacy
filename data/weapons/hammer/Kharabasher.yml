@@ -1,0 +1,18 @@
+name: Kharabasher
+description: A Slayer's hammer forged with Kharabak trophies.
+icon: /assets/icons/weapons/hammer/Kharabasher.png
+type: Hammer
+damage: Blunt
+elemental: null
+cells: [Power, Technique]
+tier: 4
+power:
+  0: 280
+  1: 300
+  2: 320
+  3: 340
+  4: 360
+unique_effects:
+  - name: ReloadStamina
+    description: Restore 30 Stamina after reloading a shell.
+    value: 30

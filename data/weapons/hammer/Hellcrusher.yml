@@ -1,0 +1,18 @@
+name: Hellcrusher
+description: A Slayer's hammer forged with Hellion trophies.
+icon: /assets/icons/weapons/hammer/Hellcrusher.png
+type: Hammer
+damage: Blunt
+elemental: Blaze
+cells: [Power, Power]
+tier: 4
+power:
+  0: 264
+  1: 284
+  2: 304
+  3: 324
+  4: 344
+unique_effects:
+  - name: PrimedDamage
+    description: 125% Primed hammer attack damage.
+    value: 1.25

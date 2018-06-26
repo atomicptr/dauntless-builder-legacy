@@ -1,0 +1,18 @@
+name: Zaga Maul
+description: A Slayer's hammer forged with Nayzaga trophies.
+icon: /assets/icons/weapons/hammer/ZagaMaul.png
+type: Hammer
+damage: Blunt
+elemental: Shock
+cells: [Utility, Mobility]
+tier: 4
+power:
+  0: 232
+  1: 252
+  2: 272
+  3: 292
+  4: 312
+unique_effects:
+  - name: StaggerHeal
+    description: Heal for 300 whenever a Behemoth is Staggered.
+    value: 300

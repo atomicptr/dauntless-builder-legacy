@@ -1,0 +1,17 @@
+name: Kharabak Helm
+description: Head protection forged from Kharabak trophies.
+icon: /assets/icons/armours/KharabakHelm.png
+type: Head
+strength: null
+weakness: null
+cells: Mobility
+tier: 4
+resistance:
+  0: 70
+  1: 75
+  2: 80
+  3: 85
+  4: 90
+perks:
+  - name: Endurance
+    value: 1

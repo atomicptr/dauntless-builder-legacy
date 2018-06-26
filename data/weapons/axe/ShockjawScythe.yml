@@ -9,6 +9,7 @@ tier: 5
 power:
   0: 310
   1: 322
+  2: 334
   3: 346
   4: 358
   5: 370
@@ -28,5 +29,5 @@ perks:
     to: 10
 unique_effects:
   - name: VerticalAttackHeal
-    description: Heal 200 on perfectly charged vertial attacks.
+    description: Heal 200 on perfectly charged vertical attacks.
     value: 200

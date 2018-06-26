@@ -8,14 +8,12 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "yarn build-data && yarn build-frontend",
-    "build-frontend": "webpack --mode production",
     "build-data": "node ./scripts/builder.js",
-    "prod": "yarn build-data && yarn build-frontend --production"
+    "build-frontend": "webpack --mode=production",
+    "build-dev": "webpack --mode=development"
   },
   "dependencies": {
-    "glob": "^7.1.2",
     "hashids": "^1.1.4",
-    "js-yaml": "^3.12.0",
     "react": "^16.4.0",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.4.0",
@@ -29,7 +27,12 @@
     "babel-loader": "^7.1.4",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.11",
+<<<<<<< HEAD
     "html-webpack-plugin": "^3.2.0",
+=======
+    "glob": "^7.1.2",
+    "js-yaml": "^3.12.0",
+>>>>>>> 9da13c52674fc0af3a8ec1d2a3d7046a767b8a67
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",

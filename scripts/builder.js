@@ -74,6 +74,10 @@ Promise.all([
         weapons: data[5],
     }
 
+    if(!fs.existsSync("./dist")) {
+        fs.mkdirSync("./dist");
+    }
+
     fs.writeFileSync("./dist/data.json", JSON.stringify(object));
 
     console.log("Built data.json");

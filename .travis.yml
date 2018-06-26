@@ -8,9 +8,8 @@ before_script:
 - git config --global user.email "travis@travis-ci.org"
 - git config --global user.name "Travis CI"
 script:
-- mkdir -p dist/
 - yarn build-data
-- yarn build-frontend --production
+- yarn build-frontend
 after_script:
 - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./.travis/pr_after_script.sh; fi'
 - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./.travis/after_script.sh; fi'

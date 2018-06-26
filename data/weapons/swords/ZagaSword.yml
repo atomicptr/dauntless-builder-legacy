@@ -1,0 +1,18 @@
+name: Zaga Sword
+description: A Slayer's sword forged with Nayzaga trophies.
+icon: /assets/icons/weapons/swords/ZagaSword.png
+type: Sword
+damage: Slashing
+elemental: Shock
+cells: [Utility, Mobility]
+tier: 4
+power:
+  0: 232
+  1: 252
+  2: 272
+  3: 292
+  4: 312
+unique_effects:
+  - name: WoundedPartsLifesteal
+    description: +5% Lifesteal vs Wounded parts.
+    value: 1.05

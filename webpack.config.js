@@ -3,7 +3,6 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     devtool: 'source-map',
-    mode: process.argv.indexOf("--production") > -1 ? "production" : "development",
     output: {
         libraryTarget: "umd",
         filename: "dauntless-builder.js"

@@ -1,0 +1,18 @@
+name: Zagachopper
+description: A Slayer's axe forged with Nayzaga trophies.
+icon: /assets/icons/weapons/axe/Zagachopper.png
+type: Axe
+damage: Slashing
+elemental: Shock
+cells: [Utility, Mobility]
+tier: 4
+power:
+  0: 232
+  1: 252
+  2: 272
+  3: 292
+  4: 312
+unique_effects:
+  - name: VerticalAttackHeal
+    description: Heal 200 on perfectly charged vertical attacks.
+    value: 200

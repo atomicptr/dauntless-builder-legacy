@@ -1,0 +1,17 @@
+name: Pangar Grips
+description: Arms protection forged from Pangar trophies.
+icon: /assets/icons/armours/PangarGrips.png
+type: Arms
+strength: Frost
+weakness: Blaze
+cells: Power
+tier: 4
+resistance:
+  0: 66
+  1: 70
+  2: 74
+  3: 78
+  4: 82
+perks:
+  - name: Knockout King
+    value: 1

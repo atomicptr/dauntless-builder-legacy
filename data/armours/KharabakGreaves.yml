@@ -1,0 +1,17 @@
+name: Kharabak Greaves
+description: Leg and foot protection forged from Kharabak trophies.
+icon: /assets/icons/armours/KharabakGreaves.png
+type: Legs
+strength: null
+weakness: null
+cells: Technique
+tier: 4
+resistance:
+  0: 70
+  1: 75
+  2: 80
+  3: 85
+  4: 90
+perks:
+  - name: Bladestorm
+    value: 1
