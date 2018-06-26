@@ -11,9 +11,6 @@ In your copy of the **dauntless-builder** directory, use the following in your s
 # First we need to install yarn via:
 npm install -g yarn
 
-# For development you'll also need a web server, I recommend http-serve
-npm install -g http-serve
-
 # Install/update all dependencies via
 yarn
 
@@ -21,7 +18,7 @@ yarn
 yarn build
 
 # Next run your webserver via
-http-serve
+yarn start
 ```
 
 Done, you have a version of this app running on whatever port http-serve decided to run on (usually :8080).

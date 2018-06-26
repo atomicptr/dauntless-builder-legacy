@@ -1,9 +1,10 @@
 const path = require("path");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: "./src/App.jsx",
+    mode: process.argv.indexOf("--production") > -1 ? "production" : "development",
+    devtool: 'source-map',
     output: {
-        path: path.join(__dirname, "dist"),
         libraryTarget: "umd",
         filename: "dauntless-builder.js"
     },
@@ -12,10 +13,9 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                loader: "babel-loader",
-                query: {
-                    presets: ["react"]
-                }
+                use: [
+                    'babel-loader',
+                ],
             },
             {
                 test: /\.s?css$/,
@@ -34,5 +34,8 @@ module.exports = {
             "node_modules"
         ],
         extensions: [".js", ".jsx"]
-    }
+    },
+    plugins: [new HtmlWebPackPlugin({
+        template: './src/index.html',
+    })],
 }
