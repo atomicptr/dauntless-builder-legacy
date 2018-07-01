@@ -1,0 +1,16 @@
+name: Embergreaves
+description: Leg and foot protection forged from Embermane trophies.
+icon: /assets/icons/armours/Embergreaves.png
+type: Legs
+strength: Blaze
+weakness: Shock
+cells: Mobility
+tier: 3
+resistance:
+  0: 50
+  1: 55
+  2: 60
+  3: 65
+perks:
+  - name: Evasive Fury
+    value: 1

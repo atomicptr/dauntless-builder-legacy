@@ -1,0 +1,16 @@
+name: Skraev Greaves
+description: Leg and foot protection forged from Skraev trophies.
+icon: /assets/icons/armours/SkraevGreaves.png
+type: Legs
+strength: Frost
+weakness: Shock
+cells: Utility
+tier: 3
+resistance:
+  0: 50
+  1: 55
+  2: 60
+  3: 65
+perks:
+  - name: Evasion
+    value: 1

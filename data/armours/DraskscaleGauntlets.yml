@@ -1,0 +1,16 @@
+name: Draskscale Gauntlets
+description: Arms protection forged from Drask trophies.
+icon: /assets/icons/armours/DraskscaleGauntlets.png
+type: Arms
+strength: Shock
+weakness: null
+cells: Utility
+tier: 3
+resistance:
+  0: 54
+  1: 59
+  2: 64
+  3: 69
+perks:
+  - name: Sharpened
+    value: 1

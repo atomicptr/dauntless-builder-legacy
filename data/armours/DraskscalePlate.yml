@@ -1,0 +1,16 @@
+name: Draskscale Plate
+description: Torso protection forged from Drask trophies.
+icon: /assets/icons/armours/DraskscalePlate.png
+type: Torso
+strength: Shock
+weakness: null
+cells: Power
+tier: 3
+resistance:
+  0: 54
+  1: 59
+  2: 64
+  3: 69
+perks:
+  - name: Sharpened
+    value: 1

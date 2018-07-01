@@ -1,0 +1,16 @@
+name: Draskscale Greaves
+description: Leg and foot protection forged from Drask trophies.
+icon: /assets/icons/armours/DraskscaleGreaves.png
+type: Legs
+strength: Shock
+weakness: null
+cells: Utility
+tier: 3
+resistance:
+  0: 54
+  1: 59
+  2: 64
+  3: 69
+perks:
+  - name: Aetheric Attunement
+    value: 1
