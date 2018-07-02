@@ -1,0 +1,16 @@
+name: Skarn Bracers
+description: Arms protection forged from Skarn trophies.
+icon: /assets/icons/armours/SkarnBracers.png
+type: Arms
+strength: null
+weakness: null
+cells: Defence
+tier: 2
+resistance:
+  0: 42
+  1: 47
+  2: 52
+  3: 57
+perks:
+  - name: Sturdy
+    value: 1

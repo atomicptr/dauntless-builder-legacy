@@ -1,0 +1,15 @@
+name: Gnasher Boots
+description: Leg and foot protection forged from Gnasher trophies.
+icon: /assets/icons/armours/GnasherBoots.png
+type: Legs
+strength: null
+weakness: null
+cells: Utility
+tier: 2
+resistance:
+  0: 30
+  1: 35
+  2: 40
+perks:
+  - name: Ragehunter
+    value: 1

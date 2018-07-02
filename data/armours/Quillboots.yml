@@ -1,0 +1,15 @@
+name: Quillboots
+description: Leg and foot protection forged from Quillshit trophies.
+icon: /assets/icons/armours/Quillboots.png
+type: Legs
+strength: null
+weakness: null
+cells: Utility
+tier: 2
+resistance:
+  0: 38
+  1: 43
+  2: 48
+perks:
+  - name: Sharpened
+    value: 1
