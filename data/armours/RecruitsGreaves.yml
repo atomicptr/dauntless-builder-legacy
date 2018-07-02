@@ -1,0 +1,11 @@
+name: Recruit's Greaves
+description: Leg and foot protection for the novice Slayer.
+icon: /assets/icons/armours/RecruitsGreaves.png
+type: Legs
+strength: null
+weakness: null
+cells: null
+tier: 1
+resistance:
+  0: 22
+  1: 27
