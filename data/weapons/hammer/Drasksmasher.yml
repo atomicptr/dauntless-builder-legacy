@@ -1,0 +1,17 @@
+name: Drasksmasher
+description: A Slayer's hammer forged with Drask trophies.
+icon: /assets/icons/weapons/hammer/Drasksmasher.png
+type: Hammer
+damage: Blunt
+elemental: Shock
+cells: [Power, Defence]
+tier: 3
+power:
+  0: 216
+  1: 236
+  2: 256
+  3: 276
+unique_effects:
+  - name: HeadDamage
+    description: 120% damage increase versus Behemoth heads.
+    value: 1.2

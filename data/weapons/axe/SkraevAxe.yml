@@ -1,0 +1,17 @@
+name: Skraev Axe
+description: A Slayer's axe forged with Skraev trophies.
+icon: /assets/icons/weapons/axe/SkraevAxe.png
+type: Axe
+damage: Slashing
+elemental: Frost
+cells: [Power, Mobility]
+tier: 3
+power:
+  0: 200
+  1: 220
+  2: 240
+  3: 260
+unique_effects:
+  - name: FourthHitBonusDamage
+    description: The fourth hit in quick succession deals 150 bonus damage.
+    value: 150

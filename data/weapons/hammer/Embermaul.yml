@@ -1,0 +1,17 @@
+name: Embermaul
+description: A Slayer's hammer forged with Embermane trophies.
+icon: /assets/icons/weapons/hammer/Embermaul.png
+type: Hammer
+damage: Blunt
+elemental: Blaze
+cells: [Power, Mobility]
+tier: 3
+power:
+  0: 200
+  1: 220
+  2: 240
+  3: 260
+unique_effects:
+  - name: BlastAtackSpeed
+    description: +25% Attack Speed for 8 Seconds after landing a Hammer Blast.
+    value: 1.25

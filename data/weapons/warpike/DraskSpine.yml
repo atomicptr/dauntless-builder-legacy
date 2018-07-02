@@ -1,0 +1,16 @@
+name: Drask Spine
+description: A Slayer's war pike forged with Drask trophies.
+icon: /assets/icons/weapons/warpike/DraskSpine.png
+type: War Pike
+damage: Piercing
+elemental: Shock
+cells: [Technique, Power]
+tier: 3
+power:
+  0: 216
+  1: 236
+  2: 256
+  3: 276
+perks:
+  - name: Savagery
+    value: 2

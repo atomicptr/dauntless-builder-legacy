@@ -1,0 +1,16 @@
+name: Charrpike
+description: A Slayer's war pike forged with Charrogg trophies.
+icon: /assets/icons/weapons/warpike/Charrpike.png
+type: War Pike
+damage: Piercing
+elemental: Blaze
+cells: [Technique, Defence]
+tier: 3
+power:
+  0: 184
+  1: 204
+  2: 224
+  3: 244
+perks:
+  - name: Rage
+    value: 2

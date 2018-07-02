@@ -1,0 +1,17 @@
+name: Skraevmaul
+description: A Slayer's hammer forged with Skraev trophies.
+icon: /assets/icons/weapons/hammer/Skraevmaul.png
+type: Hammer
+damage: Blunt
+elemental: Frost
+cells: [Power, Mobility]
+tier: 3
+power:
+  0: 200
+  1: 220
+  2: 240
+  3: 260
+unique_effects:
+  - name: FifthHitStaggerDamage
+    description: The fifth hit in a row deals +100% Stagger damage
+    value: 2

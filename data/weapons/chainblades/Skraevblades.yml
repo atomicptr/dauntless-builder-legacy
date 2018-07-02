@@ -1,0 +1,17 @@
+name: Skraevblades
+description: A Slayer's chain blades forged with Skraev trophies.
+icon: /assets/icons/weapons/chainblades/Skraevblades.png
+type: Chain Blades
+damage: Slashing
+elemental: Frost
+cells: [Technique, Mobility]
+tier: 3
+power:
+  0: 200
+  1: 220
+  2: 240
+  3: 260
+unique_effects:
+  - name: TenthHitBonusDamage
+    description: The tenth hit in quick succession deals 150 bonus damage.
+    value: 150

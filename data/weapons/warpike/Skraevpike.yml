@@ -1,0 +1,17 @@
+name: Skraevpike
+description: A Slayer's war pike forged with Skraev trophies.
+icon: /assets/icons/weapons/warpike/Skraevpike.png
+type: War Pike
+damage: Piercing
+elemental: Frost
+cells: [Technique, Mobility]
+tier: 3
+power:
+  0: 200
+  1: 220
+  2: 240
+  3: 260
+unique_effects:
+  - name: SeventhHitWoundDamage
+    description: The seventh hit in a row deals +200 Wound damage.
+    value: 200

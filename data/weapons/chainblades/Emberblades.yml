@@ -1,0 +1,16 @@
+name: Emberblades
+description: A Slayer's chain blades forged with Embermane trophies.
+icon: /assets/icons/weapons/chainblades/Emberblades.png
+type: Chain Blades
+damage: Slashing
+elemental: Blaze
+cells: [Technique, Mobility]
+tier: 3
+power:
+  0: 200
+  1: 220
+  2: 240
+  3: 260
+perks:
+  - name: Evasive Fury
+    value: 2
