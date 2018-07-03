@@ -1,6 +1,6 @@
 name: Skraevsaber
 description: A Slayer's sword forged with Skraev trophies.
-icon: /assets/icons/weapons/sword/Skraevsaber.png
+icon: /assets/icons/weapons/swords/Skraevsaber.png
 type: Sword
 damage: Slashing
 elemental: Frost

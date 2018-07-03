@@ -1,6 +1,6 @@
 name: Skarnsaber
 description: A Slayer's sword forged with Skarn trophies.
-icon: /assets/icons/weapons/sword/Skarnsaber.png
+icon: /assets/icons/weapons/swords/Skarnsaber.png
 type: Sword
 damage: Slashing
 elemental: null

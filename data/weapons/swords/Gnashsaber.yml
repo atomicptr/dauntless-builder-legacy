@@ -1,6 +1,6 @@
 name: Gnashsaber
 description: A Slayer's sword forged with Gnasher trophies.
-icon: /assets/icons/weapons/sword/Gnashsaber.png
+icon: /assets/icons/weapons/swords/Gnashsaber.png
 type: Sword
 damage: Slashing
 elemental: null

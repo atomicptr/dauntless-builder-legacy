@@ -1,6 +1,6 @@
 name: Ember Cutlass
 description: A Slayer's sword forged with Embermane trophies.
-icon: /assets/icons/weapons/sword/EmberCutlass.png
+icon: /assets/icons/weapons/swords/EmberCutlass.png
 type: Sword
 damage: Slashing
 elemental: Blaze

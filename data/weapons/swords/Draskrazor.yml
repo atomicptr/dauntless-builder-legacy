@@ -1,6 +1,6 @@
 name: Draskrazor
 description: A Slayer's sword forged with Drask trophies.
-icon: /assets/icons/weapons/sword/Draskrazor.png
+icon: /assets/icons/weapons/swords/Draskrazor.png
 type: Sword
 damage: Slashing
 elemental: Shock

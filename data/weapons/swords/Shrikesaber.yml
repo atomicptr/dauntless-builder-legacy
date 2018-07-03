@@ -1,6 +1,6 @@
 name: Shrikesaber
 description: A Slayer's sword forged with Shrike trophies.
-icon: /assets/icons/weapons/sword/Shrikesaber.png
+icon: /assets/icons/weapons/swords/Shrikesaber.png
 type: Sword
 damage: Slashing
 elemental: null
