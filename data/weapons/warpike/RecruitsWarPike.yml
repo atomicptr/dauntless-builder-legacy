@@ -1,0 +1,11 @@
+name: Recruit's War Pike
+description: A Slayer Recruit's war pike.
+icon: /assets/icons/weapons/warpike/RecruitsWarPike.png
+type: War Pike
+damage: Piercing
+elemental: null
+cells: null
+tier: 1
+power:
+  0: 88
+  1: 108

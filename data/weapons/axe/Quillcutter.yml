@@ -1,0 +1,15 @@
+name: Quillcutter
+description: A Slayer's axe forged with Quillshot trophies.
+icon: /assets/icons/weapons/axe/Quillcutter.png
+type: Axe
+damage: Slashing
+elemental: null
+cells: [Power, Defence]
+tier: 2
+power:
+  0: 152
+  1: 172
+  2: 192
+perks:
+  - name: Bladestorm
+    value: 2

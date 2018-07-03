@@ -1,0 +1,15 @@
+name: Quillpike
+description: A Slayer's war pike forged with Quillshot trophies.
+icon: /assets/icons/weapons/warpike/Quillpike.png
+type: War Pike
+damage: Piercing
+elemental: null
+cells: [Technique, Defence]
+tier: 2
+power:
+  0: 152
+  1: 172
+  2: 192
+perks:
+  - name: Bladestorm
+    value: 2

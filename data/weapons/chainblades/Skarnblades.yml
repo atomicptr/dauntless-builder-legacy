@@ -1,0 +1,16 @@
+name: Skarnblades
+description: A Slayer's chain blades forged with Skarn trophies.
+icon: /assets/icons/weapons/chainblades/Skarnblades.png
+type: Chain Blades
+damage: Slashing
+elemental: null
+cells: [Technique, Defence]
+tier: 2
+power:
+  0: 168
+  1: 188
+  2: 208
+  3: 228
+perks:
+  - name: Weighted Strikes
+    value: 2
