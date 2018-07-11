@@ -1,0 +1,15 @@
+name: Gnashmasher
+description: A Slayer's hammer forged with Gnasher trophies.
+icon: /assets/icons/weapons/hammer/Gnashmasher.png
+type: Hammer
+damage: Blunt
+elemental: null
+cells: [Power, Mobility]
+tier: 2
+power:
+  0: 120
+  1: 140
+  2: 160
+perks:
+  - name: Ragehunter
+    value: 2

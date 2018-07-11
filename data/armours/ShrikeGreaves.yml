@@ -1,0 +1,15 @@
+name: Shrike Greaves
+description: Leg and foot protection forged from Shrike trophies.
+icon: /assets/icons/armours/ShrikeGreaves.png
+type: Legs
+strength: null
+weakness: null
+cells: Mobility
+tier: 2
+resistance:
+  0: 34
+  1: 39
+  2: 44
+perks:
+  - name: Evasion
+    value: 1

@@ -1,0 +1,16 @@
+name: Skraev Gloves
+description: Arms protection forged from Skraev trophies.
+icon: /assets/icons/armours/SkraevGloves.png
+type: Arms
+strength: Frost
+weakness: Shock
+cells: Mobility
+tier: 3
+resistance:
+  0: 50
+  1: 55
+  2: 60
+  3: 65
+perks:
+  - name: Evasion
+    value: 1

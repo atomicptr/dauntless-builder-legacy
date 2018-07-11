@@ -1,0 +1,16 @@
+name: Shrike's Talon
+description: A Slayer's war pike forged with Shrike trophies.
+icon: /assets/icons/weapons/warpike/ShrikesTalon.png
+type: War Pike
+damage: Piercing
+elemental: null
+cells: [Technique, Mobility]
+tier: 2
+power:
+  0: 136
+  1: 156
+  2: 176
+unique_effects:
+  - name: DodgePartDamage
+    description: +30 Part Damage on Next Hit after a dodge.
+    value: 30

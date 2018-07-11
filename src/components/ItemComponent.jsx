@@ -48,10 +48,21 @@ export default class ItemComponent extends React.Component {
 
         if(filterOption.__itemType === "Weapon" && this.props.item) {
             filterOption.__weaponType = this.props.item.type;
+            filterOption.__tier = 5;
+
+            if(this.props.item.tier) {
+                filterOption.__tier = this.props.item.tier;
+            }
         }
 
         if(filterOption.__itemType === "Armour") {
             filterOption.__armourType = this.props.defaultType;
+            filterOption.__tier = 5;
+
+            if(this.props.item && this.props.item.tier) {
+                filterOption.__tier = this.props.item.tier;
+            }
+
             filterOption.filters.push({
                 field: "type",
                 value: this.props.defaultType
@@ -98,25 +109,15 @@ export default class ItemComponent extends React.Component {
         </span>
     }
 
-    render() {
-        if(!this.props.item) {
-            return <div className="item-title-wrapper">
-                <div className="item-wrapper">
-                    <div className="item no-item" onClick={() => this.onClicked()}>
-                        <i className="fas fa-question no-item-icon"></i>
-                        <div className="item-data">
-                            <h3 className="subtitle">No <strong>{this.props.title}</strong> selected.</h3>
-                            <div>Click here to select one.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        }
-
+    renderCells() {
         let cells = [];
         let cellCounter = 0;
 
         let cellSlots = this.props.item.cells;
+
+        if(!this.props.item.cells) {
+            return [];
+        }
 
         if(!Array.isArray(cellSlots)) {
             cellSlots = [cellSlots];
@@ -157,6 +158,26 @@ export default class ItemComponent extends React.Component {
 
             slotIndex++;
         }
+
+        return cells;
+    }
+
+    render() {
+        if(!this.props.item) {
+            return <div className="item-title-wrapper">
+                <div className="item-wrapper">
+                    <div className="item no-item" onClick={() => this.onClicked()}>
+                        <i className="fas fa-question no-item-icon"></i>
+                        <div className="item-data">
+                            <h3 className="subtitle">No <strong>{this.props.title}</strong> selected.</h3>
+                            <div>Click here to select one.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        let cells = this.renderCells();
 
         let levelString = "";
 
@@ -214,9 +235,9 @@ export default class ItemComponent extends React.Component {
         }
 
         return <div className="item-title-wrapper">
-            <h2 className="subtitle hidden-on-large-screens">{this.getItemType()} - {this.props.item.type}</h2>
+            <h2 className="subtitle hidden-on-large-screens">{this.getItemType() + (this.props.item.type ? ` - ${this.props.item.type}` : "")}</h2>
             <div className="item-wrapper">
-                <div className="item" title={this.props.item.description} onClick={() => this.onClicked()}>
+                <div className={"item"+ (cells.length === 0 ? " no-cells" : "")} title={this.props.item.description} onClick={() => this.onClicked()}>
                     <ItemIconComponent item={this.props.item} defaultType={this.props.defaultType} />
                     <div className="item-data">
                         <h3 className="item-title">{this.props.item.name} {levelString}</h3>

@@ -1,0 +1,10 @@
+name: Training Sword
+description: A dull and tarnished training blade.
+icon: /assets/icons/weapons/swords/TrainingSword.png
+type: Sword
+damage: Slashing
+elemental: null
+cells: null
+tier: 1
+power:
+  0: 70

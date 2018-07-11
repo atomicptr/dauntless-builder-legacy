@@ -1,0 +1,17 @@
+name: Draskrazor
+description: A Slayer's sword forged with Drask trophies.
+icon: /assets/icons/weapons/swords/Draskrazor.png
+type: Sword
+damage: Slashing
+elemental: Shock
+cells: [Power, Utility]
+tier: 3
+power:
+  0: 216
+  1: 236
+  2: 256
+  3: 276
+unique_effects:
+  - name: HeadDamage
+    description: 120% damage increase versus Behemoth heads.
+    value: 1.2

@@ -1,0 +1,16 @@
+name: Charrhammer
+description: A Slayer's hammer forged with Charrogg trophies.
+icon: /assets/icons/weapons/hammer/Charrhammer.png
+type: Hammer
+damage: Blunt
+elemental: Blaze
+cells: [Power, Power]
+tier: 3
+power:
+  0: 184
+  1: 204
+  2: 224
+  3: 244
+perks:
+  - name: Rage
+    value: 2

@@ -1,0 +1,16 @@
+name: Skarnsaber
+description: A Slayer's sword forged with Skarn trophies.
+icon: /assets/icons/weapons/swords/Skarnsaber.png
+type: Sword
+damage: Slashing
+elemental: null
+cells: [Defence, Defence]
+tier: 2
+power:
+  0: 168
+  1: 188
+  2: 208
+  3: 228
+perks:
+  - name: Weighted Strikes
+    value: 2

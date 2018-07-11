@@ -1,0 +1,16 @@
+name: Skarnchopper
+description: A Slayer's axe forged with Skarn trophies.
+icon: /assets/icons/weapons/axe/Skarnchopper.png
+type: Axe
+damage: Slashing
+elemental: null
+cells: [Power, Defence]
+tier: 2
+power:
+  0: 168
+  1: 188
+  2: 208
+  3: 228
+perks:
+  - name: Knockout King
+    value: 2

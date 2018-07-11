@@ -1,0 +1,16 @@
+name: Emberplate
+description: Torso protection forged from Embermane trophies.
+icon: /assets/icons/armours/Emberplate.png
+type: Torso
+strength: Blaze
+weakness: Shock
+cells: Technique
+tier: 3
+resistance:
+  0: 50
+  1: 55
+  2: 60
+  3: 65
+perks:
+  - name: Evasion
+    value: 1

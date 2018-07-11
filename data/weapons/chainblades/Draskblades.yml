@@ -1,0 +1,16 @@
+name: Draskblades
+description: A Slayer's chain blades forged with Drask trophies.
+icon: /assets/icons/weapons/chainblades/Draskblades.png
+type: Chain Blades
+damage: Slashing
+elemental: Shock
+cells: [Technique, Power]
+tier: 3
+power:
+  0: 216
+  1: 236
+  2: 256
+  3: 276
+perks:
+  - name: Savagery
+    value: 2

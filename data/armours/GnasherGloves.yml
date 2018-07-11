@@ -1,0 +1,15 @@
+name: Gnasher Gloves
+description: Arms protection forged from Gnasher trophies.
+icon: /assets/icons/armours/GnasherGloves.png
+type: Arms
+strength: null
+weakness: null
+cells: Defence
+tier: 2
+resistance:
+  0: 30
+  1: 35
+  2: 40
+perks:
+  - name: Ragehunter
+    value: 1

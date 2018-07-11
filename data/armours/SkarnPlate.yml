@@ -1,0 +1,16 @@
+name: Skarn Plate
+description: Torso protection forged from Skarn trophies.
+icon: /assets/icons/armours/SkarnPlate.png
+type: Torso
+strength: null
+weakness: null
+cells: Defence
+tier: 2
+resistance:
+  0: 42
+  1: 47
+  2: 52
+  3: 57
+perks:
+  - name: Tough
+    value: 1

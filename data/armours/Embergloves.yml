@@ -1,0 +1,16 @@
+name: Embergloves
+description: Arms protection forged from Embermane trophies.
+icon: /assets/icons/armours/Embergloves.png
+type: Arms
+strength: Blaze
+weakness: Shock
+cells: Mobility
+tier: 3
+resistance:
+  0: 50
+  1: 55
+  2: 60
+  3: 65
+perks:
+  - name: Evasive Fury
+    value: 1

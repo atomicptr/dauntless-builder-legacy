@@ -1,0 +1,15 @@
+name: Shrike Gauntlets
+description: Arms protection forged from Shrike trophies.
+icon: /assets/icons/armours/ShrikeGauntlets.png
+type: Arms
+strength: null
+weakness: null
+cells: Mobility
+tier: 2
+resistance:
+  0: 34
+  1: 39
+  2: 44
+perks:
+  - name: Conditioning
+    value: 1

@@ -55,7 +55,9 @@ export default class PerkListComponent extends React.Component {
 
             let counter = 0;
 
-            return <div key={effectKey} className={"tp-effect " + (Number(perkValue) === Number(effectKey) ? "active" : "")}>
+            let value = Math.max(0, Math.min(6, perkValue));
+
+            return <div key={effectKey} className={"tp-effect " + (Number(value) === Number(effectKey) ? "active" : "")}>
                 {description.map(d => <span key={"desc" + (counter++)}>{d}</span>)}
             </div>;
         });

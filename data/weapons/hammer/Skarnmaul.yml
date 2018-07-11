@@ -1,0 +1,16 @@
+name: Skarnmaul
+description: A Slayer's hammer forged with Skarn trophies.
+icon: /assets/icons/weapons/hammer/Skarnmaul.png
+type: Hammer
+damage: Blunt
+elemental: null
+cells: [Power, Defence]
+tier: 2
+power:
+  0: 168
+  1: 188
+  2: 208
+  3: 228
+perks:
+  - name: Knockout King
+    value: 2

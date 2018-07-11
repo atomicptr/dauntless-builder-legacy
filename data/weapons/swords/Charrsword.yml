@@ -1,0 +1,16 @@
+name: Charrsword
+description: A Slayer's sword forged with Charrogg trophies.
+icon: /assets/icons/weapons/swords/Charrsword.png
+type: Sword
+damage: Slashing
+elemental: Blaze
+cells: [Power, Defence]
+tier: 3
+power:
+  0: 184
+  1: 204
+  2: 224
+  3: 244
+perks:
+  - name: Rage
+    value: 2

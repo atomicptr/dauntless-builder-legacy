@@ -1,0 +1,15 @@
+name: Quillblades
+description: A Slayer's chain blades forged with Quillshot trophies.
+icon: /assets/icons/weapons/chainblades/Quillblades.png
+type: Chain Blades
+damage: Slashing
+elemental: null
+cells: [Technique, Defence]
+tier: 2
+power:
+  0: 152
+  1: 172
+  2: 192
+perks:
+  - name: Bladestorm
+    value: 2

@@ -1,0 +1,15 @@
+name: Shrike Helm
+description: Head protection forged from Shrike trophies.
+icon: /assets/icons/armours/ShrikeHelm.png
+type: Head
+strength: null
+weakness: null
+cells: Technique
+tier: 2
+resistance:
+  0: 34
+  1: 39
+  2: 44
+perks:
+  - name: Evasion
+    value: 1

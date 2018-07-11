@@ -291,6 +291,10 @@ strong {
 
         margin-right: 10px;
 
+        &.no-cells {
+            margin-right: 0px;
+        }
+
         &.no-item {
             margin-right: 0px;
 
@@ -715,6 +719,14 @@ button.is-debug-button {
 
         .item-modal-list {
             max-height: unset;
+
+            margin-bottom: 70px;
+        }
+
+        .cells {
+            .cell {
+                width: 100%;
+            }
         }
 
         .modal-card-foot {

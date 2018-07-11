@@ -1,0 +1,20 @@
+name: Charrblades
+description: A Slayer's chain blades forged with Charrogg trophies.
+icon: /assets/icons/weapons/chainblades/Charrblades.png
+type: Chain Blades
+damage: Slashing
+elemental: Blaze
+cells: [Technique, Defence]
+tier: 3
+power:
+  0: 184
+  1: 204
+  2: 224
+  3: 244
+perks:
+  - name: Rage
+    value: 2
+unique_effects:
+  - name: LowHpDamage
+    description: When under 30% health, deal 108% damage.
+    value: 1.08

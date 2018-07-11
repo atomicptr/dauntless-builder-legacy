@@ -7,6 +7,8 @@ import DebugComponent from "./DebugComponent";
 import ModalCellListItemComponent from "./modal/ModalCellListItemComponent";
 import ModalItemListItemComponent from "./modal/ModalItemListItemComponent";
 
+import MiscUtils from "../utils/MiscUtils";
+
 export default class ItemSelectModalComponent extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -16,7 +18,8 @@ export default class ItemSelectModalComponent extends React.Component {
             searchQuery: "",
             perkFilter: null,
             weaponTypeFilter: null,
-            slotFilter: null
+            slotFilter: null,
+            tierFilter: {value: 5, label: MiscUtils.getTierName(5)}
         }
 
         this.defaultState = {
@@ -24,7 +27,8 @@ export default class ItemSelectModalComponent extends React.Component {
             searchQuery: "",
             perkFilter: null,
             weaponTypeFilter: null,
-            slotFilter: null
+            slotFilter: null,
+            tierFilter: {value: 5, label: MiscUtils.getTierName(5)}
         }
     }
 
@@ -41,6 +45,16 @@ export default class ItemSelectModalComponent extends React.Component {
                 }
             });
         }
+
+        if(nextProps.data && nextProps.data.filterOptions &&
+            nextProps.data.filterOptions.__tier &&
+            (nextProps.data.filterOptions.__itemType === "Weapon" ||
+            nextProps.data.filterOptions.__itemType === "Armour")) {
+                this.setState({tierFilter: {
+                    value: nextProps.data.filterOptions.__tier,
+                    label: MiscUtils.getTierName(nextProps.data.filterOptions.__tier)
+                }});
+            }
     }
 
     getIsActive() {
@@ -144,7 +158,7 @@ export default class ItemSelectModalComponent extends React.Component {
             });
         }
 
-        if(this.props.data.filterOptions.__itemType === "Weapon" && this.state.weaponTypeFilter && this.state.weaponTypeFilter.value) {
+        if(this.isType("Weapon") && this.state.weaponTypeFilter && this.state.weaponTypeFilter.value) {
             filters.push({
                 field: "type",
                 value: this.state.weaponTypeFilter.value
@@ -163,10 +177,14 @@ export default class ItemSelectModalComponent extends React.Component {
         }
 
         // apply tier filter
-        if(this.props.data.filterOptions.__itemType === "Weapon" || this.props.data.filterOptions.__itemType === "Armour") {
+        if(this.isType(["Weapon", "Armour"]) && this.state.tierFilter && this.state.tierFilter.value) {
             filters.push({
                 field: "tier",
-                value: 5
+                value: this.state.tierFilter.value,
+                method: (item, filter) => {
+                    let tiers = Array.isArray(item.tier) ? item.tier : [item.tier];
+                    return tiers.some(tier => Number(tier) === Number(filter.value));
+                }
             });
         }
 
@@ -181,16 +199,16 @@ export default class ItemSelectModalComponent extends React.Component {
         return perks;
     }
 
+    isType(type) {
+        if(!Array.isArray(type)) {
+            type = [type];
+        }
+
+        return type.indexOf(this.props.data.filterOptions.__itemType) > -1;
+    }
+
     renderFilterFields() {
         let fields = [];
-
-        const isType = (type) => {
-            if(!Array.isArray(type)) {
-                type = [type];
-            }
-
-            return type.indexOf(this.props.data.filterOptions.__itemType) > -1;
-        }
 
         // add search filter
         fields.push(
@@ -211,7 +229,7 @@ export default class ItemSelectModalComponent extends React.Component {
         );
 
         // add Weapon Type filter
-        if(isType(["Weapon"])) {
+        if(this.isType(["Weapon"])) {
             let options = [];
 
             for(let weaponName in this.props.itemData.weapons) {
@@ -236,9 +254,9 @@ export default class ItemSelectModalComponent extends React.Component {
         }
 
         // add Perk filter
-        if(isType(["Weapon", "Armour"])) {
+        if(this.isType(["Weapon", "Armour"])) {
             fields.push(
-                <div key="perkFilter" className="field">
+                <div key="perkFilter" className="field is-hidden-touch">
                     <Select
                         placeholder="Filter by perk..."
                         onChange={perk => this.setState({perkFilter: perk})}
@@ -249,15 +267,29 @@ export default class ItemSelectModalComponent extends React.Component {
         }
 
         // add Slot filter
-        if(isType(["Weapon", "Armour"])) {
+        if(this.isType(["Weapon", "Armour"])) {
             fields.push(
-                <div key="slotFilter" className="field">
+                <div key="slotFilter" className="field is-hidden-touch">
                     <Select
                         placeholder="Filter by cell slot..."
                         onChange={slot => this.setState({slotFilter: slot})}
                         value={this.state.slotFilter}
                         options={["Defence", "Mobility", "Power", "Technique", "Utility"].map(
                             slot => ({value: slot, label: slot}))} />
+                </div>
+            )
+        }
+
+        // add tier filter
+        if(this.isType(["Weapon", "Armour"])) {
+            fields.push(
+                <div key="tierFilter" className="field">
+                    <Select
+                        placeholder="Filter by tier..."
+                        onChange={tier => this.setState({tierFilter: tier})}
+                        value={this.state.tierFilter}
+                        options={[5, 4, 3, 2, 1].map(
+                            tier => ({value: tier, label: MiscUtils.getTierName(tier)}))} />
                 </div>
             )
         }
@@ -317,8 +349,9 @@ export default class ItemSelectModalComponent extends React.Component {
                         {items}
                     </div>
 
+                    <DebugComponent data={{filterOptions: this.props.data.filterOptions, state: this.state}} />
+
                     <footer className="modal-card-foot">
-                        <DebugComponent data={{filterOptions: this.props.data.filterOptions, state: this.state}} />
                         <button
                             className="button"
                             onClick={() =>

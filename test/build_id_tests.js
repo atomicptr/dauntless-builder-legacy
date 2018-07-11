@@ -48,11 +48,27 @@ function assertValid(data) {
 
 describe("Dauntless Builder - Build IDs", () => {
     it("should be able to deserialize", () => {
-        // TODO: add more
+        // a random build that someone send me :)
         assertValid([
-            ["P5CQUXiNTETzTMTvTLTaToTqTwTgTKTmTPTQTJ", [
-                {field: "weapon_name", value: "Bloodfire Axe"},
-                {field: "weapon_level", value: 10}
+            ["r5C7H8iPeIY6HV8cwievsjdF6i35hNZt2i6zcBwtnizrCLjSZ3", [
+                {field: "weapon_name", value: "Deadblades"},
+                {field: "weapon_level", value: 10},
+                {field: "weapon_cell0", value: "+3 Barbed Cell"},
+                {field: "weapon_cell1", value: "+3 Nine Lives Cell"},
+                {field: "head_name", value: "Deadeye Mask"},
+                {field: "head_level", value: 10},
+                {field: "head_cell", value: "+3 Nine Lives Cell"},
+                {field: "torso_name", value: "Deadeye Jacket"},
+                {field: "torso_level", value: 10},
+                {field: "torso_cell", value: "+3 Savagery Cell"},
+                {field: "arms_name", value: "Reza Grips"},
+                {field: "arms_level", value: 10},
+                {field: "arms_cell", value: "+3 Weighted Strikes Cell"},
+                {field: "legs_name", value: "Deadeye Boots"},
+                {field: "legs_level", value: 10},
+                {field: "legs_cell", value: "+3 Weighted Strikes Cell"},
+                {field: "lantern_name", value: "Pangar's Resolve"},
+                {field: "lantern_cell", value: "+3 Aetherborne Cell"},
             ]],
             // TODO: add more items / build variations etc
         ])

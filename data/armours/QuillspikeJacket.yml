@@ -1,0 +1,15 @@
+name: Quillspike Jacket
+description: Torso protection forged from Quillshot trophies.
+icon: /assets/icons/armours/QuillspikeJacket.png
+type: Torso
+strength: null
+weakness: null
+cells: Technique
+tier: 2
+resistance:
+  0: 38
+  1: 43
+  2: 48
+perks:
+  - name: Sharpened
+    value: 1

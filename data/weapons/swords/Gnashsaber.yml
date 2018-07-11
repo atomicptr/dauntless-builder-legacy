@@ -1,0 +1,15 @@
+name: Gnashsaber
+description: A Slayer's sword forged with Gnasher trophies.
+icon: /assets/icons/weapons/swords/Gnashsaber.png
+type: Sword
+damage: Slashing
+elemental: null
+cells: [Utility, Defence]
+tier: 2
+power:
+  0: 120
+  1: 140
+  2: 160
+perks:
+  - name: Ragehunter
+    value: 2

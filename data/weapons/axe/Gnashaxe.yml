@@ -1,0 +1,15 @@
+name: Gnashaxe
+description: A Slayer's axe forged with Gnasher trophies.
+icon: /assets/icons/weapons/axe/Gnashaxe.png
+type: Axe
+damage: Slashing
+elemental: null
+cells: [Power, Utility]
+tier: 2
+power:
+  0: 120
+  1: 140
+  2: 160
+perks:
+  - name: Ragehunter
+    value: 2

@@ -1,0 +1,15 @@
+name: Gnashblades
+description: A Slayer's chain blades forged with Gnasher trophies.
+icon: /assets/icons/weapons/chainblades/Gnashblades.png
+type: Chain Blades
+damage: Slashing
+elemental: null
+cells: [Technique, Utility]
+tier: 2
+power:
+  0: 120
+  1: 140
+  2: 160
+perks:
+  - name: Ragehunter
+    value: 2

@@ -1,0 +1,16 @@
+name: Shrikesaber
+description: A Slayer's sword forged with Shrike trophies.
+icon: /assets/icons/weapons/swords/Shrikesaber.png
+type: Sword
+damage: Slashing
+elemental: null
+cells: [Mobility, Mobility]
+tier: 2
+power:
+  0: 136
+  1: 156
+  2: 176
+unique_effects:
+  - name: DodgePartDamage
+    description: +30 Part Damage on Next Hit after a dodge.
+    value: 30

@@ -1,0 +1,15 @@
+name: Quillripper
+description: A Slayer's sword forged with Quillshot trophies.
+icon: /assets/icons/weapons/swords/Quillripper.png
+type: Sword
+damage: Slashing
+elemental: null
+cells: [Technique, Defence]
+tier: 2
+power:
+  0: 152
+  1: 172
+  2: 192
+perks:
+  - name: Bladestorm
+    value: 2

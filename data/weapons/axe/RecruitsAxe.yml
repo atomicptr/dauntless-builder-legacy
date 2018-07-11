@@ -1,0 +1,11 @@
+name: Recruit's Axe
+description: A Slayer Recruit's axe.
+icon: /assets/icons/weapons/axe/RecruitsAxe.png
+type: Axe
+damage: Slashing
+elemental: null
+cells: null
+tier: 1
+power:
+  0: 88
+  1: 108

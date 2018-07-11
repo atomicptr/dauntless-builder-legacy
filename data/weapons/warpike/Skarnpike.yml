@@ -1,0 +1,16 @@
+name: Skarnpike
+description: A Slayer's war pike forged with Skarn trophies.
+icon: /assets/icons/weapons/warpike/Skarnpike.png
+type: War Pike
+damage: Piercing
+elemental: null
+cells: [Technique, Defence]
+tier: 2
+power:
+  0: 168
+  1: 188
+  2: 208
+  3: 228
+perks:
+  - name: Weighted Strikes
+    value: 3

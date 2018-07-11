@@ -1,0 +1,17 @@
+name: Skraevsaber
+description: A Slayer's sword forged with Skraev trophies.
+icon: /assets/icons/weapons/swords/Skraevsaber.png
+type: Sword
+damage: Slashing
+elemental: Frost
+cells: [Technique, Mobility]
+tier: 3
+power:
+  0: 200
+  1: 220
+  2: 240
+  3: 260
+unique_effects:
+  - name: SeventhHitPartDamage
+    discription: The seventh hit in a row deals +200% part damage.
+    value: 3

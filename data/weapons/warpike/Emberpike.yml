@@ -1,0 +1,17 @@
+name: Emberpike
+description: A Slayer's war pike forged with Embermane trophies.
+icon: /assets/icons/weapons/warpike/Emberpike.png
+type: War Pike
+damage: Piercing
+elemental: Blaze
+cells: [Power, Mobility]
+tier: 3
+power:
+  0: 200
+  1: 220
+  2: 240
+  3: 260
+unique_effects:
+  - name: MissileAttackSpeed
+    description: +30% Attack Speed for 4-10 seconds after hitting with a Special Attack missile. Duration depends on missile strength.
+    value: 1.3

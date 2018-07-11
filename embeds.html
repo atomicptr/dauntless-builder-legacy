@@ -1,0 +1,57 @@
+<!doctype html>
+<title>Dauntless-Builder: Embeds</title>
+
+<link rel="icon" href="/assets/icon.png" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+
+<style>
+    .subtitle {
+        margin-top: 20px;
+    }
+
+    .item-example {
+        margin: 20px;
+    }
+</style>
+
+<section class="section">
+    <div class="container">
+        <h2 class="title">Dauntless Builder: Embeds</h2>
+
+        <h3 class="subtitle">Embedding Items</h3>
+
+        <div class="item-example" data-dauntless-weapon="Ragesaber"></div>
+        <div class="item-example" data-dauntless-weapon="Rezacutter"></div>
+        <div class="item-example" data-dauntless-armour="Prismatic Grace"></div>
+        <div class="item-example" data-dauntless-weapon="Rezakiri's Fangs"></div>
+
+        <h3 class="subtitle">Inline Embeds</h3>
+
+        <p>
+            Lorem ipsum dolor sit amet, <span data-dauntless-weapon="The Godhand"></span> adipiscing elit.
+            Morbi at elit egestas, finibus ex at, bibendum purus. Phasellus fringilla magna nec turpis venenatis
+            elementum. Ut in laoreet urna, nec tempor elit. Etiam porta eget nulla eget convallis.
+            Morbi ultricies scelerisque neque eget <span data-dauntless-armour="Tragic Echo"></span>. Aenean tempus lacinia augue,
+            nec pellentesque massa vestibulum vel. Maecenas at mauris tempor, gravida risus at,
+            tempus diam. Duis faucibus metus felis, a mauris quam consequat nec. Sed auctor
+            eros vel velit cursus. Nunc ultrices lacus nibh. Vivamus egestas libero
+            dolor, sed auctor purus porttitor at. Etiam eget massa at nibh <span data-dauntless-weapon="The Godhand"></span> <span data-dauntless-lantern="Drask's Fury"></span>.
+        </p>
+
+        <h3 class="subtitle">Embedding builds</h3>
+
+        <div class="columns">
+            <div class="column">
+                <div data-dauntless-build="r5C7H8iPeIY6HV8cwievsjdF6i35hNZt2i6zcBwtnizrCLjSZ3"></div>
+            </div>
+            <div class="column">
+                <div data-dauntless-build="LeCQIRizxud3tnKILijwi7yUqi7qSM2t7iPvFddUBiVXhMRFg1"></div>
+            </div>
+            <div class="column">
+                <div data-dauntless-build="https://www.dauntless-builder.com/b/o8CyI1ijXtmXud6HZiYoCZViOiZjI4Mt6iV6HxxU3iAKUOPtpm"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script async src="/dist/embed.js"></script>
