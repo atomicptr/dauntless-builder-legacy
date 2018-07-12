@@ -12,6 +12,7 @@ resistance:
   2: 68
   3: 73
   4: 78
+  5: 83
 perks:
   - name: Medic
     value: 1

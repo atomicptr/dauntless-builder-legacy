@@ -12,6 +12,7 @@ resistance:
   2: 76
   3: 81
   4: 86
+  5: 91
 perks:
   - name: Fortress
     value: 1

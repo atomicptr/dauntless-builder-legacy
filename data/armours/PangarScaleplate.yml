@@ -12,6 +12,7 @@ resistance:
   2: 74
   3: 78
   4: 82
+  5: 87
 perks:
   - name: Endurance
     value: 1

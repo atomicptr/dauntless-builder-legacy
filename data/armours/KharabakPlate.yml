@@ -12,6 +12,7 @@ resistance:
   2: 80
   3: 85
   4: 90
+  5: 95
 perks:
   - name: Bladestorm
     value: 1

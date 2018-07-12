@@ -11,6 +11,7 @@ resistance:
   1: 59
   2: 64
   3: 69
+  4: 74
 perks:
   - name: Aetheric Attunement
     value: 1
