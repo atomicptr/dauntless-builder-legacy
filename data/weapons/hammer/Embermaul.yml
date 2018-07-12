@@ -11,6 +11,7 @@ power:
   1: 220
   2: 240
   3: 260
+  4: 280
 unique_effects:
   - name: BlastAtackSpeed
     description: +25% Attack Speed for 8 Seconds after landing a Hammer Blast.

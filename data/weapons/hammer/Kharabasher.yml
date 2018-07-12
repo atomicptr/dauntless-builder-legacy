@@ -12,6 +12,7 @@ power:
   2: 320
   3: 340
   4: 360
+  5: 380
 unique_effects:
   - name: ReloadStamina
     description: Restore 30 Stamina after reloading a shell.

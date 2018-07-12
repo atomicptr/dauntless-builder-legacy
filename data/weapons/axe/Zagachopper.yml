@@ -12,6 +12,7 @@ power:
   2: 272
   3: 292
   4: 312
+  5: 332
 unique_effects:
   - name: VerticalAttackHeal
     description: Heal 200 on perfectly charged vertical attacks.

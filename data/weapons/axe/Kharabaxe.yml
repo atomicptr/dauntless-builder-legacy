@@ -12,6 +12,7 @@ power:
   2: 320
   3: 340
   4: 360
+  5: 380
 unique_effects:
   - name: ComboFinisherDamage
     description: Combo finishers deal 200 bonus damage.

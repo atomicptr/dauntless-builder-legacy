@@ -11,6 +11,7 @@ power:
   1: 220
   2: 240
   3: 260
+  4: 280
 unique_effects:
   - name: MissileAttackSpeed
     description: +30% Attack Speed for 4-10 seconds after hitting with a Special Attack missile. Duration depends on missile strength.

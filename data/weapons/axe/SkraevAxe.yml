@@ -11,6 +11,7 @@ power:
   1: 220
   2: 240
   3: 260
+  4: 280
 unique_effects:
   - name: FourthHitBonusDamage
     description: The fourth hit in quick succession deals 150 bonus damage.

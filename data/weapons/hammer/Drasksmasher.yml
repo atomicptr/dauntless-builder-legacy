@@ -11,6 +11,7 @@ power:
   1: 236
   2: 256
   3: 276
+  4: 296
 unique_effects:
   - name: HeadDamage
     description: 120% damage increase versus Behemoth heads.

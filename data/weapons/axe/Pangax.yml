@@ -12,6 +12,7 @@ power:
   2: 288
   3: 308
   4: 328
+  5: 348
 perks:
   - name: Aetherhunter
     value: 2

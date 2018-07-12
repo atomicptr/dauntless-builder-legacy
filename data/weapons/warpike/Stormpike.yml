@@ -12,6 +12,7 @@ power:
   2: 304
   3: 324
   4: 344
+  5: 364
 unique_effects:
   - name: DodgeMeterGain
     description: After dodging through an attack the next weapon attack has 200% meter gain.

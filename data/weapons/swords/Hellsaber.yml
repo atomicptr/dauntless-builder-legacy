@@ -12,6 +12,7 @@ power:
   2: 304
   3: 324
   4: 344
+  5: 364
 perks:
   - name: Overpower
     value: 2

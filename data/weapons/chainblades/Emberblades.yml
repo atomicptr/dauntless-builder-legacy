@@ -11,6 +11,7 @@ power:
   1: 220
   2: 240
   3: 260
+  4: 280
 perks:
   - name: Evasive Fury
     value: 2

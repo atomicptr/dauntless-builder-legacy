@@ -12,6 +12,7 @@ power:
   2: 304
   3: 324
   4: 344
+  5: 364
 unique_effects:
   - name: PrimedDamage
     description: 125% Primed hammer attack damage.
