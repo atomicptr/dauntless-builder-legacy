@@ -29,5 +29,5 @@ perks:
     to: 10
 unique_effects:
   - name: ReloadStamina
-    description: Restore 30 Stamina after reloading a shell.
-    value: 30
+    description: Restore 20 Stamina after reloading a shell.
+    value: 20
