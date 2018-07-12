@@ -13,6 +13,6 @@ power:
   3: 324
   4: 344
 unique_effects:
-  - name: BlastdodgeReload
-    description: Reloads 4 Hammer Ammo after Blastdodging through an attack.
-    value: 4
+  - name: DodgeReload
+    description: Reloads 1 Hammer Ammo after dodging through an attack.
+    value: 1

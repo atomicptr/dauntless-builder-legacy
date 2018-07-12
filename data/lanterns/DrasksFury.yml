@@ -2,5 +2,5 @@ name: Drask's Fury
 description: null
 cells: Utility
 lantern_ability:
-  instant: Deal 50% increased damage for 6 seconds.
+  instant: Deal 40% increased damage for 6 seconds.
   hold: Fires a lightning bolt in a direction that deals 200 Shock damage multiple times as it passes through a Behemoth.

@@ -3,20 +3,20 @@ description: Improves your ability to revive allies.
 key: [revive_heal, revive_speed, revive_shield]
 effects:
   1:
+    description: [When reviving an ally they are healed an additional 5%, null, null]
+    value: [1.05, null, null]
+  2:
     description: [When reviving an ally they are healed an additional 10%, null, null]
     value: [1.1, null, null]
-  2:
+  3:
     description: [When reviving an ally they are healed an additional 20%, null, null]
     value: [1.2, null, null]
-  3:
-    description: [When reviving an ally they are healed an additional 30%, null, null]
-    value: [1.3, null, null]
   4:
+    description: [When reviving an ally they are healed an additional 20%, Increases Revive Speed by 66%, null]
+    value: [1.2, 0.66, null]
+  5:
     description: [When reviving an ally they are healed an additional 30%, Increases Revive Speed by 66%, null]
     value: [1.3, 0.66, null]
-  5:
-    description: [When reviving an ally they are healed an additional 50%, Increases Revive Speed by 66%, null]
-    value: [1.5, 0.66, null]
   6:
-    description: [When reviving an ally they are healed an additional 100%, Increases Revive Speed by 66%, Grants a 400 health shield for 20 seconds after reviving an ally]
-    value: [2, 0.66, 400]
+    description: [When reviving an ally they are healed an additional 40%, Increases Revive Speed by 66%, Grants a 300 health shield for 20 seconds after reviving an ally]
+    value: [1.4, 0.66, 300]
