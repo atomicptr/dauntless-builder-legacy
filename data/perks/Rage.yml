@@ -3,20 +3,20 @@ description: Increases your damage when your health is low.
 key: low_hp_damage
 effects:
   1:
-    description: When under 30% health, deal 105% damage
+    description: When under 30% health, deal +5% damage
     value: 1.05
   2:
-    description: When under 30% health, deal 108% damage
+    description: When under 30% health, deal +8% damage
     value: 1.06
   3:
-    description: When under 30% health, deal 110% damage
+    description: When under 30% health, deal +10% damage
     value: 1.1
   4:
-    description: When under 50% health, deal 115% damage
+    description: When under 50% health, deal +15% damage
     value: 1.15
   5:
-    description: When under 50% health, deal 120% damage
+    description: When under 50% health, deal +20% damage
     value: 1.2
   6:
-    description: When under 50% health, deal 125% damage
+    description: When under 50% health, deal +25% damage
     value: 1.25

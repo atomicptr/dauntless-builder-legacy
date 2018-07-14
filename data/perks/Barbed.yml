@@ -18,5 +18,5 @@ effects:
     description: [+30 Wound Damage on Hit, After dodging through an attack the next attack's Expose Damage is increased by 200]
     value: [30, 200]
   6:
-    description: [+40 Wound Damage on Hit, After dodging through an attack the next attack's Expose Damage is increased by 200]
-    value: [40, 200]
+    description: [+40 Wound Damage on Hit, After dodging through an attack the next attack's Expose Damage is increased by 400]
+    value: [40, 400]

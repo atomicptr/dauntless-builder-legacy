@@ -3,20 +3,20 @@ description: Temporarily increases attack speed when dodging through a Behemoth'
 key: dodge_attack_speed
 effects:
   1:
-    description: 4% Attack Speed for 8 seconds after dodging through an attack
+    description: +4% Attack Speed for 8 seconds after dodging through an attack
     value: 0.04
   2:
-    description: 8% Attack Speed for 8 seconds after dodging through an attack
+    description: +8% Attack Speed for 8 seconds after dodging through an attack
     value: 0.08
   3:
-    description: 12% Attack Speed for 8 seconds after dodging through an attack
+    description: +12% Attack Speed for 8 seconds after dodging through an attack
     value: 0.12
   4:
-    description: 16% Attack Speed for 8 seconds after dodging through an attack
+    description: +16% Attack Speed for 8 seconds after dodging through an attack
     value: 0.16
   5:
-    description: 20% Attack Speed for 8 seconds after dodging through an attack
+    description: +20% Attack Speed for 8 seconds after dodging through an attack
     value: 0.2
   6:
-    description: 25% Attack Speed for 16 seconds after dodging through an attack
+    description: +25% Attack Speed for 16 seconds after dodging through an attack
     value: 0.25

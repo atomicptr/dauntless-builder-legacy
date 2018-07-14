@@ -3,20 +3,20 @@ description: Increases damage against staggered Behemoths.
 key: damage_staggered
 effects:
   1:
-    description: 110% Damage vs Staggered Behemoths
+    description: +10% Damage vs Staggered Behemoths
     value: 1.1
   2:
-    description: 115% Damage vs Staggered Behemoths
+    description: +15% Damage vs Staggered Behemoths
     value: 1.15
   3:
-    description: 125% Damage vs Staggered Behemoths
+    description: +25% Damage vs Staggered Behemoths
     value: 1.25
   4:
-    description: 140% Damage vs Staggered Behemoths
+    description: +40% Damage vs Staggered Behemoths
     value: 1.4
   5:
-    description: 160% Damage vs Staggered Behemoths
+    description: +60% Damage vs Staggered Behemoths
     value: 1.6
   6:
-    description: 180% Damage vs Staggered Behemoths
+    description: +80% Damage vs Staggered Behemoths
     value: 1.8

@@ -18,5 +18,5 @@ effects:
     description: [+30 Part Damage on Hit, +200 Part Damage after dodging through an attack]
     value: [30, 200]
   6:
-    description: [+40 Part Damage on Hit, +200 Part Damage after dodging through an attack]
-    value: [40, 200]
+    description: [+40 Part Damage on Hit, +400 Part Damage after dodging through an attack]
+    value: [40, 400]
