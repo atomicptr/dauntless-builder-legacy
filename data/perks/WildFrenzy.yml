@@ -9,7 +9,7 @@ effects:
     description: When under 30% health, increase attack speed by 8%
     value: 1.08
   3:
-    description: When under 50% health, increase attack speed by 12%
+    description: When under 30% health, increase attack speed by 12%
     value: 1.12
   4:
     description: When under 50% health, increase attack speed by 16%
