@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/warpike/Firepike.png
 type: War Pike
 damage: Piercing
 elemental: Blaze
-cells: [Power, Utility]
+cells: [Technique, Defence]
 tier: 5
 power:
   0: 310
