@@ -1,5 +1,6 @@
 name: Tough
 description: Increases Max Health.
+type: Defence
 key: max_hp
 effects:
   1:

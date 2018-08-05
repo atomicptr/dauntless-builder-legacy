@@ -1,5 +1,6 @@
 name: Evasive Fury
 description: Temporarily increases attack speed when dodging through a Behemoth's attack.
+type: Technique
 key: dodge_attack_speed
 effects:
   1:

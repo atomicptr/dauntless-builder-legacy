@@ -1,5 +1,6 @@
 name: Evasion
 description: Increases the time you are invincible when dodging.
+type: Mobility
 key: iframe_increase
 effects:
   1:

@@ -1,5 +1,6 @@
 name: Vampiric
 description: Restores some health whenever a Behemoth part is Wounded.
+type: Utility
 key: wounded_heal
 effects:
   1:

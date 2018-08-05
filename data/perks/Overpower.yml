@@ -1,5 +1,6 @@
 name: Overpower
 description: Increases damage against staggered Behemoths.
+type: Power
 key: damage_staggered
 effects:
   1:

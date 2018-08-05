@@ -22,3 +22,4 @@ unique_effects:
   - name: BeamChannelDamage
     description: Channel a beam that deals increasing damage, up to 200%, while it continues to hit a target.
     value: 3
+exotic: true

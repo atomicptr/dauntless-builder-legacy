@@ -1,5 +1,6 @@
 name: Aetherhunter
 description: Increases damage against aether charged Behemoths.
+type: Power
 key: damage_aether
 effects:
   1:

@@ -28,3 +28,4 @@ unique_effects:
   - name: PrismaticGraceActivePrismRevive
     description: While active, reviving another player fully restores both players but removes the Prism even at full danger.
     value: 1
+exotic: true

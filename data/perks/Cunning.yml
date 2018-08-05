@@ -1,5 +1,6 @@
 name: Cunning
 description: Grants a chance to deal double damage.
+type: Technique
 key: double_damage_chance
 effects:
   1:

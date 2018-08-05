@@ -1,5 +1,6 @@
 name: Wild Frenzy
 description: Increases Attack Speed when at low health.
+type: Technique
 key: low_hp_attack_speed
 effects:
   1:

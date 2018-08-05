@@ -1,5 +1,6 @@
 name: Rage
 description: Increases your damage when your health is low.
+type: Power
 key: low_hp_damage
 effects:
   1:
