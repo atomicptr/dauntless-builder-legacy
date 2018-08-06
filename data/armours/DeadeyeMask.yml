@@ -6,6 +6,7 @@ strength: null
 weakness: null
 cells: Defence
 tier: 5
+rarity: rare
 resistance:
   0: 78
   1: 81

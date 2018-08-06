@@ -6,6 +6,7 @@ strength: Blaze
 weakness: Shock
 cells: Mobility
 tier: 3
+rarity: common
 resistance:
   0: 50
   1: 55

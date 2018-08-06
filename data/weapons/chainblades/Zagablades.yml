@@ -6,6 +6,7 @@ damage: Slashing
 elemental: Shock
 cells: [Utility, Mobility]
 tier: 4
+rarity: common
 power:
   0: 232
   1: 252

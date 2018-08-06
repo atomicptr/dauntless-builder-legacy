@@ -6,6 +6,7 @@ damage: Blunt
 elemental: null
 cells: [Power, Technique]
 tier: 4
+rarity: common
 power:
   0: 280
   1: 300

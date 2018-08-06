@@ -6,6 +6,7 @@ strength: Radiant
 weakness: Umbral
 cells: Technique
 tier: 5
+rarity: rare
 resistance:
   0: 78
   1: 81

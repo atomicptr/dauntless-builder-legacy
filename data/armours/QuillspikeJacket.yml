@@ -6,6 +6,7 @@ strength: null
 weakness: null
 cells: Technique
 tier: 2
+rarity: common
 resistance:
   0: 38
   1: 43

@@ -6,6 +6,7 @@ strength: null
 weakness: null
 cells: Defence
 tier: 2
+rarity: common
 resistance:
   0: 30
   1: 35

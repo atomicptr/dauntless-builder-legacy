@@ -6,6 +6,7 @@ damage: Slashing
 elemental: null
 cells: [Utility, Defence]
 tier: 2
+rarity: common
 power:
   0: 120
   1: 140

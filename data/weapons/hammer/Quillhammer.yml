@@ -6,6 +6,7 @@ damage: Blunt
 elemental: null
 cells: [Power, Defence]
 tier: 2
+rarity: common
 power:
   0: 152
   1: 172

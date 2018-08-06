@@ -6,6 +6,7 @@ damage: Piercing
 elemental: null
 cells: [Technique, Mobility]
 tier: 5
+rarity: rare
 power:
   0: 310
   1: 322

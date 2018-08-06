@@ -6,6 +6,7 @@ strength: Shock
 weakness: Frost
 cells: Mobility
 tier: 4
+rarity: common
 resistance:
   0: 58
   1: 63

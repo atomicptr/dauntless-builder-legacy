@@ -6,6 +6,7 @@ strength: Blaze
 weakness: Frost
 cells: Power
 tier: 4
+rarity: common
 resistance:
   0: 66
   1: 71

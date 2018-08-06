@@ -6,6 +6,7 @@ damage: Blunt
 elemental: Blaze
 cells: [Power, Power]
 tier: 3
+rarity: common
 power:
   0: 184
   1: 204

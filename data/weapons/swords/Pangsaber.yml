@@ -6,6 +6,7 @@ damage: Slashing
 elemental: Frost
 cells: [Technique, Defence]
 tier: 4
+rarity: common
 power:
   0: 248
   1: 268

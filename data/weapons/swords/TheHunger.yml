@@ -6,6 +6,7 @@ damage: Slashing
 elemental: Umbral
 cells: [Power, Utility]
 tier: 5
+rarity: exotic
 power:
   0: 310
   1: 322
@@ -27,4 +28,3 @@ unique_effects:
     value: 1.75
   - name: HungerRegainHealth
     description: Activate again during Feast to unleash an Umbral attack that can regain lost health.
-exotic: true

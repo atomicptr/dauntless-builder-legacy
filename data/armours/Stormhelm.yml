@@ -6,6 +6,7 @@ strength: Shock
 weakness: Blaze
 cells: Technique
 tier: 4
+rarity: common
 resistance:
   0: 66
   1: 71

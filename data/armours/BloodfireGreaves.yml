@@ -6,6 +6,7 @@ strength: Blaze
 weakness: Shock
 cells: Defence
 tier: 5
+rarity: rare
 resistance:
   0: 78
   1: 81

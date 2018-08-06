@@ -6,6 +6,7 @@ strength: Radiant
 weakness: Umbral
 cells: Technique
 tier: 5
+rarity: exotic
 resistance:
   0: 78
   1: 81
@@ -28,4 +29,3 @@ unique_effects:
   - name: PrismaticGraceActivePrismRevive
     description: While active, reviving another player fully restores both players but removes the Prism even at full danger.
     value: 1
-exotic: true
