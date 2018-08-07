@@ -14,5 +14,5 @@ power:
   4: 280
 unique_effects:
   - name: SeventhHitPartDamage
-    discription: The seventh hit in a row deals +200% part damage.
+    description: The seventh hit in a row deals +200% part damage.
     value: 3
