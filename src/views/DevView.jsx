@@ -11,18 +11,22 @@ export default class DevView extends React.Component {
 
         this.tabs = [
             "CustomBuilds",
-            "Icons",
-            "MissingPerks"
+            "TableWeapons",
+            "TableArmours",
+            "Icons"
         ];
 
         this.tabTitles = {
             "CustomBuilds": "Custom Builds",
             "Icons": "Items without Icons",
-            "MissingPerks": "Missing Perks"
+            "TableWeapons": "Weapons Table",
+            "TableArmours": "Armours Table"
         };
 
         this.state = {
             currentTab: this.tabs[0],
+
+            removedItems: JSON.parse(localStorage.getItem("__db_removed_items") || "[]"),
 
             customBuild: {
                 __version: 1,
@@ -293,28 +297,163 @@ export default class DevView extends React.Component {
         </React.Fragment>;
     }
 
-    renderMissingPerks() {
-        let perksFromWeapons = Object.values(DataUtil.data().weapons).map(weapon => weapon.perks ? weapon.perks.map(p => p.name) : []);
-        let perksFromArmours = Object.values(DataUtil.data().armours).map(armour => armour.perks ? armour.perks.map(p => p.name) : []);
-        let perksFromCells = Object.values(DataUtil.data().cells).map(cell => Object.values(cell.variants).map(p => Object.keys(p.perks)));
+    renderTable(fields, items) {
+        const isRemoved = itemName => this.state.removedItems.indexOf(itemName) > -1;
 
-        let all = [].concat(...perksFromWeapons, ...perksFromArmours, ...perksFromCells);
-        all = [].concat(...all.filter(e => Array.isArray(e)));
-        all = all.sort();
-        all = all.filter((perk, index) => all.indexOf(perk) === index);
+        let readdButton = <button className="button is-success" onClick={() => {
+            const namesToRemove = items.map(item => item.name);
 
-        let unknownPerks = all.filter(perk => !(perk in DataUtil.data().perks));
+            let removedItems = this.state.removedItems;
 
-        let unknownPerksElements = unknownPerks.map(perk =>
-            <li key={perk}><a>{perk}</a></li>);
+            namesToRemove.forEach(name => removedItems.splice(removedItems.indexOf(name), 1));
+            localStorage.setItem("__db_removed_items", JSON.stringify(removedItems));
+            this.setState({removedItems});
+        }}><i className="fa fa-plus"></i>&nbsp;Re-Add removed items</button>;
+
+        if(items.filter(item => !isRemoved(item.name)).length === 0) {
+            return <React.Fragment>
+                <h3 className="subtitle">No items available, press button to make them available again!</h3>
+                {readdButton}
+            </React.Fragment>;
+        } else if(items.filter(item => isRemoved(item.name)).length === 0) {
+            readdButton = null;
+        }
+
+        const head = fields.map(field =>
+            <th key={field.head}>{field.head}</th>
+        );
+
+        const removeItem = itemName => {
+            let removedItems = this.state.removedItems;
+            removedItems.push(itemName);
+            localStorage.setItem("__db_removed_items", JSON.stringify(removedItems));
+
+            this.setState({removedItems});
+        };
+
+        const renderBody = item => <tr key={item.name}>
+            <td>
+                <button className="button is-dark" onClick={() => removeItem(item.name)}>
+                    <i className="fa fa-times"></i>
+                </button>
+            </td>
+            {fields.map(field => <td key={field.head} style={field.tdStyle || {}}>{field.render(item)}</td>)}
+        </tr>;
 
         return <React.Fragment>
-            <h3 className="title is-4">Perks that are used but do not exist</h3>
-
-            <ul className="menu-list">
-                {unknownPerksElements}
-            </ul>
+            {readdButton}
+            <table className="table">
+                <thead>
+                    <th></th>
+                    {head}
+                </thead>
+                <tbody>
+                    {items.map(item => isRemoved(item.name) ? null : renderBody(item))}
+                </tbody>
+            </table>
         </React.Fragment>;
+    }
+
+    renderTableWeapons() {
+        return this.renderTable([
+            {
+                head: "Icon",
+                render: item => {
+                    return <img style={{width: "50px", height: "auto"}} src={item.icon} />;
+                }
+            },
+            {
+                head: "Name",
+                render: item => {
+                    return <span title={item.description}>{item.name}</span>;
+                }
+            },
+            {
+                head: "Cells",
+                render: item => {
+                    return <span>{(item.cells || []).join(", ")}</span>;
+                }
+            },
+            {
+                head: "Perks",
+                tdStyle: {maxWidth: "300px"},
+                render: item => {
+                    return <span>{(item.perks || []).map(p => {
+                        if(p.from && p.to) {
+                            return `${p.name} [+${p.from}-${p.to}]`;
+                        }
+
+                        return p.name;
+                    }).join(", ")}</span>;
+                }
+            },
+            {
+                head: "Unique Effects",
+                tdStyle: {maxWidth: "500px"},
+                render: item => {
+                    return <span>{(item.unique_effects || []).map(ue => {
+                        if(ue.from && ue.to) {
+                            return `${ue.description} [+${ue.from}-${ue.to}]`;
+                        }
+
+                        return ue.description;
+                    }).join(", ")}</span>;
+                }
+            }
+        ], Object.keys(DataUtil.data().weapons).sort().map(weaponName =>
+            DataUtil.data().weapons[weaponName]
+        ));
+    }
+
+    renderTableArmours() {
+        return this.renderTable([
+            {
+                head: "Icon",
+                render: item => {
+                    return <img style={{width: "50px", height: "auto"}} src={item.icon} />;
+                }
+            },
+            {
+                head: "Name",
+                render: item => {
+                    return <span title={item.description}>{item.name}</span>;
+                }
+            },
+            {
+                head: "Cell",
+                render: item => {
+                    return <span>{item.cells}</span>;
+                }
+            },
+            {
+                head: "Perks",
+                tdStyle: {maxWidth: "300px"},
+                render: item => {
+                    return <span>{(item.perks || []).map(p => {
+                        if(p.from && p.to) {
+                            return `${p.name} [+${p.from}-${p.to}]`;
+                        }
+
+                        return p.name;
+                    }).join(", ")}</span>;
+                }
+            },
+            {
+                head: "Unique Effects",
+                tdStyle: {maxWidth: "500px"},
+                render: item => {
+                    return <span>{(item.unique_effects || []).map(ue => {
+                        if(ue.from && ue.to) {
+                            return `${ue.description} [+${ue.from}-${ue.to}]`;
+                        }
+
+                        return ue.description;
+                    }).join(", ")}</span>;
+                }
+            }
+        ], Object.keys(DataUtil.data().armours).sort().map(name =>
+            DataUtil.data().armours[name]
+        ));
     }
 
     render() {
