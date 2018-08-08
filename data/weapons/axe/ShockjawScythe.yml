@@ -30,5 +30,5 @@ perks:
     to: 10
 unique_effects:
   - name: VerticalAttackHeal
-    description: Heal 200 on perfectly charged vertical attacks.
-    value: 200
+    description: Heal 100 on perfectly charged vertical attacks.
+    value: 100
