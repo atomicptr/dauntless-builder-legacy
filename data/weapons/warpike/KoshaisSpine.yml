@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/warpike/KoshaisSpine.png
 type: War Pike
 damage: Piercing
 elemental: null
-cells: [null, null]
+cells: []
 tier: 5
 rarity: rare
 power:
