@@ -1,0 +1,32 @@
+name: Mantle of Thorns
+description: Torso protection forged from Koshai trophies.
+icon: /assets/icons/armours/MantleOfThorns.png
+type: Torso
+strength: null
+weakness: null
+cells: Utility
+tier: 5
+rarity: rare
+resistance:
+  0: 78
+  1: 81
+  2: 84
+  3: 87
+  4: 90
+  5: 93
+  6: 96
+  7: 99
+  8: 102
+  9: 105
+  10: 108
+perks:
+  - name: Predator
+    value: 1
+  - name: Agility
+    value: 1
+    from: 0
+    to: 5
+  - name: Agility
+    value: 2
+    from: 6
+    to: 10

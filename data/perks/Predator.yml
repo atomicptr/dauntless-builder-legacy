@@ -5,19 +5,19 @@ key: damage_after_not_getting_hit
 effects:
   1:
     description: Deal 104% damage after not getting hit for 15 seconds. Bonus removed when hit.
-    value: 2.04
+    value: 1.04
   2:
     description: Deal 108% damage after not getting hit for 15 seconds. Bonus removed when hit.
-    value: 2.08
+    value: 1.08
   3:
     description: Deal 114% damage after not getting hit for 15 seconds. Bonus removed when hit.
-    value: 2.14
+    value: 1.14
   4:
     description: Deal 120% damage after not getting hit for 15 seconds. Bonus removed when hit.
-    value: 2.2
+    value: 1.2
   5:
     description: Deal 127% damage after not getting hit for 15 seconds. Bonus removed when hit.
-    value: 2.27
+    value: 1.27
   6:
     description: Deal 135% damage after not getting hit for 15 seconds. Bonus removed when hit.
-    value: 2.35
+    value: 1.35
