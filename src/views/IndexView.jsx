@@ -43,11 +43,11 @@ export default class IndexView extends React.Component {
                     </div>
 
                     <div className="column">
-                        <a href="https://buymeacoff.ee/atomicptr" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.dauntless-builder.com/embeds.html" target="_blank" rel="noopener noreferrer">
                             <div className="tile notification is-light feature-tile">
-                                <p className="title">Support Me</p>
+                                <p className="title">Embeds</p>
                                 <div className="feature-tile-background">
-                                    <i className="fas fa-heart"></i>
+                                    <i className="fas fa-code"></i>
                                 </div>
                             </div>
                         </a>
