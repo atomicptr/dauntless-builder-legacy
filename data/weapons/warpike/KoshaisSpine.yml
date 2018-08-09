@@ -1,6 +1,6 @@
 name: Koshai's Spine
 description: A Slayer's war pike forged with Koshai trophies.
-#icon: /assets/icons/weapons/warpike/KoshaisSpine.png
+icon: /assets/icons/weapons/warpike/KoshaisSpine.png
 type: War Pike
 damage: Piercing
 elemental: null
@@ -21,7 +21,8 @@ power:
   10: 430
 perks:
   - name: Sharpened
+    value: 1
 unique_effects:
   - name: NoAttackDamage
     description: After not dealing damage for 8 seconds, the next 5 attacks deal 25% increased damage.
-    value: .25
+    value: 1.25

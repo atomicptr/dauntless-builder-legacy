@@ -1,10 +1,10 @@
 name: Koshai's Tooth
 description: A Slayer's sword forged with Koshai trophies.
-#icon: /assets/icons/weapons/swords/KoshaisTooth.png
+icon: /assets/icons/weapons/swords/KoshaisTooth.png
 type: Sword
 damage: Slashing
 elemental: null
-cells: [null, null]
+cells: [Power, Utility]
 tier: 5
 rarity: rare
 power:
@@ -21,7 +21,8 @@ power:
   10: 430
 perks:
   - name: Sharpened
+    value: 1
 unique_effects:
   - name: NoAttackDamage
-    description: After not dealing damage for 8 seconds, the next 5 attacks deal 25% increased damage.
-    value: .25
+    description: After not dealing damage for 8 seconds, the next 4 attacks deal 25% increased damage.
+    value: 1.25

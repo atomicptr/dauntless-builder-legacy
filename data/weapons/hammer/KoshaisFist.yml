@@ -1,6 +1,6 @@
 name: Koshai's Fist
 description: A Slayer's hammer forged with Koshai trophies.
-#icon: /assets/icons/weapons/hammer/KoshaisFist.png
+icon: /assets/icons/weapons/hammer/KoshaisFist.png
 type: Hammer
 damage: Blunt
 elemental: null
@@ -21,7 +21,8 @@ power:
   10: 430
 perks:
   - name: Sharpened
+    value: 1
 unique_effects:
   - name: NoAttackDamage
-    description: After not dealing damage for 8 seconds, the next 5 attacks deal 25% increased damage.
-    value: .25
+    description: After not dealing damage for 8 seconds, the next 2 attacks deal 25% increased damage.
+    value: 1.25
