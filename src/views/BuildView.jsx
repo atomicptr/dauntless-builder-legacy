@@ -17,6 +17,7 @@ import DebugButtonComponent from "../components/DebugButtonComponent";
 import PerkListComponent from "../components/PerkListComponent";
 import FavoriteBuildsModel from "../models/FavoriteBuildsModel";
 import MiscUtils from "../utils/MiscUtils";
+import BuildEmbeddedModalComponent from "../components/BuildEmbeddedModalComponent";
 
 export default class BuildView extends React.Component {
 
@@ -26,7 +27,7 @@ export default class BuildView extends React.Component {
         this.state = {
             ready: false,
             itemSelectModalOpen: false,
-            cellSelectModalOpen: false,
+            buildEmbedModalOpen: false,
             modalData: {}
         };
     }
@@ -222,6 +223,12 @@ export default class BuildView extends React.Component {
                         <i className={(FavoriteBuildsModel.isFavorite(this.state.buildData) ? "fas" : "far") + " fa-heart"}></i>
                         <span className="only-on-very-small">&nbsp;Save to favorites</span>
                     </button>
+                    <button className="button is-light only-desktop"
+                        data-tip="Embed build on other website"
+                        onClick={() => this.setState({buildEmbedModalOpen: true})}>
+
+                        <i className="fas fa-code"></i>
+                    </button>
                     <button className="button is-light" data-tip="Settings" disabled>
                         <i className="fas fa-cog"></i><span className="only-on-very-small">&nbsp;Settings</span>
                     </button>
@@ -311,6 +318,9 @@ export default class BuildView extends React.Component {
                 onSelected={this.onNewItemSelected.bind(this)}
                 onCanceled={this.onModalCanceled.bind(this)}
                 isOpen={this.state.itemSelectModalOpen} />
+            <BuildEmbeddedModalComponent
+                buildId={this.state.buildData}
+                isOpen={this.state.buildEmbedModalOpen} />
         </React.Fragment>;
     }
 }
