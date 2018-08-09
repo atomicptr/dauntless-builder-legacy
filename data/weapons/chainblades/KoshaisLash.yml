@@ -1,0 +1,27 @@
+name: Koshai's Lash
+description: A Slayer's chain blades forged with Koshai trophies.
+#icon: /assets/icons/weapons/chainblades/KoshaisLash.png
+type: Chain Blades
+damage: Slashing
+elemental: null
+cells: [null, null]
+tier: 5
+rarity: rare
+power:
+  0: 310
+  1: 322
+  2: 334
+  3: 346
+  4: 358
+  5: 370
+  6: 382
+  7: 384
+  8: 406
+  9: 418
+  10: 430
+perks:
+  - name: Sharpened
+unique_effects:
+  - name: NoAttackDamage
+    description: After not dealing damage for 8 seconds, the next 5 attacks deal 25% increased damage.
+    value: .25
