@@ -1,5 +1,5 @@
 name: Predator
-description: Increases Wound damage at the cost of Part damage.
+description: Increases damage after avoiding damage for a short time.
 type: Technique
 key: damage_after_not_getting_hit
 effects:
