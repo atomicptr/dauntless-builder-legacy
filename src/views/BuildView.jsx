@@ -185,6 +185,16 @@ export default class BuildView extends React.Component {
         this.setState({});
     }
 
+    openBuildEmbeddedModal() {
+        this.onModalOpen();
+        this.setState({buildEmbedModalOpen: true});
+    }
+
+    onBuildEmbeddedModalClosed() {
+        this.onModalClosed();
+        this.setState({buildEmbedModalOpen: false});
+    }
+
     render() {
         if(!this.state.ready) {
             return <div>...</div>;
@@ -225,7 +235,7 @@ export default class BuildView extends React.Component {
                     </button>
                     <button className="button is-light only-desktop"
                         data-tip="Embed build on other website"
-                        onClick={() => this.setState({buildEmbedModalOpen: true})}>
+                        onClick={() => this.openBuildEmbeddedModal()}>
 
                         <i className="fas fa-code"></i>
                     </button>
@@ -319,6 +329,7 @@ export default class BuildView extends React.Component {
                 onCanceled={this.onModalCanceled.bind(this)}
                 isOpen={this.state.itemSelectModalOpen} />
             <BuildEmbeddedModalComponent
+                onClosed={this.onBuildEmbeddedModalClosed.bind(this)}
                 buildId={this.state.buildData}
                 isOpen={this.state.buildEmbedModalOpen} />
         </React.Fragment>;

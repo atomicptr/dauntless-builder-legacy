@@ -26,7 +26,11 @@ export default class BuildEmbeddedModalComponent extends React.Component {
     }
 
     onClose() {
-        this.setState({open: false});
+        this.setState({open: false}, () => {
+            if(this.props.onClosed) {
+                this.props.onClosed();
+            }
+        });
     }
 
     getIsActive() {
@@ -66,5 +70,6 @@ export default class BuildEmbeddedModalComponent extends React.Component {
 
 BuildEmbeddedModalComponent.propTypes = {
     buildId: PropTypes.string,
-    isOpen: PropTypes.bool
+    isOpen: PropTypes.bool,
+    onClosed: PropTypes.func
 };
