@@ -132,6 +132,10 @@ export default class EmbedItem extends React.Component {
             }
 
             let cellItems = cells.map(cell => {
+                if(!cell[1]) {
+                    return null;
+                }
+
                 return <div key={md5(cell[0] + "_" + (++EmbedItem._IDCOUNTER))} className={"cell " + cell[1].variants[cell[0]].rarity}>
                     <img src={`https://www.dauntless-builder.com/assets/icons/perks/${cell[1].slot}.png`} />
                     <span>{cell[0]}</span>
