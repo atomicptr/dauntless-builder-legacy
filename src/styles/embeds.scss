@@ -2,6 +2,14 @@ $rarity-uncommon-color: #00CA3C;
 $rarity-rare-color: #0072EB;
 $rarity-epic-color: #BA00FF;
 
+.dauntless-builder-item-embed,
+.dauntless-builder-tooltip,
+.dauntless-builder-error,
+.dauntless-builder-build {
+    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans",
+        "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 .dauntless-builder-error {
     color: red;
     background: white;
@@ -97,6 +105,9 @@ $rarity-epic-color: #BA00FF;
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
+
+            font-size: 18px;
+            font-weight: normal;
 
             img {
                 width: 32px;
