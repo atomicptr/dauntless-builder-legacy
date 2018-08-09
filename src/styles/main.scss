@@ -336,6 +336,10 @@ strong {
                 flex-flow: row wrap;
                 justify-content: flex-start;
                 align-items: center;
+
+                & + .unique-effects {
+                    margin-top: 5px;
+                }
             }
 
             .elementals {
@@ -348,12 +352,11 @@ strong {
                     justify-content: center;
                     align-items: center;
 
-                    background: black;
+                    background: transparent;
                     color: white;
 
-                    padding: 5px 10px;
-
-                    margin-right: 5px;
+                    padding: 3px 6px;
+                    margin-right: 3px;
 
                     img {
                         padding-top: 2px;
@@ -361,11 +364,21 @@ strong {
                     }
 
                     &.elemental-strength {
-                        background: #23d160;
+                        border: 1px solid #23d160;
+                        color: #23d160;
+
+                        img {
+                            filter: invert(58%) sepia(82%) saturate(458%) hue-rotate(88deg) brightness(97%) contrast(87%);
+                        }
                     }
 
                     &.elemental-weakness {
-                        background: #ff3860;
+                        border: 1px solid #ff3860;
+                        color: #ff3860;
+
+                        img {
+                            filter: invert(42%) sepia(77%) saturate(4766%) hue-rotate(328deg) brightness(101%) contrast(101%);
+                        }
                     }
                 }
             }
