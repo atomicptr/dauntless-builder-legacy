@@ -1,0 +1,23 @@
+name: Predator
+description: Increases Wound damage at the cost of Part damage.
+type: Technique
+key: damage_after_not_getting_hit
+effects:
+  1:
+    description: Deal 104% damage after not getting hit for 15 seconds. Bonus removed when hit.
+    value: 2.04
+  2:
+    description: Deal 108% damage after not getting hit for 15 seconds. Bonus removed when hit.
+    value: 2.08
+  3:
+    description: Deal 114% damage after not getting hit for 15 seconds. Bonus removed when hit.
+    value: 2.14
+  4:
+    description: Deal 120% damage after not getting hit for 15 seconds. Bonus removed when hit.
+    value: 2.2
+  5:
+    description: Deal 127% damage after not getting hit for 15 seconds. Bonus removed when hit.
+    value: 2.27
+  6:
+    description: Deal 135% damage after not getting hit for 15 seconds. Bonus removed when hit.
+    value: 2.35
