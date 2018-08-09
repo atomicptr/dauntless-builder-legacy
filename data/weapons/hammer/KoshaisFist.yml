@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/hammer/KoshaisFist.png
 type: Hammer
 damage: Blunt
 elemental: null
-cells: []
+cells: [Power, Utility]
 tier: 5
 rarity: rare
 power:
