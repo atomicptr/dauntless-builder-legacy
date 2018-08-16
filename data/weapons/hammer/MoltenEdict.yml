@@ -4,7 +4,7 @@ description: The Molten Edict is a craftable Exotic weapon in Dauntless. It is c
 type: Hammer
 damage: Blunt
 elemental: Blaze
-cells: []
+cells: [Power, Defence]
 tier: 5
 rarity: exotic
 power:
@@ -19,4 +19,7 @@ power:
   8: 406
   9: 418
   10: 430
-unique_effects: []
+unique_effects:
+  - name: HammerBlastFireballs
+    description: Replaces all hammer blasts with unique fireball abilities that deal blaze damage.
+    value: 0

@@ -4,7 +4,7 @@ description: The Skullforge is a piece of craftable Exotic armour in Dauntless. 
 type: Head
 strength: Blaze
 weakness: Frost
-cells: null
+cells: Defence
 tier: 5
 rarity: exotic
 resistance:
@@ -19,4 +19,7 @@ resistance:
   8: 102
   9: 105
   10: 108
-unique_effects: []
+unique_effects:
+  - name: DamageStaminaShield
+    description: 1.5% of all damage dealt becomes a stamina shield (max 50) that depletes first when spending stamina. Depletes slowly after 5 seconds not dealing damage.
+    value: 0.015
