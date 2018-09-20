@@ -11,7 +11,9 @@
     "build-frontend": "webpack --mode=production",
     "build-dev": "webpack --mode=development",
     "test": "mocha",
-    "bootstrap": "ln -sf dist/data.json . && ln -sf .map map"
+    "bootstrap": "ln -sf dist/data.json . && ln -sf .map map",
+    "serve": "http-serve . -p ${PORT:-8080}",
+    "heroku-prebuild": "yarn build"
   },
   "dependencies": {
     "hashids": "^1.1.4",
