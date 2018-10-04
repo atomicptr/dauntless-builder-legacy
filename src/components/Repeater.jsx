@@ -81,6 +81,17 @@ export default class Repeater extends React.Component {
         const maxLevel = Math.max(...Object.keys(part.power).map(k => Number(k)));
         const powerLevel = part.power[maxLevel];
 
+        let elemental = null;
+
+        if(part.elemental) {
+            elemental = <span className="elementals">
+                <span className="elemental elemental-strength">
+                    +&nbsp;<img src={"/assets/icons/elements/" + part.elemental + ".png"} />
+                    <span className="only-desktop">&nbsp;{part.elemental}</span>
+                </span>
+            </span>;
+        }
+
         // TODO: make other parts selectable
         return <div className="item-title-wrapper">
             <h2 className="subtitle hidden-on-large-screens">{capitalize(partType)}</h2>
@@ -92,7 +103,7 @@ export default class Repeater extends React.Component {
                     <div className="item-data">
                         <h3 className="item-title">{part.name}</h3>
                         <div className="stat-data">
-                            <strong>Power</strong>: {powerLevel}
+                            <strong>Power</strong>: {powerLevel} {elemental}
                         </div>
                         {part.part_effect.map(e => <div key={e} className="unique-effects">{e}</div>)}
                     </div>
