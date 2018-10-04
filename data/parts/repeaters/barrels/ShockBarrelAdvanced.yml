@@ -1,0 +1,18 @@
+name: Shock Barrel (Advanced)
+description: The Shock Barrel (Advanced) is part of a craftable weapon in Dauntless.
+icon: /assets/icons/parts/repeaters/barrels/ShockBarrelAdvanced.png
+elemental: Shock
+power:
+  0: 105
+  1: 107
+  2: 109
+  3: 111
+  4: 113
+  5: 115
+  6: 117
+  7: 119
+  8: 121
+  9: 123
+  10: 125
+part_effect:
+  - Shots and abilities deal shock damage.

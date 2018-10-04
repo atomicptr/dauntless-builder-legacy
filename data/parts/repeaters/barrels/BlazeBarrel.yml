@@ -1,0 +1,13 @@
+name: Blaze Barrel
+description: The Blaze Barrel is part of a craftable weapon in Dauntless.
+icon: /assets/icons/parts/repeaters/barrels/BlazeBarrel.png
+elemental: Blaze
+power:
+  0: 75
+  1: 80
+  2: 85
+  3: 90
+  4: 95
+  5: 100
+part_effect:
+  - Shots and abilities deal blaze damage.
