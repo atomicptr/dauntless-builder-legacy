@@ -1,3 +1,6 @@
+// This exists to force a cache update on client. Simply increase the number.
+const SCRIPT_VERSION = 2;
+
 class DataUtility {
     constructor() {
         this._data = null;
@@ -58,6 +61,7 @@ class DataUtility {
             this.persistData("__db_lastupdate", new Date().getTime());
             this.persistData("__db_data", data);
             this.persistData("__db_map_v1", mapV1);
+            this.persistData("__db_scriptversion", SCRIPT_VERSION);
 
             this._data = data;
             this._map.v1 = mapV1;
@@ -76,12 +80,18 @@ class DataUtility {
             return false;
         }
 
+        const scriptVersion = this.retrieveData("__db_scriptversion") || -1;
+
+        if(scriptVersion != SCRIPT_VERSION) {
+            return false;
+        }
+
         const now = new Date().getTime();
 
         const SECOND = 1000;
         const MINUTE = 60 * SECOND;
 
-        return now < (lastUpdate + 30 * MINUTE);
+        return now < (Number(lastUpdate) + 30 * MINUTE);
     }
 
     persistData(key, data) {
