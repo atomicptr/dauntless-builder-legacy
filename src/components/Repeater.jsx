@@ -69,7 +69,7 @@ export default class Repeater extends React.Component {
                         <div className="stat-data">
                             <strong>Power</strong>: 123
                         </div>
-                        {part.part_effect.map(e => <div key={e} className="unique-effects">e</div>)}
+                        {part.part_effect.map(e => <div key={e} className="unique-effects">{e}</div>)}
                     </div>
                 </div>
             </div>
