@@ -390,6 +390,17 @@ strong {
                 }
             }
         }
+
+        &.repeater-part {
+            .repeater-image-wrapper {
+                min-width: 120px;
+                text-align: center;
+
+                & > img {
+                    max-height: 100px;
+                }
+            }
+        }
     }
 }
 
