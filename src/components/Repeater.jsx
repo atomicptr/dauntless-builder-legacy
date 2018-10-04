@@ -16,6 +16,25 @@ export default class Repeater extends React.Component {
         };
     }
 
+    getTotalPower() {
+        let total = 0;
+
+        const fields = ["barrel", "chamber", "grip", "prism"];
+
+        for(let field of fields) {
+            const part = BuildModel.findPart("repeaters", field + "s", this.props.parent.state.build[field + "_name"]);
+            const level = this.props.parent.state.build[field + "_level"];
+
+            const value = part.power[level];
+
+            if(value) {
+                total += value;
+            }
+        }
+
+        return total;
+    }
+
     onClicked() {
         let filterOption = {};
         filterOption.__itemType = "Weapon";
@@ -28,6 +47,7 @@ export default class Repeater extends React.Component {
         const part = this.props.parent.state.itemData.parts["repeaters"][partType][
             Object.keys(this.props.parent.state.itemData.parts["repeaters"][partType])[0]
         ];
+
         this.props.parent.onPartSelected(fieldName, part.name);
     }
 
@@ -40,7 +60,7 @@ export default class Repeater extends React.Component {
             return null;
         }
 
-        const part = BuildModel.findPart("repeaters", partType,this.props.parent.state.build[fieldName]);
+        const part = BuildModel.findPart("repeaters", partType, this.props.parent.state.build[fieldName]);
 
         if(!part) {
             return <div className="item-title-wrapper">
@@ -58,16 +78,21 @@ export default class Repeater extends React.Component {
             </div>;
         }
 
+        const maxLevel = Math.max(...Object.keys(part.power).map(k => Number(k)));
+        const powerLevel = part.power[maxLevel];
+
         // TODO: make other parts selectable
         return <div className="item-title-wrapper">
             <h2 className="subtitle hidden-on-large-screens">{capitalize(partType)}</h2>
             <div className="item-wrapper">
-                <div className="item no-cells">
-                    <img src={part.icon} />
+                <div className="item repeater-part no-cells">
+                    <div className="repeater-image-wrapper">
+                        <img src={part.icon} />
+                    </div>
                     <div className="item-data">
                         <h3 className="item-title">{part.name}</h3>
                         <div className="stat-data">
-                            <strong>Power</strong>: 123
+                            <strong>Power</strong>: {powerLevel}
                         </div>
                         {part.part_effect.map(e => <div key={e} className="unique-effects">{e}</div>)}
                     </div>
@@ -86,7 +111,7 @@ export default class Repeater extends React.Component {
                         <div className="item-data">
                             <h3 className="item-title">Ostian Repeaters</h3>
                             <div className="stat-data">
-                                <strong>Power</strong>: {this.state.totalPower}
+                                <strong>Power</strong>: {this.getTotalPower()}
                             </div>
                         </div>
                     </div>
