@@ -6,6 +6,7 @@ import ItemIcon from "./ItemIcon";
 
 import PropTypeUtility from "../utility/PropTypeUtility";
 import BuildModel from "../models/BuildModel";
+import RepeaterPart from "./RepeaterPart";
 
 export default class Repeater extends React.Component {
     constructor(props, context) {
@@ -42,13 +43,7 @@ export default class Repeater extends React.Component {
     }
 
     onPartClicked(partType, fieldName) {
-        const part = this.props.parent.state.itemData.parts["repeaters"][partType][
-            Object.keys(this.props.parent.state.itemData.parts["repeaters"][partType])[
-                Math.floor(Math.random() * Object.keys(this.props.parent.state.itemData.parts["repeaters"][partType]).length)
-            ]
-        ];
-
-        this.props.parent.onPartSelected(fieldName, part.name);
+        this.props.parent.openRepeaterPartSelectModal(partType, fieldName);
     }
 
     renderPart(partType, fieldName) {
@@ -78,38 +73,8 @@ export default class Repeater extends React.Component {
             </div>;
         }
 
-        const maxLevel = Math.max(...Object.keys(part.power).map(k => Number(k)));
-        const powerLevel = part.power[maxLevel];
-
-        let elemental = null;
-
-        if(part.elemental) {
-            elemental = <span className="elementals">
-                <span className="elemental elemental-strength">
-                    +&nbsp;<img src={"/assets/icons/elements/" + part.elemental + ".png"} />
-                    <span className="only-desktop">&nbsp;{part.elemental}</span>
-                </span>
-            </span>;
-        }
-
-        // TODO: make other parts selectable
-        return <div className="item-title-wrapper">
-            <h2 className="subtitle hidden-on-large-screens">{capitalize(partType)}</h2>
-            <div className="item-wrapper">
-                <div className="item repeater-part no-cells" onClick={() => this.onPartClicked(partType, fieldName)}>
-                    <div className="repeater-image-wrapper">
-                        <img src={part.icon} />
-                    </div>
-                    <div className="item-data">
-                        <h3 className="item-title">{part.name}</h3>
-                        <div className="stat-data">
-                            <strong>Power</strong>: {powerLevel} {elemental}
-                        </div>
-                        {part.part_effect.map(e => <div key={e} className="unique-effects">{e}</div>)}
-                    </div>
-                </div>
-            </div>
-        </div>;
+        return <RepeaterPart part={part} partType={partType}
+            onClicked={() => this.onPartClicked(partType, fieldName)} />;
     }
 
     render() {

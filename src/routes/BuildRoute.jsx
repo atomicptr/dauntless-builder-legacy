@@ -21,6 +21,7 @@ import BuildEmbeddedModal from "../components/BuildEmbeddedModal";
 import MenuDropdown from "../components/MenuDropdown";
 
 import Repeater from "../components/Repeater";
+import RepeaterPartSelectModal from "../components/RepeaterPartSelectModal";
 
 export default class BuildRoute extends React.Component {
 
@@ -31,6 +32,7 @@ export default class BuildRoute extends React.Component {
             ready: false,
             itemSelectModalOpen: false,
             buildEmbedModalOpen: false,
+            repeaterPartSelectModalOpen: false,
             modalData: {}
         };
     }
@@ -205,6 +207,21 @@ export default class BuildRoute extends React.Component {
         this.setState({});
     }
 
+    openRepeaterPartSelectModal(partType, fieldName) {
+        this.onModalOpen();
+        this.setState({repeaterPartSelectModalOpen: true, modalData: {partType, fieldName}});
+    }
+
+    onRepeaterPartSelectModalClosed() {
+        this.onModalClosed();
+        this.setState({repeaterPartSelectModalOpen: false, modalData: {}});
+    }
+
+    onRepeaterPartSelected(fieldName, partName) {
+        this.onPartSelected(fieldName, partName);
+        this.onRepeaterPartSelectModalClosed();
+    }
+
     openBuildEmbeddedModal() {
         this.onModalOpen();
         this.setState({buildEmbedModalOpen: true});
@@ -370,6 +387,12 @@ export default class BuildRoute extends React.Component {
                 onSelected={this.onNewItemSelected.bind(this)}
                 onCanceled={this.onModalCanceled.bind(this)}
                 isOpen={this.state.itemSelectModalOpen} />
+            <RepeaterPartSelectModal
+                data={this.state.modalData}
+                itemData={this.state.itemData}
+                onClosed={this.onRepeaterPartSelectModalClosed.bind(this)}
+                onSelected={this.onRepeaterPartSelected.bind(this)}
+                isOpen={this.state.repeaterPartSelectModalOpen} />
             <BuildEmbeddedModal
                 onClosed={this.onBuildEmbeddedModalClosed.bind(this)}
                 buildId={this.state.buildData}
