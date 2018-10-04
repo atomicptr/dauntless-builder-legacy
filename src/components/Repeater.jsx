@@ -25,10 +25,8 @@ export default class Repeater extends React.Component {
             const part = BuildModel.findPart("repeaters", field + "s", this.props.parent.state.build[field + "_name"]);
             const level = this.props.parent.state.build[field + "_level"];
 
-            const value = part.power[level];
-
-            if(value) {
-                total += value;
+            if(part) {
+                total += part.power[level];
             }
         }
 
