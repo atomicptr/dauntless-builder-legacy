@@ -171,7 +171,12 @@ describe("Dauntless Builder Data", () => {
         ));
 
         const checkIfHasValidSchema = (field) => {
-            const schemaPath = path.join(__dirname, `../schemas/${field}.json`);
+            const pathParts = field.split(".");
+
+            // last part is filename
+            pathParts[pathParts.length - 1] = pathParts[pathParts.length - 1] + ".json";
+
+            const schemaPath = path.join(__dirname, `../schemas`, ...pathParts);
 
             if(!fs.existsSync(schemaPath)) {
                 return () => {
@@ -182,9 +187,17 @@ describe("Dauntless Builder Data", () => {
             const validator = new SchemaValidator();
             const schema = JSON.parse(fs.readFileSync(schemaPath));
 
+            const fieldParts = field.split(".");
+
+            let dataWrapper = data;
+
+            for(let part of fieldParts) {
+                dataWrapper = dataWrapper[part];
+            }
+
             return () => {
-                for(let itemName in data[field]) {
-                    let item = data[field][itemName];
+                for(let itemName in dataWrapper) {
+                    let item = dataWrapper[itemName];
 
                     assert.ok(
                         validator.validate(schema, item),
@@ -199,5 +212,9 @@ describe("Dauntless Builder Data", () => {
         it("Lanterns format should have a valid schema", checkIfHasValidSchema("lanterns"));
         it("Cells format should have a valid schema", checkIfHasValidSchema("cells"));
         it("Perks format should have a valid schema", checkIfHasValidSchema("perks"));
+        it("Repeater Barrels format should have a valid schema", checkIfHasValidSchema("parts.repeaters.barrels"));
+        it("Repeater Chambers format should have a valid schema", checkIfHasValidSchema("parts.repeaters.chambers"));
+        it("Repeater Grips format should have a valid schema", checkIfHasValidSchema("parts.repeaters.grips"));
+        it("Repeater Prisms format should have a valid schema", checkIfHasValidSchema("parts.repeaters.prisms"));
     });
 });
