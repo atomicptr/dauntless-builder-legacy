@@ -10,7 +10,7 @@ function makeBuild(buildId) {
 
     let idcounter = 0;
 
-    return {
+    let data = {
         __version: numbers[idcounter++],
         weapon_name: stringMap[numbers[idcounter++]],
         weapon_level: numbers[idcounter++],
@@ -31,6 +31,19 @@ function makeBuild(buildId) {
         lantern_name: stringMap[numbers[idcounter++]],
         lantern_cell: stringMap[numbers[idcounter++]]
     };
+
+    if(data.weapon_name === "Repeater") {
+        data.barrel_name = stringMap[numbers[idcounter++]];
+        data.barrel_level = numbers[idcounter++];
+        data.chamber_name = stringMap[numbers[idcounter++]];
+        data.chamber_level = numbers[idcounter++];
+        data.grip_name = stringMap[numbers[idcounter++]];
+        data.grip_level = numbers[idcounter++];
+        data.prism_name = stringMap[numbers[idcounter++]];
+        data.prism_level = numbers[idcounter++];
+    }
+
+    return data;
 }
 
 function assertValid(data) {
@@ -69,6 +82,39 @@ describe("Dauntless Builder - Build IDs", () => {
                 {field: "legs_cell", value: "+3 Weighted Strikes Cell"},
                 {field: "lantern_name", value: "Pangar's Resolve"},
                 {field: "lantern_cell", value: "+3 Aetherborne Cell"},
+            ]],
+            // TODO: add more items / build variations etc
+        ])
+    });
+    it("should be able to deserialize repeaters", () => {
+        // a random build that someone send me :)
+        assertValid([
+            ["vXCe4tVTwZt5RFmYcOiwbubqF4iv8urAtMiBJhyktyivPcaAtnbUnguET0ohjTZkt1T4wHg", [
+                {field: "weapon_name", value: "Repeater"},
+                {field: "weapon_cell0", value: "+3 Predator Cell"},
+                {field: "weapon_cell1", value: "+3 Agility Cell"},
+                {field: "head_name", value: "Deadeye Mask"},
+                {field: "head_level", value: 10},
+                {field: "head_cell", value: "+3 Nine Lives Cell"},
+                {field: "torso_name", value: "Deadeye Jacket"},
+                {field: "torso_level", value: 10},
+                {field: "torso_cell", value: "+3 Savagery Cell"},
+                {field: "arms_name", value: "Reza Grips"},
+                {field: "arms_level", value: 10},
+                {field: "arms_cell", value: "+3 Weighted Strikes Cell"},
+                {field: "legs_name", value: "Deadeye Boots"},
+                {field: "legs_level", value: 10},
+                {field: "legs_cell", value: "+3 Weighted Strikes Cell"},
+                {field: "lantern_name", value: "Pangar's Resolve"},
+                {field: "lantern_cell", value: "+3 Aetherborne Cell"},
+                {field: "barrel_name", value: "Standard Barrel"},
+                {field: "barrel_level", value: 0},
+                {field: "chamber_name", value: "Ballistic Chamber",},
+                {field: "chamber_level", value: 0},
+                {field: "grip_name", value: "Captain's Grip"},
+                {field: "grip_level", value: 0},
+                {field: "prism_name", value: "Sharpshooter Prism"},
+                {field: "prism_level", value: 0}
             ]],
             // TODO: add more items / build variations etc
         ])
