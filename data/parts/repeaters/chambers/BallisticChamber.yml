@@ -3,6 +3,16 @@ description: The Ballistic Chamber is part of a craftable weapon in Dauntless.
 icon: /assets/icons/parts/repeaters/chambers/BallisticChamber.png
 power:
   0: 50
+  1: 55
+  2: 60
+  3: 65
+  4: 70
+  5: 75
+  6: 80
+  7: 85
+  8: 90
+  9: 95
+  10: 100
 part_effect:
   - Fires an explosive missile in a line, dealing 400 damage in an area upon impact.
   - "Empowered: Fires 3 missiles in a spread."
