@@ -30,6 +30,10 @@ export default class ItemUtility {
         return levelString;
     }
 
+    static isRepeater(item) {
+        return item.name === "Repeater";
+    }
+
     static itemType(type) {
         switch(type) {
             case "Weapon":

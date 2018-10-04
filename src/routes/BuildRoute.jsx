@@ -20,6 +20,8 @@ import ItemUtility from "../utility/ItemUtility";
 import BuildEmbeddedModal from "../components/BuildEmbeddedModal";
 import MenuDropdown from "../components/MenuDropdown";
 
+import Repeater from "../components/Repeater";
+
 export default class BuildRoute extends React.Component {
 
     constructor(props, context) {
@@ -118,6 +120,17 @@ export default class BuildRoute extends React.Component {
             changes.weapon_level = ItemUtility.maxLevel("weapons", itemName);
             changes.weapon_cell0 = "";
             changes.weapon_cell1 = "";
+
+            if(ItemUtility.isRepeater({name: itemName})) {
+                changes.barrel_name = "";
+                changes.barrel_level = 0; // TODO: get max part level
+                changes.chamber_name = "";
+                changes.chamber_level = 0; // TODO: get max part level
+                changes.grip_name = "";
+                changes.grip_level = 0; // TODO: get max part level
+                changes.prism_name = "";
+                changes.prism_level = 0; // TODO: get max part level
+            }
         } else if(itemType === "Armour") {
             let type = data.__armourType.toLowerCase();
 
@@ -135,6 +148,12 @@ export default class BuildRoute extends React.Component {
             }
         }
 
+        this.applyItemSelection(changes);
+    }
+
+    onPartSelected(fieldName, partName) {
+        let changes = {};
+        changes[fieldName] = partName;
         this.applyItemSelection(changes);
     }
 
@@ -196,6 +215,34 @@ export default class BuildRoute extends React.Component {
         this.setState({buildEmbedModalOpen: false});
     }
 
+    renderWeapon() {
+        const weapon = BuildModel.findWeapon(this.state.build.weapon_name);
+
+        if(weapon && ItemUtility.isRepeater(weapon)) {
+            return <Repeater
+                parent={this}
+                onItemClicked={this.onItemClicked.bind(this)}
+                onCellClicked={this.onCellClicked.bind(this)}
+                item={weapon}
+                cells={[
+                    [this.state.build.weapon_cell0, BuildModel.findCellByVariantName(this.state.build.weapon_cell0)],
+                    [this.state.build.weapon_cell1, BuildModel.findCellByVariantName(this.state.build.weapon_cell1)],
+                ]} />;
+        }
+
+        return <Item
+            parent={this}
+            onItemClicked={this.onItemClicked.bind(this)}
+            onCellClicked={this.onCellClicked.bind(this)}
+            title="Weapon" defaultType="Weapon"
+            item={weapon}
+            level={this.state.build.weapon_level}
+            cells={[
+                [this.state.build.weapon_cell0, BuildModel.findCellByVariantName(this.state.build.weapon_cell0)],
+                [this.state.build.weapon_cell1, BuildModel.findCellByVariantName(this.state.build.weapon_cell1)],
+            ]} />;
+    }
+
     render() {
         if(!this.state.ready) {
             return <div>...</div>;
@@ -252,18 +299,7 @@ export default class BuildRoute extends React.Component {
             </div>
             <div className="columns">
                 <div className="column is-two-thirds">
-
-                    <Item
-                        parent={this}
-                        onItemClicked={this.onItemClicked.bind(this)}
-                        onCellClicked={this.onCellClicked.bind(this)}
-                        title="Weapon" defaultType="Weapon"
-                        item={BuildModel.findWeapon(this.state.build.weapon_name)}
-                        level={this.state.build.weapon_level}
-                        cells={[
-                            [this.state.build.weapon_cell0, BuildModel.findCellByVariantName(this.state.build.weapon_cell0)],
-                            [this.state.build.weapon_cell1, BuildModel.findCellByVariantName(this.state.build.weapon_cell1)],
-                        ]} />
+                    {this.renderWeapon()}
 
                     <Item
                         parent={this}

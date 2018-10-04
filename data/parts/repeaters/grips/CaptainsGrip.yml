@@ -1,0 +1,8 @@
+name: Captain's Grip
+description: The Captain's Grip is part of a craftable weapon in Dauntless.
+icon: /assets/icons/parts/repeaters/grips/CaptainsGrip.png
+power:
+  0: 50
+part_effect:
+  - Launches a collectible buff a short distance, granting 15% increased damage and attack speed for 12 seconds when collected.
+  - "Empowered: Grants the same buff to all Slayers."

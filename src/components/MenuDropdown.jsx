@@ -32,5 +32,5 @@ export default class MenuDropdown extends React.Component {
 
 MenuDropdown.propTypes = {
     label: PropTypes.element,
-    children: PropTypes.object
+    children: PropTypes.array
 };

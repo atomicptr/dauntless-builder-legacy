@@ -32,7 +32,7 @@
             "type": "boolean"
         },
         "tier": {
-            "type": "number"
+            "type": ["array", "number"]
         },
         "rarity": {
             "type": "string"

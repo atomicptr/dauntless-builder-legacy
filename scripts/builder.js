@@ -40,17 +40,35 @@ function build(path) {
             for(let file of files) {
                 let content = fs.readFileSync(file, "utf8");
                 let doc = yaml.safeLoad(content);
-                data[doc.name] = doc;
 
                 // it is a cell use variant names instead of name
                 if(file.indexOf("/cells/") > -1) {
+                    data[doc.name] = doc;
+
                     for(let v of Object.keys(doc.variants)) {
                         tryInsertToStringMap(v);
                     }
+                } else if(file.indexOf("/parts/") > -1) {
+                    const parts = file.split("/");
+                    const partsFolderIndex = parts.indexOf("parts");
+
+                    const [weaponType, partType] = parts.slice(partsFolderIndex + 1)
+
+                    if(!data[weaponType]) {
+                        data[weaponType] = {};
+                    }
+
+                    if(!data[weaponType][partType]) {
+                        data[weaponType][partType] = {};
+                    }
+
+                    data[weaponType][partType][doc.name] = doc;
+                    tryInsertToStringMap(doc.name);
                 } else if(file.indexOf("misc.yml") > -1) { // don't use string maps on misc
                     data = doc;
                     data.build_time = new Date().getTime();
                 } else {
+                    data[doc.name] = doc;
                     tryInsertToStringMap(doc.name);
                 }
             }
@@ -67,6 +85,7 @@ Promise.all([
     build("data/lanterns/*.yml"),
     build("data/perks/*.yml"),
     build("data/weapons/*/*.yml"),
+    build("data/parts/*/*/*.yml"),
     build("data/misc.yml")
 ]).then(data => {
     let object = {
@@ -76,7 +95,8 @@ Promise.all([
         lanterns: data[3],
         perks: data[4],
         weapons: data[5],
-        misc: data[6]
+        parts: data[6],
+        misc: data[7]
     }
 
     if(!fs.existsSync("./dist")) {

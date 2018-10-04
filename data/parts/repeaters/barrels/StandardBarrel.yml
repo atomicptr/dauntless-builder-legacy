@@ -1,0 +1,7 @@
+name: Standard Barrel
+description: The Standard Barrel is part of a craftable weapon in Dauntless.
+icon: /assets/icons/parts/repeaters/barrels/StandardBarrel.png
+power:
+  0: 50
+part_effect:
+  - Shots and abilities deal physical damage.

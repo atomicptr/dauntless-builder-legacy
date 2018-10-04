@@ -1,0 +1,7 @@
+name: Sharpshooter Prism
+description: The Sharpshooter Prism is part of a craftable weapon in Dauntless.
+icon: /assets/icons/parts/repeaters/prisms/SharpshooterPrism.png
+power:
+  0: 30
+part_effect:
+  - Deal 5 increased damage when attacking the same part multiple times. Stacks up to 5 times.

@@ -58,10 +58,12 @@ export default class ItemSelectModal extends React.Component {
             (nextProps.data.filterOptions.__itemType === "Weapon" ||
             nextProps.data.filterOptions.__itemType === "Armour")) {
 
-            newState.tierFilter = {
-                value: nextProps.data.filterOptions.__tier,
-                label: TierUtility.getTierName(nextProps.data.filterOptions.__tier)
-            };
+            if(!Array.isArray(nextProps.data.filterOptions.__tier)) {
+                newState.tierFilter = {
+                    value: nextProps.data.filterOptions.__tier,
+                    label: TierUtility.getTierName(nextProps.data.filterOptions.__tier)
+                };
+            }
         }
 
         if(Object.keys(newState).length > 0) {

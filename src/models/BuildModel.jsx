@@ -13,7 +13,7 @@ export default class BuildModel {
     serialize() {
         const stringMap = DataUtility.stringMap(this.__version);
 
-        return hashids.encode(
+        let params = [
             this.__version,
             DataUtility.getKeyByValue(stringMap, this.weapon_name),
             this.weapon_level,
@@ -32,8 +32,23 @@ export default class BuildModel {
             this.legs_level,
             DataUtility.getKeyByValue(stringMap, this.legs_cell),
             DataUtility.getKeyByValue(stringMap, this.lantern_name),
-            DataUtility.getKeyByValue(stringMap, this.lantern_cell),
-        );
+            DataUtility.getKeyByValue(stringMap, this.lantern_cell)
+        ];
+
+        if(this.weapon_name === "Repeater") {
+            params = params.concat([
+                DataUtility.getKeyByValue(stringMap, this.barrel_name),
+                this.barrel_level,
+                DataUtility.getKeyByValue(stringMap, this.chamber_name),
+                this.chamber_level,
+                DataUtility.getKeyByValue(stringMap, this.grip_name),
+                this.grip_level,
+                DataUtility.getKeyByValue(stringMap, this.prism_name),
+                this.prism_level
+            ]);
+        }
+
+        return hashids.encode.apply(hashids, params);
     }
 
     static deserialize(str) {
@@ -43,7 +58,7 @@ export default class BuildModel {
 
         let idcounter = 0;
 
-        return new BuildModel({
+        let data = {
             __version: numbers[idcounter++],
             weapon_name: stringMap[numbers[idcounter++]],
             weapon_level: numbers[idcounter++],
@@ -63,7 +78,20 @@ export default class BuildModel {
             legs_cell: stringMap[numbers[idcounter++]],
             lantern_name: stringMap[numbers[idcounter++]],
             lantern_cell: stringMap[numbers[idcounter++]]
-        });
+        };
+
+        if(data.weapon_name === "Repeater") {
+            data.barrel_name = stringMap[numbers[idcounter++]];
+            data.barrel_level = numbers[idcounter++];
+            data.chamber_name = stringMap[numbers[idcounter++]];
+            data.chamber_level = numbers[idcounter++];
+            data.grip_name = stringMap[numbers[idcounter++]];
+            data.grip_level = numbers[idcounter++];
+            data.prism_name = stringMap[numbers[idcounter++]];
+            data.prism_level = numbers[idcounter++];
+        }
+
+        return new BuildModel(data);
     }
 
     get weapon() {
@@ -183,6 +211,14 @@ export default class BuildModel {
         return null;
     }
 
+    static findPart(weaponType, partType, partName) {
+        if(partName in DataUtility.data().parts[weaponType][partType]) {
+            return DataUtility.data().parts[weaponType][partType][partName];
+        }
+
+        return null;
+    }
+
     static findCellByVariantName(variantName) {
         for(let cellKey in DataUtility.data().cells) {
             let cell = DataUtility.data().cells[cellKey];
@@ -280,6 +316,7 @@ export default class BuildModel {
     }
 
     static isValid(str) {
-        return hashids.decode(str).length === 19;
+        const data = hashids.decode(str);
+        return data.length === 19 || data.length === 27;
     }
 }
