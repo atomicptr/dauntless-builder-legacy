@@ -12,9 +12,7 @@ export default class Repeater extends React.Component {
     constructor(props, context) {
         super(props, context);
 
-        this.state = {
-            totalPower: 0
-        };
+        this.state = {};
     }
 
     getTotalPower() {
@@ -46,7 +44,8 @@ export default class Repeater extends React.Component {
         this.props.parent.openRepeaterPartSelectModal(partType, fieldName);
     }
 
-    renderPart(partType, fieldName) {
+    renderPart(partType, fieldPrefix) {
+        const fieldName = fieldPrefix + "_name";
         const capitalize = string => string.charAt(0).toUpperCase() + string.slice(1);
 
         const parts = this.props.parent.state.itemData.parts;
@@ -74,6 +73,7 @@ export default class Repeater extends React.Component {
         }
 
         return <RepeaterPart part={part} partType={partType}
+            level={this.props.parent.state.build[fieldPrefix + "_level"]}
             onClicked={() => this.onPartClicked(partType, fieldName)} />;
     }
 
@@ -100,10 +100,10 @@ export default class Repeater extends React.Component {
                 </div>
             </div>
 
-            {this.renderPart("barrels", "barrel_name")}
-            {this.renderPart("chambers", "chamber_name")}
-            {this.renderPart("grips", "grip_name")}
-            {this.renderPart("prisms", "prism_name")}
+            {this.renderPart("barrels", "barrel")}
+            {this.renderPart("chambers", "chamber")}
+            {this.renderPart("grips", "grip")}
+            {this.renderPart("prisms", "prism")}
         </React.Fragment>;
     }
 }

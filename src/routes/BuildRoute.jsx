@@ -153,9 +153,14 @@ export default class BuildRoute extends React.Component {
         this.applyItemSelection(changes);
     }
 
-    onPartSelected(fieldName, partName) {
+    onPartSelected(fieldPrefix, part) {
         let changes = {};
-        changes[fieldName] = partName;
+
+        const maxLevel = Math.max(...Object.keys(part.power).map(k => Number(k)));
+
+        changes[fieldPrefix + "_name"] = part.name;
+        changes[fieldPrefix + "_level"] = maxLevel;
+
         this.applyItemSelection(changes);
     }
 
@@ -217,8 +222,8 @@ export default class BuildRoute extends React.Component {
         this.setState({repeaterPartSelectModalOpen: false, modalData: {}});
     }
 
-    onRepeaterPartSelected(fieldName, partName) {
-        this.onPartSelected(fieldName, partName);
+    onRepeaterPartSelected(fieldPrefix, part) {
+        this.onPartSelected(fieldPrefix, part);
         this.onRepeaterPartSelectModalClosed();
     }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ItemUtility from "../utility/ItemUtility";
 
 export default class RepeaterPart extends React.Component {
 
@@ -12,11 +13,11 @@ export default class RepeaterPart extends React.Component {
     render() {
         const part = this.props.part;
         const partType = this.props.partType;
+        const level = this.props.level ? this.props.level : Math.max(...Object.keys(part.power).map(k => Number(k)));
 
         const capitalize = string => string.charAt(0).toUpperCase() + string.slice(1);
 
-        const maxLevel = Math.max(...Object.keys(part.power).map(k => Number(k)));
-        const powerLevel = part.power[maxLevel];
+        const powerLevel = part.power[level];
 
         let elemental = null;
 
@@ -43,7 +44,7 @@ export default class RepeaterPart extends React.Component {
                         <img src={part.icon} />
                     </div>
                     <div className="item-data">
-                        <h3 className="item-title">{part.name}</h3>
+                        <h3 className="item-title">{part.name} {ItemUtility.levelString(level)}</h3>
                         <div className="stat-data">
                             <strong>Power</strong>: {powerLevel} {elemental}
                         </div>
@@ -59,5 +60,6 @@ RepeaterPart.propTypes = {
     part: PropTypes.object,
     partType: PropTypes.string,
     onClicked: PropTypes.func,
-    hideTitle: PropTypes.bool
+    hideTitle: PropTypes.bool,
+    level: PropTypes.number
 };

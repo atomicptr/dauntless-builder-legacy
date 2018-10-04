@@ -58,7 +58,7 @@ export default class RepeaterPartSelectModal extends React.Component {
     onPartSelected(part) {
         if(this.props.onSelected) {
             const {fieldName} = this.props.data;
-            this.props.onSelected(fieldName, part.name);
+            this.props.onSelected(fieldName.split("_")[0], part);
         }
     }
 
