@@ -71,6 +71,19 @@ Here is a list of what these numbers mean:
 18. **Lantern Name** - This represents an item name, you can find the value mapping inside of the map file with the corresponding version.
 19. **Lantern - Cell** - This represents an item name, you can find the value mapping inside of the map file with the corresponding version.
 
+In order to fit repeaters into the current format, I had to hack a little bit :).
+
+**IF** the weapon name is set to **Repeater** the list is expanded with more data:
+
+20. **Barrel - Name** - This represents an item name, you can find the value mapping inside of the map file with the corresponding version.
+21. **Barrel - Name** - The level of the Repeater Barrel.
+22. **Chamber - Name** - This represents an item name, you can find the value mapping inside of the map file with the corresponding version.
+23. **Chamber - Name** - The level of the Repeater Chamber.
+24. **Grip - Name** - This represents an item name, you can find the value mapping inside of the map file with the corresponding version.
+25. **Grip - Name** - The level of the Repeater Grip.
+26. **Prism - Name** - This represents an item name, you can find the value mapping inside of the map file with the corresponding version.
+27. **Prism - Name** - The level of the Repeater Prism.
+
 ### The number - name map
 
 You can find the map with the corresponding version in either .map/v**$VERSION_NUMBER**.json or for convenience, you can also
