@@ -1,0 +1,10 @@
+name: Shock Barrel
+description: The Shock Barrel is part of a craftable weapon in Dauntless.
+icon: /assets/icons/parts/repeaters/barrels/ShockBarrel.png
+elemental: Shock
+power:
+  0: 90
+  1: 95
+  2: 100
+part_effect:
+  - Shots and abilities deal shock damage.

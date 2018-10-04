@@ -1,0 +1,10 @@
+name: Frost Barrel
+description: The Frost Barrel is part of a craftable weapon in Dauntless.
+icon: /assets/icons/parts/repeaters/barrels/FrostBarrel.png
+elemental: Frost
+power:
+  0: 90
+  1: 95
+  2: 100
+part_effect:
+  - Shots and abilities deal frost damage.
