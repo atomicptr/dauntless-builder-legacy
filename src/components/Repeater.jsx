@@ -43,7 +43,9 @@ export default class Repeater extends React.Component {
 
     onPartClicked(partType, fieldName) {
         const part = this.props.parent.state.itemData.parts["repeaters"][partType][
-            Object.keys(this.props.parent.state.itemData.parts["repeaters"][partType])[0]
+            Object.keys(this.props.parent.state.itemData.parts["repeaters"][partType])[
+                Math.floor(Math.random() * Object.keys(this.props.parent.state.itemData.parts["repeaters"][partType]).length)
+            ]
         ];
 
         this.props.parent.onPartSelected(fieldName, part.name);
@@ -83,7 +85,7 @@ export default class Repeater extends React.Component {
         return <div className="item-title-wrapper">
             <h2 className="subtitle hidden-on-large-screens">{capitalize(partType)}</h2>
             <div className="item-wrapper">
-                <div className="item repeater-part no-cells">
+                <div className="item repeater-part no-cells" onClick={() => this.onPartClicked(partType, fieldName)}>
                     <div className="repeater-image-wrapper">
                         <img src={part.icon} />
                     </div>
