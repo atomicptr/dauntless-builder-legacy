@@ -1,6 +1,6 @@
 name: Advanced Barrel
 description: The Advanced Barrel is part of a craftable weapon in Dauntless.
-icon: /assets/icons/parts/repeaters/barrels/StandardBarrelAdvanced.png
+icon: /assets/icons/parts/repeaters/barrels/AdvancedBarrel.png
 elemental: null
 power:
   0: 105

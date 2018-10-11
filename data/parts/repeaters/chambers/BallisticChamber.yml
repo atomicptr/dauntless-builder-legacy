@@ -1,6 +1,6 @@
 name: Ballistic Chamber
 description: The Ballistic Chamber is part of a craftable weapon in Dauntless.
-icon: /assets/icons/parts/repeaters/chambers/BallisticChamberAdvanced.png
+icon: /assets/icons/parts/repeaters/chambers/BallisticChamber.png
 power:
   0: 105
   1: 107

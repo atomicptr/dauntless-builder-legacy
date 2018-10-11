@@ -1,6 +1,6 @@
 name: Salvo Chamber
 description: The Salvo Chamber is part of a craftable weapon in Dauntless.
-icon: /assets/icons/parts/repeaters/chambers/BallisticChamber.png
+icon: /assets/icons/parts/repeaters/chambers/SalvoChamber.png
 power:
   0: 50
   1: 55
