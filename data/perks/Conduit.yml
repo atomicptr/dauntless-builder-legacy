@@ -1,0 +1,23 @@
+name: Conduit
+description: Using a Lantern's hold ability increases all Slayers' attack speed temporarily.
+type: Utility
+key: attack_speed_all_slayers
+effects:
+  1:
+    description: Using your lantern hold ability grants 5% attack speed to all Slayers for 8 seconds.
+    value: 1.05
+  2:
+    description: Using your lantern hold ability grants 7% attack speed to all Slayers for 8 seconds.
+    value: 1.07
+  3:
+    description: Using your lantern hold ability grants 10% attack speed to all Slayers for 8 seconds.
+    value: 1.1
+  4:
+    description: Using your lantern hold ability grants 14% attack speed to all Slayers for 8 seconds.
+    value: 1.14
+  5:
+    description: Using your lantern hold ability grants 19% attack speed to all Slayers for 8 seconds.
+    value: 1.19
+  6:
+    description: Using your lantern hold ability grants 25% attack speed to all Slayers for 8 seconds.
+    value: 1.25
