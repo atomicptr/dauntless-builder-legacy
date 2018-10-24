@@ -14,4 +14,4 @@ power:
   9: 30
   10: 55
 part_effect:
-  - Deal 5 increased damage when attacking the same part multiple times. Stacks up to 5 times.
+  - Deal 5 increased damage when attacking the same part multiple times. Stacks up to 8 times.
