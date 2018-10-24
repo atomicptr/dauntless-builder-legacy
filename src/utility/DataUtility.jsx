@@ -1,5 +1,5 @@
 // This exists to force a cache update on client. Simply increase the number.
-const SCRIPT_VERSION = 2;
+const SCRIPT_VERSION = 3;
 
 class DataUtility {
     constructor() {
