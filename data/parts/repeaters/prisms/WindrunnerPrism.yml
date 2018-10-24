@@ -14,4 +14,4 @@ power:
   9: 30
   10: 55
 part_effect:
-  - Gain 15% increased movespeed when at 4 or less ammo.
+  - Gain 20% increased movespeed when at 6 or less ammo.
