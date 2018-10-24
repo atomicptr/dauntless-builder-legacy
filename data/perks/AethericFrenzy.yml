@@ -4,20 +4,20 @@ type: Utility
 key: flat_lantern_charge
 effects:
   1:
-    description: +1 Lantern Charge on Hit
-    value: 1
+    description: +3 Lantern Charge on Hit
+    value: 3
   2:
-    description: +2 Lantern Charge on Hit
-    value: 2
-  3:
     description: +4 Lantern Charge on Hit
     value: 4
+  3:
+    description: +5 Lantern Charge on Hit
+    value: 5
   4:
-    description: +6 Lantern Charge on Hit
-    value: 6
+    description: +7.5 Lantern Charge on Hit
+    value: 7.5
   5:
-    description: +8 Lantern Charge on Hit
-    value: 8
-  6:
     description: +10 Lantern Charge on Hit
     value: 10
+  6:
+    description: +12.5 Lantern Charge on Hit
+    value: 12.5
