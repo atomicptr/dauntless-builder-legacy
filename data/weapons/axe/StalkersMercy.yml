@@ -1,6 +1,6 @@
-name: Stalker's MErcy
+name: Stalker's Mercy
 description: A Slayer's axe forged with Riftstalker trophies.
-icon: /assets/icons/weapons/hammers/StalkersMercy.png
+icon: /assets/icons/weapons/axe/StalkersMercy.png
 type: Axe
 damage: Slashing
 elemental: Umbral
