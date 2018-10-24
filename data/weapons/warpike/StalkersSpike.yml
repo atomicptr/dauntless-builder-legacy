@@ -1,0 +1,35 @@
+name: Stalker's Spike
+description: A Slayer's war pike forged with Riftstalker trophies.
+icon: /assets/icons/weapons/warpike/StalkersSpike.png
+type: War Pike
+damage: Piercing
+elemental: Umbral
+cells: [Technique, Utility]
+tier: 5
+rarity: rare
+power:
+  0: 310
+  1: 322
+  2: 334
+  3: 346
+  4: 358
+  5: 370
+  6: 382
+  7: 384
+  8: 406
+  9: 418
+  10: 430
+perks:
+  - name: Wild Frenzy
+    value: 1
+    from: 0
+    to: 5
+  - name: Wild Frenzy
+    value: 2
+    from: 6
+    to: 10
+unique_effects:
+  - name: DamageShadowOrbs
+    description: >
+      Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 3% for 5 seconds.
+      If 5 or more orbs are present, the bonus doubles.
