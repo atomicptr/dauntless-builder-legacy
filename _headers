@@ -2,6 +2,6 @@
     X-XSS-Protection: 1; mode=block
     X-Frame-Options: SAMEORIGIN
     X-Content-Type-Options: nosniff
-    Content-Security-Policy: default-src https:; style-src https: 'unsafe-inline'
+    Content-Security-Policy: default-src https: 'unsafe-inline'
     Referrer-Policy: no-referrer-when-downgrade
     Feature-Policy: accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'
