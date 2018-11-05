@@ -14,6 +14,7 @@ cp dist/embed.js deploy/dist/
 cp *.html deploy/
 cp CNAME deploy/
 cp _redirects deploy/
+cp _headers deploy/
 
 ### copy data files to deploy
 mkdir -p deploy/map/
