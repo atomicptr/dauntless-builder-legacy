@@ -3,7 +3,6 @@ const path = require("path");
 module.exports = {
     entry: {
         "dauntless-builder": "./src/App.jsx",
-        "embed": "./src/Embed.jsx"
     },
     output: {
         path: path.join(__dirname, "dist"),

@@ -41,17 +41,6 @@ export default class IndexRoute extends React.Component {
                             </div>
                         </a>
                     </div>
-
-                    <div className="column">
-                        <a href="https://www.dauntless-builder.com/embeds.html" target="_blank" rel="noopener noreferrer">
-                            <div className="tile notification is-light feature-tile">
-                                <p className="title">Embeds</p>
-                                <div className="feature-tile-background">
-                                    <i className="fas fa-code"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
                 </div>
 
                 <div className="columns">

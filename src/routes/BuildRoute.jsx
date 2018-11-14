@@ -19,7 +19,6 @@ import DebugButton from "../components/DebugButton";
 import PerkList from "../components/PerkList";
 import FavoriteBuildsModel from "../models/FavoriteBuildsModel";
 import ItemUtility from "../utility/ItemUtility";
-import BuildEmbeddedModal from "../components/BuildEmbeddedModal";
 import MenuDropdown from "../components/MenuDropdown";
 
 import Repeater from "../components/Repeater";
@@ -34,7 +33,6 @@ export default class BuildRoute extends React.Component {
         this.state = {
             ready: false,
             itemSelectModalOpen: false,
-            buildEmbedModalOpen: false,
             repeaterPartSelectModalOpen: false,
             modalData: {}
         };
@@ -230,16 +228,6 @@ export default class BuildRoute extends React.Component {
         this.onRepeaterPartSelectModalClosed();
     }
 
-    openBuildEmbeddedModal() {
-        this.onModalOpen();
-        this.setState({buildEmbedModalOpen: true});
-    }
-
-    onBuildEmbeddedModalClosed() {
-        this.onModalClosed();
-        this.setState({buildEmbedModalOpen: false});
-    }
-
     renderWeapon() {
         const weapon = BuildModel.findWeapon(this.state.build.weapon_name);
 
@@ -377,9 +365,6 @@ export default class BuildRoute extends React.Component {
                             <span className="only-on-very-small">&nbsp;More</span>
                         </React.Fragment>
                     }>
-                        <a className="dropdown-item" onClick={() => this.openBuildEmbeddedModal()}>
-                            <i className="fas fa-code"></i> Embed build
-                        </a>
                         <DarkModeToggle />
                         <hr className="dropdown-divider" />
                         <a className="dropdown-item disabled">
@@ -467,10 +452,6 @@ export default class BuildRoute extends React.Component {
                 onClosed={this.onRepeaterPartSelectModalClosed.bind(this)}
                 onSelected={this.onRepeaterPartSelected.bind(this)}
                 isOpen={this.state.repeaterPartSelectModalOpen} />
-            <BuildEmbeddedModal
-                onClosed={this.onBuildEmbeddedModalClosed.bind(this)}
-                buildId={this.state.buildData}
-                isOpen={this.state.buildEmbedModalOpen} />
         </React.Fragment>;
     }
 }
