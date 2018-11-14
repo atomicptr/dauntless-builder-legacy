@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/hammer/Mooncrusher.png
 type: Hammer
 damage: Blunt
 elemental: null
-cells: [Technique, Mobility]
+cells: [Power, Mobility]
 tier: 5
 rarity: rare
 power:
