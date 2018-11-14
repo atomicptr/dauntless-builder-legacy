@@ -9,7 +9,7 @@ mkdir deploy
 ### copy files and assets
 rsync -r assets/ deploy/assets/
 mkdir -p deploy/dist/
-cp dist/dauntless-builder.js deploy/dist/
+cp dist/*.js deploy/dist/
 cp *.html deploy/
 cp misc/* deploy/
 

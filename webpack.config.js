@@ -29,6 +29,12 @@ module.exports = {
             }
         ],
     },
+   optimization: {
+        splitChunks: {
+            chunks: "all",
+            automaticNameDelimiter: "-"
+        }
+    },
     resolve: {
         modules: [
             path.join(__dirname, "src"),
