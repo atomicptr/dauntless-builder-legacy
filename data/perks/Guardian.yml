@@ -1,5 +1,5 @@
 name: Guardian
-description: null
+description: Grant your nearest ally a portion of any shield you’ve applied to yourself.
 type: Defence
 key: shield_share
 effects:

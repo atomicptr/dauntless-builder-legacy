@@ -1,0 +1,32 @@
+name: Spirit of Stone
+description: Head protection forged from Rockfall trophies.
+icon: /assets/icons/armours/SpiritOfStone.png
+type: Head
+strength: null
+weakness: null
+cells: Defence
+tier: 5
+rarity: rare
+resistance:
+  0: 78
+  1: 81
+  2: 84
+  3: 87
+  4: 90
+  5: 93
+  6: 96
+  7: 99
+  8: 102
+  9: 105
+  10: 108
+perks:
+  - name: Tough
+    value: 1
+  - name: Guardian
+    value: 1
+    from: 0
+    to: 5
+  - name: Guardian
+    value: 2
+    from: 6
+    to: 10
