@@ -58,10 +58,24 @@ describe("Dauntless Builder Data", () => {
     });
 
     describe("Validity of built data", () => {
+        const mineDataFromField = (data, field) => {
+            const fieldParts = field.split(".");
+
+            let dataWrapper = data;
+
+            for(let part of fieldParts) {
+                dataWrapper = dataWrapper[part];
+            }
+
+            return dataWrapper;
+        }
+
         const checkIconsFor = field => {
             return () => {
-                for(let itemName in data[field]) {
-                    let item = data[field][itemName];
+                const dataWrapper = mineDataFromField(data, field);
+
+                for(let itemName in dataWrapper) {
+                    let item = dataWrapper[itemName];
 
                     if(item.icon) {
                         let iconPath = path.join(process.cwd(), item.icon);
@@ -77,6 +91,10 @@ describe("Dauntless Builder Data", () => {
 
         it("Weapons should not have invalid icons", checkIconsFor("weapons"));
         it("Armours should not have invalid icons", checkIconsFor("armours"));
+        it("Repeater Barrels should not have invalid icons", checkIconsFor("parts.repeaters.barrels"));
+        it("Repeater Chambers should not have invalid icons", checkIconsFor("parts.repeaters.chambers"));
+        it("Repeater Grips should not have invalid icons", checkIconsFor("parts.repeaters.grips"));
+        it("Repeater Prisms should not have invalid icons", checkIconsFor("parts.repeaters.prisms"));
 
         const checkCellSlotsFor = field => {
             return () => {
@@ -111,8 +129,10 @@ describe("Dauntless Builder Data", () => {
 
         const checkElementsFor = field => {
             return () => {
-                for(let itemName in data[field]) {
-                    let item = data[field][itemName];
+                const dataWrapper = mineDataFromField(data, field);
+
+                for(let itemName in dataWrapper) {
+                    let item = dataWrapper[itemName];
 
                     const elements = ["Blaze", "Frost", "Shock", "Radiant", "Umbral"];
 
@@ -140,6 +160,7 @@ describe("Dauntless Builder Data", () => {
 
         it("Weapons should not have invalid elements", checkElementsFor("weapons"));
         it("Armours should not have invalid elements", checkElementsFor("armours"));
+        it("Repeater Barrels should not have invalid elements", checkElementsFor("parts.repeaters.barrels"));
 
         const checkPerksFor = (field, getPerksFunc) => {
             return () => {
@@ -187,13 +208,7 @@ describe("Dauntless Builder Data", () => {
             const validator = new SchemaValidator();
             const schema = JSON.parse(fs.readFileSync(schemaPath));
 
-            const fieldParts = field.split(".");
-
-            let dataWrapper = data;
-
-            for(let part of fieldParts) {
-                dataWrapper = dataWrapper[part];
-            }
+            const dataWrapper = mineDataFromField(data, field);
 
             return () => {
                 for(let itemName in dataWrapper) {
