@@ -4,32 +4,44 @@ type: Utility
 key: [increased_healing, flat_lantern_charge]
 effects:
   1:
-    description: >
+    description: [
       Your Flask heals over 20 seconds, but for 20% increased healing.
-      While this heal is active, generate 8 Lantern Charge each second.
+      While this heal is active, generate 8 Lantern Charge each second.,
+      null
+    ]
     value: [1.2, 8]
   2:
-    description: >
+    description: [
       Your Flask heals over 20 seconds, but for 20% increased healing.
-      While this heal is active, generate 16 Lantern Charge each second.
+      While this heal is active, generate 16 Lantern Charge each second.,
+      null
+    ]
     value: [1.2, 16]
   3:
-    description: >
+    description: [
       Your Flask heals over 20 seconds, but for 20% increased healing.
-      While this heal is active, generate 25 Lantern Charge each second.
+      While this heal is active, generate 25 Lantern Charge each second.,
+      null
+    ]
     value: [1.2, 25]
   4:
-    description: >
+    description: [
       Your Flask heals over 20 seconds, but for 20% increased healing.
-      While this heal is active, generate 37.5 Lantern Charge each second.
+      While this heal is active, generate 37.5 Lantern Charge each second.,
+      null
+    ]
     value: [1.2, 37.5]
   5:
-    description: >
+    description: [
       Your Flask heals over 20 seconds, but for 20% increased healing.
-      While this heal is active, generate 50 Lantern Charge each second.
+      While this heal is active, generate 50 Lantern Charge each second.,
+      null
+    ]
     value: [1.2, 50]
   6:
-    description: >
+    description: [
       Your Flask heals over 20 seconds, but for 20% increased healing.
-      While this heal is active, generate 75 Lantern Charge each second.
+      While this heal is active, generate 75 Lantern Charge each second.,
+      null
+    ]
     value: [1.2, 75]
