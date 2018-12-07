@@ -1,0 +1,30 @@
+name: Valomyr's Bite
+description: A Slayer's axe forged with Valomyr trophies.
+icon: /assets/icons/weapons/axe/ValomyrsBite.png
+type: Axe
+damage: Slashing
+elemental: Radiant
+cells: [Power, Utility]
+tier: 5
+rarity: rare
+power:
+  0: 310
+  1: 322
+  2: 334
+  3: 346
+  4: 358
+  5: 370
+  6: 382
+  7: 384
+  8: 406
+  9: 418
+  10: 430
+perks:
+  - name: Aetherhunter
+    value: 1
+unique_effects:
+  - name: ValomyrCharge
+    description: >
+      Once charged, your next attack will deal 400 bonus radiant damage.
+      Charge rate increases with current health.
+    value: 1.5
