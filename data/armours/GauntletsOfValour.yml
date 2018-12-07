@@ -1,0 +1,32 @@
+name: Gauntlets of Valour
+description: Arms protection forged from Valomyr trophies.
+icon: /assets/icons/armours/GauntletsOfValour.png
+type: Arms
+strength: Umbral
+weakness: Radiant
+cells: Defence
+tier: 5
+rarity: rare
+resistance:
+  0: 77.5
+  1: 80.5
+  2: 83.5
+  3: 86.5
+  4: 89.5
+  5: 92.5
+  6: 95.5
+  7: 98.5
+  8: 101.5
+  9: 104.5
+  10: 107.5
+perks:
+  - name: Nine Lives
+    value: 1
+    from: 0
+    to: 5
+  - name: Nine Lives
+    value: 2
+    from: 6
+    to: 10
+  - name: Lucent
+    value: 1
