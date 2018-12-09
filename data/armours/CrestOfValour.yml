@@ -2,8 +2,8 @@ name: Crest of Valour
 description: Head protection forged from Valomyr trophies.
 icon: /assets/icons/armours/CrestOfValour.png
 type: Head
-strength: Umbral
-weakness: Radiant
+strength: Radiant
+weakness: Umbral
 cells: Power
 tier: 5
 rarity: rare

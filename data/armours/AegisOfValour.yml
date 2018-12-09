@@ -2,8 +2,8 @@ name: Aegis of Valour
 description: Torso protection forged from Valomyr trophies.
 icon: /assets/icons/armours/AegisOfValour.png
 type: Torso
-strength: Umbral
-weakness: Radiant
+strength: Radiant
+weakness: Umbral
 cells: Power
 tier: 5
 rarity: rare
