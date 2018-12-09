@@ -2,8 +2,8 @@ name: Gauntlets of Valour
 description: Arms protection forged from Valomyr trophies.
 icon: /assets/icons/armours/GauntletsOfValour.png
 type: Arms
-strength: Radiant
-weakness: Umbral
+strength: Umbral
+weakness: Radiant
 cells: Defence
 tier: 5
 rarity: rare

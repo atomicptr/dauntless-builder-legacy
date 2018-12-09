@@ -2,8 +2,8 @@ name: Greaves of Valour
 description: Leg and foot protection forged from Valomyr trophies.
 icon: /assets/icons/armours/GreavesOfValour.png
 type: Legs
-strength: Radiant
-weakness: Umbral
+strength: Umbral
+weakness: Radiant
 cells: Utility
 tier: 5
 rarity: rare
