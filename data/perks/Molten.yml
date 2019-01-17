@@ -1,0 +1,23 @@
+name: Molten
+description: Generates Molten Hearts when dealing damage.
+type: Technique
+key: molten_heart
+effects:
+  1:
+    description: Dealing damage generates a Molten Heart on a 20 second cooldown.
+    value: 1
+  2:
+    description: Dealing damage generates a Molten Heart on a 17 second cooldown.
+    value: 1
+  3:
+    description: Dealing damage generates two Molten Hearts on a 17 second cooldown.
+    value: 2
+  4:
+    description: Dealing damage generates two Molten Hearts on a 14 second cooldown.
+    value: 2
+  5:
+    description: Dealing damage generates three Molten Hearts on a 14 second cooldown.
+    value: 3
+  6:
+    description: Dealing damage generates three Molten Hearts on a 10 second cooldown.
+    value: 3
