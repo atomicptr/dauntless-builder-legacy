@@ -20,11 +20,11 @@ resistance:
   9: 104.5
   10: 107.5
 perks:
-  - name: Fireproof
+  - name: Molten
     value: 1
     from: 0
     to: 5
-  - name: Fireproof
+  - name: Molten
     value: 2
     from: 6
     to: 10
