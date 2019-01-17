@@ -1,0 +1,32 @@
+name: Scorched Carapace
+description: Torso protection forged from Scorchstone trophies.
+icon: /assets/icons/armours/ScorchedCarapace.png
+type: Torso
+strength: Blaze
+weakness: Frost
+cells: Technique
+tier: 5
+rarity: rare
+resistance:
+  0: 77.5
+  1: 80.5
+  2: 83.5
+  3: 86.5
+  4: 89.5
+  5: 92.5
+  6: 95.5
+  7: 98.5
+  8: 101.5
+  9: 104.5
+  10: 107.5
+perks:
+  - name: Ragehunter
+    value: 1
+    from: 0
+    to: 5
+  - name: Ragehunter
+    value: 2
+    from: 6
+    to: 10
+  - name: Molten
+    value: 1
