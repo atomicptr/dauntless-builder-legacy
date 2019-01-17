@@ -1,0 +1,34 @@
+name: Inferno's Decree
+description: A Slayer's axe forged with Scorchestone trophies.
+icon: /assets/icons/weapons/axe/InfernosDecree.png
+type: Axe
+damage: Cutting
+elemental: Blaze
+cells: [Power, Power]
+tier: 5
+rarity: rare
+power:
+  0: 310
+  1: 322
+  2: 334
+  3: 346
+  4: 358
+  5: 370
+  6: 382
+  7: 384
+  8: 406
+  9: 418
+  10: 430
+perks:
+  - name: Overpower
+    value: 1
+    from: 0
+    to: 5
+  - name: Overpower
+    value: 2
+    from: 6
+    to: 10
+unique_effects:
+  - name: BlazeDamageOnNthHit
+    description: The sixth hit in quick succession deals 400 bonus blaze damage
+    value: 400
