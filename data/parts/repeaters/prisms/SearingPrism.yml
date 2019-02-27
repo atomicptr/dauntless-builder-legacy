@@ -14,4 +14,4 @@ power:
   9: 30
   10: 55
 part_effect:
-  - The tenth hit in sequence causes fire damage of 350
+  - The tenth hit in quick succession deals 250 bonus blaze damage
