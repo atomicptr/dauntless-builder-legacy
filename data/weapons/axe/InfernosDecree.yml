@@ -30,5 +30,5 @@ perks:
     to: 10
 unique_effects:
   - name: BlazeDamageOnNthHit
-    description: The sixth hit in quick succession deals 350 bonus damage
+    description: The sixth hit in quick succession deals 250 bonus blaze damage
     value: 400
