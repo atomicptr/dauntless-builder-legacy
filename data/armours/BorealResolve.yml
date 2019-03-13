@@ -1,0 +1,22 @@
+name: Boreal Resolve
+description: Torso protection forged from Deadfrost trophies.
+icon: /assets/icons/armours/BorealResolve.png
+type: Torso
+strength: Frost
+weakness: Blaze
+cells: null
+tier: 5
+rarity: rare
+resistance:
+  0: 77.5
+  1: 80.5
+  2: 83.5
+  3: 86.5
+  4: 89.5
+  5: 92.5
+  6: 95.5
+  7: 98.5
+  8: 101.5
+  9: 104.5
+  10: 107.5
+perks: []
