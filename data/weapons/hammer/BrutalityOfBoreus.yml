@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/hammer/BrutalityOfBoreus.png
 type: Hammer
 damage: Blunt
 elemental: Frost
-cells: []
+cells: [Power, Defence]
 tier: 5
 rarity: rare
 power:

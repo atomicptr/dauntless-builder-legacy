@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/swords/OnusOfBoreus.png
 type: Sword
 damage: Slashing
 elemental: Frost
-cells: []
+cells: [Power, Defence]
 tier: 5
 rarity: rare
 power:
