@@ -4,7 +4,7 @@ icon: /assets/icons/armours/BorealMarch.png
 type: Legs
 strength: Frost
 weakness: Blaze
-cells: null
+cells: Technique
 tier: 5
 rarity: rare
 resistance:

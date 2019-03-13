@@ -4,7 +4,7 @@ icon: /assets/icons/armours/BorealMight.png
 type: Arms
 strength: Frost
 weakness: Blaze
-cells: null
+cells: Power
 tier: 5
 rarity: rare
 resistance:
