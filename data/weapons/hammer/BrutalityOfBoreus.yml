@@ -1,0 +1,27 @@
+name: Brutality of Boreus
+description: A Slayer's hammer forged with Deadfrost trophies.
+icon: /assets/icons/weapons/hammer/BrutalityOfBoreus.png
+type: Hammer
+damage: Blunt
+elemental: Frost
+cells: []
+tier: 5
+rarity: rare
+power:
+  0: 310
+  1: 322
+  2: 334
+  3: 346
+  4: 358
+  5: 370
+  6: 382
+  7: 384
+  8: 406
+  9: 418
+  10: 430
+perks: []
+unique_effects:
+  - name: BoreusFrostSprite
+    description: >
+      Using Ammo generates a Frost Sprite that cause your next attack to deal 50 bonus damage
+      and minor frost damage. Max 4 Sprites. 
