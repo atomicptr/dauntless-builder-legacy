@@ -33,11 +33,6 @@ export default class Footer extends React.Component {
                     <span className="icon"><i className="far fa-eye"></i></span>Privacy
                 </Link>
             </span>
-            <span className="footer-link">
-                <a href="https://buymeacoff.ee/atomicptr" target="_blank" rel="noopener noreferrer">
-                    <span className="icon"><i className="fas fa-heart"></i></span>Donate
-                </a>
-            </span>
         </div>;
     }
 }

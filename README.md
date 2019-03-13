@@ -121,10 +121,6 @@ We're also using some icons from [Game Icons](https://game-icons.net/), such as:
 The icons and the data are mostly from the [Dauntless Wiki](https://dauntless.gamepedia.com/Dauntless_Wiki), so huge thanks
 to all who are working on it :).
 
-## Support me
-
-<a href="https://www.buymeacoffee.com/atomicptr" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
-
 ## Contact me
 
 If you want to contact me, you can do so via these methods:
