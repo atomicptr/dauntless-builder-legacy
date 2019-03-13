@@ -19,4 +19,14 @@ resistance:
   8: 101.5
   9: 104.5
   10: 107.5
-perks: []
+perks:
+  - name: Rage
+    value: 1
+    from: 0
+    to: 5
+  - name: Rage
+    value: 2
+    from: 6
+    to: 10
+  - name: Iceborne
+    value: 1
