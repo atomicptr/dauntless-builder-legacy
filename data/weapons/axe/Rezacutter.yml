@@ -31,5 +31,5 @@ unique_effects:
     from: 6
     to: 10
   - name: FourthHitBonusDamage
-    description: The fourth hit in quick succession deals 150 bonus damage.
+    description: The fourth hit in quick succession deals 150 bonus part damage.
     value: 150

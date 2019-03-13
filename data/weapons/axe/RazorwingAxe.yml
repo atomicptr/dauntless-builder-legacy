@@ -30,5 +30,5 @@ perks:
     to: 10
 unique_effects:
   - name: ComboFinisherDamage
-    description: Combo finishers deal 200 bonus damage.
+    description: Combo finishers deal 200 bonus part damage.
     value: 200
