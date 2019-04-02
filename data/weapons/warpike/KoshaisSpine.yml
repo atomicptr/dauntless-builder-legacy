@@ -20,7 +20,6 @@ power:
   9: 418
   10: 430
 perks:
-perks:
   - name: Sharpened
     value: 1
     from: 0
