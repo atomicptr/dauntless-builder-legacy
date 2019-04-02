@@ -1,23 +1,23 @@
 name: Cunning
 description: Grants a chance to deal double damage.
 type: Technique
-key: double_damage_chance
+key: CriticalStrike
 effects:
   1:
-    description: 1% chance to deal double damage
-    value: 0.01
-  2:
-    description: 2% chance to deal double damage
+    description: 2% critical strike chance
     value: 0.02
+  2:
+    description: 4% critical strike chance
+    value: 0.04
   3:
-    description: 3% chance to deal double damage
-    value: 0.03
+    description: 6% critical strike chance
+    value: 0.06
   4:
-    description: 5% chance to deal double damage
-    value: 0.05
+    description: 9% critical strike chance
+    value: 0.09
   5:
-    description: 7% chance to deal double damage
-    value: 0.07
+    description: 12% critical strike chance
+    value: 0.12
   6:
-    description: 10% chance to deal double damage
-    value: 0.1
+    description: 15% critical strike chance
+    value: 0.15
