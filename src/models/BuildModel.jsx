@@ -3,11 +3,39 @@ import DataUtility from "../utility/DataUtility";
 
 const hashids = new Hashids("spicy");
 
+const WEAPON_TYPE = {
+    AXE: 1,
+    CHAINBLADES: 2,
+    HAMMER: 3,
+    SWORD: 4,
+    WARPIKE: 5,
+    REPEATER: 6
+};
+
+/**
+ * v2 Structure
+ * - Version: 2
+ * - Weapon Type
+ * - {Weapon specific fields}
+ *      Default: Name, Level, Cell 0, Cell 1, Extra Part, Special
+ *      Repeaters: Part 1, Part Level 1, Part 2, ..., Part X, Special?
+ * - Head Name, Head Level, Head Cell
+ * - Torso Name, Torso Level, Torso Cell
+ * - Arms Name, Arms Level, Arms Cell
+ * - Legs Name, Legs Level, Legs Cell
+ * - Lantern
+ */
+
 export default class BuildModel {
     constructor(data) {
         for(let key of Object.keys(data)) {
             this[key] = data[key];
         }
+    }
+
+    static version(str) {
+        let numbers = hashids.decode(str);
+        return numbers[0];
     }
 
     serialize() {
@@ -293,7 +321,7 @@ export default class BuildModel {
 
     static empty() {
         return new BuildModel({
-            __version: 1,
+            __version: 2,
             weapon_name: "",
             weapon_level: 0,
             weapon_cell0: "",

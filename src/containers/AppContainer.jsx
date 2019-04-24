@@ -8,7 +8,6 @@ import IndexRoute from "../routes/IndexRoute";
 import BuildRoute from "../routes/BuildRoute";
 import FavoritesRoute from "../routes/FavoritesRoute";
 import PrivacyRoute from "../routes/PrivacyRoute";
-import DevRoute from "../routes/DevRoute";
 
 import DataUtility from "../utility/DataUtility";
 
@@ -88,7 +87,6 @@ export default class AppContainer extends React.Component {
                                 <Route path="/b/:buildData" component={BuildRoute} />
                                 <Route path="/favorites" component={FavoritesRoute} />
                                 <Route path="/privacy" component={PrivacyRoute} />
-                                <Route path="/dev/:tab" component={DevRoute} />
                                 <Route path="/dev" render={() => <Redirect to="/dev/Main" />} />
                                 <Redirect to="/" />
                             </Switch>

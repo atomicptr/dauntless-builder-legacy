@@ -16,4 +16,5 @@ cp misc/* deploy/
 ### copy data files to deploy
 mkdir -p deploy/map/
 cp dist/data.json deploy/data.json
+cp dist/meta.json deploy/meta.json
 cp .map/*.json deploy/map/

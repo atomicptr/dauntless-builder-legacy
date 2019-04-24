@@ -12,7 +12,7 @@
     "build-dev": "webpack --mode=development",
     "deploy": "yarn build && ./scripts/deploy.sh",
     "test": "mocha",
-    "bootstrap": "ln -sf dist/data.json . && ln -sf .map map"
+    "dev": "node ./scripts/devserver.js"
   },
   "dependencies": {
     "hashids": "^1.1.4",
@@ -37,6 +37,7 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
+    "express": "^4.16.4",
     "glob": "^7.1.2",
     "js-yaml": "^3.12.0",
     "mocha": "^5.2.0",

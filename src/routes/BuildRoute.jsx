@@ -41,6 +41,11 @@ export default class BuildRoute extends React.Component {
     componentDidMount() {
         const buildData = this.props.match.params.buildData;
 
+        // redirect all v1 builds to seperate v1 website
+        if (BuildModel.version(buildData) === 1) {
+            window.location.href = "https://v1.dauntless-builder.com/b/" + buildData;
+        }
+
         this.loadBuild(buildData);
     }
 
@@ -338,11 +343,6 @@ export default class BuildRoute extends React.Component {
                         <button className="button is-light">
                             <i className="fas fa-folder-open"></i>&nbsp;My builds
                         </button>
-                    </Link>
-                    <Link to="/dev">
-                        <DebugButton>
-                            <i className="fas fa-code"></i>&nbsp;Dev Menu
-                        </DebugButton>
                     </Link>
                 </div>
                 <div className="qa-right">
