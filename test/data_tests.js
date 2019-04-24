@@ -5,30 +5,30 @@ const path = require("path");
 
 const SchemaValidator = require("ajv");
 
-const remoteMapUrls = {
-    v1: "https://raw.githubusercontent.com/atomicptr/dauntless-builder/master/.map/v1.json"
-};
+const remoteMapUrl = "https://raw.githubusercontent.com/atomicptr/dauntless-builder/master/.map/names.json";
 
-const localMap = {
-    v1: JSON.parse(fs.readFileSync("./.map/v1.json"))
-};
+const localMap = JSON.parse(fs.readFileSync("./.map/names.json"));
 
-const data = JSON.parse(fs.readFileSync("./dist/data.json"))
+const data = JSON.parse(fs.readFileSync("./dist/data.json"));
 
 describe("Dauntless Builder Data", () => {
     describe("Validity of map", () => {
 
         it("should not change currently used IDs", done => {
-            request.get(remoteMapUrls.v1, (err, res, body) => {
+            request.get(remoteMapUrl, (err, res, body) => {
                 if(err) {
                     throw err;
                 }
 
                 let remoteMap = JSON.parse(body);
 
-                Object.keys(remoteMap).forEach(key => {
-                    assert.equal(remoteMap[key], localMap.v1[key], `Key: ${key} should be the same`);
-                });
+                for (let mapName of Object.keys(remoteMap)) {
+                    let map = remoteMap[mapName];
+
+                    Object.keys(map).forEach(key => {
+                        assert.equal(map[key], localMap[mapName][key], `Key: ${key} should be the same`);
+                    });
+                }
 
                 done();
             });
@@ -36,7 +36,15 @@ describe("Dauntless Builder Data", () => {
 
         const checkIfItemIsInDataFor = (field, checkFunction) => {
             if(!checkFunction) {
-                checkFunction = itemName => Object.values(localMap.v1).indexOf(itemName) > -1;
+                checkFunction = itemName => {
+                    for (let mapName of Object.keys(localMap)) {
+                        if (Object.values(localMap[mapName]).indexOf(itemName) > -1) {
+                            return true;
+                        }
+                    }
+
+                    return false;
+                }
             }
 
             return () => {
@@ -54,7 +62,7 @@ describe("Dauntless Builder Data", () => {
         it("should contain every lantern", checkIfItemIsInDataFor("lanterns"));
         it("should contain every perk", checkIfItemIsInDataFor("perks"));
         it("should contain every cell", checkIfItemIsInDataFor("cells", cellName =>
-            Object.keys(data.cells[cellName].variants).every(variant => Object.values(localMap.v1).indexOf(variant) > -1)));
+            Object.keys(data.cells[cellName].variants).every(variant => Object.values(localMap["Cells"]).indexOf(variant) > -1)));
     });
 
     describe("Validity of built data", () => {

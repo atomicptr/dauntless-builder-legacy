@@ -3,7 +3,7 @@ const Hashids = require("hashids");
 
 const hashids = new Hashids("spicy");
 
-const stringMap = require("../.map/v1.json");
+const stringMap = require("../.map/names.json");
 
 function makeBuild(buildId) {
     const numbers = hashids.decode(buildId);

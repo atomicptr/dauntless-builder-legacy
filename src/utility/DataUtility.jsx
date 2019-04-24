@@ -56,7 +56,7 @@ class DataUtility {
 
         return Promise.all([
             this.getJSON(urlPrefix + "/data.json"),
-            this.getJSON(urlPrefix + "/map/v1.json")
+            this.getJSON(urlPrefix + "/map/names.json")
         ]).then(([data, mapV1]) => {
             this.persistData("__db_lastupdate", new Date().getTime());
             this.persistData("__db_data", data);
