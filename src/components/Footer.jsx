@@ -7,7 +7,8 @@ import DataUtility from "../utility/DataUtility";
 export default class Footer extends React.Component {
     render() {
         const misc = DataUtility.data().misc;
-        const buildTime = new Date(misc.build_time);
+        const meta = DataUtility.meta();
+        const buildTime = new Date(meta.build_time);
 
         return <div className="footers">
             <span className="footer-link">

@@ -19,15 +19,18 @@ export default class Repeater extends React.Component {
         let total = 0;
 
         const fields = [
-            ["barrel", "part1"],
-            ["chamber", "part2"],
-            ["grip", "part3"],
-            ["prism", "part4"]
+            ["barrels", "part1"],
+            ["chambers", "part2"],
+            ["grips", "part3"],
+            ["prisms", "part4"]
         ];
 
         for(let field of fields) {
-            const part = BuildModel.findPart("repeater", field[0] + "s", this.props.parent.state.build["weapon_" + field[1] + "_name"]);
-            const level = this.props.parent.state.build[field + "_level"];
+            const partType = field[0];
+            const partName = this.props.parent.state.build["weapon_" + field[1] + "_name"];
+
+            const part = BuildModel.findPart("repeater", partType, partName);
+            const level = this.props.parent.state.build["weapon_" + field[1] + "_level"];
 
             if(part) {
                 total += part.power[level];
