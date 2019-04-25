@@ -1,0 +1,23 @@
+name: Adrenaline
+description: Increases damage dealt based on stamina spent.
+type: Technique
+key: AdrenalineDamage
+effects:
+  1:
+    description: Grants +0.3% increased damage for every 10 stamina missing.
+    value: 1.003
+  2:
+    description: Grants +0.6% increased damage for every 10 stamina missing.
+    value: 1.006
+  3:
+    description: Grants +0.9% increased damage for every 10 stamina missing.
+    value: 1.009
+  4:
+    description: Grants +1.2% increased damage for every 10 stamina missing.
+    value: 1.012
+  5:
+    description: Grants +1.5% increased damage for every 10 stamina missing.
+    value: 1.015
+  6:
+    description: Grants +1.8% increased damage for every 10 stamina missing.
+    value: 1.018
