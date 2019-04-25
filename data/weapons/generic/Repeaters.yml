@@ -1,10 +1,9 @@
 name: Repeater
 description: An Ostian Repeater.
-icon: /assets/icons/weapons/repeaters/Repeater.png
+icon: /assets/icons/weapons/generic/Repeater.png
 type: Repeater
 damage: Slashing
 elemental: null
 cells: [Technique, Mobility]
-rarity: common
 power:
   0: 0

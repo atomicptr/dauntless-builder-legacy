@@ -1,0 +1,41 @@
+name: Thundering Spear
+description: A Slayer's war pike forged with Drask trophies.
+icon: /assets/icons/weapons/drask/ThunderingSpear.png
+type: War Pike
+damage: Piercing
+elemental: Shock
+cells: [Technique, Power]
+power:
+  0: 100
+  1: 140
+  2: 180
+  3: 220
+  4: 260
+  5: 300
+  6: 340
+  7: 380
+  8: 420
+  9: 460
+  10: 500
+  11: 510
+  12: 520
+  13: 530
+  14: 540
+  15: 550
+perks:
+  - name: Aetheric Attunement
+    value: 1
+    from: 0
+    to: 5
+  - name: Aetheric Attunement
+    value: 2
+    from: 6
+    to: 9
+  - name: Aetheric Attunement
+    value: 3
+    from: 6
+    to: 10
+unique_effects:
+  - name: TailDamage
+    description: 20% damage vs Behemoth Tails
+    value: 1.2

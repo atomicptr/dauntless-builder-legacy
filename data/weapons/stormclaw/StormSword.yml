@@ -1,0 +1,41 @@
+name: Storm Sword
+description: A Slayer's sword forged with Stormclaw trophies.
+icon: /assets/icons/weapons/stormclaw/StormSword.png
+type: Sword
+damage: Slashing
+elemental: Shock
+cells: [Technique, Mobility]
+power:
+  0: 100
+  1: 140
+  2: 180
+  3: 220
+  4: 260
+  5: 300
+  6: 340
+  7: 380
+  8: 420
+  9: 460
+  10: 500
+  11: 510
+  12: 520
+  13: 530
+  14: 540
+  15: 550
+perks:
+  - name: Energized
+    value: 1
+    from: 0
+    to: 5
+  - name: Energized
+    value: 2
+    from: 6
+    to: 9
+  - name: Energized
+    value: 3
+    from: 6
+    to: 10
+unique_effects:
+  - name: DodgeMeterGain
+    description: After dodging through an attack, the next weapon attack has 300% meter gain
+    value: 300

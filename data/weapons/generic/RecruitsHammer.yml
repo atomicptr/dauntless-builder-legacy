@@ -1,0 +1,10 @@
+name: Recruit's Hammer
+description: A Slayer Recruit's hammer.
+icon: /assets/icons/weapons/generic/RecruitsHammer.png
+type: Hammer
+damage: Blunt
+elemental: null
+cells: null
+power:
+  0: 80
+  1: 100

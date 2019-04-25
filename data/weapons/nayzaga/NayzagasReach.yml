@@ -1,0 +1,41 @@
+name: Nayzaga's Reach
+description: A Slayer's chain blades forged with Nayzaga trophies.
+icon: /assets/icons/weapons/nayzaga/NayzagasReach.png
+type: Chain Blades
+damage: Slashing
+elemental: Shock
+cells: [Technique, Utility]
+power:
+  0: 100
+  1: 140
+  2: 180
+  3: 220
+  4: 260
+  5: 300
+  6: 340
+  7: 380
+  8: 420
+  9: 460
+  10: 500
+  11: 510
+  12: 520
+  13: 530
+  14: 540
+  15: 550
+perks:
+  - name: Barbed
+    value: 1
+    from: 0
+    to: 5
+  - name: Barbed
+    value: 2
+    from: 6
+    to: 9
+  - name: Barbed
+    value: 3
+    from: 6
+    to: 10
+unique_effects:
+  - name: WoundedPartsLifesteal
+    description: +5% lifesteal vs wounded parts
+    value: 1.05

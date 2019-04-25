@@ -1,0 +1,41 @@
+name: Storm Hammer
+description: A Slayer's hammer forged with Stormclaw trophies.
+icon: /assets/icons/weapons/stormclaw/StormHammer.png
+type: Hammer
+damage: Blunt
+elemental: Shock
+cells: [Power, Mobility]
+power:
+  0: 100
+  1: 140
+  2: 180
+  3: 220
+  4: 260
+  5: 300
+  6: 340
+  7: 380
+  8: 420
+  9: 460
+  10: 500
+  11: 510
+  12: 520
+  13: 530
+  14: 540
+  15: 550
+perks:
+  - name: Aetheric Attunement
+    value: 1
+    from: 0
+    to: 5
+  - name: Aetheric Attunement
+    value: 2
+    from: 6
+    to: 9
+  - name: Aetheric Attunement
+    value: 3
+    from: 6
+    to: 10
+unique_effects:
+  - name: DodgeReload
+    description: Reloads 2 hammer ammo after dodging through an attack
+    value: 2

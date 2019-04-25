@@ -1,0 +1,43 @@
+name: Onus of Boreus
+description: A Slayer's sword forged with Boreus trophies.
+icon: /assets/icons/weapons/boreus/OnusOfBoreus.png
+type: Sword
+damage: Slashing
+elemental: Frost
+cells: [Power, Defence]
+power:
+  0: 100
+  1: 140
+  2: 180
+  3: 220
+  4: 260
+  5: 300
+  6: 340
+  7: 380
+  8: 420
+  9: 460
+  10: 500
+  11: 510
+  12: 520
+  13: 530
+  14: 540
+  15: 550
+perks:
+  - name: Conditioning
+    value: 1
+    from: 0
+    to: 5
+  - name: Conditioning
+    value: 2
+    from: 6
+    to: 9
+  - name: Conditioning
+    value: 3
+    from: 10
+    to: 15
+unique_effects:
+  - name: BoreusFrostSprite
+    description: >
+       	Using a Special continually generates Frost Sprites that cause your next attack to deal
+        50 bonus damage and minor frost damage. Max 4 Sprites.
+

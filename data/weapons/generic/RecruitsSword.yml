@@ -1,0 +1,10 @@
+name: Recruit's Sword
+description: A Simple blade for slaying behemoths.
+icon: /assets/icons/weapons/generic/RecruitsSword.png
+type: Sword
+damage: Slashing
+elemental: null
+cells: null
+power:
+  0: 80
+  1: 100

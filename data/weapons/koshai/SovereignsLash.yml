@@ -1,0 +1,41 @@
+name: Sovereign's Lash
+description: A Slayer's chain blades forged with Koshai trophies.
+icon: /assets/icons/weapons/koshai/SovereignsLash.png
+type: Chain Blades
+damage: Slashing
+elemental: null
+cells: [Power, Utility]
+power:
+  0: 100
+  1: 140
+  2: 180
+  3: 220
+  4: 260
+  5: 300
+  6: 340
+  7: 380
+  8: 420
+  9: 460
+  10: 500
+  11: 510
+  12: 520
+  13: 530
+  14: 540
+  15: 550
+perks:
+  - name: Sharpened
+    value: 1
+    from: 0
+    to: 5
+  - name: Sharpened
+    value: 2
+    from: 6
+    to: 9
+  - name: Sharpened
+    value: 3
+    from: 6
+    to: 10
+unique_effects:
+  - name: NoAttackDamage
+    description: After not dealing damage for 6 seconds, the next 6 attacks deal 25% increased damage.
+    value: 1.25
