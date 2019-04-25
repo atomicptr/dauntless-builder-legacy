@@ -24,6 +24,8 @@ import MenuDropdown from "../components/MenuDropdown";
 import Repeater from "../components/Repeater";
 import RepeaterPartSelectModal from "../components/RepeaterPartSelectModal";
 import DarkModeToggle from "../components/DarkModeToggle";
+import WeaponPartSelectModal from "../components/WeaponPartSelectModal";
+import WeaponPart from "../components/WeaponPart";
 
 export default class BuildRoute extends React.Component {
 
@@ -34,6 +36,7 @@ export default class BuildRoute extends React.Component {
             ready: false,
             itemSelectModalOpen: false,
             repeaterPartSelectModalOpen: false,
+            weaponPartSelectModalOpen: false,
             modalData: {}
         };
     }
@@ -163,10 +166,12 @@ export default class BuildRoute extends React.Component {
     onPartSelected(fieldPrefix, part) {
         let changes = {};
 
-        const maxLevel = Math.max(...Object.keys(part.power).map(k => Number(k)));
-
         changes[fieldPrefix + "_name"] = part.name;
-        changes[fieldPrefix + "_level"] = maxLevel;
+
+        if (part.power) {
+            const maxLevel = Math.max(...Object.keys(part.power).map(k => Number(k)));
+            changes[fieldPrefix + "_level"] = maxLevel;
+        }
 
         this.applyItemSelection(changes);
     }
@@ -234,6 +239,21 @@ export default class BuildRoute extends React.Component {
         this.onRepeaterPartSelectModalClosed();
     }
 
+    openWeaponPartSelectModal(weaponType, partType, fieldName) {
+        this.onModalOpen();
+        this.setState({weaponPartSelectModalOpen: true, modalData: {weaponType, partType, fieldName}});
+    }
+
+    onWeaponPartSelectModalClosed() {
+        this.onModalClosed();
+        this.setState({weaponPartSelectModalOpen: false, modalData: {}});
+    }
+
+    onWeaponPartSelected(fieldPrefix, part) {
+        this.onPartSelected(fieldPrefix, part);
+        this.onWeaponPartSelectModalClosed();
+    }
+
     renderWeapon() {
         const weapon = BuildModel.findWeapon(this.state.build.weapon_name);
 
@@ -265,8 +285,49 @@ export default class BuildRoute extends React.Component {
     renderWeaponParts() {
         const weapon = BuildModel.findWeapon(this.state.build.weapon_name);
 
-        if (weapon && !ItemUtility.isRepeater(weapon)) {
+        if (!weapon) {
+            return;
         }
+
+        const weaponHasParts = partName =>
+            weapon.type.toLowerCase() in this.state.itemData.parts &&
+            partName in this.state.itemData.parts[weapon.type.toLowerCase()];
+
+        let parts = [];
+
+        if (weaponHasParts("specials")) {
+            let slot = "weapon_part1_name";
+
+            if (ItemUtility.isRepeater(weapon)) {
+                slot = "weapon_part5_name";
+            }
+
+            const part = BuildModel.findPart(weapon.type, "specials", this.state.build[slot]);
+
+            parts.push(
+                <WeaponPart key={weapon.type + "_special"} part={part} partType="specials" onClicked={
+                    () => this.openWeaponPartSelectModal(weapon.type, "specials", slot)
+                } />
+            );
+        }
+
+        if (weaponHasParts("mods")) {
+            let slot = "weapon_part2_name";
+
+            if (ItemUtility.isRepeater(weapon)) {
+                slot = "weapon_part6_name";
+            }
+
+            const part = BuildModel.findPart(weapon.type, "mods", this.state.build[slot]);
+
+            parts.push(
+                <WeaponPart key={weapon.type + "_mod"} part={part} partType="mods" onClicked={
+                    () => this.openWeaponPartSelectModal(weapon.type, "mods", slot)
+                } />
+            );
+        }
+
+        return parts;
     }
 
 
@@ -462,6 +523,12 @@ export default class BuildRoute extends React.Component {
                 onClosed={this.onRepeaterPartSelectModalClosed.bind(this)}
                 onSelected={this.onRepeaterPartSelected.bind(this)}
                 isOpen={this.state.repeaterPartSelectModalOpen} />
+            <WeaponPartSelectModal
+                data={this.state.modalData}
+                itemData={this.state.itemData}
+                onClosed={this.onWeaponPartSelectModalClosed.bind(this)}
+                onSelected={this.onWeaponPartSelected.bind(this)}
+                isOpen={this.state.weaponPartSelectModalOpen} />
         </React.Fragment>;
     }
 }

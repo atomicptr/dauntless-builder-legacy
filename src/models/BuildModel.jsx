@@ -269,8 +269,8 @@ export default class BuildModel {
     }
 
     static findPart(weaponType, partType, partName) {
-        if(partName in DataUtility.data().parts[weaponType][partType]) {
-            return DataUtility.data().parts[weaponType][partType][partName];
+        if(partName in DataUtility.data().parts[weaponType.toLowerCase()][partType]) {
+            return DataUtility.data().parts[weaponType.toLowerCase()][partType][partName];
         }
 
         return null;

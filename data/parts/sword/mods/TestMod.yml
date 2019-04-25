@@ -1,0 +1,5 @@
+name: Test Mod
+description: The Captain's Grip is part of a craftable weapon in Dauntless.
+icon: /assets/icons/parts/repeaters/grips/CaptainsGrip.png
+part_effec:
+  - This is a test
