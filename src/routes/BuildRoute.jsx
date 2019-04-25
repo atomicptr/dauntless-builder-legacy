@@ -74,27 +74,15 @@ export default class BuildRoute extends React.Component {
     }
 
     dummyData() {
-        let build = this.state.build;
+        let build = BuildModel.empty()
 
         // weapon
-        build.weapon_name = "Ragesaber";
-        build.weapon_level = 10;
-        build.weapon_cell0 = "+3 Energized Cell";
-        build.weapon_cell1 = "+1 Tough Cell";
-        build.head_name = "Ragetail Touque";
-        build.head_level = 10;
-        build.head_cell = "+3 Tough Cell";
-        build.torso_name = "Ragetail Cloak";
-        build.torso_level = 10;
-        build.torso_cell = "+2 Tough Cell";
-        build.arms_name = "Ragetail Grips";
-        build.arms_level = 10;
-        build.arms_cell = "+2 Ragehunter Cell";
-        build.legs_name = "Ragetail Treads";
-        build.legs_level = 9;
-        build.legs_cell = "+3 Ragehunter Cell";
-        build.lantern_name = "Shrike's Zeal";
-        build.lantern_cell = "+2 Energized Cell";
+        build.weapon_name = "Brutality of Boreus";
+        build.weapon_level = 15;
+        build.weapon_part1_name = "Mighty Landbreaker";
+        build.weapon_part2_name = "Impulse Crown";
+        build.weapon_cell0 = "+3 Deconstruction Cell";
+        build.weapon_cell1 = "+3 Assassin's Vigour Cell";
 
         this.setState({
             build
