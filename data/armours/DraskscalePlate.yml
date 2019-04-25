@@ -5,7 +5,6 @@ type: Torso
 strength: Shock
 weakness: null
 cells: Power
-tier: 3
 rarity: common
 resistance:
   0: 54

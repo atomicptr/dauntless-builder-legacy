@@ -5,7 +5,6 @@ type: Chain Blades
 damage: Slashing
 elemental: Shock
 cells: [Technique, Power]
-tier: 3
 rarity: common
 power:
   0: 216

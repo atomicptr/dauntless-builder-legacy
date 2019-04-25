@@ -5,7 +5,6 @@ type: Head
 strength: null
 weakness: null
 cells: Mobility
-tier: 4
 rarity: common
 resistance:
   0: 70

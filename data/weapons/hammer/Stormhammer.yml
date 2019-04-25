@@ -5,7 +5,6 @@ type: Hammer
 damage: Blunt
 elemental: Shock
 cells: [Power, Mobility]
-tier: 4
 rarity: common
 power:
   0: 264

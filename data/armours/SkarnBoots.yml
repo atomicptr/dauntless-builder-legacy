@@ -5,7 +5,6 @@ type: Legs
 strength: null
 weakness: null
 cells: Defence
-tier: 2
 rarity: common
 resistance:
   0: 42

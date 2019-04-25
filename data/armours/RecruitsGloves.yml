@@ -5,7 +5,6 @@ type: Arms
 strength: null
 weakness: null
 cells: null
-tier: 1
 rarity: common
 resistance:
   0: 22

@@ -5,7 +5,6 @@ type: Sword
 damage: Cutting
 elemental: Blaze
 cells: [Power, Defence]
-tier: 5
 rarity: rare
 power:
   0: 310

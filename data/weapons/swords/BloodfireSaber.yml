@@ -5,7 +5,6 @@ type: Sword
 damage: Slashing
 elemental: Blaze
 cells: [Technique, Mobility]
-tier: 5
 rarity: rare
 power:
   0: 310

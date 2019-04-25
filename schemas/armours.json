@@ -27,9 +27,6 @@
         "hidden": {
             "type": "boolean"
         },
-        "tier": {
-            "type": "number"
-        },
         "rarity": {
             "type": "string"
         },

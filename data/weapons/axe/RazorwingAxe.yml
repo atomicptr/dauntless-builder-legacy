@@ -5,7 +5,6 @@ type: Axe
 damage: Slashing
 elemental: null
 cells: [Power, Technique]
-tier: 5
 rarity: rare
 power:
   0: 310

@@ -32,20 +32,10 @@ export default class Item extends React.Component {
 
         if(filterOption.__itemType === "Weapon" && this.props.item) {
             filterOption.__weaponType = this.props.item.type;
-            filterOption.__tier = 5;
-
-            if(this.props.item.tier) {
-                filterOption.__tier = this.props.item.tier;
-            }
         }
 
         if(filterOption.__itemType === "Armour") {
             filterOption.__armourType = this.props.defaultType;
-            filterOption.__tier = 5;
-
-            if(this.props.item && this.props.item.tier) {
-                filterOption.__tier = this.props.item.tier;
-            }
 
             filterOption.filters.push({
                 field: "type",

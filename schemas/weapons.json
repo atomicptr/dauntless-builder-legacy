@@ -31,9 +31,6 @@
         "hidden": {
             "type": "boolean"
         },
-        "tier": {
-            "type": ["array", "number"]
-        },
         "rarity": {
             "type": "string"
         },

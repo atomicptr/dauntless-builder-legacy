@@ -5,7 +5,6 @@ type: Axe
 damage: Slashing
 elemental: null
 cells: [Power, Mobility]
-tier: 2
 rarity: common
 power:
   0: 136

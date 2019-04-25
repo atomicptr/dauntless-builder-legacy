@@ -5,7 +5,6 @@ type: Hammer
 damage: Blunt
 elemental: Blaze
 cells: [Power, Power]
-tier: 5
 rarity: rare
 power:
   0: 310

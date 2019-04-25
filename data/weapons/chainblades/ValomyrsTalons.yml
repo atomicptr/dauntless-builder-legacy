@@ -5,7 +5,6 @@ type: Chain Blades
 damage: Slashing
 elemental: Radiant
 cells: [Power, Utility]
-tier: 5
 rarity: rare
 power:
   0: 310

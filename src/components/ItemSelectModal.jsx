@@ -9,8 +9,6 @@ import Debug from "./Debug";
 import ModalCellListItem from "./ModalCellListItem";
 import ModalItemListItem from "./ModalItemListItem";
 
-import TierUtility from "../utility/TierUtility";
-
 export default class ItemSelectModal extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -21,8 +19,7 @@ export default class ItemSelectModal extends React.Component {
             perkFilter: null,
             weaponTypeFilter: null,
             slotFilter: null,
-            rarityFilter: null,
-            tierFilter: {value: 5, label: TierUtility.getTierName(5)}
+            rarityFilter: null
         };
 
         this.defaultState = {
@@ -31,8 +28,7 @@ export default class ItemSelectModal extends React.Component {
             perkFilter: null,
             weaponTypeFilter: null,
             slotFilter: null,
-            rarityFilter: null,
-            tierFilter: {value: 5, label: TierUtility.getTierName(5)}
+            rarityFilter: null
         };
     }
 
@@ -51,19 +47,6 @@ export default class ItemSelectModal extends React.Component {
                 value: nextProps.data.filterOptions.__weaponType,
                 label: nextProps.data.filterOptions.__weaponType,
             };
-        }
-
-        if(nextProps.data && nextProps.data.filterOptions &&
-            nextProps.data.filterOptions.__tier &&
-            (nextProps.data.filterOptions.__itemType === "Weapon" ||
-            nextProps.data.filterOptions.__itemType === "Armour")) {
-
-            if(!Array.isArray(nextProps.data.filterOptions.__tier)) {
-                newState.tierFilter = {
-                    value: nextProps.data.filterOptions.__tier,
-                    label: TierUtility.getTierName(nextProps.data.filterOptions.__tier)
-                };
-            }
         }
 
         if(Object.keys(newState).length > 0) {
@@ -231,18 +214,6 @@ export default class ItemSelectModal extends React.Component {
             });
         }
 
-        // apply tier filter
-        if(this.isType(["Weapon", "Armour"]) && this.state.tierFilter && this.state.tierFilter.value) {
-            filters.push({
-                field: "tier",
-                value: this.state.tierFilter.value,
-                method: (item, filter) => {
-                    let tiers = Array.isArray(item.tier) ? item.tier : [item.tier];
-                    return tiers.some(tier => Number(tier) === Number(filter.value));
-                }
-            });
-        }
-
         filters.push({
             field: "hidden",
             value: false,
@@ -365,20 +336,6 @@ export default class ItemSelectModal extends React.Component {
                         onChange={slot => this.setState({slotFilter: slot})}
                         value={this.state.slotFilter}
                         options={slotOptions} />
-                </div>
-            );
-        }
-
-        // add tier filter
-        if(this.isType(["Weapon", "Armour"])) {
-            fields.push(
-                <div key="tierFilter" className="field">
-                    <Select
-                        placeholder="Filter by tier..."
-                        onChange={tier => this.setState({tierFilter: tier})}
-                        value={this.state.tierFilter}
-                        options={[5, 4, 3, 2, 1].map(
-                            tier => ({value: tier, label: TierUtility.getTierName(tier)}))} />
                 </div>
             );
         }

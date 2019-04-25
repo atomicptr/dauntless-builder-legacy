@@ -26,7 +26,7 @@
 
             user-select: none;
 
-            transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+            transition: background 0.3s ease, color 0.3s ease;
 
             &:hover {
                 cursor: pointer;
@@ -34,7 +34,8 @@
             }
 
             &:active {
-                transform: translateY(5px);
+                background: #AAA;
+                transition-duration: 0.1s;
             }
 
             &:first-of-type {
@@ -128,8 +129,9 @@
         background: #EEE;
 
         user-select: none;
+        -moz-user-select: none;
 
-        transition: background 0.3s ease, transform 0.3s ease;
+        transition: background 0.3s ease;
 
         &:hover {
             cursor: pointer;
@@ -137,7 +139,8 @@
         }
 
         &:active {
-            transform: translateY(5px);
+            background: #AAA;
+            transition-duration: 0.1s;
         }
 
         margin-right: 10px;

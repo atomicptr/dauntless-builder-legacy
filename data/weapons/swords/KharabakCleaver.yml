@@ -5,7 +5,6 @@ type: Sword
 damage: Slashing
 elemental: null
 cells: [Technique, Mobility]
-tier: 4
 rarity: common
 power:
   0: 280

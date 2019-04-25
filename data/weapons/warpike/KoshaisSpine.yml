@@ -5,7 +5,6 @@ type: War Pike
 damage: Piercing
 elemental: null
 cells: [Power, Utility]
-tier: 5
 rarity: rare
 power:
   0: 310

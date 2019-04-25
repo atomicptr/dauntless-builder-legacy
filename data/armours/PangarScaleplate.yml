@@ -5,7 +5,6 @@ type: Torso
 strength: Frost
 weakness: Blaze
 cells: Defence
-tier: 4
 rarity: common
 resistance:
   0: 66

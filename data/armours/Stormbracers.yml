@@ -5,7 +5,6 @@ type: Arms
 strength: Shock
 weakness: Blaze
 cells: Mobility
-tier: 4
 rarity: common
 resistance:
   0: 66

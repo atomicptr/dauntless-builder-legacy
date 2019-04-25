@@ -5,7 +5,6 @@ type: Arms
 strength: Frost
 weakness: Shock
 cells: Mobility
-tier: 3
 rarity: common
 resistance:
   0: 50

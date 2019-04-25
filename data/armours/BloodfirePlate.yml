@@ -5,7 +5,6 @@ type: Torso
 strength: Blaze
 weakness: Shock
 cells: Mobility
-tier: 5
 rarity: rare
 resistance:
   0: 77.5

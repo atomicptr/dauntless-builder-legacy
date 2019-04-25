@@ -5,7 +5,6 @@ type: War Pike
 damage: Piercing
 elemental: Blaze
 cells: [Power, Mobility]
-tier: 3
 rarity: common
 power:
   0: 200

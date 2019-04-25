@@ -5,7 +5,6 @@ type: Torso
 strength: Shock
 weakness: Frost
 cells: Defence
-tier: 5
 rarity: rare
 resistance:
   0: 77.5

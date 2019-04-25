@@ -5,7 +5,6 @@ type: Torso
 strength: Blaze
 weakness: Shock
 cells: Technique
-tier: 3
 rarity: common
 resistance:
   0: 50

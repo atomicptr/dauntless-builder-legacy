@@ -5,7 +5,6 @@ type: Legs
 strength: Blaze
 weakness: Shock
 cells: Defence
-tier: 5
 rarity: rare
 resistance:
   0: 77.5

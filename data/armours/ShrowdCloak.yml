@@ -5,7 +5,6 @@ type: Torso
 strength: Umbral
 weakness: Radiant
 cells: Power
-tier: 5
 rarity: rare
 resistance:
   0: 77.5

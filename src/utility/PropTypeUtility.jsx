@@ -6,7 +6,6 @@ export default class PropTypeUtility {
             name: PropTypes.string,
             description: PropTypes.string,
             type: PropTypes.string,
-            tier: PropTypes.any,
             strength: PropTypes.string,
             weakness: PropTypes.string,
             elemental: PropTypes.string,

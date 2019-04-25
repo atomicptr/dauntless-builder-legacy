@@ -5,7 +5,6 @@ type: Head
 strength: Radiant
 weakness: Umbral
 cells: Technique
-tier: 5
 rarity: exotic
 resistance:
   0: 77.5
