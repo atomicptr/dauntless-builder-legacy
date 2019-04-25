@@ -1,11 +1,10 @@
 name: Frosthelm
-description: Head protection forged from Frostback trophies.
+description: Head protection forged from Pangar trophies.
 icon: /assets/icons/armours/Frosthelm.png
 type: Head
 strength: Frost
 weakness: Blaze
 cells: Power
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

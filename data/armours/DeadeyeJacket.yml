@@ -1,11 +1,10 @@
 name: Deadeye Jacket
-description: Torso protection forged from Deadeye trophies.
+description: Torso protection forged from Quillshot trophies.
 icon: /assets/icons/armours/DeadeyeJacket.png
 type: Torso
 strength: null
 weakness: null
 cells: Technique
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

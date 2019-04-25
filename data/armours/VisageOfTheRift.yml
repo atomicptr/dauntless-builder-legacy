@@ -5,7 +5,6 @@ type: Head
 strength: Umbral
 weakness: Radiant
 cells: Utility
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

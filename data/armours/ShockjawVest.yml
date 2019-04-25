@@ -1,11 +1,10 @@
 name: Shockjaw Vest
-description: Torso protection forged from Shockjaw trophies.
+description: Torso protection forged from Nayzaga trophies.
 icon: /assets/icons/armours/ShockjawVest.png
 type: Torso
 strength: Shock
 weakness: Frost
 cells: Defence
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

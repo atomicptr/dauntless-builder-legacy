@@ -1,11 +1,10 @@
 name: Bloodfire Greaves
-description: Leg and foot protection forged from Bloodfire trophies.
+description: Leg and foot protection forged from Embermane trophies.
 icon: /assets/icons/armours/BloodfireGreaves.png
 type: Legs
 strength: Blaze
 weakness: Shock
 cells: Defence
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

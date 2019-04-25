@@ -1,11 +1,10 @@
 name: Reaver Boots
-description: Leg and foot protection forged from Moonreaver trophies.
+description: Leg and foot protection forged from Shrike trophies.
 icon: /assets/icons/armours/ReaverBoots.png
 type: Legs
 strength: null
 weakness: null
 cells: Mobility
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

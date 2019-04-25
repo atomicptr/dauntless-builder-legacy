@@ -1,11 +1,10 @@
 name: Razorwing Greaves
-description: Leg and foot protection forged from Razorwing trophies.
+description: Leg and foot protection forged from Kharabak trophies.
 icon: /assets/icons/armours/RazorwingGreaves.png
 type: Legs
 strength: null
 weakness: null
 cells: Power
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

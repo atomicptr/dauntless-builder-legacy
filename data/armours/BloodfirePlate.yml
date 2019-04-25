@@ -1,11 +1,10 @@
 name: Bloodfire Plate
-description: Torso protection forged from Bloodfire trophies.
+description: Torso protection forged from Embermane trophies.
 icon: /assets/icons/armours/BloodfirePlate.png
 type: Torso
 strength: Blaze
 weakness: Shock
 cells: Mobility
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

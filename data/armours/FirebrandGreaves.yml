@@ -1,11 +1,10 @@
 name: Firebrand Greaves
-description: Leg and foot protection forged from Firebrand trophies.
+description: Leg and foot protection forged from Charrogg trophies.
 icon: /assets/icons/armours/FirebrandGreaves.png
 type: Legs
 strength: Blaze
 weakness: Frost
 cells: Power
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

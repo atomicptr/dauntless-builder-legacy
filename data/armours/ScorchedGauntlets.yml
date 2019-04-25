@@ -1,11 +1,10 @@
 name: Scorched Gauntlets
-description: Arms protection forged from Scorchestone trophies.
+description: Arms protection forged from Hellion trophies.
 icon: /assets/icons/armours/ScorchedGauntlets.png
 type: Arms
 strength: Blaze
 weakness: Frost
 cells: Power
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

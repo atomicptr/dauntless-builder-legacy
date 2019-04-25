@@ -1,11 +1,10 @@
 name: Pillars of Stone
-description: Leg and foot protection forged from Rockfall trophies.
+description: Leg and foot protection forged from Skarn trophies.
 icon: /assets/icons/armours/PillarsOfStone.png
 type: Legs
 strength: null
 weakness: null
 cells: Defence
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

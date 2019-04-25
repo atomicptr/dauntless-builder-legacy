@@ -1,11 +1,10 @@
 name: Shockjaw Mask
-description: Head protection forged from Shockjaw trophies.
+description: Head protection forged from Nayzaga trophies.
 icon: /assets/icons/armours/ShockjawMask.png
 type: Head
 strength: Shock
 weakness: Frost
 cells: Utility
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

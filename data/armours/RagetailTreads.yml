@@ -1,11 +1,10 @@
 name: Ragetail Treads
-description: Leg and foot protection forged from Ragetail trophies.
+description: Leg and foot protection forged from Gnasher trophies.
 icon: /assets/icons/armours/RagetailTreads.png
 type: Legs
 strength: null
 weakness: null
 cells: Power
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

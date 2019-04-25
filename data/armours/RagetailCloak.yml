@@ -1,11 +1,10 @@
 name: Ragetail Cloak
-description: Torso protection forged from Ragetail trophies.
+description: Torso protection forged from Gnasher trophies.
 icon: /assets/icons/armours/RagetailCloak.png
 type: Torso
 strength: null
 weakness: null
 cells: Defence
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

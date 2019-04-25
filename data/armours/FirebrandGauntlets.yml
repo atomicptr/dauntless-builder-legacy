@@ -1,11 +1,10 @@
 name: Firebrand Gauntlets
-description: Arms protection forged from Firebrand trophies.
+description: Arms protection forged from Charrogg trophies.
 icon: /assets/icons/armours/FirebrandGauntlets.png
 type: Arms
 strength: Blaze
 weakness: Frost
 cells: Utility
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

@@ -1,11 +1,10 @@
 name: Deadeye Mask
-description: Head protection forged from Deadeye trophies.
+description: Head protection forged from Quillshot trophies.
 icon: /assets/icons/armours/DeadeyeMask.png
 type: Head
 strength: null
 weakness: null
 cells: Defence
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

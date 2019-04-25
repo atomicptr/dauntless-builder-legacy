@@ -1,11 +1,10 @@
 name: Heart of Stone
-description: Torso protection forged from Rockfall trophies.
+description: Torso protection forged from Skarn trophies.
 icon: /assets/icons/armours/HeartOfStone.png
 type: Torso
 strength: null
 weakness: null
 cells: Defence
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

@@ -1,11 +1,10 @@
 name: Frostplate
-description: Torso protection forged from Frostback trophies.
+description: Torso protection forged from Pangar trophies.
 icon: /assets/icons/armours/Frostplate.png
 type: Torso
 strength: Frost
 weakness: Blaze
 cells: Power
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

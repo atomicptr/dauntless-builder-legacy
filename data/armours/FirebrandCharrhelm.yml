@@ -1,11 +1,10 @@
 name: Firebrand Charrhelm
-description: Head protection forged from Firebrand trophies.
+description: Head protection forged from Charrogg trophies.
 icon: /assets/icons/armours/FirebrandCharrhelm.png
 type: Head
 strength: Blaze
 weakness: Frost
 cells: Defence
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

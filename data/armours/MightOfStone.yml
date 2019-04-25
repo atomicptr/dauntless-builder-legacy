@@ -1,11 +1,10 @@
 name: Might of Stone
-description: Arms protection forged from Rockfall trophies.
+description: Arms protection forged from Skarn trophies.
 icon: /assets/icons/armours/MightOfStone.png
 type: Arms
 strength: null
 weakness: null
 cells: Defence
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

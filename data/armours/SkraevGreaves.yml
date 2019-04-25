@@ -5,7 +5,6 @@ type: Legs
 strength: Frost
 weakness: Shock
 cells: Utility
-rarity: common
 resistance:
   0: 50
   1: 55

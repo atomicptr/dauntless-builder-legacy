@@ -1,11 +1,10 @@
 name: Bloodfire Helm
-description: Head protection forged from Bloodfire trophies.
+description: Head protection forged from Embermane trophies.
 icon: /assets/icons/armours/BloodfireHelm.png
 type: Head
 strength: Blaze
 weakness: Shock
 cells: Mobility
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

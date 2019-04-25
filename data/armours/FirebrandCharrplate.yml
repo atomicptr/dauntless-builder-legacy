@@ -1,11 +1,10 @@
 name: Firebrand Charrplate
-description: Torso protection forged from Firebrand trophies.
+description: Torso protection forged from Charrogg trophies.
 icon: /assets/icons/armours/FirebrandCharrplate.png
 type: Torso
 strength: Blaze
 weakness: Frost
 cells: Utility
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

@@ -1,11 +1,10 @@
 name: Reaver Gauntlets
-description: Arms protection forged from Moonreaver trophies.
+description: Arms protection forged from Shrike trophies.
 icon: /assets/icons/armours/ReaverGauntlets.png
 type: Arms
 strength: null
 weakness: null
 cells: Mobility
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

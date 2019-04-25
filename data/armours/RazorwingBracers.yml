@@ -1,11 +1,10 @@
 name: Razorwing Bracers
-description: Arms protection forged from Razorwing trophies.
+description: Arms protection forged from Kharabak trophies.
 icon: /assets/icons/armours/RazorwingBracers.png
 type: Arms
 strength: null
 weakness: null
 cells: Mobility
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

@@ -1,11 +1,10 @@
 name: Frostgrips
-description: Arms protection forged from Frostback trophies.
+description: Arms protection forged from Pangar trophies.
 icon: /assets/icons/armours/Frostgrips.png
 type: Arms
 strength: Frost
 weakness: Blaze
 cells: Defence
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

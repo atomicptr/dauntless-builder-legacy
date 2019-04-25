@@ -1,11 +1,10 @@
 name: Boreal Epiphany
-description: Head protection forged from Dreadfrost trophies.
+description: Head protection forged from Boreus trophies.
 icon: /assets/icons/armours/BorealEpiphany.png
 type: Head
 strength: Frost
 weakness: Blaze
 cells: Utility
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

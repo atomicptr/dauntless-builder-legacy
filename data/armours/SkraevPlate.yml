@@ -5,7 +5,6 @@ type: Torso
 strength: Frost
 weakness: Shock
 cells: Mobility
-rarity: common
 resistance:
   0: 50
   1: 55

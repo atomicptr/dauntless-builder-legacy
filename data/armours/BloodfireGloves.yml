@@ -1,11 +1,10 @@
 name: Bloodfire Gloves
-description: Arms protection forged from Bloodfire trophies.
+description: Arms protection forged from Embermane trophies.
 icon: /assets/icons/armours/BloodfireGloves.png
 type: Arms
 strength: Blaze
 weakness: Shock
 cells: Technique
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

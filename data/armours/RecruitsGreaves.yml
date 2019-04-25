@@ -5,7 +5,6 @@ type: Legs
 strength: null
 weakness: null
 cells: null
-rarity: common
 resistance:
   0: 22
   1: 27

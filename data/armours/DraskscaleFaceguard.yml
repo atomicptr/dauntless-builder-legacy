@@ -5,7 +5,6 @@ type: Head
 strength: Shock
 weakness: null
 cells: Power
-rarity: common
 resistance:
   0: 54
   1: 59

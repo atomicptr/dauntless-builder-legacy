@@ -1,11 +1,10 @@
 name: Frostboots
-description: Leg and foot protection forged from Frostback trophies.
+description: Leg and foot protection forged from Pangar trophies.
 icon: /assets/icons/armours/Frostboots.png
 type: Legs
 strength: Frost
 weakness: Blaze
 cells: Defence
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

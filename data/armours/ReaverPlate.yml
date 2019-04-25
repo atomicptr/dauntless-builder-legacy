@@ -1,11 +1,10 @@
 name: Reaver Plate
-description: Torso protection forged from Moonreaver trophies.
+description: Torso protection forged from Shrike trophies.
 icon: /assets/icons/armours/ReaverPlate.png
 type: Torso
 strength: null
 weakness: null
 cells: Mobility
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

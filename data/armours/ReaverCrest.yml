@@ -1,11 +1,10 @@
 name: Reaver Crest
-description: Head protection forged from Moonreaver trophies.
+description: Head protection forged from Shrike trophies.
 icon: /assets/icons/armours/ReaverCrest.png
 type: Head
 strength: null
 weakness: null
 cells: Technique
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

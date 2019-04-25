@@ -1,11 +1,10 @@
 name: Ragetail Grips
-description: Arms protection forged from Ragetail trophies.
+description: Arms protection forged from Gnasher trophies.
 icon: /assets/icons/armours/RagetailGrips.png
 type: Arms
 strength: null
 weakness: null
 cells: Power
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

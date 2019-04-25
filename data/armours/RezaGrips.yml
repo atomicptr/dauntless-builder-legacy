@@ -5,7 +5,6 @@ type: Arms
 strength: Radiant
 weakness: Umbral
 cells: Technique
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5

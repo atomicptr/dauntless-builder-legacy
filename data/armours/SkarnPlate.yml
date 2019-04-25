@@ -5,7 +5,6 @@ type: Torso
 strength: null
 weakness: null
 cells: Defence
-rarity: common
 resistance:
   0: 42
   1: 47

@@ -1,11 +1,10 @@
 name: Boreal Resolve
-description: Torso protection forged from Dreadfrost trophies.
+description: Torso protection forged from Boreus trophies.
 icon: /assets/icons/armours/BorealResolve.png
 type: Torso
 strength: Frost
 weakness: Blaze
 cells: Defence
-rarity: rare
 resistance:
   0: 77.5
   1: 80.5
