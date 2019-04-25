@@ -1,0 +1,4 @@
+name: Cruel Riftstrike
+icon: /assets/icons/parts/chainblades/specials/CruelRiftstrike.png
+part_effect:
+  - Use to teleport forward, damaging enemies if present. Can teleport through Behemoths.
