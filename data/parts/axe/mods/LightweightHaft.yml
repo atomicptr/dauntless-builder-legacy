@@ -1,0 +1,4 @@
+name: Lightweight Haft
+icon: /assets/icons/parts/axe/mods/LightweightHaft.png
+part_effect:
+  - Movespeed while charging Horizontal Attacks is now increased instead of decreased and costs no stamina to maintain.

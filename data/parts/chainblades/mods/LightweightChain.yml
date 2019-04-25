@@ -1,0 +1,4 @@
+name: Lightweight Chain
+icon: /assets/icons/parts/chainblades/mods/LightweightChain.png
+part_effect:
+  - Dashing towards a Behemoth reduces stamina cost of the dash by 50%.

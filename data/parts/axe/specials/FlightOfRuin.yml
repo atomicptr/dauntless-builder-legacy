@@ -1,0 +1,4 @@
+name: Flight of Ruin
+icon: /assets/icons/parts/axe/specials/FlightOfRuin.png
+part_effect:
+  - Throw the axe forward, damaging enemies while thrown. Reactivate to call the axe and perform a powerful overhand swing that can generate determination.

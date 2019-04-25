@@ -1,0 +1,4 @@
+name: Volatile Axecore
+icon: /assets/icons/parts/axe/mods/VolatileAxecore.png
+part_effect:
+  - Charging attack deals aoe damage to nearby enemies at each charge level.

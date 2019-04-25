@@ -98,8 +98,16 @@ describe("Dauntless Builder Data", () => {
         }
 
         it("Weapons should not have invalid icons", checkIconsFor("weapons"));
+        it("Axe Mods should not have invalid icons", checkIconsFor("parts.axe.mods"));
+        it("Axe Specials should not have invalid icons", checkIconsFor("parts.axe.specials"));
+        it("Chain Blades Mods should not have invalid icons", checkIconsFor("parts.chainblades.mods"));
+        it("Chain Blades Specials should not have invalid icons", checkIconsFor("parts.chainblades.specials"));
+        it("Hammer Mods should not have invalid icons", checkIconsFor("parts.hammer.mods"));
+        it("Hammer Specials should not have invalid icons", checkIconsFor("parts.hammer.specials"));
         it("Sword Mods should not have invalid icons", checkIconsFor("parts.sword.mods"));
         it("Sword Specials should not have invalid icons", checkIconsFor("parts.sword.specials"));
+        it("War Pike Mods should not have invalid icons", checkIconsFor("parts.warpike.mods"));
+        it("War Pike Specials should not have invalid icons", checkIconsFor("parts.warpike.specials"));
         it("Armours should not have invalid icons", checkIconsFor("armours"));
         it("Repeater Barrels should not have invalid icons", checkIconsFor("parts.repeater.barrels"));
         it("Repeater Chambers should not have invalid icons", checkIconsFor("parts.repeater.chambers"));
