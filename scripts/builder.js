@@ -76,13 +76,13 @@ function build(path) {
                     let type = doc.type;
 
                     if (file.indexOf("/perks/") > 0) {
-                        type = "Perk";
+                        type = "Perks";
                     } else if (file.indexOf("/lanterns/") > 0) {
-                        type = "Lantern";
+                        type = "Lanterns";
                     } else if (file.indexOf("/weapons/") > 0) {
-                        type = "Weapon:" + doc.type;
+                        type = "Weapons";
                     } else if (file.indexOf("/armours/") > 0) {
-                        type = "Armor:" + doc.type;
+                        type = "Armours";
                     }
 
                     tryInsertToStringMap(type, doc.name);

@@ -3,31 +3,41 @@ import DataUtility from "../utility/DataUtility";
 
 const hashids = new Hashids("spicy");
 
-const WEAPON_TYPE = {
-    AXE: 1,
-    CHAINBLADES: 2,
-    HAMMER: 3,
-    SWORD: 4,
-    WARPIKE: 5,
-    REPEATER: 6
-};
-
-/**
- * v2 Structure
- * - Version: 2
- * - Weapon Type
- * - {Weapon specific fields}
- *      Default: Name, Level, Cell 0, Cell 1, Extra Part, Special
- *      Repeaters: Part 1, Part Level 1, Part 2, ..., Part X, Special?
- * - Head Name, Head Level, Head Cell
- * - Torso Name, Torso Level, Torso Cell
- * - Arms Name, Arms Level, Arms Cell
- * - Legs Name, Legs Level, Legs Cell
- * - Lantern
- */
-
 export default class BuildModel {
     constructor(data) {
+        // set default parameter values
+        this.__version = 2;
+        this.weapon_name = "";
+        this.weapon_level = 0;
+        this.weapon_part1_name = "";
+        this.weapon_part1_level = 0;
+        this.weapon_part2_name = "";
+        this.weapon_part2_level = 0;
+        this.weapon_part3_name = "";
+        this.weapon_part3_level = 0;
+        this.weapon_part4_name = "";
+        this.weapon_part4_level = 0;
+        this.weapon_part5_name = "";
+        this.weapon_part5_level = 0;
+        this.weapon_part6_name = "";
+        this.weapon_part6_level = 0;
+        this.weapon_cell0 = "";
+        this.weapon_cell1 = "";
+        this.torso_name = "";
+        this.torso_level = 0;
+        this.torso_cell = "";
+        this.arms_name = "";
+        this.arms_level = 0;
+        this.arms_cell = "";
+        this.legs_name = "";
+        this.legs_level = 0;
+        this.legs_cell = "";
+        this.head_name = "";
+        this.head_level = 0;
+        this.head_cell = "";
+        this.lantern_name = "";
+        this.lantern_cell = "";
+
         for(let key of Object.keys(data)) {
             this[key] = data[key];
         }
@@ -39,42 +49,44 @@ export default class BuildModel {
     }
 
     serialize() {
-        const stringMap = DataUtility.stringMap(this.__version);
+        const stringMap = DataUtility.stringMap();
+
+        const weapon = BuildModel.findWeapon(this.weapon_name);
+        const weaponType = weapon ? weapon.type : null;
 
         let params = [
             this.__version,
-            DataUtility.getKeyByValue(stringMap, this.weapon_name),
+            DataUtility.getWeaponId(this.weapon_name),
             this.weapon_level,
-            DataUtility.getKeyByValue(stringMap, this.weapon_cell0),
-            DataUtility.getKeyByValue(stringMap, this.weapon_cell1),
-            DataUtility.getKeyByValue(stringMap, this.head_name),
+            DataUtility.getCellId(this.weapon_cell0),
+            DataUtility.getCellId(this.weapon_cell1),
+            DataUtility.getPartId(weaponType, this.weapon_part1_name),
+            this.weapon_part1_level,
+            DataUtility.getPartId(weaponType, this.weapon_part2_name),
+            this.weapon_part2_level,
+            DataUtility.getPartId(weaponType, this.weapon_part3_name),
+            this.weapon_part3_level,
+            DataUtility.getPartId(weaponType, this.weapon_part4_name),
+            this.weapon_part4_level,
+            DataUtility.getPartId(weaponType, this.weapon_part5_name),
+            this.weapon_part5_level,
+            DataUtility.getPartId(weaponType, this.weapon_part6_name),
+            this.weapon_part6_level,
+            DataUtility.getArmourId(this.head_name),
             this.head_level,
-            DataUtility.getKeyByValue(stringMap, this.head_cell),
-            DataUtility.getKeyByValue(stringMap, this.torso_name),
+            DataUtility.getCellId(this.head_cell),
+            DataUtility.getArmourId(this.torso_name),
             this.torso_level,
-            DataUtility.getKeyByValue(stringMap, this.torso_cell),
-            DataUtility.getKeyByValue(stringMap, this.arms_name),
+            DataUtility.getCellId(this.torso_cell),
+            DataUtility.getArmourId(this.arms_name),
             this.arms_level,
-            DataUtility.getKeyByValue(stringMap, this.arms_cell),
-            DataUtility.getKeyByValue(stringMap, this.legs_name),
+            DataUtility.getCellId(this.arms_cell),
+            DataUtility.getArmourId(this.legs_name),
             this.legs_level,
-            DataUtility.getKeyByValue(stringMap, this.legs_cell),
-            DataUtility.getKeyByValue(stringMap, this.lantern_name),
-            DataUtility.getKeyByValue(stringMap, this.lantern_cell)
+            DataUtility.getCellId(this.legs_cell),
+            DataUtility.getLanternId(this.lantern_name),
+            DataUtility.getCellId(this.lantern_cell)
         ];
-
-        if(this.weapon_name === "Repeater") {
-            params = params.concat([
-                DataUtility.getKeyByValue(stringMap, this.barrel_name),
-                this.barrel_level,
-                DataUtility.getKeyByValue(stringMap, this.chamber_name),
-                this.chamber_level,
-                DataUtility.getKeyByValue(stringMap, this.grip_name),
-                this.grip_level,
-                DataUtility.getKeyByValue(stringMap, this.prism_name),
-                this.prism_level
-            ]);
-        }
 
         return hashids.encode.apply(hashids, params);
     }
@@ -84,40 +96,59 @@ export default class BuildModel {
 
         const stringMap = DataUtility.stringMap(numbers[0]);
 
-        let idcounter = 0;
+        const getString = (type, counter) => {
+            if (numbers[counter] === 0) {
+                return "";
+            }
 
-        let data = {
-            __version: numbers[idcounter++],
-            weapon_name: stringMap[numbers[idcounter++]],
-            weapon_level: numbers[idcounter++],
-            weapon_cell0: stringMap[numbers[idcounter++]],
-            weapon_cell1: stringMap[numbers[idcounter++]],
-            head_name: stringMap[numbers[idcounter++]],
-            head_level: numbers[idcounter++],
-            head_cell: stringMap[numbers[idcounter++]],
-            torso_name: stringMap[numbers[idcounter++]],
-            torso_level: numbers[idcounter++],
-            torso_cell: stringMap[numbers[idcounter++]],
-            arms_name: stringMap[numbers[idcounter++]],
-            arms_level: numbers[idcounter++],
-            arms_cell: stringMap[numbers[idcounter++]],
-            legs_name: stringMap[numbers[idcounter++]],
-            legs_level: numbers[idcounter++],
-            legs_cell: stringMap[numbers[idcounter++]],
-            lantern_name: stringMap[numbers[idcounter++]],
-            lantern_cell: stringMap[numbers[idcounter++]]
+            if (!(type in stringMap)) {
+                return "";
+            }
+
+            return stringMap[type][numbers[counter]];
         };
 
-        if(data.weapon_name === "Repeater") {
-            data.barrel_name = stringMap[numbers[idcounter++]];
-            data.barrel_level = numbers[idcounter++];
-            data.chamber_name = stringMap[numbers[idcounter++]];
-            data.chamber_level = numbers[idcounter++];
-            data.grip_name = stringMap[numbers[idcounter++]];
-            data.grip_level = numbers[idcounter++];
-            data.prism_name = stringMap[numbers[idcounter++]];
-            data.prism_level = numbers[idcounter++];
-        }
+        let idcounter = 0;
+
+        const version = numbers[idcounter++];
+
+        const weaponName = getString("Weapons", idcounter++);
+        const weapon = BuildModel.findWeapon(weaponName);
+        const partsType = `Parts:${weapon.type}`;
+
+        let data = {
+            __version: version,
+            weapon_name: weaponName,
+            weapon_level: numbers[idcounter++],
+            weapon_cell0: getString("Cells", idcounter++),
+            weapon_cell1: getString("Cells", idcounter++),
+            weapon_part1_name: getString(partsType, idcounter++),
+            weapon_part1_level: numbers[idcounter++],
+            weapon_part2_name: getString(partsType, idcounter++),
+            weapon_part2_level: numbers[idcounter++],
+            weapon_part3_name: getString(partsType, idcounter++),
+            weapon_part3_level: numbers[idcounter++],
+            weapon_part4_name: getString(partsType, idcounter++),
+            weapon_part4_level: numbers[idcounter++],
+            weapon_part5_name: getString(partsType, idcounter++),
+            weapon_part5_level: numbers[idcounter++],
+            weapon_part6_name: getString(partsType, idcounter++),
+            weapon_part6_level: numbers[idcounter++],
+            head_name: getString("Armours", idcounter++),
+            head_level: numbers[idcounter++],
+            head_cell: getString("Cells", idcounter++),
+            torso_name: getString("Armours", idcounter++),
+            torso_level: numbers[idcounter++],
+            torso_cell: getString("Cells", idcounter++),
+            arms_name: getString("Armours", idcounter++),
+            arms_level: numbers[idcounter++],
+            arms_cell: getString("Cells", idcounter++),
+            legs_name: getString("Armours", idcounter++),
+            legs_level: numbers[idcounter++],
+            legs_cell: getString("Cells", idcounter++),
+            lantern_name: getString("Lanterns", idcounter++),
+            lantern_cell: getString("Cells", idcounter++)
+        };
 
         return new BuildModel(data);
     }
@@ -324,6 +355,18 @@ export default class BuildModel {
             __version: 2,
             weapon_name: "",
             weapon_level: 0,
+            weapon_part1_name: "",
+            weapon_part1_level: 0,
+            weapon_part2_name: "",
+            weapon_part2_level: 0,
+            weapon_part3_name: "",
+            weapon_part3_level: 0,
+            weapon_part4_name: "",
+            weapon_part4_level: 0,
+            weapon_part5_name: "",
+            weapon_part5_level: 0,
+            weapon_part6_name: "",
+            weapon_part6_level: 0,
             weapon_cell0: "",
             weapon_cell1: "",
             torso_name: "",
@@ -345,6 +388,6 @@ export default class BuildModel {
 
     static isValid(str) {
         const data = hashids.decode(str);
-        return data.length === 19 || data.length === 27;
+        return data.length === 31;
     }
 }

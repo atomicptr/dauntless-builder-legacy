@@ -18,10 +18,15 @@ export default class Repeater extends React.Component {
     getTotalPower() {
         let total = 0;
 
-        const fields = ["barrel", "chamber", "grip", "prism"];
+        const fields = [
+            ["barrel", "part1"],
+            ["chamber", "part2"],
+            ["grip", "part3"],
+            ["prism", "part4"]
+        ];
 
         for(let field of fields) {
-            const part = BuildModel.findPart("repeaters", field + "s", this.props.parent.state.build[field + "_name"]);
+            const part = BuildModel.findPart("repeater", field[0] + "s", this.props.parent.state.build["weapon_" + field[1] + "_name"]);
             const level = this.props.parent.state.build[field + "_level"];
 
             if(part) {
@@ -45,16 +50,16 @@ export default class Repeater extends React.Component {
     }
 
     renderPart(partType, fieldPrefix) {
-        const fieldName = fieldPrefix + "_name";
+        const fieldName = "weapon_" + fieldPrefix + "_name";
         const capitalize = string => string.charAt(0).toUpperCase() + string.slice(1);
 
         const parts = this.props.parent.state.itemData.parts;
 
-        if(!parts.repeaters || !parts.repeaters[partType]) {
+        if(!parts.repeater || !(partType in parts.repeater)) {
             return null;
         }
 
-        const part = BuildModel.findPart("repeaters", partType, this.props.parent.state.build[fieldName]);
+        const part = BuildModel.findPart("repeater", partType, this.props.parent.state.build[fieldName]);
 
         if(!part) {
             return <div className="item-title-wrapper">
@@ -100,10 +105,10 @@ export default class Repeater extends React.Component {
                 </div>
             </div>
 
-            {this.renderPart("barrels", "barrel")}
-            {this.renderPart("chambers", "chamber")}
-            {this.renderPart("grips", "grip")}
-            {this.renderPart("prisms", "prism")}
+            {this.renderPart("barrels", "part1")}
+            {this.renderPart("chambers", "part2")}
+            {this.renderPart("grips", "part3")}
+            {this.renderPart("prisms", "part4")}
         </React.Fragment>;
     }
 }

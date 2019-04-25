@@ -20,6 +20,34 @@ class DataUtility {
         return "0";
     }
 
+    getMapIdByValue(type, value) {
+        if (!(type in this._map)) {
+            return "0";
+        }
+
+        return this.getKeyByValue(this._map[type], value);
+    }
+
+    getWeaponId(value) {
+        return this.getMapIdByValue("Weapons", value);
+    }
+
+    getArmourId(value) {
+        return this.getMapIdByValue("Armours", value);
+    }
+
+    getLanternId(value) {
+        return this.getMapIdByValue("Lanterns", value);
+    }
+
+    getCellId(value) {
+        return this.getMapIdByValue("Cells", value);
+    }
+
+    getPartId(weaponType, value) {
+        return this.getMapIdByValue(`Parts:${weaponType}`, value);
+    }
+
     getJSON(url) {
         return new Promise((resolve, reject) => {
             const request = new XMLHttpRequest();

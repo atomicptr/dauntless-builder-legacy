@@ -128,17 +128,18 @@ export default class BuildRoute extends React.Component {
             changes.weapon_level = ItemUtility.maxLevel("weapons", itemName);
             changes.weapon_cell0 = "";
             changes.weapon_cell1 = "";
-
-            if(ItemUtility.isRepeater({name: itemName})) {
-                changes.barrel_name = "";
-                changes.barrel_level = 0; // TODO: get max part level
-                changes.chamber_name = "";
-                changes.chamber_level = 0; // TODO: get max part level
-                changes.grip_name = "";
-                changes.grip_level = 0; // TODO: get max part level
-                changes.prism_name = "";
-                changes.prism_level = 0; // TODO: get max part level
-            }
+            changes.weapon_part1_name = "";
+            changes.weapon_part1_level = 0;
+            changes.weapon_part2_name = "";
+            changes.weapon_part2_level = 0;
+            changes.weapon_part3_name = "";
+            changes.weapon_part3_level = 0;
+            changes.weapon_part4_name = "";
+            changes.weapon_part4_level = 0;
+            changes.weapon_part5_name = "";
+            changes.weapon_part5_level = 0;
+            changes.weapon_part6_name = "";
+            changes.weapon_part6_level = 0;
         } else if(itemType === "Armour") {
             let type = data.__armourType.toLowerCase();
 
@@ -261,6 +262,14 @@ export default class BuildRoute extends React.Component {
             ]} />;
     }
 
+    renderWeaponParts() {
+        const weapon = BuildModel.findWeapon(this.state.build.weapon_name);
+
+        if (weapon && !ItemUtility.isRepeater(weapon)) {
+        }
+    }
+
+
     getMetaTitle() {
         if(this.state.build.weapon_name) {
             return this.state.build.weapon_name + " Build - Dauntless Builder";
@@ -376,6 +385,7 @@ export default class BuildRoute extends React.Component {
             <div className="columns">
                 <div className="column is-two-thirds">
                     {this.renderWeapon()}
+                    {this.renderWeaponParts()}
 
                     <Item
                         parent={this}

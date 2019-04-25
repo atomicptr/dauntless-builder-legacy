@@ -41,7 +41,7 @@ export default class RepeaterPartSelectModal extends React.Component {
 
         let items = [];
 
-        const parts = this.props.itemData.parts.repeaters[partType];
+        const parts = this.props.itemData.parts.repeater[partType];
 
         for(let partName of Object.keys(parts)) {
             const part = parts[partName];
@@ -58,7 +58,7 @@ export default class RepeaterPartSelectModal extends React.Component {
     onPartSelected(part) {
         if(this.props.onSelected) {
             const {fieldName} = this.props.data;
-            this.props.onSelected(fieldName.split("_")[0], part);
+            this.props.onSelected(fieldName.split("_name")[0], part);
         }
     }
 
