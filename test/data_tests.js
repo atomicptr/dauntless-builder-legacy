@@ -103,6 +103,7 @@ describe("Dauntless Builder Data", () => {
         it("Repeater Chambers should not have invalid icons", checkIconsFor("parts.repeater.chambers"));
         it("Repeater Grips should not have invalid icons", checkIconsFor("parts.repeater.grips"));
         it("Repeater Prisms should not have invalid icons", checkIconsFor("parts.repeater.prisms"));
+        it("Repeater Mods should not have invalid icons", checkIconsFor("parts.repeater.mods"));
 
         const checkCellSlotsFor = field => {
             return () => {

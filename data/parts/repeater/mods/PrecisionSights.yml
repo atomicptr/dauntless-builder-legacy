@@ -1,0 +1,5 @@
+name: Precision Sights
+description: The Precision Sights is part of a craftable weapon in Dauntless.
+icon: /assets/icons/parts/repeaters/mods/PrecisionSights.png
+part_effect:
+  - Deal 5 increased damage when attacking the same part multiple times. Stacks up to 8 times.
