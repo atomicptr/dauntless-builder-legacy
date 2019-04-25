@@ -98,12 +98,15 @@ describe("Dauntless Builder Data", () => {
         }
 
         it("Weapons should not have invalid icons", checkIconsFor("weapons"));
+        it("Sword Mods should not have invalid icons", checkIconsFor("parts.sword.mods"));
+        it("Sword Specials should not have invalid icons", checkIconsFor("parts.sword.specials"));
         it("Armours should not have invalid icons", checkIconsFor("armours"));
         it("Repeater Barrels should not have invalid icons", checkIconsFor("parts.repeater.barrels"));
         it("Repeater Chambers should not have invalid icons", checkIconsFor("parts.repeater.chambers"));
         it("Repeater Grips should not have invalid icons", checkIconsFor("parts.repeater.grips"));
         it("Repeater Prisms should not have invalid icons", checkIconsFor("parts.repeater.prisms"));
         it("Repeater Mods should not have invalid icons", checkIconsFor("parts.repeater.mods"));
+        //it("Repeater Specials should not have invalid icons", checkIconsFor("parts.repeater.specials"));
 
         const checkCellSlotsFor = field => {
             return () => {

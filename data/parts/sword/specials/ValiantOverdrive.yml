@@ -1,0 +1,4 @@
+name: Valiant Overdrive
+icon: /assets/icons/parts/sword/specials/ValiantOverdrive.png
+part_effect:
+  - Activate at full meter to enter Overdrive, increasing attack speed and causing attacks to deal aoe damage. Reactivate to dash in a direction (incurs a short cooldown).

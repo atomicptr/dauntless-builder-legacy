@@ -6,9 +6,6 @@
     "name": {
       "type": "string"
     },
-    "description": {
-      "type": "string"
-    },
     "icon": {
       "type": "string"
     },
@@ -23,7 +20,9 @@
     }
   },
   "required": [
-    "name"
+    "name",
+    "icon",
+    "part_effect"
   ],
   "additionalProperties": false
 }

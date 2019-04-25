@@ -1,0 +1,4 @@
+name: Ardent Cyclone
+icon: /assets/icons/parts/sword/specials/ArdentCyclone.png
+part_effect:
+  - Activate at full meter to start to spin, damaging nearby enemies for the duration. Reactive to slash in a direction, damaging enemies.
