@@ -55,6 +55,10 @@ export default class ItemUtility {
     }
 
     static formatWeaponTypeForParts(weaponType) {
+        if (!weaponType) {
+            return "null";
+        }
+
         return weaponType.toLowerCase().replace(" ", "");
     }
 }

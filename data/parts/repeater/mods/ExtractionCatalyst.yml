@@ -1,4 +1,4 @@
-name: Lightweight Frame
-icon: /assets/icons/parts/repeaters/mods/LightweightFrame.png
+name: Extraction Catalyst
+icon: /assets/icons/parts/repeaters/mods/ExtractionCatalyst.png
 part_effect:
   - Reduce both ability cooldowns by 2 seconds when dodging through Behemoth attacks.

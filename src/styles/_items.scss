@@ -133,6 +133,10 @@
 
         transition: background 0.3s ease;
 
+        img {
+            filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
+        }
+
         &:hover {
             cursor: pointer;
             background: #CCC;
@@ -265,6 +269,7 @@
 
             img {
                 height: 64px;
+                filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
             }
 
             .cell-line {
