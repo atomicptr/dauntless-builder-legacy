@@ -31,6 +31,9 @@
         "hidden": {
             "type": "boolean"
         },
+        "restrict_specials": {
+            "type": "boolean"
+        },
         "power": {
             "type": "object",
             "properties": {

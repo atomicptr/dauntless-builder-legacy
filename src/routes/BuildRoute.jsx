@@ -295,7 +295,7 @@ export default class BuildRoute extends React.Component {
 
         let parts = [];
 
-        if (weaponHasParts("specials")) {
+        if (weaponHasParts("specials") && weapon.restrict_specials === false) {
             let slot = "weapon_part1_name";
 
             if (ItemUtility.isRepeater(weapon)) {
