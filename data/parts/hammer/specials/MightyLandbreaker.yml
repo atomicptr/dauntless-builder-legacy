@@ -1,0 +1,4 @@
+name: Mighty Landbreaker
+icon: /assets/icons/parts/sword/specials/MightyLandbreaker.png
+part_effect:
+  - Loads ammo into the hammer before releasing, creating an aether vent that buffs players.

@@ -1,0 +1,4 @@
+name: Concussive Salvo
+icon: /assets/icons/parts/hammer/specials/ConcussiveSalvo.png
+part_effect:
+  - Loads ammo into the hammer before releasing, damage and interrupting behemoths.
