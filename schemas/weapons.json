@@ -31,9 +31,6 @@
         "hidden": {
             "type": "boolean"
         },
-        "rarity": {
-            "type": "string"
-        },
         "power": {
             "type": "object",
             "properties": {
