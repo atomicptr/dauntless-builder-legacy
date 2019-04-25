@@ -1,0 +1,4 @@
+name: Perpetual Bladecore
+icon: /assets/icons/parts/sword/mods/PerpetualBladecore.png
+part_effect:
+  - Dealing damage while in special generates a small amount of special meter
