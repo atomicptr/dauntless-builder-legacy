@@ -53,4 +53,8 @@ export default class ItemUtility {
 
         return "Lantern";
     }
+
+    static formatWeaponTypeForParts(weaponType) {
+        return weaponType.toLowerCase().replace(" ", "");
+    }
 }

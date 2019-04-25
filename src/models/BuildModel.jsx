@@ -1,5 +1,6 @@
 import Hashids from "hashids";
 import DataUtility from "../utility/DataUtility";
+import ItemUtility from "../utility/ItemUtility";
 
 const hashids = new Hashids("spicy");
 
@@ -112,7 +113,7 @@ export default class BuildModel {
 
         const weaponName = getString("Weapons", idcounter++);
         const weapon = BuildModel.findWeapon(weaponName);
-        const partsType = `Parts:${weapon.type}`;
+        const partsType = `Parts:${ItemUtility.formatWeaponTypeForParts(weapon.type).capitalize()}`;
 
         let data = {
             __version: version,
@@ -269,8 +270,8 @@ export default class BuildModel {
     }
 
     static findPart(weaponType, partType, partName) {
-        if(partName in DataUtility.data().parts[weaponType.toLowerCase()][partType]) {
-            return DataUtility.data().parts[weaponType.toLowerCase()][partType][partName];
+        if(partName in DataUtility.data().parts[ItemUtility.formatWeaponTypeForParts(weaponType)][partType]) {
+            return DataUtility.data().parts[ItemUtility.formatWeaponTypeForParts(weaponType)][partType][partName];
         }
 
         return null;

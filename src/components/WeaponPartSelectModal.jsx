@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import RepeaterPart from "./RepeaterPart";
 import WeaponPart from "./WeaponPart";
+import ItemUtility from "../utility/ItemUtility";
 
 export default class WeaponPartSelectModal extends React.Component {
     constructor(props, context) {
@@ -42,7 +42,7 @@ export default class WeaponPartSelectModal extends React.Component {
 
         let items = [];
 
-        const parts = this.props.itemData.parts[weaponType.toLowerCase()][partType];
+        const parts = this.props.itemData.parts[ItemUtility.formatWeaponTypeForParts(weaponType)][partType];
 
         for(let partName of Object.keys(parts)) {
             const part = parts[partName];

@@ -1,4 +1,6 @@
 // This exists to force a cache update on client. Simply increase the number.
+import ItemUtility from "./ItemUtility";
+
 const SCRIPT_VERSION = 4;
 
 class DataUtility {
@@ -45,7 +47,7 @@ class DataUtility {
     }
 
     getPartId(weaponType, value) {
-        return this.getMapIdByValue(`Parts:${weaponType}`, value);
+        return this.getMapIdByValue(`Parts:${ItemUtility.formatWeaponTypeForParts(weaponType).capitalize()}`, value);
     }
 
     getJSON(url) {

@@ -290,8 +290,8 @@ export default class BuildRoute extends React.Component {
         }
 
         const weaponHasParts = partName =>
-            weapon.type.toLowerCase() in this.state.itemData.parts &&
-            partName in this.state.itemData.parts[weapon.type.toLowerCase()];
+            ItemUtility.formatWeaponTypeForParts(weapon.type) in this.state.itemData.parts &&
+            partName in this.state.itemData.parts[ItemUtility.formatWeaponTypeForParts(weapon.type)];
 
         let parts = [];
 

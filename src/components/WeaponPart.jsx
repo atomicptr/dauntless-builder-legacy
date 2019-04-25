@@ -13,8 +13,6 @@ export default class WeaponPart extends React.Component {
         const part = this.props.part;
         const partType = this.props.partType;
 
-        const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
-
         if (!part) {
             return <div className="item-title-wrapper">
                 <div className="item-wrapper">
@@ -22,7 +20,7 @@ export default class WeaponPart extends React.Component {
                         <i className="fas fa-question no-item-icon"></i>
                         <div className="item-data">
                             <h3 className="subtitle">
-                                No <strong>{capitalize(partType).substring(0, partType.length - 1)}</strong> selected.
+                                No <strong>{partType.capitalize().substring(0, partType.length - 1)}</strong> selected.
                             </h3>
                             <div>Click here to select one.</div>
                         </div>
