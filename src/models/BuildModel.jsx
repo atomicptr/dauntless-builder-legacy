@@ -49,8 +49,6 @@ export default class BuildModel {
     }
 
     serialize() {
-        const stringMap = DataUtility.stringMap();
-
         const weapon = BuildModel.findWeapon(this.weapon_name);
         const weaponType = weapon ? weapon.type : null;
 
