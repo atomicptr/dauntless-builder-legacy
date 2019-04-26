@@ -113,7 +113,7 @@ export default class BuildModel {
 
         const weaponName = getString("Weapons", idcounter++);
         const weapon = BuildModel.findWeapon(weaponName);
-        const partsType = `Parts:${ItemUtility.formatWeaponTypeForParts(weapon.type).capitalize()}`;
+        const partsType = weapon ? `Parts:${ItemUtility.formatWeaponTypeForParts(weapon.type).capitalize()}` : null;
 
         let data = {
             __version: version,

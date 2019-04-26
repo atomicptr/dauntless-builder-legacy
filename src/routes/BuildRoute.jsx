@@ -83,6 +83,20 @@ export default class BuildRoute extends React.Component {
         build.weapon_part2_name = "Impulse Crown";
         build.weapon_cell0 = "+3 Deconstruction Cell";
         build.weapon_cell1 = "+3 Assassin's Vigour Cell";
+        build.torso_name = "Boreal Resolve";
+        build.torso_level = 15;
+        build.torso_cell = "+3 Iceborne Cell";
+        build.arms_name = "Boreal Might";
+        build.arms_level = 15;
+        build.arms_cell = "+3 Aetherhunter Cell";
+        build.legs_name = "Boreal March";
+        build.legs_level = 15;
+        build.legs_cell = "+3 Predator Cell";
+        build.head_name = "Boreal Epiphany";
+        build.head_level = 15;
+        build.head_cell = "+3 Aetheric Attunement Cell";
+        build.lantern_name = "Embermane's Rapture";
+        build.lantern_cell = "+3 Aetheric Attunement Cell";
 
         this.setState({
             build
