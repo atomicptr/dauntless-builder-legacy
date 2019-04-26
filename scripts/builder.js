@@ -117,7 +117,7 @@ function sortByKey(object) {
 }
 
 Promise.all([
-    build("data/armours/*.yml"),
+    build("data/armours/*/*.yml"),
     build("data/cells/*/*.yml"),
     build("data/lanterns/*.yml"),
     build("data/perks/*.yml"),

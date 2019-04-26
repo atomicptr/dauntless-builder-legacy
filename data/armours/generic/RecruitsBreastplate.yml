@@ -1,0 +1,9 @@
+name: Recruit's Breastplate
+description: Torso protection for the novice Slayer.
+icon: /assets/icons/armours/generic/RecruitsBreastplate.png
+type: Torso
+strength: null
+weakness: null
+cells: null
+resistance:
+  0: 20

@@ -1,0 +1,37 @@
+name: Light's Walk
+description: Leg and foot protection forged from Rezakiri trophies.
+icon: /assets/icons/armours/rezakiri/LightsWalk.png
+type: Legs
+strength: Radiant
+weakness: Umbral
+cells: Mobility
+resistance:
+  0: 25
+  1: 35
+  2: 45
+  3: 55
+  4: 65
+  5: 75
+  6: 85
+  7: 95
+  8: 105
+  9: 115
+  10: 125
+  11: 135
+  12: 145
+  13: 155
+  14: 165
+  15: 175
+perks:
+  - name: Agility
+    value: 1
+    from: 0
+    to: 5
+  - name: Agility
+    value: 2
+    from: 6
+    to: 9
+  - name: Agility
+    value: 3
+    from: 10
+    to: 15

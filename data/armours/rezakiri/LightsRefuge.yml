@@ -1,0 +1,37 @@
+name: Light's Refuge
+description: Arms protection forged from Rezakiri trophies.
+icon: /assets/icons/armours/rezakiri/LightsRefuge.png
+type: Arms
+strength: Radiant
+weakness: Umbral
+cells: Technique
+resistance:
+  0: 25
+  1: 35
+  2: 45
+  3: 55
+  4: 65
+  5: 75
+  6: 85
+  7: 95
+  8: 105
+  9: 115
+  10: 125
+  11: 135
+  12: 145
+  13: 155
+  14: 165
+  15: 175
+perks:
+  - name: Conduit
+    value: 1
+    from: 0
+    to: 5
+  - name: Conduit
+    value: 2
+    from: 6
+    to: 9
+  - name: Conduit
+    value: 3
+    from: 10
+    to: 15

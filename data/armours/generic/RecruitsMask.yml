@@ -1,0 +1,9 @@
+name: Recruit's Mask
+description: Light face protection for the novice Slayer.
+icon: /assets/icons/armours/generic/RecruitsMask.png
+type: Head
+strength: null
+weakness: null
+cells: null
+resistance:
+  0: 20

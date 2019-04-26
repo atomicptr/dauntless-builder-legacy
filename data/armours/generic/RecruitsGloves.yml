@@ -1,0 +1,9 @@
+name: Recruit's Gloves
+description: Arm and hand protection for the novice Slayer.
+icon: /assets/icons/armours/generic/RecruitsGloves.png
+type: Arms
+strength: null
+weakness: null
+cells: null
+resistance:
+  0: 20

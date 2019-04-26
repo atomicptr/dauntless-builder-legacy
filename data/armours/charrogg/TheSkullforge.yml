@@ -1,0 +1,28 @@
+name: The Skullforge
+description: The Skullforge is a piece of craftable Exotic armour in Dauntless. It is crafted from Firebrand Charrogg reagents.
+icon: /assets/icons/armours/charrogg/TheSkullforge.png
+type: Head
+strength: Blaze
+weakness: Frost
+cells: Defence
+resistance:
+  0: 25
+  1: 35
+  2: 45
+  3: 55
+  4: 65
+  5: 75
+  6: 85
+  7: 95
+  8: 105
+  9: 115
+  10: 125
+  11: 135
+  12: 145
+  13: 155
+  14: 165
+  15: 175
+unique_effects:
+  - name: DamageStaminaShield
+    description: 1.5% of all damage dealt becomes a stamina shield (max 50) that depletes first when spending stamina. Depletes slowly after 5 seconds not dealing damage.
+    value: 0.015
