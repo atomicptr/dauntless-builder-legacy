@@ -31,8 +31,8 @@ export default class WeaponPart extends React.Component {
 
         return <div className="item-title-wrapper">
             <div className="item-wrapper">
-                <div className="item repeater-part no-cells" onClick={() => this.onClicked()}>
-                    <div className="repeater-image-wrapper">
+                <div className="item weapon-part no-cells" onClick={() => this.onClicked()}>
+                    <div className="weapon-part-image-wrapper">
                         <img src={part.icon} />
                     </div>
                     <div className="item-data">
