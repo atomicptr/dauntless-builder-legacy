@@ -33,8 +33,8 @@ perks:
     to: 9
   - name: Aetheric Attunement
     value: 3
-    from: 6
-    to: 10
+    from: 10
+    to: 15
 unique_effects:
   - name: HeadDamage
     description: 20% damage vs Behemoth Heads

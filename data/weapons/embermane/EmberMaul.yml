@@ -33,8 +33,8 @@ perks:
     to: 9
   - name: Evasive Fury
     value: 3
-    from: 6
-    to: 10
+    from: 10
+    to: 15
 unique_effects:
   - name: FifthHitStaggerDamage
     description: The fifth hit in a row deals +150% stagger damage

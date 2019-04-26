@@ -33,8 +33,8 @@ perks:
     to: 9
   - name: Nimble
     value: 3
-    from: 6
-    to: 10
+    from: 10
+    to: 15
 unique_effects:
   - name: IceMines
     description: Evading drops a trio of Ice Mines on a 30 second cooldown.
