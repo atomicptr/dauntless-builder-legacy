@@ -51,6 +51,14 @@ $theme-input-border: #242424;
         .perk-string-items img {
             filter: unset;
         }
+
+        &.weapon-part {
+            .weapon-part-image-wrapper {
+                & > img {
+                    filter: invert(0);
+                }
+            }
+        }
     }
 
     .item:hover {

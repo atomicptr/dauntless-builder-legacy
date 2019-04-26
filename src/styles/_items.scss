@@ -133,10 +133,6 @@
 
         transition: background 0.3s ease;
 
-        img {
-            filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
-        }
-
         &:hover {
             cursor: pointer;
             background: #CCC;
@@ -257,6 +253,18 @@
                 }
             }
         }
+
+        &.weapon-part {
+            .weapon-part-image-wrapper {
+                min-width: 120px;
+                text-align: center;
+
+                & > img {
+                    max-height: 100px;
+                    filter: invert(1);
+                }
+            }
+        }
     }
 }
 
@@ -269,7 +277,6 @@
 
             img {
                 height: 64px;
-                filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.4));
             }
 
             .cell-line {
