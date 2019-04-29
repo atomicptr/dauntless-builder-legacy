@@ -26,9 +26,14 @@ export default class CellGroup extends React.Component {
         let slotIndex = 0;
 
         for(let slot of cellSlots) {
-            let index = assignedCells.findIndex(cellHandle => cellHandle[1] && cellHandle[1].slot === slot);
+            let isInSlot = false;
+            const cell = assignedCells[slotIndex];
 
-            if(index > -1) {
+            if(cell && cell[1]) {
+                isInSlot = cell[1].slot === slot;
+            }
+
+            if(isInSlot) {
                 cells.push(
                     <Cell
                         parent={this.props.parent}
@@ -36,12 +41,10 @@ export default class CellGroup extends React.Component {
                         slotPosition={slotIndex}
                         onCellClicked={this.props.onCellClicked}
                         key={"cell_" + (cellCounter++)}
-                        type={assignedCells[index][1].slot}
-                        variant={assignedCells[index][0]}
-                        cell={assignedCells[index][1]} />
+                        type={assignedCells[slotIndex][1].slot}
+                        variant={assignedCells[slotIndex][0]}
+                        cell={assignedCells[slotIndex][1]} />
                 );
-
-                assignedCells.splice(index, 1);
             } else {
                 cells.push(
                     <Cell
