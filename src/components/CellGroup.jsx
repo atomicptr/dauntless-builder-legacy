@@ -45,8 +45,6 @@ export default class CellGroup extends React.Component {
                         variant={assignedCells[slotIndex][0]}
                         cell={assignedCells[slotIndex][1]} />
                 );
-
-                assignedCells.splice(index, 1);
             } else {
                 cells.push(
                     <Cell
