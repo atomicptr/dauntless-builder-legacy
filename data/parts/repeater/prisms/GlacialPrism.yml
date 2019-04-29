@@ -19,4 +19,4 @@ power:
   14: 90
   15: 91
 part_effect:
-  - Once charged, your next attack will deal 550 bonus radiant damage. Charge rate increases with current health.
+  - Evading drops a trio of Ice Mines on a 30 second cooldown.
