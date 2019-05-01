@@ -4,7 +4,7 @@ icon: /assets/icons/armours/nayzaga/ShockingGrasp.png
 type: Arms
 strength: Shock
 weakness: Frost
-cells: Technique
+cells: Utility
 resistance:
   0: 25
   1: 35

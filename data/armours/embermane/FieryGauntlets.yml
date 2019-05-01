@@ -4,7 +4,7 @@ icon: /assets/icons/armours/embermane/FieryGauntlets.png
 type: Arms
 strength: Blaze
 weakness: Shock
-cells: Mobility
+cells: Technique
 resistance:
   0: 25
   1: 35

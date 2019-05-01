@@ -4,7 +4,7 @@ icon: /assets/icons/armours/quillshot/QuillspikeMask.png
 type: Head
 strength: null
 weakness: null
-cells: Utility
+cells: Defence
 resistance:
   0: 25
   1: 35

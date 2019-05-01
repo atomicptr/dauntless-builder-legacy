@@ -4,7 +4,7 @@ icon: /assets/icons/armours/kharabak/ShellOfTheSwarm.png
 type: Torso
 strength: null
 weakness: null
-cells: Mobility
+cells: Technique
 resistance:
   0: 25
   1: 35

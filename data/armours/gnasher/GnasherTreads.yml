@@ -4,7 +4,7 @@ icon: /assets/icons/armours/gnasher/GnasherTreads.png
 type: Legs
 strength: null
 weakness: null
-cells: Utility
+cells: Power
 resistance:
   0: 25
   1: 35

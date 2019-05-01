@@ -4,7 +4,7 @@ icon: /assets/icons/armours/embermane/FieryGreaves.png
 type: Legs
 strength: Blaze
 weakness: Shock
-cells: Mobility
+cells: Defence
 resistance:
   0: 25
   1: 35
