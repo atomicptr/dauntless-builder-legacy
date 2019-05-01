@@ -81,13 +81,6 @@ export default class AppContainer extends React.Component {
                             <img className="logo" src="/assets/logo.png" />
                         </Link>
 
-                        <div className="notification is-info">
-                            <i className="fas fa-info-circle"></i> A lot of the cell slots in the game are currently wrong and will
-                            be fixed with the next patch.<br/> If you want to play around with the fixed state, I made a separate
-                            version of Dauntless Builder with the correct cell slots available
-                            here: <a href="https://unborked.dauntless-builder.com/">Dauntless Builder - Unborked Edition</a>.
-                        </div>
-
                         <div className="card">
                             <Switch>
                                 <Route exact path="/" component={IndexRoute} />
