@@ -53,17 +53,11 @@ function makeBuild(buildId) {
         weapon_cell0: getString("Cells", idcounter++),
         weapon_cell1: getString("Cells", idcounter++),
         weapon_part1_name: getString(partsType, idcounter++),
-        weapon_part1_level: numbers[idcounter++],
         weapon_part2_name: getString(partsType, idcounter++),
-        weapon_part2_level: numbers[idcounter++],
         weapon_part3_name: getString(partsType, idcounter++),
-        weapon_part3_level: numbers[idcounter++],
         weapon_part4_name: getString(partsType, idcounter++),
-        weapon_part4_level: numbers[idcounter++],
         weapon_part5_name: getString(partsType, idcounter++),
-        weapon_part5_level: numbers[idcounter++],
         weapon_part6_name: getString(partsType, idcounter++),
-        weapon_part6_level: numbers[idcounter++],
         head_name: getString("Armours", idcounter++),
         head_level: numbers[idcounter++],
         head_cell: getString("Cells", idcounter++),
@@ -96,11 +90,49 @@ function assertValid(data) {
     }
 }
 
+function assertUpgradeFrom2To3Works(v2str, v3str) {
+    let numbers = hashids.decode(v2str);
+
+    let data = {
+        __version: 3,
+        weapon_name: numbers[1],
+        weapon_level: numbers[2],
+        weapon_cell0: numbers[3],
+        weapon_cell1: numbers[4],
+        weapon_part1_name: numbers[5],
+        weapon_part2_name: numbers[7],
+        weapon_part3_name: numbers[9],
+        weapon_part4_name: numbers[11],
+        weapon_part5_name: numbers[13],
+        weapon_part6_name: numbers[15],
+        head_name: numbers[17],
+        head_level: numbers[18],
+        head_cell: numbers[19],
+        torso_name: numbers[20],
+        torso_level: numbers[21],
+        torso_cell: numbers[22],
+        arms_name: numbers[23],
+        arms_level: numbers[24],
+        arms_cell: numbers[25],
+        legs_name: numbers[26],
+        legs_level: numbers[27],
+        legs_cell: numbers[28],
+        lantern_name: numbers[29],
+        lantern_cell: numbers[30]
+    };
+
+    assert.equal(
+        v3str,
+        hashids.encode(Object.values(data))
+    );
+}
+
+
 describe("Dauntless Builder - Build IDs", () => {
     it("should be able to deserialize builds", () => {
         // a random build that someone send me :)
         assertValid([
-            ["4WtbC3CQaSNU6cNTYtxT4TQT4T7TgTBTQTJTkCnCyRI4FjCzFWUyCorFqt0CN3tvtpd", [
+            ["5OUrCoCRnSBUVcztOTjToTeTaCWC12cOFoCBFYUOCqpFxtjCP2fAt01", [
                 {field: "weapon_name", value: "Brutality of Boreus"},
                 {field: "weapon_level", value: 15},
                 {field: "weapon_part1_name", value: "Mighty Landbreaker"},
@@ -125,4 +157,10 @@ describe("Dauntless Builder - Build IDs", () => {
             // TODO: add more items / build variations etc
         ])
     });
+    it("should be able to upgrade build version 2 to 3", () => {
+        assertUpgradeFrom2To3Works(
+            "4WtbC3CQaSNU6cNTYtxT4TQT4T7TgTBTQTJTkCnCyRI4FjCzFWUyCorFqt0CN3tvtpd",
+            "5OUrCoCRnSBUVcztOTjToTeTaCWC12cOFoCBFYUOCqpFxtjCP2fAt01"
+        )
+    })
 });

@@ -30,10 +30,9 @@ export default class Repeater extends React.Component {
             const partName = this.props.parent.state.build["weapon_" + field[1] + "_name"];
 
             const part = BuildModel.findPart("repeater", partType, partName);
-            const level = this.props.parent.state.build["weapon_" + field[1] + "_level"];
 
             if(part) {
-                total += part.power[level];
+                total += part.power[this.props.level];
             }
         }
 
@@ -80,7 +79,7 @@ export default class Repeater extends React.Component {
         }
 
         return <RepeaterPart part={part} partType={partType}
-            level={this.props.parent.state.build[fieldPrefix + "_level"]}
+            level={this.props.level}
             onClicked={() => this.onPartClicked(partType, fieldName)} />;
     }
 
@@ -118,6 +117,7 @@ export default class Repeater extends React.Component {
 Repeater.propTypes = {
     item: PropTypeUtility.item(),
     parent: PropTypes.object,
+    level: PropTypes.number,
     cells: PropTypes.array,
     onItemClicked: PropTypes.func,
     onCellClicked: PropTypes.func

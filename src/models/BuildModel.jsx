@@ -7,21 +7,15 @@ const hashids = new Hashids("spicy");
 export default class BuildModel {
     constructor(data) {
         // set default parameter values
-        this.__version = 2;
+        this.__version = 3;
         this.weapon_name = "";
         this.weapon_level = 0;
         this.weapon_part1_name = "";
-        this.weapon_part1_level = 0;
         this.weapon_part2_name = "";
-        this.weapon_part2_level = 0;
         this.weapon_part3_name = "";
-        this.weapon_part3_level = 0;
         this.weapon_part4_name = "";
-        this.weapon_part4_level = 0;
         this.weapon_part5_name = "";
-        this.weapon_part5_level = 0;
         this.weapon_part6_name = "";
-        this.weapon_part6_level = 0;
         this.weapon_cell0 = "";
         this.weapon_cell1 = "";
         this.torso_name = "";
@@ -60,17 +54,11 @@ export default class BuildModel {
             DataUtility.getCellId(this.weapon_cell0),
             DataUtility.getCellId(this.weapon_cell1),
             DataUtility.getPartId(weaponType, this.weapon_part1_name),
-            this.weapon_part1_level,
             DataUtility.getPartId(weaponType, this.weapon_part2_name),
-            this.weapon_part2_level,
             DataUtility.getPartId(weaponType, this.weapon_part3_name),
-            this.weapon_part3_level,
             DataUtility.getPartId(weaponType, this.weapon_part4_name),
-            this.weapon_part4_level,
             DataUtility.getPartId(weaponType, this.weapon_part5_name),
-            this.weapon_part5_level,
             DataUtility.getPartId(weaponType, this.weapon_part6_name),
-            this.weapon_part6_level,
             DataUtility.getArmourId(this.head_name),
             this.head_level,
             DataUtility.getCellId(this.head_cell),
@@ -122,17 +110,11 @@ export default class BuildModel {
             weapon_cell0: getString("Cells", idcounter++),
             weapon_cell1: getString("Cells", idcounter++),
             weapon_part1_name: getString(partsType, idcounter++),
-            weapon_part1_level: numbers[idcounter++],
             weapon_part2_name: getString(partsType, idcounter++),
-            weapon_part2_level: numbers[idcounter++],
             weapon_part3_name: getString(partsType, idcounter++),
-            weapon_part3_level: numbers[idcounter++],
             weapon_part4_name: getString(partsType, idcounter++),
-            weapon_part4_level: numbers[idcounter++],
             weapon_part5_name: getString(partsType, idcounter++),
-            weapon_part5_level: numbers[idcounter++],
             weapon_part6_name: getString(partsType, idcounter++),
-            weapon_part6_level: numbers[idcounter++],
             head_name: getString("Armours", idcounter++),
             head_level: numbers[idcounter++],
             head_cell: getString("Cells", idcounter++),
@@ -150,6 +132,40 @@ export default class BuildModel {
         };
 
         return new BuildModel(data);
+    }
+
+    static convertVersion2To3(version2BuildString) {
+        let numbers = hashids.decode(version2BuildString);
+
+        let data = {
+            __version: 3,
+            weapon_name: numbers[1],
+            weapon_level: numbers[2],
+            weapon_cell0: numbers[3],
+            weapon_cell1: numbers[4],
+            weapon_part1_name: numbers[5],
+            weapon_part2_name: numbers[7],
+            weapon_part3_name: numbers[9],
+            weapon_part4_name: numbers[11],
+            weapon_part5_name: numbers[13],
+            weapon_part6_name: numbers[15],
+            head_name: numbers[17],
+            head_level: numbers[18],
+            head_cell: numbers[19],
+            torso_name: numbers[20],
+            torso_level: numbers[21],
+            torso_cell: numbers[22],
+            arms_name: numbers[23],
+            arms_level: numbers[24],
+            arms_cell: numbers[25],
+            legs_name: numbers[26],
+            legs_level: numbers[27],
+            legs_cell: numbers[28],
+            lantern_name: numbers[29],
+            lantern_cell: numbers[30]
+        };
+
+        return hashids.encode(Object.values(data));
     }
 
     get weapon() {
@@ -351,21 +367,15 @@ export default class BuildModel {
 
     static empty() {
         return new BuildModel({
-            __version: 2,
+            __version: 3,
             weapon_name: "",
             weapon_level: 0,
             weapon_part1_name: "",
-            weapon_part1_level: 0,
             weapon_part2_name: "",
-            weapon_part2_level: 0,
             weapon_part3_name: "",
-            weapon_part3_level: 0,
             weapon_part4_name: "",
-            weapon_part4_level: 0,
             weapon_part5_name: "",
-            weapon_part5_level: 0,
             weapon_part6_name: "",
-            weapon_part6_level: 0,
             weapon_cell0: "",
             weapon_cell1: "",
             torso_name: "",
@@ -387,6 +397,6 @@ export default class BuildModel {
 
     static isValid(str) {
         const data = hashids.decode(str);
-        return data.length === 31;
+        return data.length === 25;
     }
 }

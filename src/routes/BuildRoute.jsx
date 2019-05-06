@@ -42,11 +42,16 @@ export default class BuildRoute extends React.Component {
     }
 
     componentDidMount() {
-        const buildData = this.props.match.params.buildData;
+        let buildData = this.props.match.params.buildData;
 
         // redirect all v1 builds to seperate v1 website
         if (BuildModel.version(buildData) === 1) {
             window.location.href = "https://v1.dauntless-builder.com/b/" + buildData;
+        }
+
+        if (BuildModel.version(buildData) === 2) {
+            buildData = BuildModel.convertVersion2To3(buildData);
+            window.history.replaceState({}, "Dauntless Builder: " + buildData, "/b/" + buildData);
         }
 
         this.loadBuild(buildData);
@@ -134,17 +139,11 @@ export default class BuildRoute extends React.Component {
             changes.weapon_cell0 = "";
             changes.weapon_cell1 = "";
             changes.weapon_part1_name = "";
-            changes.weapon_part1_level = 0;
             changes.weapon_part2_name = "";
-            changes.weapon_part2_level = 0;
             changes.weapon_part3_name = "";
-            changes.weapon_part3_level = 0;
             changes.weapon_part4_name = "";
-            changes.weapon_part4_level = 0;
             changes.weapon_part5_name = "";
-            changes.weapon_part5_level = 0;
             changes.weapon_part6_name = "";
-            changes.weapon_part6_level = 0;
         } else if(itemType === "Armour") {
             let type = data.__armourType.toLowerCase();
 
@@ -265,6 +264,7 @@ export default class BuildRoute extends React.Component {
                 onItemClicked={this.onItemClicked.bind(this)}
                 onCellClicked={this.onCellClicked.bind(this)}
                 item={weapon}
+                level={this.state.build.weapon_level}
                 cells={[
                     [this.state.build.weapon_cell0, BuildModel.findCellByVariantName(this.state.build.weapon_cell0)],
                     [this.state.build.weapon_cell1, BuildModel.findCellByVariantName(this.state.build.weapon_cell1)],
