@@ -37,7 +37,7 @@ perks:
     to: 15
 unique_effects:
   - name: BoreusFrostSprite
-    description: >
+    description: >-
        	Using a Special continually generates Frost Sprites that cause your next attack to deal
         50 bonus damage and minor frost damage. Max 4 Sprites.
 

@@ -37,7 +37,7 @@ perks:
     to: 15
 unique_effects:
   - name: DamageChanceStackShield
-    description: >
+    description: >-
       Dealing damage has a chance (based on damage dealt) to grant a stacking,
       refreshing 40 health shield that lasts for 12s
     value: 40

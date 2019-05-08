@@ -25,6 +25,6 @@ power:
   15: 550
 unique_effects:
   - name: TheHungerEffect
-    description: >
+    description: >-
       Activate to enter Feast, taking damage over time but gaining significant lifesteal,
       attack speed, and creating aetheric waves with each attack that deal area damage.
