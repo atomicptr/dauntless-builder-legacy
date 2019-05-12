@@ -275,6 +275,15 @@
         .item {
             height: unset;
 
+            .image-icon-wrapper {
+                width: 64px;
+                height: 64px;
+
+                & > img {
+                    min-width: 64px;
+                }
+            }
+
             img {
                 height: 64px;
             }
