@@ -3,7 +3,7 @@ description: A Slayer's axe forged with Koshai trophies.
 icon: /assets/icons/weapons/koshai/SovereignsWrath.png
 type: Axe
 damage: Slashing
-elemental: null
+elemental: Terra
 cells: [Power, Utility]
 power:
   0: 100

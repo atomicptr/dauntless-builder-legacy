@@ -3,7 +3,7 @@ description: Torso protection forged from Embermane trophies.
 icon: /assets/icons/armours/embermane/FieryBreastplate.png
 type: Torso
 strength: Blaze
-weakness: Shock
+weakness: Frost
 cells: Mobility
 resistance:
   0: 25

@@ -4,11 +4,11 @@ type: Power
 key: damage_staggered
 effects:
   1:
-    description: +10% Damage vs Staggered Behemoths
-    value: 1.1
-  2:
     description: +15% Damage vs Staggered Behemoths
     value: 1.15
+  2:
+    description: +20% Damage vs Staggered Behemoths
+    value: 1.2
   3:
     description: +25% Damage vs Staggered Behemoths
     value: 1.25
@@ -16,8 +16,8 @@ effects:
     description: +40% Damage vs Staggered Behemoths
     value: 1.4
   5:
-    description: +60% Damage vs Staggered Behemoths
-    value: 1.6
+    description: +55% Damage vs Staggered Behemoths
+    value: 1.55
   6:
-    description: +80% Damage vs Staggered Behemoths
-    value: 1.8
+    description: +70% Damage vs Staggered Behemoths
+    value: 1.7

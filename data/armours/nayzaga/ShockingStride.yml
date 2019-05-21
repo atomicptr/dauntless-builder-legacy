@@ -3,7 +3,7 @@ description: Leg and foot protection forged from Nayzaga trophies.
 icon: /assets/icons/armours/nayzaga/ShockingStride.png
 type: Legs
 strength: Shock
-weakness: Frost
+weakness: Terra
 cells: Defence
 resistance:
   0: 25

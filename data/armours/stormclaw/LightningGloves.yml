@@ -3,7 +3,7 @@ description: Arms protection forged from Stormclaw trophies.
 icon: /assets/icons/armours/stormclaw/LightningGloves.png
 type: Arms
 strength: Shock
-weakness: Blaze
+weakness: Terra
 cells: Mobility
 resistance:
   0: 25

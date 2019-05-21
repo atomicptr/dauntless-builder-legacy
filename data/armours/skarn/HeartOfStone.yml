@@ -2,8 +2,8 @@ name: Heart of Stone
 description: Torso protection forged from Skarn trophies.
 icon: /assets/icons/armours/skarn/HeartOfStone.png
 type: Torso
-strength: null
-weakness: null
+strength: Terra
+weakness: Shock
 cells: Defence
 resistance:
   0: 25

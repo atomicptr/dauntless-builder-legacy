@@ -3,7 +3,7 @@ description: Head protection forged from Nayzaga trophies.
 icon: /assets/icons/armours/nayzaga/ShockingGaze.png
 type: Head
 strength: Shock
-weakness: Frost
+weakness: Terra
 cells: Utility
 resistance:
   0: 25

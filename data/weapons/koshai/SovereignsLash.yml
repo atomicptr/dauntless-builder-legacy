@@ -3,7 +3,7 @@ description: A Slayer's chain blades forged with Koshai trophies.
 icon: /assets/icons/weapons/koshai/SovereignsLash.png
 type: Chain Blades
 damage: Slashing
-elemental: null
+elemental: Terra
 cells: [Power, Utility]
 power:
   0: 100

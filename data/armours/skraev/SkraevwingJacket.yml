@@ -3,7 +3,7 @@ description: Torso protection forged from Skraev trophies.
 icon: /assets/icons/armours/skraev/SkraevwingJacket.png
 type: Torso
 strength: Frost
-weakness: Shock
+weakness: Blaze
 cells: Mobility
 resistance:
   0: 25

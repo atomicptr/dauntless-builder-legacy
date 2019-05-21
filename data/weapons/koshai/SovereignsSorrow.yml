@@ -3,7 +3,7 @@ description: A Slayer's war pike forged with Koshai trophies.
 icon: /assets/icons/weapons/koshai/SovereignsSorrow.png
 type: War Pike
 damage: Piercing
-elemental: null
+elemental: Terra
 cells: [Power, Utility]
 power:
   0: 100

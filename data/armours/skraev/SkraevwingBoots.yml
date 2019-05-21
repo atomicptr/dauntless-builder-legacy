@@ -3,7 +3,7 @@ description: Leg and foot protection forged from Skraev trophies.
 icon: /assets/icons/armours/skraev/SkraevwingBoots.png
 type: Legs
 strength: Frost
-weakness: Shock
+weakness: Blaze
 cells: Utility
 resistance:
   0: 25

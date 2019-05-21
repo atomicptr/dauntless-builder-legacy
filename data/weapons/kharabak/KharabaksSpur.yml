@@ -3,7 +3,7 @@ description: A Slayer's sword forged with Kharabak trophies.
 icon: /assets/icons/weapons/kharabak/KharabaksSpur.png
 type: Sword
 damage: Slashing
-elemental: null
+elemental: Terra
 cells: [Technique, Mobility]
 power:
   0: 100

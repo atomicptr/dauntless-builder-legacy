@@ -2,8 +2,8 @@ name: Eye of the Swarm
 description: Head protection forged from Kharabak trophies.
 icon: /assets/icons/armours/kharabak/EyeOfTheSwarm.png
 type: Head
-strength: null
-weakness: null
+strength: Terra
+weakness: Shock
 cells: Mobility
 resistance:
   0: 25

@@ -3,4 +3,4 @@ description: null
 cells: Utility
 lantern_ability:
   instant: Restore 25% of your maximum stamina.
-  hold: Create a frost pillar in front of you that deals 940 Frost damage to all nearby Behemoths over 12 seconds.
+  hold: Create a frost pillar in front of you that deals 960 Frost damage to nearby enemies over 12 seconds.

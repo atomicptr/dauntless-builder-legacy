@@ -2,8 +2,8 @@ name: Mantle of Thorns
 description: Torso protection forged from Koshai trophies.
 icon: /assets/icons/armours/koshai/MantleOfThorns.png
 type: Torso
-strength: null
-weakness: null
+strength: Terra
+weakness: Shock
 cells: Utility
 resistance:
   0: 25

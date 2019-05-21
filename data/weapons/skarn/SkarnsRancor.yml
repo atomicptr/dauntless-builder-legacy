@@ -3,7 +3,7 @@ description: A Slayer's sword forged with Skarn trophies.
 icon: /assets/icons/weapons/skarn/SkarnsRancor.png
 type: Sword
 damage: Slashing
-elemental: null
+elemental: Terra
 cells: [Power, Defence]
 power:
   0: 100

@@ -3,7 +3,7 @@ description: Head protection forged from Drask trophies.
 icon: /assets/icons/armours/drask/DraskscaleHelmet.png
 type: Head
 strength: Shock
-weakness: null
+weakness: Terra
 cells: Power
 resistance:
   0: 25

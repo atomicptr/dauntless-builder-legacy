@@ -3,7 +3,7 @@ description: Arms protection forged from Skraev trophies.
 icon: /assets/icons/armours/skraev/SkraevwingGloves.png
 type: Arms
 strength: Frost
-weakness: Shock
+weakness: Blaze
 cells: Mobility
 resistance:
   0: 25
