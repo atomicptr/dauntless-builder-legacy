@@ -1,6 +1,6 @@
-name: Shock Barrel
-description: The Shock Barrel is part of a craftable weapon in Dauntless.
-icon: /assets/icons/parts/repeaters/barrels/ShockBarrel.png
+name: Storm Barrel
+description: The Storm Barrel is part of a craftable weapon in Dauntless.
+icon: /assets/icons/parts/repeaters/barrels/StormBarrel.png
 elemental: Shock
 power:
   0: 28
