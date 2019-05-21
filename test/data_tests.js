@@ -154,7 +154,7 @@ describe("Dauntless Builder Data", () => {
                 for(let itemName in dataWrapper) {
                     let item = dataWrapper[itemName];
 
-                    const elements = ["Blaze", "Frost", "Shock", "Radiant", "Umbral"];
+                    const elements = ["Blaze", "Frost", "Shock", "Terra", "Radiant", "Umbral"];
 
                     let itemFields = [];
 
