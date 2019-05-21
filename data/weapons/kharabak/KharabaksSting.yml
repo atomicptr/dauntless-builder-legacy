@@ -3,7 +3,7 @@ description: A Slayer's war pike forged with Kharabak trophies.
 icon: /assets/icons/weapons/kharabak/KharabaksSting.png
 type: War Pike
 damage: Piercing
-elemental: null
+elemental: Terra
 cells: [Technique, Mobility]
 power:
   0: 100

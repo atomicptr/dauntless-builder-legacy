@@ -3,7 +3,7 @@ description: Torso protection forged from Drask trophies.
 icon: /assets/icons/armours/drask/DraskscalePlate.png
 type: Torso
 strength: Shock
-weakness: null
+weakness: Terra
 cells: Power
 resistance:
   0: 25

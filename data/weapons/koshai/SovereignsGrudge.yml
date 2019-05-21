@@ -3,7 +3,7 @@ description: A Slayer's hammer forged with Koshai trophies.
 icon: /assets/icons/weapons/koshai/SovereignsGrudge.png
 type: Hammer
 damage: Blunt
-elemental: null
+elemental: Terra
 cells: [Power, Utility]
 power:
   0: 100

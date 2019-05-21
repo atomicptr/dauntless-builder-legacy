@@ -3,4 +3,4 @@ description: null
 cells: Utility
 lantern_ability:
   instant: 10% of damage dealt will heal you for 8 seconds.
-  hold: Dash in a direction, deal 650 damage to nearby behemoths upon arrival.
+  hold: Dash in a direction, deal 750 Terra damage to nearby enemies upon arrival.

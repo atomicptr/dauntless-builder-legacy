@@ -2,5 +2,5 @@ name: Skarn's Defiance
 description: null
 cells: Utility
 lantern_ability:
-  instant: Grants a 200 hit point shield for 4 seconds.
-  hold: Surrounds the slayer in swirling stone that deals 720 damage to all nearby Behemoths over 12 seconds.
+  instant: Grants a 250 hit point shield for 6 seconds.
+  hold: Surrounds the slayer in swirling stone that deals 900 Terra damage to nearby enemies over 10 seconds.

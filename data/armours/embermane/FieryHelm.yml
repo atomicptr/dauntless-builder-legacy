@@ -3,7 +3,7 @@ description: Head protection forged from Embermane trophies.
 icon: /assets/icons/armours/embermane/FieryHelm.png
 type: Head
 strength: Blaze
-weakness: Shock
+weakness: Frost
 cells: Mobility
 resistance:
   0: 25

@@ -2,8 +2,8 @@ name: Might of Stone
 description: Arms protection forged from Skarn trophies.
 icon: /assets/icons/armours/skarn/MightOfStone.png
 type: Arms
-strength: null
-weakness: null
+strength: Terra
+weakness: Shock
 cells: Defence
 resistance:
   0: 25

@@ -3,7 +3,7 @@ description: Leg and foot protection forged from Stormclaw trophies.
 icon: /assets/icons/armours/stormclaw/LightningBoots.png
 type: Legs
 strength: Shock
-weakness: Blaze
+weakness: Terra
 cells: Mobility
 resistance:
   0: 25

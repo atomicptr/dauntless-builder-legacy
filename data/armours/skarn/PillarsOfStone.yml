@@ -2,8 +2,8 @@ name: Pillars of Stone
 description: Leg and foot protection forged from Skarn trophies.
 icon: /assets/icons/armours/skarn/PillarsOfStone.png
 type: Legs
-strength: null
-weakness: null
+strength: Terra
+weakness: Shock
 cells: Defence
 resistance:
   0: 25

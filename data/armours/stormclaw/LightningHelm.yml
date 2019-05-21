@@ -3,7 +3,7 @@ description: Head protection forged from Stormclaw trophies.
 icon: /assets/icons/armours/stormclaw/LightningHelm.png
 type: Head
 strength: Shock
-weakness: Blaze
+weakness: Terra
 cells: Technique
 resistance:
   0: 25

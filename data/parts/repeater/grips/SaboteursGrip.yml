@@ -19,5 +19,5 @@ power:
   14: 150
   15: 153
 part_effect:
-  - Launches an explosive mine a short distance. Mine arms after a short period, dealing 600 damage to the first Behemoth that touches it.
-  - "Empowered: Deals 800 instead and can interrupt Behemoths."
+  - Launches an explosive mine that deals 400 damage. Mine charges after a short period, increasing damage to 700.
+  - "Empowered: Deals 900 damage when charged and can interrupt Behemoths."

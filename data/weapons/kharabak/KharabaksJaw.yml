@@ -3,7 +3,7 @@ description: A Slayer's hammer forged with Kharabak trophies.
 icon: /assets/icons/weapons/kharabak/KharabaksJaw.png
 type: Hammer
 damage: Blunt
-elemental: null
+elemental: Terra
 cells: [Power, Technique]
 power:
   0: 100

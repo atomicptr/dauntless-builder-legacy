@@ -3,7 +3,7 @@ description: Torso protection forged from Stormclaw trophies.
 icon: /assets/icons/armours/stormclaw/LightningPlate.png
 type: Torso
 strength: Shock
-weakness: Blaze
+weakness: Terra
 cells: Mobility
 resistance:
   0: 25

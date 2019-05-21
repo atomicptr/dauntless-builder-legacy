@@ -2,8 +2,8 @@ name: Clutches of the Swarm
 description: Arms protection forged from Kharabak trophies.
 icon: /assets/icons/armours/kharabak/ClutchesOfTheSwarm.png
 type: Arms
-strength: null
-weakness: null
+strength: Terra
+weakness: Shock
 cells: Mobility
 resistance:
   0: 25

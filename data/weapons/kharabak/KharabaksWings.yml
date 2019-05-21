@@ -3,7 +3,7 @@ description: A Slayer's chain blades forged with Kharabak trophies.
 icon: /assets/icons/weapons/kharabak/KharabaksWings.png
 type: Chain Blades
 damage: Slashing
-elemental: null
+elemental: Terra
 cells: [Technique, Mobility]
 power:
   0: 100
