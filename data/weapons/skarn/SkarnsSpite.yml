@@ -3,7 +3,7 @@ description: A Slayer's axe forged with Skarn trophies.
 icon: /assets/icons/weapons/skarn/SkarnsSpite.png
 type: War Pike
 damage: Slashing
-elemental: null
+elemental: Terra
 cells: [Technique, Defence]
 power:
   0: 100

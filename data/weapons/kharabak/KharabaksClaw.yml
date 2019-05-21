@@ -3,7 +3,7 @@ description: A Slayer's axe forged with Kharabak trophies.
 icon: /assets/icons/weapons/kharabak/KharabaksClaw.png
 type: Axe
 damage: Slashing
-elemental: null
+elemental: Terra
 cells: [Power, Technique]
 power:
   0: 100

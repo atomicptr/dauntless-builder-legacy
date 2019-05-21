@@ -3,7 +3,7 @@ description: A Slayer's axe forged with Skarn trophies.
 icon: /assets/icons/weapons/skarn/SkarnsJudgment.png
 type: Axe
 damage: Slashing
-elemental: null
+elemental: Terra
 cells: [Power, Defence]
 power:
   0: 100
