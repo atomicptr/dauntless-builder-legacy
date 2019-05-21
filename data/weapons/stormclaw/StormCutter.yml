@@ -37,5 +37,17 @@ perks:
     to: 15
 unique_effects:
   - name: DodgeMeterGain
+    description: After dodging through an attack, the next weapon attack has 100% meter gain
+    value: 100
+    from: 0
+    to: 5
+  - name: DodgeMeterGain
     description: After dodging through an attack, the next weapon attack has 300% meter gain
     value: 300
+    from: 6
+    to: 9
+  - name: DodgeMeterGain
+    description: After dodging through an attack, the next weapon attack has 500% meter gain
+    value: 500
+    from: 10
+    to: 15
