@@ -7,17 +7,17 @@ effects:
     description: +10% Lantern Charge
     value: 1.1
   2:
+    description: +15% Lantern Charge
+    value: 1.15
+  3:
     description: +20% Lantern Charge
     value: 1.2
-  3:
+  4:
     description: +30% Lantern Charge
     value: 1.3
-  4:
-    description: +42% Lantern Charge
-    value: 1.42
   5:
-    description: +54% Lantern Charge
-    value: 1.54
+    description: +40% Lantern Charge
+    value: 1.4
   6:
-    description: +66% Lantern Charge
-    value: 1.66
+    description: +50% Lantern Charge
+    value: 1.5
