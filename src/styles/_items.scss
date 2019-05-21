@@ -115,6 +115,10 @@
         height: 100%;
     }
 
+    .image-icon-wrapper {
+        min-width: 128px;
+    }
+
     .item {
         display: flex;
         flex-flow: row nowrap;
