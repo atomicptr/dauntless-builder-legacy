@@ -208,19 +208,11 @@
                     &.elemental-strength {
                         border: 1px solid #23d160;
                         color: #23d160;
-
-                        img {
-                            filter: invert(58%) sepia(82%) saturate(458%) hue-rotate(88deg) brightness(97%) contrast(87%);
-                        }
                     }
 
                     &.elemental-weakness {
                         border: 1px solid #ff3860;
                         color: #ff3860;
-
-                        img {
-                            filter: invert(42%) sepia(77%) saturate(4766%) hue-rotate(328deg) brightness(101%) contrast(101%);
-                        }
                     }
                 }
             }
