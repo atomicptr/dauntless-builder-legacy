@@ -2,8 +2,8 @@ name: Stride of Thorns
 description: Leg and foot protection forged from Koshai trophies.
 icon: /assets/icons/armours/koshai/StrideOfThorns.png
 type: Legs
-strength: null
-weakness: null
+strength: Terra
+weakness: Shock
 cells: Utility
 resistance:
   0: 25

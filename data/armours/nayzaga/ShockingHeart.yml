@@ -3,7 +3,7 @@ description: Torso protection forged from Nayzaga trophies.
 icon: /assets/icons/armours/nayzaga/ShockingHeart.png
 type: Torso
 strength: Shock
-weakness: Frost
+weakness: Terra
 cells: Defence
 resistance:
   0: 25

@@ -3,7 +3,7 @@ description: Leg and foot protection forged from Drask trophies.
 icon: /assets/icons/armours/drask/DraskscaleGreaves.png
 type: Legs
 strength: Shock
-weakness: null
+weakness: Terra
 cells: Utility
 resistance:
   0: 25

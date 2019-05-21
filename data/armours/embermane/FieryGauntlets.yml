@@ -3,7 +3,7 @@ description: Arms protection forged from Embermane trophies.
 icon: /assets/icons/armours/embermane/FieryGauntlets.png
 type: Arms
 strength: Blaze
-weakness: Shock
+weakness: Frost
 cells: Technique
 resistance:
   0: 25

@@ -3,7 +3,7 @@ description: Arms protection forged from Nayzaga trophies.
 icon: /assets/icons/armours/nayzaga/ShockingGrasp.png
 type: Arms
 strength: Shock
-weakness: Frost
+weakness: Terra
 cells: Utility
 resistance:
   0: 25

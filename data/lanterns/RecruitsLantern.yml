@@ -2,5 +2,5 @@ name: Recruit's Lantern
 description: null
 cells: null
 lantern_ability:
-  instant: null
+  instant: Grants a 50 hit point shield (doesn't stack)
   hold: Disperses aether that allows the Slayer to track the Behemoth.

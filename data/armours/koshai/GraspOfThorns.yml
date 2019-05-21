@@ -2,8 +2,8 @@ name: Grasp of Thorns
 description: Arms protection forged from Koshai trophies.
 icon: /assets/icons/armours/koshai/GraspOfThorns.png
 type: Arms
-strength: null
-weakness: null
+strength: Terra
+weakness: Shock
 cells: Power
 resistance:
   0: 25

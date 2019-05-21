@@ -3,7 +3,7 @@ description: Leg and foot protection forged from Embermane trophies.
 icon: /assets/icons/armours/embermane/FieryGreaves.png
 type: Legs
 strength: Blaze
-weakness: Shock
+weakness: Frost
 cells: Defence
 resistance:
   0: 25

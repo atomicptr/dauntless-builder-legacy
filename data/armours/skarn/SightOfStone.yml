@@ -2,8 +2,8 @@ name: Sight of Stone
 description: Head protection forged from Skarn trophies.
 icon: /assets/icons/armours/skarn/SightOfStone.png
 type: Head
-strength: null
-weakness: null
+strength: Terra
+weakness: Shock
 cells: Defence
 resistance:
   0: 25
