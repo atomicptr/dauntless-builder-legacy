@@ -46,7 +46,7 @@ unique_effects:
     value: 175
     from: 6
     to: 9
-    - name: BlazeDamageOnNthHit
+  - name: BlazeDamageOnNthHit
     description: The sixth hit in quick succession deals 250 bonus damage and major blaze damage
     value: 250
     from: 10

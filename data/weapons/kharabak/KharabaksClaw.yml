@@ -46,7 +46,7 @@ unique_effects:
     value: 200
     from: 6
     to: 9
-    - name: ComboFinisherDamage
+  - name: ComboFinisherDamage
     description: Combo finishers deal 300 bonus part damage
     value: 300
     from: 10
