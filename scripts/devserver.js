@@ -6,8 +6,7 @@ app.use(express.static("."));
 
 function deliverFile(fileName) {
     const options = {
-        root: process.cwd(),
-        dotfiles: "deny"
+        root: process.cwd()
     };
 
     return (req, res, next) => {
