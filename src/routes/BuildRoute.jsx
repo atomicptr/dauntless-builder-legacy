@@ -128,16 +128,40 @@ export default class BuildRoute extends React.Component {
         this.onItemClicked(filterOptions);
     }
 
+    getFitingCellForItem(cell, item, itemType) {
+        const currentCellName = this.state.build[cell];
+        if (item && currentCellName !== "") {
+            const currentCell = BuildModel.findCellByVariantName(currentCellName);
+            if (!currentCell) {
+                return "";
+            }
+            if (itemType === "Weapon") {
+                const cellIndex = item.cells.indexOf(currentCell.slot);
+                if (cellIndex !== -1) {
+                    return currentCellName;
+                }
+            } else {
+                if (item.cells === currentCell.slot) {
+                    return currentCellName;
+                }
+            }
+        }
+
+        return "";
+    }
+
     onNewItemSelected(itemType, itemName, data) {
         let changes = {};
 
         console.log("Selected: ", itemType, itemName, data);
 
         if(itemType === "Weapon") {
+            const item = BuildModel.findWeapon(itemName);
+
             changes.weapon_name = itemName;
             changes.weapon_level = ItemUtility.maxLevel("weapons", itemName);
-            changes.weapon_cell0 = "";
-            changes.weapon_cell1 = "";
+            changes.weapon_cell0 = this.getFitingCellForItem("weapon_cell0", item, itemType);
+            changes.weapon_cell1 = this.getFitingCellForItem("weapon_cell1", item, itemType);
             changes.weapon_part1_name = "";
             changes.weapon_part2_name = "";
             changes.weapon_part3_name = "";
@@ -145,15 +169,20 @@ export default class BuildRoute extends React.Component {
             changes.weapon_part5_name = "";
             changes.weapon_part6_name = "";
         } else if(itemType === "Armour") {
+            const item = BuildModel.findArmour(itemName);
             let type = data.__armourType.toLowerCase();
+
+            const cell = `${type}_cell`;
 
             changes[`${type}_name`] = itemName;
             changes[`${type}_level`] = ItemUtility.maxLevel("armours", itemName);
-            changes[`${type}_cell`] = "";
+            changes[cell] = this.getFitingCellForItem(cell, item, itemType);
         } else if(itemType === "Lantern") {
+            const item = BuildModel.findLantern(itemName);
+
             changes.lantern_name = itemName;
-            changes.lantern_cell = "";
-        }else if(itemType === "Cell") {
+            changes.lantern_cell = this.getFitingCellForItem("lantern_cell", item, itemType);
+        } else if(itemType === "Cell") {
             if(data.__parentType === "Weapon") {
                 changes["weapon_cell" + data.__slotPosition] = itemName;
             } else {
