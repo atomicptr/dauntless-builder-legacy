@@ -14,10 +14,13 @@ npm install -g yarn
 # Install/update all dependencies via
 yarn
 
-# And then finally build the assets with
+# If it's a clean install or there were changes to data in the last pull you'll need to do a full build once
+yarn build
+
+# Then rebuilding assets can be done with
 yarn build-dev
 
-# Optional: Or you can also watch/build data...
+# Optional: you can also watch/build data...
 # yarn build-dev --watch
 
 # Next run your webserver via
