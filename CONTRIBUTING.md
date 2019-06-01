@@ -17,6 +17,9 @@ yarn
 # And then finally build the assets with
 yarn build-dev
 
+# Optional: Or you can also watch/build data...
+# yarn build-dev --watch
+
 # Next run your webserver via
 yarn dev
 ```
