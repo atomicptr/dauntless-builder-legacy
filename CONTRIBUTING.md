@@ -11,26 +11,23 @@ In your copy of the **dauntless-builder** directory, use the following in your s
 # First we need to install yarn via:
 npm install -g yarn
 
-# For development you'll also need a web server, I recommend http-serve
-npm install -g http-serve
-
 # Install/update all dependencies via
 yarn
 
-# You have to bootstrap stuff once, this will create symlinks to make stuff easier
-yarn bootstrap
-
-# And then finally build the assets with
+# If it's a clean install or there were changes to data in the last pull you'll need to do a full build once
 yarn build
 
-# Optional: You can also watch/build data...
+# Then rebuilding assets can be done with
+yarn build-dev
+
+# Optional: you can also watch/build data...
 # yarn build-dev --watch
 
 # Next run your webserver via
-http-serve
+yarn dev
 ```
 
-Done, you have a version of this app running on whatever port http-serve decided to run on (usually :8080).
+Done, you have a version of this app running on localhost:4000.
 
 ## Updates to .map/vX.json
 
