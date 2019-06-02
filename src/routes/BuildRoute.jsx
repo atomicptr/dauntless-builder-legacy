@@ -128,26 +128,14 @@ export default class BuildRoute extends React.Component {
         this.onItemClicked(filterOptions);
     }
 
-    getFitingCellForItem(cell, item, itemType) {
-        const currentCellName = this.state.build[cell];
-        if (item && currentCellName !== "") {
-            const currentCell = BuildModel.findCellByVariantName(currentCellName);
-            if (!currentCell) {
-                return "";
+    getCellsForKeys(keys) {
+        return keys.reduce((cells, key) => {
+            if (this.state.build[key]) {
+                cells.push(BuildModel.findCellByVariantName(this.state.build[key]));
             }
-            if (itemType === "Weapon") {
-                const cellIndex = item.cells.indexOf(currentCell.slot);
-                if (cellIndex !== -1) {
-                    return currentCellName;
-                }
-            } else {
-                if (item.cells === currentCell.slot) {
-                    return currentCellName;
-                }
-            }
-        }
-
-        return "";
+            
+            return cells;
+        }, []);
     }
 
     onNewItemSelected(itemType, itemName, data) {
@@ -160,28 +148,50 @@ export default class BuildRoute extends React.Component {
 
             changes.weapon_name = itemName;
             changes.weapon_level = ItemUtility.maxLevel("weapons", itemName);
-            changes.weapon_cell0 = this.getFitingCellForItem("weapon_cell0", item, itemType);
-            changes.weapon_cell1 = this.getFitingCellForItem("weapon_cell1", item, itemType);
+            changes.weapon_cell0 = "";
+            changes.weapon_cell1 = "";
             changes.weapon_part1_name = "";
             changes.weapon_part2_name = "";
             changes.weapon_part3_name = "";
             changes.weapon_part4_name = "";
             changes.weapon_part5_name = "";
             changes.weapon_part6_name = "";
+            
+            const cells = this.getCellsForKeys(cellKeys);
+            if (cells.length && item.cells) {
+                const cellKeys = [
+                    "weapon_cell0",
+                    "weapon_cell1"
+                ];
+                
+                item.cells.forEach((slot, index) => {
+                    const cellKey = cellKeys[index];
+                    const cellIndex = cells.findIndex(cell => cell.slot === slot);
+                    if (cellIndex !== -1) {
+                        changes[cellKey] = this.state.build[cellKey];
+                        cells.splice(cellIndex, 1);
+                    }
+                });
+            }
         } else if(itemType === "Armour") {
             const item = BuildModel.findArmour(itemName);
             let type = data.__armourType.toLowerCase();
 
-            const cell = `${type}_cell`;
-
+            
             changes[`${type}_name`] = itemName;
             changes[`${type}_level`] = ItemUtility.maxLevel("armours", itemName);
-            changes[cell] = this.getFitingCellForItem(cell, item, itemType);
+            
+            const cellKey = `${type}_cell`;
+            const [cell] = this.getCellsForKeys([cellKey]);
+            changes[cellKey] = cell && cell.slot === item.cells ? this.state.build[cellKey] : "";
         } else if(itemType === "Lantern") {
             const item = BuildModel.findLantern(itemName);
 
             changes.lantern_name = itemName;
-            changes.lantern_cell = this.getFitingCellForItem("lantern_cell", item, itemType);
+
+            const cellKey = "lantern_cell";
+            const [cell] = this.getCellsForKeys([cellKey]);
+            changes[cellKey] = cell && cell.slot === item.cells ? this.state.build[cellKey] : "";
         } else if(itemType === "Cell") {
             if(data.__parentType === "Weapon") {
                 changes["weapon_cell" + data.__slotPosition] = itemName;
