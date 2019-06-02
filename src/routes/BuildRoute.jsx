@@ -134,16 +134,22 @@ export default class BuildRoute extends React.Component {
         console.log("Selected: ", itemType, itemName, data);
 
         if(itemType === "Weapon") {
+            const item = BuildModel.findWeapon(itemName);
+
             changes.weapon_name = itemName;
             changes.weapon_level = ItemUtility.maxLevel("weapons", itemName);
             changes.weapon_cell0 = "";
             changes.weapon_cell1 = "";
-            changes.weapon_part1_name = "";
-            changes.weapon_part2_name = "";
-            changes.weapon_part3_name = "";
-            changes.weapon_part4_name = "";
-            changes.weapon_part5_name = "";
-            changes.weapon_part6_name = "";
+            if (!this.state.build.weapon || item.type !== this.state.build.weapon.type) {
+                changes.weapon_part1_name = "";
+                changes.weapon_part2_name = "";
+                changes.weapon_part3_name = "";
+                changes.weapon_part4_name = "";
+                changes.weapon_part5_name = "";
+                changes.weapon_part6_name = "";
+            } else if(this.state.build.weapon.restrict_specials) {
+                changes.weapon_part1_name = "";
+            }
         } else if(itemType === "Armour") {
             let type = data.__armourType.toLowerCase();
 
