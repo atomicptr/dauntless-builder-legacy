@@ -157,13 +157,12 @@ export default class BuildRoute extends React.Component {
             changes.weapon_part5_name = "";
             changes.weapon_part6_name = "";
             
+            const cellKeys = [
+                "weapon_cell0",
+                "weapon_cell1"
+            ];
             const cells = this.getCellsForKeys(cellKeys);
             if (cells.length && item.cells) {
-                const cellKeys = [
-                    "weapon_cell0",
-                    "weapon_cell1"
-                ];
-                
                 item.cells.forEach((slot, index) => {
                     const cellKey = cellKeys[index];
                     const cellIndex = cells.findIndex(cell => cell.slot === slot);
