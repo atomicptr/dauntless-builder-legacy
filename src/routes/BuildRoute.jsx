@@ -130,12 +130,10 @@ export default class BuildRoute extends React.Component {
 
     getCellsForKeys(keys) {
         return keys.reduce((cells, key) => {
-            if (this.state.build[key]) {
-                cells.push(BuildModel.findCellByVariantName(this.state.build[key]));
-            }
+            cells[key] = this.state.build[key] ? BuildModel.findCellByVariantName(this.state.build[key]) : {};
             
             return cells;
-        }, []);
+        }, {});
     }
 
     onNewItemSelected(itemType, itemName, data) {
@@ -157,18 +155,24 @@ export default class BuildRoute extends React.Component {
             changes.weapon_part5_name = "";
             changes.weapon_part6_name = "";
             
-            const cellKeys = [
+            const changesKeys = [
                 "weapon_cell0",
                 "weapon_cell1"
             ];
-            const cells = this.getCellsForKeys(cellKeys);
-            if (cells.length && item.cells) {
+            const cells = this.getCellsForKeys(changesKeys);
+            console.log("cells", cells);
+            if (Object.keys(cells).length && item.cells) {
                 item.cells.forEach((slot, index) => {
-                    const cellKey = cellKeys[index];
-                    const cellIndex = cells.findIndex(cell => cell.slot === slot);
-                    if (cellIndex !== -1) {
-                        changes[cellKey] = this.state.build[cellKey];
-                        cells.splice(cellIndex, 1);
+                    console.log("slot", slot);
+                    const changesKey = changesKeys[index];
+                    for (const cellKey in cells) {
+                        console.log("cells[cellKey]", cells[cellKey]);
+                        if (cells[cellKey] && cells[cellKey].slot === slot) {
+                            console.log("this.state.build[cellKey]", this.state.build[cellKey]);
+                            changes[changesKey] = this.state.build[cellKey];
+                            delete cells[cellKey];
+                            break;
+                        }
                     }
                 });
             }
@@ -180,17 +184,17 @@ export default class BuildRoute extends React.Component {
             changes[`${type}_name`] = itemName;
             changes[`${type}_level`] = ItemUtility.maxLevel("armours", itemName);
             
-            const cellKey = `${type}_cell`;
-            const [cell] = this.getCellsForKeys([cellKey]);
-            changes[cellKey] = cell && cell.slot === item.cells ? this.state.build[cellKey] : "";
+            const changesKey = `${type}_cell`;
+            const cells = this.getCellsForKeys([changesKey]);
+            changes[changesKey] = cells[changesKey] && cells[changesKey].slot === item.cells ? this.state.build[changesKey] : "";
         } else if(itemType === "Lantern") {
             const item = BuildModel.findLantern(itemName);
 
             changes.lantern_name = itemName;
 
-            const cellKey = "lantern_cell";
-            const [cell] = this.getCellsForKeys([cellKey]);
-            changes[cellKey] = cell && cell.slot === item.cells ? this.state.build[cellKey] : "";
+            const changesKey = "lantern_cell";
+            const cells = this.getCellsForKeys([changesKey]);
+            changes[changesKey] = cells[changesKey] && cells[changesKey].slot === item.cells ? this.state.build[changesKey] : "";
         } else if(itemType === "Cell") {
             if(data.__parentType === "Weapon") {
                 changes["weapon_cell" + data.__slotPosition] = itemName;
