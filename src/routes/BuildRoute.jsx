@@ -160,15 +160,11 @@ export default class BuildRoute extends React.Component {
                 "weapon_cell1"
             ];
             const cells = this.getCellsForKeys(changesKeys);
-            console.log("cells", cells);
             if (Object.keys(cells).length && item.cells) {
                 item.cells.forEach((slot, index) => {
-                    console.log("slot", slot);
                     const changesKey = changesKeys[index];
                     for (const cellKey in cells) {
-                        console.log("cells[cellKey]", cells[cellKey]);
                         if (cells[cellKey] && cells[cellKey].slot === slot) {
-                            console.log("this.state.build[cellKey]", this.state.build[cellKey]);
                             changes[changesKey] = this.state.build[cellKey];
                             delete cells[cellKey];
                             break;
