@@ -37,5 +37,17 @@ perks:
     to: 15
 unique_effects:
   - name: SeventhHitPartDamage
+    description: The seventh hit in a row deals +100% part damage
+    value: 2
+    from: 0
+    to: 5
+  - name: SeventhHitPartDamage
+    description: The seventh hit in a row deals +175% part damage
+    value: 2.75
+    from: 6
+    to: 9
+  - name: SeventhHitPartDamage
     description: The seventh hit in a row deals +250% part damage
-    value: 2.5
+    value: 3.5
+    from: 10
+    to: 15

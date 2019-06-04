@@ -37,5 +37,17 @@ perks:
     to: 15
 unique_effects:
   - name: StaggerHeal
+    description: Heal for 100 whenever a Behemoth is staggered.
+    value: 100
+    from: 0
+    to: 5
+  - name: StaggerHeal
+    description: Heal for 200 whenever a Behemoth is staggered.
+    value: 200
+    from: 6
+    to: 9
+  - name: StaggerHeal
     description: Heal for 300 whenever a Behemoth is staggered.
     value: 300
+    from: 10
+    to: 15

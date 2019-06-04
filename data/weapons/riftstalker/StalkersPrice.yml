@@ -38,5 +38,22 @@ perks:
 unique_effects:
   - name: DamageShadowOrbs
     description: >-
+      Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 1.5% for 5 seconds.
+      If 5 or more orbs are present, the bonus doubles.
+    value: 1.5
+    from: 0
+    to: 5
+  - name: DamageShadowOrbs
+    description: >-
+      Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2% for 5 seconds.
+      If 5 or more orbs are present, the bonus doubles.
+    value: 2
+    from: 6
+    to: 9
+  - name: DamageShadowOrbs
+    description: >-
       Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2.5% for 5 seconds.
       If 5 or more orbs are present, the bonus doubles.
+    value: 2.5
+    from: 10
+    to: 15

@@ -39,4 +39,21 @@ unique_effects:
   - name: BoreusFrostSprite
     description: >-
       Charge Attacks generate Frost Sprites that cause your next attack to deal
+      30 bonus damage and minor frost damage. Max 4 Sprites.
+      value: 30
+      from: 0
+      to: 5
+  - name: BoreusFrostSprite
+    description: >-
+      Charge Attacks generate Frost Sprites that cause your next attack to deal
+      40 bonus damage and minor frost damage. Max 4 Sprites.
+    value: 40
+    from: 6
+    to: 9
+  - name: BoreusFrostSprite
+    description: >-
+      Charge Attacks generate Frost Sprites that cause your next attack to deal
       50 bonus damage and minor frost damage. Max 4 Sprites.
+    value: 50
+    from: 10
+    to: 15

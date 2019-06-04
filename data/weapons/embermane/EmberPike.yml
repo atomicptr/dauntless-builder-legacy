@@ -37,5 +37,17 @@ perks:
     to: 15
 unique_effects:
   - name: SeventhHitWoundDamage
+    description: The seventh hit in a row deals +100 wound damage
+    value: 100
+    from: 0
+    to: 5
+  - name: SeventhHitWoundDamage
+    description: The seventh hit in a row deals +200 wound damage
+    value: 200
+    from: 6
+    to: 9
+  - name: SeventhHitWoundDamage
     description: The seventh hit in a row deals +300 wound damage
     value: 300
+    from: 10
+    to: 15
