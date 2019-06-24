@@ -27,7 +27,7 @@ import DarkModeToggle from "../components/DarkModeToggle";
 import WeaponPartSelectModal from "../components/WeaponPartSelectModal";
 import WeaponPart from "../components/WeaponPart";
 
-const DAUNTLESS_BUILD_COLLECTION_BASEURL = "http://www.dauntless-build-collection.com/#/maintenance/create?hash=";
+const DAUNTLESS_BUILD_COLLECTION_BASEURL = "https://www.dauntless-build-collection.com/#/maintenance/create?hash=";
 
 export default class BuildRoute extends React.Component {
 
