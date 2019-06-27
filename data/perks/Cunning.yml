@@ -7,17 +7,17 @@ effects:
     description: 2% critical strike chance
     value: 0.02
   2:
+    description: 3% critical strike chance
+    value: 0.03
+  3:
     description: 4% critical strike chance
     value: 0.04
-  3:
-    description: 6% critical strike chance
-    value: 0.06
   4:
-    description: 9% critical strike chance
-    value: 0.09
+    description: 5% critical strike chance, +10% critical strike damage.
+    value: 0.05
   5:
-    description: 12% critical strike chance
-    value: 0.12
+    description: 7.5% critical strike chance, +20% critical strike damage.
+    value: 0.075
   6:
-    description: 15% critical strike chance
-    value: 0.15
+    description: 10% critical strike chance, +30% critical strike damage.
+    value: 0.1
