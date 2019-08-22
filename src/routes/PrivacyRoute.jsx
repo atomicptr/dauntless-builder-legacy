@@ -22,7 +22,7 @@ export default class PrivacyRoute extends React.Component {
                     <strong>Usage data</strong> - when you visit our site, we will store which parts of our site you
                     visit, your <strong>anonymized</strong> IP address, information from the device you&#39;re using
                     (operating system, browser, screen resolution, language, country you&#39;re located in) and&nbsp;
-                    <a href="https://matomo.org/faq/general/faq_18254/" target="_blank" rel="noopener noreferrer">more</a>.
+                    <a href="https://support.google.com/analytics/answer/6004245" target="_blank" rel="noopener noreferrer">more</a>.
                     We process this data for statistical purposes, to improve our site.
                 </li>
             </ul>
