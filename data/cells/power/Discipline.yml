@@ -1,5 +1,5 @@
 name: Discipline Cell
-slot: Technique
+slot: Power
 variants:
   "+1 Discipline Cell":
     rarity: uncommon

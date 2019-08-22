@@ -1,6 +1,6 @@
 name: Discipline
 description: Prevents you from having over half health. Increases critical strike chance.
-type: Technique
+type: Power
 key: [CriticalStrikeChance, HealthLimited]
 effects:
   1:
