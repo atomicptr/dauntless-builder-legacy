@@ -4,20 +4,20 @@ type: Technique
 key: [CriticalStrikeChance, HealthLimited]
 effects:
   1:
-    description: [+???% critical strike chance, Health is limited to 50% of max health]
-    value: [1, null]
+    description: [+2.5% critical strike chance, Health is limited to 50% of max health]
+    value: [1.025, null]
   2:
-    description: [+???% critical strike chance, Health is limited to 50% of max health]
-    value: [1, null]
+    description: [+5.0% critical strike chance, Health is limited to 50% of max health]
+    value: [1.05, null]
   3:
     description: [+7.5% critical strike chance, Health is limited to 50% of max health]
     value: [1.075, null]
   4:
-    description: [+???% critical strike chance, Health is limited to 50% of max health]
-    value: [1, null]
+    description: [+10.0% critical strike chance, Health is limited to 50% of max health]
+    value: [1.1, null]
   5:
-    description: [+???% critical strike chance, Health is limited to 50% of max health]
-    value: [1, null]
+    description: [+12.5% critical strike chance, Health is limited to 50% of max health]
+    value: [1.25, null]
   6:
-    description: [+???% critical strike chance, Health is limited to 50% of max health]
-    value: [1, null]
+    description: [+15% critical strike chance, Health is limited to 50% of max health]
+    value: [1.15, null]
