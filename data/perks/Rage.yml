@@ -1,20 +1,20 @@
 name: Rage
 description: Increases your damage when your health is low.
 type: Power
-key: low_hp_damage
+key: Rage
 effects:
   1:
-    description: When under 30% health, deal +5% damage
+    description: When under 50% health, deal +5% damage
     value: 1.05
   2:
-    description: When under 30% health, deal +8% damage
-    value: 1.06
+    description: When under 50% health, deal +8% damage
+    value: 1.08
   3:
-    description: When under 30% health, deal +10% damage
-    value: 1.1
+    description: When under 50% health, deal +12% damage
+    value: 1.12
   4:
-    description: When under 50% health, deal +15% damage
-    value: 1.15
+    description: When under 50% health, deal +16% damage
+    value: 1.16
   5:
     description: When under 50% health, deal +20% damage
     value: 1.2
