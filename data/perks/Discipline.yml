@@ -1,6 +1,6 @@
 name: Discipline
-description: ???
-type: Power
+description: Prevents you from having over half health. Increases critical strike chance.
+type: Technique
 key: [CriticalStrikeChance, HealthLimited]
 effects:
   1:
