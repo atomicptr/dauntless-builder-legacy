@@ -18,6 +18,7 @@ export default class UniqueEffects extends React.Component {
                     <div className="item-wrapper unset-height">
                         <div className="item part-unique-effect no-cells">
                             <div className="item-data">
+                                <strong>{this.props.item.name} {uniqueEffect.title || "Unique Effect"}</strong>: <br/>
                                 {uniqueEffect.description}
                             </div>
                         </div>

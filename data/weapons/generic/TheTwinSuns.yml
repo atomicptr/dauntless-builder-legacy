@@ -24,16 +24,20 @@ power:
   15: 550
 unique_effects:
   - name: TwinSunsBarrel
+    title: Barrel
     description: >-
       While Empowered, gain +40% critical strike chance instead of bonus damage.
   - name: TwinSunsChamber
+    title: Chamber
     description: >-
       Load 8 Mag Bombs into your magazine. They attach to enemies and are detonated on Reload. The first Mag Bomb
       attached to each Behemoth part deals +300 damage.
   - name: TwinSunsGrip
+    title: Grip
     description: >-
       Dash in a direction, becoming invulnerable for the duration. After dodging through an attack, fire 6 mini-shots
       that always crit. While in Mag Bomb mode, fires 2 Mag Bombs instead.
   - name: TwinSunsPrism
+    title: Prism
     description: >-
       After a critical strike, reduce the cooldown of Mag Bomb mode by 3 seconds.

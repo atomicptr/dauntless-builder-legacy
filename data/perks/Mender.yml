@@ -5,19 +5,19 @@ key: HealGroup
 effects:
   1:
     description: (No data available) Reduces healing from Slayer Flask. Using your flask restores other Slayers' health.
-    value: null
+    value: 0
   2:
     description: (No data available) Reduces healing from Slayer Flask. Using your flask restores other Slayers' health.
-    value: null
+    value: 0
   3:
     description: (No data available) Reduces healing from Slayer Flask. Using your flask restores other Slayers' health.
-    value: null
+    value: 0
   4:
     description: (No data available) Reduces healing from Slayer Flask. Using your flask restores other Slayers' health.
-    value: null
+    value: 0
   5:
     description: (No data available) Reduces healing from Slayer Flask. Using your flask restores other Slayers' health.
-    value: null
+    value: 0
   6:
     description: (No data available) Reduces healing from Slayer Flask. Using your flask restores other Slayers' health.
-    value: null
+    value: 0
