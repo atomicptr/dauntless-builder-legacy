@@ -265,6 +265,14 @@
                 }
             }
         }
+
+        &.part-unique-effect {
+            height: unset !important;
+
+            &:hover {
+                cursor: default;
+            }
+        }
     }
 }
 

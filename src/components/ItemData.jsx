@@ -17,17 +17,6 @@ export default class ItemData extends React.Component {
             )
         } />;
 
-        let uniqueEffects = [];
-
-        if(this.props.item.unique_effects) {
-            uniqueEffects = BuildModel.getAvailableUniqueEffectsByLevel(
-                this.props.item.name, ItemUtility.itemType(this.props.item.type),
-                this.props.level)
-                .map(
-                    uniqueEffect =>
-                        <div key={uniqueEffect.name} className="unique-effects">{uniqueEffect.description}</div>);
-        }
-
         let stats = null;
 
         switch(ItemUtility.itemType(this.props.item.type)) {
@@ -83,7 +72,6 @@ export default class ItemData extends React.Component {
             <h3 className="item-title">{this.props.item.name} {levelString}</h3>
             {stats}
             {cellLine}
-            {uniqueEffects}
         </div>;
     }
 

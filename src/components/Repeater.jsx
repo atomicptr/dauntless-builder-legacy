@@ -8,6 +8,7 @@ import PropTypeUtility from "../utility/PropTypeUtility";
 import BuildModel from "../models/BuildModel";
 import RepeaterPart from "./RepeaterPart";
 import ItemUtility from "../utility/ItemUtility";
+import UniqueEffects from "./UniqueEffects";
 
 export default class Repeater extends React.Component {
     constructor(props, context) {
@@ -112,6 +113,8 @@ export default class Repeater extends React.Component {
                         parent={this.props.parent} />
                 </div>
             </div>
+
+            <UniqueEffects item={this.props.item} level={this.props.level} />
 
             {this.renderPart("barrels", "part1")}
             {this.renderPart("chambers", "part2")}

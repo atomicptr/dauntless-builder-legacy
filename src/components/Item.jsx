@@ -7,6 +7,7 @@ import ItemIcon from "./ItemIcon";
 import ItemData from "./ItemData";
 import ItemUtility from "../utility/ItemUtility";
 import PropTypeUtility from "../utility/PropTypeUtility";
+import UniqueEffects from "./UniqueEffects";
 
 export default class Item extends React.Component {
     constructor(props, context) {
@@ -64,21 +65,24 @@ export default class Item extends React.Component {
 
         const hasCells = this.props.item.cells && this.props.item.cells.length > 0;
 
-        return <div className="item-title-wrapper">
-            <h2 className="subtitle hidden-on-large-screens">{this.getItemType() + (this.props.item.type ? ` - ${this.props.item.type}` : "")}</h2>
-            <div className="item-wrapper">
-                <div className={"item"+ (!hasCells ? " no-cells" : "")} title={this.props.item.description} onClick={() => this.onClicked()}>
-                    <ItemIcon item={this.props.item} defaultType={this.props.defaultType} />
-                    <ItemData item={this.props.item} level={this.props.level} />
+        return <React.Fragment>
+            <div className="item-title-wrapper">
+                <h2 className="subtitle hidden-on-large-screens">{this.getItemType() + (this.props.item.type ? ` - ${this.props.item.type}` : "")}</h2>
+                <div className="item-wrapper">
+                    <div className={"item"+ (!hasCells ? " no-cells" : "")} title={this.props.item.description} onClick={() => this.onClicked()}>
+                        <ItemIcon item={this.props.item} defaultType={this.props.defaultType} />
+                        <ItemData item={this.props.item} level={this.props.level} />
+                    </div>
+                    <CellGroup
+                        item={this.props.item}
+                        cells={this.props.cells}
+                        defaultType={this.props.defaultType}
+                        onCellClicked={this.props.onCellClicked}
+                        parent={this.props.parent} />
                 </div>
-                <CellGroup
-                    item={this.props.item}
-                    cells={this.props.cells}
-                    defaultType={this.props.defaultType}
-                    onCellClicked={this.props.onCellClicked}
-                    parent={this.props.parent} />
             </div>
-        </div>;
+            <UniqueEffects item={this.props.item} level={this.props.level} />
+        </React.Fragment>;
     }
 }
 

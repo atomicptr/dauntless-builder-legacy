@@ -93,6 +93,10 @@ strong {
     }
 }
 
+.unset-height {
+    height: unset !important;
+}
+
 @media screen and (max-width: 1300px) {
     .hidden-on-large-screens {
         display: block;
