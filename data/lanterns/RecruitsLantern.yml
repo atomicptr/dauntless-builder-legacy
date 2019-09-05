@@ -1,4 +1,5 @@
 name: Recruit's Lantern
+icon: /assets/icons/lanterns/GenericLantern.png
 description: null
 cells: null
 lantern_ability:

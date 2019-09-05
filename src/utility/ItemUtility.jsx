@@ -31,7 +31,7 @@ export default class ItemUtility {
     }
 
     static isRepeater(item) {
-        return item.name === "Repeater";
+        return item.type === "Repeater";
     }
 
     static itemType(type) {

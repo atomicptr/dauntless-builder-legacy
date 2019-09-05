@@ -1,0 +1,29 @@
+name: The Twin Suns
+description: Exotic Repeaters.
+icon: /assets/icons/weapons/generic/TheTwinSuns.png
+type: Repeater
+damage: Slashing
+elemental: null
+cells: [Technique, Mobility]
+power:
+  0: 100
+  1: 140
+  2: 180
+  3: 220
+  4: 260
+  5: 300
+  6: 340
+  7: 380
+  8: 420
+  9: 460
+  10: 500
+  11: 510
+  12: 520
+  13: 530
+  14: 540
+  15: 550
+unique_effects:
+  - name: TheHungerEffect
+    description: >-
+      Activate to enter Feast, taking damage over time but gaining significant lifesteal,
+      attack speed, and creating aetheric waves with each attack that deal area damage.

@@ -1,0 +1,7 @@
+name: Broadsides Lantern
+icon: /assets/icons/lanterns/BroadsidesLantern.png
+description: null
+cells: Utility
+lantern_ability:
+  instant: Tap to fire a cannonball from above that deals 350 damage or, against airborne Behemoths, deals 450 damage and critically strikes.
+  hold: Hold to drop a bomb from above that explodes after 1 second. Deals 650 damage and can interrupt Behemoths.

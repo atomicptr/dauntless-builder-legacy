@@ -43,6 +43,7 @@ export default class Repeater extends React.Component {
     onClicked() {
         let filterOption = {};
         filterOption.__itemType = "Weapon";
+        filterOption.__weaponType = "Repeater";
         filterOption.filters = [];
 
         this.props.onItemClicked(filterOption);
@@ -53,6 +54,11 @@ export default class Repeater extends React.Component {
     }
 
     renderPart(partType, fieldPrefix) {
+        // non modular repeaters shouldn't have parts
+        if (this.props.item.name !== "Repeater") {
+            return null;
+        }
+
         const fieldName = "weapon_" + fieldPrefix + "_name";
 
         const parts = this.props.parent.state.itemData.parts;

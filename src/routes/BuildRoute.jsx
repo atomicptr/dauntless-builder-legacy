@@ -151,6 +151,7 @@ export default class BuildRoute extends React.Component {
             changes.weapon_level = Math.min(level, ItemUtility.maxLevel("weapons", itemName));
             changes.weapon_cell0 = "";
             changes.weapon_cell1 = "";
+
             if (!this.state.build.weapon || itemType !== this.state.build.weapon.type) {
                 changes.weapon_part1_name = "";
                 changes.weapon_part2_name = "";
@@ -160,6 +161,19 @@ export default class BuildRoute extends React.Component {
                 changes.weapon_part6_name = "";
             } else if(this.state.build.weapon.restrict_specials) {
                 changes.weapon_part1_name = "";
+            }
+
+            // switching to a non modular repeater clears all parts
+            if (this.state.build.weapon &&
+                this.state.build.weapon.type === "Repeater" &&
+                itemType === "Repeater" &&
+                item.name !== "Repeater"
+            ) {
+                changes.weapon_part1_name = "";
+                changes.weapon_part2_name = "";
+                changes.weapon_part3_name = "";
+                changes.weapon_part4_name = "";
+                changes.weapon_part5_name = "";
             }
             
             const changesKeys = [

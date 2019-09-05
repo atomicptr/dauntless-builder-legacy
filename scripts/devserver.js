@@ -1,5 +1,7 @@
 const express = require("express");
 
+const PORT = 4000;
+
 const app = express();
 
 app.use(express.static("."));
@@ -24,4 +26,4 @@ app.get("/meta.json", deliverFile("dist/meta.json"));
 app.get("/map/names.json", deliverFile(".map/names.json"));
 app.get("/*", deliverFile("index.html"));
 
-app.listen(4000);
+app.listen(PORT, () => console.log("Running on http://localhost:" + PORT));

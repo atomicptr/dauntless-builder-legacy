@@ -1,0 +1,23 @@
+name: Sprinter
+description: Reduces max stamina. Increases movespeed and reduces sprint cost.
+type: Mobility
+key: BecomeSonic
+effects:
+  1:
+    description: (No data available) Reduces max stamina. Increases movespeed and reduces sprint cost.
+    value: null
+  2:
+    description: (No data available) Reduces max stamina. Increases movespeed and reduces sprint cost.
+    value: null
+  3:
+    description: (No data available) Reduces max stamina. Increases movespeed and reduces sprint cost.
+    value: null
+  4:
+    description: (No data available) Reduces max stamina. Increases movespeed and reduces sprint cost.
+    value: null
+  5:
+    description: (No data available) Reduces max stamina. Increases movespeed and reduces sprint cost.
+    value: null
+  6:
+    description: (No data available) Reduces max stamina. Increases movespeed and reduces sprint cost.
+    value: null

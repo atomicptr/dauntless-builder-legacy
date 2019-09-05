@@ -1,0 +1,23 @@
+name: Mender
+description: Reduces healing from Slayer Flask. Using your flask restores other Slayers' health.
+type: Utility
+key: HealGroup
+effects:
+  1:
+    description: (No data available) Reduces healing from Slayer Flask. Using your flask restores other Slayers' health.
+    value: null
+  2:
+    description: (No data available) Reduces healing from Slayer Flask. Using your flask restores other Slayers' health.
+    value: null
+  3:
+    description: (No data available) Reduces healing from Slayer Flask. Using your flask restores other Slayers' health.
+    value: null
+  4:
+    description: (No data available) Reduces healing from Slayer Flask. Using your flask restores other Slayers' health.
+    value: null
+  5:
+    description: (No data available) Reduces healing from Slayer Flask. Using your flask restores other Slayers' health.
+    value: null
+  6:
+    description: (No data available) Reduces healing from Slayer Flask. Using your flask restores other Slayers' health.
+    value: null
