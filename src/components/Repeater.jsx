@@ -18,6 +18,11 @@ export default class Repeater extends React.Component {
     }
 
     getTotalPower() {
+        // non modular repeaters get normal level numbers
+        if (this.props.item.name !== "Repeater") {
+            return this.props.item.power[this.props.level];
+        }
+
         let total = 0;
 
         const fields = [
@@ -92,6 +97,8 @@ export default class Repeater extends React.Component {
     }
 
     render() {
+        const name = this.props.item.name === "Repeater" ? "Ostian Repeaters" : this.props.item.name;
+
         return <React.Fragment>
             <div className="item-title-wrapper">
                 <h2 className="subtitle hidden-on-large-screens">Weapon</h2>
@@ -99,7 +106,7 @@ export default class Repeater extends React.Component {
                     <div className={"item item-repeater"+ (this.props.item.cells.length === 0 ? " no-cells" : "")} title={this.props.item.description} onClick={() => this.onClicked()}>
                         <ItemIcon item={this.props.item} defaultType={"Weapon"} />
                         <div className="item-data">
-                            <h3 className="item-title">Ostian Repeaters {ItemUtility.levelString(this.props.level)}</h3>
+                            <h3 className="item-title">{name} {ItemUtility.levelString(this.props.level)}</h3>
                             <div className="stat-data">
                                 <strong>Power</strong>: {this.getTotalPower()}
                             </div>
