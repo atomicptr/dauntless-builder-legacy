@@ -1,0 +1,6 @@
+name: Titan's Crash
+icon: /assets/icons/parts/aetherstrikers/specials/TitansCrash.png
+part_effect:
+  -  >-
+    Unleash energy forward in a pressure wave, dealing 800 damage to the closest target and 200 damage to nearby target.
+    Deals up to +100% damage when Tempest Form and Karma Breaker's effects are active.
