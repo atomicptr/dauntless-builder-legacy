@@ -108,6 +108,8 @@ describe("Dauntless Builder Data", () => {
         it("Sword Specials should not have invalid icons", checkIconsFor("parts.sword.specials"));
         it("War Pike Mods should not have invalid icons", checkIconsFor("parts.warpike.mods"));
         it("War Pike Specials should not have invalid icons", checkIconsFor("parts.warpike.specials"));
+        it("Aether Striker Mods should not have invalid icons", checkIconsFor("parts.aetherstrikers.mods"));
+        it("Aether Striker Specials should not have invalid icons", checkIconsFor("parts.aetherstrikers.specials"));
         it("Armours should not have invalid icons", checkIconsFor("armours"));
         it("Repeater Barrels should not have invalid icons", checkIconsFor("parts.repeater.barrels"));
         it("Repeater Chambers should not have invalid icons", checkIconsFor("parts.repeater.chambers"));
@@ -261,12 +263,12 @@ describe("Dauntless Builder Data", () => {
         it("Repeater Prisms format should have a valid schema", checkIfHasValidSchema("parts.repeater.prisms"));
 
         // validate specials on all weapons
-        //it("Axe Specials format should have a valid schema", checkIfHasValidSchema("parts.axe.specials", "parts.generic.specials"));
+        it("Axe Specials format should have a valid schema", checkIfHasValidSchema("parts.axe.specials", "parts.generic.specials"));
         it("Chain Blades Specials format should have a valid schema", checkIfHasValidSchema("parts.chainblades.specials", "parts.generic.specials"));
         it("Hammer Specials format should have a valid schema", checkIfHasValidSchema("parts.hammer.specials", "parts.generic.specials"));
         it("Swords Specials format should have a valid schema", checkIfHasValidSchema("parts.sword.specials", "parts.generic.specials"));
         it("War Pike Specials format should have a valid schema", checkIfHasValidSchema("parts.warpike.specials", "parts.generic.specials"));
-        //it("Repeater Specials format should have a valid schema", checkIfHasValidSchema("parts.repeater.specials", "parts.generic.specials"));
+        it("Aether Striker Specials format should have a valid schema", checkIfHasValidSchema("parts.aetherstrikers.specials", "parts.generic.specials"));
 
         // validate mods on all weapons
         it("Axe Mods format should have a valid schema", checkIfHasValidSchema("parts.axe.mods", "parts.generic.mods"));
@@ -274,6 +276,7 @@ describe("Dauntless Builder Data", () => {
         it("Hammer Mods format should have a valid schema", checkIfHasValidSchema("parts.hammer.mods", "parts.generic.mods"));
         it("Swords Mods format should have a valid schema", checkIfHasValidSchema("parts.sword.mods", "parts.generic.mods"));
         it("War Pike Mods format should have a valid schema", checkIfHasValidSchema("parts.warpike.mods", "parts.generic.mods"));
+        it("Aether Striker Mods format should have a valid schema", checkIfHasValidSchema("parts.aetherstrikers.mods", "parts.generic.mods"));
         it("Repeater Mods format should have a valid schema", checkIfHasValidSchema("parts.repeater.mods", "parts.generic.mods"));
     });
 });

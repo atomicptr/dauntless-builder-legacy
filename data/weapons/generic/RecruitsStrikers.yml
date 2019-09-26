@@ -1,0 +1,9 @@
+name: Recruit's Strikers
+description: A simple pair of aether strikers for slaying Behemoths.
+icon: /assets/icons/weapons/generic/RecruitsStrikers.png
+type: Aether Strikers
+damage: Blunt
+elemental: null
+cells: null
+power:
+  0: 80

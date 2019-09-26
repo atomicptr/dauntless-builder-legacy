@@ -1,0 +1,53 @@
+name: Fists of the Shrike
+description: A Slayer's aether strikers forged with Shrike trophies.
+icon: /assets/icons/weapons/shrike/FistsOfTheShrike.png
+type: Aether Strikers
+damage: Blunt
+elemental: null
+cells: [Technique, Mobility]
+power:
+  0: 100
+  1: 140
+  2: 180
+  3: 220
+  4: 260
+  5: 300
+  6: 340
+  7: 380
+  8: 420
+  9: 460
+  10: 500
+  11: 510
+  12: 520
+  13: 530
+  14: 540
+  15: 550
+perks:
+  - name: Conditioning
+    value: 1
+    from: 0
+    to: 5
+  - name: Conditioning
+    value: 2
+    from: 6
+    to: 9
+  - name: Conditioning
+    value: 3
+    from: 10
+    to: 15
+unique_effects:
+  - name: DodgePartDamage
+    description: +50 part damage on next hit after a dodge.
+    value: 50
+    from: 0
+    to: 5
+  - name: DodgePartDamage
+    description: +75 part damage on next hit after a dodge.
+    value: 75
+    from: 6
+    to: 9
+  - name: DodgePartDamage
+    description: +100 part damage on next hit after a dodge.
+    value: 100
+    from: 10
+    to: 15

@@ -1,0 +1,59 @@
+name: Stalker's Scorn
+description: A Slayer's aether strikers forged with Riftstalker trophies.
+icon: /assets/icons/weapons/riftstalker/StalkersScorn.png
+type: Aether Strikers
+damage: Blunt
+elemental: Umbral
+cells: [Technique, Utility]
+power:
+  0: 100
+  1: 140
+  2: 180
+  3: 220
+  4: 260
+  5: 300
+  6: 340
+  7: 380
+  8: 420
+  9: 460
+  10: 500
+  11: 510
+  12: 520
+  13: 530
+  14: 540
+  15: 550
+perks:
+  - name: Wild Frenzy
+    value: 1
+    from: 0
+    to: 5
+  - name: Wild Frenzy
+    value: 2
+    from: 6
+    to: 9
+  - name: Wild Frenzy
+    value: 3
+    from: 10
+    to: 15
+unique_effects:
+  - name: DamageShadowOrbs
+    description: >-
+      Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 1.5% for 5 seconds.
+      If 5 or more orbs are present, the bonus doubles.
+    value: 1.5
+    from: 0
+    to: 5
+  - name: DamageShadowOrbs
+    description: >-
+      Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2% for 5 seconds.
+      If 5 or more orbs are present, the bonus doubles.
+    value: 2
+    from: 6
+    to: 9
+  - name: DamageShadowOrbs
+    description: >-
+      Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2.5% for 5 seconds.
+      If 5 or more orbs are present, the bonus doubles.
+    value: 2.5
+    from: 10
+    to: 15

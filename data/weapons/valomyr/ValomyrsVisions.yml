@@ -1,0 +1,59 @@
+name: Valomyr's Visions
+description: A Slayer's aether strikers forged with Valomyr trophies.
+icon: /assets/icons/weapons/valomyr/ValomyrsVisions.png
+type: Aether Strikers
+damage: Blunt
+elemental: Radiant
+cells: [Power, Utility]
+power:
+  0: 100
+  1: 140
+  2: 180
+  3: 220
+  4: 260
+  5: 300
+  6: 340
+  7: 380
+  8: 420
+  9: 460
+  10: 500
+  11: 510
+  12: 520
+  13: 530
+  14: 540
+  15: 550
+perks:
+  - name: Aetherhunter
+    value: 1
+    from: 0
+    to: 5
+  - name: Aetherhunter
+    value: 2
+    from: 6
+    to: 9
+  - name: Aetherhunter
+    value: 3
+    from: 10
+    to: 15
+unique_effects:
+  - name: ValomyrCharge
+    description: >-
+      Once charged, your next attack will deal 300 bonus radiant damage.
+      Charge rate increases with current health.
+    value: 300
+    from: 0
+    to: 5
+  - name: ValomyrCharge
+    description: >-
+      Once charged, your next attack will deal 425 bonus radiant damage.
+      Charge rate increases with current health.
+    value: 425
+    from: 6
+    to: 9
+  - name: ValomyrCharge
+    description: >-
+      Once charged, your next attack will deal 550 bonus radiant damage.
+      Charge rate increases with current health.
+    value: 550
+    from: 10
+    to: 15

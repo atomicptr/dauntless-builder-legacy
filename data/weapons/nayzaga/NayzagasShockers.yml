@@ -1,0 +1,53 @@
+name: Nayzaga's Shockers
+description: A Slayer's aether strikers forged with Nayzaga trophies.
+icon: /assets/icons/weapons/nayzaga/NayzagasShockers.png
+type: Aether Strikers
+damage: Blunt
+elemental: Shock
+cells: [Technique, Utility]
+power:
+  0: 100
+  1: 140
+  2: 180
+  3: 220
+  4: 260
+  5: 300
+  6: 340
+  7: 380
+  8: 420
+  9: 460
+  10: 500
+  11: 510
+  12: 520
+  13: 530
+  14: 540
+  15: 550
+perks:
+  - name: Savagery
+    value: 1
+    from: 0
+    to: 5
+  - name: Savagery
+    value: 2
+    from: 6
+    to: 9
+  - name: Savagery
+    value: 3
+    from: 10
+    to: 15
+unique_effects:
+  - name: StaggerHeal
+    description: Heal for 100 whenever a Behemoth is staggered.
+    value: 100
+    from: 0
+    to: 5
+  - name: StaggerHeal
+    description: Heal for 200 whenever a Behemoth is staggered.
+    value: 200
+    from: 6
+    to: 9
+  - name: StaggerHeal
+    description: Heal for 300 whenever a Behemoth is staggered.
+    value: 300
+    from: 10
+    to: 15
