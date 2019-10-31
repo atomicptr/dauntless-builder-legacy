@@ -19,5 +19,5 @@ power:
   14: 150
   15: 153
 part_effect:
-  - Launches a collectible buff a short distance, granting 20% increased attack speed for 15 seconds when collected.
+  - Launches a collectible buff a short distance, granting 15% increased attack speed for 15 seconds when collected.
   - "Empowered: Grants the same buff to all Slayers."

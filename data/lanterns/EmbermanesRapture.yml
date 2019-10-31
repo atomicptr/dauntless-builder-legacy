@@ -3,5 +3,5 @@ icon: /assets/icons/lanterns/EmbermanesRapture.png
 description: null
 cells: Utility
 lantern_ability:
-  instant: 	Attack 30% faster for 8 seconds.
+  instant: 	Attack 25% faster for 8 seconds.
   hold: Create a fire ball in front of you that explodes after 5 seconds, dealing 850 Blaze damage to all nearby Behemoths.

@@ -4,20 +4,20 @@ type: Technique
 key: low_hp_attack_speed
 effects:
   1:
-    description: When under 50% health, increase attack speed by 5%
-    value: 1.05
+    description: When under 50% health, increase attack speed by 7.5%
+    value: 1.075
   2:
-    description: When under 50% health, increase attack speed by 8%
-    value: 1.08
+    description: When under 50% health, increase attack speed by 10%
+    value: 1.1
   3:
-    description: When under 50% health, increase attack speed by 12%
-    value: 1.12
+    description: When under 50% health, increase attack speed by 12.5%
+    value: 1.125
   4:
-    description: When under 50% health, increase attack speed by 16%
-    value: 1.16
+    description: When under 50% health, increase attack speed by 15%
+    value: 1.15
   5:
-    description: When under 50% health, increase attack speed by 20%
-    value: 1.2
+    description: When under 50% health, increase attack speed by 17.5%
+    value: 1.175
   6:
-    description: When under 50% health, increase attack speed by 25%
-    value: 1.25
+    description: When under 50% health, increase attack speed by 20%
+    value: 1.20

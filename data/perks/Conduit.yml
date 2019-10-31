@@ -4,20 +4,20 @@ type: Utility
 key: attack_speed_all_slayers
 effects:
   1:
-    description: Using your lantern hold ability grants 5% attack speed to all Slayers for 8 seconds.
-    value: 1.05
+    description: Using your lantern hold ability grants 4% attack speed to all Slayers for 10 seconds.
+    value: 1.04
   2:
-    description: Using your lantern hold ability grants 7% attack speed to all Slayers for 8 seconds.
-    value: 1.07
+    description: Using your lantern hold ability grants 6% attack speed to all Slayers for 10 seconds.
+    value: 1.06
   3:
-    description: Using your lantern hold ability grants 10% attack speed to all Slayers for 8 seconds.
-    value: 1.1
+    description: Using your lantern hold ability grants 8% attack speed to all Slayers for 10 seconds.
+    value: 1.08
   4:
-    description: Using your lantern hold ability grants 14% attack speed to all Slayers for 8 seconds.
-    value: 1.14
+    description: Using your lantern hold ability grants 10% attack speed to all Slayers for 10 seconds.
+    value: 1.1
   5:
-    description: Using your lantern hold ability grants 19% attack speed to all Slayers for 8 seconds.
-    value: 1.19
+    description: Using your lantern hold ability grants 12.5% attack speed to all Slayers for 10 seconds.
+    value: 1.125
   6:
-    description: Using your lantern hold ability grants 25% attack speed to all Slayers for 8 seconds.
-    value: 1.25
+    description: Using your lantern hold ability grants 15% attack speed to all Slayers for 10 seconds.
+    value: 1.15
