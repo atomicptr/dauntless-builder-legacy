@@ -1,10 +1,10 @@
 {
     "weapon": "Arme",
     "headArmour": "Casque",
-    "torsoArmour": "Gants",
+    "torsoArmour": "Torse",
     "armsArmour": "Gants",
     "legsArmour": "Grèves",
-    "lantern": "Lantèrne",
+    "lantern": "Lanterne",
     "special": "Spécial",
     "mod": "Mod",
     "barrel": "Canon",
@@ -48,12 +48,12 @@
         "axe": "Hache",
         "chainBlades": "Chaînes-lames",
         "hammer": "Marteau",
-        "repeater": "Repeater",
+        "repeater": "Répéteurs",
         "sword": "Épée",
         "warPike": "Aéthérolance"
     },
     "cellSlot": {
-        "defence": "Défence",
+        "defence": "Défense",
         "mobility": "Mobilité",
         "power": "Puissance",
         "technique": "Technique",

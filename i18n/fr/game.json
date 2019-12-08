@@ -2,7 +2,7 @@
   "armours": {
     "borealEpiphany": {
       "name": "Épiphanie boréale",
-      "description": "Protection pour la tête forgée à partir de trophées de Boreus"
+      "description": "Protection pour la tête forgée à partir de trophées de Boreus."
     },
     "borealMarch": {
       "name": "Marche boréale",
@@ -21,7 +21,7 @@
       "description": "Une pièce d'armure exotique de Slayer forgée avec des trophées du Charrogg Marqueflamme.",
       "damageStaminaShield0": {
         "name": "DamageStaminaShield",
-        "description": "1,5% des des dégâts infligés se convertissent en un bouclier d'endurance (50 max) qui s'épuise lentement après n'avoir pas infligé de dégâts pendant une courte période."
+        "description": "1,5% des dégâts infligés se convertissent en un bouclier d'endurance (50 max) qui s'épuise lentement après n'avoir pas infligé de dégâts pendant une courte période."
       }
     },
     "volcanicAegis": {
@@ -134,7 +134,7 @@
     },
     "shellOfTheSwarm": {
       "name": "Carapace de l'essaim",
-      "description": "Protection pour le torse forgée à prtir de trophées de Kharabak."
+      "description": "Protection pour le torse forgée à partir de trophées de Kharabak."
     },
     "graspOfThorns": {
       "name": "Gantelets de ronces",
@@ -150,7 +150,7 @@
     },
     "visageOfThorns": {
       "name": "Masque de ronces",
-      "description": "Une pièce d'armure de Slayer forgée avec trophées du SOuverain des Ronces."
+      "description": "Une pièce d'armure de Slayer forgée avec trophées du Souverain des Ronces."
     },
     "shockingGaze": {
       "name": "Oeil électrifié",
@@ -178,7 +178,7 @@
     },
     "coreOfIce": {
       "name": "Cœur gelé",
-      "description": "Protection pour le torce forgée à partir de trophées de Pangar."
+      "description": "Protection pour le torse forgée à partir de trophées de Pangar."
     },
     "feetOfIce": {
       "name": "Versants gelés",
@@ -229,7 +229,7 @@
       },
       "prismaticGraceActivePrismRevive0": {
         "name": "PrismaticGraceActivePrismRevive",
-        "description": "Lorsqu'il est actif, le prisme vous permet de réanimer un autre joueur, même au niveau de danger maximum, et vous soigne tous les deux entièrement mais disparait après utilisation ."
+        "description": "Lorsqu'il est actif, le prisme vous permet de réanimer un autre joueur, même au niveau de danger maximum, et vous soigne tous les deux entièrement mais disparait après utilisation."
       }
     },
     "guiseOfTheRift": {
@@ -582,7 +582,7 @@
     },
     "drasksEye": {
       "name": "Œil de Drask",
-      "description": " ",
+      "description": "Augmente vos dégâts pendant les combats. ",
       "lanternAbility": {
         "instant": "Augmente les dégâts de 30% pendant 6 secondes.",
         "hold": "Tire un éclair infligeant 150 points de dégâts de foudre, peut frapper plusieurs fois lorsqu'il traverse des ennemis."
@@ -590,15 +590,15 @@
     },
     "embermanesRapture": {
       "name": "Embuscade de l'Embermane",
-      "description": " ",
+      "description": "Attaquez plus rapidement ave cette lanterne ardente.",
       "lanternAbility": {
-        "instant": "Augmente la vitessed'attaque de 25% pendant 8 secondes.",
-        "hold": "Génère une boule de feu devant vous qui explseaprès 5 secondes, infligeant 850 points de dégâts de braise aux ennemis proches."
+        "instant": "Augmente la vitesse d'attaque de 25% pendant 8 secondes.",
+        "hold": "Génère une boule de feu devant vous qui explose après 5 secondes, infligeant 850 points de dégâts de braise aux ennemis proches."
       }
     },
     "koshaisBloom": {
       "name": "Floraison du Koshai",
-      "description": " ",
+      "description": "Toute rose a ses épines.",
       "lanternAbility": {
         "instant": "10% des dégâts infligés vous soigneront pendant 8 secondes.",
         "hold": "Vous projette dans une direction, infligeant 750 points de dégâts telluriques aux ennemis proches du point d'arrivée."
@@ -606,7 +606,7 @@
     },
     "pangarsShine": {
       "name": "Éclat de Pangar",
-      "description": " ",
+      "description": "Concentre l'aether pour améliorer l'endurance du Slayer.",
       "lanternAbility": {
         "instant": "Restaure de 25% de votre endurance maximale.",
         "hold": "Créer un pilier de givre devant vous qui inflige 960 points de dégâts de givre en 12 secondes aux ennemis proches."
@@ -614,23 +614,23 @@
     },
     "recruitsLantern": {
       "name": "Lanterne de recrue",
-      "description": " ",
+      "description": "Un outil utile pour les recrues de Ramsgate.",
       "lanternAbility": {
-        "instant": "Octroie 50 points de bouclier (non cumulables)",
+        "instant": "Octroie 50 points de bouclier (non cumulables).",
         "hold": "Disperse l'aether stocké pour permettre au Slayer de trouver le Béhémoth."
       }
     },
     "shrikesZeal": {
       "name": "Fougue du Shrike",
-      "description": " ",
+      "description": "Déplacez-vous aussi agilement que le féroce Shrike.",
       "lanternAbility": {
         "instant": "Augmente la vitesse de déplacement de 40% pendant 6 secondes.",
-        "hold": "Génère une aura qui augmentate de 15% de vitesse d'attaque et de déplacement des Slayers proches pendant 15 secondes."
+        "hold": "Génère une aura qui augmente de 15% de vitesse d'attaque et de déplacement des Slayers proches pendant 15 secondes."
       }
     },
     "skarnsDefiance": {
       "name": "Défiance du Skarn",
-      "description": " ",
+      "description": "Une lanterne qui vous protège pendant les combats.",
       "lanternAbility": {
         "instant": "Accorde un bouclier de 250 points pendant 6 secondes.",
         "hold": "Vous entoure de rochers tourbillonants infligeant un total de 900 points de dégâts telluriques en 10 secondes aux ennemis proches."
@@ -670,7 +670,7 @@
     },
     "adrenaline": {
       "name": "Adrénaline",
-      "description": "Augmente les dégâts infligés en fonction de l'endurance dépenssée.",
+      "description": "Augmente les dégâts infligés en fonction de l'endurance dépensée.",
       "effects": {
         "1": [
           "Donne + 0,3% de dégâts par tranche de 10 endurance manquante."
@@ -739,7 +739,7 @@
           "+30% de dégâts contre les Behemoths chargés en aether"
         ],
         "5": [
-          "+40% de dégâts contre les Behemoths chargés en aethers"
+          "+40% de dégâts contre les Behemoths chargés en aether"
         ],
         "6": [
           "+50% de dégâts contre les Behemoths chargés en aether"
@@ -843,7 +843,7 @@
       }
     },
     "barbed": {
-      "name": "barbelée",
+      "name": "Barbelé",
       "description": "Ajoute une quandtité fixe de dégâts mutilants à chaque coup.",
       "effects": {
         "1": [
@@ -934,7 +934,7 @@
     },
     "bloodless": {
       "name": "Coagulation",
-      "description": "protège contre les status « Blessé » et « Hémorragie ».",
+      "description": "Protège contre les status « Blessé » et « Hémorragie ».",
       "effects": {
         "1": [
           "Réduit la durée de l'effet de statut « Blessé » de 50%.",
@@ -988,7 +988,7 @@
     },
     "conduit": {
       "name": "Conduction",
-      "description": "La capacité maintenue de la lanterne octroie temporairement de la vitesse d'attaque à tous les slayers.",
+      "description": "La capacité maintenue de la lanterne octroie temporairement de la vitesse d'attaque à tous les Slayers.",
       "effects": {
         "1": [
           "Utiliser votre capacité maintenue de lanterne octroie +4% de vitesse d'attaque à tous les Slayers pendant 10 secondes."
@@ -1036,7 +1036,7 @@
     },
     "deconstruction": {
       "name": "Démolition",
-      "description": "Augmente les dégâts contre les objets créés par les Béhemoths",
+      "description": "Augmente les dégâts contre les objets créés par les Béhemoths.",
       "effects": {
         "1": [
           "Infligez 110% de dégâts aux objets créés par les Behemoths."
@@ -1138,7 +1138,7 @@
     },
     "engineer": {
       "name": "Ingénieur",
-      "description": "Réduit les soins octroyés par la flaque du Slayer. Augmente la portée des pylônes.",
+      "description": "Réduit les soins octroyés par la flasque du Slayer. Augmente la portée des pylônes.",
       "effects": {
         "1": [
           "La flasque soigne 30 de moins.",
@@ -1192,7 +1192,7 @@
     },
     "evasiveFury": {
       "name": "Furie évasive",
-      "description": "Augmente temporairement la vitesse d'attaque après une esquive parfaite",
+      "description": "Augmente temporairement la vitesse d'attaque après une esquive parfaite.",
       "effects": {
         "1": [
           "Après avoir esquivé une attaque, gagnez +7,5% de vitesse d'attaque pendant 16 secondes"
@@ -1240,7 +1240,7 @@
     },
     "fleetFooted": {
       "name": "Sprint évasif",
-      "description": "Augmente temporairement la Vitesse de déplacement après une esquive.",
+      "description": "Augmente temporairement la vitesse de déplacement après une esquive.",
       "effects": {
         "1": [
           "Après avoir esquivé, gagnez + 10% de vitesse de déplacement pendant 3 secondes"
@@ -1636,7 +1636,7 @@
     },
     "pacifier": {
       "name": "Pacificateur",
-      "description": "Augmente les dégâts étourdissants contre les Behemoths enragés",
+      "description": "Augmente les dégâts étourdissants contre les Behemoths enragés.",
       "effects": {
         "1": [
           "+10% de dégâts étourdissants contre les Behemoths enragés"
@@ -1756,7 +1756,7 @@
     },
     "sharpened": {
       "name": "Aiguisé",
-      "description": "Augmentation en pourcentage des dégâts aux membres",
+      "description": "Augmentation en pourcentage des dégâts aux membres.",
       "effects": {
         "1": [
           "+5% de dégâts aux membres.",
@@ -1786,7 +1786,7 @@
     },
     "shellshockResist": {
       "name": "Résilience",
-      "description": "Protège contre les explosions et l'effet de statut « Concussion »",
+      "description": "Protège contre les explosions et l'effet de statut « Concussion ».",
       "effects": {
         "1": [
           "Réduit les dégâts des concussions et leur durée de 10%"
@@ -1996,7 +1996,7 @@
     },
     "warmth": {
       "name": "Chauffe",
-      "description": "Protège contre les effets de «Gelé» et «Ralenti»",
+      "description": "Protège contre les effets de «Gelé» et «Ralenti».",
       "effects": {
         "1": [
           "Réduit la durée de l'effet de statut « Gelé » de 30%",
@@ -2431,7 +2431,7 @@
       "description": "Une aetherolance de recrue."
     },
     "repeater": {
-      "name": "Répéteur",
+      "name": "Répéteurs",
       "description": "Une paire d'armes à feu modulaires et alimentées en aether conçues spécialement pour les Slayers."
     },
     "theTwinSuns": {
@@ -2631,15 +2631,15 @@
       "description": "Un marteau de Slayer forgé à partir de trophées du Koshai.",
       "noAttackDamage0": {
         "name": "NoAttackDamage",
-        "description": "Après 6 secondes sans infliger de dégâts, les 1 prochaines attaques infligent + 25% de dégâts"
+        "description": "Après 6 secondes sans infliger de dégât, les 1 prochaines attaques infligent + 25% de dégâts"
       },
       "noAttackDamage6": {
         "name": "NoAttackDamage",
-        "description": "Après 6 secondes sans infliger de dégâts, les 1 prochaines attaques infligent + 25% de dégâts"
+        "description": "Après 6 secondes sans infliger de dégât, les 1 prochaines attaques infligent + 25% de dégâts"
       },
       "noAttackDamage10": {
         "name": "NoAttackDamage",
-        "description": "Après 6 secondes sans infliger de dégâts, les 1 prochaines attaques infligent + 25% de dégâts"
+        "description": "Après 6 secondes sans infliger de dégât, les 1 prochaines attaques infligent + 25% de dégâts"
       }
     },
     "sovereignsLash": {
@@ -2660,7 +2660,7 @@
     },
     "sovereignsSceptres": {
       "name": "Sceptres du Souverain",
-      "description": "Cestes aethériques de SLayers fabriqués à partir de trophées de Koshai.",
+      "description": "Cestes aethériques de Slayers fabriqués à partir de trophées de Koshai.",
       "noAttackDamage0": {
         "name": "NoAttackDamage",
         "description": "Après 6 secondes sans infliger de dégât, les 4 prochaines attaques infligeront + 25% de dégâts"
@@ -2943,15 +2943,15 @@
       "description": "Un marteau de Slayer forgé à partir de trophées du Riftstalker.",
       "damageShadowOrbs0": {
         "name": "DamageShadowOrbs",
-        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 1,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 1,5% de dégâts pendant 5 secondes. Avec 5 orbes ou plus, le bonus est doublé"
       },
       "damageShadowOrbs6": {
         "name": "DamageShadowOrbs",
-        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,0% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,0% de dégâts pendant 5 secondes. Avec 5 orbes ou plus, le bonus est doublé"
       },
       "damageShadowOrbs10": {
         "name": "DamageShadowOrbs",
-        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,5% de dégâts pendant 5 secondes. Avec 5 orbes ou plus, le bonus est doublé"
       }
     },
     "stalkersScorn": {
@@ -2959,15 +2959,15 @@
       "description": "Cestes aethériques de Slayers fabriqués à partir de trophées de Riftstalker.",
       "damageShadowOrbs0": {
         "name": "DamageShadowOrbs",
-        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 1,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 1,5% de dégâts pendant 5 secondes. Avec 5 orbes ou plus, le bonus est doublé"
       },
       "damageShadowOrbs6": {
         "name": "DamageShadowOrbs",
-        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,0% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,0% de dégâts pendant 5 secondes. Avec 5 orbes ou plus, le bonus est doublé"
       },
       "damageShadowOrbs10": {
         "name": "DamageShadowOrbs",
-        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,5% de dégâts pendant 5 secondes. Avec 5 orbes ou plus, le bonus est doublé"
       }
     },
     "stalkersSpike": {
@@ -2975,15 +2975,15 @@
       "description": "Une aetherolance de Slayer forgée à partir de trophées du Riftstalker.",
       "damageShadowOrbs0": {
         "name": "DamageShadowOrbs",
-        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 1,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 1,5% de dégâts pendant 5 secondes. Avec 5 orbes ou plus, le bonus est doublé"
       },
       "damageShadowOrbs6": {
         "name": "DamageShadowOrbs",
-        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2;0% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2;0% de dégâts pendant 5 secondes. Avec 5 orbes ou plus, le bonus est doublé"
       },
       "damageShadowOrbs10": {
         "name": "DamageShadowOrbs",
-        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,5% de dégâts pendant 5 secondes. Avec 5 orbes ou plus, le bonus est doublé"
       }
     },
     "stalkersStrike": {
@@ -2991,15 +2991,15 @@
       "description": "Une épée de Slayer forgée à partir de trophées du Riftstalker.",
       "damageShadowOrbs0": {
         "name": "DamageShadowOrbs",
-        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 1,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 1,5% de dégâts pendant 5 secondes. Avec 5 orbes ou plus, le bonus est doublé"
       },
       "damageShadowOrbs6": {
         "name": "DamageShadowOrbs",
-        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,0% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,0% de dégâts pendant 5 secondes. Avec 5 orbes ou plus, le bonus est doublé"
       },
       "damageShadowOrbs10": {
         "name": "DamageShadowOrbs",
-        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,5% de dégâts pendant 5 secondes. Avec 5 orbes ou plus, le bonus est doublé"
       }
     },
     "stalkersTrap": {
@@ -3007,15 +3007,15 @@
       "description": "Une paire de chaînes-lames de Slayer forgée à partir de trophées du Riftstalker.",
       "damageShadowOrbs0": {
         "name": "DamageShadowOrbs",
-        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 1,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 1,5% de dégâts pendant 5 secondes. Avec 5 orbes ou plus, le bonus est doublé"
       },
       "damageShadowOrbs6": {
         "name": "DamageShadowOrbs",
-        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,0% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,0% de dégâts pendant 5 secondes. Avec 5 orbes ou plus, le bonus est doublé"
       },
       "damageShadowOrbs10": {
         "name": "DamageShadowOrbs",
-        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,5% de dégâts pendant 5 secondes. Avec 5 orbes ou plus, le bonus est doublé"
       }
     },
     "cryOfTheShrike": {
@@ -3635,7 +3635,7 @@
         "grimOnslaught": {
           "name": "Assaut Sinistre",
           "partEffect": {
-            "0": "Lancez lahache vers l'avant, infligeant jusqu'à 800 points de dégâts (augmenté par la détermination) aux ennemis sur son passage et gagnant 15 points de jauge en touchant un Behemoth. Rattrapez la hache pour gagner 30 points de jauge."
+            "0": "Lancez la hache vers l'avant, infligeant jusqu'à 800 points de dégâts (augmenté par la détermination) aux ennemis sur son passage et gagnant 15 points de jauge en touchant un Behemoth. Rattrapez la hache pour gagner 30 points de jauge."
           }
         },
         "relentlessOnslaught": {

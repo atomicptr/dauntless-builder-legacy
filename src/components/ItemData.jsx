@@ -111,7 +111,7 @@ export default class ItemData extends React.Component {
 
             cellLine = <div className="cell-slots">{cells.map(cell =>
                 <span key={"CellLine_" + cell + (cellLineCounter++)} className="cell-line">
-                    <img className="cell-icon" src={"/assets/icons/perks/" + cell + ".png"} /> {cell}
+                    <img className="cell-icon" src={"/assets/icons/perks/" + cell + ".png"} /> <FormattedMessage id={`builder.cellSlot.${cell.toLowerCase()}`} />
                 </span>
             )}</div>;
         }
