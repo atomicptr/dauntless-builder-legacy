@@ -1,0 +1,4033 @@
+{
+  "armours": {
+    "borealEpiphany": {
+      "name": "Épiphanie boréale",
+      "description": "Protection pour la tête forgée à partir de trophées de Boreus"
+    },
+    "borealMarch": {
+      "name": "Marche boréale",
+      "description": "Protection pour les jambes et les pieds forgée à partir de trophées de Boreus."
+    },
+    "borealMight": {
+      "name": "Puissance boréale",
+      "description": "Protection pour les bras et les mains forgée à partir de trophées de Boreus."
+    },
+    "borealResolve": {
+      "name": "Fermeté boréale",
+      "description": "Protection pour le torse forgée à partir de trophées de Boreus."
+    },
+    "theSkullforge": {
+      "name": "Le Forgecrâne",
+      "description": "Une pièce d'armure exotique de Slayer forgée avec des trophées du Charrogg Marqueflamme.",
+      "damageStaminaShield0": {
+        "name": "DamageStaminaShield",
+        "description": "1,5% des des dégâts infligés se convertissent en un bouclier d'endurance (50 max) qui s'épuise lentement après n'avoir pas infligé de dégâts pendant une courte période."
+      }
+    },
+    "volcanicAegis": {
+      "name": "Égide volcaniques",
+      "description": "Protection pour le torse forgée à partir de trophées de Charrogg."
+    },
+    "volcanicGrips": {
+      "name": "Gants volcaniques",
+      "description": "Protection pour les bras et les mains forgée à partir de trophées de Charrogg."
+    },
+    "volcanicHelm": {
+      "name": "Galea volcanique",
+      "description": "Protection pour la tête forgée à partir de trophées de Charrogg."
+    },
+    "volcanicTreads": {
+      "name": "Pas volcaniques",
+      "description": "Protection pour les jambes et les pieds forgée à partir de trophées de Charrogg."
+    },
+    "draskscaleGauntlets": {
+      "name": "Gantelets en écailles de Drask",
+      "description": "Protection pour les bras et les mains forgée à partir de trophées de Drask."
+    },
+    "draskscaleGreaves": {
+      "name": "Grèves en écailles de Drask",
+      "description": "Protection pour les jambes et les pieds forgée à partir de trophées de Drask."
+    },
+    "draskscaleHelmet": {
+      "name": "Casque en écailles de Drask",
+      "description": "Protection pour la tête forgée à partir de trophées de Drask."
+    },
+    "draskscalePlate": {
+      "name": "Plastron en écailles de Drask",
+      "description": "Protection pour le torse forgée à partir de trophées de Drask."
+    },
+    "fieryBreastplate": {
+      "name": "Plastron ardent",
+      "description": "Protection pour le torse forgée à partir de trophées d'Embermane."
+    },
+    "fieryGauntlets": {
+      "name": "Gantelets ardents",
+      "description": "Protection pour les bras et les mains forgée à partir de trophées d'Embermane."
+    },
+    "fieryGreaves": {
+      "name": "Grèves ardentes",
+      "description": "Protection pour les jambes et les pieds forgée à partir de trophées d'Embermane."
+    },
+    "fieryHelm": {
+      "name": "Heaume ardent",
+      "description": "Protection pour la tête forgée à partir de trophées d'Embermane."
+    },
+    "recruitsBreastplate": {
+      "name": "Plastron de recrue",
+      "description": "Protection pour le torse de Slayer novice."
+    },
+    "recruitsGloves": {
+      "name": "Gants de recrue",
+      "description": "Protection pour les bras et les mains de Slayer novice."
+    },
+    "recruitsGreaves": {
+      "name": "Grèves de recrue",
+      "description": "Protection pour les jambes et les pieds de Slayer novice."
+    },
+    "recruitsMask": {
+      "name": "Masque de recrue",
+      "description": "Protection pour la tête de Slayer novice."
+    },
+    "gnasherCap": {
+      "name": "Chapka Gnasher",
+      "description": "Protection pour la tête forgée à partir de trophées de Gnasher."
+    },
+    "gnasherCloak": {
+      "name": "Manteau Gnasher",
+      "description": "Protection pour le torse forgée à partir de trophées de Gnasher."
+    },
+    "gnasherGrips": {
+      "name": "Poignée Gnasher",
+      "description": "Protection pour les bras et les mains forgée à partir de trophées de Gnasher."
+    },
+    "gnasherTreads": {
+      "name": "Foulée du Gnasher",
+      "description": "Protection pour les jambes et les pieds forgée à partir de trophées de Gnasher."
+    },
+    "hellplateBracers": {
+      "name": "Brassards infernaux",
+      "description": "Protection pour les bras et les mains forgée à partir de trophées d'Hellion."
+    },
+    "hellplateCasque": {
+      "name": "Casque infernal",
+      "description": "Protection pour la tête forgée à partir de trophées d'Hellion"
+    },
+    "hellplateCuirass": {
+      "name": "Cuirasse infernale",
+      "description": "Protection pour le torse forgée à partir de trophées d'Hellion."
+    },
+    "hellplateGreaves": {
+      "name": "Grèves infernales",
+      "description": "Protection pour les jambes et les pieds forgée à partir de trophées d'Hellion."
+    },
+    "clutchesOfTheSwarm": {
+      "name": "Griffes de l'essaim",
+      "description": "Protection pour les bras et les mains forgée à partir de trophées de Kharabak."
+    },
+    "danceOfTheSwarm": {
+      "name": "Danse de l'essaim",
+      "description": "Protection pour les jambes et les pieds forgée à partir de trophées de Kharabak."
+    },
+    "eyeOfTheSwarm": {
+      "name": "Oeil de l'essaim",
+      "description": "Protection pour la tête forgée à partir de trophées de Kharabak."
+    },
+    "shellOfTheSwarm": {
+      "name": "Carapace de l'essaim",
+      "description": "Protection pour le torse forgée à prtir de trophées de Kharabak."
+    },
+    "graspOfThorns": {
+      "name": "Gantelets de ronces",
+      "description": "Une pièce d'armure de Slayer forgée avec des trophées du Souverain des Ronces."
+    },
+    "mantleOfThorns": {
+      "name": "Manteau épineux",
+      "description": "Une pièce d'armure de Slayer forgée avec des trophées du Souverain des Ronces."
+    },
+    "strideOfThorns": {
+      "name": "Foulée de ronces",
+      "description": "Une pièce d'armure de Slayer forgée avec des trophées du Souverain des Ronces."
+    },
+    "visageOfThorns": {
+      "name": "Masque de ronces",
+      "description": "Une pièce d'armure de Slayer forgée avec trophées du SOuverain des Ronces."
+    },
+    "shockingGaze": {
+      "name": "Oeil électrifié",
+      "description": "Protection pour la tête forgée à partir de trophées de Nayzaga."
+    },
+    "shockingGrasp": {
+      "name": "Étreinte électrifiée",
+      "description": "Protection pour les bras et les mains forgée à partir de trophées de Nayzaga."
+    },
+    "shockingHeart": {
+      "name": "Coeur électrifié",
+      "description": "Protection pour le torse forgée à partir de trophées de Nayzaga."
+    },
+    "shockingStride": {
+      "name": "Foulée électrifiée",
+      "description": "Protection pour les jambes et les pieds forgée à partir de trophées de Nayzaga."
+    },
+    "armsOfIce": {
+      "name": "Étreinte gelée",
+      "description": "Protection pour les bras et les mains forgée à partir de trophées de Pangar."
+    },
+    "browOfIce": {
+      "name": "Sommet gelé",
+      "description": "Protection pour la tête forgée à partir de trophées de Pangar."
+    },
+    "coreOfIce": {
+      "name": "Cœur gelé",
+      "description": "Protection pour le torce forgée à partir de trophées de Pangar."
+    },
+    "feetOfIce": {
+      "name": "Versants gelés",
+      "description": "Protection pour les jambes et les pieds forgée à partir de trophées Pangar."
+    },
+    "quillspikeBoots": {
+      "name": "Bottes du quillperceur",
+      "description": "Protection pour les jambes et les pieds forgée à partir de trophées de Quillshot."
+    },
+    "quillspikeGrips": {
+      "name": "Poignets du quillperceur",
+      "description": "Protection pour les bras et les mains forgée à partir de trophées de Quillshot."
+    },
+    "quillspikeJacket": {
+      "name": "Gilet du quillperceur",
+      "description": "Protection pour le torse forgée à partir de trophées de Quillshot."
+    },
+    "quillspikeMask": {
+      "name": "Masque du quillperceur",
+      "description": "Protection pour la tête forgée à partir de trophées de Quillshot."
+    },
+    "lightsCrown": {
+      "name": "Couronne de lumière",
+      "description": "Protection pour la tête forgée à partir de trophées de Rezakiri."
+    },
+    "lightsRefuge": {
+      "name": "Refuge de lumière",
+      "description": "Protection pour les bras de les mains forgée à partir de trophées de Rezakiri."
+    },
+    "lightsVirtue": {
+      "name": "Vertu de lumière",
+      "description": "Protection pour le torse forgée à partir de trophées de Rezakiri."
+    },
+    "lightsWalk": {
+      "name": "Chemin de lumière",
+      "description": "Protection pour les jambes et les pieds forgée à partir de trophées de Rezakiri."
+    },
+    "prismaticGrace": {
+      "name": "Grâce Prismatique",
+      "description": "Une pièce d'armure exotique de Slayer forgée avec des trophées du Rezakiri.",
+      "prismaticGraceRevivePrism0": {
+        "name": "PrismaticGraceRevivePrism",
+        "description": "Après avoir réanimé un autre joueur, lui donne un prisme rayonnant qui bloque les dégts reçu pendant 5 secondes."
+      },
+      "prismaticGraceLethalDamagePrism0": {
+        "name": "PrismaticGraceLethalDamagePrism",
+        "description": "La première fois que vous devriez être à terre, recevez un prisme rayonnant qui bloque les dégâts pendant 10 secondes."
+      },
+      "prismaticGraceActivePrismRevive0": {
+        "name": "PrismaticGraceActivePrismRevive",
+        "description": "Lorsqu'il est actif, le prisme vous permet de réanimer un autre joueur, même au niveau de danger maximum, et vous soigne tous les deux entièrement mais disparait après utilisation ."
+      }
+    },
+    "guiseOfTheRift": {
+      "name": "Aspect de la faille",
+      "description": "Une partie d'armure de Slayer forgée à partir de trophées de Riftstalker."
+    },
+    "handsOfTheRift": {
+      "name": "Gantelets de la faille",
+      "description": "Une partie d'armure de Slayer forgée à partir de trophées de Riftstalker."
+    },
+    "mantleOfTheRift": {
+      "name": "Manteau de la faille",
+      "description": "Une partie d'armure de Slayer forgée à partir de trophées de Riftstalker."
+    },
+    "stridersOfTheRift": {
+      "name": "Arpenteurs de la faille",
+      "description": "Une partie d'armure de Slayer forgée à partir de trophées de Riftstalker."
+    },
+    "shrikedownGloves": {
+      "name": "Gant en duvet Shrike",
+      "description": "Protection pour les bras de les mains forgée à partir de trophées de Shrike."
+    },
+    "shrikedownGreaves": {
+      "name": "Grèves en duvet Shrike",
+      "description": "Protection pour les jambes et les pieds forgée à partir de trophées de Shrike."
+    },
+    "shrikedownHelm": {
+      "name": "Casque en duvet Shrike",
+      "description": "Protection pour la tête forgée à partir de trophées de Shrike."
+    },
+    "shrikedownPlate": {
+      "name": "Plastron de duvet Shrike",
+      "description": "Protection pour le torse forgée à partir de trophées de Shrike."
+    },
+    "darkEmbrace": {
+      "name": "Sombre étreinte",
+      "description": "Protection pour les bras de les mains forgée à partir de trophées de Shrowd."
+    },
+    "darkMarrow": {
+      "name": "Sombre moelle",
+      "description": "Protection pour le torse forgée à partir de trophées de Shrowd."
+    },
+    "darkPath": {
+      "name": "Sombre voie",
+      "description": "Protection pour les jambes et les pieds forgée à partir de trophées de Shrowd."
+    },
+    "darkWatch": {
+      "name": "Sombre veille",
+      "description": "Protection pour la tête forgée à partir de trophées de Shrowd."
+    },
+    "tragicEcho": {
+      "name": "Écho tragique",
+      "description": "Une pièce d'armure exotique de Slayer forgée avec des trophées du Shrowd.",
+      "tragicEchoDamageIncrease0": {
+        "name": "TragicEchoDamageIncrease",
+        "description": "La première fois que vous êtes mis à terre, vous vous transformez en un clone d'ombre infligeant + 100 % de dégâts pendant 15 secondes."
+      }
+    },
+    "heartOfStone": {
+      "name": "Cœur de pierre",
+      "description": "Protection pour le torse forgée à partir de trophées de Skarn."
+    },
+    "mightOfStone": {
+      "name": "Puissance de pierre",
+      "description": "Protection pour les bras de les mains forgée à partir de trophées de Skarn."
+    },
+    "pillarsOfStone": {
+      "name": "Piliers de Pierre",
+      "description": "Protection pour les jambes et les pieds forgée à partir de trophées de Skarn."
+    },
+    "sightOfStone": {
+      "name": "Regard de pierre",
+      "description": "Protection pour la tête forgée à partir de trophées de."
+    },
+    "skraevwingBoots": {
+      "name": "Solerets ailes de Skraev",
+      "description": "Protection pour les jambes et les pieds forgée à partir de trophées de Skraev."
+    },
+    "skraevwingGloves": {
+      "name": "Gants ailes de Skraev",
+      "description": "Protection pour les bras et les mains forgée à partir de trophées de Skraev."
+    },
+    "skraevwingHelmet": {
+      "name": "Casque ailes de Skraev",
+      "description": "Protection pour la tête forgée à partir de trophées de Skraev."
+    },
+    "skraevwingJacket": {
+      "name": "Manteau Ailes de Skraev",
+      "description": "Protection pour le torse forgée à partir de trophées de Skraev."
+    },
+    "lightningBoots": {
+      "name": "Bottes de tonerre",
+      "description": "Protection pour les jambes et les pieds forgée à partir de trophées de Stormclaw."
+    },
+    "lightningGloves": {
+      "name": "Gants de tonnerre",
+      "description": "Protection pour les bras et les mains forgée à partir de trophées de Stormclaw."
+    },
+    "lightningHelm": {
+      "name": "Casque de tonnerre",
+      "description": "Protection pour la tête forgée à partir de trophées de Stormclaw."
+    },
+    "lightningPlate": {
+      "name": "Plastron de tonnerre",
+      "description": "Protection pour le torse forgée à partir de trophées de Stormclaw."
+    },
+    "aegisOfValour": {
+      "name": "Égide de Bravoure",
+      "description": "Protection pour le torse forgée à partir de trophées de Valomyr."
+    },
+    "crestOfValour": {
+      "name": "Crête de Bravoure",
+      "description": "Protection pour la tête forgée à partir de trophées de Valomyr."
+    },
+    "gauntletsOfValour": {
+      "name": "Gantelet de Bravoure",
+      "description": "Protection pour les bras et les mains forgée à partir de trophées de Valomyr."
+    },
+    "greavesOfValour": {
+      "name": "Grèves de Bravoure",
+      "description": "Protection pour les jambes et les pieds forgée à partir de trophées de Valomyr."
+    }
+  },
+  "cells": {
+    "assassinsVigourCell": "Cellule de vigueur d'assassin",
+    "1AssassinsVigourCell": "Cellule de vigueur d'assassin +1",
+    "2AssassinsVigourCell": "Cellule de vigueur d'assassin +2",
+    "3AssassinsVigourCell": "Cellule de vigueur d'assassin +3",
+    "bloodlessCell": "Cellule coagulante",
+    "1BloodlessCell": "Cellule coagulante +1",
+    "2BloodlessCell": "Cellule coagulante +2",
+    "3BloodlessCell": "Cellule coagulante +3",
+    "fireproofCell": "Cellule ignifuge",
+    "1FireproofCell": "Cellule ignifuge +1",
+    "2FireproofCell": "Cellule ignifuge +2",
+    "3FireproofCell": "Cellule ignifuge +3",
+    "fortressCell": "Cellule forteresse",
+    "1FortressCell": "Cellule forteresse +1",
+    "2FortressCell": "Cellule forteresse +2",
+    "3FortressCell": "Cellule forteresse +3",
+    "guardianCell": "Cellule de gardien",
+    "1GuardianCell": "Cellule de gardien +1",
+    "2GuardianCell": "Cellule de gardien +2",
+    "3GuardianCell": "Cellule de gardien +3",
+    "iceborneCell": "Cellule de sang froid",
+    "1IceborneCell": "Cellule de sang froid +1",
+    "2IceborneCell": "Cellule de sang froid +2",
+    "3IceborneCell": "Cellule de sang froid +3",
+    "insulatedCell": "Cellule isolante",
+    "1InsulatedCell": "Cellule isolante +1",
+    "2InsulatedCell": "Cellule isolante +2",
+    "3InsulatedCell": "Cellule isolante +3",
+    "nineLivesCell": "Cellule lernéenne",
+    "1NineLivesCell": "Cellule lernéenne +1",
+    "2NineLivesCell": "Cellule lernéenne +2",
+    "3NineLivesCell": "Cellule lernéenne +3",
+    "shellshockResistCell": "Cellule résiliente",
+    "1ShellshockResistCell": "Cellule résiliente +1",
+    "2ShellshockResistCell": "Cellule résiliente +2",
+    "3ShellshockResistCell": "Cellule résiliente +3",
+    "strategistCell": "Cellule de stratège",
+    "1StrategistCell": "Cellule de stratège +1",
+    "2StrategistCell": "Cellule de stratège +2",
+    "3StrategistCell": "Cellule de stratège +3",
+    "sturdyCell": "Cellule stabilisante",
+    "1SturdyCell": "Cellule stabilisante +1",
+    "2SturdyCell": "Cellule stabilisante +2",
+    "3SturdyCell": "Cellule stabilisante +3",
+    "toughCell": "Cellule de robustesse",
+    "1ToughCell": "Cellule de robustesse +1",
+    "2ToughCell": "Cellule de robustesse +2",
+    "3ToughCell": "Cellule de robustesse +3",
+    "warmthCell": "Cellule chauffante",
+    "1WarmthCell": "Cellule chauffante +1",
+    "2WarmthCell": "Cellule chauffante +2",
+    "3WarmthCell": "Cellule chauffante +3",
+    "agilityCell": "Cellule d'agilité",
+    "1AgilityCell": "Cellule d'agilité +1",
+    "2AgilityCell": "Cellule d'agilité +2",
+    "3AgilityCell": "Cellule d'agilité +3",
+    "conditioningCell": "Cellule de constitution",
+    "1ConditioningCell": "Cellule de constitution +1",
+    "2ConditioningCell": "Cellule de constitution +2",
+    "3ConditioningCell": "Cellule de constitution +3",
+    "enduranceCell": "Cellule d'endurance",
+    "1EnduranceCell": "Cellule d'endurance +1",
+    "2EnduranceCell": "Cellule d'endurance +2",
+    "3EnduranceCell": "Cellule d'endurance +3",
+    "evasionCell": "Cellule d'évasion améliorée",
+    "1EvasionCell": "Cellule d'évasion améliorée +1",
+    "2EvasionCell": "Cellule d'évasion améliorée +2",
+    "3EvasionCell": "Cellule d'évasion améliorée +3",
+    "fleetFootedCell": "Cellule de sprint évasif",
+    "1FleetFootedCell": "Cellule de sprint évasif +1",
+    "2FleetFootedCell": "Cellule de sprint évasif +2",
+    "3FleetFootedCell": "Cellule de sprint évasif +3",
+    "nimbleCell": "Cellule d'évasion légère",
+    "1NimbleCell": "Cellule d'évasion légère +1",
+    "2NimbleCell": "Cellule d'évasion légère +2",
+    "3NimbleCell": "Cellule d'évasion légère +3",
+    "sprinterCell": "Cellule de coureur",
+    "1SprinterCell": "Cellule de coureur +1",
+    "2SprinterCell": "Cellule de coureur +2",
+    "3SprinterCell": "Cellule de coureur +3",
+    "swiftCell": "Cellule de sprint",
+    "1SwiftCell": "Cellule de sprint +1",
+    "2SwiftCell": "Cellule de sprint +2",
+    "3SwiftCell": "Cellule de sprint +3",
+    "aetherhunterCell": "Cellule de chasse-aether",
+    "1AetherhunterCell": "Cellule de chasse-aether +1",
+    "2AetherhunterCell": "Cellule de chasse-aether +2",
+    "3AetherhunterCell": "Cellule de chasse-aether +3",
+    "deconstructionCell": "Cellule de déconstruction",
+    "1DeconstructionCell": "Cellule de déconstruction +1",
+    "2DeconstructionCell": "Cellule de déconstruction +2",
+    "3DeconstructionCell": "Cellule de déconstruction +3",
+    "disciplineCell": "Cellule de discipline",
+    "1DisciplineCell": "Cellule de discipline +1",
+    "2DisciplineCell": "Cellule de discipline +2",
+    "3DisciplineCell": "Cellule de discipline +3",
+    "knockoutKingCell": "Cellule assommoir",
+    "1KnockoutKingCell": "Cellule assommoir +1",
+    "2KnockoutKingCell": "Cellule assommoir +2",
+    "3KnockoutKingCell": "Cellule assommoir +3",
+    "overpowerCell": "Cellule de domination",
+    "1OverpowerCell": "Cellule de domination +1",
+    "2OverpowerCell": "Cellule de domination +2",
+    "3OverpowerCell": "Cellule de domination +3",
+    "pacifierCell": "Cellule de pacificateur",
+    "1PacifierCell": "Cellule de pacificateur +1",
+    "2PacifierCell": "Cellule de pacificateur +2",
+    "3PacifierCell": "Cellule de pacificateur +3",
+    "rageCell": "Cellule de rage",
+    "1RageCell": "Cellule de rage +1",
+    "2RageCell": "Cellule de rage +2",
+    "3RageCell": "Cellule de rage +3",
+    "ragehunterCell": "Cellule de chasse-rage",
+    "1RagehunterCell": "Cellule de chasse-rage +1",
+    "2RagehunterCell": "Cellule de chasse-rage +2",
+    "3RagehunterCell": "Cellule de chasse-rage +3",
+    "sharpenedCell": "Cellule aiguisée",
+    "1SharpenedCell": "Cellule aiguisée +1",
+    "2SharpenedCell": "Cellule aiguisée +2",
+    "3SharpenedCell": "Cellule aiguisée +3",
+    "acidicCell": "Cellule acide",
+    "1AcidicCell": "Cellule acide +1",
+    "2AcidicCell": "Cellule acide +2",
+    "3AcidicCell": "Cellule acide +3",
+    "adrenalineCell": "Cellule d'adrénaline",
+    "1AdrenalineCell": "Cellule d'adrénaline +1",
+    "2AdrenalineCell": "Cellule d'adrénaline +2",
+    "3AdrenalineCell": "Cellule d'adrénaline +3",
+    "barbedCell": "Cellule barbelée",
+    "1BarbedCell": "Cellule barbelée +1",
+    "2BarbedCell": "Cellule barbelée +2",
+    "3BarbedCell": "Cellule barbelée +3",
+    "berserkerCell": "Cellule de berserker",
+    "1BerserkerCell": "Cellule de berserker +1",
+    "2BerserkerCell": "Cellule de berserker +2",
+    "3BerserkerCell": "Cellule de berserker +3",
+    "bladestormCell": "Cellule de tempête de lames",
+    "1BladestormCell": "Cellule de tempête de lames +1",
+    "2BladestormCell": "Cellule de tempête de lames +2",
+    "3BladestormCell": "Cellule de tempête de lames +3",
+    "cunningCell": "Cellule de frappe critique",
+    "1CunningCell": "Cellule de frappe critique +1",
+    "2CunningCell": "Cellule de frappe critique +2",
+    "3CunningCell": "Cellule de frappe critique +3",
+    "evasiveFuryCell": "Cellule de furie évasive",
+    "1EvasiveFuryCell": "Cellule de furie évasive +1",
+    "2EvasiveFuryCell": "Cellule de furie évasive +2",
+    "3EvasiveFuryCell": "Cellule de furie évasive +3",
+    "mercilessCell": "Cellule impitoyable",
+    "1MercilessCell": "Cellule impitoyable +1",
+    "2MercilessCell": "Cellule impitoyable +2",
+    "3MercilessCell": "Cellule impitoyable +3",
+    "moltenCell": "Cellule fondue",
+    "1MoltenCell": "Cellule fondue +1",
+    "2MoltenCell": "Cellule fondue +2",
+    "3MoltenCell": "Cellule fondue +3",
+    "predatorCell": "Cellule prédatrice",
+    "1PredatorCell": "Cellule prédatrice +1",
+    "2PredatorCell": "Cellule prédatrice +2",
+    "3PredatorCell": "Cellule prédatrice +3",
+    "savageryCell": "Cellule de sauvagerie",
+    "1SavageryCell": "Cellule de sauvagerie +1",
+    "2SavageryCell": "Cellule de sauvagerie +2",
+    "3SavageryCell": "Cellule de sauvagerie +3",
+    "weightedStrikesCell": "Cellule de frappes lourdes",
+    "1WeightedStrikesCell": "Cellule de frappes lourdes +1",
+    "2WeightedStrikesCell": "Cellule de frappes lourdes +2",
+    "3WeightedStrikesCell": "Cellule de frappes lourdes +3",
+    "wildFrenzyCell": "Cellule de frénésie sauvage",
+    "1WildFrenzyCell": "Cellule de frénésie sauvage +1",
+    "2WildFrenzyCell": "Cellule de frénésie sauvage +2",
+    "3WildFrenzyCell": "Cellule de frénésie sauvage +3",
+    "aetherborneCell": "Cellule de jouvence aethérée",
+    "1AetherborneCell": "Cellule de jouvence aethérée +1",
+    "2AetherborneCell": "Cellule de jouvence aethérée +2",
+    "3AetherborneCell": "Cellule de jouvence aethérée +3",
+    "aethericAttunementCell": "Cellule d'harmonisation aethérée",
+    "1AethericAttunementCell": "Cellule d'harmonisation aethérée +1",
+    "2AethericAttunementCell": "Cellule d'harmonisation aethérée +2",
+    "3AethericAttunementCell": "Cellule d'harmonisation aethérée +3",
+    "aethericFrenzyCell": "Cellule de frénésie aethérée",
+    "1AethericFrenzyCell": "Cellule de frénésie aethérée +1",
+    "2AethericFrenzyCell": "Cellule de frénésie aethérée +2",
+    "3AethericFrenzyCell": "Cellule de frénésie aethérée +3",
+    "conduitCell": "Cellule de conduction",
+    "1ConduitCell": "Cellule de conduction +1",
+    "2ConduitCell": "Cellule de conduction +2",
+    "3ConduitCell": "Cellule de conduction +3",
+    "energizedCell": "Cellule de charge",
+    "1EnergizedCell": "Cellule de charge +1",
+    "2EnergizedCell": "Cellule de charge +2",
+    "3EnergizedCell": "Cellule de charge +3",
+    "engineerCell": "Cellule d'ingénieur",
+    "1EngineerCell": "Cellule d'ingénieur +1",
+    "2EngineerCell": "Cellule d'ingénieur +2",
+    "3EngineerCell": "Cellule d'ingénieur +3",
+    "lucentCell": "Cellule luminescente",
+    "1LucentCell": "Cellule luminescente +1",
+    "2LucentCell": "Cellule luminescente +2",
+    "3LucentCell": "Cellule luminescente +3",
+    "medicCell": "Cellule de médecin",
+    "1MedicCell": "Cellule de médecin +1",
+    "2MedicCell": "Cellule de médecin +2",
+    "3MedicCell": "Cellule de médecin +3",
+    "menderCell": "Cellule de guérisseur",
+    "1MenderCell": "Cellule de guérisseur +1",
+    "2MenderCell": "Cellule de guérisseur +2",
+    "3MenderCell": "Cellule de guérisseur +3",
+    "stunningVigourCell": "Cellule de vigueur étourdissante",
+    "1StunningVigourCell": "Cellule de vigueur étourdissante +1",
+    "2StunningVigourCell": "Cellule de vigueur étourdissante +2",
+    "3StunningVigourCell": "Cellule de vigueur étourdissante +3",
+    "vampiricCell": "Cellule vampirique",
+    "1VampiricCell": "Cellule vampirique +1",
+    "2VampiricCell": "Cellule vampirique +2",
+    "3VampiricCell": "Cellule vampirique +3"
+  },
+  "lanterns": {
+    "broadsidesLantern": {
+      "name": "Lanterne de bordée",
+      "description": " ",
+      "lanternAbility": {
+        "instant": "Appuyez pour tirer un boulet de canon venant des airs qui inflige 350 points de dégâts ou, contre les Behemoths volants, 450 points de dégâts en coup critique.",
+        "hold": "Maintenez pour larguer une bombe venant des airs qui explose après 1 seconde. Inflige 650 points de dégâts et peut interrompre les Behemoths."
+      }
+    },
+    "drasksEye": {
+      "name": "Œil de Drask",
+      "description": " ",
+      "lanternAbility": {
+        "instant": "Augmente les dégâts de 30% pendant 6 secondes.",
+        "hold": "Tire un éclair infligeant 150 points de dégâts de foudre, peut frapper plusieurs fois lorsqu'il traverse des ennemis."
+      }
+    },
+    "embermanesRapture": {
+      "name": "Embuscade de l'Embermane",
+      "description": " ",
+      "lanternAbility": {
+        "instant": "Augmente la vitessed'attaque de 25% pendant 8 secondes.",
+        "hold": "Génère une boule de feu devant vous qui explseaprès 5 secondes, infligeant 850 points de dégâts de braise aux ennemis proches."
+      }
+    },
+    "koshaisBloom": {
+      "name": "Floraison du Koshai",
+      "description": " ",
+      "lanternAbility": {
+        "instant": "10% des dégâts infligés vous soigneront pendant 8 secondes.",
+        "hold": "Vous projette dans une direction, infligeant 750 points de dégâts telluriques aux ennemis proches du point d'arrivée."
+      }
+    },
+    "pangarsShine": {
+      "name": "Éclat de Pangar",
+      "description": " ",
+      "lanternAbility": {
+        "instant": "Restaure de 25% de votre endurance maximale.",
+        "hold": "Créer un pilier de givre devant vous qui inflige 960 points de dégâts de givre en 12 secondes aux ennemis proches."
+      }
+    },
+    "recruitsLantern": {
+      "name": "Lanterne de recrue",
+      "description": " ",
+      "lanternAbility": {
+        "instant": "Octroie 50 points de bouclier (non cumulables)",
+        "hold": "Disperse l'aether stocké pour permettre au Slayer de trouver le Béhémoth."
+      }
+    },
+    "shrikesZeal": {
+      "name": "Fougue du Shrike",
+      "description": " ",
+      "lanternAbility": {
+        "instant": "Augmente la vitesse de déplacement de 40% pendant 6 secondes.",
+        "hold": "Génère une aura qui augmentate de 15% de vitesse d'attaque et de déplacement des Slayers proches pendant 15 secondes."
+      }
+    },
+    "skarnsDefiance": {
+      "name": "Défiance du Skarn",
+      "description": " ",
+      "lanternAbility": {
+        "instant": "Accorde un bouclier de 250 points pendant 6 secondes.",
+        "hold": "Vous entoure de rochers tourbillonants infligeant un total de 900 points de dégâts telluriques en 10 secondes aux ennemis proches."
+      }
+    }
+  },
+  "perks": {
+    "acidic": {
+      "name": "Acide",
+      "description": "Augmente les dégâts mutilants au détriment des dégâts aux membres.",
+      "effects": {
+        "1": [
+          "Convertit 30% des dégâts aux membres en dégâts mutilants",
+          " "
+        ],
+        "2": [
+          "Convertit 40% des dégâts aux membres en dégâts mutilants",
+          " "
+        ],
+        "3": [
+          "Convertit 50% des dégâts aux membres en dégâts mutilants",
+          " "
+        ],
+        "4": [
+          "Convertit 50% des dégâts aux membres en dégâts mutilants",
+          "+10% de dégâts aux membres"
+        ],
+        "5": [
+          "Convertit 50% des dégâts aux membres en dégâts mutilants",
+          "+15% de dégâts aux membres"
+        ],
+        "6": [
+          "Convertit 50% des dégâts aux membres en dégâts mutilants",
+          "+20% de dégâts aux membres"
+        ]
+      }
+    },
+    "adrenaline": {
+      "name": "Adrénaline",
+      "description": "Augmente les dégâts infligés en fonction de l'endurance dépenssée.",
+      "effects": {
+        "1": [
+          "Donne + 0,3% de dégâts par tranche de 10 endurance manquante."
+        ],
+        "2": [
+          "Donne + 0,6% de dégâts par tranche de 10 endurance manquante."
+        ],
+        "3": [
+          "Donne + 0,9% de dégâts par tranche de 10 endurance manquante."
+        ],
+        "4": [
+          "Donne + 1,2% de dégâts par tranche de 10 endurance manquante."
+        ],
+        "5": [
+          "Donne + 1,5% de dégâts par tranche de 10 endurance manquante."
+        ],
+        "6": [
+          "Donne + 1,8% de dégâts par tranche de 10 endurance manquante."
+        ]
+      }
+    },
+    "aetherborne": {
+      "name": "Jouvence aethérée",
+      "description": "Augmente les avantages liés à l'utilisation des puits d'aether.",
+      "effects": {
+        "1": [
+          "À l'utilisation d'un puit d'aether, donne + 25 de soin et offre 25% de chance de ne pas consommer de chargedu puits."
+        ],
+        "2": [
+          "À l'utilisation d'un puit d'aether, donne + 50 de soin et offre 25% de chance de ne pas consommer de chargedu puits."
+        ],
+        "3": [
+          "À l'utilisation d'un puit d'aether, donne + 75 de soin et offre 25% de chance de ne pas consommer de chargedu puits."
+        ],
+        "4": [
+          "À l'utilisation d'un puit d'aether, donne + 100 de soin et offre 25% de chance de ne pas consommer de chargedu puits."
+        ],
+        "5": [
+          "À l'utilisation d'un puit d'aether, donne + 150 de soin et offre 25% de chance de ne pas consommer de chargedu puits."
+        ],
+        "6": [
+          "À l'utilisation d'un puit d'aether, donne + 200 de soin et offre 25% de chance de ne pas consommer de chargedu puits."
+        ]
+      }
+    },
+    "aetherhunter": {
+      "name": "Chasse-aether",
+      "description": "Augmente les dégâts contre les Behemoths chargés d'aether.",
+      "effects": {
+        "1": [
+          "+5% de dégâts contre les Behemoths chargés en aether"
+        ],
+        "2": [
+          "+10% de dégâts contre les Behemoths chargés en aether"
+        ],
+        "3": [
+          "+20% de dégâts contre les Behemoths chargés en aether"
+        ],
+        "4": [
+          "+30% de dégâts contre les Behemoths chargés en aether"
+        ],
+        "5": [
+          "+40% de dégâts contre les Behemoths chargés en aethers"
+        ],
+        "6": [
+          "+50% de dégâts contre les Behemoths chargés en aether"
+        ]
+      }
+    },
+    "aethericAttunement": {
+      "name": "Harmonisation aethérée",
+      "description": "Augmentation en pourcentage de la charge de lanterne à chaque attaque.",
+      "effects": {
+        "1": [
+          "+10% de charge de lanterne provenant des attaques"
+        ],
+        "2": [
+          "+15% de charge de lanterne provenant des attaques"
+        ],
+        "3": [
+          "+20% de charge de lanterne provenant des attaques"
+        ],
+        "4": [
+          "+30% de charge de lanterne provenant des attaques"
+        ],
+        "5": [
+          "+40% de charge de lanterne provenant des attaques"
+        ],
+        "6": [
+          "+50% de charge de lanterne provenant des attaques"
+        ]
+      }
+    },
+    "aethericFrenzy": {
+      "name": "Frénésie aethérée",
+      "description": "Ajoute une quantité fixe à la charge de lanterne obtenue à chaque attaque.",
+      "effects": {
+        "1": [
+          "+3 points de charge de lanterne par coup"
+        ],
+        "2": [
+          "+4 points de charge de lanterne par coup"
+        ],
+        "3": [
+          "+5 points de charge de lanterne par coup"
+        ],
+        "4": [
+          "+7.5 points de charge de lanterne par coup"
+        ],
+        "5": [
+          "+10 points de charge de lanterne par coup"
+        ],
+        "6": [
+          "+12.5 points de charge de lanterne par coup"
+        ]
+      }
+    },
+    "agility": {
+      "name": "Agilité",
+      "description": "Réduit le coût en endurance des esquives.",
+      "effects": {
+        "1": [
+          "-10% au coût d'endurance des esquives"
+        ],
+        "2": [
+          "-20% au coût d'endurance des esquives"
+        ],
+        "3": [
+          "-30% au coût d'endurance des esquives"
+        ],
+        "4": [
+          "-40% au coût d'endurance des esquives"
+        ],
+        "5": [
+          "-55% au coût d'endurance des esquives"
+        ],
+        "6": [
+          "-70% au coût d'endurance des esquives"
+        ]
+      }
+    },
+    "assassinsVigour": {
+      "name": "Vigueur d'assassin",
+      "description": "Régénère de la vie après avoir brisé une partie d'un Behemoth.",
+      "effects": {
+        "1": [
+          "Après avoir brisé une partie d'un Behemoth, vous vous soignez de 50"
+        ],
+        "2": [
+          "Après avoir brisé une partie d'un Behemoth, vous vous soignez de 100"
+        ],
+        "3": [
+          "Après avoir brisé une partie d'un Behemoth, vous vous soignez de 150"
+        ],
+        "4": [
+          "Après avoir brisé une partie d'un Behemoth, vous vous soignez de 200"
+        ],
+        "5": [
+          "Après avoir brisé une partie d'un Behemoth, vous vous soignez de 250"
+        ],
+        "6": [
+          "Après avoir brisé une partie d'un Behemoth, vous vous soignez de 300"
+        ]
+      }
+    },
+    "barbed": {
+      "name": "barbelée",
+      "description": "Ajoute une quandtité fixe de dégâts mutilants à chaque coup.",
+      "effects": {
+        "1": [
+          "+5 dégâts mutilants",
+          " "
+        ],
+        "2": [
+          "+10 dégâts mutilants",
+          " "
+        ],
+        "3": [
+          "+15 dégâts mutilants",
+          " "
+        ],
+        "4": [
+          "+20 dégâts mutilants",
+          "Après avoir esquivé une attaque, votre prochaine attaque inflige + 200 dégâts mutilants"
+        ],
+        "5": [
+          "+30 dégâts mutilants",
+          "Après avoir esquivé une attaque, votre prochaine attaque inflige + 200 dégâts mutilants"
+        ],
+        "6": [
+          "+40 dégâts mutilants",
+          "Après avoir esquivé une attaque, votre prochaine attaque inflige + 400 dégâts mutilants"
+        ]
+      }
+    },
+    "berserker": {
+      "name": "Berserker",
+      "description": "Réduit la santé maximale. Infliger des dégâts augmente les dégâts infligées pendant une courte période.",
+      "effects": {
+        "1": [
+          "-50 points de vie max",
+          "Après avoir infligé des dégâts, gagnez +1% de dégâts pendant 3 secondes. S'empile jusqu'à 10 fois."
+        ],
+        "2": [
+          "-100 points de vie max",
+          "AAprès avoir infligé des dégâts, gagnez +1.5% de dégâts pendant 3 secondes. S'empile jusqu'à 10 fois."
+        ],
+        "3": [
+          "-150 points de vie max",
+          "Après avoir infligé des dégâts, gagnez +2% de dégâts pendant 3 secondes. S'empile jusqu'à 10 fois."
+        ],
+        "4": [
+          "-200 points de vie max",
+          "Après avoir infligé des dégâts, gagnez +2.5% de dégâts pendant 3 secondes. S'empile jusqu'à 10 fois."
+        ],
+        "5": [
+          "-250 points de vie max",
+          "Après avoir infligé des dégâts, gagnez +3% de dégâts pendant 3 secondes. S'empile jusqu'à 10 fois."
+        ],
+        "6": [
+          "-300 points de vie max",
+          "Après avoir infligé des dégâts, gagnez +3.5% de dégâts pendant 3 secondes. S'empile jusqu'à 10 fois."
+        ]
+      }
+    },
+    "bladestorm": {
+      "name": "Tempête de lames",
+      "description": "Ajoute une quantité fixe de dégâts aux membres à chaque coup.",
+      "effects": {
+        "1": [
+          "+5 dégâts aux membres",
+          " "
+        ],
+        "2": [
+          "+10 dégâts aux membres",
+          " "
+        ],
+        "3": [
+          "+15 dégâts aux membres",
+          " "
+        ],
+        "4": [
+          "+20 dégâts aux membres",
+          "Après avoir esquivé une attaque, votre prochaine attaque inflige +200 dégâts aux membres."
+        ],
+        "5": [
+          "+30 dégâts aux membres",
+          "Après avoir esquivé une attaque, votre prochaine attaque inflige +200 dégâts aux membrese"
+        ],
+        "6": [
+          "+40 dégâts aux membres",
+          " Après avoir esquivé une attaque, votre prochaine attaque inflige +400 dégâts aux membres"
+        ]
+      }
+    },
+    "bloodless": {
+      "name": "Coagulation",
+      "description": "protège contre les status « Blessé » et « Hémorragie ».",
+      "effects": {
+        "1": [
+          "Réduit la durée de l'effet de statut « Blessé » de 50%.",
+          " "
+        ],
+        "2": [
+          "Réduit la durée de l'effet de statut « Blessé » de 80%",
+          " "
+        ],
+        "3": [
+          "Immunité à l'effet de statut « Blessé »",
+          " "
+        ],
+        "4": [
+          "Immunité à l'effet de statut « Blessé »",
+          "Réduit l'effet du statut « Hémorragie » de 50%"
+        ],
+        "5": [
+          "Immunité à l'effet de statut « Blessé »",
+          "Réduit l'effet du statut « Hémorragie » de 80%"
+        ],
+        "6": [
+          "Immunité à l'effet de statut « Blessé »",
+          "Immunité à l'effet de statut « Hémorragie »"
+        ]
+      }
+    },
+    "conditioning": {
+      "name": "Constitution",
+      "description": "Augmente La régénération d'endurance.",
+      "effects": {
+        "1": [
+          "+5 à la régénération d'endurance"
+        ],
+        "2": [
+          "+10 à la régénération d'endurance"
+        ],
+        "3": [
+          "+15 à la régénération d'endurance"
+        ],
+        "4": [
+          "+20 à la régénération d'endurance"
+        ],
+        "5": [
+          "+25 à la régénération d'endurance"
+        ],
+        "6": [
+          "+30 à la régénération d'endurance"
+        ]
+      }
+    },
+    "conduit": {
+      "name": "Conduction",
+      "description": "La capacité maintenue de la lanterne octroie temporairement de la vitesse d'attaque à tous les slayers.",
+      "effects": {
+        "1": [
+          "Utiliser votre capacité maintenue de lanterne octroie +4% de vitesse d'attaque à tous les Slayers pendant 10 secondes."
+        ],
+        "2": [
+          "Utiliser votre capacité maintenue de lanterne octroie +6% de vitesse d'attaque à tous les Slayers pendant 10 secondes."
+        ],
+        "3": [
+          "Utiliser votre capacité maintenue de lanterne octroie +8% de vitesse d'attaque à tous les Slayers pendant 10 secondes."
+        ],
+        "4": [
+          "Utiliser votre capacité maintenue de lanterne octroie +10% de vitesse d'attaque à tous les Slayers pendant 10 secondes."
+        ],
+        "5": [
+          "Utiliser votre capacité maintenue de lanterne octroie +12,5% de vitesse d'attaque à tous les Slayers pendant 10 secondes."
+        ],
+        "6": [
+          "Utiliser votre capacité maintenue de lanterne octroie +15% de vitesse d'attaque à tous les Slayers pendant 10 secondes."
+        ]
+      }
+    },
+    "cunning": {
+      "name": "Frappe critique",
+      "description": "Donne une chance de doubler les dégâts infligés.",
+      "effects": {
+        "1": [
+          "+2% de chance de coup critique."
+        ],
+        "2": [
+          "+3% de chance de coup critique."
+        ],
+        "3": [
+          "+4% de chance de coup critique."
+        ],
+        "4": [
+          "+5% de chance de coup critique. +10% de dégâts des coups critiques."
+        ],
+        "5": [
+          "+7,5% de chance de coup critique. +20% de dégâts des coups critiques."
+        ],
+        "6": [
+          "+10% de chance de coup critique. +30% de dégâts des coups critiques."
+        ]
+      }
+    },
+    "deconstruction": {
+      "name": "Démolition",
+      "description": "Augmente les dégâts contre les objets créés par les Béhemoths",
+      "effects": {
+        "1": [
+          "Infligez 110% de dégâts aux objets créés par les Behemoths."
+        ],
+        "2": [
+          "Infligez 120% de dégâts aux objets créés par les Behemoths."
+        ],
+        "3": [
+          "Infligez 130% de dégâts aux objets créés par les Behemoths."
+        ],
+        "4": [
+          "Infligez 150% de dégâts aux objets créés par les Behemoths."
+        ],
+        "5": [
+          "Infligez 170% de dégâts aux objets créés par les Behemoths."
+        ],
+        "6": [
+          "Infligez 200% de dégâts aux objets créés par les Behemoths."
+        ]
+      }
+    },
+    "discipline": {
+      "name": "Discipline",
+      "description": "Réduit votre santé max de 50%. Augmente les chances de coup critiques.",
+      "effects": {
+        "1": [
+          "+2,5% de chance de coup critique",
+          "La santé est limitée à 50% de la santé max"
+        ],
+        "2": [
+          "+5% de chances de coup critique",
+          "La santé est limitée à 50% de la santé max"
+        ],
+        "3": [
+          "+7,5% de chance de coup critique",
+          "La santé est limitée à 50% de la santé max"
+        ],
+        "4": [
+          "+10.0% chances de coup critique",
+          "La santé est limitée à 50% de la santé max"
+        ],
+        "5": [
+          "+12.5% de chance de coup critique",
+          "La santé est limitée à 50% de la santé max"
+        ],
+        "6": [
+          "+15% de chance de coup critique",
+          "La santé est limitée à 50% de la santé max"
+        ]
+      }
+    },
+    "endurance": {
+      "name": "Endurance",
+      "description": "Augmente l'endurance maximale.",
+      "effects": {
+        "1": [
+          " Augmente l'endurance maximale de 10."
+        ],
+        "2": [
+          " Augmente l'endurance maximale de 20."
+        ],
+        "3": [
+          " Augmente l'endurance maximale de 40."
+        ],
+        "4": [
+          " Augmente l'endurance maximale de 60."
+        ],
+        "5": [
+          " Augmente l'endurance maximale de 80."
+        ],
+        "6": [
+          " Augmente l'endurance maximale de 100."
+        ]
+      }
+    },
+    "energized": {
+      "name": "Charge",
+      "description": "Augmente la vitesse de charge de la jauge de l'arme.",
+      "effects": {
+        "1": [
+          "+10% de vitesse de charge de la jauge de l'arme."
+        ],
+        "2": [
+          "+15% de vitesse de charge de la jauge de l'arme."
+        ],
+        "3": [
+          "+20% de vitesse de charge de la jauge de l'arme."
+        ],
+        "4": [
+          "+25% de vitesse de charge de la jauge de l'arme."
+        ],
+        "5": [
+          "+30% de vitesse de charge de la jauge de l'arme."
+        ],
+        "6": [
+          "+40% de vitesse de charge de la jauge de l'arme."
+        ]
+      }
+    },
+    "engineer": {
+      "name": "Ingénieur",
+      "description": "Réduit les soins octroyés par la flaque du Slayer. Augmente la portée des pylônes.",
+      "effects": {
+        "1": [
+          "La flasque soigne 30 de moins.",
+          "+35% de portée des pylônes."
+        ],
+        "2": [
+          "La flasque soigne 60 de moins.",
+          "+50% de portée des pylônes."
+        ],
+        "3": [
+          "La flasque soigne 90 de moins.",
+          "+65% de portée des pylônes."
+        ],
+        "4": [
+          "La flasque soigne 120 de moins.",
+          "+80% de portée des pylônes."
+        ],
+        "5": [
+          "La flasque soigne 150 de moins.",
+          "+115% de portée des pylônes."
+        ],
+        "6": [
+          "La flasque soigne 180 de moins.",
+          "+150% de portée des pylônes."
+        ]
+      }
+    },
+    "evasion": {
+      "name": "Évasion améliorée",
+      "description": "Augmente la durée d'invulnéribilité lors des esquives.",
+      "effects": {
+        "1": [
+          "Augmente la durée d'invincibilité lors des esquives de 7%."
+        ],
+        "2": [
+          "Augmente la durée d'invincibilité lors des esquives de 14%."
+        ],
+        "3": [
+          "Augmente la durée d'invincibilité lors des esquives de 21%."
+        ],
+        "4": [
+          "Augmente la durée d'invincibilité lors des esquives de 28%."
+        ],
+        "5": [
+          "Augmente la durée d'invincibilité lors des esquives de 35%."
+        ],
+        "6": [
+          "Augmente la durée d'invincibilité lors des esquives de 42%."
+        ]
+      }
+    },
+    "evasiveFury": {
+      "name": "Furie évasive",
+      "description": "Augmente temporairement la vitesse d'attaque après une esquive parfaite",
+      "effects": {
+        "1": [
+          "Après avoir esquivé une attaque, gagnez +7,5% de vitesse d'attaque pendant 16 secondes"
+        ],
+        "2": [
+          "Après avoir esquivé une attaque, gagnez +10% de vitesse d'attaque pendant 16 secondes"
+        ],
+        "3": [
+          "Après avoir esquivé une attaque, gagnez +12,5% de vitesse d'attaque pendant 16 secondes"
+        ],
+        "4": [
+          "Après avoir esquivé une attaque, gagnez +15% de vitesse d'attaque pendant 16 secondes"
+        ],
+        "5": [
+          "Après avoir esquivé une attaque, gagnez +17,5% de vitesse d'attaque pendant 16 secondes"
+        ],
+        "6": [
+          "Après avoir esquivé une attaque, gagnez +20% de vitesse d'attaque pendant 16 secondes"
+        ]
+      }
+    },
+    "fireproof": {
+      "name": "Ignifuge",
+      "description": "Vous empêche de prendre feu.",
+      "effects": {
+        "1": [
+          "Réduit la durée de l'effet de statut « En feu » de 10%"
+        ],
+        "2": [
+          "Réduit la durée de l'effet de statut « En feu » de 20%"
+        ],
+        "3": [
+          "Réduit la durée de l'effet de statut « En feu » de 40%"
+        ],
+        "4": [
+          "Réduit la durée de l'effet de statut « En feu » de 60%"
+        ],
+        "5": [
+          "Réduit la durée de l'effet de statut « En feu » de 80%"
+        ],
+        "6": [
+          "Vous ne pouvez pas prendre feu."
+        ]
+      }
+    },
+    "fleetFooted": {
+      "name": "Sprint évasif",
+      "description": "Augmente temporairement la Vitesse de déplacement après une esquive.",
+      "effects": {
+        "1": [
+          "Après avoir esquivé, gagnez + 10% de vitesse de déplacement pendant 3 secondes"
+        ],
+        "2": [
+          "Après avoir esquivé, gagnez + 15% de vitesse de déplacement pendant 3 secondes"
+        ],
+        "3": [
+          "Après avoir esquivé, gagnez + 20% de vitesse de déplacement pendant 3 secondes"
+        ],
+        "4": [
+          "Après avoir esquivé, gagnez + 25% de vitesse de déplacement pendant 3 secondes"
+        ],
+        "5": [
+          "Après avoir esquivé, gagnez + 30% de vitesse de déplacement pendant 3 secondes"
+        ],
+        "6": [
+          "Après avoir esquivé, gagnez + 35% de vitesse de déplacement pendant 3 secondes"
+        ]
+      }
+    },
+    "fortress": {
+      "name": "Forteresse",
+      "description": "Offre un petit bouclier après avoir évité de prendre des dégâts pendant une courte période.",
+      "effects": {
+        "1": [
+          "Après 10 secondes sans recevoir de dégât, gagnez un bouclier de santé de 10 points"
+        ],
+        "2": [
+          "Après 10 secondes sans recevoir de dégât, gagnez un bouclier de santé de 20 points"
+        ],
+        "3": [
+          "Après 10 secondes sans recevoir de dégât, gagnez un bouclier de santé de 40 points"
+        ],
+        "4": [
+          "Après 10 secondes sans recevoir de dégât, gagnez un bouclier de santé de 60 points"
+        ],
+        "5": [
+          "Après 10 secondes sans recevoir de dégât, gagnez un bouclier de santé de 80 points"
+        ],
+        "6": [
+          "Après 10 secondes sans recevoir de dégât, gagnez un bouclier de santé de 100 points"
+        ]
+      }
+    },
+    "guardian": {
+      "name": "Gardien",
+      "description": "Octroie une portion de n'importe quel bouclier qui vous est appliqué à votre allié le plus proche.",
+      "effects": {
+        "1": [
+          "+ 10% des boucliers de santé qui vous sont appliqués sont également appliqués à votre allié le plus proche pendant 15 secondes"
+        ],
+        "2": [
+          "+ 20% des boucliers de santé qui vous sont appliqués sont également appliqués à votre allié le plus proche pendant 15 secondes"
+        ],
+        "3": [
+          "+ 30% des boucliers de santé qui vous sont appliqués sont également appliqués à votre allié le plus proche pendant 15 secondes"
+        ],
+        "4": [
+          "+ 40% des boucliers de santé qui vous sont appliqués sont également appliqués à votre allié le plus proche pendant 15 secondes"
+        ],
+        "5": [
+          "+ 50% des boucliers de santé qui vous sont appliqués sont également appliqués à votre allié le plus proche pendant 15 secondes"
+        ],
+        "6": [
+          "+ 60% des boucliers de santé qui vous sont appliqués sont également appliqués à votre allié le plus proche pendant 15 secondes"
+        ]
+      }
+    },
+    "iceborne": {
+      "name": "Sang froid",
+      "description": "Augmente la défense lorsque votre vie est faible ; les rangs supérieurs octroient du vol de vie.",
+      "effects": {
+        "1": [
+          "En dessous de 50% de santé, confère +5% de réduction de dégâts",
+          " "
+        ],
+        "2": [
+          "En dessous de 50% de santé, confère +10% de réduction de dégâts",
+          " "
+        ],
+        "3": [
+          "En dessous de 50% de santé, confère +15% de réduction de dégâts",
+          " "
+        ],
+        "4": [
+          "En dessous de 50% de santé, confère +20% de réduction de dégâts",
+          "Quand « Sang froid » est actif, accorde 4% de vol de vie qui ne peut pas guérir au-delà de 50% de la santé."
+        ],
+        "5": [
+          "En dessous de 50% de santé, confère +25% de réduction de dégâts",
+          "Quand « Sang froid » est actif, accorde 6% de vol de vie qui ne peut pas guérir au-delà de 50% de la santé."
+        ],
+        "6": [
+          "En dessous de 50% de santé, confère +30% de réduction de dégâts",
+          "Quand « Sang froid » est actif, accorde 8% de vol de vie qui ne peut pas guérir au-delà de 50% de la santé."
+        ]
+      }
+    },
+    "insulated": {
+      "name": "Isolant",
+      "description": "Protège contre l'effet de statut « Électrisé ». Les rangs supérieurs permettent d'attaquer les boucliers électriques.",
+      "effects": {
+        "1": [
+          "Réduit la durée de l'effet de statut « Électrisé » de 25%",
+          " "
+        ],
+        "2": [
+          "Réduit la durée de l'effet de statut « Électrisé » de 50%",
+          " "
+        ],
+        "3": [
+          "Réduit la durée de l'effet de statut « Électrisé » de 75%",
+          " "
+        ],
+        "4": [
+          "Réduit la durée de l'effet de statut « Électrisé » de 75%",
+          "Réduit le recul et les dégâts reçus en frappant les boucliers électriques"
+        ],
+        "5": [
+          "Réduit la durée de l'effet de statut « Électrisé » de 75%",
+          "Réduit le recul et les dégâts reçus en frappant les boucliers électriques"
+        ],
+        "6": [
+          "Immunité à l'effet de statut « Électrisé »",
+          "Réduit le recul et les dégâts reçus en frappant les boucliers électriques"
+        ]
+      }
+    },
+    "knockoutKing": {
+      "name": "Assommoir",
+      "description": "Augmentation en pourcentage des dégâts étourdissants.",
+      "effects": {
+        "1": [
+          "+5% de dégâts étourdissants",
+          " "
+        ],
+        "2": [
+          "+10% de dégâts étourdissants",
+          " "
+        ],
+        "3": [
+          "+15% de dégâts étourdissants",
+          " "
+        ],
+        "4": [
+          "+20% de dégâts étourdissants",
+          "Après avoir esquivé une attaque, votre prochaine attaque inflige + 50% de dégâts étourdissants"
+        ],
+        "5": [
+          "+25% de dégâts étourdissants",
+          "Après avoir esquivé une attaque, votre prochaine attaque inflige + 50% de dégâts étourdissants"
+        ],
+        "6": [
+          "+30% de dégâts étourdissants",
+          "Après avoir esquivé une attaque, votre prochaine attaque inflige + 100% de dégâts étourdissants"
+        ]
+      }
+    },
+    "lucent": {
+      "name": "Luminescent",
+      "description": "La flasque soigne au cours du temps et charge la lanterne.",
+      "effects": {
+        "1": [
+          "Votre flasque soigne sur 20 secondes",
+          "mais avec un soin accru de 20%. Tant que le soin est actif,",
+          "vous générez 16 de charge de lanterne chaque seconde",
+          " "
+        ],
+        "2": [
+          "Votre flasque soigne sur 20 secondes",
+          "mais avec un soin accru de 20%. Tant que le soin est actif,",
+          "vous générez 16 de charge de lanterne chaque seconde",
+          " "
+        ],
+        "3": [
+          "Votre flasque soigne sur 20 secondes",
+          "mais avec un soin accru de 20%. Tant que le soin est actif,",
+          "vous générez 25 de charge de lanterne chaque seconde",
+          " "
+        ],
+        "4": [
+          "Votre flasque soigne sur 20 secondes",
+          "mais avec un soin accru de 20%. Tant que le soin est actif,",
+          "vous générez 37,5 de charge de lanterne chaque seconde",
+          " "
+        ],
+        "5": [
+          "Votre flasque soigne sur 20 secondes",
+          "mais avec un soin accru de 20%. Tant que le soin est actif,",
+          "vous générez 50 de charge de lanterne chaque seconde",
+          " "
+        ],
+        "6": [
+          "Votre flasque soigne sur 20 secondes",
+          "mais avec un soin accru de 20%. Tant que le soin est actif,",
+          "vous générez 75 de charge de lanterne chaque seconde",
+          " "
+        ]
+      }
+    },
+    "medic": {
+      "name": "Médecin",
+      "description": "Améliore votre capacité à réanimer vos alliés.",
+      "effects": {
+        "1": [
+          "Lorsque vous réanimez un allié, ce dernier récupère 5% de vie en plus",
+          " ",
+          " "
+        ],
+        "2": [
+          "Lorsque vous réanimez un allié, ce dernier récupère 10% de vie en plus",
+          " ",
+          " "
+        ],
+        "3": [
+          "Lorsque vous réanimez un allié, ce dernier récupère 20% de vie en plus",
+          " ",
+          " "
+        ],
+        "4": [
+          "Lorsque vous réanimez un allié, ce dernier récupère 20% de vie en plus",
+          "Augmente la vitesse de réanimation de 66%",
+          " "
+        ],
+        "5": [
+          "Lorsque vous réanimez un allié, ce dernier récupère 30% de vie en plus",
+          "Augmente la vitesse de réanimation de 66%",
+          " "
+        ],
+        "6": [
+          "Lorsque vous réanimez un allié, ce dernier récupère 40% de vie en plus",
+          "Augmente la vitesse de réanimation de 66%",
+          "Après avoir relevé un allié, gagnez un bouclier de santé de 300 points pendant 20 secondes"
+        ]
+      }
+    },
+    "mender": {
+      "name": "Guérisseur",
+      "description": "Réduit les soins de flasques. L'utilisation de votre flasque restaure la santé des autres Slayers.",
+      "effects": {
+        "1": [
+          "La flasque soigne 30 de moins",
+          "L'utilisation de votre flasque soigne également tous les autres Slayers de 45"
+        ],
+        "2": [
+          "La flasque soigne 60 de moins",
+          "L'utilisation de votre flasque soigne également tous les autres Slayers de 90"
+        ],
+        "3": [
+          "La flasque soigne 90 de moins",
+          "L'utilisation de votre flasque soigne également tous les autres Slayers de 135"
+        ],
+        "4": [
+          "La flasque soigne 120 de moins",
+          "L'utilisation de votre flasque soigne également tous les autres Slayers de 180"
+        ],
+        "5": [
+          "La flasque soigne 150 de moins",
+          "L'utilisation de votre flasque soigne également tous les autres Slayers de 225"
+        ],
+        "6": [
+          "La flasque soigne 180 de moins",
+          "L'utilisation de votre flasque soigne également tous les autres Slayers de 270"
+        ]
+      }
+    },
+    "merciless": {
+      "name": "Impitoyable",
+      "description": "Augmente les dégâts mutilants contre les Behemoths étourdis.",
+      "effects": {
+        "1": [
+          "+25 points de dégâts mutilants contre les Behemoths étourdis"
+        ],
+        "2": [
+          "+40 points de dégâts mutilants contre les Behemoths étourdis"
+        ],
+        "3": [
+          "+55 points de dégâts mutilants contre les Behemoths étourdis"
+        ],
+        "4": [
+          "+70 points de dégâts mutilants contre les Behemoths étourdis"
+        ],
+        "5": [
+          "+85 points de dégâts mutilants contre les Behemoths étourdis"
+        ],
+        "6": [
+          "+100 points de dégâts mutilants contre les Behemoths étourdis"
+        ]
+      }
+    },
+    "molten": {
+      "name": "Fondu",
+      "description": "Génère des coeurs fondus avec temps de recharge.",
+      "effects": {
+        "1": [
+          " Infliger des dégâts génère un cœur fondu avec un temps de recharge de 26 secondes qui octroie une immunité au feu et une vitesse d'attaque et de déplacement accrues."
+        ],
+        "2": [
+          "Infliger des dégâts génère un cœur fondu avec un temps de recharge de 23 secondes qui octroie une immunité au feu et une vitesse d'attaque et de déplacement accrues."
+        ],
+        "3": [
+          "Infliger des dégâts génère deux cœurs fondus avec un temps de recharge de 23 secondes qui octroient une immunité au feu et une vitesse d'attaque et de déplacement accrues."
+        ],
+        "4": [
+          "Infliger des dégâts génère deux cœurs fondus avec un temps de recharge de 20 secondes qui octroient une immunité au feu et une vitesse d'attaque et de déplacement accrues."
+        ],
+        "5": [
+          "Infliger des dégâts génère trois cœurs fondus avec un temps de recharge de 20 secondes qui octroient une immunité au feu et une vitesse d'attaque et de déplacement accrues."
+        ],
+        "6": [
+          "Infliger des dégâts génère trois cœurs fondus avec un temps de recharge de 16 secondes qui octroient une immunité au feu et une vitesse d'attaque et de déplacement accrues."
+        ]
+      }
+    },
+    "nimble": {
+      "name": "Évasion légère",
+      "description": "Restaure de l'endurance après une esquive parfaite.",
+      "effects": {
+        "1": [
+          "Après avoir esquivé une attaque, gagnez + 10 endurance"
+        ],
+        "2": [
+          "Après avoir esquivé une attaque, gagnez + 15 endurance"
+        ],
+        "3": [
+          "Après avoir esquivé une attaque, gagnez + 20 endurance"
+        ],
+        "4": [
+          "Après avoir esquivé une attaque, gagnez + 25 endurance"
+        ],
+        "5": [
+          "Après avoir esquivé une attaque, gagnez + 30 endurance"
+        ],
+        "6": [
+          "Après avoir esquivé une attaque, gagnez + 35 endurance"
+        ]
+      }
+    },
+    "nineLives": {
+      "name": "Lernéen",
+      "description": "Donne une chance de réduire de moitié les dégâts reçus, les rangs supérieurs permettent d'éviter d'être mis à terre.",
+      "effects": {
+        "1": [
+          "+5% de chance de réduire de moitié les dégâts reçus",
+          " "
+        ],
+        "2": [
+          "+8% de chance de réduire de moitié les dégâts reçus",
+          " "
+        ],
+        "3": [
+          "+12% de chance de réduire de moitié les dégâts reçus",
+          " "
+        ],
+        "4": [
+          "+12% de chance de réduire de moitié les dégâts reçus",
+          "La première fois que vous devriez être mis à terre, vous restez debout et récupérez 400 points de vie"
+        ],
+        "5": [
+          "+16% de chance de réduire de moitié les dégâts reçus",
+          "La première fois que vous devriez être mis à terre, vous restez debout et récupérez 400 points de vie"
+        ],
+        "6": [
+          "+20% de chance de réduire de moitié les dégâts reçus",
+          "La première fois que vous devriez être mis à terre, vous restez debout et récupérez 400 points de vie et gagnez en puissance pendant 10 secondes"
+        ]
+      }
+    },
+    "overpower": {
+      "name": "Domination",
+      "description": "Augmente les dégâts contre les Behemoths étourdis.",
+      "effects": {
+        "1": [
+          "+10% de dégâts contre les Behemoths étourdis"
+        ],
+        "2": [
+          "+20% de dégâts contre les Behemoths étourdis"
+        ],
+        "3": [
+          "+30% de dégâts contre les Behemoths étourdis"
+        ],
+        "4": [
+          "+40% de dégâts contre les Behemoths étourdis"
+        ],
+        "5": [
+          "+50% de dégâts contre les Behemoths étourdis"
+        ],
+        "6": [
+          "+60% de dégâts contre les Behemoths étourdis"
+        ]
+      }
+    },
+    "pacifier": {
+      "name": "Pacificateur",
+      "description": "Augmente les dégâts étourdissants contre les Behemoths enragés",
+      "effects": {
+        "1": [
+          "+10% de dégâts étourdissants contre les Behemoths enragés"
+        ],
+        "2": [
+          "+20% de dégâts étourdissants contre les Behemoths enragés"
+        ],
+        "3": [
+          "+30% de dégâts étourdissants contre les Behemoths enragés"
+        ],
+        "4": [
+          "+40% de dégâts étourdissants contre les Behemoths enragés"
+        ],
+        "5": [
+          "+50% de dégâts étourdissants contre les Behemoths enragés"
+        ],
+        "6": [
+          "+60% de dégâts étourdissants contre les Behemoths enragés"
+        ]
+      }
+    },
+    "predator": {
+      "name": "Prédateur",
+      "description": "Augmente les dégâts infligés après ne pas avoir été touché pendant une courte période.",
+      "effects": {
+        "1": [
+          " Infligez 4% de dégâts supplémentaires après ne pas avoir été touché pendant 15 secondes. Ce bonus est perdu après avoir été touché."
+        ],
+        "2": [
+          " Infligez 8% de dégâts supplémentaires après ne pas avoir été touché pendant 15 secondes. Ce bonus est perdu après avoir été touché."
+        ],
+        "3": [
+          " Infligez 14% de dégâts supplémentaires après ne pas avoir été touché pendant 15 secondes. Ce bonus est perdu après avoir été touché."
+        ],
+        "4": [
+          "Infligez 20% de dégâts supplémentaires après ne pas avoir été touché pendant 15 secondes. Ce bonus est perdu après avoir été touché."
+        ],
+        "5": [
+          "Infligez 27% de dégâts supplémentaires après ne pas avoir été touché pendant 15 secondes. Ce bonus est perdu après avoir été touché."
+        ],
+        "6": [
+          "Infligez 35% de dégâts supplémentaires après ne pas avoir été touché pendant 15 secondes. Ce bonus est perdu après avoir été touché."
+        ]
+      }
+    },
+    "rage": {
+      "name": "Rage",
+      "description": "Augmente vos dégâts lorsque votre vie est faible.",
+      "effects": {
+        "1": [
+          "Infligez 5% de dégâts supplémentaires lorsque vous avez moins de 50% de vie"
+        ],
+        "2": [
+          "Infligez 8% de dégâts supplémentaires lorsque vous avez moins de 50% de vie"
+        ],
+        "3": [
+          "Infligez 12% de dégâts supplémentaires lorsque vous avez moins de 50% de vie"
+        ],
+        "4": [
+          "Infligez 16% de dégâts supplémentaires lorsque vous avez moins de 50% de vie"
+        ],
+        "5": [
+          "Infligez 20% de dégâts supplémentaires lorsque vous avez moins de 50% de vie"
+        ],
+        "6": [
+          "Infligez 25% de dégâts supplémentaires lorsque vous avez moins de 50% de vie"
+        ]
+      }
+    },
+    "ragehunter": {
+      "name": "Chasse-rage",
+      "description": "Augmente les dégâts contre les Behemoths enragés.",
+      "effects": {
+        "1": [
+          "+5% de dégâts contre les Behemoths enragés"
+        ],
+        "2": [
+          "+10% de dégâts contre les Behemoths enragés"
+        ],
+        "3": [
+          "+15% de dégâts contre les Behemoths enragés"
+        ],
+        "4": [
+          "+20% de dégâts contre les Behemoths enragés"
+        ],
+        "5": [
+          "+30% de dégâts contre les Behemoths enragés"
+        ],
+        "6": [
+          "+40% de dégâts contre les Behemoths enragés"
+        ]
+      }
+    },
+    "savagery": {
+      "name": "Sauvagerie",
+      "description": "Augmente les dégâts contre les membres mutilés.",
+      "effects": {
+        "1": [
+          "+20% de dégâts contre les membres mutilés"
+        ],
+        "2": [
+          "+30% de dégâts contre les membres mutilés"
+        ],
+        "3": [
+          "+40% de dégâts contre les membres mutilés"
+        ],
+        "4": [
+          "+60% de dégâts contre les membres mutilés"
+        ],
+        "5": [
+          "+80% de dégâts contre les membres mutilés"
+        ],
+        "6": [
+          "+100% de dégâts contre les membres mutilés"
+        ]
+      }
+    },
+    "sharpened": {
+      "name": "Aiguisé",
+      "description": "Augmentation en pourcentage des dégâts aux membres",
+      "effects": {
+        "1": [
+          "+5% de dégâts aux membres.",
+          " "
+        ],
+        "2": [
+          "+10% de dégâts aux membres.",
+          " "
+        ],
+        "3": [
+          "+15% de dégâts aux membres.",
+          " "
+        ],
+        "4": [
+          "+20% de dégâts aux membres.",
+          "Après une esquive parfaite les dégâts aux membres de la prochaine attaque sont augmentés de 50%"
+        ],
+        "5": [
+          "+25% de dégâts aux membres.",
+          "Après une esquive parfaite les dégâts aux membres de la prochaine attaque sont augmentés de 50%"
+        ],
+        "6": [
+          "+30% de dégâts aux membres.",
+          "Après une esquive parfaite les dégâts aux membres de la prochaine attaque sont augmentés de 100%"
+        ]
+      }
+    },
+    "shellshockResist": {
+      "name": "Résilience",
+      "description": "Protège contre les explosions et l'effet de statut « Concussion »",
+      "effects": {
+        "1": [
+          "Réduit les dégâts des concussions et leur durée de 10%"
+        ],
+        "2": [
+          "Réduit les dégâts des concussions et leur durée de 20%"
+        ],
+        "3": [
+          "Réduit les dégâts des concussions et leur durée de 40%"
+        ],
+        "4": [
+          "Réduit les dégâts des concussions et leur durée de 60%"
+        ],
+        "5": [
+          "Réduit les dégâts des concussions et leur durée de 80%"
+        ],
+        "6": [
+          "Immunité aux dégâts d'explosion et à l'effet de statut « Concussion »"
+        ]
+      }
+    },
+    "sprinter": {
+      "name": "Coureur",
+      "description": "Réduit l'endurance maximale. Augmente la vitesse de déplacement et réduit le coût du sprint.",
+      "effects": {
+        "1": [
+          "-5 endurance maximum",
+          "+5% de vitesse de déplacement et -10% de coût de sprint"
+        ],
+        "2": [
+          "-10 endurance maximum",
+          "+7,5% de vitesse de déplacement et -15% de coût de sprint"
+        ],
+        "3": [
+          "-15 endurance maximum",
+          "+10% de vitesse de déplacement et -20% de coût de sprint"
+        ],
+        "4": [
+          "-20 endurance maximum",
+          "+12,5% de vitesse de déplacement et -25% de coût de sprint"
+        ],
+        "5": [
+          "-25 endurance maximum",
+          "+15% de vitesse de déplacement et -30% de coût de sprint"
+        ],
+        "6": [
+          "-30 endurance maximum",
+          "+17,5% de vitesse de déplacement et -35% de coût de sprint"
+        ]
+      }
+    },
+    "strategist": {
+      "name": "Stratège",
+      "description": "Réduit la santé maximale. Esquiver les attaques de Behemoth octroit un bouclier de santé à tous les Slayers.",
+      "effects": {
+        "1": [
+          "-50 points de vie max",
+          "Accorde un bouclier de 25 points de santé à tous les Slayers après une esquive parfaite"
+        ],
+        "2": [
+          "-100 points de vie max",
+          "Accorde un bouclier de 50 points de santé à tous les Slayers après une esquive parfaite"
+        ],
+        "3": [
+          "-150 points de vie max",
+          "Accorde un bouclier de 75 points de santé à tous les Slayers après une esquive parfaite"
+        ],
+        "4": [
+          "-200 points de vie max",
+          "Accorde un bouclier de 100 points de santé à tous les Slayers après une esquive parfaite"
+        ],
+        "5": [
+          "-250 points de vie max",
+          "Accorde un bouclier de 125 points de santé à tous les Slayers après une esquive parfaite"
+        ],
+        "6": [
+          "-300 points de vie max",
+          "Accorde un bouclier de 150 points de santé à tous les Slayers après une esquive parfaite"
+        ]
+      }
+    },
+    "stunningVigour": {
+      "name": "Vigueur étourdissante",
+      "description": "Restaure de la vie lorsqu'un Behemoth est étourdi.",
+      "effects": {
+        "1": [
+          "Après l'étourdissement d'un Behemoth, vous soignez de 50"
+        ],
+        "2": [
+          "Après l'étourdissement d'un Behemoth, vous soignez de 75"
+        ],
+        "3": [
+          "Après l'étourdissement d'un Behemoth, vous soignez de 100"
+        ],
+        "4": [
+          "Après l'étourdissement d'un Behemoth, vous soignez de 125"
+        ],
+        "5": [
+          "Après l'étourdissement d'un Behemoth, vous soignez de 150"
+        ],
+        "6": [
+          "Après l'étourdissement d'un Behemoth, vous soignez de 200"
+        ]
+      }
+    },
+    "sturdy": {
+      "name": "Stabilité",
+      "description": "Permet d'éviter régulièrement les déstabilisations.",
+      "effects": {
+        "1": [
+          "Empêche les déstabilisations (120 secondes de recharge)"
+        ],
+        "2": [
+          "Empêche les déstabilisations (100 secondes de recharge)"
+        ],
+        "3": [
+          "Empêche les déstabilisations (80 secondes de recharge)"
+        ],
+        "4": [
+          "Empêche les déstabilisations (60 secondes de recharge)"
+        ],
+        "5": [
+          "Empêche les déstabilisations (40 secondes de recharge)"
+        ],
+        "6": [
+          "Empêche les déstabilisations (15 secondes de recharge)"
+        ]
+      }
+    },
+    "swift": {
+      "name": "Sprint",
+      "description": "Augmente votre vitesse de déplacement lorsque votre arme est rengainée.",
+      "effects": {
+        "1": [
+          "Tant que votre arme est rengainée, donne +5% de vitesse de déplacement"
+        ],
+        "2": [
+          "Tant que votre arme est rengainée, donne +10% de vitesse de déplacement."
+        ],
+        "3": [
+          "Tant que votre arme est rengainée, donne +15% de vitesse de déplacement."
+        ],
+        "4": [
+          "Tant que votre arme est rengainée, donne +20% de vitesse de déplacement"
+        ],
+        "5": [
+          "Tant que votre arme est rengainée, donne +25% de vitesse de déplacement"
+        ],
+        "6": [
+          "Tant que votre arme est rengainée, donne +30% de vitesse de déplacement"
+        ]
+      }
+    },
+    "tough": {
+      "name": "Robustesse",
+      "description": "Augmente la vie maximale.",
+      "effects": {
+        "1": [
+          "Augmente la vie maximale de 50",
+          "Augmente tous les soins reçus de 5%"
+        ],
+        "2": [
+          "Augmente la vie maximale de 100",
+          "Augmente tout les soins reçus de 10%"
+        ],
+        "3": [
+          "Augmente la vie maximale de 150",
+          "Augmente tout les soins reçus de 15%"
+        ],
+        "4": [
+          "Augmente la vie maximale de 250",
+          "Augmente tout les soins reçus de 25%"
+        ],
+        "5": [
+          "Augmente la vie maximale de 300",
+          "Augmente tout les soins reçus de 35%"
+        ],
+        "6": [
+          "Augmente la vie maximale de 500",
+          "Augmente tout les soins reçus de 50%"
+        ]
+      }
+    },
+    "vampiric": {
+      "name": "Vampirique",
+      "description": "Restaure de la vie lorsqu'une partie de Behemoth est mutilée.",
+      "effects": {
+        "1": [
+          "Après avoir blessé un Behemoth, vous vous soignez de 50"
+        ],
+        "2": [
+          "Après avoir blessé un Behemoth, vous vous soignez de 75"
+        ],
+        "3": [
+          "Après avoir blessé un Behemoth, vous vous soignez de 100"
+        ],
+        "4": [
+          "Après avoir blessé un Behemoth, vous vous soignez de 125"
+        ],
+        "5": [
+          "Après avoir blessé un Behemoth, vous vous soignez de 150"
+        ],
+        "6": [
+          "Après avoir blessé un Behemoth, vous vous soignez de 200"
+        ]
+      }
+    },
+    "warmth": {
+      "name": "Chauffe",
+      "description": "Protège contre les effets de «Gelé» et «Ralenti»",
+      "effects": {
+        "1": [
+          "Réduit la durée de l'effet de statut « Gelé » de 30%",
+          " "
+        ],
+        "2": [
+          "Réduit la durée de l'effet de statut « Gelé » de 60%",
+          " "
+        ],
+        "3": [
+          "Immunité à l'effet de statut « Gelé »",
+          " "
+        ],
+        "4": [
+          "Immunité à l'effet de statut « Gelé »",
+          "Réduit la durée de l'effet de statut « Ralenti » de 30%."
+        ],
+        "5": [
+          "Immunité à l'effet de statut « Gelé »",
+          "Réduit la durée de l'effet de statut « Ralenti » de 60%"
+        ],
+        "6": [
+          "Immunité à l'effet de statut « Gelé »",
+          "Immunité au ralentissement"
+        ]
+      }
+    },
+    "weightedStrikes": {
+      "name": "Frappes Lourdes",
+      "description": "Ajoute une quantité fixe de dégats etourdissants à chaque coup. Les rangs supérieurs permettent aux armes d'imterrompe les Behemoths.",
+      "effects": {
+        "1": [
+          "+5 dégâts étourdissants.",
+          " ",
+          " "
+        ],
+        "2": [
+          "+10 dégâts étourdissants",
+          " ",
+          " "
+        ],
+        "3": [
+          "+15 dégâts étourdissants",
+          " ",
+          " "
+        ],
+        "4": [
+          "+20 dégâts étourdissants",
+          "Après avoir esquivé une attaque, votre prochaine attaque inflige +200 dégâts étourdissants.",
+          " "
+        ],
+        "5": [
+          "+30 dégâts étourdissants",
+          "Après avoir esquivé une attaque, votre prochaine attaque inflige +200 dégâts étourdissants.",
+          " "
+        ],
+        "6": [
+          "+40 dégâts étourdissants",
+          "Après avoir esquivé une attaque, votre prochaine attaque inflige +400 dégâts étourdissants.",
+          "Les coups à distance et missiles interrompent les attaques instables des Behemoths"
+        ]
+      }
+    },
+    "wildFrenzy": {
+      "name": "Frénésie Sauvage",
+      "description": "Augmente la vitesse d'attaque lorsque votre vie est faible.",
+      "effects": {
+        "1": [
+          "En dessous de 50% de santé, confère +7,5% de vitesse d'attaque"
+        ],
+        "2": [
+          "En dessous de 50% de santé, confère +10% de vitesse d'attaque"
+        ],
+        "3": [
+          "En dessous de 50% de santé, confère 12,5% de vitesse d'attaque"
+        ],
+        "4": [
+          "En dessous de 50% de santé, confère +15% de vitesse d'attaque"
+        ],
+        "5": [
+          "En dessous de 50% de santé, confère +17,5% de vitesse d'attaque"
+        ],
+        "6": [
+          "En dessous de 50% de santé, confère 20% de vitesse d'attaque"
+        ]
+      }
+    }
+  },
+  "weapons": {
+    "brawlersOfBoreus": {
+      "name": "Castagneurs du Boreus",
+      "description": "Cestes aethériques de Slayers fabriqués à partir de trophés de Boreus.",
+      "boreusFrostSprite0": {
+        "name": "BoreusFrostSprite",
+        "description": "Après un afflux, génére 2 farfroidets qui ajoutent 30 dégâts à votre prochaine attaque et de légers dégâts de givre (4 farfroidets maximum)"
+      },
+      "boreusFrostSprite6": {
+        "name": "BoreusFrostSprite",
+        "description": "Après un afflux, génére 2 farfroidets qui ajoutent 40 dégâts à votre prochaine attaque et de légers dégâts de givre (4 farfroidets maximum) "
+      },
+      "boreusFrostSprite10": {
+        "name": "BoreusFrostSprite",
+        "description": "Après un afflux, génére 2 farfroidets qui ajoutent 50 dégâts à votre prochaine attaque et de légers dégâts de givre (4 farfroidets maximum) "
+      }
+    },
+    "brutalityOfBoreus": {
+      "name": "Brutalité de Boreus",
+      "description": "Un marteau de Slayer forgé à partir de trophées de Boreus",
+      "boreusFrostSprite0": {
+        "name": "BoreusFrostSprite",
+        "description": "Après avoir dépensé une munition, génère un farfroidet qui ajoute 30 dégâts à votre prochaine attaque et de légers dégâts de givre. Maximum 4 farfroidets."
+      },
+      "boreusFrostSprite6": {
+        "name": "BoreusFrostSprite",
+        "description": "Après avoir dépensé une munition, génère un farfroidet qui ajoute 40 dégâts à votre prochaine attaque et de légers dégâts de givre. Maximum 4 farfroidets."
+      },
+      "boreusFrostSprite10": {
+        "name": "BoreusFrostSprite",
+        "description": "Après avoir dépensé une munition, génère un farfroidet qui ajoute 50 dégâts à votre prochaine attaque et de légers dégâts de givre. Maximum 4 farfroidets."
+      }
+    },
+    "destinyOfBoreus": {
+      "name": "Le destin de Boreus",
+      "description": "Une paire de chaînes-lames de Slayer forgée à partir de trophées de Boreus.",
+      "boreusFrostSprite0": {
+        "name": "BoreusFrostSprite",
+        "description": "Utiliser votre spécial génère continuellement des farfroidets qui ajoutent 30 dégâts chacun à votre prochaine attaque et de légers dégâts de givre. Maximum 4 farfroidets"
+      },
+      "boreusFrostSprite6": {
+        "name": "BoreusFrostSprite",
+        "description": "Utiliser votre spécial génère continuellement des farfroidets qui ajoutent 50 dégâts chacun à votre prochaine attaque et de légers dégâts de givre. Maximum 4 farfroidets"
+      },
+      "boreusFrostSprite10": {
+        "name": "BoreusFrostSprite",
+        "description": "Utiliser votre spécial génère continuellement des farfroidets qui ajoutent 40 dégâts chacun à votre prochaine attaque et de légers dégâts de givre. Maximum 4 farfroidets"
+      }
+    },
+    "onusOfBoreus": {
+      "name": "Fardeau de Boreus",
+      "description": "Une épée de Slayer forgée à partir de trophées de Boreus.",
+      "boreusFrostSprite0": {
+        "name": "BoreusFrostSprite",
+        "description": "Utiliser votre spécial génère continuellement des farfroidets qui ajoutent 30 dégâts chacun à votre prochaine attaque et de légers dégâts de givre. Maximum 4 farfroidets"
+      },
+      "boreusFrostSprite6": {
+        "name": "BoreusFrostSprite",
+        "description": "Utiliser votre spécial génère continuellement des farfroidets qui ajoutent 40 dégâts chacun à votre prochaine attaque et de légers dégâts de givre. Maximum 4 farfroidets"
+      },
+      "boreusFrostSprite10": {
+        "name": "BoreusFrostSprite",
+        "description": "Utiliser votre spécial génère continuellement des farfroidets qui ajoutent 50 dégâts chacun à votre prochaine attaque et de légers dégâts de givre. Maximum 4 farfroidets"
+      }
+    },
+    "revolutionOfBoreus": {
+      "name": "Révolte de Boreus",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées de Boreus.",
+      "boreusFrostSprite0": {
+        "name": "BoreusFrostSprite",
+        "description": "Après avoir dépensé une munition, génère des farfroidets (suivant la qualité des munitions) qui ajoutent 30 dégâts chacun à votre prochaine attaque et de légers dégâts de givre. Maximum 4 farfroidets"
+      },
+      "boreusFrostSprite6": {
+        "name": "BoreusFrostSprite",
+        "description": "Après avoir dépensé une munition, génère des farfroidets (suivant la qualité des munitions) qui ajoutent 40 dégâts chacun à votre prochaine attaque et de légers dégâts de givre. Maximum 4 farfroidets"
+      },
+      "boreusFrostSprite10": {
+        "name": "BoreusFrostSprite",
+        "description": "Après avoir dépensé une munition, génère des farfroidets (suivant la qualité des munitions) qui ajoutent 50 dégâts chacun à votre prochaine attaque et de légers dégâts de givre. Maximum 4 farfroidets"
+      }
+    },
+    "turmoilOfBoreus": {
+      "name": "Tourment de Boreus",
+      "description": "Une hache de Slayer forgée à partir de trophées de Boreus.",
+      "boreusFrostSprite0": {
+        "name": "BoreusFrostSprite",
+        "description": "Après chaque niveau de charge d'attaque, génère un farfroidet qui ajoute 30 de dégâts à votre prochaine attaque et de légers dégâts de givre. Maximum 4 farfroidets"
+      },
+      "boreusFrostSprite6": {
+        "name": "BoreusFrostSprite",
+        "description": "Après chaque niveau de charge d'attaque, génère un farfroidet qui ajoute 40 de dégâts à votre prochaine attaque et de légers dégâts de givre. Maximum 4 farfroidets"
+      },
+      "boreusFrostSprite10": {
+        "name": "BoreusFrostSprite",
+        "description": "Après chaque niveau de charge d'attaque, génère un farfroidet qui ajoute 50 de dégâts à votre prochaine attaque et de légers dégâts de givre. Maximum 4 farfroidets"
+      }
+    },
+    "charredBlades": {
+      "name": "Lames charrbonisées",
+      "description": "Une paire de chaînes-lames de Slayer forgée à partir de trophées de Charrogg."
+    },
+    "charredCleaver": {
+      "name": "Hachoir charrbonisé",
+      "description": "Une hache de Slayer forgée à partir de trophées de Charrogg."
+    },
+    "charredCrusher": {
+      "name": "Broyeur charrbonisé",
+      "description": "Un marteau de Slayer forgé à partir de trophées de Charrogg."
+    },
+    "charredHands": {
+      "name": "Mains carbonisées",
+      "description": "Cestes aethériques de Slayers fabriqués à partir de trophées de Charrogg."
+    },
+    "charredSaber": {
+      "name": "Sabre charrbonisé",
+      "description": "Une épée de Slayer forgée à partir de trophées de Charrogg."
+    },
+    "charredSpear": {
+      "name": "Lance charrbonisée",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées de Charrogg."
+    },
+    "moltenEdict": {
+      "name": "Jugement de Vulrrogg",
+      "description": "Un marteau exotique de Slayer forgée à partir de trophées de Charrogg.",
+      "hammerBlastFireballs0": {
+        "name": "HammerBlastFireballs",
+        "description": "Remplace tous les tirs de marteau par des capacités uniques infligeant des dégâts de braise."
+      }
+    },
+    "thunderingBlade": {
+      "name": "Lame tonnante",
+      "description": "Une épée de Slayer forgée à partir de trophées de Drask.",
+      "tailDamage0": {
+        "name": "TailDamage",
+        "description": "+ 20% de dégâts contre la queue des Behemoths"
+      },
+      "tailDamage6": {
+        "name": "TailDamage",
+        "description": "+ 25% de dégâts contre la queue des Behemoths"
+      },
+      "tailDamage10": {
+        "name": "TailDamage",
+        "description": "+ 30% de dégâts contre la queue des Behemoths"
+      }
+    },
+    "thunderingBolts": {
+      "name": "Exploseurs tonitruants",
+      "description": "Cestes aethérique de Slayer fabriqués à partir de trophées de Drask.",
+      "headDamage0": {
+        "name": "HeadDamage",
+        "description": "+ 20% de dégâts contre la tête des Behemoths"
+      },
+      "headDamage6": {
+        "name": "HeadDamage",
+        "description": "+ 25% de dégâts contre la tête des Behemoths"
+      },
+      "headDamage10": {
+        "name": "HeadDamage",
+        "description": "+ 30% de dégâts contre la tête des Behemoths"
+      }
+    },
+    "thunderingCutters": {
+      "name": "Trancheurs tonnants",
+      "description": "Une paire de chaînes-lames de Slayer forgée à partir de trophées de Drask.",
+      "tailDamage0": {
+        "name": "TailDamage",
+        "description": "+ 20% de dégâts contre la queue des Behemoths"
+      },
+      "tailDamage6": {
+        "name": "TailDamage",
+        "description": "+ 25% de dégâts contre la queue des Behemoths"
+      },
+      "tailDamage10": {
+        "name": "TailDamage",
+        "description": "+ 30% de dégâts contre la queue des Behemoths"
+      }
+    },
+    "thunderingMaul": {
+      "name": "Mâchoire tonnante",
+      "description": "Un marteau de Slayer forgée à partir de trophées de Drask.",
+      "headDamage0": {
+        "name": "HeadDamage",
+        "description": "+ 20% de dégâts contre la tête des Behemoths"
+      },
+      "headDamage6": {
+        "name": "HeadDamage",
+        "description": "+ 25% de dégâts contre la tête des Behemoths"
+      },
+      "headDamage10": {
+        "name": "HeadDamage",
+        "description": "+ 30% de dégâts contre la tête des Behemoths"
+      }
+    },
+    "thunderingScythe": {
+      "name": "Faux tonnante",
+      "description": "Une hache de Slayer forgée à partir de trophées de Drask.",
+      "headDamage0": {
+        "name": "HeadDamage",
+        "description": "+ 20% de dégâts contre la tête des Behemoths"
+      },
+      "headDamage6": {
+        "name": "HeadDamage",
+        "description": "+ 25% de dégâts contre la tête des Behemoths"
+      },
+      "headDamage10": {
+        "name": "HeadDamage",
+        "description": "+ 30% de dégâts contre la tête des Behemoths"
+      }
+    },
+    "thunderingSpear": {
+      "name": "Lance tonnante",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées de Drask.",
+      "tailDamage0": {
+        "name": "TailDamage",
+        "description": "+ 20% de dégâts contre la queue des Behemoths"
+      },
+      "tailDamage6": {
+        "name": "TailDamage",
+        "description": "+ 25% de dégâts contre la queue des Behemoths"
+      },
+      "tailDamage10": {
+        "name": "TailDamage",
+        "description": "+ 30% de dégâts contre la queue des Behemoths"
+      }
+    },
+    "emberBlades": {
+      "name": "Braise Lames",
+      "description": "Une paire de chaînes-lames de Slayer forgée à partir de trophées d'Embermane.",
+      "tenthHitBonusDamage0": {
+        "name": "TenthHitBonusDamage",
+        "description": "Le dixième coup consécutif inflige + 100 dégâts aux membres."
+      },
+      "tenthHitBonusDamage6": {
+        "name": "TenthHitBonusDamage",
+        "description": "Le dixième coup consécutif inflige + 175 dégâts aux membres."
+      },
+      "tenthHitBonusDamage10": {
+        "name": "TenthHitBonusDamage",
+        "description": "Le dixième coup consécutif inflige + 250 dégâts aux membres."
+      }
+    },
+    "emberCutlass": {
+      "name": "Coutelas Embermane",
+      "description": "Une épée de Slayer forgée à partir de trophées d'Embermane.",
+      "seventhHitPartDamage0": {
+        "name": "SeventhHitPartDamage",
+        "description": "Le septième coup consécutif inflige +100% de dégâts aux membres"
+      },
+      "seventhHitPartDamage6": {
+        "name": "SeventhHitPartDamage",
+        "description": "Le septième coup consécutif inflige +175% de dégâts aux membres"
+      },
+      "seventhHitPartDamage10": {
+        "name": "SeventhHitPartDamage",
+        "description": "Le septième coup consécutif inflige +250% de dégâts aux membres"
+      }
+    },
+    "emberFists": {
+      "name": "Poings ardents",
+      "description": "Cestes aethériques de Slayers fabriqués à partir de trophées d'Embermane",
+      "fifthHitStaggerDamage0": {
+        "name": "FifthHitStaggerDamage",
+        "description": "Le cinquième coup consécutif inflige +50%  de dégâts étourdissants"
+      },
+      "fifthHitStaggerDamage6": {
+        "name": "FifthHitStaggerDamage",
+        "description": "Le cinquième coup consécutif inflige +100%  de dégâts étourdissants"
+      },
+      "fifthHitStaggerDamage10": {
+        "name": "FifthHitStaggerDamage",
+        "description": "Le cinquième coup consécutif inflige +150%  de dégâts étourdissants"
+      }
+    },
+    "emberMaul": {
+      "name": "Mâchoire Embermane",
+      "description": "Un marteau de Slayer forgé à partir de trophées d'Embermane.",
+      "fifthHitStaggerDamage0": {
+        "name": "FifthHitStaggerDamage",
+        "description": "Le cinquième coup consécutif inflige +100% de dégâts étourdissants"
+      },
+      "fifthHitStaggerDamage6": {
+        "name": "FifthHitStaggerDamage",
+        "description": "Le cinquième coup consécutif inflige +175% de dégâts étourdissants"
+      },
+      "fifthHitStaggerDamage10": {
+        "name": "FifthHitStaggerDamage",
+        "description": "Le ciquième coup consécutif inflige +250% de dégâts étourdissants"
+      }
+    },
+    "emberPike": {
+      "name": "Glaive Embermane",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées d'Embermane",
+      "seventhHitWoundDamage0": {
+        "name": "SeventhHitWoundDamage",
+        "description": "Le septième coup consécutif inflige 100 points de dégâts mutilants supplémentaires"
+      },
+      "seventhHitWoundDamage6": {
+        "name": "SeventhHitWoundDamage",
+        "description": "Le septième coup consécutif inflige 200 points de dégâts mutilants supplémentaires"
+      },
+      "seventhHitWoundDamage10": {
+        "name": "SeventhHitWoundDamage",
+        "description": "Le septième coup consécutif inflige 300 points de dégâts mutilants supplémentaires"
+      }
+    },
+    "emberScythe": {
+      "name": "Faux Embermane",
+      "description": "Une hache de Slayer forgée à partir de trophées d'Embermane.",
+      "fourthHitBonusDamage0": {
+        "name": "FourthHitBonusDamage",
+        "description": "Le quatrième coup consécutif inflige +100 dégâts aux membres"
+      },
+      "fourthHitBonusDamage6": {
+        "name": "FourthHitBonusDamage",
+        "description": "Le quatrième coup consécutif inflige +175 dégâts aux membres."
+      },
+      "fourthHitBonusDamage10": {
+        "name": "FourthHitBonusDamage",
+        "description": "Le quatrième coup consécutif inflige +250 dégâts aux membres"
+      }
+    },
+    "recruitsAxe": {
+      "name": "Hache de recrue",
+      "description": "Une hache de recrue."
+    },
+    "recruitsChainBlades": {
+      "name": "Chaînes-lames de recrue",
+      "description": "Une paire de chaînes-lames de recrue."
+    },
+    "recruitsHammer": {
+      "name": "Marteau de recrue",
+      "description": "Un marteau de recrue."
+    },
+    "recruitsStrikers": {
+      "name": "Cestes de recrue",
+      "description": "Une simple paire de cestes aetheriques pour abattre des Behemoths."
+    },
+    "recruitsSword": {
+      "name": "Épée de recrue",
+      "description": "Une simple lame pour combattre des Behemoths."
+    },
+    "recruitsWarPike": {
+      "name": "Aetherolance de recrue",
+      "description": "Une aetherolance de recrue."
+    },
+    "repeater": {
+      "name": "Répéteur",
+      "description": "Une paire d'armes à feu modulaires et alimentées en aether conçues spécialement pour les Slayers."
+    },
+    "theTwinSuns": {
+      "name": "Soleils jumeaux",
+      "description": "Lance des magnétobombes explosives qui s'accrochent à la cible et détonnent à la commande. Comme le dit l'ancien proverbe ostien, « Quand les Soleils jumeaux se lèvent, votre journée est déjà finie. »",
+      "twinSunsBarrel0": {
+        "name": "TwinSunsBarrel",
+        "description": "Quand aetherochargé, gagne +40% de chances d'infliger un coup critique au lieu d'infliger un bonus de dégâts."
+      },
+      "twinSunsChamber0": {
+        "name": "TwinSunsChamber",
+        "description": "Charge 8 magnétobombes dans votre chargeur. Elles s'accrochent aux ennemis et détonnent lors du rechargement. La première magnétobombe accrochée sur chaque partie de Behemoth inflige +300 points de dégâts."
+      },
+      "twinSunsGrip0": {
+        "name": "TwinSunsGrip",
+        "description": "Ruez-vous dans une direction, devenant invulnérable pendant l'animation. Après avoir esquivé à travers une attaque, lance 6 mini-tirs qui sont toujours critiques. En mode magnétobombe, lance 2 magnétobombes à la place."
+      },
+      "twinSunsPrism0": {
+        "name": "TwinSunsPrism",
+        "description": "Après un coup critique, réduit le temps de recharge du mode Magnétobombe de 3 secondes."
+      }
+    },
+    "trainingSword": {
+      "name": "Épée d'entraînement",
+      "description": "Une lame d'entraînement, ternie et abimée."
+    },
+    "ragingBite": {
+      "name": "Morsure enragée",
+      "description": "Une hache de Slayer forgée à partir de trophées de Gnasher."
+    },
+    "ragingBlade": {
+      "name": "Lame enragée",
+      "description": "Une épée de Slayer forgée à partir de trophées de Gnasher."
+    },
+    "ragingCrash": {
+      "name": "Écraseur enragé",
+      "description": "Un marteau de Slayer forgé à partir de trophées de Gnasher."
+    },
+    "ragingCruelty": {
+      "name": "Cruauté enragée",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées de Gnasher."
+    },
+    "ragingFists": {
+      "name": "Poings enragés",
+      "description": "Cestes aethériques de Slayers fabriqués à partir de trophées de Gnasher."
+    },
+    "ragingTeeth": {
+      "name": "Dent enragée",
+      "description": "Une paire de chaînes-lames de Slayer forgée à partir de trophées de Gnasher."
+    },
+    "infernosArrow": {
+      "name": "Pointe du Sixième Cercle",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées d'Hellion.",
+      "blazeDamageOnNthHit0": {
+        "name": "BraiseDamageOnNthHit",
+        "description": "Le huitième coup consécutif inflige + 100 dégâts et de lourds dégâts de braise"
+      },
+      "blazeDamageOnNthHit6": {
+        "name": "BraiseDamageOnNthHit",
+        "description": "Le huitième coup consécutif inflige + 175 dégâts et de lourds dégâts de braise"
+      },
+      "blazeDamageOnNthHit10": {
+        "name": "BraiseDamageOnNthHit",
+        "description": "Le huitième coup consécutif inflige + 250 dégâts et de lourds dégâts de braise"
+      }
+    },
+    "infernosBurden": {
+      "name": "Jugement du Sixième Cercle",
+      "description": "Un marteau de Slayer forgé à partir de trophées d'Hellion.",
+      "blazeDamageOnNthHit0": {
+        "name": "BraiseDamageOnNthHit",
+        "description": "Le sixième coup consécutif inflige + 100 dégâts et de lourds dégâts de braise"
+      },
+      "blazeDamageOnNthHit6": {
+        "name": "BraiseDamageOnNthHit",
+        "description": "Le sixième coup consécutif inflige + 175 dégâts et de lourds dégâts de braise"
+      },
+      "blazeDamageOnNthHit10": {
+        "name": "BraiseDamageOnNthHit",
+        "description": "Le sixième coup consécutif inflige + 250 dégâts et de lourds dégâts de braise"
+      }
+    },
+    "infernosDecree": {
+      "name": "Tranchant du Sixième Cercle",
+      "description": "Une hache de Slayer forgée à partir de trophées d'Hellion.",
+      "blazeDamageOnNthHit0": {
+        "name": "BraiseDamageOnNthHit",
+        "description": "Le sixième coup consécutif inflige + 100 dégâts et de lourds dégâts de braise"
+      },
+      "blazeDamageOnNthHit6": {
+        "name": "BraiseDamageOnNthHit",
+        "description": "Le sixième coup consécutif inflige + 175 dégâts et de lourds dégâts de braise"
+      },
+      "blazeDamageOnNthHit10": {
+        "name": "BraiseDamageOnNthHit",
+        "description": "Le sixième coup consécutif inflige + 250 dégâts et de lourds dégâts de braise"
+      }
+    },
+    "infernosFangs": {
+      "name": "Crocs du Sixième Cercle",
+      "description": "Une paire de chaînes-lames de Slayer forgée avec des trophées d'Hellion.",
+      "blazeDamageOnNthHit0": {
+        "name": "BraiseDamageOnNthHit",
+        "description": "Le dixième coup consécutif inflige + 100 dégâts et de lourds dégâts de braise"
+      },
+      "blazeDamageOnNthHit6": {
+        "name": "BraiseDamageOnNthHit",
+        "description": "Le dixième coup consécutif inflige + 175 dégâts et de lourds dégâts de braise"
+      },
+      "blazeDamageOnNthHit10": {
+        "name": "BraiseDamageOnNthHit",
+        "description": "Le dixième coup consécutif inflige + 250 dégâts et de lourds dégâts de braise"
+      }
+    },
+    "infernosFlames": {
+      "name": "Flammes des enfers",
+      "description": "Cestes aethériques de Slayers fabriqués à partir de trophées d'Hellion.",
+      "blazeDamageOnNthHit0": {
+        "name": "BraiseDamageOnNthHit",
+        "description": "Le huitième coup consécutif inflige + 100 dégâts et de lourds dégâts de braise"
+      },
+      "blazeDamageOnNthHit6": {
+        "name": "BraiseDamageOnNthHit",
+        "description": "Le huitième coup consécutif inflige + 175 dégâts et de lourds dégâts de braise"
+      },
+      "blazeDamageOnNthHit10": {
+        "name": "BraiseDamageOnNthHit",
+        "description": "Le huitième coup consécutif inflige + 250 dégâts et de lourds dégâts de braise"
+      }
+    },
+    "infernosRazor": {
+      "name": "Griffes du Sixième Cercle",
+      "description": "Une épée de Slayer forgée à partir de trophées d'Hellion.",
+      "blazeDamageOnNthHit0": {
+        "name": "BraiseDamageOnNthHit",
+        "description": "Le huitième coup consécutif inflige + 100 dégâts et de lourds dégâts de braise"
+      },
+      "blazeDamageOnNthHit6": {
+        "name": "BraiseDamageOnNthHit",
+        "description": "Le huitième coup consécutif inflige + 175 dégâts et de lourds dégâts de braise"
+      },
+      "blazeDamageOnNthHit10": {
+        "name": "BraiseDamageOnNthHit",
+        "description": "Le huitième coup consécutif inflige + 250 dégâts et de lourds dégâts de braise"
+      }
+    },
+    "kharabaksClaw": {
+      "name": "Griffe de Kharabak",
+      "description": "Une hache de Slayer forgée à partir de trophées de Kharabak.",
+      "comboFinisherDamage0": {
+        "name": "ComboFinisherDamage",
+        "description": "Les coups de fin de combo infligent + 100 Dégâts aux membres"
+      },
+      "comboFinisherDamage6": {
+        "name": "ComboFinisherDamage",
+        "description": "Les coups de fin de combo infligent + 200 Dégâts aux membres"
+      },
+      "comboFinisherDamage10": {
+        "name": "ComboFinisherDamage",
+        "description": "Les coups de fin de combo infligent + 300 Dégâts aux membres"
+      }
+    },
+    "kharabaksJaw": {
+      "name": "Mâchoire de Kharabak",
+      "description": "Un marteau de Slayer forgé à partir de trophées de Kharabak.",
+      "reloadStamina0": {
+        "name": "ReloadStamina",
+        "description": "Après avoir rechargé une munition, récupérez 20 endurance"
+      },
+      "reloadStamina6": {
+        "name": "ReloadStamina",
+        "description": "Après avoir rechargé une munition, récupérez 30 endurance"
+      },
+      "reloadStamina10": {
+        "name": "ReloadStamina",
+        "description": "Après avoir rechargé une munition, récupérez 40 endurance"
+      }
+    },
+    "kharabaksPincers": {
+      "name": "Pinces de Kharabak",
+      "description": "Cestes aethériques de Slayers fabriqués à partir de trophées de Kharabak."
+    },
+    "kharabaksSpur": {
+      "name": "Aiguillon de Kharabak",
+      "description": "Une épée de Slayer forgée à partir de trophées de Kharabak."
+    },
+    "kharabaksSting": {
+      "name": "Dard Kharabak",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées de Kharabak."
+    },
+    "kharabaksWings": {
+      "name": "Ailes de Kharabak",
+      "description": "Une paire de chaînes-lames de Slayer forgée à partir de trophées de Kharabak."
+    },
+    "sovereignsGrudge": {
+      "name": "Rancune du souverain",
+      "description": "Un marteau de Slayer forgé à partir de trophées du Koshai.",
+      "noAttackDamage0": {
+        "name": "NoAttackDamage",
+        "description": "Après 6 secondes sans infliger de dégâts, les 1 prochaines attaques infligent + 25% de dégâts"
+      },
+      "noAttackDamage6": {
+        "name": "NoAttackDamage",
+        "description": "Après 6 secondes sans infliger de dégâts, les 1 prochaines attaques infligent + 25% de dégâts"
+      },
+      "noAttackDamage10": {
+        "name": "NoAttackDamage",
+        "description": "Après 6 secondes sans infliger de dégâts, les 1 prochaines attaques infligent + 25% de dégâts"
+      }
+    },
+    "sovereignsLash": {
+      "name": "Fouet du souverain",
+      "description": "Après 6 secondes sans infliger de dégât, les 5 prochaines attaques infligeront + 25% de dégâts.",
+      "noAttackDamage0": {
+        "name": "NoAttackDamage",
+        "description": "Après 6 secondes sans infliger de dégât, les 5 prochaines attaques infligeront + 25% de dégâts"
+      },
+      "noAttackDamage6": {
+        "name": "NoAttackDamage",
+        "description": "Après 6 secondes sans infliger de dégât, les 5 prochaines attaques infligeront + 25% de dégâts"
+      },
+      "noAttackDamage10": {
+        "name": "NoAttackDamage",
+        "description": "Après 6 secondes sans infliger de dégât, les 5 prochaines attaques infligeront + 25% de dégâts"
+      }
+    },
+    "sovereignsSceptres": {
+      "name": "Sceptres du Souverain",
+      "description": "Cestes aethériques de SLayers fabriqués à partir de trophées de Koshai.",
+      "noAttackDamage0": {
+        "name": "NoAttackDamage",
+        "description": "Après 6 secondes sans infliger de dégât, les 4 prochaines attaques infligeront + 25% de dégâts"
+      },
+      "noAttackDamage6": {
+        "name": "NoAttackDamage",
+        "description": "Après 6 secondes sans infliger de dégât, les 4 prochaines attaques infligeront + 25% de dégâts"
+      },
+      "noAttackDamage10": {
+        "name": "NoAttackDamage",
+        "description": "Après 6 secondes sans infliger de dégât, les 4 prochaines attaques infligeront + 25% de dégâts"
+      }
+    },
+    "sovereignsSorrow": {
+      "name": "Chagrin du souverain",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées de Koshai.",
+      "noAttackDamage0": {
+        "name": "NoAttackDamage",
+        "description": "Après 6 secondes sans infliger de dégât, les 5 prochaines attaques infligent 25% de dégâts."
+      },
+      "noAttackDamage6": {
+        "name": "NoAttackDamage",
+        "description": "Après 6 secondes sans infliger de dégât, les 5 prochaines attaques infligent 25% de dégâts."
+      },
+      "noAttackDamage10": {
+        "name": "NoAttackDamage",
+        "description": "Après 6 secondes sans infliger de dégât, les 5 prochaines attaques infligent 25% de dégâts."
+      }
+    },
+    "sovereignsTorment": {
+      "name": "Tourment du souverain",
+      "description": "Une épée de Slayer forgée à partir de trophées du Koshai",
+      "noAttackDamage0": {
+        "name": "NoAttackDamage",
+        "description": "Après 6 secondes sans infliger de dégât, les 3 prochaines attaques infligeront + 25% de dégâts"
+      },
+      "noAttackDamage6": {
+        "name": "NoAttackDamage",
+        "description": "Après 6 secondes sans infliger de dégât, les 3 prochaines attaques infligeront + 25% de dégâts"
+      },
+      "noAttackDamage10": {
+        "name": "NoAttackDamage",
+        "description": "Après 6 secondes sans infliger de dégât, les 3 prochaines attaques infligeront + 25% de dégâts"
+      }
+    },
+    "sovereignsWrath": {
+      "name": "Courroux du souverain",
+      "description": "Une hache de Slayer forgée à partir de trophées du Koshai.",
+      "noAttackDamage0": {
+        "name": "NoAttackDamage",
+        "description": "Après 6 secondes sans infliger de dégât, les 2 prochaines attaques infligeront + 25% de dégâts"
+      },
+      "noAttackDamage6": {
+        "name": "NoAttackDamage",
+        "description": "Après 6 secondes sans infliger de dégât, les 2 prochaines attaques infligeront + 25% de dégâts"
+      },
+      "noAttackDamage10": {
+        "name": "NoAttackDamage",
+        "description": "Après 6 secondes sans infliger de dégât, les 2 prochaines attaques infligeront + 25% de dégâts"
+      }
+    },
+    "nayzagasCharge": {
+      "name": "Charge de Nayzaga",
+      "description": "Un marteau de Slayer forgé à partir de trophées de Nayzaga.",
+      "staggerHeal0": {
+        "name": "StaggerHeal",
+        "description": "Après l'étourdissement d'un Behemoth, vous vous soignez de 100"
+      },
+      "staggerHeal6": {
+        "name": "StaggerHeal",
+        "description": "Après l'étourdissement d'un Behemoth, vous vous soignez de 200"
+      },
+      "staggerHeal10": {
+        "name": "StaggerHeal",
+        "description": "Après l'étourdissement d'un Behemoth, vous vous soignez de 300"
+      }
+    },
+    "nayzagasFang": {
+      "name": "Croc de Nayzaga",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées de Nayzaga.",
+      "woundedPartsLifesteal0": {
+        "name": "WoundedPartsLifesteal",
+        "description": "+3% de vol de vie sur les membres mutilés"
+      },
+      "woundedPartsLifesteal6": {
+        "name": "WoundedPartsLifesteal",
+        "description": "+4% de vol de vie sur les membres mutilés"
+      },
+      "woundedPartsLifesteal10": {
+        "name": "WoundedPartsLifesteal",
+        "description": "+5% de vol de vie sur les membres mutilés"
+      }
+    },
+    "nayzagasRazor": {
+      "name": "Rasoir de Nayzaga",
+      "description": "Une épée de Slayer forgée à partir de trophées de Nayzaga.",
+      "woundedPartsLifesteal0": {
+        "name": "WoundedPartsLifesteal",
+        "description": "+3% de vol de vie sur les membres mutilés"
+      },
+      "woundedPartsLifesteal6": {
+        "name": "WoundedPartsLifesteal",
+        "description": "+4% de vol de vie sur les membres mutilés"
+      },
+      "woundedPartsLifesteal10": {
+        "name": "WoundedPartsLifesteal",
+        "description": "+5% de vol de vie sur les membres mutilés"
+      }
+    },
+    "nayzagasReach": {
+      "name": "Portée de Nayzaga",
+      "description": "Une paire de chaînes-lames de Slayer forgée à partir de trophées de Nayzaga",
+      "woundedPartsLifesteal0": {
+        "name": "WoundedPartsLifesteal",
+        "description": "+3% de vol de vie sur les membres mutilés"
+      },
+      "woundedPartsLifesteal6": {
+        "name": "WoundedPartsLifesteal",
+        "description": "+4% de vol de vie sur les membres mutilés"
+      },
+      "woundedPartsLifesteal10": {
+        "name": "WoundedPartsLifesteal",
+        "description": "+5% de vol de vie sur les membres mutilés"
+      }
+    },
+    "nayzagasScythe": {
+      "name": "Faux de Nayzaga",
+      "description": "Une hache de Slayer forgée à partir de trophées de Nayzaga.",
+      "verticalAttackHeal0": {
+        "name": "VerticalAttackHeal",
+        "description": "Après des attaques parfaitement chargées, vous vous soignez de 50"
+      },
+      "verticalAttackHeal6": {
+        "name": "VerticalAttackHeal",
+        "description": "Après des attaques parfaitement chargées, vous vous soignez de 75"
+      },
+      "verticalAttackHeal10": {
+        "name": "VerticalAttackHeal",
+        "description": "Après des attaques parfaitement chargées, vous vous soignez de 100"
+      }
+    },
+    "nayzagasShockers": {
+      "name": "Tasers Nayzaga",
+      "description": "Cestes aethériques de Slayers fabriqués à partir de trophées de Nayzaga.",
+      "staggerHeal0": {
+        "name": "StaggerHeal",
+        "description": "Après l'étourdissement d'un Behemoth, vous vous soignez de 100"
+      },
+      "staggerHeal6": {
+        "name": "StaggerHeal",
+        "description": "Après l'étourdissement d'un Behemoth, vous vous soignez de 200"
+      },
+      "staggerHeal10": {
+        "name": "StaggerHeal",
+        "description": "Après l'étourdissement d'un Behemoth, vous vous soignez de 300"
+      }
+    },
+    "pangarsCall": {
+      "name": "Appel de Pangar",
+      "description": "Une épée de Slayer forgée à partir de trophées de Pangar."
+    },
+    "pangarsClaws": {
+      "name": "Griffes de Pangar",
+      "description": "Une paire de chaînes-lames de Slayer forgée à partir de trophées de Pangar."
+    },
+    "pangarsGrace": {
+      "name": "Grâce de Pangar",
+      "description": "Une hache de Slayer forgée à partir de trophées de Pangar."
+    },
+    "pangarsPunishers": {
+      "name": "Châtieurs Pangar",
+      "description": "Cestes aethériques de Slayer fabriqués à partir de trophées de Pangar."
+    },
+    "pangarsRampage": {
+      "name": "Déchaînement de Pangar",
+      "description": "Un marteau de Slayer forgé à partir de trophées de Pangar."
+    },
+    "pangarsTooth": {
+      "name": "Croc de Pangar",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées de Pangar."
+    },
+    "quillshotsBonehooks": {
+      "name": "Crochets osseux de Quillshot",
+      "description": "Une paire de chaînes-lames de SLayer forgée avec des trophées de Quillshot."
+    },
+    "quillshotsFury": {
+      "name": "Furie de Quillshot",
+      "description": "Une hache de Slayer forgée à partir de trophées de Quillshot."
+    },
+    "quillshotsJavelin": {
+      "name": "Javelot de Quillshot",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées de Quillshot."
+    },
+    "quillshotsRoar": {
+      "name": "Rugissement de Quillshot",
+      "description": "Un marteau de Slayer forgé à partir de trophées de Quillshot."
+    },
+    "quillshotsShredders": {
+      "name": "Déchiqueteurs Quillshot",
+      "description": "Cestes aethériques de Slayers fabriqués à partir de trophées de Quillshot."
+    },
+    "quillshotsTusk": {
+      "name": "Défense de Quillshot",
+      "description": "Une épée de Slayer forgée à partir de trophées de Quillshot."
+    },
+    "breakOfDawn": {
+      "name": "Brisure de l'aube",
+      "description": "Un marteau de Slayer forgé à partir de trophées de Rezakiri.",
+      "hitTwice0": {
+        "name": "HitTwice",
+        "description": "+ 10% de chance de frapper deux fois"
+      }
+    },
+    "callOfDawn": {
+      "name": "Appel de l'aube",
+      "description": "Une épée de Slayer forgée à partir de trophées de Rezakiri.",
+      "hitTwice0": {
+        "name": "HitTwice",
+        "description": "+ 10% de chance de frapper deux fois"
+      }
+    },
+    "edgeOfDawn": {
+      "name": "Tranch'aube",
+      "description": "Une hache de Slayer forgée à partir de trophées de Rezakiri.",
+      "hitTwice0": {
+        "name": "HitTwice",
+        "description": "+ 10% de chance de frapper deux fois"
+      }
+    },
+    "fangsOfDawn": {
+      "name": "Crocs de l'aube",
+      "description": "Une paire de chaînes-lames de Slayer forgée à partir de trophées de Rezakiri.",
+      "hitTwice0": {
+        "name": "HitTwice",
+        "description": "+ 10% de chance de frapper deux fois"
+      }
+    },
+    "handsOfDawn": {
+      "name": "Mains de l'aube",
+      "description": "Cestes aethériques de Slayers fabriqués à partir de trophées de Rezakiri.",
+      "hitTwice0": {
+        "name": "HitTwice",
+        "description": "+ 10% de chance de frapper deux fois"
+      }
+    },
+    "spireOfDawn": {
+      "name": "Aiguille de l'Aube",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées de Rezakiri.",
+      "hitTwice0": {
+        "name": "HitTwice",
+        "description": "+ 10% de chance de frapper deux fois"
+      }
+    },
+    "theGodhand": {
+      "name": "Main divine",
+      "description": "Une aetherolance exotique de Slayer forgée à partir de trophées de Rezakiri.",
+      "beamChannelDamage0": {
+        "name": "BeamChannelDamage",
+        "description": "Canalise un rayon infligeant des dégâts croissants suivant la durée de canalisation, jusqu'à 200%"
+      }
+    },
+    "stalkersMercy": {
+      "name": "Miséricorde du rôdeur",
+      "description": "Une hache de Slayer forgée à partir de trophées de Riftstalker.",
+      "damageShadowOrbs0": {
+        "name": "DamageShadowOrbs",
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 1,5% de dégâts pendant 5 secondes. Avec 5 ou plus, le bonus est doublé"
+      },
+      "damageShadowOrbs6": {
+        "name": "DamageShadowOrbs",
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2% de dégâts pendant 5 secondes. Avec 5 ou plus, le bonus est doublé"
+      },
+      "damageShadowOrbs10": {
+        "name": "DamageShadowOrbs",
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,5% de dégâts pendant 5 secondes. Avec 5 ou plus, le bonus est doublé"
+      }
+    },
+    "stalkersPrice": {
+      "name": "Prix du rôdeur",
+      "description": "Un marteau de Slayer forgé à partir de trophées du Riftstalker.",
+      "damageShadowOrbs0": {
+        "name": "DamageShadowOrbs",
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 1,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+      },
+      "damageShadowOrbs6": {
+        "name": "DamageShadowOrbs",
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,0% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+      },
+      "damageShadowOrbs10": {
+        "name": "DamageShadowOrbs",
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+      }
+    },
+    "stalkersScorn": {
+      "name": "Mépris du rôdeur",
+      "description": "Cestes aethériques de Slayers fabriqués à partir de trophées de Riftstalker.",
+      "damageShadowOrbs0": {
+        "name": "DamageShadowOrbs",
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 1,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+      },
+      "damageShadowOrbs6": {
+        "name": "DamageShadowOrbs",
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,0% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+      },
+      "damageShadowOrbs10": {
+        "name": "DamageShadowOrbs",
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+      }
+    },
+    "stalkersSpike": {
+      "name": "Pointe du rôdeur",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées du Riftstalker.",
+      "damageShadowOrbs0": {
+        "name": "DamageShadowOrbs",
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 1,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+      },
+      "damageShadowOrbs6": {
+        "name": "DamageShadowOrbs",
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2;0% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+      },
+      "damageShadowOrbs10": {
+        "name": "DamageShadowOrbs",
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+      }
+    },
+    "stalkersStrike": {
+      "name": "Frappe du rôdeur",
+      "description": "Une épée de Slayer forgée à partir de trophées du Riftstalker.",
+      "damageShadowOrbs0": {
+        "name": "DamageShadowOrbs",
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 1,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+      },
+      "damageShadowOrbs6": {
+        "name": "DamageShadowOrbs",
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,0% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+      },
+      "damageShadowOrbs10": {
+        "name": "DamageShadowOrbs",
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+      }
+    },
+    "stalkersTrap": {
+      "name": "Piège du rôdeur",
+      "description": "Une paire de chaînes-lames de Slayer forgée à partir de trophées du Riftstalker.",
+      "damageShadowOrbs0": {
+        "name": "DamageShadowOrbs",
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 1,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+      },
+      "damageShadowOrbs6": {
+        "name": "DamageShadowOrbs",
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,0% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+      },
+      "damageShadowOrbs10": {
+        "name": "DamageShadowOrbs",
+        "description": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2,5% de dégâts pendant 5secondes. Avec 5 orbes ou plus, le bonus est doublé"
+      }
+    },
+    "cryOfTheShrike": {
+      "name": "Lamentation du Shrike",
+      "description": "Une épée de Slayer forgée à partir de trophées de Shrike.",
+      "dodgePartDamage0": {
+        "name": "DodgePartDamage",
+        "description": "Après avoir esquivé, votre prochaine attaque inflige + 50 dégâts aux membres"
+      },
+      "dodgePartDamage6": {
+        "name": "DodgePartDamage",
+        "description": "Après avoir esquivé, votre prochaine attaque inflige + 75 dégâts aux membres"
+      },
+      "dodgePartDamage10": {
+        "name": "DodgePartDamage",
+        "description": "Après avoir esquivé, votre prochaine attaque inflige + 100 dégâts aux membres"
+      }
+    },
+    "fallOfTheShrike": {
+      "name": "Chute du Shrike",
+      "description": "Un marteau de Slayer forgé à partir de trophées de Shrike.",
+      "dodgePartDamage0": {
+        "name": "DodgePartDamage",
+        "description": "Après avoir esquivé, votre prochaine attaque inflige + 50 dégâts aux membres"
+      },
+      "dodgePartDamage6": {
+        "name": "DodgePartDamage",
+        "description": "Après avoir esquivé, votre prochaine attaque inflige + 75 dégâts aux membres"
+      },
+      "dodgePartDamage10": {
+        "name": "DodgePartDamage",
+        "description": "Après avoir esquivé, votre prochaine attaque inflige + 100 dégâts aux membres"
+      }
+    },
+    "fistsOfTheShrike": {
+      "name": "Serres du Shrike",
+      "description": "Cestes aethériques de Slayers fabriqués à partir de trophées de Shrike.",
+      "dodgePartDamage0": {
+        "name": "DodgePartDamage",
+        "description": "Après avoir esquivé, votre prochaine attaque inflige + 50 dégâts aux membres"
+      },
+      "dodgePartDamage6": {
+        "name": "DodgePartDamage",
+        "description": "Après avoir esquivé, votre prochaine attaque inflige + 75 dégâts aux membres"
+      },
+      "dodgePartDamage10": {
+        "name": "DodgePartDamage",
+        "description": "Après avoir esquivé, votre prochaine attaque inflige + 100 dégâts aux membres"
+      }
+    },
+    "flightOfTheShrike": {
+      "name": "Vol du Shrike",
+      "description": "Une paire de chaîne-lames de Slayer forgée à partir de trophées de Shrike.",
+      "dodgePartDamage0": {
+        "name": "DodgePartDamage",
+        "description": "Après avoir esquivé, votre prochaine attaque inflige + 50 dégâts aux membres"
+      },
+      "dodgePartDamage6": {
+        "name": "DodgePartDamage",
+        "description": "Après avoir esquivé, votre prochaine attaque inflige + 75 dégâts aux membres"
+      },
+      "dodgePartDamage10": {
+        "name": "DodgePartDamage",
+        "description": "Après avoir esquivé, votre prochaine attaque inflige + 100 dégâts aux membres"
+      }
+    },
+    "screamOfTheShrike": {
+      "name": "Cri du Shrike",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées de Shrike.",
+      "dodgePartDamage0": {
+        "name": "DodgePartDamage",
+        "description": "Après avoir esquivé, votre prochaine attaque inflige + 50 dégâts aux membres"
+      },
+      "dodgePartDamage6": {
+        "name": "DodgePartDamage",
+        "description": "Après avoir esquivé, votre prochaine attaque inflige + 75 dégâts aux membres"
+      },
+      "dodgePartDamage10": {
+        "name": "DodgePartDamage",
+        "description": "Après avoir esquivé, votre prochaine attaque inflige + 100 dégâts aux membres"
+      }
+    },
+    "songOfTheShrike": {
+      "name": "Chant du Shrike",
+      "description": "Une hache de Slayer forgée à partir de trophées de Shrike",
+      "dodgePartDamage0": {
+        "name": "DodgePartDamage",
+        "description": "Après avoir esquivé, votre prochaine attaque inflige + 50 dégâts aux membres"
+      },
+      "dodgePartDamage6": {
+        "name": "DodgePartDamage",
+        "description": "Après avoir esquivé, votre prochaine attaque inflige + 75 dégâts aux membres"
+      },
+      "dodgePartDamage10": {
+        "name": "DodgePartDamage",
+        "description": "Après avoir esquivé, votre prochaine attaque inflige + 100 dégâts aux membres"
+      }
+    },
+    "eyesOfNight": {
+      "name": "Yeux de la nuit",
+      "description": "Une paire de chaînes-lames forgée à partir de trophées de Shrowd.",
+      "lowHpDamage0": {
+        "name": "LowHpDamage",
+        "description": "Infligez 50% de dégâts supplémentaires lorsque vous avez moins de 20% de vie"
+      }
+    },
+    "fallOfNight": {
+      "name": "Tombée de la nuit",
+      "description": "Un marteau de Slayer forgé à partir de trophées de Shrowd.",
+      "lowHpDamage0": {
+        "name": "LowHpDamage",
+        "description": "Infligez 50% de dégâts supplémentaires lorsque vous avez moins de 20% de vie"
+      }
+    },
+    "gyreOfNight": {
+      "name": "Tourbillon nocturne",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées de Shrowd.",
+      "lowHpDamage0": {
+        "name": "LowHpDamage",
+        "description": "Infligez 50% de dégâts supplémentaires lorsque vous avez moins de 20% de vie"
+      }
+    },
+    "handsOfNight": {
+      "name": "Mains de la nuit",
+      "description": "Cestes aethériques de Slayers fabriqués à partir de trophées de Shrowd.",
+      "lowHpDamage0": {
+        "name": "LowHpDamage",
+        "description": "Infligez 50% de dégâts supplémentaires lorsque vous avez moins de 20% de vie"
+      }
+    },
+    "reaperOfNight": {
+      "name": "Faucheur nocturne",
+      "description": "Une hache de Slayer forgée à partir de trophées de Shrowd.",
+      "lowHpDamage0": {
+        "name": "LowHpDamage",
+        "description": "Infligez 50% de dégâts supplémentaires lorsque vous avez moins de 20% de vie"
+      }
+    },
+    "theHunger": {
+      "name": "Famine",
+      "description": "Une épée exotique de Slayer forgée à partir de trophées de Shrowd.",
+      "theHungerEffect0": {
+        "name": "TheHungerEffect",
+        "description": "Activez pour entrer en mode Festin, vous subissez des dégâts au cours du temps mais vous gagnez un vol de vie significatif, de la vitesse d'attaque et vous créez des vagues aethérées à chaque attaque qui causent des dégâts de zone"
+      }
+    },
+    "vergeOfNight": {
+      "name": "Orée nocturne",
+      "description": "Une épée de Slayer forgée à partir de trophées de Shrowd.",
+      "lowHpDamage0": {
+        "name": "LowHpDamage",
+        "description": "Infligez 50% de dégâts supplémentaires lorsque vous avez moins de 20% de vie"
+      }
+    },
+    "skarnsJudgment": {
+      "name": "Jugement de Skarn",
+      "description": "Une hache de Slayer forgée à partir de trophées de Skarn.",
+      "damageChanceStackShield0": {
+        "name": "DamageChanceStackShield",
+        "description": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 20 points pendant 12 secondes. Ce bouclier peut être réinitialisé"
+      },
+      "damageChanceStackShield6": {
+        "name": "DamageChanceStackShield",
+        "description": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 30 points pendant 12 secondes. Ce bouclier peut être réinitialisé"
+      },
+      "damageChanceStackShield10": {
+        "name": "DamageChanceStackShield",
+        "description": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 40 points pendant 12 secondes. Ce bouclier peut être réinitialisé"
+      }
+    },
+    "skarnsMalice": {
+      "name": "Malice du Skarn",
+      "description": "Une paire de chaîne-lames de Slayer forgée à partir de trophées de Skarn.",
+      "damageChanceStackShield0": {
+        "name": "DamageChanceStackShield",
+        "description": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 20 points pendant 12 secondes. Ce bouclier peut être réinitialisé"
+      },
+      "damageChanceStackShield6": {
+        "name": "DamageChanceStackShield",
+        "description": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 30 points pendant 12 secondes. Ce bouclier peut être réinitialisé"
+      },
+      "damageChanceStackShield10": {
+        "name": "DamageChanceStackShield",
+        "description": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 40 points pendant 12 secondes. Ce bouclier peut être réinitialisé"
+      }
+    },
+    "skarnsRancor": {
+      "name": "Rancoeur de Skarn",
+      "description": "Une épée de Slayer forgée à partir de trophées de Skarn.",
+      "damageChanceStackShield0": {
+        "name": "DamageChanceStackShield",
+        "description": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 20 points pendant 12 secondes. Ce bouclier peut être réinitialisé"
+      },
+      "damageChanceStackShield6": {
+        "name": "DamageChanceStackShield",
+        "description": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 30 points pendant 12 secondes. Ce bouclier peut être réinitialisé"
+      },
+      "damageChanceStackShield10": {
+        "name": "DamageChanceStackShield",
+        "description": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 40 points pendant 12 secondes. Ce bouclier peut être réinitialisé"
+      }
+    },
+    "skarnsSmashers": {
+      "name": "Écraseurs Skarn",
+      "description": "Cestes aethériques de Slayers fabriqués à partir de trophées de Skarn",
+      "damageChanceStackShield0": {
+        "name": "DamageChanceStackShield",
+        "description": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 20 points pendant 12 secondes. Ce bouclier peut être réinitialisé"
+      },
+      "damageChanceStackShield6": {
+        "name": "DamageChanceStackShield",
+        "description": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 30 points pendant 12 secondes. Ce bouclier peut être réinitialisé"
+      },
+      "damageChanceStackShield10": {
+        "name": "DamageChanceStackShield",
+        "description": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 40 points pendant 12 secondes. Ce bouclier peut être réinitialisé"
+      }
+    },
+    "skarnsSpite": {
+      "name": "Dépit de Skarn",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées de Skarn.",
+      "damageChanceStackShield0": {
+        "name": "DamageChanceStackShield",
+        "description": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 20 points pendant 12 secondes. Ce bouclier peut être réinitialisé"
+      },
+      "damageChanceStackShield6": {
+        "name": "DamageChanceStackShield",
+        "description": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 30 points pendant 12 secondes. Ce bouclier peut être réinitialisé"
+      },
+      "damageChanceStackShield10": {
+        "name": "DamageChanceStackShield",
+        "description": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 40 points pendant 12 secondes. Ce bouclier peut être réinitialisé"
+      }
+    },
+    "skarnsVengeance": {
+      "name": "Skarn Vengeance",
+      "description": "Un marteau de Slayer forgé à partir de trophées de Skarn.",
+      "damageChanceStackShield0": {
+        "name": "DamageChanceStackShield",
+        "description": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 20 points pendant 12 secondes. Ce bouclier peut être réinitialisé"
+      },
+      "damageChanceStackShield6": {
+        "name": "DamageChanceStackShield",
+        "description": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 30 points pendant 12 secondes. Ce bouclier peut être réinitialisé"
+      },
+      "damageChanceStackShield10": {
+        "name": "DamageChanceStackShield",
+        "description": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 40 points pendant 12 secondes. Ce bouclier peut être réinitialisé"
+      }
+    },
+    "winterGale": {
+      "name": "Souffle hivernal",
+      "description": "Une hache de Slayer forgée à partir de trophées de Skraev.",
+      "iceMines0": {
+        "name": "IceMines",
+        "description": "Après une esquive, déposez 1 mine de glace autour de vous qui infligent 300 dégâts. 30s de recharge"
+      },
+      "iceMines6": {
+        "name": "IceMines",
+        "description": "Après une esquive, déposez 2 mines de glace autour de vous qui infligent 300 dégâts. 30s de recharge"
+      },
+      "iceMines10": {
+        "name": "IceMines",
+        "description": "Après une esquive, déposez 3 mines de glace autour de vous qui infligent 300 dégâts. 30s de recharge"
+      }
+    },
+    "winterIce": {
+      "name": "Glace hivernale",
+      "description": "Une épée de Slayer forgée à partir de trophées de Skraev.",
+      "iceMines0": {
+        "name": "IceMines",
+        "description": "Après une esquive, déposez 1 mine de glace autour de vous qui infligent 300 dégâts. 30s de recharge"
+      },
+      "iceMines6": {
+        "name": "IceMines",
+        "description": "Après une esquive, déposez 2 mines de glace autour de vous qui infligent 300 dégâts. 30s de recharge"
+      },
+      "iceMines10": {
+        "name": "IceMines",
+        "description": "Après une esquive, déposez 3 mines de glace autour de vous qui infligent 300 dégâts. 30s de recharge"
+      }
+    },
+    "winterSquall": {
+      "name": "Bourrasque hivernale",
+      "description": "Un marteau de Slayer forgé à partir de trophées de Skraev.",
+      "iceMines0": {
+        "name": "IceMines",
+        "description": "Après une esquive, déposez 1 mine de glace autour de vous qui infligent 300 dégâts. 30s de recharge"
+      },
+      "iceMines6": {
+        "name": "IceMines",
+        "description": "Après une esquive, déposez 2 mines de glace autour de vous qui infligent 300 dégâts. 30s de recharge"
+      },
+      "iceMines10": {
+        "name": "IceMines",
+        "description": "Après une esquive, déposez 3 mines de glace autour de vous qui infligent 300 dégâts. 30s de recharge"
+      }
+    },
+    "winterVortex": {
+      "name": "Tourbillon hivernal",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées de Skraev.",
+      "iceMines0": {
+        "name": "IceMines",
+        "description": "Après une esquive, déposez 1 mine de glace autour de vous qui infligent 300 dégâts. 30s de recharge"
+      },
+      "iceMines6": {
+        "name": "IceMines",
+        "description": "Après une esquive, déposez 2 mines de glace autour de vous qui infligent 300 dégâts. 30s de recharge"
+      },
+      "iceMines10": {
+        "name": "IceMines",
+        "description": "Après une esquive, déposez 3 mines de glace autour de vous qui infligent 300 dégâts. 30s de recharge"
+      }
+    },
+    "winterWinds": {
+      "name": "Vents hivernaux",
+      "description": "Une paire de chaînes-lames de Slayer forgée à partir de trophées de Skraev.",
+      "iceMines0": {
+        "name": "IceMines",
+        "description": "Après une esquive, déposez 1 mine de glace autour de vous qui infligent 300 dégâts. 30s de recharge"
+      },
+      "iceMines6": {
+        "name": "IceMines",
+        "description": "Après une esquive, déposez 2 mines de glace autour de vous qui infligent 300 dégâts. 30s de recharge"
+      },
+      "iceMines10": {
+        "name": "IceMines",
+        "description": "Après une esquive, déposez 3 mines de glace autour de vous qui infligent 300 dégâts. 30s de recharge"
+      }
+    },
+    "winterWolves": {
+      "name": "Loups hivernaux",
+      "description": "Cestes aethériques de Slayers fabriqués à partir de trophées de Skraev.",
+      "iceMines0": {
+        "name": "IceMines",
+        "description": "Après une esquive, déposez 1 mine de glace autour de vous qui infligent 300 dégâts. 30s de recharge"
+      },
+      "iceMines6": {
+        "name": "IceMines",
+        "description": "Après une esquive, déposez 2 mines de glace autour de vous qui infligent 300 dégâts. 30s de recharge"
+      },
+      "iceMines10": {
+        "name": "IceMines",
+        "description": "Après une esquive, déposez 3 mines de glace autour de vous qui infligent 300 dégâts. 30s de recharge"
+      }
+    },
+    "stormBlades": {
+      "name": "Lames tempête",
+      "description": "Une paire de chaînes-lames de Slayer forgée à partir de trophées de Stormclaw.",
+      "dodgeMeterGain0": {
+        "name": "DodgeMeterGain",
+        "description": "Après avoir esquivé une attaque, le gain de charge de la prochaine attaque est augmentée de +100%"
+      },
+      "dodgeMeterGain6": {
+        "name": "DodgeMeterGain",
+        "description": "Après avoir esquivé une attaque, le gain de charge de la prochaine attaque est augmentée de +300%"
+      },
+      "dodgeMeterGain10": {
+        "name": "DodgeMeterGain",
+        "description": "Après avoir esquivé une attaque, le gain de charge de la prochaine attaque est augmentée de +500%"
+      }
+    },
+    "stormBreakers": {
+      "name": "Briseurs de tempête",
+      "description": "Cestes aethériques de Slayer fabriqués à partir de trophées de Stormclaw.",
+      "dodgeExtendMantra0": {
+        "name": "DodgeExtendMantra",
+        "description": "Après avoir esquivé une attaque, allonge le délai du mantra de 1 seconde"
+      },
+      "dodgeExtendMantra6": {
+        "name": "DodgeExtendMantra",
+        "description": "Après avoir esquivé une attaque, allonge le délai du mantra de 2 secondes"
+      },
+      "dodgeExtendMantra10": {
+        "name": "DodgeExtendMantra",
+        "description": "Après avoir esquivé une attaque, allonge le délai du mantra de 3 secondes"
+      }
+    },
+    "stormCutter": {
+      "name": "Taille tempête",
+      "description": "Une hache de Slayer forgée à partir de trophées de Stormclaw.",
+      "dodgeMeterGain0": {
+        "name": "DodgeMeterGain",
+        "description": "Après avoir esquivé une attaque, le gain de charge de la prochaine attaque est augmentée de +100%"
+      },
+      "dodgeMeterGain6": {
+        "name": "DodgeMeterGain",
+        "description": "Après avoir esquivé une attaque, le gain de charge de la prochaine attaque est augmentée de +300%"
+      },
+      "dodgeMeterGain10": {
+        "name": "DodgeMeterGain",
+        "description": "Après avoir esquivé une attaque, le gain de charge de la prochaine attaque est augmentée de +500%"
+      }
+    },
+    "stormHammer": {
+      "name": "Marteau tempête",
+      "description": "Un marteau de Slayer forgé à partir de trophées de Stormclaw.",
+      "dodgeReload0": {
+        "name": "DodgeReload",
+        "description": "Après avoir esquivé une attaque, rechargez 1 munitions aethérochargées"
+      },
+      "dodgeReload6": {
+        "name": "DodgeReload",
+        "description": "Après avoir esquivé une attaque, rechargez 2 munitions aethérochargées"
+      },
+      "dodgeReload10": {
+        "name": "DodgeReload",
+        "description": "Après avoir esquivé une attaque, rechargez 3 munitions aethérochargées"
+      }
+    },
+    "stormPike": {
+      "name": "Pique tempête",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées de Stormclaw.",
+      "dodgeMeterGain0": {
+        "name": "DodgeMeterGain",
+        "description": "Après avoir esquivé une attaque, le gain de charge de la prochaine attaque est augmenté de +100%"
+      },
+      "dodgeMeterGain6": {
+        "name": "DodgeMeterGain",
+        "description": "Après avoir esquivé une attaque, le gain de charge de la prochaine attaque est augmenté de +300%"
+      },
+      "dodgeMeterGain10": {
+        "name": "DodgeMeterGain",
+        "description": "Après avoir esquivé une attaque, le gain de charge de la prochaine attaque est augmenté de +500%"
+      }
+    },
+    "stormSword": {
+      "name": "Épée tempête",
+      "description": "Une épée de Slayer forgée à partir de trophées de Stormclaw.",
+      "dodgeMeterGain0": {
+        "name": "DodgeMeterGain",
+        "description": "Après avoir esquivé une attaque, le gain de charge de la prochaine attaque est augmenté de 100%"
+      },
+      "dodgeMeterGain6": {
+        "name": "DodgeMeterGain",
+        "description": "Après esquivant par le biais d'une attaque, la prochaine attaque de l'arme a 200% compteur de gain"
+      },
+      "dodgeMeterGain10": {
+        "name": "DodgeMeterGain",
+        "description": "Après esquivant par le biais d'une attaque, la prochaine attaque de l'arme a 300% compteur de gain"
+      }
+    },
+    "valomyrsBurden": {
+      "name": "Fardeau de Valomyr",
+      "description": "Un marteau de Slayer forgé à partir de trophées de Valomyr.",
+      "valomyrCharge0": {
+        "name": "ValomyrCharge",
+        "description": "Une fois chargée, votre prochaine attaque infligera + 300 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
+      },
+      "valomyrCharge6": {
+        "name": "ValomyrCharge",
+        "description": "Une fois chargée, votre prochaine attaque infligera + 425 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
+      },
+      "valomyrCharge10": {
+        "name": "ValomyrCharge",
+        "description": "Une fois chargée, votre prochaine attaque infligera + 550 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
+      }
+    },
+    "valomyrsDecree": {
+      "name": "Décret de Valomyr",
+      "description": "Une hache de Slayer forgée à partir de trophées de Valomyr.",
+      "valomyrCharge0": {
+        "name": "ValomyrCharge",
+        "description": "Une fois chargée, votre prochaine attaque infligera + 300 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
+      },
+      "valomyrCharge6": {
+        "name": "ValomyrCharge",
+        "description": "Une fois chargée, votre prochaine attaque infligera + 425 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
+      },
+      "valomyrCharge10": {
+        "name": "ValomyrCharge",
+        "description": "Une fois chargée, votre prochaine attaque infligera + 550 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
+      }
+    },
+    "valomyrsHope": {
+      "name": "Espoir de Valomyr",
+      "description": "Une aetherolance de Slayer forgée à partir de trophées de Valomyr.",
+      "valomyrCharge0": {
+        "name": "ValomyrCharge",
+        "description": "Une fois chargée, votre prochaine attaque infligera + 300 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
+      },
+      "valomyrCharge6": {
+        "name": "ValomyrCharge",
+        "description": "Une fois chargée, votre prochaine attaque infligera + 425 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
+      },
+      "valomyrCharge10": {
+        "name": "ValomyrCharge",
+        "description": "Une fois chargée, votre prochaine attaque infligera + 550 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
+      }
+    },
+    "valomyrsRegard": {
+      "name": "Attention de Valomyr",
+      "description": "Une épée de Slayer forgée à partir de trophées de Valomyr.",
+      "valomyrCharge0": {
+        "name": "ValomyrCharge",
+        "description": "Une fois chargée, votre prochaine attaque infligera + 300 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
+      },
+      "valomyrCharge6": {
+        "name": "ValomyrCharge",
+        "description": "Une fois chargée, votre prochaine attaque infligera + 425 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
+      },
+      "valomyrCharge10": {
+        "name": "ValomyrCharge",
+        "description": "Une fois chargée, votre prochaine attaque infligera + 550 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
+      }
+    },
+    "valomyrsRevenge": {
+      "name": "Vengeance de Valomyr",
+      "description": "Une paire de chaînes-lames de Slayer forgée à partir de trophées de Valomyr.",
+      "valomyrCharge0": {
+        "name": "ValomyrCharge",
+        "description": "Une fois chargée, votre prochaine attaque infligera + 300 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
+      },
+      "valomyrCharge6": {
+        "name": "ValomyrCharge",
+        "description": "Une fois chargée, votre prochaine attaque infligera + 425 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
+      },
+      "valomyrCharge10": {
+        "name": "ValomyrCharge",
+        "description": "Une fois chargée, votre prochaine attaque infligera + 550 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
+      }
+    },
+    "valomyrsVisions": {
+      "name": "Visions de Valomyr",
+      "description": "Cestes aethériques de Slayers fabriqués à partir de trophées de Valomyr",
+      "valomyrCharge0": {
+        "name": "ValomyrCharge",
+        "description": "Une fois chargée, votre prochaine attaque infligera + 300 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
+      },
+      "valomyrCharge6": {
+        "name": "ValomyrCharge",
+        "description": "Une fois chargée, votre prochaine attaque infligera + 425 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
+      },
+      "valomyrCharge10": {
+        "name": "ValomyrCharge",
+        "description": "Une fois chargée, votre prochaine attaque infligera + 550 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
+      }
+    }
+  },
+  "parts": {
+    "aetherstrikers": {
+      "mods": {
+        "cyclonicStrikeplate": {
+          "name": "Plaque cyclonique",
+          "partEffect": {
+            "0": "La durée de Forme tempétueuse est augmentée de 10 secondes. Lorsque Forme tempétueuse a moins de 10 secondes restantes, infligez +15% de dégâts"
+          }
+        },
+        "echoBracedriver": {
+          "name": "Mandrin résonant",
+          "partEffect": {
+            "0": "Les coups critiques augmentent les dégâts sur le temps infligés par Briseur de Karma de 5% jusqu'à ce que le malus se termine ou soit rafraîchi"
+          }
+        },
+        "inertialFistguard": {
+          "name": "Garde inertielle",
+          "partEffect": {
+            "0": "Afflux inflige +25% de dégâts. Après un afflux, gagnez +5% de vitesse de déplacement pendant 8 secondes. Se cumule jusqu'à 3 fois"
+          }
+        }
+      },
+      "specials": {
+        "adamantBolt": {
+          "name": "Explosion implacable",
+          "partEffect": {
+            "0": "Déchaîne de l'energie dans une explosion concentrée, infligeant 900 dégâts au premier ennemi touché. Inflige jusqu'à +100% de dégâts quand les effets de Forme tempétueuse et Briseur de Karma sont actifs"
+          }
+        },
+        "titansCrash": {
+          "name": "Crash du Titan",
+          "partEffect": {
+            "0": "Déchaîne de l'énergie vers l'avant dans une vague de pression, infligeant 600 dégâts à l'ennemi le plus proche et 200 dégâts aux cibles proches. Inflige jusqu'à +100% de dégâts quand les effets de Forme tempétueuse et Briseur de Karma sont actifs"
+          }
+        }
+      }
+    },
+    "axe": {
+      "mods": {
+        "furiousAxecore": {
+          "name": "Cœur de hache furieux",
+          "partEffect": {
+            "0": "Les attaques chargées parfaitement donnent +15 de jauge par coup, mais n'accordent plus « Résolution »"
+          }
+        },
+        "lightweightHaft": {
+          "name": "Manche léger",
+          "partEffect": {
+            "0": "Les déplacements tout en chargeant des frappes horizontales sont maintenant accélérés au lieu d'être ralentis et ne coutent plus d'endurance."
+          }
+        },
+        "overchargedCylinder": {
+          "name": "Cylindre surchargé",
+          "partEffect": {
+            "0": "La détermination peut maintenant s'accumuler jusqu'à 4 fois."
+          }
+        },
+        "railsplittersCanteen": {
+          "name": "Gamelle du répartiteur",
+          "partEffect": {
+            "0": "Les toniques utilisés pendant que votre hache est lancée ont +50% d'efficacité."
+          }
+        },
+        "volatileAxecore": {
+          "name": "Cœur de hache volatile",
+          "partEffect": {
+            "0": "Les attaques chargées infligent des dégâts de zone aux ennemis proches pour chaque niveau de charge."
+          }
+        }
+      },
+      "specials": {
+        "flightOfRuin": {
+          "name": "Vol de ruine",
+          "partEffect": {
+            "0": "Lancez la hache, infligeant en continu 60 points de dégâts et gagnez 2 points de jauge par coup. Réactivez pour la rappeler et effectuer une attaque puissante qui inflige jusqu'à 500 points de dégâts (augmentés par la détermination) et gagnant 15 points de jauge."
+          }
+        },
+        "grimOnslaught": {
+          "name": "Assaut Sinistre",
+          "partEffect": {
+            "0": "Lancez lahache vers l'avant, infligeant jusqu'à 800 points de dégâts (augmenté par la détermination) aux ennemis sur son passage et gagnant 15 points de jauge en touchant un Behemoth. Rattrapez la hache pour gagner 30 points de jauge."
+          }
+        },
+        "relentlessOnslaught": {
+          "name": "Assaut implacable",
+          "partEffect": {
+            "0": "Lancez la hache vers l'avant, infligeant des des dégâts aux ennemis sur sa trajectoire. Rattrapez la hache pour pouvoir la relancer jusqu'à 2 fois dans les 5 prochaines secondes, infligeant 500/600/1000 dégâts (encore accrue par la détermination). Ne charge pas la jauge."
+          }
+        }
+      }
+    },
+    "chainblades": {
+      "mods": {
+        "demolitionBlades": {
+          "name": "Lames de démolition",
+          "partEffect": {
+            "0": "Après avoir utilisé un spécial, +100% de dégâts aux objets créés par les Behemoths pendant 6 secondes"
+          }
+        },
+        "hurricaneBlades": {
+          "name": "Lames ouragan",
+          "partEffect": {
+            "0": "L'utilisation de Vrille-lame octroie une accumulation de bonus de dégâts par coup, qui s'appliquent lors d'autres attaques"
+          }
+        },
+        "lightweightChain": {
+          "name": "Chaîne légère",
+          "partEffect": {
+            "0": "Ruer vers un Behemoth réduit le coût en endurance de la ruée de 50%"
+          }
+        },
+        "momentumBlades": {
+          "name": "Lames à inertie",
+          "partEffect": {
+            "0": "Après avoir utilisé une capacité spéciale, vous pouvez l'utiliser à nouveau gratuitement dans les 4 secondes"
+          }
+        },
+        "serratedBlades": {
+          "name": "Lames dentelées",
+          "partEffect": {
+            "0": "Les attaques tranchantes ont une chance de provoquer un coup critique à vos prochaines Lames dansantes"
+          }
+        }
+      },
+      "specials": {
+        "cruelRiftstrike": {
+          "name": "Frappe-faille cruelle",
+          "partEffect": {
+            "0": "Utilisez pour vous téléporter vers l'avant et infliger 75 points de dégâts, toujours en coup critique. Peut traverser les Behemoths"
+          }
+        },
+        "insatiableDance": {
+          "name": "Danse insatiable",
+          "partEffect": {
+            "0": "De loin : vous tire vers votre cible et vous donne un point de Danse Insatiable. Au corps à corps : Vous pouvez de votre cible, puis utilisez une attaque primaire ou secondaire pour enchainer. Enchainer vers une attaque primaire donne un point de Danse Insatiable. Enchainer vers une attaque secondaire dépense des points et crée un orbe par point dépensé restaurant 50 points de santé chacun"
+          }
+        },
+        "reapersDance": {
+          "name": "Danse de la Faucheuse",
+          "partEffect": {
+            "0": "De loin : vous tire vers votre cible et vous donne un point de Danse mortelle. Au corps à corps : Vous poussez de votre cible, puis utilisez une attaque primaire ou secondaire pour enchainer. Enchainer vers une attaque primaire donne un point de Danse mortelle. Enchainer vers une attaque secondaire dépense des points et augmente les dégâts de l'attaque de 40% par point dépensé"
+          }
+        }
+      }
+    },
+    "hammer": {
+      "mods": {
+        "antiqueClip": {
+          "name": "Chargeur antique",
+          "partEffect": {
+            "0": "Munitions réduites à 2. Le bonus des munitions aetherochargées est augmenté de 300%"
+          }
+        },
+        "extendedClip": {
+          "name": "Chargeur étendu",
+          "partEffect": {
+            "0": "Munitions augmentées à 6"
+          }
+        },
+        "impulseCrown": {
+          "name": "Couronne d'impulsion",
+          "partEffect": {
+            "0": "Frappe aérienne accorde une augmentation de dégâts infligés pendant 10 secondes. Bonus doublé si la tete du Behemoth est touchée"
+          }
+        },
+        "turbineTrigger": {
+          "name": "Gâchette à turbine",
+          "partEffect": {
+            "0": "Amorcer des attaques augmente la vitesse d'attaque de 10% jusqu'à ce que le combo se termine. Cumulable."
+          }
+        },
+        "weightedCrown": {
+          "name": "Couronne alourdie",
+          "partEffect": {
+            "0": "Les dégâts d'étourdissement ne sont plus réduits de moitié quand vous attaquez les jambes des Behemoths"
+          }
+        }
+      },
+      "specials": {
+        "concussiveSalvo": {
+          "name": "Salve à concussion",
+          "partEffect": {
+            "0": "Maintenez pour charger des munitions dans le marteau. Libérez pour déclencher une explosion qui inflige jusqu'à 260 points de dégâts en fonction des munitions chargées et peut interrompre les Behemoths. La portée augmente avec des munitions chargées"
+          }
+        },
+        "ironheartLandbreaker": {
+          "name": "Scinde-terre coeur de fer",
+          "partEffect": {
+            "0": "Maintenez pour charger des munitions dans le marteau. Libérez pour créer un puits d'aether qui booste les joueurs qui passent dessus, leur accordant 40% de réduction de dégâts et les soignant de jusqu'à 155 points de vie en 30 secondes en aetherocharge"
+          }
+        },
+        "mightyLandbreaker": {
+          "name": "Scinde-terre majestueux",
+          "partEffect": {
+            "0": "Maintenez pour charger des munitions dans le marteau. Libérez pour créer un vent d'aether qui booste les joueurs qui passent dessus, leur accordant jusqu'à +35% de dégâts en fonction de la qualité des munitions"
+          }
+        }
+      }
+    },
+    "repeater": {
+      "barrels": {
+        "blizzardBarrel": {
+          "name": "Canon blizzard",
+          "partEffect": {
+            "0": "Les tirs et capacités infligent des dégâts de givre"
+          }
+        },
+        "dawnstarBarrel": {
+          "name": "Canon aubétoile",
+          "partEffect": {
+            "0": "Les tirs et capacités infligent des dégâts rayonnants"
+          }
+        },
+        "infernoBarrel": {
+          "name": "Canon infernal",
+          "partEffect": {
+            "0": "Les tirs et capacités infligent des dégâts incandescents"
+          }
+        },
+        "standardBarrel": {
+          "name": "Canon standard",
+          "partEffect": {
+            "0": "Les tirs et capacités infligent des dégâts neutres"
+          }
+        },
+        "stormBarrel": {
+          "name": "Canon orageux",
+          "partEffect": {
+            "0": "Les tirs et capacités infligent des dégâts foudroyants"
+          }
+        },
+        "sylvanBarrel": {
+          "name": "Canon sylvestre",
+          "partEffect": {
+            "0": "Les tirs et capacités infligent des dégâts telluriques"
+          }
+        },
+        "twilightBarrel": {
+          "name": "Canon crépusculaire",
+          "partEffect": {
+            "0": "Les tirs et capacités infligent des dégâts obscurs"
+          }
+        }
+      },
+      "chambers": {
+        "fullBoreChamber": {
+          "name": "Chambre gros calibre",
+          "partEffect": {
+            "0": "Tire un carreau perforant en ligne, infligeant des dégâts décroissants avec la distance.",
+            "1": "Aethérochargé : Inflige beaucoup plus de dégâts et repousse le Slayer en arrière."
+          }
+        },
+        "marksmanChamber": {
+          "name": "Chambre de tireur d'élite",
+          "partEffect": {
+            "0": "Effectue un tir en ligne droite qui inflige 250 points de dégâts au premier Behemoth qu'il touche. Si un membre est touché, il reçoit 40M de dégâts en plus des tirs pendant 10 secondes",
+            "1": "Aethérochargé : Le bonus de dégâts augmente jusqu'à 80% et un bonus de 25% est octroye à tous les alliés"
+          }
+        },
+        "salvoChamber": {
+          "name": "Chambre à salve",
+          "partEffect": {
+            "0": "Tire un missile explosif en ligne droite qui, à l'impact, inflige 400 points de dégâts en zone",
+            "1": "Aethérochargé: Tire 3 missiles en éventail."
+          }
+        }
+      },
+      "grips": {
+        "captainsGrip": {
+          "name": "Poignée du capitaine",
+          "partEffect": {
+            "0": "Lance à courte distance un bonus ramassable qui, une fois récupéré, octroie 20% de vitesse d'attaque supplémentaires durant 15 secondes",
+            "1": "Aethérochargé: Donne le même bonus à tous les Slayers."
+          }
+        },
+        "saboteursGrip": {
+          "name": "Poignée du saboteur",
+          "partEffect": {
+            "0": "Lance une mine explosive qui inflige 400 points de dégâts. La mine s'amorce après une courte période, augmentant ses dégâts à 700",
+            "1": "Aethérochargé: Inflige 900 points de dégâts une fois amorcée et peut interrompre les Behemoths"
+          }
+        }
+      },
+      "mods": {
+        "capacitiveMagazine": {
+          "name": "Chargeur capacitif",
+          "partEffect": {
+            "0": "Utiliser une capacité rend 4 munitions standard au chargeur."
+          }
+        },
+        "demolitionSights": {
+          "name": "Mires de démolition",
+          "partEffect": {
+            "0": "Quand aetherochargé, +50% de dégâts aux objets créés par les Behemoths."
+          }
+        },
+        "extractionCatalyst": {
+          "name": "Catalyseur d'extraction",
+          "partEffect": {
+            "0": "Réduit les délais de récupération de toutes les capacités de 2 secondes en esquivant à travers l'attaque d'un Behemoth."
+          }
+        },
+        "lightweightFrame": {
+          "name": "Cadre léger",
+          "partEffect": {
+            "0": "Vitesse de mouvement accrue de 20% quand vous avez 6 munitions restantes ou moins."
+          }
+        },
+        "luckyMagazine": {
+          "name": "Chargeur chanceux",
+          "partEffect": {
+            "0": "Donne 2% de chance de coup critique pour chaque munition manquante dans le chargeur."
+          }
+        },
+        "precisionSights": {
+          "name": "Mires de précision",
+          "partEffect": {
+            "0": "Dégâts accrus de 8 lors d'attaques successives sur la même partie. se cumule jusqu'à 5 fois."
+          }
+        },
+        "scopedSights": {
+          "name": "Visées à longue portée",
+          "partEffect": {
+            "0": "Augmente la portée optimale de 25%."
+          }
+        },
+        "tacticiansMagazine": {
+          "name": "Chargeur du stratège",
+          "partEffect": {
+            "0": "Un chargeur vide rechargé avec un rechargement aetherochargé réduit le rechargement des deux capacités de 4 secondes."
+          }
+        }
+      },
+      "prisms": {
+        "brilliantPrism": {
+          "name": "Prisme brillant",
+          "partEffect": {
+            "0": "Une fois chargé, votre prochaine attaque infligera 550 bonus rayonnante des dommages. Le taux de Charge augmente avec l'état de santé actuel."
+          }
+        },
+        "eclipsePrism": {
+          "name": "Prisme d'éclipse",
+          "partEffect": {
+            "0": "Infliger des dégâts donne une chance de générer des orbes d'ombre qui confèrent + 2% de dégâts pendant 5 secondes. Avec 5 orbes ou plus, le bonus est doublé."
+          }
+        },
+        "glacialPrism": {
+          "name": "Prisme glacial",
+          "partEffect": {
+            "0": "Après une esquive, déposez 3 mines de glace autour de vous qui infligent 300 dégâts. 30s de recharge."
+          }
+        },
+        "searingPrism": {
+          "name": "Prisme accablant",
+          "partEffect": {
+            "0": "Le dixième coup consécutif inflige +250 de dégâts et de lourds dégâts de braise."
+          }
+        },
+        "snowdriftPrism": {
+          "name": "Prisme d'avalanche",
+          "partEffect": {
+            "0": "Les 4 derniers coups dans votre chargeur génèrent des farfroidets qui ajoutent 50 dégâts chacun à votre prochaine attaque et de légers dégâts de givre. Maximum 4 farfroidets."
+          }
+        },
+        "stoneheartPrism": {
+          "name": "Prisme de coeur de pierre",
+          "partEffect": {
+            "0": "Infliger des dégâts donne une chance (basée sur le montant de dégâts) de recevoir un bouclier de santé cumulable de 40 points pendant 12 secondes. Ce bouclier peut être réinitialisé."
+          }
+        }
+      }
+    },
+    "sword": {
+      "mods": {
+        "adhesiveHilt": {
+          "name": "Poignée adhésive",
+          "partEffect": {
+            "0": "Empêche les étourdissements pendant un spécial."
+          }
+        },
+        "momentumPommel": {
+          "name": "Pommeau d'élan",
+          "partEffect": {
+            "0": "L'attaque finale du combo «Triple Éléments» peut être effectuée deux fois, infligeant +100 points de dégâts bonus au second coup."
+          }
+        },
+        "perpetualBladecore": {
+          "name": "Coeur de lame perpétuel",
+          "partEffect": {
+            "0": "Inflige des dégâts pendant le spécial remplit une petite partie de la jauge de spécial."
+          }
+        },
+        "reactiveHilt": {
+          "name": "Poignée réactive",
+          "partEffect": {
+            "0": "Les attaques d'esquive infligent toujours des critiques."
+          }
+        },
+        "whistlingBlade": {
+          "name": "Sifflement De La Lame",
+          "partEffect": {
+            "0": "Réduit le coût de l'endurance des Éléments se Répétant de 25% et de chacun des Éléments répétitifs attaque accorde +5% de vitesse d'attaque (jusqu'à 30%) jusqu'à ce que le combo est terminé."
+          }
+        }
+      },
+      "specials": {
+        "ardentCyclone": {
+          "name": "Cyclone Ardent",
+          "partEffect": {
+            "0": "Activez à pleine jauge pour tourner, infligeant constamment 50 points de dégâts aux ennemis proches. Réactivez pour vous rendre dans une direction,infligeant 450 + (10 x nombre de coups de rotation) au premier ennemi touché."
+          }
+        },
+        "avengingOverdrive": {
+          "name": "Surcharge vengeresse",
+          "partEffect": {
+            "0": "Activez avec une jauge pleine pour entrer en mode Surcharge, augmentant votre vitesse d'attaque et infligeant des dégâts de zone. Réactivez pour parer unr attaque de Behemoth et riposter."
+          }
+        },
+        "valiantOverdrive": {
+          "name": "Surcharge Vaillante",
+          "partEffect": {
+            "0": "Activez avec une jauge pleine pour entrer en mode Surcharge, gagnant +20% de vitesse d'attaque et ajoutant +60-80 de dégâts de zone aux attaques. Réactivez pour vous ruer dans une direction (4 secondes de recharge)."
+          }
+        }
+      }
+    },
+    "warpike": {
+      "mods": {
+        "balancedSpearhead": {
+          "name": "Pointe équilibré",
+          "partEffect": {
+            "0": "Augmente les dégâts infligés de 3% chaque fois que des attaques perçantes et absorbantes sont alternées. Réinitialisé à la fin du combo."
+          }
+        },
+        "barbedSpearhead": {
+          "name": "Pointe Barbelé",
+          "partEffect": {
+            "0": "Après une attaque d'esquive perçante, augmente les dégâts mutilants de 50% pendant 8 secondes."
+          }
+        },
+        "executionersSpearhead": {
+          "name": "Fer de lance du bourreau",
+          "partEffect": {
+            "0": "A chaque fois que le Behemoth est bléssé, gagnez +6% de dégâts."
+          }
+        },
+        "lightweightShaft": {
+          "name": "Manche léger",
+          "partEffect": {
+            "0": "L'attaque de charge à la lance ne coûte plus d'endurance et est toujours critique."
+          }
+        },
+        "munitionsAmplifier": {
+          "name": "Amplificateur de munitions",
+          "partEffect": {
+            "0": "La qualité des munitions stockées augmente lentement au fil du temps, jusqu'au maximum."
+          }
+        }
+      },
+      "specials": {
+        "concussivePayload": {
+          "name": "Charge à concussion",
+          "partEffect": {
+            "0": "Appuyez pour convertir votre jauge en munitions. Maintenez pour dépenser des munitions et tirer un missile qui peut interrompre les Behemoths, infligeant jusqu'à 750 points de dégâts suivant la qualité des munitions."
+          }
+        },
+        "recklessLeap": {
+          "name": "Charge Téméraire",
+          "partEffect": {
+            "0": "Appuyez pour convertir la jauge d'arme en munition. Maintenez pour dépenser des munitions et effectuer une charge aérienne qui inflige jusqu'à 1200 points de dégâts suivant la distance parcourue et la qualité des munitions."
+          }
+        },
+        "savageWellspring": {
+          "name": "Source Sauvage",
+          "partEffect": {
+            "0": "Appuyez pour convertir votre jauge de munitions. Maintenez pour dépenser des munitions et créer une aura qui augmente de 25% les chances de de critique des alliés proches jusqu'à 12 secondes selon la qualité des munitions."
+          }
+        }
+      }
+    }
+  }
+}

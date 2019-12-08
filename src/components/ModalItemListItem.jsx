@@ -8,7 +8,7 @@ import PropTypeUtility from "../utility/PropTypeUtility";
 
 export default class ModalItemListItem extends React.Component {
     getLevel() {
-        if(this.props.type === "Lantern") {
+        if(this.props.type === "lantern") {
             return 0;
         }
 
@@ -21,7 +21,7 @@ export default class ModalItemListItem extends React.Component {
         const level = Math.min(
             this.props.level,
             ItemUtility.maxLevel(
-                itemType === "Weapon" ? "weapons" : "armours",
+                itemType === "weapon" ? "weapons" : "armours",
                 this.props.item.name
             )
         );

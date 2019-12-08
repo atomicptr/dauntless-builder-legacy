@@ -1,0 +1,4039 @@
+{
+  "armours": {
+    "borealEpiphany": {
+      "name": "Boreal Epiphany",
+      "description": "Head protection forged from Boreus trophies."
+    },
+    "borealMarch": {
+      "name": "Boreal March",
+      "description": "Leg and foot protection forged from Boreus trophies."
+    },
+    "borealMight": {
+      "name": "Boreal Might",
+      "description": "Arms protection forged from Boreus trophies."
+    },
+    "borealResolve": {
+      "name": "Boreal Resolve",
+      "description": "Torso protection forged from Boreus trophies."
+    },
+    "theSkullforge": {
+      "name": "The Skullforge",
+      "description": "The Skullforge is a piece of craftable Exotic armour in Dauntless. It is crafted from Firebrand Charrogg reagents.",
+      "damageStaminaShield0": {
+        "name": "DamageStaminaShield",
+        "description": "1.5% of all damage dealt becomes a stamina shield (max 50) that depletes first when spending stamina. Depletes slowly after 5 seconds not dealing damage."
+      }
+    },
+    "volcanicAegis": {
+      "name": "Volcanic Aegis",
+      "description": "Torso protection forged from Charrogg trophies."
+    },
+    "volcanicGrips": {
+      "name": "Volcanic Grips",
+      "description": "Arms protection forged from Charrogg trophies."
+    },
+    "volcanicHelm": {
+      "name": "Volcanic Helm",
+      "description": "Head protection forged from Charrogg trophies."
+    },
+    "volcanicTreads": {
+      "name": "Volcanic Treads",
+      "description": "Leg and foot protection forged from Charrogg trophies."
+    },
+    "draskscaleGauntlets": {
+      "name": "Draskscale Gauntlets",
+      "description": "Arms protection forged from Drask trophies."
+    },
+    "draskscaleGreaves": {
+      "name": "Draskscale Greaves",
+      "description": "Leg and foot protection forged from Drask trophies."
+    },
+    "draskscaleHelmet": {
+      "name": "Draskscale Helmet",
+      "description": "Head protection forged from Drask trophies."
+    },
+    "draskscalePlate": {
+      "name": "Draskscale Plate",
+      "description": "Torso protection forged from Drask trophies."
+    },
+    "fieryBreastplate": {
+      "name": "Fiery Breastplate",
+      "description": "Torso protection forged from Embermane trophies."
+    },
+    "fieryGauntlets": {
+      "name": "Fiery Gauntlets",
+      "description": "Arms protection forged from Embermane trophies."
+    },
+    "fieryGreaves": {
+      "name": "Fiery Greaves",
+      "description": "Leg and foot protection forged from Embermane trophies."
+    },
+    "fieryHelm": {
+      "name": "Fiery Helm",
+      "description": "Head protection forged from Embermane trophies."
+    },
+    "recruitsBreastplate": {
+      "name": "Recruit's Breastplate",
+      "description": "Torso protection for the novice Slayer."
+    },
+    "recruitsGloves": {
+      "name": "Recruit's Gloves",
+      "description": "Arm and hand protection for the novice Slayer."
+    },
+    "recruitsGreaves": {
+      "name": "Recruit's Greaves",
+      "description": "Leg and foot protection for the novice Slayer."
+    },
+    "recruitsMask": {
+      "name": "Recruit's Mask",
+      "description": "Light face protection for the novice Slayer."
+    },
+    "gnasherCap": {
+      "name": "Gnasher Cap",
+      "description": "Head protection forged from Gnasher trophies."
+    },
+    "gnasherCloak": {
+      "name": "Gnasher Cloak",
+      "description": "Torso protection forged from Gnasher trophies."
+    },
+    "gnasherGrips": {
+      "name": "Gnasher Grips",
+      "description": "Arms protection forged from Gnasher trophies."
+    },
+    "gnasherTreads": {
+      "name": "Gnasher Treads",
+      "description": "Leg and foot protection forged from Gnasher trophies."
+    },
+    "hellplateBracers": {
+      "name": "Hellplate Bracers",
+      "description": "Arms protection forged from Hellion trophies."
+    },
+    "hellplateCasque": {
+      "name": "Hellplate Casque",
+      "description": "Head protection forged from Hellion trophies."
+    },
+    "hellplateCuirass": {
+      "name": "Hellplate Cuirass",
+      "description": "Torso protection forged from Hellion trophies."
+    },
+    "hellplateGreaves": {
+      "name": "Hellplate Greaves",
+      "description": "Leg and foot protection forged from Hellion trophies."
+    },
+    "clutchesOfTheSwarm": {
+      "name": "Clutches of the Swarm",
+      "description": "Arms protection forged from Kharabak trophies."
+    },
+    "danceOfTheSwarm": {
+      "name": "Dance of the Swarm",
+      "description": "Leg and foot protection forged from Kharabak trophies."
+    },
+    "eyeOfTheSwarm": {
+      "name": "Eye of the Swarm",
+      "description": "Head protection forged from Kharabak trophies."
+    },
+    "shellOfTheSwarm": {
+      "name": "Shell of the Swarm",
+      "description": "Torso protection forged from Kharabak trophies."
+    },
+    "graspOfThorns": {
+      "name": "Grasp of Thorns",
+      "description": "Arms protection forged from Koshai trophies."
+    },
+    "mantleOfThorns": {
+      "name": "Mantle of Thorns",
+      "description": "Torso protection forged from Koshai trophies."
+    },
+    "strideOfThorns": {
+      "name": "Stride of Thorns",
+      "description": "Leg and foot protection forged from Koshai trophies."
+    },
+    "visageOfThorns": {
+      "name": "Visage of Thorns",
+      "description": "Head protection forged from Koshai trophies."
+    },
+    "shockingGaze": {
+      "name": "Shocking Gaze",
+      "description": "Head protection forged from Nayzaga trophies."
+    },
+    "shockingGrasp": {
+      "name": "Shocking Grasp",
+      "description": "Arms protection forged from Nayzaga trophies."
+    },
+    "shockingHeart": {
+      "name": "Shocking Heart",
+      "description": "Torso protection forged from Nayzaga trophies."
+    },
+    "shockingStride": {
+      "name": "Shocking Stride",
+      "description": "Leg and foot protection forged from Nayzaga trophies."
+    },
+    "armsOfIce": {
+      "name": "Arms of Ice",
+      "description": "Arms protection forged from Pangar trophies."
+    },
+    "browOfIce": {
+      "name": "Brow of Ice",
+      "description": "Head protection forged from Pangar trophies."
+    },
+    "coreOfIce": {
+      "name": "Core of Ice",
+      "description": "Torso protection forged from Pangar trophies."
+    },
+    "feetOfIce": {
+      "name": "Feet of Ice",
+      "description": "Leg and foot protection forged from Pangar trophies."
+    },
+    "quillspikeBoots": {
+      "name": "Quillspike Boots",
+      "description": "Leg and foot protection forged from Quillshot trophies."
+    },
+    "quillspikeGrips": {
+      "name": "Quillspike Grips",
+      "description": "Arms protection forged from Quillshot trophies."
+    },
+    "quillspikeJacket": {
+      "name": "Quillspike Jacket",
+      "description": "Torso protection forged from Quillshot trophies."
+    },
+    "quillspikeMask": {
+      "name": "Quillspike Mask",
+      "description": "Head protection forged from Quillshot trophies."
+    },
+    "lightsCrown": {
+      "name": "Light's Crown",
+      "description": "Head protection forged from Rezakiri trophies."
+    },
+    "lightsRefuge": {
+      "name": "Light's Refuge",
+      "description": "Arms protection forged from Rezakiri trophies."
+    },
+    "lightsVirtue": {
+      "name": "Light's Virtue",
+      "description": "Torso protection forged from Rezakiri trophies."
+    },
+    "lightsWalk": {
+      "name": "Light's Walk",
+      "description": "Leg and foot protection forged from Rezakiri trophies."
+    },
+    "prismaticGrace": {
+      "name": "Prismatic Grace",
+      "description": "Prismatic Grace is a piece of craftable Exotic armour in Dauntless. It is crafted from Rezakiri reagents.",
+      "prismaticGraceRevivePrism0": {
+        "name": "PrismaticGraceRevivePrism",
+        "description": "After reviving another player, grant them a Radiant Prism that blocks incoming damage for 5 seconds."
+      },
+      "prismaticGraceLethalDamagePrism0": {
+        "name": "PrismaticGraceLethalDamagePrism",
+        "description": "The first time you take lethal damage, gain a Radiant Prism that blocks incoming damage for 10 seconds."
+      },
+      "prismaticGraceActivePrismRevive0": {
+        "name": "PrismaticGraceActivePrismRevive",
+        "description": "While active, reviving another player fully restores both players but removes the Prism even at full danger."
+      }
+    },
+    "guiseOfTheRift": {
+      "name": "Guise of the Rift",
+      "description": "Head protection forged from Riftstalker trophies."
+    },
+    "handsOfTheRift": {
+      "name": "Hands of the Rift",
+      "description": "Arms protection forged from Riftstalker trophies."
+    },
+    "mantleOfTheRift": {
+      "name": "Mantle of the Rift",
+      "description": "Torso protection forged from Riftstalker trophies."
+    },
+    "stridersOfTheRift": {
+      "name": "Striders of the Rift",
+      "description": "Leg and foot protection forged from Riftstalker trophies."
+    },
+    "shrikedownGloves": {
+      "name": "Shrikedown Gloves",
+      "description": "Arms protection forged from Shrike trophies."
+    },
+    "shrikedownGreaves": {
+      "name": "Shrikedown Greaves",
+      "description": "Leg and foot protection forged from Shrike trophies."
+    },
+    "shrikedownHelm": {
+      "name": "Shrikedown Helm",
+      "description": "Head protection forged from Shrike trophies."
+    },
+    "shrikedownPlate": {
+      "name": "Shrikedown Plate",
+      "description": "Torso protection forged from Shrike trophies."
+    },
+    "darkEmbrace": {
+      "name": "Dark Embrace",
+      "description": "Arms protection forged from Shrowd trophies."
+    },
+    "darkMarrow": {
+      "name": "Dark Marrow",
+      "description": "Torso protection forged from Shrowd trophies."
+    },
+    "darkPath": {
+      "name": "Dark Path",
+      "description": "Leg and foot protection forged from Shrowd trophies."
+    },
+    "darkWatch": {
+      "name": "Dark Watch",
+      "description": "Head protection forged from Shrowd trophies."
+    },
+    "tragicEcho": {
+      "name": "Tragic Echo",
+      "description": "Tragic Echo is a piece of craftable Exotic armour in Dauntless. It is crafted from Shrowd reagents.",
+      "tragicEchoDamageIncrease0": {
+        "name": "TragicEchoDamageIncrease",
+        "description": "Upon your first death, become a shadow clone that deals 100% increased damage for 15 seconds."
+      }
+    },
+    "heartOfStone": {
+      "name": "Heart of Stone",
+      "description": "Torso protection forged from Skarn trophies."
+    },
+    "mightOfStone": {
+      "name": "Might of Stone",
+      "description": "Arms protection forged from Skarn trophies."
+    },
+    "pillarsOfStone": {
+      "name": "Pillars of Stone",
+      "description": "Leg and foot protection forged from Skarn trophies."
+    },
+    "sightOfStone": {
+      "name": "Sight of Stone",
+      "description": "Head protection forged from Skarn trophies."
+    },
+    "skraevwingBoots": {
+      "name": "Skraevwing Boots",
+      "description": "Leg and foot protection forged from Skraev trophies."
+    },
+    "skraevwingGloves": {
+      "name": "Skraevwing Gloves",
+      "description": "Arms protection forged from Skraev trophies."
+    },
+    "skraevwingHelmet": {
+      "name": "Skraevwing Helmet",
+      "description": "Head protection forged from Skraev trophies."
+    },
+    "skraevwingJacket": {
+      "name": "Skraevwing Jacket",
+      "description": "Torso protection forged from Skraev trophies."
+    },
+    "lightningBoots": {
+      "name": "Lightning Boots",
+      "description": "Leg and foot protection forged from Stormclaw trophies."
+    },
+    "lightningGloves": {
+      "name": "Lightning Gloves",
+      "description": "Arms protection forged from Stormclaw trophies."
+    },
+    "lightningHelm": {
+      "name": "Lightning Helm",
+      "description": "Head protection forged from Stormclaw trophies."
+    },
+    "lightningPlate": {
+      "name": "Lightning Plate",
+      "description": "Torso protection forged from Stormclaw trophies."
+    },
+    "aegisOfValour": {
+      "name": "Aegis of Valour",
+      "description": "Torso protection forged from Valomyr trophies."
+    },
+    "crestOfValour": {
+      "name": "Crest of Valour",
+      "description": "Head protection forged from Valomyr trophies."
+    },
+    "gauntletsOfValour": {
+      "name": "Gauntlets of Valour",
+      "description": "Arms protection forged from Valomyr trophies."
+    },
+    "greavesOfValour": {
+      "name": "Greaves of Valour",
+      "description": "Leg and foot protection forged from Valomyr trophies."
+    }
+  },
+  "cells": {
+    "assassinsVigourCell": "Assassin's Vigour Cell",
+    "1AssassinsVigourCell": "+1 Assassin's Vigour Cell",
+    "2AssassinsVigourCell": "+2 Assassin's Vigour Cell",
+    "3AssassinsVigourCell": "+3 Assassin's Vigour Cell",
+    "bloodlessCell": "Bloodless Cell",
+    "1BloodlessCell": "+1 Bloodless Cell",
+    "2BloodlessCell": "+2 Bloodless Cell",
+    "3BloodlessCell": "+3 Bloodless Cell",
+    "fireproofCell": "Fireproof Cell",
+    "1FireproofCell": "+1 Fireproof Cell",
+    "2FireproofCell": "+2 Fireproof Cell",
+    "3FireproofCell": "+3 Fireproof Cell",
+    "fortressCell": "Fortress Cell",
+    "1FortressCell": "+1 Fortress Cell",
+    "2FortressCell": "+2 Fortress Cell",
+    "3FortressCell": "+3 Fortress Cell",
+    "guardianCell": "Guardian Cell",
+    "1GuardianCell": "+1 Guardian Cell",
+    "2GuardianCell": "+2 Guardian Cell",
+    "3GuardianCell": "+3 Guardian Cell",
+    "iceborneCell": "Iceborne Cell",
+    "1IceborneCell": "+1 Iceborne Cell",
+    "2IceborneCell": "+2 Iceborne Cell",
+    "3IceborneCell": "+3 Iceborne Cell",
+    "insulatedCell": "Insulated Cell",
+    "1InsulatedCell": "+1 Insulated Cell",
+    "2InsulatedCell": "+2 Insulated Cell",
+    "3InsulatedCell": "+3 Insulated Cell",
+    "nineLivesCell": "Nine Lives Cell",
+    "1NineLivesCell": "+1 Nine Lives Cell",
+    "2NineLivesCell": "+2 Nine Lives Cell",
+    "3NineLivesCell": "+3 Nine Lives Cell",
+    "shellshockResistCell": "Shellshock Resist Cell",
+    "1ShellshockResistCell": "+1 Shellshock Resist Cell",
+    "2ShellshockResistCell": "+2 Shellshock Resist Cell",
+    "3ShellshockResistCell": "+3 Shellshock Resist Cell",
+    "strategistCell": "Strategist Cell",
+    "1StrategistCell": "+1 Strategist Cell",
+    "2StrategistCell": "+2 Strategist Cell",
+    "3StrategistCell": "+3 Strategist Cell",
+    "sturdyCell": "Sturdy Cell",
+    "1SturdyCell": "+1 Sturdy Cell",
+    "2SturdyCell": "+2 Sturdy Cell",
+    "3SturdyCell": "+3 Sturdy Cell",
+    "toughCell": "Tough Cell",
+    "1ToughCell": "+1 Tough Cell",
+    "2ToughCell": "+2 Tough Cell",
+    "3ToughCell": "+3 Tough Cell",
+    "warmthCell": "Warmth Cell",
+    "1WarmthCell": "+1 Warmth Cell",
+    "2WarmthCell": "+2 Warmth Cell",
+    "3WarmthCell": "+3 Warmth Cell",
+    "agilityCell": "Agility Cell",
+    "1AgilityCell": "+1 Agility Cell",
+    "2AgilityCell": "+2 Agility Cell",
+    "3AgilityCell": "+3 Agility Cell",
+    "conditioningCell": "Conditioning Cell",
+    "1ConditioningCell": "+1 Conditioning Cell",
+    "2ConditioningCell": "+2 Conditioning Cell",
+    "3ConditioningCell": "+3 Conditioning Cell",
+    "enduranceCell": "Endurance Cell",
+    "1EnduranceCell": "+1 Endurance Cell",
+    "2EnduranceCell": "+2 Endurance Cell",
+    "3EnduranceCell": "+3 Endurance Cell",
+    "evasionCell": "Evasion Cell",
+    "1EvasionCell": "+1 Evasion Cell",
+    "2EvasionCell": "+2 Evasion Cell",
+    "3EvasionCell": "+3 Evasion Cell",
+    "fleetFootedCell": "Fleet Footed Cell",
+    "1FleetFootedCell": "+1 Fleet Footed Cell",
+    "2FleetFootedCell": "+2 Fleet Footed Cell",
+    "3FleetFootedCell": "+3 Fleet Footed Cell",
+    "nimbleCell": "Nimble Cell",
+    "1NimbleCell": "+1 Nimble Cell",
+    "2NimbleCell": "+2 Nimble Cell",
+    "3NimbleCell": "+3 Nimble Cell",
+    "sprinterCell": "Sprinter Cell",
+    "1SprinterCell": "+1 Sprinter Cell",
+    "2SprinterCell": "+2 Sprinter Cell",
+    "3SprinterCell": "+3 Sprinter Cell",
+    "swiftCell": "Swift Cell",
+    "1SwiftCell": "+1 Swift Cell",
+    "2SwiftCell": "+2 Swift Cell",
+    "3SwiftCell": "+3 Swift Cell",
+    "aetherhunterCell": "Aetherhunter Cell",
+    "1AetherhunterCell": "+1 Aetherhunter Cell",
+    "2AetherhunterCell": "+2 Aetherhunter Cell",
+    "3AetherhunterCell": "+3 Aetherhunter Cell",
+    "deconstructionCell": "Deconstruction Cell",
+    "1DeconstructionCell": "+1 Deconstruction Cell",
+    "2DeconstructionCell": "+2 Deconstruction Cell",
+    "3DeconstructionCell": "+3 Deconstruction Cell",
+    "disciplineCell": "Discipline Cell",
+    "1DisciplineCell": "+1 Discipline Cell",
+    "2DisciplineCell": "+2 Discipline Cell",
+    "3DisciplineCell": "+3 Discipline Cell",
+    "knockoutKingCell": "Knockout King Cell",
+    "1KnockoutKingCell": "+1 Knockout King Cell",
+    "2KnockoutKingCell": "+2 Knockout King Cell",
+    "3KnockoutKingCell": "+3 Knockout King Cell",
+    "overpowerCell": "Overpower Cell",
+    "1OverpowerCell": "+1 Overpower Cell",
+    "2OverpowerCell": "+2 Overpower Cell",
+    "3OverpowerCell": "+3 Overpower Cell",
+    "pacifierCell": "Pacifier Cell",
+    "1PacifierCell": "+1 Pacifier Cell",
+    "2PacifierCell": "+2 Pacifier Cell",
+    "3PacifierCell": "+3 Pacifier Cell",
+    "rageCell": "Rage Cell",
+    "1RageCell": "+1 Rage Cell",
+    "2RageCell": "+2 Rage Cell",
+    "3RageCell": "+3 Rage Cell",
+    "ragehunterCell": "Ragehunter Cell",
+    "1RagehunterCell": "+1 Ragehunter Cell",
+    "2RagehunterCell": "+2 Ragehunter Cell",
+    "3RagehunterCell": "+3 Ragehunter Cell",
+    "sharpenedCell": "Sharpened Cell",
+    "1SharpenedCell": "+1 Sharpened Cell",
+    "2SharpenedCell": "+2 Sharpened Cell",
+    "3SharpenedCell": "+3 Sharpened Cell",
+    "acidicCell": "Acidic Cell",
+    "1AcidicCell": "+1 Acidic Cell",
+    "2AcidicCell": "+2 Acidic Cell",
+    "3AcidicCell": "+3 Acidic Cell",
+    "adrenalineCell": "Adrenaline Cell",
+    "1AdrenalineCell": "+1 Adrenaline Cell",
+    "2AdrenalineCell": "+2 Adrenaline Cell",
+    "3AdrenalineCell": "+3 Adrenaline Cell",
+    "barbedCell": "Barbed Cell",
+    "1BarbedCell": "+1 Barbed Cell",
+    "2BarbedCell": "+2 Barbed Cell",
+    "3BarbedCell": "+3 Barbed Cell",
+    "berserkerCell": "Berserker Cell",
+    "1BerserkerCell": "+1 Berserker Cell",
+    "2BerserkerCell": "+2 Berserker Cell",
+    "3BerserkerCell": "+3 Berserker Cell",
+    "bladestormCell": "Bladestorm Cell",
+    "1BladestormCell": "+1 Bladestorm Cell",
+    "2BladestormCell": "+2 Bladestorm Cell",
+    "3BladestormCell": "+3 Bladestorm Cell",
+    "cunningCell": "Cunning Cell",
+    "1CunningCell": "+1 Cunning Cell",
+    "2CunningCell": "+2 Cunning Cell",
+    "3CunningCell": "+3 Cunning Cell",
+    "evasiveFuryCell": "Evasive Fury Cell",
+    "1EvasiveFuryCell": "+1 Evasive Fury Cell",
+    "2EvasiveFuryCell": "+2 Evasive Fury Cell",
+    "3EvasiveFuryCell": "+3 Evasive Fury Cell",
+    "mercilessCell": "Merciless Cell",
+    "1MercilessCell": "+1 Merciless Cell",
+    "2MercilessCell": "+2 Merciless Cell",
+    "3MercilessCell": "+3 Merciless Cell",
+    "moltenCell": "Molten Cell",
+    "1MoltenCell": "+1 Molten Cell",
+    "2MoltenCell": "+2 Molten Cell",
+    "3MoltenCell": "+3 Molten Cell",
+    "predatorCell": "Predator Cell",
+    "1PredatorCell": "+1 Predator Cell",
+    "2PredatorCell": "+2 Predator Cell",
+    "3PredatorCell": "+3 Predator Cell",
+    "savageryCell": "Savagery Cell",
+    "1SavageryCell": "+1 Savagery Cell",
+    "2SavageryCell": "+2 Savagery Cell",
+    "3SavageryCell": "+3 Savagery Cell",
+    "weightedStrikesCell": "Weighted Strikes Cell",
+    "1WeightedStrikesCell": "+1 Weighted Strikes Cell",
+    "2WeightedStrikesCell": "+2 Weighted Strikes Cell",
+    "3WeightedStrikesCell": "+3 Weighted Strikes Cell",
+    "wildFrenzyCell": "Wild Frenzy Cell",
+    "1WildFrenzyCell": "+1 Wild Frenzy Cell",
+    "2WildFrenzyCell": "+2 Wild Frenzy Cell",
+    "3WildFrenzyCell": "+3 Wild Frenzy Cell",
+    "aetherborneCell": "Aetherborne Cell",
+    "1AetherborneCell": "+1 Aetherborne Cell",
+    "2AetherborneCell": "+2 Aetherborne Cell",
+    "3AetherborneCell": "+3 Aetherborne Cell",
+    "aethericAttunementCell": "Aetheric Attunement Cell",
+    "1AethericAttunementCell": "+1 Aetheric Attunement Cell",
+    "2AethericAttunementCell": "+2 Aetheric Attunement Cell",
+    "3AethericAttunementCell": "+3 Aetheric Attunement Cell",
+    "aethericFrenzyCell": "Aetheric Frenzy Cell",
+    "1AethericFrenzyCell": "+1 Aetheric Frenzy Cell",
+    "2AethericFrenzyCell": "+2 Aetheric Frenzy Cell",
+    "3AethericFrenzyCell": "+3 Aetheric Frenzy Cell",
+    "conduitCell": "Conduit Cell",
+    "1ConduitCell": "+1 Conduit Cell",
+    "2ConduitCell": "+2 Conduit Cell",
+    "3ConduitCell": "+3 Conduit Cell",
+    "energizedCell": "Energized Cell",
+    "1EnergizedCell": "+1 Energized Cell",
+    "2EnergizedCell": "+2 Energized Cell",
+    "3EnergizedCell": "+3 Energized Cell",
+    "engineerCell": "Engineer Cell",
+    "1EngineerCell": "+1 Engineer Cell",
+    "2EngineerCell": "+2 Engineer Cell",
+    "3EngineerCell": "+3 Engineer Cell",
+    "lucentCell": "Lucent Cell",
+    "1LucentCell": "+1 Lucent Cell",
+    "2LucentCell": "+2 Lucent Cell",
+    "3LucentCell": "+3 Lucent Cell",
+    "medicCell": "Medic Cell",
+    "1MedicCell": "+1 Medic Cell",
+    "2MedicCell": "+2 Medic Cell",
+    "3MedicCell": "+3 Medic Cell",
+    "menderCell": "Mender Cell",
+    "1MenderCell": "+1 Mender Cell",
+    "2MenderCell": "+2 Mender Cell",
+    "3MenderCell": "+3 Mender Cell",
+    "stunningVigourCell": "Stunning Vigour Cell",
+    "1StunningVigourCell": "+1 Stunning Vigour Cell",
+    "2StunningVigourCell": "+2 Stunning Vigour Cell",
+    "3StunningVigourCell": "+3 Stunning Vigour Cell",
+    "vampiricCell": "Vampiric Cell",
+    "1VampiricCell": "+1 Vampiric Cell",
+    "2VampiricCell": "+2 Vampiric Cell",
+    "3VampiricCell": "+3 Vampiric Cell"
+  },
+  "lanterns": {
+    "broadsidesLantern": {
+      "name": "Broadsides Lantern",
+      "description": " ",
+      "lanternAbility": {
+        "instant": "Tap to fire a cannonball from above that deals 350 damage or, against airborne Behemoths, deals 450 damage and critically strikes.",
+        "hold": "Hold to drop a bomb from above that explodes after 1 second. Deals 650 damage and can interrupt Behemoths."
+      }
+    },
+    "drasksEye": {
+      "name": "Drask's Eye",
+      "description": " ",
+      "lanternAbility": {
+        "instant": "Deal 30% increased damage for 6 seconds.",
+        "hold": "Fires a lightning bolt in a direction that deals 150 Shock damage multiple times as it passes through enemies."
+      }
+    },
+    "embermanesRapture": {
+      "name": "Embermane's Rapture",
+      "description": " ",
+      "lanternAbility": {
+        "instant": "Attack 25% faster for 8 seconds.",
+        "hold": "Create a fire ball in front of you that explodes after 5 seconds, dealing 850 Blaze damage to all nearby Behemoths."
+      }
+    },
+    "koshaisBloom": {
+      "name": "Koshai's Bloom",
+      "description": " ",
+      "lanternAbility": {
+        "instant": "10% of damage dealt will heal you for 8 seconds.",
+        "hold": "Dash in a direction, deal 750 Terra damage to nearby enemies upon arrival."
+      }
+    },
+    "pangarsShine": {
+      "name": "Pangar's Shine",
+      "description": " ",
+      "lanternAbility": {
+        "instant": "Restore 25% of your maximum stamina.",
+        "hold": "Create a frost pillar in front of you that deals 960 Frost damage to nearby enemies over 12 seconds."
+      }
+    },
+    "recruitsLantern": {
+      "name": "Recruit's Lantern",
+      "description": " ",
+      "lanternAbility": {
+        "instant": "Grants a 50 hit point shield (doesn't stack)",
+        "hold": "Disperses aether that allows the Slayer to track the Behemoth."
+      }
+    },
+    "shrikesZeal": {
+      "name": "Shrike's Zeal",
+      "description": " ",
+      "lanternAbility": {
+        "instant": "Move 40% faster for 6 seconds.",
+        "hold": "Creates an aura that grants nearby slayers 15% increased move speed and attack speed for 15 seconds."
+      }
+    },
+    "skarnsDefiance": {
+      "name": "Skarn's Defiance",
+      "description": " ",
+      "lanternAbility": {
+        "instant": "Grants a 250 hit point shield for 6 seconds.",
+        "hold": "Surrounds the slayer in swirling stone that deals 900 Terra damage to nearby enemies over 10 seconds."
+      }
+    }
+  },
+  "perks": {
+    "acidic": {
+      "name": "Acidic",
+      "description": "Increases Wound damage at the cost of Part damage.",
+      "effects": {
+        "1": [
+          "Converts 30% of Part Damage to Wound Damage",
+          " "
+        ],
+        "2": [
+          "Converts 40% of Part Damage to Wound Damage",
+          " "
+        ],
+        "3": [
+          "Converts 50% of Part Damage to Wound Damage",
+          " "
+        ],
+        "4": [
+          "Converts 50% of Part Damage to Wound Damage",
+          "+10% Part damage"
+        ],
+        "5": [
+          "Converts 50% of Part Damage to Wound Damage",
+          "+15% Part damage"
+        ],
+        "6": [
+          "Converts 50% of Part Damage to Wound Damage",
+          "+20% Part damage"
+        ]
+      }
+    },
+    "adrenaline": {
+      "name": "Adrenaline",
+      "description": "Increases damage dealt based on stamina spent.",
+      "effects": {
+        "1": [
+          "Grants +0.3% increased damage for every 10 stamina missing."
+        ],
+        "2": [
+          "Grants +0.6% increased damage for every 10 stamina missing."
+        ],
+        "3": [
+          "Grants +0.9% increased damage for every 10 stamina missing."
+        ],
+        "4": [
+          "Grants +1.2% increased damage for every 10 stamina missing."
+        ],
+        "5": [
+          "Grants +1.5% increased damage for every 10 stamina missing."
+        ],
+        "6": [
+          "Grants +1.8% increased damage for every 10 stamina missing."
+        ]
+      }
+    },
+    "aetherborne": {
+      "name": "Aetherborne",
+      "description": "Increases the benefits of using aether vents.",
+      "effects": {
+        "1": [
+          "25% chance not to consume an Aether Vent charge on use",
+          "25 additional Aether Vent healing"
+        ],
+        "2": [
+          "25% chance not to consume an Aether Vent charge on use",
+          "50 additional Aether Vent healing"
+        ],
+        "3": [
+          "25% chance not to consume an Aether Vent charge on use",
+          "75 additional Aether Vent healing"
+        ],
+        "4": [
+          "25% chance not to consume an Aether Vent charge on use",
+          "100 additional Aether Vent healing"
+        ],
+        "5": [
+          "25% chance not to consume an Aether Vent charge on use",
+          "150 additional Aether Vent healing"
+        ],
+        "6": [
+          "25% chance not to consume an Aether Vent charge on use",
+          "200 additional Aether Vent healing"
+        ]
+      }
+    },
+    "aetherhunter": {
+      "name": "Aetherhunter",
+      "description": "Increases damage against aether charged Behemoths.",
+      "effects": {
+        "1": [
+          "+5% Damage vs Aether-charged Behemoths"
+        ],
+        "2": [
+          "+10% Damage vs Aether-charged Behemoths"
+        ],
+        "3": [
+          "+20% Damage vs Aether-charged Behemoths"
+        ],
+        "4": [
+          "+30% Damage vs Aether-charged Behemoths"
+        ],
+        "5": [
+          "+40% Damage vs Aether-charged Behemoths"
+        ],
+        "6": [
+          "+50% Damage vs Aether-charged Behemoths"
+        ]
+      }
+    },
+    "aethericAttunement": {
+      "name": "Aetheric Attunement",
+      "description": "Percent increase to Lantern Charge gained from attacks.",
+      "effects": {
+        "1": [
+          "+10% Lantern Charge"
+        ],
+        "2": [
+          "+15% Lantern Charge"
+        ],
+        "3": [
+          "+20% Lantern Charge"
+        ],
+        "4": [
+          "+30% Lantern Charge"
+        ],
+        "5": [
+          "+40% Lantern Charge"
+        ],
+        "6": [
+          "+50% Lantern Charge"
+        ]
+      }
+    },
+    "aethericFrenzy": {
+      "name": "Aetheric Frenzy",
+      "description": "Gains a flat amount of Lantern Charge on each weapon hit.",
+      "effects": {
+        "1": [
+          "+3 Lantern Charge on Hit"
+        ],
+        "2": [
+          "+4 Lantern Charge on Hit"
+        ],
+        "3": [
+          "+5 Lantern Charge on Hit"
+        ],
+        "4": [
+          "+7.5 Lantern Charge on Hit"
+        ],
+        "5": [
+          "+10 Lantern Charge on Hit"
+        ],
+        "6": [
+          "+12.5 Lantern Charge on Hit"
+        ]
+      }
+    },
+    "agility": {
+      "name": "Agility",
+      "description": "Reduces the stamina cost of dodging.",
+      "effects": {
+        "1": [
+          "-10% Dodge Roll Stamina Cost"
+        ],
+        "2": [
+          "-20% Dodge Roll Stamina Cost"
+        ],
+        "3": [
+          "-30% Dodge Roll Stamina Cost"
+        ],
+        "4": [
+          "-40% Dodge Roll Stamina Cost"
+        ],
+        "5": [
+          "-55% Dodge Roll Stamina Cost"
+        ],
+        "6": [
+          "-70% Dodge Roll Stamina Cost"
+        ]
+      }
+    },
+    "assassinsVigour": {
+      "name": "Assassin's Vigour",
+      "description": "Grants Health after breaking a Behemoth part.",
+      "effects": {
+        "1": [
+          "Heal 50 when you break a part"
+        ],
+        "2": [
+          "Heal 100 when you break a part"
+        ],
+        "3": [
+          "Heal 150 when you break a part"
+        ],
+        "4": [
+          "Heal 200 when you break a part"
+        ],
+        "5": [
+          "Heal 250 when you break a part"
+        ],
+        "6": [
+          "Heal 300 when you break a part"
+        ]
+      }
+    },
+    "barbed": {
+      "name": "Barbed",
+      "description": "Adds a flat amount of Wound damage on hit.",
+      "effects": {
+        "1": [
+          "+5 Wound Damage on Hit",
+          " "
+        ],
+        "2": [
+          "+10 Wound Damage on Hit",
+          " "
+        ],
+        "3": [
+          "+15 Wound Damage on Hit",
+          " "
+        ],
+        "4": [
+          "+20 Wound Damage on Hit",
+          "After dodging through an attack the next attack's Expose Damage is increased by 200"
+        ],
+        "5": [
+          "+30 Wound Damage on Hit",
+          "After dodging through an attack the next attack's Expose Damage is increased by 200"
+        ],
+        "6": [
+          "+40 Wound Damage on Hit",
+          "After dodging through an attack the next attack's Expose Damage is increased by 400"
+        ]
+      }
+    },
+    "berserker": {
+      "name": "Berserker",
+      "description": "Reduces max health. Dealing damage stacks increased damage dealt for a short period.",
+      "effects": {
+        "1": [
+          "-50 max health",
+          "After dealing damage, gain +1% damage for 3 seconds. Stacks 10 times."
+        ],
+        "2": [
+          "-100 max health",
+          "After dealing damage, gain +1.5% damage for 3 seconds. Stacks 10 times."
+        ],
+        "3": [
+          "-150 max health",
+          "After dealing damage, gain +2% damage for 3 seconds. Stacks 10 times."
+        ],
+        "4": [
+          "-200 max health",
+          "After dealing damage, gain +2.5% damage for 3 seconds. Stacks 10 times."
+        ],
+        "5": [
+          "-250 max health",
+          "After dealing damage, gain +3% damage for 3 seconds. Stacks 10 times."
+        ],
+        "6": [
+          "-300 max health",
+          "After dealing damage, gain +3.5% damage for 3 seconds. Stacks 10 times."
+        ]
+      }
+    },
+    "bladestorm": {
+      "name": "Bladestorm",
+      "description": "Adds a flat amount of Part damage on hit.",
+      "effects": {
+        "1": [
+          "+5 Part Damage on Hit",
+          " "
+        ],
+        "2": [
+          "+10 Part Damage on Hit",
+          " "
+        ],
+        "3": [
+          "+15 Part Damage on Hit",
+          " "
+        ],
+        "4": [
+          "+20 Part Damage on Hit",
+          "+200 Part Damage after dodging through an attack"
+        ],
+        "5": [
+          "+30 Part Damage on Hit",
+          "+200 Part Damage after dodging through an attack"
+        ],
+        "6": [
+          "+40 Part Damage on Hit",
+          "+400 Part Damage after dodging through an attack"
+        ]
+      }
+    },
+    "bloodless": {
+      "name": "Bloodless",
+      "description": "Protects against Wounded and Crippling Wounds statuses.",
+      "effects": {
+        "1": [
+          "Reduces duration of Wounded status by 50%",
+          " "
+        ],
+        "2": [
+          "Reduces duration of Wounded status by 80%",
+          " "
+        ],
+        "3": [
+          "Immune to Wounded status",
+          " "
+        ],
+        "4": [
+          "Immune to Wounded status",
+          "Reduces effectiveness of Crippling Wounded status by 50%"
+        ],
+        "5": [
+          "Immune to Wounded status",
+          "Reduces effectiveness of Crippling Wounded status by 80%"
+        ],
+        "6": [
+          "Immune to Wounded status",
+          "Immune to Crippling Wound status"
+        ]
+      }
+    },
+    "conditioning": {
+      "name": "Conditioning",
+      "description": "Increases Stamina Regen.",
+      "effects": {
+        "1": [
+          "+5 Stamina Regeneration"
+        ],
+        "2": [
+          "+10 Stamina Regeneration"
+        ],
+        "3": [
+          "+15 Stamina Regeneration"
+        ],
+        "4": [
+          "+20 Stamina Regeneration"
+        ],
+        "5": [
+          "+25 Stamina Regeneration"
+        ],
+        "6": [
+          "+30 Stamina Regeneration"
+        ]
+      }
+    },
+    "conduit": {
+      "name": "Conduit",
+      "description": "Using a Lantern's hold ability increases all Slayers' attack speed temporarily.",
+      "effects": {
+        "1": [
+          "Using your lantern hold ability grants 4% attack speed to all Slayers for 10 seconds."
+        ],
+        "2": [
+          "Using your lantern hold ability grants 6% attack speed to all Slayers for 10 seconds."
+        ],
+        "3": [
+          "Using your lantern hold ability grants 8% attack speed to all Slayers for 10 seconds."
+        ],
+        "4": [
+          "Using your lantern hold ability grants 10% attack speed to all Slayers for 10 seconds."
+        ],
+        "5": [
+          "Using your lantern hold ability grants 12.5% attack speed to all Slayers for 10 seconds."
+        ],
+        "6": [
+          "Using your lantern hold ability grants 15% attack speed to all Slayers for 10 seconds."
+        ]
+      }
+    },
+    "cunning": {
+      "name": "Cunning",
+      "description": "Grants a chance to deal double damage.",
+      "effects": {
+        "1": [
+          "2% critical strike chance"
+        ],
+        "2": [
+          "3% critical strike chance"
+        ],
+        "3": [
+          "4% critical strike chance"
+        ],
+        "4": [
+          "5% critical strike chance, +10% critical strike damage."
+        ],
+        "5": [
+          "7.5% critical strike chance, +20% critical strike damage."
+        ],
+        "6": [
+          "10% critical strike chance, +30% critical strike damage."
+        ]
+      }
+    },
+    "deconstruction": {
+      "name": "Deconstruction",
+      "description": "Bonus damage against objects created by Behemoths.",
+      "effects": {
+        "1": [
+          "Deal 110% damage to objects created by Behemoths"
+        ],
+        "2": [
+          "Deal 120% damage to objects created by Behemoths"
+        ],
+        "3": [
+          "Deal 130% damage to objects created by Behemoths"
+        ],
+        "4": [
+          "Deal 150% damage to objects created by Behemoths"
+        ],
+        "5": [
+          "Deal 170% damage to objects created by Behemoths"
+        ],
+        "6": [
+          "Deal 200% damage to objects created by Behemoths"
+        ]
+      }
+    },
+    "discipline": {
+      "name": "Discipline",
+      "description": "Prevents you from having over half health. Increases critical strike chance.",
+      "effects": {
+        "1": [
+          "+2.5% critical strike chance",
+          "Health is limited to 50% of max health"
+        ],
+        "2": [
+          "+5.0% critical strike chance",
+          "Health is limited to 50% of max health"
+        ],
+        "3": [
+          "+7.5% critical strike chance",
+          "Health is limited to 50% of max health"
+        ],
+        "4": [
+          "+10.0% critical strike chance",
+          "Health is limited to 50% of max health"
+        ],
+        "5": [
+          "+12.5% critical strike chance",
+          "Health is limited to 50% of max health"
+        ],
+        "6": [
+          "+15% critical strike chance",
+          "Health is limited to 50% of max health"
+        ]
+      }
+    },
+    "endurance": {
+      "name": "Endurance",
+      "description": "Increases Max Stamina.",
+      "effects": {
+        "1": [
+          "Increases Max Stamina by 10"
+        ],
+        "2": [
+          "Increases Max Stamina by 20"
+        ],
+        "3": [
+          "Increases Max Stamina by 40"
+        ],
+        "4": [
+          "Increases Max Stamina by 60"
+        ],
+        "5": [
+          "Increases Max Stamina by 80"
+        ],
+        "6": [
+          "Increases Max Stamina by 100"
+        ]
+      }
+    },
+    "energized": {
+      "name": "Energized",
+      "description": "Increase weapon meter gain rate.",
+      "effects": {
+        "1": [
+          "+10% Weapon Charge rate"
+        ],
+        "2": [
+          "+15% Weapon Charge rate"
+        ],
+        "3": [
+          "+20% Weapon Charge rate"
+        ],
+        "4": [
+          "+25% Weapon Charge rate"
+        ],
+        "5": [
+          "+30% Weapon Charge rate"
+        ],
+        "6": [
+          "+40% Weapon Charge rate"
+        ]
+      }
+    },
+    "engineer": {
+      "name": "Engineer",
+      "description": "Reduces healing from Slayer flask. Increases range of pylons.",
+      "effects": {
+        "1": [
+          "Your Flask heals for 30 less",
+          "+35% increase Pylon range"
+        ],
+        "2": [
+          "Your Flask heals for 60 less",
+          "+50% increase Pylon range"
+        ],
+        "3": [
+          "Your Flask heals for 90 less",
+          "+65% increase Pylon range"
+        ],
+        "4": [
+          "Your Flask heals for 120 less",
+          "+80% increase Pylon range"
+        ],
+        "5": [
+          "Your Flask heals for 150 less",
+          "+115% increase Pylon range"
+        ],
+        "6": [
+          "Your Flask heals for 180 less",
+          "+150% increase Pylon range"
+        ]
+      }
+    },
+    "evasion": {
+      "name": "Evasion",
+      "description": "Increases the time you are invincible when dodging.",
+      "effects": {
+        "1": [
+          "Increases Dodge invulnerability windows by 7%"
+        ],
+        "2": [
+          "Increases Dodge invulnerability windows by 14%"
+        ],
+        "3": [
+          "Increases Dodge invulnerability windows by 21%"
+        ],
+        "4": [
+          "Increases Dodge invulnerability windows by 28%"
+        ],
+        "5": [
+          "Increases Dodge invulnerability windows by 35%"
+        ],
+        "6": [
+          "Increases Dodge invulnerability windows by 42%"
+        ]
+      }
+    },
+    "evasiveFury": {
+      "name": "Evasive Fury",
+      "description": "Temporarily increases attack speed when dodging through a Behemoth's attack.",
+      "effects": {
+        "1": [
+          "+7.5% Attack Speed for 16 seconds after dodging through an attack"
+        ],
+        "2": [
+          "+10% Attack Speed for 16 seconds after dodging through an attack"
+        ],
+        "3": [
+          "+12.5% Attack Speed for 16 seconds after dodging through an attack"
+        ],
+        "4": [
+          "+15% Attack Speed for 16 seconds after dodging through an attack"
+        ],
+        "5": [
+          "+17.5% Attack Speed for 16 seconds after dodging through an attack"
+        ],
+        "6": [
+          "+20% Attack Speed for 16 seconds after dodging through an attack"
+        ]
+      }
+    },
+    "fireproof": {
+      "name": "Fireproof",
+      "description": "Protects against being set on fire.",
+      "effects": {
+        "1": [
+          "Reduces duration of On Fire status by 10%"
+        ],
+        "2": [
+          "Reduces duration of On Fire status by 20%"
+        ],
+        "3": [
+          "Reduces duration of On Fire status by 40%"
+        ],
+        "4": [
+          "Reduces duration of On Fire status by 60%"
+        ],
+        "5": [
+          "Reduces duration of On Fire status by 80%"
+        ],
+        "6": [
+          "Immune to being set on fire."
+        ]
+      }
+    },
+    "fleetFooted": {
+      "name": "Fleet Footed",
+      "description": "Temporarily increases Movement Speed after a dodge.",
+      "effects": {
+        "1": [
+          "Following a Dodge, Movement Speed is increased by 10% for 3 seconds"
+        ],
+        "2": [
+          "Following a Dodge, Movement Speed is increased by 15% for 3 seconds"
+        ],
+        "3": [
+          "Following a Dodge, Movement Speed is increased by 20% for 3 seconds"
+        ],
+        "4": [
+          "Following a Dodge, Movement Speed is increased by 25% for 3 seconds"
+        ],
+        "5": [
+          "Following a Dodge, Movement Speed is increased by 30% for 3 seconds"
+        ],
+        "6": [
+          "Following a Dodge, Movement Speed is increased by 35% for 3 seconds"
+        ]
+      }
+    },
+    "fortress": {
+      "name": "Fortress",
+      "description": "Grants a small shield after avoiding damage for a short time.",
+      "effects": {
+        "1": [
+          "Grants a 10 health shield after not getting hit for 10s"
+        ],
+        "2": [
+          "Grants a 20 health shield after not getting hit for 10s"
+        ],
+        "3": [
+          "Grants a 40 health shield after not getting hit for 10s"
+        ],
+        "4": [
+          "Grants a 60 health shield after not getting hit for 10s"
+        ],
+        "5": [
+          "Grants a 80 health shield after not getting hit for 10s"
+        ],
+        "6": [
+          "Grants a 100 health shield after not getting hit for 10s"
+        ]
+      }
+    },
+    "guardian": {
+      "name": "Guardian",
+      "description": "Grant a portion of any shield applied to your nearest ally.",
+      "effects": {
+        "1": [
+          "+10% of shield applied to you is also applied to your nearest ally for 15s."
+        ],
+        "2": [
+          "+20% of shield applied to you is also applied to your nearest ally for 15s."
+        ],
+        "3": [
+          "+30% of shield applied to you is also applied to your nearest ally for 15s."
+        ],
+        "4": [
+          "+40% of shield applied to you is also applied to your nearest ally for 15s."
+        ],
+        "5": [
+          "+50% of shield applied to you is also applied to your nearest ally for 15s."
+        ],
+        "6": [
+          "+60% of shield applied to you is also applied to your nearest ally for 15s."
+        ]
+      }
+    },
+    "iceborne": {
+      "name": "Iceborne",
+      "description": "Increases Defence when at low health, and at later ranks, grants life steal",
+      "effects": {
+        "1": [
+          "When under 50% health, grants +5% decreased damage taken",
+          " "
+        ],
+        "2": [
+          "When under 50% health, grants +10% decreased damage taken",
+          " "
+        ],
+        "3": [
+          "When under 50% health, grants +15% decreased damage taken",
+          " "
+        ],
+        "4": [
+          "When under 50% health, grants +20% decreased damage taken",
+          "While Iceborne is active, grants 4% lifesteal that cannot heal beyond 50% health"
+        ],
+        "5": [
+          "When under 50% health, grants +25% decreased damage taken",
+          "While Iceborne is active, grants 6% lifesteal that cannot heal beyond 50% health"
+        ],
+        "6": [
+          "When under 50% health, grants +30% decreased damage taken",
+          "While Iceborne is active, grants 8% lifesteal that cannot heal beyond 50% health"
+        ]
+      }
+    },
+    "insulated": {
+      "name": "Insulated",
+      "description": "Protects against Shocked status effect and allows you to attack electric shields.",
+      "effects": {
+        "1": [
+          "Reduces duration of Shocked status by 25%",
+          " "
+        ],
+        "2": [
+          "Reduces duration of Shocked status by 50%",
+          " "
+        ],
+        "3": [
+          "Reduces duration of Shocked status by 75%",
+          " "
+        ],
+        "4": [
+          "Reduces duration of Shocked status by 75%",
+          "Reduces knockback and damage of hitting electrified shields"
+        ],
+        "5": [
+          "Reduces duration of Shocked status by 75%",
+          "Prevents knockback and damage of hitting electrified shields"
+        ],
+        "6": [
+          "Immune to Shocked status",
+          "Prevents knockback and damage of hitting electrified shields"
+        ]
+      }
+    },
+    "knockoutKing": {
+      "name": "Knockout King",
+      "description": "Percent increase to Stagger damage.",
+      "effects": {
+        "1": [
+          "5% Stagger Damage",
+          " "
+        ],
+        "2": [
+          "10% Stagger Damage",
+          " "
+        ],
+        "3": [
+          "15% Stagger Damage",
+          " "
+        ],
+        "4": [
+          "20% Stagger Damage",
+          "After dodging through an attack the next weapon attack's Stagger is increased by 50%"
+        ],
+        "5": [
+          "25% Stagger Damage",
+          "After dodging through an attack the next weapon attack's Stagger is increased by 50%"
+        ],
+        "6": [
+          "30% Stagger Damage",
+          "After dodging through an attack the next weapon attack's Stagger is increased by 100%"
+        ]
+      }
+    },
+    "lucent": {
+      "name": "Lucent",
+      "description": "Flask heals over time and generates lantern charge.",
+      "effects": {
+        "1": [
+          "Your Flask heals over 20 seconds",
+          "but for 20% increased healing. While this heal is active",
+          "generate 8 Lantern Charge each second.",
+          " "
+        ],
+        "2": [
+          "Your Flask heals over 20 seconds",
+          "but for 20% increased healing. While this heal is active",
+          "generate 16 Lantern Charge each second.",
+          " "
+        ],
+        "3": [
+          "Your Flask heals over 20 seconds",
+          "but for 20% increased healing. While this heal is active",
+          "generate 25 Lantern Charge each second.",
+          " "
+        ],
+        "4": [
+          "Your Flask heals over 20 seconds",
+          "but for 20% increased healing. While this heal is active",
+          "generate 37.5 Lantern Charge each second.",
+          " "
+        ],
+        "5": [
+          "Your Flask heals over 20 seconds",
+          "but for 20% increased healing. While this heal is active",
+          "generate 50 Lantern Charge each second.",
+          " "
+        ],
+        "6": [
+          "Your Flask heals over 20 seconds",
+          "but for 20% increased healing. While this heal is active",
+          "generate 75 Lantern Charge each second.",
+          " "
+        ]
+      }
+    },
+    "medic": {
+      "name": "Medic",
+      "description": "Improves your ability to revive allies.",
+      "effects": {
+        "1": [
+          "When reviving an ally they are healed an additional 5%",
+          " ",
+          " "
+        ],
+        "2": [
+          "When reviving an ally they are healed an additional 10%",
+          " ",
+          " "
+        ],
+        "3": [
+          "When reviving an ally they are healed an additional 20%",
+          " ",
+          " "
+        ],
+        "4": [
+          "When reviving an ally they are healed an additional 20%",
+          "Increases Revive Speed by 66%",
+          " "
+        ],
+        "5": [
+          "When reviving an ally they are healed an additional 30%",
+          "Increases Revive Speed by 66%",
+          " "
+        ],
+        "6": [
+          "When reviving an ally they are healed an additional 40%",
+          "Increases Revive Speed by 66%",
+          "Grants a 300 health shield for 20 seconds after reviving an ally"
+        ]
+      }
+    },
+    "mender": {
+      "name": "Mender",
+      "description": "Reduces healing from Slayer Flask. Using your flask restores other Slayers' health.",
+      "effects": {
+        "1": [
+          "Your Flask heals for 30 less",
+          "Using your Flask also heals all other Slayers for 270"
+        ],
+        "2": [
+          "Your Flask heals for 60 less",
+          "Using your Flask also heals all other Slayers for 270"
+        ],
+        "3": [
+          "Your Flask heals for 90 less",
+          "Using your Flask also heals all other Slayers for 270"
+        ],
+        "4": [
+          "Your Flask heals for 120 less",
+          "Using your Flask also heals all other Slayers for 270"
+        ],
+        "5": [
+          "Your Flask heals for 150 less",
+          "Using your Flask also heals all other Slayers for 270"
+        ],
+        "6": [
+          "Your Flask heals for 180 less",
+          "Using your Flask also heals all other Slayers for 270"
+        ]
+      }
+    },
+    "merciless": {
+      "name": "Merciless",
+      "description": "Increases Wound damage against staggered Behemoths.",
+      "effects": {
+        "1": [
+          "+25 Wound Damage vs Staggered Behemoths"
+        ],
+        "2": [
+          "+40 Wound Damage vs Staggered Behemoths"
+        ],
+        "3": [
+          "+55 Wound Damage vs Staggered Behemoths"
+        ],
+        "4": [
+          "+70 Wound Damage vs Staggered Behemoths"
+        ],
+        "5": [
+          "+85 Wound Damage vs Staggered Behemoths"
+        ],
+        "6": [
+          "+100 Wound Damage vs Staggered Behemoths"
+        ]
+      }
+    },
+    "molten": {
+      "name": "Molten",
+      "description": "Generates Molten Hearts when dealing damage.",
+      "effects": {
+        "1": [
+          "Dealing damage generates a Molten Heart on a 26 second cooldown, granting immunity to burning and increased attack and movement speed."
+        ],
+        "2": [
+          "Dealing damage generates a Molten Heart on a 23 second cooldown, granting immunity to burning and increased attack and movement speed."
+        ],
+        "3": [
+          "Dealing damage generates two Molten Hearts on a 23 second cooldown, granting immunity to burning and increased attack and movement speed."
+        ],
+        "4": [
+          "Dealing damage generates two Molten Hearts on a 20 second cooldown, granting immunity to burning and increased attack and movement speed."
+        ],
+        "5": [
+          "Dealing damage generates three Molten Hearts on a 20 second cooldown, granting immunity to burning and increased attack and movement speed."
+        ],
+        "6": [
+          "Dealing damage generates three Molten Hearts on a 16 second cooldown, granting immunity to burning and increased attack and movement speed."
+        ]
+      }
+    },
+    "nimble": {
+      "name": "Nimble",
+      "description": "Restores Stamina when dodging through Behemoth attacks.",
+      "effects": {
+        "1": [
+          "Gain 10 Stamina after dodging through an attack"
+        ],
+        "2": [
+          "Gain 15 Stamina after dodging through an attack"
+        ],
+        "3": [
+          "Gain 20 Stamina after dodging through an attack"
+        ],
+        "4": [
+          "Gain 25 Stamina after dodging through an attack"
+        ],
+        "5": [
+          "Gain 30 Stamina after dodging through an attack"
+        ],
+        "6": [
+          "Gain 35 Stamina after dodging through an attack"
+        ]
+      }
+    },
+    "nineLives": {
+      "name": "Nine Lives",
+      "description": "Grants a chance to reduce damage, and later the ability to cheat death.",
+      "effects": {
+        "1": [
+          "+5% chance to halve incoming damage",
+          " "
+        ],
+        "2": [
+          "+8% chance to halve incoming damage",
+          " "
+        ],
+        "3": [
+          "+12% chance to halve incoming damage",
+          " "
+        ],
+        "4": [
+          "+12% chance to halve incoming damage",
+          "The first time you would be knocked out stay up and heal for 400"
+        ],
+        "5": [
+          "+16% chance to halve incoming damage",
+          "The first time you would be knocked out stay up and heal for 400"
+        ],
+        "6": [
+          "+20% chance to halve incoming damage",
+          "The first time you would be knocked out stay up and heal for 400 and become empowered for 10 seconds"
+        ]
+      }
+    },
+    "overpower": {
+      "name": "Overpower",
+      "description": "Increases damage against staggered Behemoths.",
+      "effects": {
+        "1": [
+          "+10% Damage vs Staggered Behemoths"
+        ],
+        "2": [
+          "+20% Damage vs Staggered Behemoths"
+        ],
+        "3": [
+          "+30% Damage vs Staggered Behemoths"
+        ],
+        "4": [
+          "+40% Damage vs Staggered Behemoths"
+        ],
+        "5": [
+          "+50% Damage vs Staggered Behemoths"
+        ],
+        "6": [
+          "+60% Damage vs Staggered Behemoths"
+        ]
+      }
+    },
+    "pacifier": {
+      "name": "Pacifier",
+      "description": "Increases stagger damage against enraged Behemoths.",
+      "effects": {
+        "1": [
+          "+10% Stagger vs Enraged Behemoths"
+        ],
+        "2": [
+          "+20% Stagger vs Enraged Behemoths"
+        ],
+        "3": [
+          "+30% Stagger vs Enraged Behemoths"
+        ],
+        "4": [
+          "+40% Stagger vs Enraged Behemoths"
+        ],
+        "5": [
+          "+50% Stagger vs Enraged Behemoths"
+        ],
+        "6": [
+          "+60% Stagger vs Enraged Behemoths"
+        ]
+      }
+    },
+    "predator": {
+      "name": "Predator",
+      "description": "Increases damage after avoiding damage for a short time.",
+      "effects": {
+        "1": [
+          "Deal 4% increased damage after not getting hit for 15 seconds. Bonus removed when hit."
+        ],
+        "2": [
+          "Deal 8% increased damage after not getting hit for 15 seconds. Bonus removed when hit."
+        ],
+        "3": [
+          "Deal 14% increased damage after not getting hit for 15 seconds. Bonus removed when hit."
+        ],
+        "4": [
+          "Deal 20% increased damage after not getting hit for 15 seconds. Bonus removed when hit."
+        ],
+        "5": [
+          "Deal 27% increased damage after not getting hit for 15 seconds. Bonus removed when hit."
+        ],
+        "6": [
+          "Deal 35% increased damage after not getting hit for 15 seconds. Bonus removed when hit."
+        ]
+      }
+    },
+    "rage": {
+      "name": "Rage",
+      "description": "Increases your damage when your health is low.",
+      "effects": {
+        "1": [
+          "When under 50% health, deal +5% damage"
+        ],
+        "2": [
+          "When under 50% health, deal +8% damage"
+        ],
+        "3": [
+          "When under 50% health, deal +12% damage"
+        ],
+        "4": [
+          "When under 50% health, deal +16% damage"
+        ],
+        "5": [
+          "When under 50% health, deal +20% damage"
+        ],
+        "6": [
+          "When under 50% health, deal +25% damage"
+        ]
+      }
+    },
+    "ragehunter": {
+      "name": "Ragehunter",
+      "description": "Increases damage against enraged Behemoths.",
+      "effects": {
+        "1": [
+          "+5% Damage vs Enraged Behemoths"
+        ],
+        "2": [
+          "+10% Damage vs Enraged Behemoths"
+        ],
+        "3": [
+          "+15% Damage vs Enraged Behemoths"
+        ],
+        "4": [
+          "+20% Damage vs Enraged Behemoths"
+        ],
+        "5": [
+          "+30% Damage vs Enraged Behemoths"
+        ],
+        "6": [
+          "+40% Damage vs Enraged Behemoths"
+        ]
+      }
+    },
+    "savagery": {
+      "name": "Savagery",
+      "description": "Increases damage against Wounded parts.",
+      "effects": {
+        "1": [
+          "+20% Damage vs Wounded Parts"
+        ],
+        "2": [
+          "+30% Damage vs Wounded Parts"
+        ],
+        "3": [
+          "+40% Damage vs Wounded Parts"
+        ],
+        "4": [
+          "+60% Damage vs Wounded Parts"
+        ],
+        "5": [
+          "+80% Damage vs Wounded Parts"
+        ],
+        "6": [
+          "+100% Damage vs Wounded Parts"
+        ]
+      }
+    },
+    "sharpened": {
+      "name": "Sharpened",
+      "description": "Percent increase to Part damage.",
+      "effects": {
+        "1": [
+          "+5% Part Damage",
+          " "
+        ],
+        "2": [
+          "+10% Part Damage",
+          " "
+        ],
+        "3": [
+          "+15% Part Damage",
+          " "
+        ],
+        "4": [
+          "+20% Part Damage",
+          "After dodging through an attack the next weapon attack's Part Break Damage is increased by 50%"
+        ],
+        "5": [
+          "+25% Part Damage",
+          "After dodging through an attack the next weapon attack's Part Break Damage is increased by 50%"
+        ],
+        "6": [
+          "+30% Part Damage",
+          "After dodging through an attack the next weapon attack's Part Break Damage is increased by 100%"
+        ]
+      }
+    },
+    "shellshockResist": {
+      "name": "Shellshock Resist",
+      "description": "Protects against the explosion damage and status effect of Shellshock.",
+      "effects": {
+        "1": [
+          "Reduces Shell Shocked explosion damage and status effect duration by 10%"
+        ],
+        "2": [
+          "Reduces Shell Shocked explosion damage and status effect duration by 20%"
+        ],
+        "3": [
+          "Reduces Shell Shocked explosion damage and status effect duration by 40%"
+        ],
+        "4": [
+          "Reduces Shell Shocked explosion damage and status effect duration by 60%"
+        ],
+        "5": [
+          "Reduces Shell Shocked explosion damage and status effect duration by 80%"
+        ],
+        "6": [
+          "Immune to Shell Shocked explosion damage and status effect"
+        ]
+      }
+    },
+    "sprinter": {
+      "name": "Sprinter",
+      "description": "Reduces max stamina. Increases movespeed and reduces sprint cost.",
+      "effects": {
+        "1": [
+          "-5 max stamina",
+          "+5% movement speed and -5% reduced sprint cost"
+        ],
+        "2": [
+          "-10 max stamina",
+          "+7.5% movement speed and -7.5% reduced sprint cost"
+        ],
+        "3": [
+          "-15 max stamina",
+          "+10% movement speed and -10% reduced sprint cost"
+        ],
+        "4": [
+          "-20 max stamina",
+          "+12.5% movement speed and -12.5% reduced sprint cost"
+        ],
+        "5": [
+          "-25 max stamina",
+          "+15% movement speed and -15% reduced sprint cost"
+        ],
+        "6": [
+          "-30 max stamina",
+          "+17.5% movement speed and -17.5% reduced sprint cost"
+        ]
+      }
+    },
+    "strategist": {
+      "name": "Strategist",
+      "description": "Reduces max health. Dodging through Behemoth attacks grants health shields to all Slayers.",
+      "effects": {
+        "1": [
+          "-50 max health",
+          "After dodging through an attack, grant 25 health shield to all slayers"
+        ],
+        "2": [
+          "-100 max health",
+          "After dodging through an attack, grant 50 health shield to all slayers"
+        ],
+        "3": [
+          "-150 max health",
+          "After dodging through an attack, grant 75 health shield to all slayers"
+        ],
+        "4": [
+          "-200 max health",
+          "After dodging through an attack, grant 100 health shield to all slayers"
+        ],
+        "5": [
+          "-250 max health",
+          "After dodging through an attack, grant 125 health shield to all slayers"
+        ],
+        "6": [
+          "-300 max health",
+          "After dodging through an attack, grant 150 health shield to all slayers"
+        ]
+      }
+    },
+    "stunningVigour": {
+      "name": "Stunning Vigour",
+      "description": "Restores some health whenever a Behemoth is staggered.",
+      "effects": {
+        "1": [
+          "Heal for 50 whenever a Behemoth is Staggered"
+        ],
+        "2": [
+          "Heal for 75 whenever a Behemoth is Staggered"
+        ],
+        "3": [
+          "Heal for 100 whenever a Behemoth is Staggered"
+        ],
+        "4": [
+          "Heal for 125 whenever a Behemoth is Staggered"
+        ],
+        "5": [
+          "Heal for 150 whenever a Behemoth is Staggered"
+        ],
+        "6": [
+          "Heal for 200 whenever a Behemoth is Staggered"
+        ]
+      }
+    },
+    "sturdy": {
+      "name": "Sturdy",
+      "description": "Prevents being staggered on a cooldown.",
+      "effects": {
+        "1": [
+          "Prevents you from being staggered (120 second cooldown)"
+        ],
+        "2": [
+          "Prevents you from being staggered (100 second cooldown)"
+        ],
+        "3": [
+          "Prevents you from being staggered (80 second cooldown)"
+        ],
+        "4": [
+          "Prevents you from being staggered (60 second cooldown)"
+        ],
+        "5": [
+          "Prevents you from being staggered (40 second cooldown)"
+        ],
+        "6": [
+          "Prevents you from being staggered (15 second cooldown)"
+        ]
+      }
+    },
+    "swift": {
+      "name": "Swift",
+      "description": "Increases Movement Speed when your weapon is sheathed.",
+      "effects": {
+        "1": [
+          "While sheathed, increases Movement Speed by 5%"
+        ],
+        "2": [
+          "While sheathed, increases Movement Speed by 10%"
+        ],
+        "3": [
+          "While sheathed, increases Movement Speed by 15%"
+        ],
+        "4": [
+          "While sheathed, increases Movement Speed by 20%"
+        ],
+        "5": [
+          "While sheathed, increases Movement Speed by 25%"
+        ],
+        "6": [
+          "While sheathed, increases Movement Speed by 30%, also affects other nearby Slayers."
+        ]
+      }
+    },
+    "tough": {
+      "name": "Tough",
+      "description": "Increases Max Health.",
+      "effects": {
+        "1": [
+          "Increases Max Health by 50",
+          "Increased healing from all sources by 5%"
+        ],
+        "2": [
+          "Increases Max Health by 100",
+          "Increased healing from all sources by 10%"
+        ],
+        "3": [
+          "Increases Max Health by 150",
+          "Increased healing from all sources by 15%"
+        ],
+        "4": [
+          "Increases Max Health by 250",
+          "Increased healing from all sources by 25%"
+        ],
+        "5": [
+          "Increases Max Health by 300",
+          "Increased healing from all sources by 35%"
+        ],
+        "6": [
+          "Increases Max Health by 500",
+          "Increased healing from all sources by 50%"
+        ]
+      }
+    },
+    "vampiric": {
+      "name": "Vampiric",
+      "description": "Restores some health whenever a Behemoth part is Wounded.",
+      "effects": {
+        "1": [
+          "Heal for 50 whenever a Behemoth is Wounded"
+        ],
+        "2": [
+          "Heal for 75 whenever a Behemoth is Wounded"
+        ],
+        "3": [
+          "Heal for 100 whenever a Behemoth is Wounded"
+        ],
+        "4": [
+          "Heal for 125 whenever a Behemoth is Wounded"
+        ],
+        "5": [
+          "Heal for 150 whenever a Behemoth is Wounded"
+        ],
+        "6": [
+          "Heal for 200 whenever a Behemoth is Wounded"
+        ]
+      }
+    },
+    "warmth": {
+      "name": "Warmth",
+      "description": "Protects against Chilled and Frozen status effects.",
+      "effects": {
+        "1": [
+          "Reduces duration of Frozen status by 30%",
+          " "
+        ],
+        "2": [
+          "Reduces duration of Frozen status by 60%",
+          " "
+        ],
+        "3": [
+          "Immune to being Frozen",
+          " "
+        ],
+        "4": [
+          "Immune to being Frozen",
+          "Reduces duration of Chilled status by 30%"
+        ],
+        "5": [
+          "Immune to being Frozen",
+          "Reduces duration of Chilled status by 60%"
+        ],
+        "6": [
+          "Immune to being Frozen",
+          "Immune to being Chilled"
+        ]
+      }
+    },
+    "weightedStrikes": {
+      "name": "Weighted Strikes",
+      "description": "Adds a flat amount of Stagger damage on hit. At later ranks, allows more weapon attacks to interrupt.",
+      "effects": {
+        "1": [
+          "+5 Stagger Damage on Hit",
+          " ",
+          " "
+        ],
+        "2": [
+          "+10 Stagger Damage on Hit",
+          " ",
+          " "
+        ],
+        "3": [
+          "+15 Stagger Damage on Hit",
+          " ",
+          " "
+        ],
+        "4": [
+          "+20 Stagger Damage on Hit",
+          "+200 Stagger after dodging through an attack",
+          " "
+        ],
+        "5": [
+          "+30 Stagger Damage on Hit",
+          "+200 Stagger after dodging through an attack",
+          " "
+        ],
+        "6": [
+          "+40 Stagger Damage on Hit",
+          "+400 Stagger after dodging through an attack",
+          "Ranged swings and missiles interrupt unstable Behemoth attacks"
+        ]
+      }
+    },
+    "wildFrenzy": {
+      "name": "Wild Frenzy",
+      "description": "Increases Attack Speed when at low health.",
+      "effects": {
+        "1": [
+          "When under 50% health, increase attack speed by 7.5%"
+        ],
+        "2": [
+          "When under 50% health, increase attack speed by 10%"
+        ],
+        "3": [
+          "When under 50% health, increase attack speed by 12.5%"
+        ],
+        "4": [
+          "When under 50% health, increase attack speed by 15%"
+        ],
+        "5": [
+          "When under 50% health, increase attack speed by 17.5%"
+        ],
+        "6": [
+          "When under 50% health, increase attack speed by 20%"
+        ]
+      }
+    }
+  },
+  "weapons": {
+    "brawlersOfBoreus": {
+      "name": "Brawlers of Boreus",
+      "description": "A Slayer's aether strikers forged with Boreus trophies.",
+      "boreusFrostSprite0": {
+        "name": "BoreusFrostSprite",
+        "description": "Using Ammo generate 2 Frost Sprite that cause your next attack to deal 30 bonus damage and minor frost damage. Max 4 Sprites. "
+      },
+      "boreusFrostSprite6": {
+        "name": "BoreusFrostSprite",
+        "description": "Using Ammo generate 2 Frost Sprite that cause your next attack to deal 40 bonus damage and minor frost damage. Max 4 Sprites. "
+      },
+      "boreusFrostSprite10": {
+        "name": "BoreusFrostSprite",
+        "description": "Using Ammo generate 2 Frost Sprite that cause your next attack to deal 50 bonus damage and minor frost damage. Max 4 Sprites. "
+      }
+    },
+    "brutalityOfBoreus": {
+      "name": "Brutality of Boreus",
+      "description": "A Slayer's hammer forged with Boreus trophies.",
+      "boreusFrostSprite0": {
+        "name": "BoreusFrostSprite",
+        "description": "Using Ammo generates a Frost Sprite that cause your next attack to deal 30 bonus damage and minor frost damage. Max 4 Sprites. "
+      },
+      "boreusFrostSprite6": {
+        "name": "BoreusFrostSprite",
+        "description": "Using Ammo generates a Frost Sprite that cause your next attack to deal 40 bonus damage and minor frost damage. Max 4 Sprites. "
+      },
+      "boreusFrostSprite10": {
+        "name": "BoreusFrostSprite",
+        "description": "Using Ammo generates a Frost Sprite that cause your next attack to deal 50 bonus damage and minor frost damage. Max 4 Sprites. "
+      }
+    },
+    "destinyOfBoreus": {
+      "name": "Destiny of Boreus",
+      "description": "A Slayer's chain blades forged with Boreus trophies.",
+      "boreusFrostSprite0": {
+        "name": "BoreusFrostSprite",
+        "description": "Using Pips generates 2 Frost Sprites that cause your next attack to deal 30 bonus damage and minor frost damage each. Max 4 Sprites."
+      },
+      "boreusFrostSprite6": {
+        "name": "BoreusFrostSprite",
+        "description": "Using Pips generates 2 Frost Sprites that cause your next attack to deal 40 bonus damage and minor frost damage each. Max 4 Sprites."
+      },
+      "boreusFrostSprite10": {
+        "name": "BoreusFrostSprite",
+        "description": "Using Pips generates 2 Frost Sprites that cause your next attack to deal 50 bonus damage and minor frost damage each. Max 4 Sprites."
+      }
+    },
+    "onusOfBoreus": {
+      "name": "Onus of Boreus",
+      "description": "A Slayer's sword forged with Boreus trophies.",
+      "boreusFrostSprite0": {
+        "name": "BoreusFrostSprite",
+        "description": "Using a Special continually generates Frost Sprites that cause your next attack to deal 30 bonus damage and minor frost damage. Max 4 Sprites."
+      },
+      "boreusFrostSprite6": {
+        "name": "BoreusFrostSprite",
+        "description": "Using a Special continually generates Frost Sprites that cause your next attack to deal 40 bonus damage and minor frost damage. Max 4 Sprites."
+      },
+      "boreusFrostSprite10": {
+        "name": "BoreusFrostSprite",
+        "description": "Using a Special continually generates Frost Sprites that cause your next attack to deal 50 bonus damage and minor frost damage. Max 4 Sprites."
+      }
+    },
+    "revolutionOfBoreus": {
+      "name": "Revolution of Boreus",
+      "description": "A Slayer's war pike forged with Boreus trophies.",
+      "boreusFrostSprite0": {
+        "name": "BoreusFrostSprite",
+        "description": "Using Ammo generates Frost Sprites (base on ammo quality) that cause your next attack to deal 30 bonus damage and minor frost damage. Max 4 Sprites. "
+      },
+      "boreusFrostSprite6": {
+        "name": "BoreusFrostSprite",
+        "description": "Using Ammo generates Frost Sprites (base on ammo quality) that cause your next attack to deal 40 bonus damage and minor frost damage. Max 4 Sprites. "
+      },
+      "boreusFrostSprite10": {
+        "name": "BoreusFrostSprite",
+        "description": "Using Ammo generates Frost Sprites (base on ammo quality) that cause your next attack to deal 50 bonus damage and minor frost damage. Max 4 Sprites. "
+      }
+    },
+    "turmoilOfBoreus": {
+      "name": "Turmoil of Boreus",
+      "description": "A Slayer's axe forged with Boreus trophies.",
+      "boreusFrostSprite0": {
+        "name": "BoreusFrostSprite",
+        "description": "Charge Attacks generate Frost Sprites that cause your next attack to deal 30 bonus damage and minor frost damage. Max 4 Sprites."
+      },
+      "boreusFrostSprite6": {
+        "name": "BoreusFrostSprite",
+        "description": "Charge Attacks generate Frost Sprites that cause your next attack to deal 40 bonus damage and minor frost damage. Max 4 Sprites."
+      },
+      "boreusFrostSprite10": {
+        "name": "BoreusFrostSprite",
+        "description": "Charge Attacks generate Frost Sprites that cause your next attack to deal 50 bonus damage and minor frost damage. Max 4 Sprites."
+      }
+    },
+    "charredBlades": {
+      "name": "Charred Blades",
+      "description": "A Slayer's chain blades forged with Charrogg trophies."
+    },
+    "charredCleaver": {
+      "name": "Charred Cleaver",
+      "description": "A Slayer's axe forged with Charrogg trophies."
+    },
+    "charredCrusher": {
+      "name": "Charred Crusher",
+      "description": "A Slayer's hammer forged with Charrogg trophies."
+    },
+    "charredHands": {
+      "name": "Charred Hands",
+      "description": "A Slayer's aether strikers forged with Charrogg trophies."
+    },
+    "charredSaber": {
+      "name": "Charred Saber",
+      "description": "A Slayer's sword forged with Charrogg trophies."
+    },
+    "charredSpear": {
+      "name": "Charred Spear",
+      "description": "A Slayer's war pike forged with Charrogg trophies."
+    },
+    "moltenEdict": {
+      "name": "Molten Edict",
+      "description": "The Molten Edict is a craftable Exotic weapon in Dauntless. It is crafted from Firebrand Charrogg reagents.",
+      "hammerBlastFireballs0": {
+        "name": "HammerBlastFireballs",
+        "description": "Replaces all hammer blasts with unique fireball abilities that deal blaze damage."
+      }
+    },
+    "thunderingBlade": {
+      "name": "Thundering Blade",
+      "description": "A Slayer's sword forged with Drask trophies.",
+      "tailDamage0": {
+        "name": "TailDamage",
+        "description": "20% damage vs Behemoth Tails"
+      },
+      "tailDamage6": {
+        "name": "TailDamage",
+        "description": "25% damage vs Behemoth Tails"
+      },
+      "tailDamage10": {
+        "name": "TailDamage",
+        "description": "30% damage vs Behemoth Tails"
+      }
+    },
+    "thunderingBolts": {
+      "name": "Thundering Bolts",
+      "description": "A Slayer's aether strikers forged with Drask trophies.",
+      "headDamage0": {
+        "name": "HeadDamage",
+        "description": "20% damage vs Behemoth Heads"
+      },
+      "headDamage6": {
+        "name": "HeadDamage",
+        "description": "25% damage vs Behemoth Heads"
+      },
+      "headDamage10": {
+        "name": "HeadDamage",
+        "description": "30% damage vs Behemoth Heads"
+      }
+    },
+    "thunderingCutters": {
+      "name": "Thundering Cutters",
+      "description": "A Slayer's chain blades forged with Drask trophies.",
+      "tailDamage0": {
+        "name": "TailDamage",
+        "description": "20% damage vs Behemoth Tails"
+      },
+      "tailDamage6": {
+        "name": "TailDamage",
+        "description": "25% damage vs Behemoth Tails"
+      },
+      "tailDamage10": {
+        "name": "TailDamage",
+        "description": "30% damage vs Behemoth Tails"
+      }
+    },
+    "thunderingMaul": {
+      "name": "Thundering Maul",
+      "description": "A Slayer's hammer forged with Drask trophies.",
+      "headDamage0": {
+        "name": "HeadDamage",
+        "description": "20% damage vs Behemoth Heads"
+      },
+      "headDamage6": {
+        "name": "HeadDamage",
+        "description": "25% damage vs Behemoth Heads"
+      },
+      "headDamage10": {
+        "name": "HeadDamage",
+        "description": "30% damage vs Behemoth Heads"
+      }
+    },
+    "thunderingScythe": {
+      "name": "Thundering Scythe",
+      "description": "A Slayer's axe forged with Drask trophies.",
+      "headDamage0": {
+        "name": "HeadDamage",
+        "description": "20% damage vs Behemoth Heads"
+      },
+      "headDamage6": {
+        "name": "HeadDamage",
+        "description": "25% damage vs Behemoth Heads"
+      },
+      "headDamage10": {
+        "name": "HeadDamage",
+        "description": "30% damage vs Behemoth Heads"
+      }
+    },
+    "thunderingSpear": {
+      "name": "Thundering Spear",
+      "description": "A Slayer's war pike forged with Drask trophies.",
+      "tailDamage0": {
+        "name": "TailDamage",
+        "description": "20% damage vs Behemoth Tails"
+      },
+      "tailDamage6": {
+        "name": "TailDamage",
+        "description": "25% damage vs Behemoth Tails"
+      },
+      "tailDamage10": {
+        "name": "TailDamage",
+        "description": "30% damage vs Behemoth Tails"
+      }
+    },
+    "emberBlades": {
+      "name": "Ember Blades",
+      "description": "A Slayer's chain blades forged with Embermane trophies.",
+      "tenthHitBonusDamage0": {
+        "name": "TenthHitBonusDamage",
+        "description": "The tenth hit in quick succession deals 100 bonus part damage."
+      },
+      "tenthHitBonusDamage6": {
+        "name": "TenthHitBonusDamage",
+        "description": "The tenth hit in quick succession deals 175 bonus part damage."
+      },
+      "tenthHitBonusDamage10": {
+        "name": "TenthHitBonusDamage",
+        "description": "The tenth hit in quick succession deals 250 bonus part damage."
+      }
+    },
+    "emberCutlass": {
+      "name": "Ember Cutlass",
+      "description": "A Slayer's sword forged with Embermane trophies.",
+      "seventhHitPartDamage0": {
+        "name": "SeventhHitPartDamage",
+        "description": "The seventh hit in a row deals +100% part damage"
+      },
+      "seventhHitPartDamage6": {
+        "name": "SeventhHitPartDamage",
+        "description": "The seventh hit in a row deals +175% part damage"
+      },
+      "seventhHitPartDamage10": {
+        "name": "SeventhHitPartDamage",
+        "description": "The seventh hit in a row deals +250% part damage"
+      }
+    },
+    "emberFists": {
+      "name": "Ember Fists",
+      "description": "A Slayer's aether strikers forged with Embermane trophies.",
+      "fifthHitStaggerDamage0": {
+        "name": "FifthHitStaggerDamage",
+        "description": "The fifth hit in a row deals +50% stagger damage"
+      },
+      "fifthHitStaggerDamage6": {
+        "name": "FifthHitStaggerDamage",
+        "description": "The fifth hit in a row deals +100% stagger damage"
+      },
+      "fifthHitStaggerDamage10": {
+        "name": "FifthHitStaggerDamage",
+        "description": "The fifth hit in a row deals +150% stagger damage"
+      }
+    },
+    "emberMaul": {
+      "name": "Ember Maul",
+      "description": "A Slayer's hammer forged with Embermane trophies.",
+      "fifthHitStaggerDamage0": {
+        "name": "FifthHitStaggerDamage",
+        "description": "The fifth hit in a row deals +50% stagger damage"
+      },
+      "fifthHitStaggerDamage6": {
+        "name": "FifthHitStaggerDamage",
+        "description": "The fifth hit in a row deals +100% stagger damage"
+      },
+      "fifthHitStaggerDamage10": {
+        "name": "FifthHitStaggerDamage",
+        "description": "The fifth hit in a row deals +150% stagger damage"
+      }
+    },
+    "emberPike": {
+      "name": "Ember Pike",
+      "description": "A Slayer's war pike forged with Embermane trophies.",
+      "seventhHitWoundDamage0": {
+        "name": "SeventhHitWoundDamage",
+        "description": "The seventh hit in a row deals +100 wound damage"
+      },
+      "seventhHitWoundDamage6": {
+        "name": "SeventhHitWoundDamage",
+        "description": "The seventh hit in a row deals +200 wound damage"
+      },
+      "seventhHitWoundDamage10": {
+        "name": "SeventhHitWoundDamage",
+        "description": "The seventh hit in a row deals +300 wound damage"
+      }
+    },
+    "emberScythe": {
+      "name": "Ember Scythe",
+      "description": "A Slayer's axe forged with Embermane trophies.",
+      "fourthHitBonusDamage0": {
+        "name": "FourthHitBonusDamage",
+        "description": "The fourth hit in quick succession deals 100 bonus part damage."
+      },
+      "fourthHitBonusDamage6": {
+        "name": "FourthHitBonusDamage",
+        "description": "The fourth hit in quick succession deals 175 bonus part damage."
+      },
+      "fourthHitBonusDamage10": {
+        "name": "FourthHitBonusDamage",
+        "description": "The fourth hit in quick succession deals 250 bonus part damage."
+      }
+    },
+    "recruitsAxe": {
+      "name": "Recruit's Axe",
+      "description": "A Slayer Recruit's axe."
+    },
+    "recruitsChainBlades": {
+      "name": "Recruit's Chain Blades",
+      "description": "A Slayer Recruit's chain blades."
+    },
+    "recruitsHammer": {
+      "name": "Recruit's Hammer",
+      "description": "A Slayer Recruit's hammer."
+    },
+    "recruitsStrikers": {
+      "name": "Recruit's Strikers",
+      "description": "A simple pair of aether strikers for slaying Behemoths."
+    },
+    "recruitsSword": {
+      "name": "Recruit's Sword",
+      "description": "A Simple blade for slaying behemoths."
+    },
+    "recruitsWarPike": {
+      "name": "Recruit's War Pike",
+      "description": "A Slayer Recruit's war pike."
+    },
+    "repeater": {
+      "name": "Repeater",
+      "description": "An Ostian Repeater."
+    },
+    "theTwinSuns": {
+      "name": "The Twin Suns",
+      "description": "Exotic Repeaters.",
+      "twinSunsBarrel0": {
+        "name": "TwinSunsBarrel",
+        "description": "While Empowered, gain +40% critical strike chance instead of bonus damage."
+      },
+      "twinSunsChamber0": {
+        "name": "TwinSunsChamber",
+        "description": "Load 8 Mag Bombs into your magazine. They attach to enemies and are detonated on Reload. The first Mag Bomb attached to each Behemoth part deals +300 damage."
+      },
+      "twinSunsGrip0": {
+        "name": "TwinSunsGrip",
+        "description": "Dash in a direction, becoming invulnerable for the duration. After dodging through an attack, fire 6 mini-shots that always crit. While in Mag Bomb mode, fires 2 Mag Bombs instead."
+      },
+      "twinSunsPrism0": {
+        "name": "TwinSunsPrism",
+        "description": "After a critical strike, reduce the cooldown of Mag Bomb mode by 3 seconds."
+      }
+    },
+    "trainingSword": {
+      "name": "Training Sword",
+      "description": "A dull and tarnished training blade."
+    },
+    "ragingBite": {
+      "name": "Raging Bite",
+      "description": "A Slayer's axe forged with Gnasher trophies."
+    },
+    "ragingBlade": {
+      "name": "Raging Blade",
+      "description": "A Slayer's sword forged with Gnasher trophies."
+    },
+    "ragingCrash": {
+      "name": "Raging Crash",
+      "description": "A Slayer's hammer forged with Gnasher trophies."
+    },
+    "ragingCruelty": {
+      "name": "Raging Cruelty",
+      "description": "A Slayer's war pike forged with Gnasher trophies."
+    },
+    "ragingFists": {
+      "name": "Raging Fists",
+      "description": "A Slayer's aether strikers forged with Gnasher trophies."
+    },
+    "ragingTeeth": {
+      "name": "Raging Teeth",
+      "description": "A Slayer's chain blades forged with Gnasher trophies."
+    },
+    "infernosArrow": {
+      "name": "Inferno's Arrow",
+      "description": "A Slayer's war pike forged with Hellion trophies.",
+      "blazeDamageOnNthHit0": {
+        "name": "BlazeDamageOnNthHit",
+        "description": "The eighth hit in quick succession deals 100 bonus damage and major blaze damage"
+      },
+      "blazeDamageOnNthHit6": {
+        "name": "BlazeDamageOnNthHit",
+        "description": "The eighth hit in quick succession deals 175 bonus damage and major blaze damage"
+      },
+      "blazeDamageOnNthHit10": {
+        "name": "BlazeDamageOnNthHit",
+        "description": "The eighth hit in quick succession deals 250 bonus damage and major blaze damage"
+      }
+    },
+    "infernosBurden": {
+      "name": "Inferno's Burden",
+      "description": "A Slayer's hammer forged with Hellion trophies.",
+      "blazeDamageOnNthHit0": {
+        "name": "BlazeDamageOnNthHit",
+        "description": "The sixth hit in quick succession deals 100 bonus damage and major blaze damage"
+      },
+      "blazeDamageOnNthHit6": {
+        "name": "BlazeDamageOnNthHit",
+        "description": "The sixth hit in quick succession deals 175 bonus damage and major blaze damage"
+      },
+      "blazeDamageOnNthHit10": {
+        "name": "BlazeDamageOnNthHit",
+        "description": "The sixth hit in quick succession deals 250 bonus damage and major blaze damage"
+      }
+    },
+    "infernosDecree": {
+      "name": "Inferno's Decree",
+      "description": "A Slayer's axe forged with Hellion trophies.",
+      "blazeDamageOnNthHit0": {
+        "name": "BlazeDamageOnNthHit",
+        "description": "The sixth hit in quick succession deals 100 bonus damage and major blaze damage"
+      },
+      "blazeDamageOnNthHit6": {
+        "name": "BlazeDamageOnNthHit",
+        "description": "The sixth hit in quick succession deals 175 bonus damage and major blaze damage"
+      },
+      "blazeDamageOnNthHit10": {
+        "name": "BlazeDamageOnNthHit",
+        "description": "The sixth hit in quick succession deals 250 bonus damage and major blaze damage"
+      }
+    },
+    "infernosFangs": {
+      "name": "Inferno's Fangs",
+      "description": "A Slayer's chain blades forged with Hellion trophies.",
+      "blazeDamageOnNthHit0": {
+        "name": "BlazeDamageOnNthHit",
+        "description": "The tenth hit in quick succession deals 100 bonus damage and major blaze damage"
+      },
+      "blazeDamageOnNthHit6": {
+        "name": "BlazeDamageOnNthHit",
+        "description": "The tenth hit in quick succession deals 175 bonus damage and major blaze damage"
+      },
+      "blazeDamageOnNthHit10": {
+        "name": "BlazeDamageOnNthHit",
+        "description": "The tenth hit in quick succession deals 250 bonus damage and major blaze damage"
+      }
+    },
+    "infernosFlames": {
+      "name": "Inferno's Flames",
+      "description": "A Slayer's aether strikers forged with Hellion trophies.",
+      "blazeDamageOnNthHit0": {
+        "name": "BlazeDamageOnNthHit",
+        "description": "The eighth hit in quick succession deals 100 bonus damage and major blaze damage"
+      },
+      "blazeDamageOnNthHit6": {
+        "name": "BlazeDamageOnNthHit",
+        "description": "The eighth hit in quick succession deals 175 bonus damage and major blaze damage"
+      },
+      "blazeDamageOnNthHit10": {
+        "name": "BlazeDamageOnNthHit",
+        "description": "The eighth hit in quick succession deals 250 bonus damage and major blaze damage"
+      }
+    },
+    "infernosRazor": {
+      "name": "Inferno's Razor",
+      "description": "A Slayer's sword forged with Hellion trophies.",
+      "blazeDamageOnNthHit0": {
+        "name": "BlazeDamageOnNthHit",
+        "description": "The eighth hit in quick succession deals 100 bonus damage and major blaze damage"
+      },
+      "blazeDamageOnNthHit6": {
+        "name": "BlazeDamageOnNthHit",
+        "description": "The eighth hit in quick succession deals 175 bonus damage and major blaze damage"
+      },
+      "blazeDamageOnNthHit10": {
+        "name": "BlazeDamageOnNthHit",
+        "description": "The eighth hit in quick succession deals 250 bonus damage and major blaze damage"
+      }
+    },
+    "kharabaksClaw": {
+      "name": "Kharabak's Claw",
+      "description": "A Slayer's axe forged with Kharabak trophies.",
+      "comboFinisherDamage0": {
+        "name": "ComboFinisherDamage",
+        "description": "Combo finishers deal 100 bonus part damage"
+      },
+      "comboFinisherDamage6": {
+        "name": "ComboFinisherDamage",
+        "description": "Combo finishers deal 200 bonus part damage"
+      },
+      "comboFinisherDamage10": {
+        "name": "ComboFinisherDamage",
+        "description": "Combo finishers deal 300 bonus part damage"
+      }
+    },
+    "kharabaksJaw": {
+      "name": "Kharabak's Jaw",
+      "description": "A Slayer's hammer forged with Kharabak trophies.",
+      "reloadStamina0": {
+        "name": "ReloadStamina",
+        "description": "Restore 20 Stamina after reloading a shell"
+      },
+      "reloadStamina6": {
+        "name": "ReloadStamina",
+        "description": "Restore 30 Stamina after reloading a shell"
+      },
+      "reloadStamina10": {
+        "name": "ReloadStamina",
+        "description": "Restore 40 Stamina after reloading a shell"
+      }
+    },
+    "kharabaksPincers": {
+      "name": "Kharabak's Pincers",
+      "description": "A Slayer's aether strikers forged with Kharabak trophies."
+    },
+    "kharabaksSpur": {
+      "name": "Kharabak's Spur",
+      "description": "A Slayer's sword forged with Kharabak trophies."
+    },
+    "kharabaksSting": {
+      "name": "Kharabak's Sting",
+      "description": "A Slayer's war pike forged with Kharabak trophies."
+    },
+    "kharabaksWings": {
+      "name": "Kharabak's Wings",
+      "description": "A Slayer's chain blades forged with Kharabak trophies."
+    },
+    "sovereignsGrudge": {
+      "name": "Sovereign's Grudge",
+      "description": "A Slayer's hammer forged with Koshai trophies.",
+      "noAttackDamage0": {
+        "name": "NoAttackDamage",
+        "description": "After not dealing damage for 6 seconds, the next 1 attacks deal 25% increased damage."
+      },
+      "noAttackDamage6": {
+        "name": "NoAttackDamage",
+        "description": "After not dealing damage for 6 seconds, the next 1 attacks deal 25% increased damage."
+      },
+      "noAttackDamage10": {
+        "name": "NoAttackDamage",
+        "description": "After not dealing damage for 6 seconds, the next 2 attacks deal 25% increased damage."
+      }
+    },
+    "sovereignsLash": {
+      "name": "Sovereign's Lash",
+      "description": "A Slayer's chain blades forged with Koshai trophies.",
+      "noAttackDamage0": {
+        "name": "NoAttackDamage",
+        "description": "After not dealing damage for 6 seconds, the next 4 attacks deal 25% increased damage."
+      },
+      "noAttackDamage6": {
+        "name": "NoAttackDamage",
+        "description": "After not dealing damage for 6 seconds, the next 5 attacks deal 25% increased damage."
+      },
+      "noAttackDamage10": {
+        "name": "NoAttackDamage",
+        "description": "After not dealing damage for 6 seconds, the next 6 attacks deal 25% increased damage."
+      }
+    },
+    "sovereignsSceptres": {
+      "name": "Sovereign's Sceptres",
+      "description": "A Slayer's axe forged with Koshai trophies.",
+      "noAttackDamage0": {
+        "name": "NoAttackDamage",
+        "description": "After not dealing damage for 6 seconds, the next 3 attacks deal 25% increased damage."
+      },
+      "noAttackDamage6": {
+        "name": "NoAttackDamage",
+        "description": "After not dealing damage for 6 seconds, the next 4 attacks deal 25% increased damage."
+      },
+      "noAttackDamage10": {
+        "name": "NoAttackDamage",
+        "description": "After not dealing damage for 6 seconds, the next 5 attacks deal 25% increased damage."
+      }
+    },
+    "sovereignsSorrow": {
+      "name": "Sovereign's Sorrow",
+      "description": "A Slayer's war pike forged with Koshai trophies.",
+      "noAttackDamage0": {
+        "name": "NoAttackDamage",
+        "description": "After not dealing damage for 6 seconds, the next 3 attacks deal 25% increased damage."
+      },
+      "noAttackDamage6": {
+        "name": "NoAttackDamage",
+        "description": "After not dealing damage for 6 seconds, the next 4 attacks deal 25% increased damage."
+      },
+      "noAttackDamage10": {
+        "name": "NoAttackDamage",
+        "description": "After not dealing damage for 6 seconds, the next 5 attacks deal 25% increased damage."
+      }
+    },
+    "sovereignsTorment": {
+      "name": "Sovereign's Torment",
+      "description": "A Slayer's sword forged with Koshai trophies.",
+      "noAttackDamage0": {
+        "name": "NoAttackDamage",
+        "description": "After not dealing damage for 6 seconds, the next 2 attacks deal 25% increased damage."
+      },
+      "noAttackDamage6": {
+        "name": "NoAttackDamage",
+        "description": "After not dealing damage for 6 seconds, the next 3 attacks deal 25% increased damage."
+      },
+      "noAttackDamage10": {
+        "name": "NoAttackDamage",
+        "description": "After not dealing damage for 6 seconds, the next 4 attacks deal 25% increased damage."
+      }
+    },
+    "sovereignsWrath": {
+      "name": "Sovereign's Wrath",
+      "description": "A Slayer's axe forged with Koshai trophies.",
+      "noAttackDamage0": {
+        "name": "NoAttackDamage",
+        "description": "After not dealing damage for 6 seconds, the next 1 attacks deal 25% increased damage."
+      },
+      "noAttackDamage6": {
+        "name": "NoAttackDamage",
+        "description": "After not dealing damage for 6 seconds, the next 1 attacks deal 25% increased damage."
+      },
+      "noAttackDamage10": {
+        "name": "NoAttackDamage",
+        "description": "After not dealing damage for 6 seconds, the next 2 attacks deal 25% increased damage."
+      }
+    },
+    "nayzagasCharge": {
+      "name": "Nayzaga's Charge",
+      "description": "A Slayer's hammer forged with Nayzaga trophies.",
+      "staggerHeal0": {
+        "name": "StaggerHeal",
+        "description": "Heal for 100 whenever a Behemoth is staggered."
+      },
+      "staggerHeal6": {
+        "name": "StaggerHeal",
+        "description": "Heal for 200 whenever a Behemoth is staggered."
+      },
+      "staggerHeal10": {
+        "name": "StaggerHeal",
+        "description": "Heal for 300 whenever a Behemoth is staggered."
+      }
+    },
+    "nayzagasFang": {
+      "name": "Nayzaga's Fang",
+      "description": "A Slayer's war pike forged with Nayzaga trophies.",
+      "woundedPartsLifesteal0": {
+        "name": "WoundedPartsLifesteal",
+        "description": "+3% lifesteal vs wounded parts"
+      },
+      "woundedPartsLifesteal6": {
+        "name": "WoundedPartsLifesteal",
+        "description": "+4% lifesteal vs wounded parts"
+      },
+      "woundedPartsLifesteal10": {
+        "name": "WoundedPartsLifesteal",
+        "description": "+5% lifesteal vs wounded parts"
+      }
+    },
+    "nayzagasRazor": {
+      "name": "Nayzaga's Razor",
+      "description": "A Slayer's sword forged with Nayzaga trophies.",
+      "woundedPartsLifesteal0": {
+        "name": "WoundedPartsLifesteal",
+        "description": "+3% lifesteal vs wounded parts"
+      },
+      "woundedPartsLifesteal6": {
+        "name": "WoundedPartsLifesteal",
+        "description": "+4% lifesteal vs wounded parts"
+      },
+      "woundedPartsLifesteal10": {
+        "name": "WoundedPartsLifesteal",
+        "description": "+5% lifesteal vs wounded parts"
+      }
+    },
+    "nayzagasReach": {
+      "name": "Nayzaga's Reach",
+      "description": "A Slayer's chain blades forged with Nayzaga trophies.",
+      "woundedPartsLifesteal0": {
+        "name": "WoundedPartsLifesteal",
+        "description": "+3% lifesteal vs wounded parts"
+      },
+      "woundedPartsLifesteal6": {
+        "name": "WoundedPartsLifesteal",
+        "description": "+4% lifesteal vs wounded parts"
+      },
+      "woundedPartsLifesteal10": {
+        "name": "WoundedPartsLifesteal",
+        "description": "+5% lifesteal vs wounded parts"
+      }
+    },
+    "nayzagasScythe": {
+      "name": "Nayzaga's Scythe",
+      "description": "A Slayer's axe forged with Nayzaga trophies.",
+      "verticalAttackHeal0": {
+        "name": "VerticalAttackHeal",
+        "description": "Heal 50 on perfectly charged vertical attacks"
+      },
+      "verticalAttackHeal6": {
+        "name": "VerticalAttackHeal",
+        "description": "Heal 75 on perfectly charged vertical attacks"
+      },
+      "verticalAttackHeal10": {
+        "name": "VerticalAttackHeal",
+        "description": "Heal 100 on perfectly charged vertical attacks"
+      }
+    },
+    "nayzagasShockers": {
+      "name": "Nayzaga's Shockers",
+      "description": "A Slayer's aether strikers forged with Nayzaga trophies.",
+      "staggerHeal0": {
+        "name": "StaggerHeal",
+        "description": "Heal for 100 whenever a Behemoth is staggered."
+      },
+      "staggerHeal6": {
+        "name": "StaggerHeal",
+        "description": "Heal for 200 whenever a Behemoth is staggered."
+      },
+      "staggerHeal10": {
+        "name": "StaggerHeal",
+        "description": "Heal for 300 whenever a Behemoth is staggered."
+      }
+    },
+    "pangarsCall": {
+      "name": "Pangar's Call",
+      "description": "A Slayer's sword forged with Pangar trophies."
+    },
+    "pangarsClaws": {
+      "name": "Pangar's Claws",
+      "description": "A Slayer's chain blades forged with Pangar trophies."
+    },
+    "pangarsGrace": {
+      "name": "Pangar's Grace",
+      "description": "A Slayer's axe forged with Pangar trophies."
+    },
+    "pangarsPunishers": {
+      "name": "Pangar's Punishers",
+      "description": "A Slayer's aether strikers forged with Pangar trophies."
+    },
+    "pangarsRampage": {
+      "name": "Pangar's Rampage",
+      "description": "A Slayer's hammer forged with Pangar trophies."
+    },
+    "pangarsTooth": {
+      "name": "Pangar's Tooth",
+      "description": "A Slayer's war pike forged with Pangar trophies."
+    },
+    "quillshotsBonehooks": {
+      "name": "Quillshot's Bonehooks",
+      "description": "A Slayer's chain blades forged with Quillshot trophies."
+    },
+    "quillshotsFury": {
+      "name": "Quillshot's Fury",
+      "description": "A Slayer's axe forged with Quillshot trophies."
+    },
+    "quillshotsJavelin": {
+      "name": "Quillshot's Javelin",
+      "description": "A Slayer's war pike forged with Quillshot trophies."
+    },
+    "quillshotsRoar": {
+      "name": "Quillshot's Roar",
+      "description": "A Slayer's hammer forged with Quillshot trophies."
+    },
+    "quillshotsShredders": {
+      "name": "Quillshot's Shredders",
+      "description": "A Slayer's aether strikers forged with Quillshot trophies."
+    },
+    "quillshotsTusk": {
+      "name": "Quillshot's Tusk",
+      "description": "A Slayer's sword forged with Quillshot trophies."
+    },
+    "breakOfDawn": {
+      "name": "Break of Dawn",
+      "description": "A Slayer's hammer forged with Rezakiri trophies.",
+      "hitTwice0": {
+        "name": "HitTwice",
+        "description": "10% chance for attacks to Hit twice."
+      }
+    },
+    "callOfDawn": {
+      "name": "Call of Dawn",
+      "description": "A Slayer's sword forged with Rezakiri trophies.",
+      "hitTwice0": {
+        "name": "HitTwice",
+        "description": "10% chance for attacks to Hit twice."
+      }
+    },
+    "edgeOfDawn": {
+      "name": "Edge of Dawn",
+      "description": "A Slayer's axe forged with Rezakiri trophies.",
+      "hitTwice0": {
+        "name": "HitTwice",
+        "description": "10% chance for attacks to Hit twice."
+      }
+    },
+    "fangsOfDawn": {
+      "name": "Fangs of Dawn",
+      "description": "A Slayer's chain blades forged with Rezakiri trophies.",
+      "hitTwice0": {
+        "name": "HitTwice",
+        "description": "10% chance for attacks to Hit twice."
+      }
+    },
+    "handsOfDawn": {
+      "name": "Hands of Dawn",
+      "description": "A Slayer's aether strikers forged with Rezakiri trophies.",
+      "hitTwice0": {
+        "name": "HitTwice",
+        "description": "10% chance for attacks to Hit twice."
+      }
+    },
+    "spireOfDawn": {
+      "name": "Spire of Dawn",
+      "description": "A Slayer's war pike forged with Rezakiri trophies.",
+      "hitTwice0": {
+        "name": "HitTwice",
+        "description": "10% chance for attacks to Hit twice."
+      }
+    },
+    "theGodhand": {
+      "name": "The Godhand",
+      "description": "The Godhand is a craftable Exotic weapon in Dauntless. It is crafted from Rezakiri reagents.",
+      "beamChannelDamage0": {
+        "name": "BeamChannelDamage",
+        "description": "Channel a beam that deals increasing damage, up to 200%, while it continues to hit a target."
+      }
+    },
+    "stalkersMercy": {
+      "name": "Stalker's Mercy",
+      "description": "A Slayer's axe forged with Riftstalker trophies.",
+      "damageShadowOrbs0": {
+        "name": "DamageShadowOrbs",
+        "description": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 1.5% for 5 seconds. If 5 or more orbs are present, the bonus doubles."
+      },
+      "damageShadowOrbs6": {
+        "name": "DamageShadowOrbs",
+        "description": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2% for 5 seconds. If 5 or more orbs are present, the bonus doubles."
+      },
+      "damageShadowOrbs10": {
+        "name": "DamageShadowOrbs",
+        "description": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2.5% for 5 seconds. If 5 or more orbs are present, the bonus doubles."
+      }
+    },
+    "stalkersPrice": {
+      "name": "Stalker's Price",
+      "description": "A Slayer's hammer forged with Riftstalker trophies.",
+      "damageShadowOrbs0": {
+        "name": "DamageShadowOrbs",
+        "description": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 1.5% for 5 seconds. If 5 or more orbs are present, the bonus doubles."
+      },
+      "damageShadowOrbs6": {
+        "name": "DamageShadowOrbs",
+        "description": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2% for 5 seconds. If 5 or more orbs are present, the bonus doubles."
+      },
+      "damageShadowOrbs10": {
+        "name": "DamageShadowOrbs",
+        "description": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2.5% for 5 seconds. If 5 or more orbs are present, the bonus doubles."
+      }
+    },
+    "stalkersScorn": {
+      "name": "Stalker's Scorn",
+      "description": "A Slayer's aether strikers forged with Riftstalker trophies.",
+      "damageShadowOrbs0": {
+        "name": "DamageShadowOrbs",
+        "description": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 1.5% for 5 seconds. If 5 or more orbs are present, the bonus doubles."
+      },
+      "damageShadowOrbs6": {
+        "name": "DamageShadowOrbs",
+        "description": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2% for 5 seconds. If 5 or more orbs are present, the bonus doubles."
+      },
+      "damageShadowOrbs10": {
+        "name": "DamageShadowOrbs",
+        "description": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2.5% for 5 seconds. If 5 or more orbs are present, the bonus doubles."
+      }
+    },
+    "stalkersSpike": {
+      "name": "Stalker's Spike",
+      "description": "A Slayer's war pike forged with Riftstalker trophies.",
+      "damageShadowOrbs0": {
+        "name": "DamageShadowOrbs",
+        "description": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 1.5% for 5 seconds. If 5 or more orbs are present, the bonus doubles."
+      },
+      "damageShadowOrbs6": {
+        "name": "DamageShadowOrbs",
+        "description": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2% for 5 seconds. If 5 or more orbs are present, the bonus doubles."
+      },
+      "damageShadowOrbs10": {
+        "name": "DamageShadowOrbs",
+        "description": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2.5% for 5 seconds. If 5 or more orbs are present, the bonus doubles."
+      }
+    },
+    "stalkersStrike": {
+      "name": "Stalker's Strike",
+      "description": "A Slayer's sword forged with Riftstalker trophies.",
+      "damageShadowOrbs0": {
+        "name": "DamageShadowOrbs",
+        "description": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 1.5% for 5 seconds. If 5 or more orbs are present, the bonus doubles."
+      },
+      "damageShadowOrbs6": {
+        "name": "DamageShadowOrbs",
+        "description": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2% for 5 seconds. If 5 or more orbs are present, the bonus doubles."
+      },
+      "damageShadowOrbs10": {
+        "name": "DamageShadowOrbs",
+        "description": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2.5% for 5 seconds. If 5 or more orbs are present, the bonus doubles."
+      }
+    },
+    "stalkersTrap": {
+      "name": "Stalker's Trap",
+      "description": "A Slayer's chain blades forged with Riftstalker trophies.",
+      "damageShadowOrbs0": {
+        "name": "DamageShadowOrbs",
+        "description": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 1.5% for 5 seconds. If 5 or more orbs are present, the bonus doubles."
+      },
+      "damageShadowOrbs6": {
+        "name": "DamageShadowOrbs",
+        "description": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2% for 5 seconds. If 5 or more orbs are present, the bonus doubles."
+      },
+      "damageShadowOrbs10": {
+        "name": "DamageShadowOrbs",
+        "description": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2.5% for 5 seconds. If 5 or more orbs are present, the bonus doubles."
+      }
+    },
+    "cryOfTheShrike": {
+      "name": "Cry of the Shrike",
+      "description": "A Slayer's sword forged with Shrike trophies.",
+      "dodgePartDamage0": {
+        "name": "DodgePartDamage",
+        "description": "+50 part damage on next hit after a dodge."
+      },
+      "dodgePartDamage6": {
+        "name": "DodgePartDamage",
+        "description": "+75 part damage on next hit after a dodge."
+      },
+      "dodgePartDamage10": {
+        "name": "DodgePartDamage",
+        "description": "+100 part damage on next hit after a dodge."
+      }
+    },
+    "fallOfTheShrike": {
+      "name": "Fall of the Shrike",
+      "description": "A Slayer's hammer forged with Shrike trophies.",
+      "dodgePartDamage0": {
+        "name": "DodgePartDamage",
+        "description": "+50 part damage on next hit after a dodge."
+      },
+      "dodgePartDamage6": {
+        "name": "DodgePartDamage",
+        "description": "+75 part damage on next hit after a dodge."
+      },
+      "dodgePartDamage10": {
+        "name": "DodgePartDamage",
+        "description": "+100 part damage on next hit after a dodge."
+      }
+    },
+    "fistsOfTheShrike": {
+      "name": "Fists of the Shrike",
+      "description": "A Slayer's aether strikers forged with Shrike trophies.",
+      "dodgePartDamage0": {
+        "name": "DodgePartDamage",
+        "description": "+50 part damage on next hit after a dodge."
+      },
+      "dodgePartDamage6": {
+        "name": "DodgePartDamage",
+        "description": "+75 part damage on next hit after a dodge."
+      },
+      "dodgePartDamage10": {
+        "name": "DodgePartDamage",
+        "description": "+100 part damage on next hit after a dodge."
+      }
+    },
+    "flightOfTheShrike": {
+      "name": "Flight of the Shrike",
+      "description": "A Slayer's chain blades forged with Shrike trophies.",
+      "dodgePartDamage0": {
+        "name": "DodgePartDamage",
+        "description": "+50 part damage on next hit after a dodge."
+      },
+      "dodgePartDamage6": {
+        "name": "DodgePartDamage",
+        "description": "+75 part damage on next hit after a dodge."
+      },
+      "dodgePartDamage10": {
+        "name": "DodgePartDamage",
+        "description": "+100 part damage on next hit after a dodge."
+      }
+    },
+    "screamOfTheShrike": {
+      "name": "Scream of the Shrike",
+      "description": "A Slayer's war pike forged with Shrike trophies.",
+      "dodgePartDamage0": {
+        "name": "DodgePartDamage",
+        "description": "+50 part damage on next hit after a dodge."
+      },
+      "dodgePartDamage6": {
+        "name": "DodgePartDamage",
+        "description": "+75 part damage on next hit after a dodge."
+      },
+      "dodgePartDamage10": {
+        "name": "DodgePartDamage",
+        "description": "+100 part damage on next hit after a dodge."
+      }
+    },
+    "songOfTheShrike": {
+      "name": "Song of the Shrike",
+      "description": "A Slayer's axe forged with Shrike trophies.",
+      "dodgePartDamage0": {
+        "name": "DodgePartDamage",
+        "description": "+50 part damage on next hit after a dodge."
+      },
+      "dodgePartDamage6": {
+        "name": "DodgePartDamage",
+        "description": "+75 part damage on next hit after a dodge."
+      },
+      "dodgePartDamage10": {
+        "name": "DodgePartDamage",
+        "description": "+100 part damage on next hit after a dodge."
+      }
+    },
+    "eyesOfNight": {
+      "name": "Eyes of Night",
+      "description": "A Slayer's chain blades forged with Shrowd trophies.",
+      "lowHpDamage0": {
+        "name": "LowHpDamage",
+        "description": "When under 20% health, deal +50% damage"
+      }
+    },
+    "fallOfNight": {
+      "name": "Fall of Night",
+      "description": "A Slayer's hammer forged with Shrowd trophies.",
+      "lowHpDamage0": {
+        "name": "LowHpDamage",
+        "description": "When under 20% health, deal +50% damage"
+      }
+    },
+    "gyreOfNight": {
+      "name": "Gyre of Night",
+      "description": "A Slayer's war pike forged with Shrowd trophies.",
+      "lowHpDamage0": {
+        "name": "LowHpDamage",
+        "description": "When under 20% health, deal +50% damage"
+      }
+    },
+    "handsOfNight": {
+      "name": "Hands of Night",
+      "description": "A Slayer's aether strikers forged with Shrowd trophies.",
+      "lowHpDamage0": {
+        "name": "LowHpDamage",
+        "description": "When under 20% health, deal +50% damage"
+      }
+    },
+    "reaperOfNight": {
+      "name": "Reaper of Night",
+      "description": "A Slayer's axe forged with Shrowd trophies.",
+      "lowHpDamage0": {
+        "name": "LowHpDamage",
+        "description": "When under 20% health, deal +50% damage"
+      }
+    },
+    "theHunger": {
+      "name": "The Hunger",
+      "description": "The Hunger is a craftable Exotic weapon in Dauntless. It is crafted from Shrowd reagents.",
+      "theHungerEffect0": {
+        "name": "TheHungerEffect",
+        "description": "Activate to enter Feast, taking damage over time but gaining significant lifesteal, attack speed, and creating aetheric waves with each attack that deal area damage."
+      }
+    },
+    "vergeOfNight": {
+      "name": "Verge of Night",
+      "description": "A Slayer's sword forged with Shrowd trophies.",
+      "lowHpDamage0": {
+        "name": "LowHpDamage",
+        "description": "When under 20% health, deal +50% damage"
+      }
+    },
+    "skarnsJudgment": {
+      "name": "Skarn's Judgment",
+      "description": "A Slayer's axe forged with Skarn trophies.",
+      "damageChanceStackShield0": {
+        "name": "DamageChanceStackShield",
+        "description": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 20 health shield that lasts for 12s"
+      },
+      "damageChanceStackShield6": {
+        "name": "DamageChanceStackShield",
+        "description": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 30 health shield that lasts for 12s"
+      },
+      "damageChanceStackShield10": {
+        "name": "DamageChanceStackShield",
+        "description": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 40 health shield that lasts for 12s"
+      }
+    },
+    "skarnsMalice": {
+      "name": "Skarn's Malice",
+      "description": "A Slayer's chain blades forged with Skarn trophies.",
+      "damageChanceStackShield0": {
+        "name": "DamageChanceStackShield",
+        "description": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 20 health shield that lasts for 12s"
+      },
+      "damageChanceStackShield6": {
+        "name": "DamageChanceStackShield",
+        "description": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 30 health shield that lasts for 12s"
+      },
+      "damageChanceStackShield10": {
+        "name": "DamageChanceStackShield",
+        "description": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 40 health shield that lasts for 12s"
+      }
+    },
+    "skarnsRancor": {
+      "name": "Skarn's Rancor",
+      "description": "A Slayer's sword forged with Skarn trophies.",
+      "damageChanceStackShield0": {
+        "name": "DamageChanceStackShield",
+        "description": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 20 health shield that lasts for 12s"
+      },
+      "damageChanceStackShield6": {
+        "name": "DamageChanceStackShield",
+        "description": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 30 health shield that lasts for 12s"
+      },
+      "damageChanceStackShield10": {
+        "name": "DamageChanceStackShield",
+        "description": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 40 health shield that lasts for 12s"
+      }
+    },
+    "skarnsSmashers": {
+      "name": "Skarn's Smashers",
+      "description": "A Slayer's aether strikers forged with Skarn trophies.",
+      "damageChanceStackShield0": {
+        "name": "DamageChanceStackShield",
+        "description": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 20 health shield that lasts for 12s"
+      },
+      "damageChanceStackShield6": {
+        "name": "DamageChanceStackShield",
+        "description": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 30 health shield that lasts for 12s"
+      },
+      "damageChanceStackShield10": {
+        "name": "DamageChanceStackShield",
+        "description": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 40 health shield that lasts for 12s"
+      }
+    },
+    "skarnsSpite": {
+      "name": "Skarn's Spite",
+      "description": "A Slayer's war pike forged with Skarn trophies.",
+      "damageChanceStackShield0": {
+        "name": "DamageChanceStackShield",
+        "description": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 20 health shield that lasts for 12s"
+      },
+      "damageChanceStackShield6": {
+        "name": "DamageChanceStackShield",
+        "description": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 30 health shield that lasts for 12s"
+      },
+      "damageChanceStackShield10": {
+        "name": "DamageChanceStackShield",
+        "description": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 40 health shield that lasts for 12s"
+      }
+    },
+    "skarnsVengeance": {
+      "name": "Skarn's Vengeance",
+      "description": "A Slayer's hammer forged with Skarn trophies.",
+      "damageChanceStackShield0": {
+        "name": "DamageChanceStackShield",
+        "description": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 20 health shield that lasts for 12s"
+      },
+      "damageChanceStackShield6": {
+        "name": "DamageChanceStackShield",
+        "description": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 30 health shield that lasts for 12s"
+      },
+      "damageChanceStackShield10": {
+        "name": "DamageChanceStackShield",
+        "description": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 40 health shield that lasts for 12s"
+      }
+    },
+    "winterGale": {
+      "name": "Winter Gale",
+      "description": "A Slayer's axe forged with Skraev trophies.",
+      "iceMines0": {
+        "name": "IceMines",
+        "description": "Evading drops 1 Ice Mines on a 30 second cooldown."
+      },
+      "iceMines6": {
+        "name": "IceMines",
+        "description": "Evading drops 2 Ice Mines on a 30 second cooldown."
+      },
+      "iceMines10": {
+        "name": "IceMines",
+        "description": "Evading drops 3 Ice Mines on a 30 second cooldown."
+      }
+    },
+    "winterIce": {
+      "name": "Winter Ice",
+      "description": "A Slayer's sword forged with Skraev trophies.",
+      "iceMines0": {
+        "name": "IceMines",
+        "description": "Evading drops 1 Ice Mines on a 30 second cooldown."
+      },
+      "iceMines6": {
+        "name": "IceMines",
+        "description": "Evading drops 2 Ice Mines on a 30 second cooldown."
+      },
+      "iceMines10": {
+        "name": "IceMines",
+        "description": "Evading drops 3 Ice Mines on a 30 second cooldown."
+      }
+    },
+    "winterSquall": {
+      "name": "Winter Squall",
+      "description": "A Slayer's hammer forged with Skraev trophies.",
+      "iceMines0": {
+        "name": "IceMines",
+        "description": "Evading drops 1 Ice Mines on a 30 second cooldown."
+      },
+      "iceMines6": {
+        "name": "IceMines",
+        "description": "Evading drops 2 Ice Mines on a 30 second cooldown."
+      },
+      "iceMines10": {
+        "name": "IceMines",
+        "description": "Evading drops 3 Ice Mines on a 30 second cooldown."
+      }
+    },
+    "winterVortex": {
+      "name": "Winter Vortex",
+      "description": "A Slayer's war pike forged with Skraev trophies.",
+      "iceMines0": {
+        "name": "IceMines",
+        "description": "Evading drops 1 Ice Mines on a 30 second cooldown."
+      },
+      "iceMines6": {
+        "name": "IceMines",
+        "description": "Evading drops 2 Ice Mines on a 30 second cooldown."
+      },
+      "iceMines10": {
+        "name": "IceMines",
+        "description": "Evading drops 3 Ice Mines on a 30 second cooldown."
+      }
+    },
+    "winterWinds": {
+      "name": "Winter Winds",
+      "description": "A Slayer's chain blades forged with Skraev trophies.",
+      "iceMines0": {
+        "name": "IceMines",
+        "description": "Evading drops 1 Ice Mines on a 30 second cooldown."
+      },
+      "iceMines6": {
+        "name": "IceMines",
+        "description": "Evading drops 2 Ice Mines on a 30 second cooldown."
+      },
+      "iceMines10": {
+        "name": "IceMines",
+        "description": "Evading drops 3 Ice Mines on a 30 second cooldown."
+      }
+    },
+    "winterWolves": {
+      "name": "Winter Wolves",
+      "description": "A Slayer's aether strikers forged with Skraev trophies.",
+      "iceMines0": {
+        "name": "IceMines",
+        "description": "Evading drops 1 Ice Mines on a 30 second cooldown."
+      },
+      "iceMines6": {
+        "name": "IceMines",
+        "description": "Evading drops 2 Ice Mines on a 30 second cooldown."
+      },
+      "iceMines10": {
+        "name": "IceMines",
+        "description": "Evading drops 3 Ice Mines on a 30 second cooldown."
+      }
+    },
+    "stormBlades": {
+      "name": "Storm Blades",
+      "description": "A Slayer's chain blades forged with Stormclaw trophies.",
+      "dodgeMeterGain0": {
+        "name": "DodgeMeterGain",
+        "description": "After dodging through an attack, the next weapon attack has 100% meter gain"
+      },
+      "dodgeMeterGain6": {
+        "name": "DodgeMeterGain",
+        "description": "After dodging through an attack, the next weapon attack has 300% meter gain"
+      },
+      "dodgeMeterGain10": {
+        "name": "DodgeMeterGain",
+        "description": "After dodging through an attack, the next weapon attack has 500% meter gain"
+      }
+    },
+    "stormBreakers": {
+      "name": "Storm Breakers",
+      "description": "A Slayer's aether strikers forged with Stormclaw trophies.",
+      "dodgeExtendMantra0": {
+        "name": "DodgeExtendMantra",
+        "description": "After dodging though an attack, extend Mantra timeout by 1 seconds"
+      },
+      "dodgeExtendMantra6": {
+        "name": "DodgeExtendMantra",
+        "description": "After dodging though an attack, extend Mantra timeout by 2 seconds"
+      },
+      "dodgeExtendMantra10": {
+        "name": "DodgeExtendMantra",
+        "description": "After dodging though an attack, extend Mantra timeout by 3 seconds"
+      }
+    },
+    "stormCutter": {
+      "name": "Storm Cutter",
+      "description": "A Slayer's axe forged with Stormclaw trophies.",
+      "dodgeMeterGain0": {
+        "name": "DodgeMeterGain",
+        "description": "After dodging through an attack, the next weapon attack has 100% meter gain"
+      },
+      "dodgeMeterGain6": {
+        "name": "DodgeMeterGain",
+        "description": "After dodging through an attack, the next weapon attack has 300% meter gain"
+      },
+      "dodgeMeterGain10": {
+        "name": "DodgeMeterGain",
+        "description": "After dodging through an attack, the next weapon attack has 500% meter gain"
+      }
+    },
+    "stormHammer": {
+      "name": "Storm Hammer",
+      "description": "A Slayer's hammer forged with Stormclaw trophies.",
+      "dodgeReload0": {
+        "name": "DodgeReload",
+        "description": "Reloads 1 hammer ammo after dodging through an attack"
+      },
+      "dodgeReload6": {
+        "name": "DodgeReload",
+        "description": "Reloads 2 hammer ammo after dodging through an attack"
+      },
+      "dodgeReload10": {
+        "name": "DodgeReload",
+        "description": "Reloads 3 hammer ammo after dodging through an attack"
+      }
+    },
+    "stormPike": {
+      "name": "Storm Pike",
+      "description": "A Slayer's war pike forged with Stormclaw trophies.",
+      "dodgeMeterGain0": {
+        "name": "DodgeMeterGain",
+        "description": "After dodging through an attack, the next weapon attack has 100% meter gain"
+      },
+      "dodgeMeterGain6": {
+        "name": "DodgeMeterGain",
+        "description": "After dodging through an attack, the next weapon attack has 300% meter gain"
+      },
+      "dodgeMeterGain10": {
+        "name": "DodgeMeterGain",
+        "description": "After dodging through an attack, the next weapon attack has 500% meter gain"
+      }
+    },
+    "stormSword": {
+      "name": "Storm Sword",
+      "description": "A Slayer's sword forged with Stormclaw trophies.",
+      "dodgeMeterGain0": {
+        "name": "DodgeMeterGain",
+        "description": "After dodging through an attack, the next weapon attack has 100% meter gain"
+      },
+      "dodgeMeterGain6": {
+        "name": "DodgeMeterGain",
+        "description": "After dodging through an attack, the next weapon attack has 200% meter gain"
+      },
+      "dodgeMeterGain10": {
+        "name": "DodgeMeterGain",
+        "description": "After dodging through an attack, the next weapon attack has 300% meter gain"
+      }
+    },
+    "valomyrsBurden": {
+      "name": "Valomyr's Burden",
+      "description": "A Slayer's hammer forged with Valomyr trophies.",
+      "valomyrCharge0": {
+        "name": "ValomyrCharge",
+        "description": "Once charged, your next attack will deal 300 bonus radiant damage. Charge rate increases with current health."
+      },
+      "valomyrCharge6": {
+        "name": "ValomyrCharge",
+        "description": "Once charged, your next attack will deal 425 bonus radiant damage. Charge rate increases with current health."
+      },
+      "valomyrCharge10": {
+        "name": "ValomyrCharge",
+        "description": "Once charged, your next attack will deal 550 bonus radiant damage. Charge rate increases with current health."
+      }
+    },
+    "valomyrsDecree": {
+      "name": "Valomyr's Decree",
+      "description": "A Slayer's axe forged with Valomyr trophies.",
+      "valomyrCharge0": {
+        "name": "ValomyrCharge",
+        "description": "Once charged, your next attack will deal 300 bonus radiant damage. Charge rate increases with current health."
+      },
+      "valomyrCharge6": {
+        "name": "ValomyrCharge",
+        "description": "Once charged, your next attack will deal 425 bonus radiant damage. Charge rate increases with current health."
+      },
+      "valomyrCharge10": {
+        "name": "ValomyrCharge",
+        "description": "Once charged, your next attack will deal 550 bonus radiant damage. Charge rate increases with current health."
+      }
+    },
+    "valomyrsHope": {
+      "name": "Valomyr's Hope",
+      "description": "A Slayer's war pike forged with Valomyr trophies.",
+      "valomyrCharge0": {
+        "name": "ValomyrCharge",
+        "description": "Once charged, your next attack will deal 300 bonus radiant damage. Charge rate increases with current health."
+      },
+      "valomyrCharge6": {
+        "name": "ValomyrCharge",
+        "description": "Once charged, your next attack will deal 425 bonus radiant damage. Charge rate increases with current health."
+      },
+      "valomyrCharge10": {
+        "name": "ValomyrCharge",
+        "description": "Once charged, your next attack will deal 550 bonus radiant damage. Charge rate increases with current health."
+      }
+    },
+    "valomyrsRegard": {
+      "name": "Valomyr's Regard",
+      "description": "A Slayer's sword forged with Valomyr trophies.",
+      "valomyrCharge0": {
+        "name": "ValomyrCharge",
+        "description": "Once charged, your next attack will deal 300 bonus radiant damage. Charge rate increases with current health."
+      },
+      "valomyrCharge6": {
+        "name": "ValomyrCharge",
+        "description": "Once charged, your next attack will deal 425 bonus radiant damage. Charge rate increases with current health."
+      },
+      "valomyrCharge10": {
+        "name": "ValomyrCharge",
+        "description": "Once charged, your next attack will deal 550 bonus radiant damage. Charge rate increases with current health."
+      }
+    },
+    "valomyrsRevenge": {
+      "name": "Valomyr's Revenge",
+      "description": "A Slayer's chain blades forged with Valomyr trophies.",
+      "valomyrCharge0": {
+        "name": "ValomyrCharge",
+        "description": "Once charged, your next attack will deal 300 bonus radiant damage. Charge rate increases with current health."
+      },
+      "valomyrCharge6": {
+        "name": "ValomyrCharge",
+        "description": "Once charged, your next attack will deal 425 bonus radiant damage. Charge rate increases with current health."
+      },
+      "valomyrCharge10": {
+        "name": "ValomyrCharge",
+        "description": "Once charged, your next attack will deal 550 bonus radiant damage. Charge rate increases with current health."
+      }
+    },
+    "valomyrsVisions": {
+      "name": "Valomyr's Visions",
+      "description": "A Slayer's aether strikers forged with Valomyr trophies.",
+      "valomyrCharge0": {
+        "name": "ValomyrCharge",
+        "description": "Once charged, your next attack will deal 300 bonus radiant damage. Charge rate increases with current health."
+      },
+      "valomyrCharge6": {
+        "name": "ValomyrCharge",
+        "description": "Once charged, your next attack will deal 425 bonus radiant damage. Charge rate increases with current health."
+      },
+      "valomyrCharge10": {
+        "name": "ValomyrCharge",
+        "description": "Once charged, your next attack will deal 550 bonus radiant damage. Charge rate increases with current health."
+      }
+    }
+  },
+  "parts": {
+    "aetherstrikers": {
+      "mods": {
+        "cyclonicStrikeplate": {
+          "name": "Cyclonic Strikeplate",
+          "partEffect": {
+            "0": "Tempest Form duration increased by 10 seconds. When Tempest Form has less than 10 seconds remaining, deal +15% damage."
+          }
+        },
+        "echoBracedriver": {
+          "name": "Echo Bracedriver",
+          "partEffect": {
+            "0": "Critical strikes increase the damage dealt by Karma Breaker's damage over time by 5% until the debuff ends or is refreshed."
+          }
+        },
+        "inertialFistguard": {
+          "name": "Inertial Fistguard",
+          "partEffect": {
+            "0": "Surge deals +25% damage. After surging, gain +5% movespeed for 8 seconds. Stacks up to 3 times."
+          }
+        }
+      },
+      "specials": {
+        "adamantBolt": {
+          "name": "Adamant Bolt",
+          "partEffect": {
+            "0": "Unleash energy in a focused blast, dealing 900 damage to the first enemy hit. Deals up to +100% damage when Tempest Form and Karma Breaker's effects are active."
+          }
+        },
+        "titansCrash": {
+          "name": "Titan's Crash",
+          "partEffect": {
+            "0": "Unleash energy forward in a pressure wave, dealing 600 damage to the closest target and 200 damage to nearby target. Deals up to +100% damage when Tempest Form and Karma Breaker's effects are active."
+          }
+        }
+      }
+    },
+    "axe": {
+      "mods": {
+        "furiousAxecore": {
+          "name": "Furious Axecore",
+          "partEffect": {
+            "0": "Perfectly charged attacks grants +15 meter on hit, but no longer grant resolve."
+          }
+        },
+        "lightweightHaft": {
+          "name": "Lightweight Haft",
+          "partEffect": {
+            "0": "Movespeed while charging Horizontal Attacks is now increased instead of decreased and costs no stamina to maintain."
+          }
+        },
+        "overchargedCylinder": {
+          "name": "Overcharged Cylinder",
+          "partEffect": {
+            "0": "Determination can now stack up to 4 times."
+          }
+        },
+        "railsplittersCanteen": {
+          "name": "Railsplitter's Canteen",
+          "partEffect": {
+            "0": "Tonics consumed while your axe is thrown have +50% effectiveness."
+          }
+        },
+        "volatileAxecore": {
+          "name": "Volatile Axecore",
+          "partEffect": {
+            "0": "Charging attack deals aoe damage to nearby enemies at each charge level."
+          }
+        }
+      },
+      "specials": {
+        "flightOfRuin": {
+          "name": "Flight of Ruin",
+          "partEffect": {
+            "0": "Throw the axe forward, damaging enemies while thrown. Reactivate to call the axe and perform a powerful overhand swing that can generate determination."
+          }
+        },
+        "grimOnslaught": {
+          "name": "Grim Onslaught",
+          "partEffect": {
+            "0": "Throw the axe forward, damaging enemies in its path before landing a distance away. Hitting a Behemoth can generate Resolve and will bounce the axe back towards the user."
+          }
+        },
+        "relentlessOnslaught": {
+          "name": "Relentless Onslaught",
+          "partEffect": {
+            "0": "Hurl the axe forward, damaging enemies in its path. Catch the axe to throw it again up to 2 more times in the next 5 seconds, dealing 500/600/1000 damage (further increased by determination). Does not build meter."
+          }
+        }
+      }
+    },
+    "chainblades": {
+      "mods": {
+        "demolitionBlades": {
+          "name": "Demolition Blades",
+          "partEffect": {
+            "0": "After using a special, deal +100% damage to objects created by Behemoths for 6 seconds."
+          }
+        },
+        "hurricaneBlades": {
+          "name": "Hurricane Blades",
+          "partEffect": {
+            "0": "Using Blade Spin grants stacking on-next hit damage that is consumed when using other attacks."
+          }
+        },
+        "lightweightChain": {
+          "name": "Lightweight Chain",
+          "partEffect": {
+            "0": "Dashing towards a Behemoth reduces stamina cost of the dash by 50%."
+          }
+        },
+        "momentumBlades": {
+          "name": "Momentum Blades",
+          "partEffect": {
+            "0": "After using a special, your next special use within 4 seconds is free."
+          }
+        },
+        "serratedBlades": {
+          "name": "Serrated Blades",
+          "partEffect": {
+            "0": "Bladed attacks have a chance to cause your next swinging blades to be a critical strike."
+          }
+        }
+      },
+      "specials": {
+        "cruelRiftstrike": {
+          "name": "Cruel Riftstrike",
+          "partEffect": {
+            "0": "Use to teleport forward, damaging enemies if present. Can teleport through Behemoths."
+          }
+        },
+        "insatiableDance": {
+          "name": "Insatiable Dance",
+          "partEffect": {
+            "0": "From afar: Pull to targets and grant a stack of Insatiable Dance. While close: Push off targets, then use primary or secondary attacks to perform a followup. Primary followup grants a stack of Insatiable Dance. Secondary followup expends stacks and creates a 50 health healing orb per stack."
+          }
+        },
+        "reapersDance": {
+          "name": "Reaper's Dance",
+          "partEffect": {
+            "0": "Use close to a Behemoth to push off, dealing damage. Use from far to pull in quickly to a Behemoth."
+          }
+        }
+      }
+    },
+    "hammer": {
+      "mods": {
+        "antiqueClip": {
+          "name": "Antique Clip",
+          "partEffect": {
+            "0": "Ammo decreased to 2, but bonus from aethercharged ammo is increased by 300%."
+          }
+        },
+        "extendedClip": {
+          "name": "Extended Clip",
+          "partEffect": {
+            "0": "Ammo increased to 6."
+          }
+        },
+        "impulseCrown": {
+          "name": "Impulse Crown",
+          "partEffect": {
+            "0": "Aerial Strike grants increased damage dealt for 10 seconds. Bonus is doubled if a Behemoth's head is struck."
+          }
+        },
+        "turbineTrigger": {
+          "name": "Turbine Trigger",
+          "partEffect": {
+            "0": "Priming attacks increases attack speed by 10% until the combo ends. Stacks."
+          }
+        },
+        "weightedCrown": {
+          "name": "Weighted Crown",
+          "partEffect": {
+            "0": "Stagger damage is no longer halved when attacking Behemoth legs."
+          }
+        }
+      },
+      "specials": {
+        "concussiveSalvo": {
+          "name": "Concussive Salvo",
+          "partEffect": {
+            "0": "Loads ammo into the hammer before releasing, damage and interrupting behemoths."
+          }
+        },
+        "ironheartLandbreaker": {
+          "name": "Ironheart Landbreaker",
+          "partEffect": {
+            "0": "Hold to load ammo into the hammer. Release to create an aether vent that buffs players who step over it, granting them +40% damage reduction and up to 155 healing over 30 seconds when aethercharged."
+          }
+        },
+        "mightyLandbreaker": {
+          "name": "Mighty Landbreaker",
+          "partEffect": {
+            "0": "Loads ammo into the hammer before releasing, creating an aether vent that buffs players."
+          }
+        }
+      }
+    },
+    "repeater": {
+      "barrels": {
+        "blizzardBarrel": {
+          "name": "Blizzard Barrel",
+          "partEffect": {
+            "0": "Shots and abilities deal frost damage."
+          }
+        },
+        "dawnstarBarrel": {
+          "name": "Dawnstar Barrel",
+          "partEffect": {
+            "0": "Shots and abilities deal radiant damage."
+          }
+        },
+        "infernoBarrel": {
+          "name": "Inferno Barrel",
+          "partEffect": {
+            "0": "Shots and abilities deal blaze damage."
+          }
+        },
+        "standardBarrel": {
+          "name": "Standard Barrel",
+          "partEffect": {
+            "0": "Shots and abilities deal physical damage."
+          }
+        },
+        "stormBarrel": {
+          "name": "Storm Barrel",
+          "partEffect": {
+            "0": "Shots and abilities deal shock damage."
+          }
+        },
+        "sylvanBarrel": {
+          "name": "Sylvan Barrel",
+          "partEffect": {
+            "0": "Shots and abilities deal terra damage."
+          }
+        },
+        "twilightBarrel": {
+          "name": "Twilight Barrel",
+          "partEffect": {
+            "0": "Shots and abilities deal umbral damage."
+          }
+        }
+      },
+      "chambers": {
+        "fullBoreChamber": {
+          "name": "Full-Bore Chamber",
+          "partEffect": {
+            "0": "Fires a piercing bolt in a line, dealing damage that falls as it travels.",
+            "1": "Empowered: Deals greatly increased damage and pushes the slayer backwards."
+          }
+        },
+        "marksmanChamber": {
+          "name": "Marksman Chamber",
+          "partEffect": {
+            "0": "Fires a shot in a line, dealing 250 damage to the first Behemoth hit. If a part is struck, that part takes 40% more damage from Shots for 10 seconds.",
+            "1": "Empowered: Damage bonus increased to 80%, and 25% to all allies."
+          }
+        },
+        "salvoChamber": {
+          "name": "Salvo Chamber",
+          "partEffect": {
+            "0": "Fires an explosive missile in a line, dealing 400 damage in an area upon impact.",
+            "1": "Empowered: Fires 3 missiles in a spread."
+          }
+        }
+      },
+      "grips": {
+        "captainsGrip": {
+          "name": "Captain's Grip",
+          "partEffect": {
+            "0": "Launches a collectible buff a short distance, granting 15% increased attack speed for 15 seconds when collected.",
+            "1": "Empowered: Grants the same buff to all Slayers."
+          }
+        },
+        "saboteursGrip": {
+          "name": "Saboteur's Grip",
+          "partEffect": {
+            "0": "Launches an explosive mine that deals 400 damage. Mine charges after a short period, increasing damage to 700.",
+            "1": "Empowered: Deals 900 damage when charged and can interrupt Behemoths."
+          }
+        }
+      },
+      "mods": {
+        "capacitiveMagazine": {
+          "name": "Capacitive Magazine",
+          "partEffect": {
+            "0": "Using an ability returns 4 ammo to the magazine."
+          }
+        },
+        "demolitionSights": {
+          "name": "Demolition Sights",
+          "partEffect": {
+            "0": "While empowered, deal +50% damage to objects created by Behemoths."
+          }
+        },
+        "extractionCatalyst": {
+          "name": "Extraction Catalyst",
+          "partEffect": {
+            "0": "Reduce both ability cooldowns by 2 seconds when dodging through Behemoth attacks."
+          }
+        },
+        "lightweightFrame": {
+          "name": "Lightweight Frame",
+          "partEffect": {
+            "0": "Gain 20% increased movespeed when at 6 or less ammo."
+          }
+        },
+        "luckyMagazine": {
+          "name": "Lucky Magazine",
+          "partEffect": {
+            "0": "Grants 2% critical strike chance for each round missing from the magazine."
+          }
+        },
+        "precisionSights": {
+          "name": "Precision Sights",
+          "partEffect": {
+            "0": "Deal 5 increased damage when attacking the same part multiple times. Stacks up to 8 times."
+          }
+        },
+        "scopedSights": {
+          "name": "Scoped Sights",
+          "partEffect": {
+            "0": "Increases damage falloff range by 25%"
+          }
+        },
+        "tacticiansMagazine": {
+          "name": "Tactician's Magazine",
+          "partEffect": {
+            "0": "Empowered Reloading at exactly 0 ammo decreases the cooldown of both abilities by 4 seconds."
+          }
+        }
+      },
+      "prisms": {
+        "brilliantPrism": {
+          "name": "Brilliant Prism",
+          "partEffect": {
+            "0": "Once charged, your next attack will deal 550 bonus radiant damage. Charge rate increases with current health."
+          }
+        },
+        "eclipsePrism": {
+          "name": "Eclipse Prism",
+          "partEffect": {
+            "0": "Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2.5% for 5 seconds. If 5 or more orbs are present, the bonus doubles.\n"
+          }
+        },
+        "glacialPrism": {
+          "name": "Glacial Prism",
+          "partEffect": {
+            "0": "Evading drops 6 Ice Mines on a 30 second cooldown."
+          }
+        },
+        "searingPrism": {
+          "name": "Searing Prism",
+          "partEffect": {
+            "0": "The tenth hit in quick succession deals 250 bonus damage and major blaze damage"
+          }
+        },
+        "snowdriftPrism": {
+          "name": "Snowdrift Prism",
+          "partEffect": {
+            "0": "The last 4 shots in your magazine generate a Frost Sprite that cause your next attack to deal 50 bonus damage and minor frost damage. Max 4 Sprites.\n"
+          }
+        },
+        "stoneheartPrism": {
+          "name": "Stoneheart Prism",
+          "partEffect": {
+            "0": "Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 40 health shield that lasts for 12s."
+          }
+        }
+      }
+    },
+    "sword": {
+      "mods": {
+        "adhesiveHilt": {
+          "name": "Adhesive Hilt",
+          "partEffect": {
+            "0": "Become unstaggerable while in special."
+          }
+        },
+        "momentumPommel": {
+          "name": "Momentum Pommel",
+          "partEffect": {
+            "0": "Triple Elements combo finisher can be performed twice, dealing +100 damage on the 2nd use."
+          }
+        },
+        "perpetualBladecore": {
+          "name": "Perpetual Bladecore",
+          "partEffect": {
+            "0": "Dealing damage while in special generates a small amount of special meter"
+          }
+        },
+        "reactiveHilt": {
+          "name": "Reactive Hilt",
+          "partEffect": {
+            "0": "Dodge attacks always critically strike."
+          }
+        },
+        "whistlingBlade": {
+          "name": "Whistling Blade",
+          "partEffect": {
+            "0": "Reduces the stamina cost of Repeating Elements by 25% and each Repeating Elements attack grants +5% attack speed (up to 30%) until the combo is ended."
+          }
+        }
+      },
+      "specials": {
+        "ardentCyclone": {
+          "name": "Ardent Cyclone",
+          "partEffect": {
+            "0": "Activate at full meter to start to spin, damaging nearby enemies for the duration. Reactive to slash in a direction, damaging enemies."
+          }
+        },
+        "avengingOverdrive": {
+          "name": "Avenging Overdrive",
+          "partEffect": {
+            "0": "Activate at full meter to enter Overdrive, increasing attack speed and causing attacks to deal AoE damage. Reactivate to parry and riposte a behemoth attack."
+          }
+        },
+        "valiantOverdrive": {
+          "name": "Valiant Overdrive",
+          "partEffect": {
+            "0": "Activate at full meter to enter Overdrive, increasing attack speed and causing attacks to deal aoe damage. Reactivate to dash in a direction (incurs a short cooldown)."
+          }
+        }
+      }
+    },
+    "warpike": {
+      "mods": {
+        "balancedSpearhead": {
+          "name": "Balanced Spearhead",
+          "partEffect": {
+            "0": "Increases damage dealt by 3% each time Piercing and Harvesting attacks are alternated. Resets upon combo end."
+          }
+        },
+        "barbedSpearhead": {
+          "name": "Barbed Spearhead",
+          "partEffect": {
+            "0": "After a dodge piercing attack, gain +50% wound damage for 8 seconds."
+          }
+        },
+        "executionersSpearhead": {
+          "name": "Executioner's Spearhead",
+          "partEffect": {
+            "0": "Each time the Behemoth is wounded, gain +6% damage"
+          }
+        },
+        "lightweightShaft": {
+          "name": "Lightweight Shaft",
+          "partEffect": {
+            "0": "Pike charge attack no longer costs stamina and always critically strikes."
+          }
+        },
+        "munitionsAmplifier": {
+          "name": "Munitions Amplifier",
+          "partEffect": {
+            "0": "Stored ammo quality increases slowly over time, up to max."
+          }
+        }
+      },
+      "specials": {
+        "concussivePayload": {
+          "name": "Concussive Payload",
+          "partEffect": {
+            "0": "Use to convert meter into ammo. Hold to spend ammo to fire a missile that damages and can interrupt Behemoths."
+          }
+        },
+        "recklessLeap": {
+          "name": "Reckless Leap",
+          "partEffect": {
+            "0": "Press to convert meter into ammo. Hold to spend ammo and perform a flying lunge attack that deals up to 1200 damage based on distance and ammo quality."
+          }
+        },
+        "savageWellspring": {
+          "name": "Savage Wellspring",
+          "partEffect": {
+            "0": "Use to convert meter into ammo. Hold to spend ammo to create an aura that buffs nearby allies with critical strike chance. Duration increases with ammo quality."
+          }
+        }
+      }
+    }
+  }
+}

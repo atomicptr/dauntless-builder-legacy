@@ -1,0 +1,62 @@
+{
+    "weapon": "Arme",
+    "headArmour": "Casque",
+    "torsoArmour": "Gants",
+    "armsArmour": "Gants",
+    "legsArmour": "Grèves",
+    "lantern": "Lantèrne",
+    "special": "Spécial",
+    "mod": "Mod",
+    "barrel": "Canon",
+    "chamber": "Chambre",
+    "grip": "Poignée",
+    "prism": "Prisme",
+    "perks": "Effets",
+    "noItemSelected": "Pas de <strong>{title}</strong> selectionné.",
+    "clickToSelect": "Cliquez ici pour en sélectionner un(e).",
+    "uniqueEffect": "effet unique: ",
+    "hold": "Maintenu: ",
+    "instant": "Instantané: ",
+    "noPerksAvailable": "Aucun effet disponible.",
+    "rarity": {
+        "uncommon": "Commun",
+        "rare": "Rare",
+        "epic": "Epique"
+    },
+    "element": {
+        "frost": "Givrant",
+        "radiant": "Radiant",
+        "blaze": "Incandescant",
+        "shock": "Foudroyant",
+        "terra": "Tellurique",
+        "umbral": "Obscur"
+    },
+    "stats": {
+        "power": "Puissance: ",
+        "resistance": "Resistance: ",
+        "perks": "Effet: "
+    },
+    "modal": {
+        "search": "Chercher...",
+        "weaponType": "Filtrer par type d'arme...",
+        "perk": "Filtrer par effet...",
+        "cellSlot": "Filtrer par slot de cellule...",
+        "rarity": "Filtrer par rareté..."
+    },
+    "weaponType": {
+        "aetherStrikers": "Cestes aethériques",
+        "axe": "Hache",
+        "chainBlades": "Chaînes-lames",
+        "hammer": "Marteau",
+        "repeater": "Repeater",
+        "sword": "Épée",
+        "warPike": "Aéthérolance"
+    },
+    "cellSlot": {
+        "defence": "Défence",
+        "mobility": "Mobilité",
+        "power": "Puissance",
+        "technique": "Technique",
+        "utility": "Utilitaire"
+    }
+}

@@ -3,14 +3,18 @@ import PropTypes from "prop-types";
 
 import Select from "react-select";
 
+import Case from "case";
+
 import "react-select/dist/react-select.css";
 
 import Debug from "./Debug";
 import ModalCellListItem from "./ModalCellListItem";
 import ModalItemListItem from "./ModalItemListItem";
 import LevelPicker from "./LevelPicker";
+import ItemUtility from "../utility/ItemUtility";
+import { injectIntl } from "react-intl";
 
-export default class ItemSelectModal extends React.Component {
+class ItemSelectModal extends React.Component {
     constructor(props, context) {
         super(props, context);
 
@@ -44,11 +48,11 @@ export default class ItemSelectModal extends React.Component {
         }
 
         if(nextProps.data && nextProps.data.filterOptions &&
-            nextProps.data.filterOptions.__itemType === "Weapon" && nextProps.data.filterOptions.__weaponType) {
+            nextProps.data.filterOptions.__itemType === "weapon" && nextProps.data.filterOptions.__weaponType) {
 
             newState.weaponTypeFilter = {
                 value: nextProps.data.filterOptions.__weaponType,
-                label: nextProps.data.filterOptions.__weaponType,
+                label: this.tr(`builder.weaponType.${nextProps.data.filterOptions.__weaponType}`),
             };
         }
 
@@ -56,6 +60,8 @@ export default class ItemSelectModal extends React.Component {
             this.setState(newState);
         }
     }
+
+    tr(id, ...args) {return this.props.intl.formatMessage({id}, ...args);}
 
     getIsActive() {
         return this.state.open ? "is-active" : "";
@@ -102,10 +108,10 @@ export default class ItemSelectModal extends React.Component {
         let key = null;
 
         switch(itemType) {
-            case "Weapon": key = "weapons"; break;
-            case "Armour": key = "armours"; break;
-            case "Lantern": key = "lanterns"; break;
-            case "Cell": key = "cells"; break;
+            case "weapon": key = "weapons"; break;
+            case "armour": key = "armours"; break;
+            case "lantern": key = "lanterns"; break;
+            case "cell": key = "cells"; break;
         }
 
         const filtersApply = (item, filters) => {
@@ -148,27 +154,28 @@ export default class ItemSelectModal extends React.Component {
     }
 
     getDynamicFilters() {
+        const tr = this.tr.bind(this);
         let filters = [];
 
         // apply search filter for weapon and armour
-        if(this.isType(["Weapon", "Armour"]) && this.state.searchQuery.length > 0) {
+        if(this.isType(["weapon", "armour"]) && this.state.searchQuery.length > 0) {
             filters.push({
                 value: this.state.searchQuery,
                 method: (item, filter) => {
                     const q = filter.value.toLowerCase();
 
                     return [
-                        q => item.name.toLowerCase().indexOf(q) > -1,
-                        q => item.description && item.description.toLowerCase().indexOf(q) > -1,
+                        q => tr(ItemUtility.itemTr(item, "name")).toLowerCase().indexOf(q) > -1,
+                        q => tr(ItemUtility.itemTr(item, "description")).toLowerCase().indexOf(q) > -1,
                         q => item.unique_effects && item.unique_effects.some(ue =>
-                            ue.description && ue.description.toLowerCase().indexOf(q) > -1),
+                            ue.name && tr(ItemUtility.itemTr(item, ue.name, "description")).toLowerCase().indexOf(q) > -1),
                     ].some(test => test(q));
                 }
             });
         }
 
         // apply search filter for cells
-        if(this.isType(["Cell"]) && this.state.searchQuery.length > 0) {
+        if(this.isType(["cell"]) && this.state.searchQuery.length > 0) {
             filters.push({
                 value: this.state.searchQuery,
                 method: (item, filter) => {
@@ -180,25 +187,25 @@ export default class ItemSelectModal extends React.Component {
                     itemPerks = itemPerks.filter((p, index) => itemPerks.indexOf(p) === index);
 
                     return [
-                        q => item.name.toLowerCase().indexOf(q) > -1,
-                        q => itemPerks.some(p => itemData.perks[p].name.toLowerCase().indexOf(q) > -1 ||
-                            itemData.perks[p].description.toLowerCase().indexOf(q) > -1)
+                        q => tr(ItemUtility.getTr("cells", item.name)).toLowerCase().indexOf(q) > -1,
+                        q => itemPerks.some(p => tr(ItemUtility.getTr("perks", p, "name")).toLowerCase().indexOf(q) > -1 ||
+                        tr(ItemUtility.getTr("perks", p, "description")).toLowerCase().indexOf(q) > -1)
                     ].some(test => test(q));
                 }
             });
         }
 
         // apply search filter for lanterns
-        if(this.isType(["Lantern"]) && this.state.searchQuery.length > 0) {
+        if(this.isType(["lantern"]) && this.state.searchQuery.length > 0) {
             filters.push({
                 value: this.state.searchQuery,
                 method: (item, filter) => {
                     const q = filter.value.toLowerCase();
 
                     return [
-                        q => item.name.toLowerCase().indexOf(q) > -1,
-                        q => item.lantern_ability.instant && item.lantern_ability.instant.toLowerCase().indexOf(q) > -1,
-                        q => item.lantern_ability.hold && item.lantern_ability.hold.toLowerCase().indexOf(q) > -1,
+                        q => tr(ItemUtility.itemTr(item, "name")).toLowerCase().indexOf(q) > -1,
+                        q => item.lantern_ability.instant && tr(ItemUtility.itemTr(item, "lanternAbility", "instant")).toLowerCase().indexOf(q) > -1,
+                        q => item.lantern_ability.hold && tr(ItemUtility.itemTr(item, "lanternAbility", "hold")).toLowerCase().indexOf(q) > -1,
                     ].some(test => test(q));
                 }
             });
@@ -213,7 +220,7 @@ export default class ItemSelectModal extends React.Component {
             });
         }
 
-        if(this.isType("Weapon") && this.state.weaponTypeFilter && this.state.weaponTypeFilter.value) {
+        if(this.isType("weapon") && this.state.weaponTypeFilter && this.state.weaponTypeFilter.value) {
             filters.push({
                 field: "type",
                 value: this.state.weaponTypeFilter.value
@@ -248,7 +255,7 @@ export default class ItemSelectModal extends React.Component {
 
     getPerkOptions() {
         let perks = Object.keys(this.props.itemData.perks).map(perk => {
-            return {value: perk, label: perk};
+            return {value: perk, label: this.tr(ItemUtility.getTr("perks", perk, "name"))};
         });
 
         return perks.filter(perk => {
@@ -268,7 +275,7 @@ export default class ItemSelectModal extends React.Component {
                 let cells = Array.isArray(item.cells) ? item.cells : [item.cells];
                 return cells.some(cellSlot => cellSlot === slot);
             });
-        }).map(slot => ({value: slot, label: slot}));
+        }).map(slot => ({value: slot, label: this.tr(`builder.cellSlot.${slot.toLowerCase()}`)}));
     }
 
     isType(type) {
@@ -280,6 +287,7 @@ export default class ItemSelectModal extends React.Component {
     }
 
     renderFilterFields() {
+        const tr = this.tr.bind(this);
         let fields = [];
 
         // add search filter
@@ -290,7 +298,7 @@ export default class ItemSelectModal extends React.Component {
                         autoFocus={window.innerWidth >= 700}
                         className="input"
                         type="text"
-                        placeholder="Search..."
+                        placeholder={tr("builder.modal.search")}
                         value={this.state.searchQuery}
                         onChange={e => this.setState({searchQuery: e.target.value})} />
                     <span className="icon is-small is-left">
@@ -301,7 +309,7 @@ export default class ItemSelectModal extends React.Component {
         );
 
         // add Weapon Type filter
-        if(this.isType(["Weapon"])) {
+        if(this.isType(["weapon"])) {
             let options = [];
 
             for(let weaponName in this.props.itemData.weapons) {
@@ -316,12 +324,12 @@ export default class ItemSelectModal extends React.Component {
                 }
             }
 
-            options = options.sort().map(option => ({value: option, label: option}));
+            options = options.sort().map(option => ({value: option, label: tr(`builder.weaponType.${option}`)}));
 
             fields.push(
                 <div key="weaponTypeFilter" className="field">
                     <Select
-                        placeholder="Filter by weapon type..."
+                        placeholder={tr("builder.modal.weaponType")}
                         onChange={weaponType => this.setState({weaponTypeFilter: weaponType})}
                         value={this.state.weaponTypeFilter}
                         options={options} />
@@ -331,11 +339,11 @@ export default class ItemSelectModal extends React.Component {
 
         // add Perk filter
         const perkOptions = this.getPerkOptions();
-        if(this.isType(["Weapon", "Armour"]) && perkOptions.length > 0) {
+        if(this.isType(["weapon", "armour"]) && perkOptions.length > 0) {
             fields.push(
                 <div key="perkFilter" className="field is-hidden-touch">
                     <Select
-                        placeholder="Filter by perk..."
+                        placeholder={tr("builder.modal.perk")}
                         onChange={perk => this.setState({perkFilter: perk})}
                         value={this.state.perkFilter}
                         options={perkOptions} />
@@ -345,11 +353,11 @@ export default class ItemSelectModal extends React.Component {
 
         // add Slot filter
         const slotOptions = this.getSlotOptions();
-        if(this.isType(["Weapon", "Armour"]) && slotOptions.length > 0) {
+        if(this.isType(["weapon", "armour"]) && slotOptions.length > 0) {
             fields.push(
                 <div key="slotFilter" className="field is-hidden-touch">
                     <Select
-                        placeholder="Filter by cell slot..."
+                        placeholder={tr("builder.modal.cellSlot")}
                         onChange={slot => this.setState({slotFilter: slot})}
                         value={this.state.slotFilter}
                         options={slotOptions} />
@@ -358,15 +366,15 @@ export default class ItemSelectModal extends React.Component {
         }
 
         // add cell rarity filter
-        if(this.isType(["Cell"])) {
+        if(this.isType(["cell"])) {
             fields.push(
                 <div key="rarityFilter" className="field is-hidden-touch">
                     <Select
-                        placeholder="Filter by rarity..."
+                        placeholder={tr("builder.modal.rarity")}
                         onChange={rarity => this.setState({rarityFilter: rarity})}
                         value={this.state.rarityFilter}
-                        options={["Uncommon", "Rare", "Epic"].map(
-                            rarity => ({value: rarity.toLowerCase(), label: rarity}))} />
+                        options={["uncommon", "rare", "epic"].map(
+                            rarity => ({value: rarity, label: this.tr(`builder.rarity.${rarity}`)}))} />
                 </div>
             );
         }
@@ -382,7 +390,7 @@ export default class ItemSelectModal extends React.Component {
         let itemType = this.props.data.filterOptions.__itemType;
 
         for(let item of items) {
-            let itemsToRender = this["render" + itemType](item);
+            let itemsToRender = this["render" + Case.pascal(itemType)](item);
 
             if(!Array.isArray(itemsToRender)) {
                 itemsToRender = [itemsToRender];
@@ -395,15 +403,15 @@ export default class ItemSelectModal extends React.Component {
     }
 
     renderWeapon(item) {
-        return this.renderItem(item, "Weapon");
+        return this.renderItem(item, "weapon");
     }
 
     renderArmour(item) {
-        return this.renderItem(item, "Armour");
+        return this.renderItem(item, "armour");
     }
 
     renderLantern(item) {
-        return this.renderItem(item, "Lantern");
+        return this.renderItem(item, "lantern");
     }
 
     renderItem(item, type) {
@@ -493,5 +501,10 @@ ItemSelectModal.propTypes = {
     itemData: PropTypes.shape({
         weapons: PropTypes.object,
         perks: PropTypes.object
-    })
+    }),
+    intl: PropTypes.shape({
+        formatMessage: PropTypes.func.isRequired
+    }).isRequired
 };
+
+export default injectIntl(ItemSelectModal);

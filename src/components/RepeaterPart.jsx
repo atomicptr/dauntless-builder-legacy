@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ItemUtility from "../utility/ItemUtility";
+import { FormattedMessage } from "react-intl";
 
 export default class RepeaterPart extends React.Component {
 
@@ -22,10 +23,12 @@ export default class RepeaterPart extends React.Component {
             elemental = <span className="elementals">
                 <span className="elemental elemental-strength">
                     +&nbsp;<img src={"/assets/icons/elements/" + part.elemental + ".png"} />
-                    <span className="only-desktop">&nbsp;{part.elemental}</span>
+                    <span className="only-desktop">&nbsp;<FormattedMessage id={`builder.element.${part.elemental.toLowerCase()}`} /></span>
                 </span>
             </span>;
         }
+
+        const partType = this.props.partType;
 
         return <div className="item-title-wrapper">
             <div className="item-wrapper">
@@ -34,11 +37,16 @@ export default class RepeaterPart extends React.Component {
                         <img src={part.icon} />
                     </div>
                     <div className="item-data">
-                        <h3 className="item-title">{part.name} {ItemUtility.levelString(level)}</h3>
+                        <h3 className="item-title"><FormattedMessage id={ItemUtility.getTr("parts", "repeater", partType, part.name, "name")} /> {ItemUtility.levelString(level)}</h3>
                         <div className="stat-data">
-                            <strong>Power</strong>: {powerLevel} {elemental}
+                            <FormattedMessage id="builder.stats.power" tagName="strong" />{powerLevel} {elemental}
                         </div>
-                        {part.part_effect.map(e => <div key={e} className="unique-effects">{e}</div>)}
+                        {Array.of(...part.part_effects).map(e => (
+                            <div key={e} className="unique-effects">
+                                <FormattedMessage id={ItemUtility.getTr("parts", "repeater", partType, part.name, "partEffect", e)} />
+                            </div>
+                        ))}
+                        {/* {part.part_effect.map(e => <div key={e} className="unique-effects">{e}</div>)} */}
                     </div>
                 </div>
             </div>

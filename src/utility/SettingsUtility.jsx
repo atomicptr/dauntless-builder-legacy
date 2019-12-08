@@ -1,5 +1,8 @@
+import { detectLanguage, availableLanguages } from "../components/I18NProvider";
+
 const defaultOptions = {
-    theme: "light"
+    theme: "light",
+    language: detectLanguage()
 };
 
 export default class SettingsUtility {
@@ -27,6 +30,22 @@ export default class SettingsUtility {
             SettingsUtility.set("theme", "dark");
         } else {
             SettingsUtility.set("theme", "light");
+        }
+    }
+
+    static getLanguage() {
+        const lang = SettingsUtility.get("language");
+        console.log("saved language:", lang);
+        if (availableLanguages().includes(lang)) {
+            return lang;
+        }
+        return defaultOptions.language;
+    }
+
+    static setLanguage({value: lang}) {
+        console.log("change language:", lang);
+        if (typeof lang === "string" && availableLanguages().includes(lang)) {
+            SettingsUtility.set("language", lang);
         }
     }
 

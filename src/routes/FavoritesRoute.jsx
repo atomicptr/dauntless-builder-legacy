@@ -4,6 +4,8 @@ import {Link} from "react-router-dom";
 
 import FavoriteBuildsModel from "../models/FavoriteBuildsModel";
 import BuildModel from "../models/BuildModel";
+import { FormattedMessage } from "react-intl";
+import ItemUtility from "../utility/ItemUtility";
 
 export default class FavoritesRoute extends React.Component {
 
@@ -20,35 +22,35 @@ export default class FavoritesRoute extends React.Component {
         const weapon = model.weapon;
 
         if(weapon) {
-            tags.push(<span key={weapon.name} className="tag is-warning">{weapon.name}</span>);
+            tags.push(<span key={weapon.name} className="tag is-warning"><FormattedMessage id={ItemUtility.itemTr(weapon, "name")} /></span>);
         }
 
         const armour = model.armour;
 
         if(armour.head) {
             const piece = armour.head;
-            tags.push(<span key={piece.name} className="tag is-info">{piece.name}</span>);
+            tags.push(<span key={piece.name} className="tag is-info"><FormattedMessage id={ItemUtility.itemTr(piece, "name")} /></span>);
         }
 
         if(armour.torso) {
             const piece = armour.torso;
-            tags.push(<span key={piece.name} className="tag is-info">{piece.name}</span>);
+            tags.push(<span key={piece.name} className="tag is-info"><FormattedMessage id={ItemUtility.itemTr(piece, "name")} /></span>);
         }
 
         if(armour.arms) {
             const piece = armour.arms;
-            tags.push(<span key={piece.name} className="tag is-info">{piece.name}</span>);
+            tags.push(<span key={piece.name} className="tag is-info"><FormattedMessage id={ItemUtility.itemTr(piece, "name")} /></span>);
         }
 
         if(armour.legs) {
             const piece = armour.legs;
-            tags.push(<span key={piece.name} className="tag is-info">{piece.name}</span>);
+            tags.push(<span key={piece.name} className="tag is-info"><FormattedMessage id={ItemUtility.itemTr(piece, "name")} /></span>);
         }
 
         const lantern = model.lantern;
 
         if(lantern) {
-            tags.push(<span key={lantern.name} className="tag is-link">{lantern.name}</span>);
+            tags.push(<span key={lantern.name} className="tag is-link"><FormattedMessage id={ItemUtility.itemTr(lantern, "name")} /></span>);
         }
 
         const perks = Object.keys(model.perks).map(perk =>
@@ -59,9 +61,9 @@ export default class FavoritesRoute extends React.Component {
             const value = p.value;
 
             if(value >= 6) {
-                tags.push(<span key={perk} className="tag is-success">+{value} {perk}</span>);
+                tags.push(<span key={perk} className="tag is-success">+{value} <FormattedMessage id={ItemUtility.getTr("perks", perk, "name")} /></span>);
             } else if(value >= 4) {
-                tags.push(<span key={perk} className="tag is-dark">+{value} {perk}</span>);
+                tags.push(<span key={perk} className="tag is-dark">+{value} <FormattedMessage id={ItemUtility.getTr("perks", perk, "name")} /></span>);
             }
         }
 
@@ -93,19 +95,19 @@ export default class FavoritesRoute extends React.Component {
             this.renderFavoriteBuildListItem(favorite, FavoriteBuildsModel.getText(favorite)));
 
         let makeNewBuildsButton = <Link to="/b/new">
-            <button className="button is-dark">Make a new build</button>
+            <button className="button is-dark"><FormattedMessage id="ui.makeANewBuild" /></button>
         </Link>;
 
         if(favs.length === 0) {
             return <div>
-                <h1 className="title">My builds</h1>
-                <h2 className="subtitle">You have not saved any builds yet.</h2>
+                <h1 className="title"><FormattedMessage id="ui.myBuilds" /></h1>
+                <h2 className="subtitle"><FormattedMessage id="ui.noSavedBuildYet" /></h2>
                 {makeNewBuildsButton}
             </div>;
         }
 
         return <div>
-            <h2 className="title">My builds</h2>
+            <h2 className="title"><FormattedMessage id="ui.myBuilds" /></h2>
 
             <div className="my-builds-list">
                 {favs}

@@ -16,6 +16,7 @@ import Footer from "../components/Footer";
 
 import "styles/main.scss";
 import SettingsUtility from "../utility/SettingsUtility";
+import I18NSelector from "../components/I18NSelector";
 
 export default class AppContainer extends React.Component {
 
@@ -77,6 +78,8 @@ export default class AppContainer extends React.Component {
             <Router>
                 <React.Fragment>
                     <div className={"primary-container container " + this.getExtraClasses()}>
+                        <I18NSelector />
+
                         <Link to="/">
                             <img className="logo" src="/assets/logo.png" />
                         </Link>

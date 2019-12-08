@@ -13,8 +13,8 @@ export default class PropTypeUtility {
             power: PropTypes.object,
             resistance: PropTypes.object,
             lantern_ability: PropTypes.shape({
-                instant: PropTypes.string,
-                hold: PropTypes.string
+                instant: PropTypes.bool,
+                hold: PropTypes.bool
             }),
             unique_effects: PropTypes.array
         });

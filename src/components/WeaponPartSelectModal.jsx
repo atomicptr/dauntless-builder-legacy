@@ -48,7 +48,7 @@ export default class WeaponPartSelectModal extends React.Component {
             const part = parts[partName];
 
             items.push(
-                <WeaponPart key={partName} part={part} partType={partType} onClicked={this.onPartSelected.bind(this)} />
+                <WeaponPart key={partName} part={part} weaponType={weaponType} partType={partType} onClicked={this.onPartSelected.bind(this)} />
             );
         }
 

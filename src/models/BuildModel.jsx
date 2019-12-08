@@ -1,4 +1,5 @@
 import Hashids from "hashids";
+import Case from "case";
 import DataUtility from "../utility/DataUtility";
 import ItemUtility from "../utility/ItemUtility";
 
@@ -99,16 +100,16 @@ export default class BuildModel {
 
         const version = numbers[idcounter++];
 
-        const weaponName = getString("Weapons", idcounter++);
+        const weaponName = getString("weapons", idcounter++);
         const weapon = BuildModel.findWeapon(weaponName);
-        const partsType = weapon ? `Parts:${ItemUtility.formatWeaponTypeForParts(weapon.type).capitalize()}` : null;
+        const partsType = weapon ? `parts:${Case.camel(weapon.type).toLowerCase()}` : null;
 
         let data = {
             __version: version,
             weapon_name: weaponName,
             weapon_level: numbers[idcounter++],
-            weapon_cell0: getString("Cells", idcounter++),
-            weapon_cell1: getString("Cells", idcounter++),
+            weapon_cell0: getString("cells", idcounter++),
+            weapon_cell1: getString("cells", idcounter++),
             weapon_part1_name: getString(partsType, idcounter++),
             weapon_part2_name: getString(partsType, idcounter++),
             weapon_part3_name: getString(partsType, idcounter++),
@@ -116,20 +117,20 @@ export default class BuildModel {
             // part 5 was unused and is now used for bond weapons
             bond_weapon_name: getString("Weapons", idcounter++),
             weapon_part6_name: getString(partsType, idcounter++),
-            head_name: getString("Armours", idcounter++),
+            head_name: getString("armours", idcounter++),
             head_level: numbers[idcounter++],
-            head_cell: getString("Cells", idcounter++),
-            torso_name: getString("Armours", idcounter++),
+            head_cell: getString("cells", idcounter++),
+            torso_name: getString("armours", idcounter++),
             torso_level: numbers[idcounter++],
-            torso_cell: getString("Cells", idcounter++),
-            arms_name: getString("Armours", idcounter++),
+            torso_cell: getString("cells", idcounter++),
+            arms_name: getString("armours", idcounter++),
             arms_level: numbers[idcounter++],
-            arms_cell: getString("Cells", idcounter++),
-            legs_name: getString("Armours", idcounter++),
+            arms_cell: getString("cells", idcounter++),
+            legs_name: getString("armours", idcounter++),
             legs_level: numbers[idcounter++],
-            legs_cell: getString("Cells", idcounter++),
-            lantern_name: getString("Lanterns", idcounter++),
-            lantern_cell: getString("Cells", idcounter++)
+            legs_cell: getString("cells", idcounter++),
+            lantern_name: getString("lanterns", idcounter++),
+            lantern_cell: getString("cells", idcounter++)
         };
 
         return new BuildModel(data);
@@ -402,7 +403,7 @@ export default class BuildModel {
             uniqueEffect =>
                 !("from" in uniqueEffect && "to" in uniqueEffect) ||
                     (level >= uniqueEffect.from && level <= uniqueEffect.to)
-        );
+        ).map(it => Object.assign(it, {title: it.title ? `builder.${it.title.toLowerCase()}` : null}));
     }
 
     static tryDeserialize(str) {

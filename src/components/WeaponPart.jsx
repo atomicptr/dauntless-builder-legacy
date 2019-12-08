@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ItemUtility from "../utility/ItemUtility";
+import { FormattedHTMLMessage, FormattedMessage } from "react-intl";
 
 export default class WeaponPart extends React.Component {
 
@@ -10,8 +12,7 @@ export default class WeaponPart extends React.Component {
     }
 
     render() {
-        const part = this.props.part;
-        const partType = this.props.partType;
+        const {part, partType, weaponType, title} = this.props;
 
         if (!part) {
             return <div className="item-title-wrapper">
@@ -20,9 +21,9 @@ export default class WeaponPart extends React.Component {
                         <i className="fas fa-question no-item-icon"></i>
                         <div className="item-data">
                             <h3 className="subtitle">
-                                No <strong>{partType.capitalize().substring(0, partType.length - 1)}</strong> selected.
+                                <FormattedHTMLMessage id="builder.noItemSelected" values={{title: title}} />
                             </h3>
-                            <div>Click here to select one.</div>
+                            <div><FormattedMessage id="builder.clickToSelect" /></div>
                         </div>
                     </div>
                 </div>
@@ -36,8 +37,12 @@ export default class WeaponPart extends React.Component {
                         <img src={part.icon} />
                     </div>
                     <div className="item-data">
-                        <h3 className="item-title">{part.name}</h3>
-                        {part.part_effect.map(e => <div key={e} className="unique-effects">{e}</div>)}
+                        <h3 className="item-title"><FormattedMessage id={ItemUtility.getTr("parts", weaponType.toLowerCase(), partType, part.name, "name")} /></h3>
+                        {Array.of(...part.part_effects).map(e => (
+                            <div key={e} className="unique-effects">
+                                <FormattedMessage id={ItemUtility.getTr("parts", weaponType.toLowerCase(), partType, part.name, "partEffect", e)} />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -46,7 +51,9 @@ export default class WeaponPart extends React.Component {
 }
 
 WeaponPart.propTypes = {
+    weaponType: PropTypes.string,
     partType: PropTypes.string,
+    title: PropTypes.string,
     part: PropTypes.object,
     onClicked: PropTypes.func
 };

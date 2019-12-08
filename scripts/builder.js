@@ -2,6 +2,7 @@ const glob = require("glob");
 const yaml = require("js-yaml");
 const fs = require("fs");
 const md5 = require("md5");
+const Case = require("case");
 
 let stringMap = {};
 let stringCounter = {};
@@ -37,22 +38,55 @@ function tryInsertToStringMap(category, string) {
     }
 }
 
+function processPerks(perks) {
+    return perks && perks.map(perk => Object.assign(perk, {name: Case.camel(perk.name)}));
+}
+
+const processUniqueEffects = uniqueEffects => uniqueEffects && uniqueEffects
+    .map(effect => Object.assign(effect, {name: Case.camel(`${effect.name}${effect.from || 0}`), description: undefined}))
+
+const processLanternAbility = lanternAbility => lanternAbility && {
+    instant: !!lanternAbility.instant,
+    hold: !!lanternAbility.hold
+}
+
+const processEffects = effects => effects && Object.entries(effects)
+    .reduce((acc, [key, val]) => {
+        delete val.description;
+        return Object.assign(acc, {
+            [key]: val
+        });
+    }, {});
+
 function build(path) {
     return new Promise((resolve, reject) => {
         glob(path, (err, files) => {
             let data = {};
 
             for(let file of files) {
+                console.log(file);
                 let content = fs.readFileSync(file, "utf8");
                 let doc = yaml.safeLoad(content);
+                const segments = file.split("/")
+                const filename = [...segments].pop().split(".").slice(0, -1).join(".")
 
                 // it is a cell use variant names instead of name
                 if(file.indexOf("/cells/") > -1) {
-                    data[doc.name] = doc;
-
+                    doc.name = Case.camel(doc.name);
+                    if (doc.type) doc.type = Case.camel(doc.type);
                     for(let v of Object.keys(doc.variants)) {
-                        tryInsertToStringMap("Cells", v);
+                        const variant = doc.variants[v];
+                        doc.variants[Case.camel(v)] = variant;
+                        delete doc.variants[v];
+                        for(let p of Object.keys(variant.perks)) {
+                            const perk = variant.perks[p];
+                            variant.perks[Case.camel(p)] = perk;
+                            delete variant.perks[p];
+                        }
+                        tryInsertToStringMap("cells", Case.camel(v));
                     }
+
+                    data[Case.camel(doc.name)] = doc;
                 } else if(file.indexOf("/parts/") > -1) {
                     const parts = file.split("/");
                     const partsFolderIndex = parts.indexOf("parts");
@@ -67,22 +101,32 @@ function build(path) {
                         data[weaponType][partType] = {};
                     }
 
+                    doc.name = Case.camel(doc.name);
+                    doc.part_effects = (doc.part_effect || []).length;
+                    if (doc.part_effect) delete doc.part_effect;
                     data[weaponType][partType][doc.name] = doc;
-                    tryInsertToStringMap(`Parts:${ucfirst(weaponType)}`, doc.name);
+                    tryInsertToStringMap(`parts:${Case.camel(weaponType).toLowerCase()}`, doc.name);
                 } else if(file.indexOf("misc.yml") > -1) { // don't use string maps on misc
                     data = doc;
                 } else {
+                    doc.name = Case.camel(doc.name)
+                    doc.perks = processPerks(doc.perks);
+                    doc.unique_effects = processUniqueEffects(doc.unique_effects);
+                    doc.lantern_ability = processLanternAbility(doc.lantern_ability);
+                    doc.effects = processEffects(doc.effects);
+                    if (doc.description) delete doc.description;
+                    if (doc.type) doc.type = Case.camel(doc.type);
                     data[doc.name] = doc;
                     let type = doc.type;
 
                     if (file.indexOf("/perks/") > 0) {
-                        type = "Perks";
+                        type = "perks";
                     } else if (file.indexOf("/lanterns/") > 0) {
-                        type = "Lanterns";
+                        type = "lanterns";
                     } else if (file.indexOf("/weapons/") > 0) {
-                        type = "Weapons";
+                        type = "weapons";
                     } else if (file.indexOf("/armours/") > 0) {
-                        type = "Armours";
+                        type = "armours";
                     }
 
                     tryInsertToStringMap(type, doc.name);
@@ -141,7 +185,7 @@ Promise.all([
         fs.mkdirSync("./dist");
     }
 
-    const dataString = JSON.stringify(object);
+    const dataString = JSON.stringify(object, null, 2);
 
     fs.writeFileSync("./dist/data.json", dataString);
 

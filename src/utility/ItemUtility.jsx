@@ -31,28 +31,42 @@ export default class ItemUtility {
     }
 
     static isRepeater(item) {
-        return item.type === "Repeater";
+        return item.type === "repeater";
     }
 
     static itemType(type) {
         switch(type) {
-            case "Weapon":
-            case "Sword":
-            case "Chain Blades":
-            case "Axe":
-            case "Hammer":
-            case "War Pike":
-            case "Repeater":
-            case "Aether Strikers":
-                return "Weapon";
-            case "Head":
-            case "Torso":
-            case "Arms":
-            case "Legs":
-                return "Armour";
+            case "weapon":
+            case "sword":
+            case "chainBlades":
+            case "axe":
+            case "hammer":
+            case "warPike":
+            case "repeater":
+            case "aetherStrikers":
+                return "weapon";
+            case "armour":
+            case "head":
+            case "torso":
+            case "arms":
+            case "legs":
+                return "armour";
         }
 
-        return "Lantern";
+        return "lantern";
+    }
+
+    static itemTr(item, ...ext) {
+        const args = [
+            `${ItemUtility.itemType(item.type)}s`,
+            item.name,
+            ...ext
+        ];
+        return ItemUtility.getTr(...args);
+    }
+
+    static getTr(...ext) {
+        return `game.${ext.join(".")}`;
     }
 
     static formatWeaponTypeForParts(weaponType) {

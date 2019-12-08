@@ -8,6 +8,7 @@
   "scripts": {
     "build": "yarn build-data && yarn build-frontend",
     "build-data": "node ./scripts/builder.js",
+    "build-language": "node ./scripts/translation.js",
     "build-frontend": "webpack --mode=production",
     "build-dev": "webpack --mode=development",
     "deploy": "yarn build && ./scripts/deploy.sh",
@@ -15,6 +16,8 @@
     "dev": "node ./scripts/devserver.js"
   },
   "dependencies": {
+    "case": "^1.6.2",
+    "flat": "^5.0.0",
     "hashids": "^1.1.4",
     "md5": "^2.2.1",
     "prop-types": "latest",
@@ -23,6 +26,7 @@
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.4.0",
     "react-helmet": "^5.2.0",
+    "react-intl": "^3.9.1",
     "react-lazy-load": "^3.0.13",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",

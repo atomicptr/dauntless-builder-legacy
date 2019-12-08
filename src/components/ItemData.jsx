@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FormattedMessage, injectIntl } from "react-intl";
 import ItemUtility from "../utility/ItemUtility";
 import BuildModel from "../models/BuildModel";
 import PerkString from "./PerkString";
@@ -19,15 +20,15 @@ export default class ItemData extends React.Component {
 
         const titlePrefix = this.props.titlePrefix ? this.props.titlePrefix + ": " : null;
 
-        let title = <h3 className="item-title">{titlePrefix}{this.props.item.name} {levelString}</h3>;
+        let title = <h3 className="item-title">{titlePrefix}<FormattedMessage id={ItemUtility.itemTr(this.props.item, "name")} /> {levelString}</h3>;
 
         let stats = null;
 
         switch(ItemUtility.itemType(this.props.item.type)) {
-            case "Weapon":
+            case "weapon":
                 stats = <React.Fragment>
                     <div className="stat-data">
-                        <strong>Power</strong>: {this.props.item.power[this.props.level]} <ElementalAffinities item={this.props.item} />
+                        <FormattedMessage id="builder.stats.power" tagName="strong" />{this.props.item.power[this.props.level]} <ElementalAffinities item={this.props.item} />
                     </div>
                     {perkElement}
                 </React.Fragment>;
@@ -37,25 +38,35 @@ export default class ItemData extends React.Component {
                 }
 
                 break;
-            case "Armour":
+            case "armour":
                 stats = <React.Fragment>
                     <div className="stat-data">
-                        <strong>Resistance</strong>: {Math.ceil(this.props.item.resistance[this.props.level])}
+                        <FormattedMessage id="builder.stats.resistance" tagName="strong" />{Math.ceil(this.props.item.resistance[this.props.level])}
                         <ElementalAffinities item={this.props.item} />
                     </div>
                     {perkElement}
                 </React.Fragment>;
                 break;
-            case "Lantern": {
+            case "lantern": {
                 let instant = null;
                 let hold = null;
 
                 if(this.props.item.lantern_ability.instant) {
-                    instant = <div><strong>Instant</strong>: {this.props.item.lantern_ability.instant}</div>;
+                    instant = (
+                        <div>
+                            <FormattedMessage id="builder.instant" tagName="strong" />
+                            <FormattedMessage id={ItemUtility.itemTr(this.props.item, "lanternAbility", "instant")} />
+                        </div>
+                    );
                 }
 
                 if(this.props.item.lantern_ability.hold) {
-                    hold = <div><strong>Hold</strong>: {this.props.item.lantern_ability.hold}</div>;
+                    hold = (
+                        <div>
+                            <FormattedMessage id="builder.hold" tagName="strong" />
+                            <FormattedMessage id={ItemUtility.itemTr(this.props.item, "lanternAbility", "hold")} />
+                        </div>
+                    );
                 }
 
                 stats = <React.Fragment>
@@ -76,6 +87,8 @@ export default class ItemData extends React.Component {
         if(this.props.renderCellLine) {
             cellLine = this.renderCellLine(this.props.item);
         }
+
+        const trName = `game.${ItemUtility.itemType(this.props.item.type)}s.${this.props.item.name}.name`;
 
         return <div className="item-data">
             {title}

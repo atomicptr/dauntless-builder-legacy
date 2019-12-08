@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FormattedHTMLMessage, FormattedMessage, injectIntl } from "react-intl";
 
 import CellGroup from "./CellGroup";
 
@@ -9,7 +10,7 @@ import ItemUtility from "../utility/ItemUtility";
 import PropTypeUtility from "../utility/PropTypeUtility";
 import UniqueEffects from "./UniqueEffects";
 
-export default class Item extends React.Component {
+class Item extends React.Component {
     constructor(props, context) {
         super(props, context);
 
@@ -32,11 +33,11 @@ export default class Item extends React.Component {
         filterOption.__itemLevel = this.props.level;
         filterOption.filters = [];
 
-        if(filterOption.__itemType === "Weapon" && this.props.item) {
+        if(filterOption.__itemType === "weapon" && this.props.item) {
             filterOption.__weaponType = this.props.item.type;
         }
 
-        if(filterOption.__itemType === "Armour") {
+        if(filterOption.__itemType === "armour") {
             filterOption.__armourType = this.props.defaultType;
 
             filterOption.filters.push({
@@ -48,6 +49,10 @@ export default class Item extends React.Component {
         this.props.onItemClicked(filterOption);
     }
 
+    tr(id, ...args) {
+        return this.props.intl.formatMessage({id}, ...args);
+    }
+
     render() {
         if(!this.props.item) {
             return <div className="item-title-wrapper">
@@ -55,8 +60,8 @@ export default class Item extends React.Component {
                     <div className="item no-item" onClick={() => this.onClicked()}>
                         <i className="fas fa-question no-item-icon"></i>
                         <div className="item-data">
-                            <h3 className="subtitle">No <strong>{this.props.title}</strong> selected.</h3>
-                            <div>Click here to select one.</div>
+                            <h3 className="subtitle"><FormattedHTMLMessage id="builder.noItemSelected" values={{title: this.props.title}} /></h3>
+                            <div><FormattedMessage id="builder.clickToSelect"/></div>
                         </div>
                     </div>
                 </div>
@@ -82,7 +87,7 @@ export default class Item extends React.Component {
             <div className="item-title-wrapper">
                 <h2 className="subtitle hidden-on-large-screens">{this.getItemType() + (this.props.item.type ? ` - ${this.props.item.type}` : "")}</h2>
                 <div className="item-wrapper">
-                    <div className={"item"+ (!hasCells ? " no-cells" : "")} title={this.props.item.description} onClick={() => this.onClicked()}>
+                    <div className={"item"+ (!hasCells ? " no-cells" : "")} title={this.tr(ItemUtility.itemTr(this.props.item, "description"))} onClick={() => this.onClicked()}>
                         <ItemIcon item={this.props.item} defaultType={this.props.defaultType} />
                         <ItemData
                             titlePrefix={this.props.titlePrefix}
@@ -109,5 +114,10 @@ Item.propTypes = {
     onCellClicked: PropTypes.oneOfType([PropTypes.func, PropTypes.any]),
     titlePrefix: PropTypes.oneOfType([PropTypes.string, PropTypes.any]),
     simpleView: PropTypes.bool,
-    renderUniqueEffectsBeforeItem: PropTypes.bool
+    renderUniqueEffectsBeforeItem: PropTypes.bool,
+    intl: PropTypes.shape({
+        formatMessage: PropTypes.func.isRequired
+    }).isRequired
 };
+
+export default injectIntl(Item);

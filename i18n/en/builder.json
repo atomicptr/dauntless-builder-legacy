@@ -1,0 +1,62 @@
+{
+    "weapon": "Weapon",
+    "headArmour": "Head Armour",
+    "torsoArmour": "Torso Armour",
+    "armsArmour": "Arms Armour",
+    "legsArmour": "Legs Armour",
+    "lantern": "Lantern",
+    "special": "Special",
+    "mod": "Mod",
+    "barrel": "Barrel",
+    "chamber": "Chamber",
+    "grip": "Grip",
+    "prism": "Prism",
+    "perks": "Perks",
+    "noItemSelected": "No <strong>{title}</strong> selected.",
+    "clickToSelect": "Click here to select one.",
+    "uniqueEffect": "unique effect: ",
+    "hold": "Hold: ",
+    "instant": "Instant: ",
+    "noPerksAvailable": "No perks available.",
+    "rarity": {
+        "uncommon": "Uncommon",
+        "rare": "Rare",
+        "epic": "Epic"
+    },
+    "element": {
+        "frost": "Frost",
+        "radiant": "Radiant",
+        "blaze": "Blaze",
+        "shock": "Shock",
+        "terra": "Terra",
+        "umbral": "Umbral"
+    },
+    "stats": {
+        "power": "Power: ",
+        "resistance": "Resistance: ",
+        "perks": "Perks: "
+    },
+    "modal": {
+        "search": "Search...",
+        "weaponType": "Filter by weapon type...",
+        "perk": "Filter by perk...",
+        "cellSlot": "Filter by cell slot...",
+        "rarity": "Filter by rarity..."
+    },
+    "weaponType": {
+        "aetherStrikers": "Aether Strikers",
+        "axe": "Axe",
+        "chainBlades": "Chain Blades",
+        "hammer": "Hammer",
+        "repeater": "Repeater",
+        "sword": "Sword",
+        "warPike": "War Pike"
+    },
+    "cellSlot": {
+        "defence": "Defence",
+        "mobility": "Mobility",
+        "power": "Power",
+        "technique": "Technique",
+        "utility": "Utility"
+    }
+}

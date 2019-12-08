@@ -1,0 +1,17 @@
+{
+    "makeANewBuild": "Créer un nouveau build",
+    "sourceCode": "Code SOurce",
+    "myBuilds": "Mes Builds",
+    "new": "Nouveau",
+    "copyToClipboard": "Copier dans le presse-papier",
+    "favoriteBuild": "Ajouter aux favoris",
+    "unfavoriteBuild": "Returer des favoris",
+    "saveToFavorites": "Sauver dans les favoris",
+    "more": "Plus",
+    "enableDarkMode": "Activer le Mode &quot;Sombre&quot;",
+    "enableLightMode": "Activer le Mode &quot;Clair&quot;",
+    "exportToDauntlessBuildCollection": "Exporter dans Dauntless Build Collection...",
+    "settings": "Parametres",
+    "buildName": "Nom du build",
+    "noSavedBuildYet": "Vous n'avez pas encore sauvé de build."
+}

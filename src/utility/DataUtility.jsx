@@ -1,5 +1,5 @@
 // This exists to force a cache update on client. Simply increase the number.
-import ItemUtility from "./ItemUtility";
+import Case from "case";
 
 const SCRIPT_VERSION = 4;
 
@@ -31,23 +31,23 @@ class DataUtility {
     }
 
     getWeaponId(value) {
-        return this.getMapIdByValue("Weapons", value);
+        return this.getMapIdByValue("weapons", value);
     }
 
     getArmourId(value) {
-        return this.getMapIdByValue("Armours", value);
+        return this.getMapIdByValue("armours", value);
     }
 
     getLanternId(value) {
-        return this.getMapIdByValue("Lanterns", value);
+        return this.getMapIdByValue("lanterns", value);
     }
 
     getCellId(value) {
-        return this.getMapIdByValue("Cells", value);
+        return this.getMapIdByValue("cells", value);
     }
 
     getPartId(weaponType, value) {
-        return this.getMapIdByValue(`Parts:${ItemUtility.formatWeaponTypeForParts(weaponType).capitalize()}`, value);
+        return this.getMapIdByValue(`parts:${Case.camel(weaponType).toLowerCase()}`, value);
     }
 
     getJSON(url) {

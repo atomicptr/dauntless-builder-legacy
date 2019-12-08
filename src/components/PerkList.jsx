@@ -1,11 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ItemUtility from "../utility/ItemUtility";
 
 import ReactTooltip from "react-tooltip";
 
 import BuildModel from "../models/BuildModel";
+import { injectIntl, FormattedMessage } from "react-intl";
 
-export default class PerkList extends React.Component {
+class PerkList extends React.Component {
+    tr(id, ...args) {return this.props.intl.formatMessage({id}, ...args);}
+
     getPerkLevelClass(perkValue) {
         if(perkValue >= 1 && perkValue < 6) {
             return "perk-ok perk-level-" + perkValue;
@@ -27,14 +31,15 @@ export default class PerkList extends React.Component {
 
         let effectCount = Array.isArray(perk.key) ? perk.key.length : 1;
 
-        let effect = perk.effects[Math.max(0, Math.min(6, perkValue))];
+        const effectLvl = Math.max(0, Math.min(6, perkValue));
+        // let effect = perk.effects[effectLvl];
 
         let elems = [];
 
         for(let i = 0; i < effectCount; i++) {
             elems.push(
                 <div className="perk-effect" key={"perk-effect-" + i}>
-                    {Array.isArray(perk.key) ? effect.description[i] : effect.description}
+                    {this.tr(ItemUtility.getTr("perks", perkName, "effects", effectLvl, i))}
                 </div>
             );
         }
@@ -46,17 +51,25 @@ export default class PerkList extends React.Component {
 
     renderPerkTooltipData(perkName, perkValue) {
         let perk = BuildModel.findPerkByName(perkName);
+        let effectCount = Array.isArray(perk.key) ? perk.key.length : 1;
 
         let elems = Object.keys(perk.effects).map(effectKey => {
-            let description = Array.isArray(perk.effects[effectKey].description) ?
-                perk.effects[effectKey].description : [perk.effects[effectKey].description];
-
             let counter = 0;
 
             let value = Math.max(0, Math.min(6, perkValue));
 
+            const elems = [];
+
+            for(let i = 0; i < effectCount; i++) {
+                elems.push(
+                    <span key={"desc" + (counter++)}>
+                        {this.tr(ItemUtility.getTr("perks", perkName, "effects", effectKey, i))}
+                    </span>
+                );
+            }
+
             return <div key={effectKey} className={"tp-effect " + (Number(value) === Number(effectKey) ? "active" : "")}>
-                {description.map(d => <span key={"desc" + (counter++)}>{d}</span>)}
+                {elems}
             </div>;
         });
 
@@ -70,7 +83,7 @@ export default class PerkList extends React.Component {
                     <img className="perk-icon" src={"/assets/icons/perks/" +
                         BuildModel.findPerkByName(perk.name).type + ".png"} />
                     <div className="perk-data-wrapper">
-                        <div className="perk-title">+{perk.value} {perk.name}</div>
+                        <div className="perk-title">+{perk.value} <FormattedMessage id={ItemUtility.getTr("perks", perk.name, "name")} /></div>
                         {this.renderPerkEffect(perk.name, perk.value)}
                     </div>
                 </li>
@@ -84,14 +97,14 @@ export default class PerkList extends React.Component {
         if(perks.length === 0) {
             perks.push(
                 <li key="no-perks-found" className="perk-level-5">
-                    <div className="perk-title">No perks available.</div>
+                    <div className="perk-title"><FormattedMessage id="builder.noPerksAvailable" /></div>
                 </li>
             );
         }
 
         return <ul className="perk-list">
             <li className="perk-title-line">
-                <h2>Perks</h2>
+                <FormattedMessage tagName="h2" id="builder.perks" />
             </li>
 
             {perks}
@@ -100,5 +113,10 @@ export default class PerkList extends React.Component {
 }
 
 PerkList.propTypes = {
-    perks: PropTypes.array
+    perks: PropTypes.array,
+    intl: PropTypes.shape({
+        formatMessage: PropTypes.func.isRequired
+    }).isRequired
 };
+
+export default injectIntl(PerkList);
