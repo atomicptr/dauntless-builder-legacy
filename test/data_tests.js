@@ -62,7 +62,7 @@ describe("Dauntless Builder Data", () => {
         it("should contain every lantern", checkIfItemIsInDataFor("lanterns"));
         it("should contain every perk", checkIfItemIsInDataFor("perks"));
         it("should contain every cell", checkIfItemIsInDataFor("cells", cellName =>
-            Object.keys(data.cells[cellName].variants).every(variant => Object.values(localMap["Cells"]).indexOf(variant) > -1)));
+            Object.keys(data.cells[cellName].variants).every(variant => Object.values(localMap["cells"]).indexOf(variant) > -1)));
     });
 
     describe("Validity of built data", () => {

@@ -12,7 +12,7 @@
         "variants": {
             "type": "object",
             "patternProperties": {
-                "^\\+[1-3]\\s[A-Z](.*)\\sCell$": {
+                "^[1-3][A-Z](.*)Cell$": {
                     "type":"object",
                     "properties": {
                         "rarity": {

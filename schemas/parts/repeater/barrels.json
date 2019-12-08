@@ -59,11 +59,8 @@
                 "0"
             ]
         },
-        "part_effect": {
-            "type": "array",
-            "items": {
-                "type": "string"
-            }
+        "part_effects": {
+            "type": "number"
         }
     },
     "required": [
