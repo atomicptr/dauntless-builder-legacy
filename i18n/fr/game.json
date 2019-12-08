@@ -697,22 +697,28 @@
       "description": "Augmente les avantages liés à l'utilisation des puits d'aether.",
       "effects": {
         "1": [
-          "À l'utilisation d'un puit d'aether, donne + 25 de soin et offre 25% de chance de ne pas consommer de chargedu puits."
+          "Offre 25% de chance de ne pas consommer de charge du puits.",
+          "À l'utilisation d'un puit d'aether, donne + 25 de soin."
         ],
         "2": [
-          "À l'utilisation d'un puit d'aether, donne + 50 de soin et offre 25% de chance de ne pas consommer de chargedu puits."
+          "Offre 25% de chance de ne pas consommer de charge du puits.",
+          "À l'utilisation d'un puit d'aether, donne + 50 de soin."
         ],
         "3": [
-          "À l'utilisation d'un puit d'aether, donne + 75 de soin et offre 25% de chance de ne pas consommer de chargedu puits."
+          "Offre 25% de chance de ne pas consommer de charge du puits.",
+          "À l'utilisation d'un puit d'aether, donne + 75 de soin."
         ],
         "4": [
-          "À l'utilisation d'un puit d'aether, donne + 100 de soin et offre 25% de chance de ne pas consommer de chargedu puits."
+          "Offre 25% de chance de ne pas consommer de charge du puits.",
+          "À l'utilisation d'un puit d'aether, donne + 100 de soin."
         ],
         "5": [
-          "À l'utilisation d'un puit d'aether, donne + 150 de soin et offre 25% de chance de ne pas consommer de chargedu puits."
+          "Offre 25% de chance de ne pas consommer de charge du puits.",
+          "À l'utilisation d'un puit d'aether, donne + 150 de soin."
         ],
         "6": [
-          "À l'utilisation d'un puit d'aether, donne + 200 de soin et offre 25% de chance de ne pas consommer de chargedu puits."
+          "Offre 25% de chance de ne pas consommer de charge du puits.",
+          "À l'utilisation d'un puit d'aether, donne + 200 de soin."
         ]
       }
     },
