@@ -403,7 +403,7 @@ export default class BuildModel {
             uniqueEffect =>
                 !("from" in uniqueEffect && "to" in uniqueEffect) ||
                     (level >= uniqueEffect.from && level <= uniqueEffect.to)
-        ).map(it => Object.assign(it, {title: it.title ? `builder.${it.title.toLowerCase()}` : null}));
+        ).map(it => Object.assign(it, {title: it.title ? `${it.title.toLowerCase()}` : null}));
     }
 
     static tryDeserialize(str) {

@@ -107,7 +107,7 @@ class Repeater extends React.Component {
                 <h2 className="subtitle hidden-on-large-screens"><FormattedMessage id="builder.weapon" /></h2>
                 <div className="item-wrapper">
                     <div className={"item item-repeater"+ (this.props.item.cells.length === 0 ? " no-cells" : "")} title={this.tr(ItemUtility.itemTr(this.props.item, "description"))} onClick={() => this.onClicked()}>
-                        <ItemIcon item={this.props.item} defaultType={"Weapon"} />
+                        <ItemIcon item={this.props.item} defaultType={"weapon"} />
                         <div className="item-data">
                             <h3 className="item-title"><FormattedMessage id={ItemUtility.itemTr(this.props.item, "name")} /> {ItemUtility.levelString(this.props.level)}</h3>
                             <div className="stat-data">
@@ -118,7 +118,7 @@ class Repeater extends React.Component {
                     <CellGroup
                         item={this.props.item}
                         cells={this.props.cells}
-                        defaultType={"Weapon"}
+                        defaultType={"weapon"}
                         onCellClicked={this.props.onCellClicked}
                         parent={this.props.parent} />
                 </div>
