@@ -23,15 +23,15 @@ power:
   14: 540
   15: 550
 perks:
-  - name: Knockout King
+  - name: Weighted Strikes
     value: 1
     from: 0
     to: 5
-  - name: Knockout King
+  - name: Weighted Strikes
     value: 2
     from: 6
     to: 9
-  - name: Knockout King
+  - name: Weighted Strikes
     value: 3
     from: 10
     to: 15
