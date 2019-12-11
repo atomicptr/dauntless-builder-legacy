@@ -30,7 +30,7 @@ export default class CellGroup extends React.Component {
             const cell = assignedCells[slotIndex];
 
             if(cell && cell[1]) {
-                isInSlot = cell[1].slot === slot;
+                isInSlot = cell[1].slot === slot || slot === "Prismatic";
             }
 
             if(isInSlot) {

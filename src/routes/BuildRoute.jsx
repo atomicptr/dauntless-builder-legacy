@@ -133,7 +133,7 @@ export default class BuildRoute extends React.Component {
     getCellsForKeys(keys) {
         return keys.reduce((cells, key) => {
             cells[key] = this.state.build[key] ? BuildModel.findCellByVariantName(this.state.build[key]) : {};
-            
+
             return cells;
         }, {});
     }
@@ -175,7 +175,7 @@ export default class BuildRoute extends React.Component {
                 changes.weapon_part4_name = "";
                 changes.weapon_part5_name = "";
             }
-            
+
             const changesKeys = [
                 "weapon_cell0",
                 "weapon_cell1"
@@ -187,7 +187,8 @@ export default class BuildRoute extends React.Component {
                 item.cells.forEach((slot, index) => {
                     const changesKey = changesKeys[index];
                     for (const cellKey in cells) {
-                        if (cells[cellKey] && cells[cellKey].slot === slot) {
+                        const isPrismaticInvolved = cells[cellKey].slot === "Prismatic" || slot === "Prismatic";
+                        if (cells[cellKey] && (cells[cellKey].slot === slot || isPrismaticInvolved)) {
                             changes[changesKey] = this.state.build[cellKey];
                             delete cells[cellKey];
                             break;

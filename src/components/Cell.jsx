@@ -15,16 +15,22 @@ export default class Cell extends React.Component {
     }
 
     onClicked() {
+        let filters = [
+            {
+                field: "slot",
+                value: this.props.type
+            }
+        ];
+
+        if (this.props.type === "Prismatic") {
+            filters = [];
+        }
+
         this.props.onCellClicked({
             __itemType: "Cell",
             __parentType: this.props.parentType,
             __slotPosition: this.props.slotPosition,
-            filters: [
-                {
-                    field: "slot",
-                    value: this.props.type
-                }
-            ]});
+            filters});
     }
 
     render() {
