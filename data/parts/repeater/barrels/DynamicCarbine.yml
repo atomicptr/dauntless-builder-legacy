@@ -20,5 +20,5 @@ power:
   14: 150
   15: 153
 part_effect:
-  - Teleport to a Behemoth, dealing Shock damage. Usable once, but resets on Behemoth kill.
+  - "Legendary Ability: Teleport to a Behemoth, dealing Shock damage. Usable once, but resets on Behemoth kill."
   - Shots and abilities deal shock damage.

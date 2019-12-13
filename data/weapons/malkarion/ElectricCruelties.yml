@@ -25,5 +25,5 @@ power:
 bond:
   elemental: Shock
 unique_effects:
-  - name: Legendary Ability
-    description: Teleport to a Behemoth, dealing Shock damage. Usable once, but resets on Behemoth kill.
+  - name: MalkarionLegendaryAbility
+    description: "Legendary Ability: Teleport to a Behemoth, dealing Shock damage. Usable once, but resets on Behemoth kill."
