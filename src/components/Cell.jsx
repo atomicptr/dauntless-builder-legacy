@@ -22,7 +22,7 @@ export default class Cell extends React.Component {
             }
         ];
 
-        if (this.props.type === "Prismatic") {
+        if (this.props.type === "Prismatic" || this.props.isPrismaticSlot) {
             filters = [];
         }
 
@@ -48,5 +48,6 @@ Cell.propTypes = {
     parentType: PropTypes.string,
     type: PropTypes.string,
     onCellClicked: PropTypes.func,
-    slotPosition: PropTypes.number
+    slotPosition: PropTypes.number,
+    isPrismaticSlot: PropTypes.bool
 };

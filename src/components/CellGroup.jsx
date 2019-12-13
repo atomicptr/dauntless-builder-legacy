@@ -43,7 +43,8 @@ export default class CellGroup extends React.Component {
                         key={"cell_" + (cellCounter++)}
                         type={assignedCells[slotIndex][1].slot}
                         variant={assignedCells[slotIndex][0]}
-                        cell={assignedCells[slotIndex][1]} />
+                        cell={assignedCells[slotIndex][1]}
+                        isPrismaticSlot={slot === "Prismatic"} />
                 );
             } else {
                 cells.push(
