@@ -1,0 +1,23 @@
+name: Grace
+description: Sprinting increases movespeed. At higher levels, converts increased movespeed to attack speed.
+type: Mobility
+key: [IncreasedMovementSpeed, IncreasedAttackSpeed]
+effects:
+  1:
+    description: [While sprinting, gain movespeed up to 5%, null]
+    value: [0.05, null]
+  2:
+    description: [While sprinting, gain movespeed up to 8%, null]
+    value: [0.08, null]
+  3:
+    description: [While sprinting, gain movespeed up to 11%, null]
+    value: [0.11, null]
+  4:
+    description: [While sprinting, gain movespeed up to 14%, "After sprinting, gain attack speed equal to Grace's bonus movespeed for 10 seconds"]
+    value: [0.14, 0.14]
+  5:
+    description: [While sprinting, gain movespeed up to 17%, "After sprinting, gain attack speed equal to Grace's bonus movespeed for 10 seconds"]
+    value: [0.17, 0.17]
+  6:
+    description: [While sprinting, gain movespeed up to 20%, "After sprinting, gain attack speed equal to Grace's bonus movespeed for 10 seconds"]
+    value: [0.2, 0.2]

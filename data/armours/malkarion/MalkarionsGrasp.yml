@@ -1,0 +1,37 @@
+name: Malkarion's Grasp
+description: Arms protection forged from Malkarion trophies.
+icon: /assets/icons/armours/malkarion/MalkarionsGrasp.png
+type: Arms
+strength: Radiant
+weakness: Terra
+cells: Technique
+resistance:
+  0: 25
+  1: 35
+  2: 45
+  3: 55
+  4: 65
+  5: 75
+  6: 85
+  7: 95
+  8: 105
+  9: 115
+  10: 125
+  11: 127.5
+  12: 130
+  13: 132.5
+  14: 135
+  15: 137.5
+perks:
+  - name: Predator
+    value: 1
+    from: 0
+    to: 5
+  - name: Predator
+    value: 2
+    from: 6
+    to: 9
+  - name: Predator
+    value: 3
+    from: 10
+    to: 15
