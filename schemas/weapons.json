@@ -132,6 +132,9 @@
                 "additionalProperties": false
             },
             "uniqueItems": true
+        },
+        "bond": {
+            "type": "object"
         }
     },
     "required": [
