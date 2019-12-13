@@ -426,6 +426,7 @@ export default class BuildRoute extends React.Component {
             title="Bond Weapon" defaultType="Weapon"
             item={BuildModel.findWeapon(this.state.build.bond_weapon_name)}
             level={this.state.build.weapon_level}
+            titlePrefix="Bond"
             simpleView={true}
             renderUniqueEffectsBeforeItem={true} />;
     }

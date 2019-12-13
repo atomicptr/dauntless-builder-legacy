@@ -84,7 +84,11 @@ export default class Item extends React.Component {
                 <div className="item-wrapper">
                     <div className={"item"+ (!hasCells ? " no-cells" : "")} title={this.props.item.description} onClick={() => this.onClicked()}>
                         <ItemIcon item={this.props.item} defaultType={this.props.defaultType} />
-                        <ItemData item={this.props.item} level={this.props.level} simpleView={this.props.simpleView} />
+                        <ItemData
+                            titlePrefix={this.props.titlePrefix}
+                            item={this.props.item}
+                            level={this.props.level}
+                            simpleView={this.props.simpleView} />
                     </div>
                     {cellGroup}
                 </div>
@@ -103,6 +107,7 @@ Item.propTypes = {
     level: PropTypes.number,
     onItemClicked: PropTypes.func,
     onCellClicked: PropTypes.oneOfType([PropTypes.func, PropTypes.any]),
+    titlePrefix: PropTypes.oneOfType([PropTypes.string, PropTypes.any]),
     simpleView: PropTypes.bool,
     renderUniqueEffectsBeforeItem: PropTypes.bool
 };

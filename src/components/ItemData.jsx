@@ -17,7 +17,9 @@ export default class ItemData extends React.Component {
             )
         } />;
 
-        let title = <h3 className="item-title">{this.props.item.name} {levelString}</h3>;
+        const titlePrefix = this.props.titlePrefix ? this.props.titlePrefix + ": " : null;
+
+        let title = <h3 className="item-title">{titlePrefix}{this.props.item.name} {levelString}</h3>;
 
         let stats = null;
 
@@ -65,7 +67,7 @@ export default class ItemData extends React.Component {
         }
 
         if (this.props.simpleView) {
-            title = <h3 className="item-title">{this.props.item.name}</h3>;
+            title = <h3 className="item-title">{titlePrefix}{this.props.item.name}</h3>;
             stats = perkElement;
         }
 
@@ -109,5 +111,6 @@ ItemData.propTypes = {
     item: PropTypeUtility.item(),
     level: PropTypes.number,
     renderCellLine: PropTypes.bool,
-    simpleView: PropTypes.bool
+    simpleView: PropTypes.bool,
+    titlePrefix: PropTypes.oneOfType([PropTypes.string, PropTypes.any])
 };
