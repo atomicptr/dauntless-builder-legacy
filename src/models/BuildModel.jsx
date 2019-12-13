@@ -14,7 +14,7 @@ export default class BuildModel {
         this.weapon_part2_name = "";
         this.weapon_part3_name = "";
         this.weapon_part4_name = "";
-        this.weapon_part5_name = "";
+        this.bond_weapon_name = "";
         this.weapon_part6_name = "";
         this.weapon_cell0 = "";
         this.weapon_cell1 = "";
@@ -57,7 +57,7 @@ export default class BuildModel {
             DataUtility.getPartId(weaponType, this.weapon_part2_name),
             DataUtility.getPartId(weaponType, this.weapon_part3_name),
             DataUtility.getPartId(weaponType, this.weapon_part4_name),
-            DataUtility.getPartId(weaponType, this.weapon_part5_name),
+            DataUtility.getWeaponId(this.bond_weapon_name),
             DataUtility.getPartId(weaponType, this.weapon_part6_name),
             DataUtility.getArmourId(this.head_name),
             this.head_level,
@@ -113,7 +113,8 @@ export default class BuildModel {
             weapon_part2_name: getString(partsType, idcounter++),
             weapon_part3_name: getString(partsType, idcounter++),
             weapon_part4_name: getString(partsType, idcounter++),
-            weapon_part5_name: getString(partsType, idcounter++),
+            // part 5 was unused and is now used for bond weapons
+            bond_weapon_name: getString("Weapons", idcounter++),
             weapon_part6_name: getString(partsType, idcounter++),
             head_name: getString("Armours", idcounter++),
             head_level: numbers[idcounter++],
@@ -147,7 +148,7 @@ export default class BuildModel {
             weapon_part2_name: numbers[7],
             weapon_part3_name: numbers[9],
             weapon_part4_name: numbers[11],
-            weapon_part5_name: numbers[13],
+            bond_weapon_name: numbers[13],
             weapon_part6_name: numbers[15],
             head_name: numbers[17],
             head_level: numbers[18],
@@ -251,7 +252,20 @@ export default class BuildModel {
             }
         };
 
+        let insertBondItemPerks = (itemName, itemLevel) => {
+            const item = BuildModel.findWeapon(itemName);
+
+            if(item) {
+                let itemPerks = BuildModel.getAvailablePerksByLevel(itemName, "Weapon", itemLevel);
+
+                for(let perk of itemPerks) {
+                    insertPerk(perk.name, perk.value);
+                }
+            }
+        };
+
         insertItemPerks(this.weapon_name, "Weapon", null, this.weapon_level);
+        insertBondItemPerks(this.bond_weapon_name, this.weapon_level);
         insertItemPerks(this.head_name, "Armour", "Head", this.head_level);
         insertItemPerks(this.torso_name, "Armour", "Torso", this.torso_level);
         insertItemPerks(this.arms_name, "Armour", "Arms", this.arms_level);
@@ -315,6 +329,40 @@ export default class BuildModel {
         return null;
     }
 
+    static findWeaponBondFilterRules(itemName) {
+        const weapon = BuildModel.findWeapon(itemName);
+
+        if (!weapon || !("bond" in weapon)) {
+            return null;
+        }
+
+        return weapon.bond;
+    }
+
+    static findItemsByMatchingFilter(itemType, filter) {
+        if (!filter) {
+            return [];
+        }
+
+        const items = DataUtility.data()[itemType.toLowerCase() + "s"];
+
+        const isFilterMatching = (item, filter) => {
+            for (let key of Object.keys(filter)) {
+                if (!(key in item)) {
+                    return false;
+                }
+
+                if (item[key] != filter[key]) {
+                    return false;
+                }
+            }
+
+            return true;
+        };
+
+        return Object.values(items).filter(item => isFilterMatching(item, filter));
+    }
+
     static getUniqueEffects(itemName, itemType) {
         const item = DataUtility.data()[itemType.toLowerCase() + "s"][itemName];
 
@@ -374,7 +422,7 @@ export default class BuildModel {
             weapon_part2_name: "",
             weapon_part3_name: "",
             weapon_part4_name: "",
-            weapon_part5_name: "",
+            bond_weapon_name: "",
             weapon_part6_name: "",
             weapon_cell0: "",
             weapon_cell1: "",

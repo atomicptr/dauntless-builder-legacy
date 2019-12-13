@@ -26,6 +26,7 @@ import RepeaterPartSelectModal from "../components/RepeaterPartSelectModal";
 import DarkModeToggle from "../components/DarkModeToggle";
 import WeaponPartSelectModal from "../components/WeaponPartSelectModal";
 import WeaponPart from "../components/WeaponPart";
+import BondSelectModal from "../components/BondSelectModal";
 
 const DAUNTLESS_BUILD_COLLECTION_BASEURL = "https://www.dauntless-build-collection.com/#/maintenance/create?hash=";
 
@@ -37,6 +38,7 @@ export default class BuildRoute extends React.Component {
         this.state = {
             ready: false,
             itemSelectModalOpen: false,
+            bondItemModalOpen: false,
             repeaterPartSelectModalOpen: false,
             weaponPartSelectModalOpen: false,
             modalData: {}
@@ -81,7 +83,7 @@ export default class BuildRoute extends React.Component {
     }
 
     dummyData() {
-        let build = BuildModel.empty()
+        let build = BuildModel.empty();
 
         // weapon
         build.weapon_name = "Brutality of Boreus";
@@ -151,13 +153,13 @@ export default class BuildRoute extends React.Component {
             changes.weapon_level = Math.min(level, ItemUtility.maxLevel("weapons", itemName));
             changes.weapon_cell0 = "";
             changes.weapon_cell1 = "";
+            changes.bond_weapon_name = "";
 
             if (!this.state.build.weapon || itemType !== this.state.build.weapon.type) {
                 changes.weapon_part1_name = "";
                 changes.weapon_part2_name = "";
                 changes.weapon_part3_name = "";
                 changes.weapon_part4_name = "";
-                changes.weapon_part5_name = "";
                 changes.weapon_part6_name = "";
             } else if(this.state.build.weapon.restrict_specials) {
                 changes.weapon_part1_name = "";
@@ -173,7 +175,7 @@ export default class BuildRoute extends React.Component {
                 changes.weapon_part2_name = "";
                 changes.weapon_part3_name = "";
                 changes.weapon_part4_name = "";
-                changes.weapon_part5_name = "";
+                changes.bond_weapon_name = "";
             }
 
             const changesKeys = [
@@ -325,6 +327,16 @@ export default class BuildRoute extends React.Component {
         this.onWeaponPartSelectModalClosed();
     }
 
+    onBondItemSelected(itemName) {
+        this.applyItemSelection({bond_weapon_name: itemName});
+        this.onBondItemModalClosed();
+    }
+
+    onBondItemModalClosed() {
+        this.onModalClosed();
+        this.setState({bondItemModalOpen: false, modalData: {}});
+    }
+
     renderWeapon() {
         const weapon = BuildModel.findWeapon(this.state.build.weapon_name);
 
@@ -367,12 +379,8 @@ export default class BuildRoute extends React.Component {
 
         let parts = [];
 
-        if (weaponHasParts("specials") && weapon.restrict_specials !== true) {
+        if (weaponHasParts("specials") && weapon.restrict_specials !== true && !ItemUtility.isRepeater(weapon)) {
             let slot = "weapon_part1_name";
-
-            if (ItemUtility.isRepeater(weapon)) {
-                slot = "weapon_part5_name";
-            }
 
             const part = BuildModel.findPart(weapon.type, "specials", this.state.build[slot]);
 
@@ -402,6 +410,25 @@ export default class BuildRoute extends React.Component {
         return parts;
     }
 
+    renderWeaponBond() {
+        if(BuildModel.findWeaponBondFilterRules(this.state.build.weapon_name) === null) {
+            return null;
+        }
+
+        const openBondItemModal = () => {
+            this.onModalOpen();
+            this.setState({bondItemModalOpen: true});
+        };
+
+        return <Item
+            parent={this}
+            onItemClicked={openBondItemModal}
+            title="Bond Weapon" defaultType="Weapon"
+            item={BuildModel.findWeapon(this.state.build.bond_weapon_name)}
+            level={this.state.build.weapon_level}
+            simpleView={true}
+            renderUniqueEffectsBeforeItem={true} />;
+    }
 
     getMetaTitle() {
         if(this.state.build.weapon_name) {
@@ -523,6 +550,7 @@ export default class BuildRoute extends React.Component {
             <div className="columns">
                 <div className="column is-two-thirds">
                     {this.renderWeapon()}
+                    {this.renderWeaponBond()}
                     {this.renderWeaponParts()}
 
                     <Item
@@ -594,6 +622,13 @@ export default class BuildRoute extends React.Component {
                 onSelected={this.onNewItemSelected.bind(this)}
                 onCanceled={this.onModalCanceled.bind(this)}
                 isOpen={this.state.itemSelectModalOpen} />
+            <BondSelectModal
+                weaponName={this.state.build.weapon_name}
+                level={this.state.build.weapon_level}
+                itemData={this.state.itemData}
+                onSelected={this.onBondItemSelected.bind(this)}
+                onCanceled={this.onBondItemModalClosed.bind(this)}
+                isOpen={this.state.bondItemModalOpen} />
             <RepeaterPartSelectModal
                 data={this.state.modalData}
                 itemData={this.state.itemData}

@@ -33,12 +33,13 @@ export default class ModalItemListItem extends React.Component {
         const item = this.props.item;
         const type = this.props.type;
         const level = this.getLevel();
+        const hideCells = this.props.hideCells === true;
 
         return <div className="item-title-wrapper">
             <div className="item-wrapper">
                 <div className="item" title={item.description} onClick={() => this.props.onSelected(type, item.name)}>
                     <ItemIcon item={item} defaultType={ItemUtility.itemType(this.props.item.type)} />
-                    <ItemData item={item} level={level} renderCellLine={true} />
+                    <ItemData item={item} level={level} renderCellLine={!hideCells} />
                 </div>
             </div>
         </div>;
@@ -49,5 +50,6 @@ ModalItemListItem.propTypes = {
     type: PropTypes.string,
     item: PropTypeUtility.item(),
     level: PropTypes.number,
+    hideCells: PropTypes.bool,
     onSelected: PropTypes.func
 };

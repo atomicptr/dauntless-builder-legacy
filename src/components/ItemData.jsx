@@ -17,6 +17,8 @@ export default class ItemData extends React.Component {
             )
         } />;
 
+        let title = <h3 className="item-title">{this.props.item.name} {levelString}</h3>;
+
         let stats = null;
 
         switch(ItemUtility.itemType(this.props.item.type)) {
@@ -62,6 +64,11 @@ export default class ItemData extends React.Component {
             }
         }
 
+        if (this.props.simpleView) {
+            title = <h3 className="item-title">{this.props.item.name}</h3>;
+            stats = perkElement;
+        }
+
         let cellLine = null;
 
         if(this.props.renderCellLine) {
@@ -69,7 +76,7 @@ export default class ItemData extends React.Component {
         }
 
         return <div className="item-data">
-            <h3 className="item-title">{this.props.item.name} {levelString}</h3>
+            {title}
             {stats}
             {cellLine}
         </div>;
@@ -101,5 +108,6 @@ export default class ItemData extends React.Component {
 ItemData.propTypes = {
     item: PropTypeUtility.item(),
     level: PropTypes.number,
-    renderCellLine: PropTypes.bool
+    renderCellLine: PropTypes.bool,
+    simpleView: PropTypes.bool
 };

@@ -65,23 +65,31 @@ export default class Item extends React.Component {
 
         const hasCells = this.props.item.cells && this.props.item.cells.length > 0;
 
+        const cellGroup = hasCells && !this.props.simpleView ?
+            <CellGroup
+                item={this.props.item}
+                cells={this.props.cells}
+                defaultType={this.props.defaultType}
+                onCellClicked={this.props.onCellClicked}
+                parent={this.props.parent} /> : null;
+
+        const ueElement = <UniqueEffects item={this.props.item} level={this.props.level} />;
+        const ueBefore = this.props.renderUniqueEffectsBeforeItem === true ? ueElement : null;
+        const ueAfter = this.props.renderUniqueEffectsBeforeItem !== true ? ueElement : null;
+
         return <React.Fragment>
+            {ueBefore}
             <div className="item-title-wrapper">
                 <h2 className="subtitle hidden-on-large-screens">{this.getItemType() + (this.props.item.type ? ` - ${this.props.item.type}` : "")}</h2>
                 <div className="item-wrapper">
                     <div className={"item"+ (!hasCells ? " no-cells" : "")} title={this.props.item.description} onClick={() => this.onClicked()}>
                         <ItemIcon item={this.props.item} defaultType={this.props.defaultType} />
-                        <ItemData item={this.props.item} level={this.props.level} />
+                        <ItemData item={this.props.item} level={this.props.level} simpleView={this.props.simpleView} />
                     </div>
-                    <CellGroup
-                        item={this.props.item}
-                        cells={this.props.cells}
-                        defaultType={this.props.defaultType}
-                        onCellClicked={this.props.onCellClicked}
-                        parent={this.props.parent} />
+                    {cellGroup}
                 </div>
             </div>
-            <UniqueEffects item={this.props.item} level={this.props.level} />
+            {ueAfter}
         </React.Fragment>;
     }
 }
@@ -90,9 +98,11 @@ Item.propTypes = {
     item: PropTypeUtility.item(),
     title: PropTypes.string,
     parent: PropTypes.object,
-    cells: PropTypes.array,
+    cells: PropTypes.oneOfType([PropTypes.array, PropTypes.any]),
     defaultType: PropTypes.string,
     level: PropTypes.number,
     onItemClicked: PropTypes.func,
-    onCellClicked: PropTypes.func
+    onCellClicked: PropTypes.oneOfType([PropTypes.func, PropTypes.any]),
+    simpleView: PropTypes.bool,
+    renderUniqueEffectsBeforeItem: PropTypes.bool
 };
