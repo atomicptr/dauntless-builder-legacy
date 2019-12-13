@@ -2,7 +2,7 @@ name: Malkarion's March
 description: Leg and foot protection forged from Malkarion trophies.
 icon: /assets/icons/armours/malkarion/MalkarionsMarch.png
 type: Legs
-strength: Radiant
+strength: Shock
 weakness: Terra
 cells: Technique
 resistance:

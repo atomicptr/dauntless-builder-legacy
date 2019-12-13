@@ -2,7 +2,7 @@ name: Malkarion's Grasp
 description: Arms protection forged from Malkarion trophies.
 icon: /assets/icons/armours/malkarion/MalkarionsGrasp.png
 type: Arms
-strength: Radiant
+strength: Shock
 weakness: Terra
 cells: Technique
 resistance:

@@ -2,7 +2,7 @@ name: Malkarion's Sight
 description: Head protection forged from Malkarion trophies.
 icon: /assets/icons/armours/malkarion/MalkarionsSight.png
 type: Head
-strength: Radiant
+strength: Shock
 weakness: Terra
 cells: Mobility
 resistance:

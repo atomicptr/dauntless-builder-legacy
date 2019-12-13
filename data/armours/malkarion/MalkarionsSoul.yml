@@ -2,7 +2,7 @@ name: Malkarion's Soul
 description: Torso protection forged from Malkarion trophies.
 icon: /assets/icons/armours/malkarion/MalkarionsSoul.png
 type: Torso
-strength: Radiant
+strength: Shock
 weakness: Terra
 cells: Technique
 resistance:
