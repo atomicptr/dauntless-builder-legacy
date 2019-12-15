@@ -22,7 +22,7 @@ export default class UniqueEffects extends React.Component {
                                 <strong>
                                     <FormattedMessage id={ItemUtility.itemTr(this.props.item, "name")} />
                                     {" "}
-                                    <FormattedMessage id={uniqueEffect.title || "builder.uniqueEffect"} />
+                                    <FormattedMessage id={uniqueEffect.title ? `builder.${uniqueEffect.title}` : "builder.uniqueEffect"} />
                                 </strong><br/>
                                 <FormattedMessage id={ItemUtility.itemTr(this.props.item, `${uniqueEffect.name}`, "description")} />
                             </div>

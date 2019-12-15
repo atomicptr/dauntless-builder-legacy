@@ -1,11 +1,14 @@
 {
     "weapon": "Weapon",
+    "bondWeapon": "Bond Weapon",
     "headArmour": "Head Armour",
     "torsoArmour": "Torso Armour",
     "armsArmour": "Arms Armour",
     "legsArmour": "Legs Armour",
     "lantern": "Lantern",
     "special": "Special",
+    "cell": "Cell",
+    "armour": "Armor",
     "mod": "Mod",
     "barrel": "Barrel",
     "chamber": "Chamber",
@@ -13,6 +16,7 @@
     "prism": "Prism",
     "perks": "Perks",
     "noItemSelected": "No <strong>{title}</strong> selected.",
+    "selectNoItem": "Select no <strong>{title}</strong>.",
     "clickToSelect": "Click here to select one.",
     "uniqueEffect": "unique effect: ",
     "hold": "Hold: ",
@@ -57,6 +61,7 @@
         "mobility": "Mobility",
         "power": "Power",
         "technique": "Technique",
-        "utility": "Utility"
+        "utility": "Utility",
+        "prismatic": "Prismatic"
     }
 }

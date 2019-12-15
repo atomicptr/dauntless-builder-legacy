@@ -59,7 +59,7 @@ class BuildRoute extends React.Component {
 
         if (BuildModel.version(buildData) === 2) {
             buildData = BuildModel.convertVersion2To3(buildData);
-            window.history.replaceState({}, "Dauntless Builder: " + buildData, "/b/" + buildData);
+            window.history.replaceState({}, "Dauntless Builder: " + buildData, "#/b/" + buildData);
         }
 
         this.loadBuild(buildData);
@@ -82,7 +82,7 @@ class BuildRoute extends React.Component {
     updateUrl() {
         const buildData = this.state.build.serialize();
 
-        window.history.replaceState({}, "Dauntless Builder: " + buildData, "/b/" + buildData);
+        window.history.replaceState({}, "Dauntless Builder: " + buildData, "#/b/" + buildData);
 
         this.setState({
             buildData
@@ -120,7 +120,7 @@ class BuildRoute extends React.Component {
     }
 
     onCopyToClipboard() {
-        console.log("Copied to clipboard:", window.location.origin + "/b/" + this.state.buildData);
+        console.log("Copied to clipboard:", window.location.origin + "#/b/" + this.state.buildData);
     }
 
     onModalOpen() {
@@ -445,7 +445,7 @@ class BuildRoute extends React.Component {
         return <Item
             parent={this}
             onItemClicked={openBondItemModal}
-            title="Bond Weapon" defaultType="Weapon"
+            title={this.tr("builder.bondWeapon")} defaultType="weapon"
             item={BuildModel.findWeapon(this.state.build.bond_weapon_name)}
             level={this.state.build.weapon_level}
             titlePrefix="Bond"
@@ -554,7 +554,7 @@ class BuildRoute extends React.Component {
                     </Link>
                 </div>
                 <div className="qa-right">
-                    <CopyToClipboard text={window.location.origin + "/b/" + this.state.buildData} refs="copyButton"  onCopy={() => this.onCopyToClipboard()}>
+                    <CopyToClipboard text={window.location.origin + "#/b/" + this.state.buildData} refs="copyButton"  onCopy={() => this.onCopyToClipboard()}>
                         <button className="button is-light" data-tip={tr("ui.copyToClipboard")}>
                             <i className="fas fa-copy"></i><span className="only-on-very-small">&nbsp;{tr("ui.copyToClipboard")}</span>
                             <ReactTooltip globalEventOff="click" place="top" type="dark" effect="solid" />

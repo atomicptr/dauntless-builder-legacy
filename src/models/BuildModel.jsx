@@ -115,7 +115,7 @@ export default class BuildModel {
             weapon_part3_name: getString(partsType, idcounter++),
             weapon_part4_name: getString(partsType, idcounter++),
             // part 5 was unused and is now used for bond weapons
-            bond_weapon_name: getString("Weapons", idcounter++),
+            bond_weapon_name: getString("weapons", idcounter++),
             weapon_part6_name: getString(partsType, idcounter++),
             head_name: getString("armours", idcounter++),
             head_level: numbers[idcounter++],
@@ -241,7 +241,7 @@ export default class BuildModel {
                     insertPerk(perk.name, perk.value);
                 }
 
-                if(itemType === "Weapon") {
+                if(itemType === "weapon") {
                     insertCellPerks(this.weaponCells);
                 } else {
                     const name = (specificItemType || itemType).toLowerCase();
@@ -257,7 +257,7 @@ export default class BuildModel {
             const item = BuildModel.findWeapon(itemName);
 
             if(item) {
-                let itemPerks = BuildModel.getAvailablePerksByLevel(itemName, "Weapon", itemLevel);
+                let itemPerks = BuildModel.getAvailablePerksByLevel(itemName, "weapon", itemLevel);
 
                 for(let perk of itemPerks) {
                     insertPerk(perk.name, perk.value);

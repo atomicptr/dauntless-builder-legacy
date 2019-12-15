@@ -152,6 +152,22 @@
       "name": "Masque de ronces",
       "description": "Une pièce d'armure de Slayer forgée avec trophées du Souverain des Ronces."
     },
+    "malkarionsGrasp": {
+      "name": "Étreinte du Malkarion",
+      "description": "Protection pour les bras et les mains forgées à partir de trophées de Malkarion."
+    },
+    "malkarionsMarch": {
+      "name": "Marche du Malkarion",
+      "description": "Protection pour les jambes et les pieds forgée à partir de trophées de Malkarion."
+    },
+    "malkarionsSight": {
+      "name": "Vue du Malkarion",
+      "description": "Protection pour la tête forgée à partir de trophées de Malkarion."
+    },
+    "malkarionsSoul": {
+      "name": "Âme du Malkarion",
+      "description": "Protection pour le torse forgée à partir de trophées de Malkarion."
+    },
     "shockingGaze": {
       "name": "Oeil électrifié",
       "description": "Protection pour la tête forgée à partir de trophées de Nayzaga."
@@ -426,6 +442,10 @@
     "1FleetFootedCell": "Cellule de sprint évasif +1",
     "2FleetFootedCell": "Cellule de sprint évasif +2",
     "3FleetFootedCell": "Cellule de sprint évasif +3",
+    "graceCell": "Cellule Grâce",
+    "1GraceCell": "Cellule Grâce +1",
+    "2GraceCell": "Cellule Grâce +2",
+    "3GraceCell": "Cellule Grâce +3",
     "nimbleCell": "Cellule d'évasion légère",
     "1NimbleCell": "Cellule d'évasion légère +1",
     "2NimbleCell": "Cellule d'évasion légère +2",
@@ -1283,6 +1303,42 @@
         ],
         "6": [
           "Après 10 secondes sans recevoir de dégât, gagnez un bouclier de santé de 100 points"
+        ]
+      }
+    },
+    "grace": {
+      "name": "Grâce",
+      "description": "Pendant le sprint, augmente la vitesse de déplacement jusqu'à 20%. Après un sprint, accorde de la vitesse d'attaque égale au bonus de vitesse de déplacement de Grâce pendant 10 secondes.",
+      "effects": {
+        "1": [
+          "Pendant le sprint",
+          "augmente la vitesse de déplacement jusqu'à 5%.",
+          " "
+        ],
+        "2": [
+          "Pendant le sprint",
+          "augmente la vitesse de déplacement jusqu'à 8%",
+          " "
+        ],
+        "3": [
+          "Pendant le sprint",
+          "augmente la vitesse de déplacement jusqu'à 11%",
+          " "
+        ],
+        "4": [
+          "Pendant le sprint",
+          "augmente la vitesse de déplacement jusqu'à 14%",
+          "Après un sprint, accorde de la vitesse d'attaque égale au bonus de vitesse de déplacement de Grâce pendant 10 secondes."
+        ],
+        "5": [
+          "Pendant le sprint",
+          "augmente la vitesse de déplacement jusqu'à 17%",
+          "Après un sprint, accorde de la vitesse d'attaque égale au bonus de vitesse de déplacement de Grâce pendant 10 secondes."
+        ],
+        "6": [
+          "Pendant le sprint",
+          "augmente la vitesse de déplacement jusqu'à 20%",
+          "Après un sprint, accorde de la vitesse d'attaque égale au bonus de vitesse de déplacement de Grâce pendant 10 secondes."
         ]
       }
     },
@@ -2722,6 +2778,54 @@
         "description": "Après 6 secondes sans infliger de dégât, les 2 prochaines attaques infligeront + 25% de dégâts"
       }
     },
+    "cyclonicFury": {
+      "name": "Fureur cyclonique",
+      "description": "Une épée légendaire forgée avec les trophées Malkarion.",
+      "malkarionLegendaryAbility0": {
+        "name": "MalkarionLegendaryAbility",
+        "description": "Capacité légendaire : Téléporte à un Behemoth, infligeant des dégats foudroyants. Utilisable une fois, mais se réinitialise lors de la mort d´un Béhémoth."
+      }
+    },
+    "electricCruelties": {
+      "name": "Cruauté éléctrique",
+      "description": "Une paire de chaînes-lames légendaires forgée avec les trophées Malkarion.",
+      "malkarionLegendaryAbility0": {
+        "name": "MalkarionLegendaryAbility",
+        "description": "Capacité légendaire : Téléporte à un Behemoth, infligeant des dégats foudroyants. Utilisable une fois, mais se réinitialise lors de la mort d´un Béhémoth."
+      }
+    },
+    "galvanicImpact": {
+      "name": "Impact galvanique",
+      "description": "Un marteau légendaire forgé avec les trophées Malkarion.",
+      "malkarionLegendaryAbility0": {
+        "name": "MalkarionLegendaryAbility",
+        "description": "Capacité légendaire : Téléporte à un Behemoth, infligeant des dégats foudroyants. Utilisable une fois, mais se réinitialise lors de la mort d´un Béhémoth."
+      }
+    },
+    "mystralCurrent": {
+      "name": "Courants de Mystral",
+      "description": "Cestes aethériques légendaires fabriqués à partir de trophées de Malkarion.",
+      "malkarionLegendaryAbility0": {
+        "name": "MalkarionLegendaryAbility",
+        "description": "Capacité légendaire : Téléporte à un Behemoth, infligeant des dégats foudroyants. Utilisable une fois, mais se réinitialise lors de la mort d´un Béhémoth."
+      }
+    },
+    "terminalVoltage": {
+      "name": "Tension terminale",
+      "description": "Une hache légendaire forgée avec les trophées Malkarion.",
+      "malkarionLegendaryAbility0": {
+        "name": "MalkarionLegendaryAbility",
+        "description": "Capacité légendaire : Téléporte à un Behemoth, infligeant des dégats foudroyants. Utilisable une fois, mais se réinitialise lors de la mort d´un Béhémoth."
+      }
+    },
+    "theConductor": {
+      "name": "Le Conducteur",
+      "description": "Une aéthérolance légendaire forgée avec les trophées Malkarion.",
+      "malkarionLegendaryAbility0": {
+        "name": "MalkarionLegendaryAbility",
+        "description": "Capacité légendaire : Téléporte à un Behemoth, infligeant des dégats foudroyants. Utilisable une fois, mais se réinitialise lors de la mort d´un Béhémoth."
+      }
+    },
     "nayzagasCharge": {
       "name": "Charge de Nayzaga",
       "description": "Un marteau de Slayer forgé à partir de trophées de Nayzaga.",
@@ -3766,6 +3870,13 @@
           "name": "Canon aubétoile",
           "partEffect": {
             "0": "Les tirs et capacités infligent des dégâts rayonnants"
+          }
+        },
+        "dynamicCarbine": {
+          "name": "Carabine dynamique",
+          "partEffect": {
+            "0": "Capacité légendaire: Téléporte à un Behemoth, infligeant des dégats foudroyants. Utilisable une fois, mais se réinitialise lors de la mort d´un Béhémoth.",
+            "1": "Les tirs et capacités infligent des dégâts foudroyants"
           }
         },
         "infernoBarrel": {

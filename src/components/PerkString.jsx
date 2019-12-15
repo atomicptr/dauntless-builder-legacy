@@ -10,7 +10,7 @@ export default class PerkString extends React.Component {
     render() {
         const perkList = this.props.perks.map((perk, index) => (
             <span key={perk.name} className="perk-string-items">
-                +{perk.value} <img src={"assets/icons/perks/" + Case.pascal(BuildModel.findPerkByName(perk.name).type) + ".png"} />
+                +{perk.value} <img src={"/assets/icons/perks/" + Case.pascal(BuildModel.findPerkByName(perk.name).type) + ".png"} />
                 {" "}
                 <FormattedMessage id={ItemUtility.getTr("perks", perk.name, "name")} />
                 {index !== this.props.perks.length - 1 ? ", " : ""}

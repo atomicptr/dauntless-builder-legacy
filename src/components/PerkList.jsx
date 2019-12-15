@@ -81,7 +81,7 @@ class PerkList extends React.Component {
         let perks = this.props.perks.map(perk =>
             <React.Fragment key={perk.name}>
                 <li className={this.getPerkLevelClass(perk.value)} data-tip data-for={"PerkTooltip-" + perk.name}>
-                    <img className="perk-icon" src={"assets/icons/perks/" +
+                    <img className="perk-icon" src={"/assets/icons/perks/" +
                         Case.pascal(BuildModel.findPerkByName(perk.name).type) + ".png"} />
                     <div className="perk-data-wrapper">
                         <div className="perk-title">+{perk.value} <FormattedMessage id={ItemUtility.getTr("perks", perk.name, "name")} /></div>

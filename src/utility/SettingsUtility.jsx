@@ -35,7 +35,6 @@ export default class SettingsUtility {
 
     static getLanguage() {
         const lang = SettingsUtility.get("language");
-        console.log("saved language:", lang);
         if (availableLanguages().includes(lang)) {
             return lang;
         }

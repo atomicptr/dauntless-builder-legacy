@@ -1,11 +1,14 @@
 {
     "weapon": "Arme",
+    "bondWeapon": "Lien",
     "headArmour": "Casque",
     "torsoArmour": "Torse",
     "armsArmour": "Gants",
     "legsArmour": "Grèves",
     "lantern": "Lanterne",
     "special": "Spécial",
+    "cell": "Cellule",
+    "armour": "Armure",
     "mod": "Mod",
     "barrel": "Canon",
     "chamber": "Chambre",
@@ -13,6 +16,7 @@
     "prism": "Prisme",
     "perks": "Effets",
     "noItemSelected": "Pas de <strong>{title}</strong> selectionné.",
+    "selectNoItem": "Pas de <strong>{title}</strong>.",
     "clickToSelect": "Cliquez ici pour en sélectionner un(e).",
     "uniqueEffect": "effet unique: ",
     "hold": "Maintenu: ",
@@ -57,6 +61,7 @@
         "mobility": "Mobilité",
         "power": "Puissance",
         "technique": "Technique",
-        "utility": "Utilitaire"
+        "utility": "Utilitaire",
+        "prismatic": "Prismatique"
     }
 }

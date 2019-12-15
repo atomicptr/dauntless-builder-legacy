@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 
 import Select from "react-select";
 
+import { FormattedHTMLMessage } from "react-intl";
+
 import Case from "case";
 
 import "react-select/dist/react-select.css";
@@ -434,7 +436,7 @@ class ItemSelectModal extends React.Component {
     }
 
     renderLevelPicker() {
-        if (!this.isType(["Weapon", "Armour"])) {
+        if (!this.isType(["weapon", "armour"])) {
             return null;
         }
 
@@ -478,7 +480,7 @@ class ItemSelectModal extends React.Component {
                                 className="button"
                                 onClick={() =>
                                     this.onItemSelected(this.props.data.filterOptions.__itemType, "")}>
-                                Select&nbsp;<strong>No {this.props.data.filterOptions.__itemType}</strong>.
+                                <FormattedHTMLMessage id="builder.selectNoItem" values={{title: this.tr(`builder.${this.props.data.filterOptions.__itemType}`)}} />
                             </button>
                             <button className="button" onClick={() => this.onClose()}>Cancel</button>
                         </div>

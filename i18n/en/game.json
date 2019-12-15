@@ -152,6 +152,22 @@
       "name": "Visage of Thorns",
       "description": "Head protection forged from Koshai trophies."
     },
+    "malkarionsGrasp": {
+      "name": "Malkarion's Grasp",
+      "description": "Arms protection forged from Malkarion trophies."
+    },
+    "malkarionsMarch": {
+      "name": "Malkarion's March",
+      "description": "Leg and foot protection forged from Malkarion trophies."
+    },
+    "malkarionsSight": {
+      "name": "Malkarion's Sight",
+      "description": "Head protection forged from Malkarion trophies."
+    },
+    "malkarionsSoul": {
+      "name": "Malkarion's Soul",
+      "description": "Torso protection forged from Malkarion trophies."
+    },
     "shockingGaze": {
       "name": "Shocking Gaze",
       "description": "Head protection forged from Nayzaga trophies."
@@ -426,6 +442,10 @@
     "1FleetFootedCell": "+1 Fleet Footed Cell",
     "2FleetFootedCell": "+2 Fleet Footed Cell",
     "3FleetFootedCell": "+3 Fleet Footed Cell",
+    "graceCell": "Grace Cell",
+    "1GraceCell": "+1 Grace Cell",
+    "2GraceCell": "+2 Grace Cell",
+    "3GraceCell": "+3 Grace Cell",
     "nimbleCell": "Nimble Cell",
     "1NimbleCell": "+1 Nimble Cell",
     "2NimbleCell": "+2 Nimble Cell",
@@ -1283,6 +1303,42 @@
         ],
         "6": [
           "Grants a 100 health shield after not getting hit for 10s"
+        ]
+      }
+    },
+    "grace": {
+      "name": "Grace",
+      "description": "Sprinting increases movespeed. At higher levels, converts increased movespeed to attack speed.",
+      "effects": {
+        "1": [
+          "While sprinting",
+          "gain movespeed up to 5%",
+          " "
+        ],
+        "2": [
+          "While sprinting",
+          "gain movespeed up to 8%",
+          " "
+        ],
+        "3": [
+          "While sprinting",
+          "gain movespeed up to 11%",
+          " "
+        ],
+        "4": [
+          "While sprinting",
+          "gain movespeed up to 14%",
+          "After sprinting, gain attack speed equal to Grace's bonus movespeed for 10 seconds"
+        ],
+        "5": [
+          "While sprinting",
+          "gain movespeed up to 17%",
+          "After sprinting, gain attack speed equal to Grace's bonus movespeed for 10 seconds"
+        ],
+        "6": [
+          "While sprinting",
+          "gain movespeed up to 20%",
+          "After sprinting, gain attack speed equal to Grace's bonus movespeed for 10 seconds"
         ]
       }
     },
@@ -2722,6 +2778,54 @@
         "description": "After not dealing damage for 6 seconds, the next 2 attacks deal 25% increased damage."
       }
     },
+    "cyclonicFury": {
+      "name": "Cyclonic Fury",
+      "description": "A Slayer's sword forged with Malkarion trophies.",
+      "malkarionLegendaryAbility0": {
+        "name": "MalkarionLegendaryAbility",
+        "description": "Legendary Ability: Teleport to a Behemoth, dealing Shock damage. Usable once, but resets on Behemoth kill."
+      }
+    },
+    "electricCruelties": {
+      "name": "Electric Cruelties",
+      "description": "A Slayer's chain blades forged with Malkarion trophies.",
+      "malkarionLegendaryAbility0": {
+        "name": "MalkarionLegendaryAbility",
+        "description": "Legendary Ability: Teleport to a Behemoth, dealing Shock damage. Usable once, but resets on Behemoth kill."
+      }
+    },
+    "galvanicImpact": {
+      "name": "Galvanic Impact",
+      "description": "A Slayer's hammer forged with Malkarion trophies.",
+      "malkarionLegendaryAbility0": {
+        "name": "MalkarionLegendaryAbility",
+        "description": "Legendary Ability: Teleport to a Behemoth, dealing Shock damage. Usable once, but resets on Behemoth kill."
+      }
+    },
+    "mistralCurrents": {
+      "name": "Mistral Currents",
+      "description": "A Slayer's aether strikers forged with Malkarion trophies.",
+      "malkarionLegendaryAbility0": {
+        "name": "MalkarionLegendaryAbility",
+        "description": "Legendary Ability: Teleport to a Behemoth, dealing Shock damage. Usable once, but resets on Behemoth kill."
+      }
+    },
+    "terminalVoltage": {
+      "name": "Terminal Voltage",
+      "description": "A Slayer's axe forged with Malkarion trophies.",
+      "malkarionLegendaryAbility0": {
+        "name": "MalkarionLegendaryAbility",
+        "description": "Legendary Ability: Teleport to a Behemoth, dealing Shock damage. Usable once, but resets on Behemoth kill."
+      }
+    },
+    "theConductor": {
+      "name": "The Conductor",
+      "description": "A Slayer's war pike forged with Malkarion trophies.",
+      "malkarionLegendaryAbility0": {
+        "name": "MalkarionLegendaryAbility",
+        "description": "Legendary Ability: Teleport to a Behemoth, dealing Shock damage. Usable once, but resets on Behemoth kill."
+      }
+    },
     "nayzagasCharge": {
       "name": "Nayzaga's Charge",
       "description": "A Slayer's hammer forged with Nayzaga trophies.",
@@ -3766,6 +3870,13 @@
           "name": "Dawnstar Barrel",
           "partEffect": {
             "0": "Shots and abilities deal radiant damage."
+          }
+        },
+        "dynamicCarbine": {
+          "name": "Dynamic Carbine",
+          "partEffect": {
+            "0": "Legendary Ability: Teleport to a Behemoth, dealing Shock damage. Usable once, but resets on Behemoth kill.",
+            "1": "Shots and abilities deal shock damage."
           }
         },
         "infernoBarrel": {

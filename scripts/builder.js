@@ -129,7 +129,7 @@ function build(path) {
                         type = "armours";
                     }
 
-                    tryInsertToStringMap(type, doc.name);
+                    tryInsertToStringMap(type, Case.camel(doc.name));
                 }
             }
 
