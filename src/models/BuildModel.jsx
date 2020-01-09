@@ -241,7 +241,7 @@ export default class BuildModel {
                     insertPerk(perk.name, perk.value);
                 }
 
-                if(itemType === "weapon") {
+                if(itemType === "Weapon") {
                     insertCellPerks(this.weaponCells);
                 } else {
                     const name = (specificItemType || itemType).toLowerCase();

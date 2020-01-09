@@ -6,24 +6,24 @@ damage: Blunt
 elemental: Shock
 cells: [Prismatic, Prismatic]
 power:
-  0: 100
-  1: 140
-  2: 180
-  3: 220
-  4: 260
-  5: 300
-  6: 340
-  7: 380
-  8: 420
-  9: 460
-  10: 500
-  11: 510
-  12: 520
-  13: 530
-  14: 540
-  15: 550
+    0: 100
+    1: 140
+    2: 180
+    3: 220
+    4: 260
+    5: 300
+    6: 340
+    7: 380
+    8: 420
+    9: 460
+    10: 500
+    11: 510
+    12: 520
+    13: 530
+    14: 540
+    15: 550
 bond:
-  elemental: Shock
+    elemental: Shock
 unique_effects:
-  - name: MalkarionLegendaryAbility
-    description: "Legendary Ability: Teleport to a Behemoth, dealing Shock damage. Usable once, but resets on Behemoth kill."
+    - name: MalkarionLegendaryAbility
+      description: "Legendary Ability: Teleport to a Behemoth, dealing Shock damage. Usable once, but resets on Behemoth kill."
