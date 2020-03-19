@@ -1,0 +1,31 @@
+name: Tectonic Faults
+description: A Slayer's aether strikers forged with Torgadoro trophies.
+icon: /assets/icons/weapons/torgadoro/TectonicFaults.png
+type: Aether Strikers
+damage: Blunt
+elemental: Blaze
+cells: [Prismatic, Prismatic]
+power:
+  0: 100
+  1: 140
+  2: 180
+  3: 220
+  4: 260
+  5: 300
+  6: 340
+  7: 380
+  8: 420
+  9: 460
+  10: 500
+  11: 510
+  12: 520
+  13: 530
+  14: 540
+  15: 550
+bond:
+  elemental: Blaze
+unique_effects:
+  - name: TorgadoroLegendaryAbility
+    description: |
+      Legendary Ability: Enter a rage, gaining new attacks for 15 seconds. Deals +25% damage when the target is below
+      50% health. Usable once, but resets on Behemoth kill.

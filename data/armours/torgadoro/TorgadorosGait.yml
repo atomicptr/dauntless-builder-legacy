@@ -1,0 +1,37 @@
+name: Torgadoro's Gait
+description: Leg and foot protection forged from Torgadoro trophies.
+icon: /assets/icons/armours/torgadoro/TorgadorosGait.png
+type: Legs
+strength: Blaze
+weakness: Frost
+cells: Power
+resistance:
+  0: 25
+  1: 35
+  2: 45
+  3: 55
+  4: 65
+  5: 75
+  6: 85
+  7: 95
+  8: 105
+  9: 115
+  10: 125
+  11: 127.5
+  12: 130
+  13: 132.5
+  14: 135
+  15: 137.5
+perks:
+  - name: Knockout King
+    value: 1
+    from: 0
+    to: 5
+  - name: Knockout King
+    value: 2
+    from: 6
+    to: 9
+  - name: Knockout King
+    value: 3
+    from: 10
+    to: 15
