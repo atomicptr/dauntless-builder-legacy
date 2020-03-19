@@ -37,18 +37,17 @@ perks:
     to: 15
 unique_effects:
   - name: FifthHitStaggerDamage
-    description: The fifth hit in a row deals +50% stagger damage
+    description: The fourth hit in a row deals +50% stagger damage
     value: 1.5
     from: 0
     to: 5
   - name: FifthHitStaggerDamage
-    description: The fifth hit in a row deals +100% stagger damage
+    description: The fourth hit in a row deals +100% stagger damage
     value: 2
     from: 6
     to: 9
   - name: FifthHitStaggerDamage
-    description: The fifth hit in a row deals +150% stagger damage
+    description: The fourth hit in a row deals +150% stagger damage
     value: 2.5
     from: 10
     to: 15
-    
