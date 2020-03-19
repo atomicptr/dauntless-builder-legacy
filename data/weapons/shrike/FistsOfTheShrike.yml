@@ -37,17 +37,17 @@ perks:
     to: 15
 unique_effects:
   - name: DodgePartDamage
-    description: +50 part damage on next hit after a dodge.
+    description: After dodging, your next attack deals +50 bonus damage and part damage
     value: 50
     from: 0
     to: 5
   - name: DodgePartDamage
-    description: +75 part damage on next hit after a dodge.
+    description: After dodging, your next attack deals +75 bonus damage and part damage
     value: 75
     from: 6
     to: 9
   - name: DodgePartDamage
-    description: +100 part damage on next hit after a dodge.
+    description: After dodging, your next attack deals +100 bonus damage and part damage
     value: 100
     from: 10
     to: 15
