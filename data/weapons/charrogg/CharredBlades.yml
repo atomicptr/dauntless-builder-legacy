@@ -35,3 +35,8 @@ perks:
     value: 3
     from: 10
     to: 15
+unique_effects:
+  - name: CharrogSpentStaminaFireDamage
+    description: |
+      After spending 200 stamina, next attack emits a cone of flame that deals +150 blaze damage to each
+      unique targets within the cone.
