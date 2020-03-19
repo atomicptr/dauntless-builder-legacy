@@ -45,15 +45,15 @@ unique_effects:
     to: 5
   - name: BoreusFrostSprite
     description: >-
-      Using Ammo generates a Frost Sprite that cause your next attack to deal 40 bonus damage
+      Using Ammo generates a Frost Sprite that cause your next attack to deal 45 bonus damage
       and minor frost damage. Max 4 Sprites. 
-    value: 40
+    value: 45
     from: 6
     to: 9
   - name: BoreusFrostSprite
     description: >-
-      Using Ammo generates a Frost Sprite that cause your next attack to deal 50 bonus damage
+      Using Ammo generates a Frost Sprite that cause your next attack to deal 60 bonus damage
       and minor frost damage. Max 4 Sprites. 
-    value: 50
+    value: 60
     from: 10
     to: 15

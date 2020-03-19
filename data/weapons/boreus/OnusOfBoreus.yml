@@ -46,14 +46,14 @@ unique_effects:
   - name: BoreusFrostSprite
     description: >-
       Using a Special continually generates Frost Sprites that cause your next attack to deal
-      40 bonus damage and minor frost damage. Max 4 Sprites.
-    value: 40
+      45 bonus damage and minor frost damage. Max 4 Sprites.
+    value: 45
     from: 6
     to: 9
   - name: BoreusFrostSprite
     description: >-
       Using a Special continually generates Frost Sprites that cause your next attack to deal
-      50 bonus damage and minor frost damage. Max 4 Sprites.
-    value: 50
+      60 bonus damage and minor frost damage. Max 4 Sprites.
+    value: 60
     from: 10
     to: 15

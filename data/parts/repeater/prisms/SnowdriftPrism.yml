@@ -21,4 +21,4 @@ power:
 part_effect:
   - > 
     The last 4 shots in your magazine generate a Frost Sprite that cause your next attack
-    to deal 50 bonus damage and minor frost damage. Max 4 Sprites.
+    to deal 60 bonus damage and minor frost damage. Max 4 Sprites.
