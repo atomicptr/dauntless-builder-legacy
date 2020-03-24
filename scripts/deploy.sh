@@ -7,7 +7,7 @@ rm -rf deploy
 mkdir deploy
 
 ### copy files and assets
-rsync -r assets/ deploy/assets/
+cp -r assets/ deploy/assets/
 mkdir -p deploy/dist/
 cp dist/*.js deploy/dist/
 cp *.html deploy/

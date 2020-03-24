@@ -20,6 +20,7 @@
         "flat": "^5.0.0",
         "hashids": "^1.1.4",
         "md5": "^2.2.1",
+        "object-assign-deep": "^0.4.0",
         "prop-types": "latest",
         "rc-slider": "^8.6.13",
         "react": "^16.4.0",

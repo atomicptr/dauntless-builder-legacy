@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,21 +10,40 @@
 
 <link rel="preload" href="/assets/bg.jpg" as="image" />
 
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" as="style" />
-<link rel="preload" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" as="style" />
+<link
+    rel="preload"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"
+    as="style"
+/>
+<link
+    rel="preload"
+    href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    as="style"
+/>
 
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+<link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"
+/>
 
 <section class="section">
     <div id="app"></div>
     <noscript>
-        <div class="notification is-info" style="max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;">
+        <div
+            class="notification is-info"
+            style="max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;"
+        >
             <h2 class="title">Dauntless Builder requires JavaScript.</h2>
             <p>
-                You have seem to have JavaScript disabled. Dauntless Builder is a modern web application
-                built on top of tons of JavaScript and is pretty much useless without it.
+                You have seem to have JavaScript disabled. Dauntless Builder is
+                a modern web application built on top of tons of JavaScript and
+                is pretty much useless without it.
             </p>
-            <img src="/assets/sadhoots.png" style="max-width: 300px; margin-top: 50px; margin-left: auto; margin-right: auto;" />
+            <img
+                src="/assets/sadhoots.png"
+                style="max-width: 300px; margin-top: 50px; margin-left: auto; margin-right: auto;"
+            />
         </div>
     </noscript>
 </section>
@@ -50,14 +69,18 @@
         var agent = window.navigator.userAgent,
             type = null;
 
-        if(agent.indexOf('MSIE') > 0) {
-            type = agent.indexOf('MSIE');
-            return parseInt(agent.substring(type+5, agent.indexOf('.', type)));
+        if (agent.indexOf("MSIE") > 0) {
+            type = agent.indexOf("MSIE");
+            return parseInt(
+                agent.substring(type + 5, agent.indexOf(".", type))
+            );
         }
 
-        if(agent.indexOf('Trident') > 0) {
-            type = agent.indexOf('rv:');
-            return parseInt(agent.substring(type+3, agent.indexOf('.', type)));
+        if (agent.indexOf("Trident") > 0) {
+            type = agent.indexOf("rv:");
+            return parseInt(
+                agent.substring(type + 3, agent.indexOf(".", type))
+            );
         }
 
         return false;
@@ -66,16 +89,16 @@
     // detect if user is using Internet Explorer and show them a warning.
     if (window.getIEVersion() !== false) {
         document.write(
-            "<div class=\"notification is-info\" style=\"max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;\">\n" +
-            "    <h2 class=\"title\">Dauntless Builder requires a modern web browser.</h2>\n" +
-            "        <p>\n" +
-            "            You seem to be using Internet Explorer, Dauntless Builder is a modern web application\n" +
-            "            built on top of technologies that require a modern web browser in order to function.\n" +
-            "            Please consider using this website with a browser like <a href=\"https://firefox.com\">Firefox</a>," +
-            "            <a href=\"https://www.google.com/chrome/\">Chrome</a> or anything else that supports modern web standards." +
-            "        </p>\n" +
-            "        <img src=\"/assets/sadhoots.png\" style=\"max-width: 300px; margin-top: 50px; margin-left: auto; margin-right: auto;\" />\n" +
-            "</div>"
+            '<div class="notification is-info" style="max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;">\n' +
+                '    <h2 class="title">Dauntless Builder requires a modern web browser.</h2>\n' +
+                "        <p>\n" +
+                "            You seem to be using Internet Explorer, Dauntless Builder is a modern web application\n" +
+                "            built on top of technologies that require a modern web browser in order to function.\n" +
+                '            Please consider using this website with a browser like <a href="https://firefox.com">Firefox</a>,' +
+                '            <a href="https://www.google.com/chrome/">Chrome</a> or anything else that supports modern web standards.' +
+                "        </p>\n" +
+                '        <img src="/assets/sadhoots.png" style="max-width: 300px; margin-top: 50px; margin-left: auto; margin-right: auto;" />\n' +
+                "</div>"
         );
     }
 </script>
@@ -83,7 +106,9 @@
 <script src="/dist/vendors-dauntless-builder.js"></script>
 <script src="/dist/dauntless-builder.js"></script>
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141842005-1"></script>
-<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-141842005-1")</script>
+<link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous"
+/>

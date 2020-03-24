@@ -367,6 +367,22 @@
         "greavesOfValour": {
             "name": "Grèves de Bravoure",
             "description": "Protection pour les jambes et les pieds forgée à partir de trophées de Valomyr."
+        },
+        "torgadorosApex": {
+            "name": "Suprématie du Torgadoro",
+            "description": "Protection pour la tête forgée à partir de trophées de Torgadoro"
+        },
+        "torgadorosBrawn": {
+            "name": "Muscles du Torgadoro",
+            "description": "Protection pour les bras et les mains forgées à partir de trophées de Torgadoro"
+        },
+        "torgadorosCore": {
+            "name": "Noyau du Torgadoro",
+            "description": "Protection pour le torse forgée à partir de trophées de Torgadoro"
+        },
+        "torgadorosGait": {
+            "name": "Allure du Torgadoro",
+            "description": "Protection pour les jambes et les pieds forgées à partir de trophées de Torgadoro"
         }
     },
     "cells": {
@@ -589,7 +605,11 @@
         "vampiricCell": "Cellule vampirique",
         "1VampiricCell": "Cellule vampirique +1",
         "2VampiricCell": "Cellule vampirique +2",
-        "3VampiricCell": "Cellule vampirique +3"
+        "3VampiricCell": "Cellule vampirique +3",
+        "zealCell": "Cellule zèle",
+        "1ZealCell": "Cellule zèle +1",
+        "2ZealCell": "Cellule zèle +2",
+        "3ZealCell": "Cellule zèle +3"
     },
     "lanterns": {
         "broadsidesLantern": {
@@ -746,48 +766,96 @@
             "name": "Chasse-aether",
             "description": "Augmente les dégâts contre les Behemoths chargés d'aether.",
             "effects": {
-                "1": ["+5% de dégâts contre les Behemoths chargés en aether"],
-                "2": ["+10% de dégâts contre les Behemoths chargés en aether"],
-                "3": ["+20% de dégâts contre les Behemoths chargés en aether"],
-                "4": ["+30% de dégâts contre les Behemoths chargés en aether"],
-                "5": ["+40% de dégâts contre les Behemoths chargés en aether"],
-                "6": ["+50% de dégâts contre les Behemoths chargés en aether"]
+                "1": [
+                    "+5% de dégâts contre les Behemoths chargés en aether"
+                ],
+                "2": [
+                    "+10% de dégâts contre les Behemoths chargés en aether"
+                ],
+                "3": [
+                    "+20% de dégâts contre les Behemoths chargés en aether"
+                ],
+                "4": [
+                    "+30% de dégâts contre les Behemoths chargés en aether"
+                ],
+                "5": [
+                    "+40% de dégâts contre les Behemoths chargés en aether"
+                ],
+                "6": [
+                    "+50% de dégâts contre les Behemoths chargés en aether"
+                ]
             }
         },
         "aethericAttunement": {
             "name": "Harmonisation aethérée",
             "description": "Augmentation en pourcentage de la charge de lanterne à chaque attaque.",
             "effects": {
-                "1": ["+10% de charge de lanterne provenant des attaques"],
-                "2": ["+15% de charge de lanterne provenant des attaques"],
-                "3": ["+20% de charge de lanterne provenant des attaques"],
-                "4": ["+30% de charge de lanterne provenant des attaques"],
-                "5": ["+40% de charge de lanterne provenant des attaques"],
-                "6": ["+50% de charge de lanterne provenant des attaques"]
+                "1": [
+                    "+10% de charge de lanterne provenant des attaques"
+                ],
+                "2": [
+                    "+15% de charge de lanterne provenant des attaques"
+                ],
+                "3": [
+                    "+20% de charge de lanterne provenant des attaques"
+                ],
+                "4": [
+                    "+30% de charge de lanterne provenant des attaques"
+                ],
+                "5": [
+                    "+40% de charge de lanterne provenant des attaques"
+                ],
+                "6": [
+                    "+50% de charge de lanterne provenant des attaques"
+                ]
             }
         },
         "aethericFrenzy": {
             "name": "Frénésie aethérée",
             "description": "Ajoute une quantité fixe à la charge de lanterne obtenue à chaque attaque.",
             "effects": {
-                "1": ["+3 points de charge de lanterne par coup"],
-                "2": ["+4 points de charge de lanterne par coup"],
-                "3": ["+5 points de charge de lanterne par coup"],
-                "4": ["+7.5 points de charge de lanterne par coup"],
-                "5": ["+10 points de charge de lanterne par coup"],
-                "6": ["+12.5 points de charge de lanterne par coup"]
+                "1": [
+                    "+3 points de charge de lanterne par coup"
+                ],
+                "2": [
+                    "+4 points de charge de lanterne par coup"
+                ],
+                "3": [
+                    "+5 points de charge de lanterne par coup"
+                ],
+                "4": [
+                    "+7.5 points de charge de lanterne par coup"
+                ],
+                "5": [
+                    "+10 points de charge de lanterne par coup"
+                ],
+                "6": [
+                    "+12.5 points de charge de lanterne par coup"
+                ]
             }
         },
         "agility": {
             "name": "Agilité",
             "description": "Réduit le coût en endurance des esquives.",
             "effects": {
-                "1": ["-10% au coût d'endurance des esquives"],
-                "2": ["-20% au coût d'endurance des esquives"],
-                "3": ["-30% au coût d'endurance des esquives"],
-                "4": ["-40% au coût d'endurance des esquives"],
-                "5": ["-55% au coût d'endurance des esquives"],
-                "6": ["-70% au coût d'endurance des esquives"]
+                "1": [
+                    "-10% au coût d'endurance des esquives"
+                ],
+                "2": [
+                    "-20% au coût d'endurance des esquives"
+                ],
+                "3": [
+                    "-30% au coût d'endurance des esquives"
+                ],
+                "4": [
+                    "-40% au coût d'endurance des esquives"
+                ],
+                "5": [
+                    "-55% au coût d'endurance des esquives"
+                ],
+                "6": [
+                    "-70% au coût d'endurance des esquives"
+                ]
             }
         },
         "assassinsVigour": {
@@ -818,9 +886,18 @@
             "name": "Barbelé",
             "description": "Ajoute une quandtité fixe de dégâts mutilants à chaque coup.",
             "effects": {
-                "1": ["+5 dégâts mutilants", " "],
-                "2": ["+10 dégâts mutilants", " "],
-                "3": ["+15 dégâts mutilants", " "],
+                "1": [
+                    "+5 dégâts mutilants",
+                    " "
+                ],
+                "2": [
+                    "+10 dégâts mutilants",
+                    " "
+                ],
+                "3": [
+                    "+15 dégâts mutilants",
+                    " "
+                ],
                 "4": [
                     "+20 dégâts mutilants",
                     "Après avoir esquivé une attaque, votre prochaine attaque inflige + 200 dégâts mutilants"
@@ -869,9 +946,18 @@
             "name": "Tempête de lames",
             "description": "Ajoute une quantité fixe de dégâts aux membres à chaque coup.",
             "effects": {
-                "1": ["+5 dégâts aux membres", " "],
-                "2": ["+10 dégâts aux membres", " "],
-                "3": ["+15 dégâts aux membres", " "],
+                "1": [
+                    "+5 dégâts aux membres",
+                    " "
+                ],
+                "2": [
+                    "+10 dégâts aux membres",
+                    " "
+                ],
+                "3": [
+                    "+15 dégâts aux membres",
+                    " "
+                ],
                 "4": [
                     "+20 dégâts aux membres",
                     "Après avoir esquivé une attaque, votre prochaine attaque inflige +200 dégâts aux membres."
@@ -898,7 +984,10 @@
                     "Réduit la durée de l'effet de statut « Blessé » de 80%",
                     " "
                 ],
-                "3": ["Immunité à l'effet de statut « Blessé »", " "],
+                "3": [
+                    "Immunité à l'effet de statut « Blessé »",
+                    " "
+                ],
                 "4": [
                     "Immunité à l'effet de statut « Blessé »",
                     "Réduit l'effet du statut « Hémorragie » de 50%"
@@ -917,12 +1006,24 @@
             "name": "Constitution",
             "description": "Augmente La régénération d'endurance.",
             "effects": {
-                "1": ["+5 à la régénération d'endurance"],
-                "2": ["+10 à la régénération d'endurance"],
-                "3": ["+15 à la régénération d'endurance"],
-                "4": ["+20 à la régénération d'endurance"],
-                "5": ["+25 à la régénération d'endurance"],
-                "6": ["+30 à la régénération d'endurance"]
+                "1": [
+                    "+5 à la régénération d'endurance"
+                ],
+                "2": [
+                    "+10 à la régénération d'endurance"
+                ],
+                "3": [
+                    "+15 à la régénération d'endurance"
+                ],
+                "4": [
+                    "+20 à la régénération d'endurance"
+                ],
+                "5": [
+                    "+25 à la régénération d'endurance"
+                ],
+                "6": [
+                    "+30 à la régénération d'endurance"
+                ]
             }
         },
         "conduit": {
@@ -953,9 +1054,15 @@
             "name": "Frappe critique",
             "description": "Donne une chance de doubler les dégâts infligés.",
             "effects": {
-                "1": ["+2% de chance de coup critique."],
-                "2": ["+3% de chance de coup critique."],
-                "3": ["+4% de chance de coup critique."],
+                "1": [
+                    "+2% de chance de coup critique."
+                ],
+                "2": [
+                    "+3% de chance de coup critique."
+                ],
+                "3": [
+                    "+4% de chance de coup critique."
+                ],
                 "4": [
                     "+5% de chance de coup critique. +10% de dégâts des coups critiques."
                 ],
@@ -1025,24 +1132,48 @@
             "name": "Endurance",
             "description": "Augmente l'endurance maximale.",
             "effects": {
-                "1": [" Augmente l'endurance maximale de 10."],
-                "2": [" Augmente l'endurance maximale de 20."],
-                "3": [" Augmente l'endurance maximale de 40."],
-                "4": [" Augmente l'endurance maximale de 60."],
-                "5": [" Augmente l'endurance maximale de 80."],
-                "6": [" Augmente l'endurance maximale de 100."]
+                "1": [
+                    " Augmente l'endurance maximale de 10."
+                ],
+                "2": [
+                    " Augmente l'endurance maximale de 20."
+                ],
+                "3": [
+                    " Augmente l'endurance maximale de 40."
+                ],
+                "4": [
+                    " Augmente l'endurance maximale de 60."
+                ],
+                "5": [
+                    " Augmente l'endurance maximale de 80."
+                ],
+                "6": [
+                    " Augmente l'endurance maximale de 100."
+                ]
             }
         },
         "energized": {
             "name": "Charge",
             "description": "Augmente la vitesse de charge de la jauge de l'arme.",
             "effects": {
-                "1": ["+10% de vitesse de charge de la jauge de l'arme."],
-                "2": ["+15% de vitesse de charge de la jauge de l'arme."],
-                "3": ["+20% de vitesse de charge de la jauge de l'arme."],
-                "4": ["+25% de vitesse de charge de la jauge de l'arme."],
-                "5": ["+30% de vitesse de charge de la jauge de l'arme."],
-                "6": ["+40% de vitesse de charge de la jauge de l'arme."]
+                "1": [
+                    "+10% de vitesse de charge de la jauge de l'arme."
+                ],
+                "2": [
+                    "+15% de vitesse de charge de la jauge de l'arme."
+                ],
+                "3": [
+                    "+20% de vitesse de charge de la jauge de l'arme."
+                ],
+                "4": [
+                    "+25% de vitesse de charge de la jauge de l'arme."
+                ],
+                "5": [
+                    "+30% de vitesse de charge de la jauge de l'arme."
+                ],
+                "6": [
+                    "+40% de vitesse de charge de la jauge de l'arme."
+                ]
             }
         },
         "engineer": {
@@ -1127,12 +1258,24 @@
             "name": "Ignifuge",
             "description": "Vous empêche de prendre feu.",
             "effects": {
-                "1": ["Réduit la durée de l'effet de statut « En feu » de 10%"],
-                "2": ["Réduit la durée de l'effet de statut « En feu » de 20%"],
-                "3": ["Réduit la durée de l'effet de statut « En feu » de 40%"],
-                "4": ["Réduit la durée de l'effet de statut « En feu » de 60%"],
-                "5": ["Réduit la durée de l'effet de statut « En feu » de 80%"],
-                "6": ["Vous ne pouvez pas prendre feu."]
+                "1": [
+                    "Réduit la durée de l'effet de statut « En feu » de 10%"
+                ],
+                "2": [
+                    "Réduit la durée de l'effet de statut « En feu » de 20%"
+                ],
+                "3": [
+                    "Réduit la durée de l'effet de statut « En feu » de 40%"
+                ],
+                "4": [
+                    "Réduit la durée de l'effet de statut « En feu » de 60%"
+                ],
+                "5": [
+                    "Réduit la durée de l'effet de statut « En feu » de 80%"
+                ],
+                "6": [
+                    "Vous ne pouvez pas prendre feu."
+                ]
             }
         },
         "fleetFooted": {
@@ -1307,9 +1450,18 @@
             "name": "Assommoir",
             "description": "Augmentation en pourcentage des dégâts étourdissants.",
             "effects": {
-                "1": ["+5% de dégâts étourdissants", " "],
-                "2": ["+10% de dégâts étourdissants", " "],
-                "3": ["+15% de dégâts étourdissants", " "],
+                "1": [
+                    "+5% de dégâts étourdissants",
+                    " "
+                ],
+                "2": [
+                    "+10% de dégâts étourdissants",
+                    " "
+                ],
+                "3": [
+                    "+15% de dégâts étourdissants",
+                    " "
+                ],
                 "4": [
                     "+20% de dégâts étourdissants",
                     "Après avoir esquivé une attaque, votre prochaine attaque inflige + 50% de dégâts étourdissants"
@@ -1484,12 +1636,24 @@
             "name": "Évasion légère",
             "description": "Restaure de l'endurance après une esquive parfaite.",
             "effects": {
-                "1": ["Après avoir esquivé une attaque, gagnez + 10 endurance"],
-                "2": ["Après avoir esquivé une attaque, gagnez + 15 endurance"],
-                "3": ["Après avoir esquivé une attaque, gagnez + 20 endurance"],
-                "4": ["Après avoir esquivé une attaque, gagnez + 25 endurance"],
-                "5": ["Après avoir esquivé une attaque, gagnez + 30 endurance"],
-                "6": ["Après avoir esquivé une attaque, gagnez + 35 endurance"]
+                "1": [
+                    "Après avoir esquivé une attaque, gagnez + 10 endurance"
+                ],
+                "2": [
+                    "Après avoir esquivé une attaque, gagnez + 15 endurance"
+                ],
+                "3": [
+                    "Après avoir esquivé une attaque, gagnez + 20 endurance"
+                ],
+                "4": [
+                    "Après avoir esquivé une attaque, gagnez + 25 endurance"
+                ],
+                "5": [
+                    "Après avoir esquivé une attaque, gagnez + 30 endurance"
+                ],
+                "6": [
+                    "Après avoir esquivé une attaque, gagnez + 35 endurance"
+                ]
             }
         },
         "nineLives": {
@@ -1526,12 +1690,24 @@
             "name": "Domination",
             "description": "Augmente les dégâts contre les Behemoths étourdis.",
             "effects": {
-                "1": ["+10% de dégâts contre les Behemoths étourdis"],
-                "2": ["+20% de dégâts contre les Behemoths étourdis"],
-                "3": ["+30% de dégâts contre les Behemoths étourdis"],
-                "4": ["+40% de dégâts contre les Behemoths étourdis"],
-                "5": ["+50% de dégâts contre les Behemoths étourdis"],
-                "6": ["+60% de dégâts contre les Behemoths étourdis"]
+                "1": [
+                    "+10% de dégâts contre les Behemoths étourdis"
+                ],
+                "2": [
+                    "+20% de dégâts contre les Behemoths étourdis"
+                ],
+                "3": [
+                    "+30% de dégâts contre les Behemoths étourdis"
+                ],
+                "4": [
+                    "+40% de dégâts contre les Behemoths étourdis"
+                ],
+                "5": [
+                    "+50% de dégâts contre les Behemoths étourdis"
+                ],
+                "6": [
+                    "+60% de dégâts contre les Behemoths étourdis"
+                ]
             }
         },
         "pacifier": {
@@ -1610,33 +1786,66 @@
             "name": "Chasse-rage",
             "description": "Augmente les dégâts contre les Behemoths enragés.",
             "effects": {
-                "1": ["+5% de dégâts contre les Behemoths enragés"],
-                "2": ["+10% de dégâts contre les Behemoths enragés"],
-                "3": ["+15% de dégâts contre les Behemoths enragés"],
-                "4": ["+20% de dégâts contre les Behemoths enragés"],
-                "5": ["+30% de dégâts contre les Behemoths enragés"],
-                "6": ["+40% de dégâts contre les Behemoths enragés"]
+                "1": [
+                    "+5% de dégâts contre les Behemoths enragés"
+                ],
+                "2": [
+                    "+10% de dégâts contre les Behemoths enragés"
+                ],
+                "3": [
+                    "+15% de dégâts contre les Behemoths enragés"
+                ],
+                "4": [
+                    "+20% de dégâts contre les Behemoths enragés"
+                ],
+                "5": [
+                    "+30% de dégâts contre les Behemoths enragés"
+                ],
+                "6": [
+                    "+40% de dégâts contre les Behemoths enragés"
+                ]
             }
         },
         "savagery": {
             "name": "Sauvagerie",
             "description": "Augmente les dégâts contre les membres mutilés.",
             "effects": {
-                "1": ["+20% de dégâts contre les membres mutilés"],
-                "2": ["+30% de dégâts contre les membres mutilés"],
-                "3": ["+40% de dégâts contre les membres mutilés"],
-                "4": ["+60% de dégâts contre les membres mutilés"],
-                "5": ["+80% de dégâts contre les membres mutilés"],
-                "6": ["+100% de dégâts contre les membres mutilés"]
+                "1": [
+                    "+20% de dégâts contre les membres mutilés"
+                ],
+                "2": [
+                    "+30% de dégâts contre les membres mutilés"
+                ],
+                "3": [
+                    "+40% de dégâts contre les membres mutilés"
+                ],
+                "4": [
+                    "+60% de dégâts contre les membres mutilés"
+                ],
+                "5": [
+                    "+80% de dégâts contre les membres mutilés"
+                ],
+                "6": [
+                    "+100% de dégâts contre les membres mutilés"
+                ]
             }
         },
         "sharpened": {
             "name": "Aiguisé",
             "description": "Augmentation en pourcentage des dégâts aux membres.",
             "effects": {
-                "1": ["+5% de dégâts aux membres.", " "],
-                "2": ["+10% de dégâts aux membres.", " "],
-                "3": ["+15% de dégâts aux membres.", " "],
+                "1": [
+                    "+5% de dégâts aux membres.",
+                    " "
+                ],
+                "2": [
+                    "+10% de dégâts aux membres.",
+                    " "
+                ],
+                "3": [
+                    "+15% de dégâts aux membres.",
+                    " "
+                ],
                 "4": [
                     "+20% de dégâts aux membres.",
                     "Après une esquive parfaite les dégâts aux membres de la prochaine attaque sont augmentés de 50%"
@@ -1655,11 +1864,21 @@
             "name": "Résilience",
             "description": "Protège contre les explosions et l'effet de statut « Concussion ».",
             "effects": {
-                "1": ["Réduit les dégâts des concussions et leur durée de 10%"],
-                "2": ["Réduit les dégâts des concussions et leur durée de 20%"],
-                "3": ["Réduit les dégâts des concussions et leur durée de 40%"],
-                "4": ["Réduit les dégâts des concussions et leur durée de 60%"],
-                "5": ["Réduit les dégâts des concussions et leur durée de 80%"],
+                "1": [
+                    "Réduit les dégâts des concussions et leur durée de 10%"
+                ],
+                "2": [
+                    "Réduit les dégâts des concussions et leur durée de 20%"
+                ],
+                "3": [
+                    "Réduit les dégâts des concussions et leur durée de 40%"
+                ],
+                "4": [
+                    "Réduit les dégâts des concussions et leur durée de 60%"
+                ],
+                "5": [
+                    "Réduit les dégâts des concussions et leur durée de 80%"
+                ],
                 "6": [
                     "Immunité aux dégâts d'explosion et à l'effet de statut « Concussion »"
                 ]
@@ -1759,10 +1978,18 @@
                 "2": [
                     "Empêche les déstabilisations (100 secondes de recharge)"
                 ],
-                "3": ["Empêche les déstabilisations (80 secondes de recharge)"],
-                "4": ["Empêche les déstabilisations (60 secondes de recharge)"],
-                "5": ["Empêche les déstabilisations (40 secondes de recharge)"],
-                "6": ["Empêche les déstabilisations (15 secondes de recharge)"]
+                "3": [
+                    "Empêche les déstabilisations (80 secondes de recharge)"
+                ],
+                "4": [
+                    "Empêche les déstabilisations (60 secondes de recharge)"
+                ],
+                "5": [
+                    "Empêche les déstabilisations (40 secondes de recharge)"
+                ],
+                "6": [
+                    "Empêche les déstabilisations (15 secondes de recharge)"
+                ]
             }
         },
         "swift": {
@@ -1855,7 +2082,10 @@
                     "Réduit la durée de l'effet de statut « Gelé » de 60%",
                     " "
                 ],
-                "3": ["Immunité à l'effet de statut « Gelé »", " "],
+                "3": [
+                    "Immunité à l'effet de statut « Gelé »",
+                    " "
+                ],
                 "4": [
                     "Immunité à l'effet de statut « Gelé »",
                     "Réduit la durée de l'effet de statut « Ralenti » de 30%."
@@ -1874,9 +2104,21 @@
             "name": "Frappes Lourdes",
             "description": "Ajoute une quantité fixe de dégats etourdissants à chaque coup. Les rangs supérieurs permettent aux armes d'imterrompe les Behemoths.",
             "effects": {
-                "1": ["+5 dégâts étourdissants.", " ", " "],
-                "2": ["+10 dégâts étourdissants", " ", " "],
-                "3": ["+15 dégâts étourdissants", " ", " "],
+                "1": [
+                    "+5 dégâts étourdissants.",
+                    " ",
+                    " "
+                ],
+                "2": [
+                    "+10 dégâts étourdissants",
+                    " ",
+                    " "
+                ],
+                "3": [
+                    "+15 dégâts étourdissants",
+                    " ",
+                    " "
+                ],
                 "4": [
                     "+20 dégâts étourdissants",
                     "Après avoir esquivé une attaque, votre prochaine attaque inflige +200 dégâts étourdissants.",
@@ -1915,6 +2157,30 @@
                 ],
                 "6": [
                     "En dessous de 50% de santé, confère 20% de vitesse d'attaque"
+                ]
+            }
+        },
+        "zeal": {
+            "name": "Zèle",
+            "description": "Améliore l'efficacité des capacités instantanées de laterne.",
+            "effects": {
+                "1": [
+                    "+15% d'efficacité de la capacité instantanée de lanterne"
+                ],
+                "2": [
+                    "+25% d'efficacité de la capacité instantanée de lanterne"
+                ],
+                "3": [
+                    "+35% d'efficacité de la capacité instantanée de lanterne"
+                ],
+                "4": [
+                    "+45% d'efficacité de la capacité instantanée de lanterne"
+                ],
+                "5": [
+                    "+55% d'efficacité de la capacité instantanée de lanterne"
+                ],
+                "6": [
+                    "+65% d'efficacité de la capacité instantanée de lanterne"
                 ]
             }
         }
@@ -2018,27 +2284,51 @@
         },
         "charredBlades": {
             "name": "Lames charrbonisées",
-            "description": "Une paire de chaînes-lames de Slayer forgée à partir de trophées de Charrogg."
+            "description": "Une paire de chaînes-lames de Slayer forgée à partir de trophées de Charrogg.",
+            "charrogSpentStaminaFireDamage0": {
+                "name": "CharrogSpentStaminaFireDamage",
+                "description": "Après avoir dépensé 200 d'endurance la prochaine attaque émet un cône de flammes qui inflige +200 dégâts incansdescents à chaque\ncible unique dans le cône. \n"
+            }
         },
         "charredCleaver": {
             "name": "Hachoir charrbonisé",
-            "description": "Une hache de Slayer forgée à partir de trophées de Charrogg."
+            "description": "Une hache de Slayer forgée à partir de trophées de Charrogg.",
+            "charrogSpentStaminaFireDamage0": {
+                "name": "CharrogSpentStaminaFireDamage",
+                "description": "Après avoir dépensé 150 d'endurance la prochaine attaque émet un cône de flammes qui inflige +200 dégâts incansdescents à chaque\ncible unique dans le cône. \n"
+            }
         },
         "charredCrusher": {
             "name": "Broyeur charrbonisé",
-            "description": "Un marteau de Slayer forgé à partir de trophées de Charrogg."
+            "description": "Un marteau de Slayer forgé à partir de trophées de Charrogg.",
+            "charrogSpentStaminaFireDamage0": {
+                "name": "CharrogSpentStaminaFireDamage",
+                "description": "Après avoir dépensé 150 d'endurance la prochaine attaque émet un cône de flammes qui inflige +200 dégâts incansdescents à chaque\ncible unique dans le cône. \n"
+            }
         },
         "charredHands": {
             "name": "Mains carbonisées",
-            "description": "Cestes aethériques de Slayers fabriqués à partir de trophées de Charrogg."
+            "description": "Cestes aethériques de Slayers fabriqués à partir de trophées de Charrogg.",
+            "charrogSpentStaminaFireDamage0": {
+                "name": "CharrogSpentStaminaFireDamage",
+                "description": "Après avoir dépensé 150 d'endurance la prochaine attaque émet un cône de flammes qui inflige +200 dégâts incansdescents à chaque\ncible unique dans le cône. \n"
+            }
         },
         "charredSaber": {
             "name": "Sabre charrbonisé",
-            "description": "Une épée de Slayer forgée à partir de trophées de Charrogg."
+            "description": "Une épée de Slayer forgée à partir de trophées de Charrogg.",
+            "charrogSpentStaminaFireDamage0": {
+                "name": "CharrogSpentStaminaFireDamage",
+                "description": "Après avoir dépensé 200 d'endurance la prochaine attaque émet un cône de flammes qui inflige +200 dégâts incansdescents à chaque\ncible unique dans le cône. \n"
+            }
         },
         "charredSpear": {
             "name": "Lance charrbonisée",
-            "description": "Une aetherolance de Slayer forgée à partir de trophées de Charrogg."
+            "description": "Une aetherolance de Slayer forgée à partir de trophées de Charrogg.",
+            "charrogSpentStaminaFireDamage0": {
+                "name": "CharrogSpentStaminaFireDamage",
+                "description": "Après avoir dépensé 175 d'endurance la prochaine attaque émet un cône de flammes qui inflige +200 dégâts incansdescents à chaque\ncible unique dans le cône. \n"
+            }
         },
         "moltenEdict": {
             "name": "Jugement de Vulrrogg",
@@ -3435,6 +3725,54 @@
                 "name": "ValomyrCharge",
                 "description": "Une fois chargée, votre prochaine attaque infligera + 550 dégâts rayonnants. La vitesse de charge augmente en fonction de la santé actuelle"
             }
+        },
+        "incineratorsSong": {
+            "name": "Litanie de l'incinérateur",
+            "description": "Une hache de Slayer forgée à partir de trophées de Torgadoro",
+            "torgadoroLegendaryAbility0": {
+                "name": "TorgadoroLegendaryAbility",
+                "description": "Capacité légendaire : utilisez [G] pour entrer en rage, gagnant de nouvelles attaques pour 15 secondes. Infligez +25% de dégats lorsque la cible est en dessous de 50% de vie. Utilisable une fois, mais se réinitialise lors de la mort d'un Behemoth.\n"
+            }
+        },
+        "magmaQuake": {
+            "name": "Séisme magmatique",
+            "description": "Un marteau de Slayer forgée à partir de trophées de Torgadoro",
+            "torgadoroLegendaryAbility0": {
+                "name": "TorgadoroLegendaryAbility",
+                "description": "Capacité légendaire : utilisez [G] pour entrer en rage, gagnant de nouvelles attaques pour 15 secondes. Infligez +25% de dégats lorsque la cible est en dessous de 50% de vie. Utilisable une fois, mais se réinitialise lors de la mort d'un Behemoth.\n"
+            }
+        },
+        "pyroclasticEnvoy": {
+            "name": " Émissaie pyroclastique",
+            "description": "Une aetherolance de Slayer forgée à partir de trophées de Torgadoro",
+            "torgadoroLegendaryAbility0": {
+                "name": "TorgadoroLegendaryAbility",
+                "description": "Capacité légendaire : utilisez [G] pour entrer en rage, gagnant de nouvelles attaques pour 15 secondes. Infligez +25% de dégats lorsque la cible est en dessous de 50% de vie. Utilisable une fois, mais se réinitialise lors de la mort d'un Behemoth.\n"
+            }
+        },
+        "scorchingAgonies": {
+            "name": "Agonies brûlantes",
+            "description": "Une paire de chaînes-lames de Slayer forgée à partir de trophées de Torgadoro",
+            "torgadoroLegendaryAbility0": {
+                "name": "TorgadoroLegendaryAbility",
+                "description": "Capacité légendaire : utilisez [G] pour entrer en rage, gagnant de nouvelles attaques pour 15 secondes. Infligez +25% de dégats lorsque la cible est en dessous de 50% de vie. Utilisable une fois, mais se réinitialise lors de la mort d'un Behemoth.\n"
+            }
+        },
+        "tectonicFaults": {
+            "name": "Failles tectoniques",
+            "description": "Cestes aethériques de Slayer forgée à partir de trophées de Torgadoro",
+            "torgadoroLegendaryAbility0": {
+                "name": "TorgadoroLegendaryAbility",
+                "description": "Capacité légendaire : utilisez [G] pour entrer en rage, gagnant de nouvelles attaques pour 15 secondes. Infligez +25% de dégats lorsque la cible est en dessous de 50% de vie. Utilisable une fois, mais se réinitialise lors de la mort d'un Behemoth.\n"
+            }
+        },
+        "theCauterizer": {
+            "name": "Le Cautériseur",
+            "description": "Une épée de Slayer forgée à partir de trophées de Torgadoro",
+            "torgadoroLegendaryAbility0": {
+                "name": "TorgadoroLegendaryAbility",
+                "description": "Capacité légendaire : utilisez [G] pour entrer en rage, gagnant de nouvelles attaques pour 15 secondes. Infligez +25% de dégats lorsque la cible est en dessous de 50% de vie. Utilisable une fois, mais se réinitialise lors de la mort d'un Behemoth.\n"
+            }
         }
     },
     "parts": {
@@ -3686,6 +4024,13 @@
                     "partEffect": {
                         "0": "Les tirs et capacités infligent des dégâts obscurs"
                     }
+                },
+                "volcanicBarrel": {
+                    "name": "Cannon volcanique",
+                    "partEffect": [
+                        "Capacité légendaire: Entrer en rage, gagnant de nouvelles attaques pour 15 secondes. Infligez +25% de dégâts lorsque la cible est en dessous de 50% de vie. Utilisable une fois, mais se réinitialise lors de la mort d'un Béhémoth.",
+                        "Les tirs et capaticés infligent des dégâts incandescents."
+                    ]
                 }
             },
             "chambers": {
