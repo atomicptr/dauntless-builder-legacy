@@ -55,9 +55,11 @@ export default class ItemSelectModal extends React.Component {
         if(nextProps.data && nextProps.data.filterOptions &&
             nextProps.data.filterOptions.__itemType === "Cell" && nextProps.data.filterOptions.__rarity) {
 
+            const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
+            
             newState.rarityFilter = {
                 value: nextProps.data.filterOptions.__rarity,
-                label: nextProps.data.filterOptions.__rarity.charAt(0).toUpperCase() + nextProps.data.filterOptions.__rarity.slice(1),
+                label: capitalize(nextProps.data.filterOptions.__rarity),
             };
         }
 
