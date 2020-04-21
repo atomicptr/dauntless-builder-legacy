@@ -52,6 +52,15 @@ export default class ItemSelectModal extends React.Component {
             };
         }
 
+        if(nextProps.data && nextProps.data.filterOptions &&
+            nextProps.data.filterOptions.__itemType === "Cell" && nextProps.data.filterOptions.__rarity) {
+
+            newState.rarityFilter = {
+                value: nextProps.data.filterOptions.__rarity.toLowerCase(),
+                label: nextProps.data.filterOptions.__rarity,
+            };
+        }
+
         if(Object.keys(newState).length > 0) {
             this.setState(newState);
         }

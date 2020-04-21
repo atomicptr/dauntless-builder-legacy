@@ -15,22 +15,26 @@ export default class Cell extends React.Component {
     }
 
     onClicked() {
-        let filters = [
+        let filterOption = {};
+        filterOption.__itemType = "Cell";
+        filterOption.__parentType = this.props.parentType;
+        filterOption.__slotPosition = this.props.slotPosition;
+
+        filterOption.filters = [
             {
                 field: "slot",
                 value: this.props.type
             }
         ];
-
-        if (this.props.type === "Prismatic" || this.props.isPrismaticSlot) {
-            filters = [];
+        if(this.props.cell) {
+            filterOption.__rarity = this.getRarity();
         }
 
-        this.props.onCellClicked({
-            __itemType: "Cell",
-            __parentType: this.props.parentType,
-            __slotPosition: this.props.slotPosition,
-            filters});
+        if (this.props.type === "Prismatic" || this.props.isPrismaticSlot) {
+            filterOption.filters = [];
+        }
+
+        this.props.onCellClicked(filterOption);
     }
 
     render() {
