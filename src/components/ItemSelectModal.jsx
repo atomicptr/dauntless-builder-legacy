@@ -56,8 +56,8 @@ export default class ItemSelectModal extends React.Component {
             nextProps.data.filterOptions.__itemType === "Cell" && nextProps.data.filterOptions.__rarity) {
 
             newState.rarityFilter = {
-                value: nextProps.data.filterOptions.__rarity.toLowerCase(),
-                label: nextProps.data.filterOptions.__rarity,
+                value: nextProps.data.filterOptions.__rarity,
+                label: nextProps.data.filterOptions.__rarity.charAt(0).toUpperCase() + nextProps.data.filterOptions.__rarity.slice(1),
             };
         }
 
