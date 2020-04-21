@@ -26,6 +26,7 @@ export default class Cell extends React.Component {
                 value: this.props.type
             }
         ];
+
         if(this.props.cell) {
             filterOption.__rarity = this.getRarity();
         }
