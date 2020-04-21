@@ -20,7 +20,7 @@ export default class ItemSelectModal extends React.Component {
             perkFilter: null,
             weaponTypeFilter: null,
             slotFilter: null,
-            rarityFilter: {value: "Epic".toLowerCase(), label: "Epic"},
+            rarityFilter: {value: "epic", label: "Epic"},
             levelPickerValue: null
         };
 
@@ -30,7 +30,7 @@ export default class ItemSelectModal extends React.Component {
             perkFilter: null,
             weaponTypeFilter: null,
             slotFilter: null,
-            rarityFilter: {value: "Epic".toLowerCase(), label: "Epic"},
+            rarityFilter: {value: "epic", label: "Epic"},
             levelPickerValue: null
         };
     }
