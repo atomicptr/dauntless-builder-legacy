@@ -1,0 +1,31 @@
+name: Fractured Realities
+description: A Slayer's aether strikers forged with Thrax trophies.
+icon: /assets/icons/weapons/thrax/FracturedRealities.png
+type: Aether Strikers
+damage: Blunt
+elemental: Umbral
+cells: [Prismatic, Prismatic]
+power:
+  0: 100
+  1: 140
+  2: 180
+  3: 220
+  4: 260
+  5: 300
+  6: 340
+  7: 380
+  8: 420
+  9: 460
+  10: 500
+  11: 510
+  12: 520
+  13: 530
+  14: 540
+  15: 550
+bond:
+  elemental: Umbral
+unique_effects:
+  - name: ThraxLegendaryAbility
+    description: >-
+      Legendary Ability: Deal umbral damage to nearby enemies and teleport high into the sky. Then choose a spot
+      to slam down on to, dealing additional umbral damage. Usable once, but resets on Behemoth kill.
