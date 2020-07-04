@@ -5,6 +5,7 @@ type: Head
 strength: Blaze
 weakness: Frost
 cells: Defence
+rarity: exotic
 resistance:
   0: 25
   1: 35

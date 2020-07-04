@@ -31,6 +31,9 @@
         "hidden": {
             "type": "boolean"
         },
+        "rarity": {
+            "type": ["string", "null"]
+        },
         "restrict_specials": {
             "type": "boolean"
         },

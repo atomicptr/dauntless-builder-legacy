@@ -5,6 +5,7 @@ type: Hammer
 damage: Blunt
 elemental: Blaze
 cells: [Power, Defence]
+rarity: exotic
 restrict_specials: true
 power:
   0: 100

@@ -5,6 +5,7 @@ type: War Pike
 damage: Piercing
 elemental: Radiant
 cells: [Technique, Power]
+rarity: exotic
 restrict_specials: true
 power:
   0: 100

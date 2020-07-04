@@ -27,6 +27,9 @@
         "hidden": {
             "type": "boolean"
         },
+        "rarity": {
+            "type": ["string", "null"]
+        },
         "resistance": {
             "type": "object",
             "properties": {

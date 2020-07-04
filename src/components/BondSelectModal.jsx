@@ -81,7 +81,8 @@ export default class BondSelectModal extends React.Component {
         bondFilter = Object.assign(bondFilter, weapon.bond);
 
         return BuildModel.findItemsByMatchingFilter("Weapon", bondFilter)
-            .filter(item => item.name !== this.props.weaponName);
+            .filter(item => item.name !== this.props.weaponName)
+            .filter(item => item.rarity !== "exotic");
     }
 
     getAvailableItemsRendered() {

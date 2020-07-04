@@ -5,6 +5,7 @@ type: Sword
 damage: Slashing
 elemental: Umbral
 cells: [Power, Utility]
+rarity: exotic
 restrict_specials: true
 power:
   0: 100

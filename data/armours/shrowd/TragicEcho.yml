@@ -5,6 +5,7 @@ type: Head
 strength: Umbral
 weakness: Radiant
 cells: Power
+rarity: exotic
 resistance:
   0: 25
   1: 35

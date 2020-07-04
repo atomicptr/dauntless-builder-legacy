@@ -5,6 +5,7 @@ type: Repeater
 damage: Slashing
 elemental: null
 cells: [Technique, Mobility]
+rarity: exotic
 power:
   0: 100
   1: 140
