@@ -2,5 +2,5 @@ name: Avenging Overdrive
 icon: /assets/icons/parts/sword/specials/AvengingOverdrive.png
 part_effect:
   - >-
-    Activate at full meter to enter Overdrive, increasing attack speed and causing attacks to deal
-    AoE damage. Reactivate to parry and riposte a behemoth attack.
+    Activate at full meter to enter Overdrive, gaining +20% attacks speed and causing attacks to deal +60-80 aoe damage.
+    Reactivate to parry and riposte a Behemoth attack, dealing 800 damage and granting 1 Valour when successful (2 second cooldown)

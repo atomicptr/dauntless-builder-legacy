@@ -1,0 +1,4 @@
+name: Mending Bladecore
+icon: /assets/icons/parts/sword/mods/MendingBladecore.png
+part_effect:
+  - Each Valour gained or spent restores 30 health

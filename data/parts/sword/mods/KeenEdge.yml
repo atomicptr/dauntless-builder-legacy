@@ -1,0 +1,4 @@
+name: Keen Edge
+icon: /assets/icons/parts/sword/mods/KeenEdge.png
+part_effect:
+  - After the Bladesurge projectile travels a short distance, the damage is increased by 100%.

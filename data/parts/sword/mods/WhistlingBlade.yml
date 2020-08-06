@@ -1,4 +1,0 @@
-name: Whistling Blade
-icon: /assets/icons/parts/sword/mods/WhistlingBlade.png
-part_effect:
-  - Reduces the stamina cost of Repeating Elements by 25% and each Repeating Elements attack grants +5% attack speed (up to 30%) until the combo is ended.
