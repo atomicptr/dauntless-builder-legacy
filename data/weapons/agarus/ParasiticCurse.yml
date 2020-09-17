@@ -1,0 +1,30 @@
+name: Parasitic Curse
+description: A Slayer's aether strikers forged with Agarus trophies.
+icon: /assets/icons/weapons/agarus/ParasiticCurse.png
+type: War Pike
+damage: Slashing
+elemental: Terra
+cells: [Prismatic, Prismatic]
+power:
+  0: 100
+  1: 140
+  2: 180
+  3: 220
+  4: 260
+  5: 300
+  6: 340
+  7: 380
+  8: 420
+  9: 460
+  10: 500
+  11: 510
+  12: 520
+  13: 530
+  14: 540
+  15: 550
+bond:
+  elemental: Terra
+unique_effects:
+  - name: AgarusLegendaryAbility
+    description: |
+      Legendary Ability: Revive all Slayers in a large radius, granting them healing over time and immunity to stagger. Usable while downed.
