@@ -35,7 +35,7 @@ perks:
     value: 3
     from: 10
     to: 15
-unique_effect:
+unique_effects:
   - name: KharabacBlades
     description: >
       Once charged, your next attack unleashes whirling blades that deal 50 terra damage. Additional attacks speed

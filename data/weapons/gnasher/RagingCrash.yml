@@ -35,7 +35,7 @@ perks:
     value: 3
     from: 10
     to: 15
-unique_effect:
+unique_effects:
   - name: GnasherRage
     description: >
       Periodically enter a rage, dealing +10% damage and gaining immunity to stagger. Taking damage causes you to

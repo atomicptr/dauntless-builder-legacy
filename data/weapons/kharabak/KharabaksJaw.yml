@@ -36,22 +36,6 @@ perks:
     from: 10
     to: 15
 unique_effects:
-  - name: ReloadStamina
-    description: Restore 20 Stamina after reloading a shell
-    value: 20
-    from: 0
-    to: 5
-  - name: ReloadStamina
-    description: Restore 30 Stamina after reloading a shell
-    value: 30
-    from: 6
-    to: 9
-  - name: ReloadStamina
-    description: Restore 40 Stamina after reloading a shell
-    value: 40
-    from: 10
-    to: 15
-unique_effect:
   - name: KharabacBlades
     description: >
       Once charged, your next attack unleashes whirling blades that deal 50 terra damage. Additional attacks speed
