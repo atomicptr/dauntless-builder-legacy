@@ -361,7 +361,8 @@ export default class ItemSelectModal extends React.Component {
         }
 
         const elementOptions = this.getElementOptions();
-        if(this.isType(["Weapon", "Armour"])) {
+        //armor or weapon that isn't repeater
+        if(this.isType("Armour") || (this.isType("Weapon") && (this.state.weaponTypeFilter === null || this.state.weaponTypeFilter.value !== "Repeater"))) {
             fields.push(
                 <div key="elementFilter" className="field is-hidden-touch">
                     <Select
