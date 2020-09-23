@@ -17,6 +17,7 @@ export default class ItemSelectModal extends React.Component {
         this.state = {
             open: !!this.props.isOpen,
             searchQuery: "",
+            elementFilter: null,
             perkFilter: null,
             weaponTypeFilter: null,
             slotFilter: null,
@@ -27,6 +28,7 @@ export default class ItemSelectModal extends React.Component {
         this.defaultState = {
             open: false,
             searchQuery: "",
+            elementFilter: null,
             perkFilter: null,
             weaponTypeFilter: null,
             slotFilter: null,
@@ -224,6 +226,15 @@ export default class ItemSelectModal extends React.Component {
             });
         }
 
+        if(this.isType(["Weapon", "Armour"]) && this.state.elementFilter && this.state.elementFilter.value) {
+            filters.push({
+                //weapon has the elemental prop, armour has the strength prop
+                field: this.isType("Weapon") ? "elemental" : "strength",
+                //convert Neutral back to null so that the comparison works
+                value: this.state.elementFilter.value === "Neutral" ? null : this.state.elementFilter.value
+            });
+        }
+
         if(this.isType("Weapon") && this.state.weaponTypeFilter && this.state.weaponTypeFilter.value) {
             filters.push({
                 field: "type",
@@ -255,6 +266,15 @@ export default class ItemSelectModal extends React.Component {
         });
 
         return filters;
+    }
+
+    getElementOptions() {
+        let elements = [];
+        Object.values(this.props.itemData.weapons).forEach(weapon => {
+            //change null to Neutral because the <Select> doesn't work on a null value
+            elements[weapon.elemental === null ? "Neutral" : weapon.elemental] = 1;
+        });
+        return Object.keys(elements).sort().map(element => ({value: element, label: element}));
     }
 
     getPerkOptions() {
@@ -336,6 +356,19 @@ export default class ItemSelectModal extends React.Component {
                         onChange={weaponType => this.setState({weaponTypeFilter: weaponType})}
                         value={this.state.weaponTypeFilter}
                         options={options} />
+                </div>
+            );
+        }
+
+        const elementOptions = this.getElementOptions();
+        if(this.isType(["Weapon", "Armour"])) {
+            fields.push(
+                <div key="elementFilter" className="field is-hidden-touch">
+                    <Select
+                        placeholder="Filter by element..."
+                        onChange={element => this.setState({elementFilter: element})}
+                        value={this.state.elementFilter}
+                        options={elementOptions} />
                 </div>
             );
         }
