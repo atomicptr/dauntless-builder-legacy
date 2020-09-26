@@ -269,12 +269,8 @@ export default class ItemSelectModal extends React.Component {
     }
 
     getElementOptions() {
-        let elements = [];
-        Object.values(this.props.itemData.weapons).forEach(weapon => {
-            //change null to Neutral because the <Select> doesn't work on a null value
-            elements[weapon.elemental === null ? "Neutral" : weapon.elemental] = 1;
-        });
-        return Object.keys(elements).sort().map(element => ({value: element, label: element}));
+        const elements = ["Blaze", "Frost", "Neutral", "Radiant", "Shock", "Terra", "Umbral" ];
+        return elements.sort().map(element => ({value: element, label: element}));
     }
 
     getPerkOptions() {
@@ -361,8 +357,9 @@ export default class ItemSelectModal extends React.Component {
         }
 
         const elementOptions = this.getElementOptions();
-        //armor or weapon that isn't repeater
-        if(this.isType("Armour") || (this.isType("Weapon") && (this.state.weaponTypeFilter === null || this.state.weaponTypeFilter.value !== "Repeater"))) {
+        const isRepeater = this.state.weaponTypeFilter !== null && this.state.weaponTypeFilter.value === "Repeater";
+        // armor or weapon that isn't repeater
+        if(this.isType("Armour") || (this.isType("Weapon") && !isRepeater)) {
             fields.push(
                 <div key="elementFilter" className="field is-hidden-touch">
                     <Select
