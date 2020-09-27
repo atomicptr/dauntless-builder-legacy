@@ -177,6 +177,10 @@ $theme-input-border: #242424;
             border-color: $theme-input-border;
         }
 
+        .Select.is-focused:not(.is-open) > .Select-control {
+			background-color: $theme-input-background;
+        }
+
         .Select-control {
             background-color: $theme-input-background;
             color: $theme-input-color;
