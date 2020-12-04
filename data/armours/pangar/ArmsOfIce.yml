@@ -6,7 +6,7 @@ strength: Frost
 weakness: Blaze
 cells: Defence
 resistance:
-  0: 5
+  0: 10
   1: 30
 perks:
   - name: Knockout King

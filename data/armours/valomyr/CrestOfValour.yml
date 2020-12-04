@@ -6,7 +6,7 @@ strength: Radiant
 weakness: Umbral
 cells: Power
 resistance:
-  0: 5
+  0: 15
   1: 30
 perks:
   - name: Lucent

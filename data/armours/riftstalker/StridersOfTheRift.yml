@@ -6,7 +6,7 @@ strength: Umbral
 weakness: Radiant
 cells: Mobility
 resistance:
-  0: 5
+  0: 15
   1: 30
 perks:
   - name: Conduit

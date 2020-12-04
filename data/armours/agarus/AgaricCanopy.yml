@@ -6,7 +6,7 @@ strength: Terra
 weakness: Shock
 cells: Defence
 resistance:
-  0: 5
+  0: 25
   1: 30
 perks:
   - name: Parasitic

@@ -7,7 +7,7 @@ weakness: Umbral
 cells: Technique
 rarity: exotic
 resistance:
-  0: 5
+  0: 20
   1: 30
 unique_effects:
   - name: PrismaticGraceRevivePrism

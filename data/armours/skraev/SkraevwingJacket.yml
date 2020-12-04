@@ -6,7 +6,7 @@ strength: Frost
 weakness: Blaze
 cells: Mobility
 resistance:
-  0: 5
+  0: 15
   1: 30
 perks:
   - name: Adrenaline

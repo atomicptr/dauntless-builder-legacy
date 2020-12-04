@@ -7,7 +7,7 @@ weakness: Radiant
 cells: Power
 rarity: exotic
 resistance:
-  0: 5
+  0: 20
   1: 30
 unique_effects:
   - name: TragicEchoDamageIncrease

@@ -6,7 +6,7 @@ strength: Shock
 weakness: Terra
 cells: Mobility
 resistance:
-  0: 5
+  0: 20
   1: 30
 perks:
   - name: Aetheric Frenzy
