@@ -7,22 +7,8 @@ weakness: Umbral
 cells: Technique
 rarity: exotic
 resistance:
-  0: 25
-  1: 35
-  2: 45
-  3: 55
-  4: 65
-  5: 75
-  6: 85
-  7: 95
-  8: 105
-  9: 115
-  10: 125
-  11: 127.5
-  12: 130
-  13: 132.5
-  14: 135
-  15: 137.5
+  0: 5
+  1: 30
 unique_effects:
   - name: PrismaticGraceRevivePrism
     description: After reviving another player, grant them a Radiant Prism that blocks incoming damage for 5 seconds.

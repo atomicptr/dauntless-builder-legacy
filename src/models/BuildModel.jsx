@@ -132,6 +132,20 @@ export default class BuildModel {
             lantern_cell: getString("Cells", idcounter++)
         };
 
+        const maxLevel = (collection, itemName, value) => {
+            const itemMaxLevel = ItemUtility.maxLevel(collection, itemName);
+            if (value > itemMaxLevel || value < 0) {
+                return itemMaxLevel;
+            }
+            return value;
+        };
+
+        data.weapon_level = maxLevel("weapons", data.weapon_name, data.weapon_level);
+        data.head_level = maxLevel("armours", data.head_name, data.head_level);
+        data.torso_level = maxLevel("armours", data.torso_name, data.torso_level);
+        data.arms_level = maxLevel("armours", data.arms_name, data.arms_level);
+        data.legs_level = maxLevel("armours", data.legs_name, data.legs_level);
+
         return new BuildModel(data);
     }
 

@@ -1,28 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Slider from "rc-slider";
-import "rc-slider/assets/index.css";
-
 export default class LevelPicker extends React.Component {
 
     constructor(props, context) {
         super(props, context);
 
         this.state = {
-            currentLevel: this.props.level
+            currentLevel: this.props.level,
+            checked: this.props.level === 1,
         };
     }
 
-    getMaxLevel() {
-        return 15;
-    }
-
-    getLevelString() {
-        return "+" + this.state.currentLevel;
-    }
-
-    onValueChanged(value) {
+    onValueChanged() {
+        const value = this.state.currentLevel === 1 ? 0 : 1;
         this.setState({currentLevel: value});
 
         if (this.props.onValueChanged) {
@@ -30,14 +21,29 @@ export default class LevelPicker extends React.Component {
         }
     }
 
+    renderContent() {
+        const isSurged = this.state.currentLevel === 1;
+
+        if (!isSurged) {
+            return <React.Fragment>
+                <i className="far fa-star"/>
+                &nbsp;
+                <span>Make item "Power surged"</span>
+            </React.Fragment>;
+        }
+
+        return <React.Fragment>
+            <i className="fas fa-star"/>
+            &nbsp;
+            <span>Power surged</span>
+        </React.Fragment>;
+    }
+
     render() {
         return <div className="level-picker only-desktop">
-            <Slider
-                min={0}
-                max={this.getMaxLevel()}
-                defaultValue={this.state.currentLevel}
-                onChange={this.onValueChanged.bind(this)} />
-            <span className="level">{this.getLevelString()}</span>
+            <button className="button" onClick={this.onValueChanged.bind(this)}>
+                {this.renderContent()}
+            </button>
         </div>;
     }
 }
