@@ -6,7 +6,7 @@ damage: Blunt
 elemental: Shock
 cells: [Technique, Mobility]
 power:
-  0: 20
+  0: 80
   1: 120
 perks:
   - name: Aetheric Attunement
@@ -22,14 +22,9 @@ unique_effects:
     description: After dodging though an attack, extend Mantra timeout by 1 seconds
     value: 1
     from: 0
-    to: 5
-  - name: DodgeExtendMantra
-    description: After dodging though an attack, extend Mantra timeout by 2 seconds
-    value: 2
-    from: 6
-    to: 9
+    to: 0
   - name: DodgeExtendMantra
     description: After dodging though an attack, extend Mantra timeout by 3 seconds
     value: 3
-    from: 10
-    to: 15
+    from: 1
+    to: 1

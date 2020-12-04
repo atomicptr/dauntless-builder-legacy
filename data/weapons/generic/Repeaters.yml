@@ -6,5 +6,5 @@ damage: Slashing
 elemental: null
 cells: [ Technique, Mobility ]
 power:
-  0: 20
+  0: 0
   1: 120

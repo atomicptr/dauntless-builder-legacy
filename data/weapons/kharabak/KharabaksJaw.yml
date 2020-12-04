@@ -6,7 +6,7 @@ damage: Blunt
 elemental: Terra
 cells: [Power, Technique]
 power:
-  0: 20
+  0: 40
   1: 120
 perks:
   - name: Deconstruction

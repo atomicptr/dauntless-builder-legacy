@@ -6,7 +6,7 @@ damage: Slashing
 elemental: Blaze
 cells: [Prismatic, Prismatic]
 power:
-  0: 20
+  0: 100
   1: 120
 bond:
   elemental: Blaze

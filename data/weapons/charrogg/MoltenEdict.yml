@@ -8,7 +8,7 @@ cells: [Power, Defence]
 rarity: exotic
 restrict_specials: true
 power:
-  0: 20
+  0: 40
   1: 120
 unique_effects:
   - name: HammerBlastFireballs

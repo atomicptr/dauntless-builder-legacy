@@ -6,7 +6,7 @@ damage: Piercing
 elemental: Radiant
 cells: [Technique, Power]
 power:
-  0: 20
+  0: 80
   1: 120
 perks:
   - name: Cunning

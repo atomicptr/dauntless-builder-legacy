@@ -6,7 +6,7 @@ damage: Blunt
 elemental: Radiant
 cells: [Power, Utility]
 power:
-  0: 20
+  0: 60
   1: 120
 perks:
   - name: Aetherhunter
@@ -24,18 +24,11 @@ unique_effects:
       Charge rate increases with current health.
     value: 300
     from: 0
-    to: 5
-  - name: ValomyrCharge
-    description: >-
-      Once charged, your next attack will deal 425 bonus radiant damage.
-      Charge rate increases with current health.
-    value: 425
-    from: 6
-    to: 9
+    to: 0
   - name: ValomyrCharge
     description: >-
       Once charged, your next attack will deal 550 bonus radiant damage.
       Charge rate increases with current health.
     value: 550
-    from: 10
-    to: 15
+    from: 1
+    to: 1

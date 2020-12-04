@@ -6,7 +6,7 @@ damage: Blunt
 elemental: Frost
 cells: [Power, Defence]
 power:
-  0: 20
+  0: 40
   1: 120
 perks:
   - name: Knockout King

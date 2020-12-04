@@ -24,18 +24,11 @@ unique_effects:
       30 bonus damage and minor frost damage each. Max 4 Sprites.
     value: 30
     from: 0
-    to: 5
-  - name: BoreusFrostSprite
-    description: >-
-      Using Pips generates 3 Frost Sprites that cause your next attack to deal
-      45 bonus damage and minor frost damage each. Max 4 Sprites.
-    value: 45
-    from: 6
-    to: 9
+    to: 0
   - name: BoreusFrostSprite
     description: >-
       Using Pips generates 3 Frost Sprites that cause your next attack to deal
       60 bonus damage and minor frost damage each. Max 4 Sprites.
     value: 60
-    from: 10
-    to: 15
+    from: 1
+    to: 1

@@ -6,7 +6,7 @@ damage: Blunt
 elemental: null
 cells: [Power, Mobility]
 power:
-  0: 20
+  0: 40
   1: 120
 perks:
   - name: Conditioning
@@ -22,14 +22,9 @@ unique_effects:
     description: After dodging, your next attack deals +50 bonus damage and part damage
     value: 50
     from: 0
-    to: 5
-  - name: DodgePartDamage
-    description: After dodging, your next attack deals +75 bonus damage and part damage
-    value: 75
-    from: 6
-    to: 9
+    to: 0
   - name: DodgePartDamage
     description: After dodging, your next attack deals +100 bonus damage and part damage
     value: 100
-    from: 10
-    to: 15
+    from: 1
+    to: 1

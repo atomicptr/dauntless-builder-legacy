@@ -22,14 +22,9 @@ unique_effects:
     description: The sixth hit in a row deals +100 wound damage
     value: 100
     from: 0
-    to: 5
-  - name: SeventhHitWoundDamage
-    description: The sixth hit in a row deals +200 wound damage
-    value: 200
-    from: 6
-    to: 9
+    to: 0
   - name: SeventhHitWoundDamage
     description: The sixth hit in a row deals +300 wound damage
     value: 300
-    from: 10
-    to: 15
+    from: 1
+    to: 1

@@ -6,7 +6,7 @@ damage: Piercing
 elemental: Frost
 cells: [Technique, Mobility]
 power:
-  0: 20
+  0: 60
   1: 120
 perks:
   - name: Nimble
@@ -21,12 +21,8 @@ unique_effects:
   - name: IceMines
     description: Evading drops 1 Ice Mines on a 30 second cooldown.
     from: 0
-    to: 5
-  - name: IceMines
-    description: Evading drops 2 Ice Mines on a 30 second cooldown.
-    from: 6
-    to: 9
+    to: 0
   - name: IceMines
     description: Evading drops 3 Ice Mines on a 30 second cooldown.
-    from: 10
-    to: 15
+    from: 1
+    to: 1

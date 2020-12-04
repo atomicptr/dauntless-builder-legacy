@@ -6,5 +6,4 @@ damage: Blunt
 elemental: null
 cells: null
 power:
-  0: 80
-  1: 100
+  0: 10

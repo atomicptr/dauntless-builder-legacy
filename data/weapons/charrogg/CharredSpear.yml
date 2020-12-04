@@ -6,7 +6,7 @@ damage: Piercing
 elemental: Blaze
 cells: [Technique, Defence]
 power:
-  0: 20
+  0: 40
   1: 120
 perks:
   - name: Aetherhunter

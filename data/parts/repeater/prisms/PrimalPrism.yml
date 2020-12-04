@@ -1,22 +1,5 @@
 name: Primal Prism
 description: The Primal Prism is part of a craftable weapon in Dauntless.
 icon: /assets/icons/parts/repeaters/prisms/PrimalPrism.png
-power:
-  0: 16
-  1: 23
-  2: 30
-  3: 37
-  4: 44
-  5: 51
-  6: 58
-  7: 65
-  8: 72
-  9: 79
-  10: 86
-  11: 87
-  12: 88
-  13: 89
-  14: 90
-  15: 91
 part_effect:
   - Once charged, your next attack unleases whirling blades that deal 25 terra damage. Additional attacks speed up the blades, which explode at the end of the duration and deal damage based on blade speed.

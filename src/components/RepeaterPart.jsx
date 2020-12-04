@@ -14,7 +14,7 @@ export default class RepeaterPart extends React.Component {
         const part = this.props.part;
         const level = this.props.level ? this.props.level : Math.max(...Object.keys(part.power).map(k => Number(k)));
 
-        const powerLevel = part.power[level];
+        const powerLevel = part.power ? part.power[level] : null;
 
         let elemental = null;
 
@@ -34,10 +34,11 @@ export default class RepeaterPart extends React.Component {
                         <img src={part.icon} />
                     </div>
                     <div className="item-data">
-                        <h3 className="item-title">{part.name} {ItemUtility.levelString(level)}</h3>
-                        <div className="stat-data">
-                            <strong>Power</strong>: {powerLevel} {elemental}
-                        </div>
+                        <h3 className="item-title">{part.name} {part.power ? ItemUtility.levelString(level) : null}</h3>
+                        {powerLevel ?
+                            <div className="stat-data">
+                                <strong>Power</strong>: {powerLevel} {elemental}
+                            </div> : null}
                         {part.part_effect.map(e => <div key={e} className="unique-effects">{e}</div>)}
                     </div>
                 </div>

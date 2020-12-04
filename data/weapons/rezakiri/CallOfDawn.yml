@@ -6,7 +6,7 @@ damage: Slashing
 elemental: Radiant
 cells: [Technique, Utility]
 power:
-  0: 20
+  0: 80
   1: 120
 perks:
   - name: Cunning

@@ -6,7 +6,7 @@ damage: Slashing
 elemental: Shock
 cells: [Power, Utility]
 power:
-  0: 20
+  0: 40
   1: 120
 perks:
   - name: Savagery
@@ -22,14 +22,9 @@ unique_effects:
     description: Heal 50 on perfectly charged vertical attacks
     value: 50
     from: 0
-    to: 5
-  - name: VerticalAttackHeal
-    description: Heal 75 on perfectly charged vertical attacks
-    value: 75
-    from: 6
-    to: 9
+    to: 0
   - name: VerticalAttackHeal
     description: Heal 100 on perfectly charged vertical attacks
     value: 100
-    from: 10
-    to: 15
+    from: 1
+    to: 1

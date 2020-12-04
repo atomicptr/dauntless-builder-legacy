@@ -1,23 +1,6 @@
 name: Eclipse Prism
 description: The Eclipse Prism is part of a craftable weapon in Dauntless.
 icon: /assets/icons/parts/repeaters/prisms/EclipsePrism.png
-power:
-  0: 16
-  1: 23
-  2: 30
-  3: 37
-  4: 44
-  5: 51
-  6: 58
-  7: 65
-  8: 72
-  9: 79
-  10: 86
-  11: 87
-  12: 88
-  13: 89
-  14: 90
-  15: 91
 part_effect:
   - >
     Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2.25% for 5 seconds.

@@ -6,7 +6,7 @@ damage: Piercing
 elemental: Shock
 cells: [Prismatic, Prismatic]
 power:
-  0: 20
+  0: 100
   1: 120
 bond:
   elemental: Shock

@@ -24,18 +24,11 @@ unique_effects:
       refreshing 20 health shield that lasts for 12s
     value: 20
     from: 0
-    to: 5
-  - name: DamageChanceStackShield
-    description: >-
-      Dealing damage has a chance (based on damage dealt) to grant a stacking,
-      refreshing 30 health shield that lasts for 12s
-    value: 30
-    from: 6
-    to: 9
+    to: 0
   - name: DamageChanceStackShield
     description: >-
       Dealing damage has a chance (based on damage dealt) to grant a stacking,
       refreshing 40 health shield that lasts for 12s
     value: 40
-    from: 10
+    from: 1
     to: 15

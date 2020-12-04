@@ -8,7 +8,7 @@ cells: [Power, Utility]
 rarity: exotic
 restrict_specials: true
 power:
-  0: 20
+  0: 80
   1: 120
 unique_effects:
   - name: TheHungerEffect

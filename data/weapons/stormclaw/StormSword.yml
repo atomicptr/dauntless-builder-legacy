@@ -6,7 +6,7 @@ damage: Slashing
 elemental: Shock
 cells: [Technique, Mobility]
 power:
-  0: 20
+  0: 80
   1: 120
 perks:
   - name: Energized
@@ -22,14 +22,9 @@ unique_effects:
     description: After dodging through an attack,your attacks gain 100% bonus meter for +2 seconds
     value: 100
     from: 0
-    to: 5
-  - name: DodgeMeterGain
-    description: After dodging through an attack,your attacks gain 100% bonus meter for +3 seconds
-    value: 100
-    from: 6
-    to: 9
+    to: 0
   - name: DodgeMeterGain
     description: After dodging through an attack,your attacks gain 100% bonus meter for +4 seconds
     value: 100
-    from: 10
-    to: 15
+    from: 1
+    to: 1

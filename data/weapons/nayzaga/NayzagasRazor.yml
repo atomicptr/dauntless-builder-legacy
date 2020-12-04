@@ -6,7 +6,7 @@ damage: Slashing
 elemental: Shock
 cells: [Utility, Mobility]
 power:
-  0: 20
+  0: 40
   1: 120
 perks:
   - name: Barbed
@@ -22,14 +22,9 @@ unique_effects:
     description: +3% lifesteal vs broken parts
     value: 1.03
     from: 0
-    to: 5
-  - name: WoundedPartsLifesteal
-    description: +4% lifesteal vs broken parts
-    value: 1.04
-    from: 6
-    to: 9
+    to: 0
   - name: WoundedPartsLifesteal
     description: +5% lifesteal vs broken parts
     value: 1.05
-    from: 10
-    to: 15
+    from: 1
+    to: 1

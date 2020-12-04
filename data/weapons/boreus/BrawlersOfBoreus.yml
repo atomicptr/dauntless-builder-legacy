@@ -23,16 +23,10 @@ unique_effects:
       After Surging, generate 2 Frost Sprites that grant your next attack +30 damage and minor frost damage (Max 4 Sprites)
     value: 30
     from: 0
-    to: 5
-  - name: BoreusFrostSprite
-    description: >-
-      After Surging, generate 2 Frost Sprites that grant your next attack +45 damage and minor frost damage (Max 4 Sprites)
-    value: 45
-    from: 6
-    to: 9
+    to: 0
   - name: BoreusFrostSprite
     description: >-
       After Surging, generate 2 Frost Sprites that grant your next attack +60 damage and minor frost damage (Max 4 Sprites)
     value: 60
-    from: 10
-    to: 15
+    from: 1
+    to: 1

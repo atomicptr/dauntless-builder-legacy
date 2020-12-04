@@ -27,9 +27,6 @@ export default class Repeater extends React.Component {
 
         const fields = [
             ["barrels", "part1"],
-            ["chambers", "part2"],
-            ["grips", "part3"],
-            ["prisms", "part4"]
         ];
 
         for(let field of fields) {
