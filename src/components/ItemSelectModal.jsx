@@ -58,7 +58,7 @@ export default class ItemSelectModal extends React.Component {
             nextProps.data.filterOptions.__itemType === "Cell" && nextProps.data.filterOptions.__rarity) {
 
             const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
-            
+
             newState.rarityFilter = {
                 value: nextProps.data.filterOptions.__rarity,
                 label: capitalize(nextProps.data.filterOptions.__rarity),
@@ -286,7 +286,7 @@ export default class ItemSelectModal extends React.Component {
     }
 
     getSlotOptions() {
-        const slots = ["Defence", "Mobility", "Power", "Technique", "Utility"];
+        const slots = ["Defence", "Mobility", "Power", "Prismatic", "Technique", "Utility"];
 
         return slots.filter(slot => {
             let items = this.getAvailableItems(["cells"]);
