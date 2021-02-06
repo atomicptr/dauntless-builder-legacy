@@ -1,0 +1,19 @@
+name: AdversarysDrive
+description: Leg and foot protection forged from Urska trophies.
+icon: /assets/icons/armours/urska/AdversarysDrive.png
+type: Legs
+strength: Frost
+weakness: Blaze
+cells: Utility
+resistance:
+  0: 25
+  1: 30
+perks:
+  - name: Guardian
+    value: 2
+    from: 0
+    to: 0
+  - name: Guardian
+    value: 3
+    from: 1
+    to: 1

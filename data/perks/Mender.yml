@@ -1,23 +1,23 @@
 name: Mender
 description: Reduces healing from Slayer Flask. Using your flask restores other Slayers' health.
 type: Utility
-key: [LessFlaskHealing, HealGroup]
+key: HealGroup
 effects:
   1:
-    description: [Your Flask heals for 30 less, Using your Flask also heals all other Slayers for 45]
-    value: [30, 45]
+    description: Using your Flask also heals all other Slayers for 45
+    value: 45
   2:
-    description: [Your Flask heals for 60 less, Using your Flask also heals all other Slayers for 90]
-    value: [60, 90]
+    description: Using your Flask also heals all other Slayers for 90
+    value: 90
   3:
-    description: [Your Flask heals for 90 less, Using your Flask also heals all other Slayers for 135]
-    value: [90, 135]
+    description: Using your Flask also heals all other Slayers for 135
+    value: 135
   4:
-    description: [Your Flask heals for 120 less, Using your Flask also heals all other Slayers for 180]
-    value: [120, 180]
+    description: Using your Flask also heals all other Slayers for 180
+    value: 180
   5:
-    description: [Your Flask heals for 150 less, Using your Flask also heals all other Slayers for 225]
-    value: [150, 225]
+    description: Using your Flask also heals all other Slayers for 225
+    value: 225
   6:
-    description: [Your Flask heals for 180 less, Using your Flask also heals all other Slayers for 270]
-    value: [180, 270]
+    description: Using your Flask also heals all other Slayers for 270
+    value: 270

@@ -9,11 +9,11 @@ resistance:
   0: 10
   1: 30
 perks:
-  - name: Shellshock Resist
+  - name: Barbed
     value: 1
     from: 0
     to: 0
-  - name: Shellshock Resist
+  - name: Barbed
     value: 3
     from: 1
     to: 1

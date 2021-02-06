@@ -1,23 +1,23 @@
 name: Engineer
 description: Reduces healing from Slayer flask. Increases range of pylons.
 type: Utility
-key: [FlaskLessHealing, IncreasedPylonRange]
+key: IncreasedPylonRange
 effects:
   1:
-    description: ["Your Flask heals for 30 less", "+35% increase Pylon range"]
-    value: [-30, 0.35]
+    description: "+35% increase Pylon range"
+    value: 0.35
   2:
-    description: ["Your Flask heals for 60 less", "+50% increase Pylon range"]
-    value: [-60, 0.5]
+    description: "+50% increase Pylon range"
+    value: 0.5
   3:
-    description: ["Your Flask heals for 90 less", "+65% increase Pylon range"]
-    value: [-90, 0.65]
+    description: "+65% increase Pylon range"
+    value: 0.65
   4:
-    description: ["Your Flask heals for 120 less", "+80% increase Pylon range"]
-    value: [-120, 0.8]
+    description: "+80% increase Pylon range"
+    value: 0.8
   5:
-    description: ["Your Flask heals for 150 less", "+115% increase Pylon range"]
-    value: [-150, 1.15]
+    description: "+115% increase Pylon range"
+    value: 1.15
   6:
-    description: ["Your Flask heals for 180 less", "+150% increase Pylon range"]
-    value: [-180, 1.5]
+    description: "+150% increase Pylon range"
+    value: 1.5

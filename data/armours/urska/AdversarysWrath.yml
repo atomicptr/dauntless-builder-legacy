@@ -1,0 +1,19 @@
+name: Adversary's Wrath
+description: Arms protection forged from Urska trophies.
+icon: /assets/icons/armours/urska/AdversarysWrath.png
+type: Arms
+strength: Frost
+weakness: Blaze
+cells: Technique
+resistance:
+  0: 25
+  1: 30
+perks:
+  - name: Aetheric Frenzy
+    value: 2
+    from: 0
+    to: 0
+  - name: Aetheric Frenzy
+    value: 3
+    from: 1
+    to: 1

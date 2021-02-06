@@ -1,0 +1,19 @@
+name: Adversary's Guile
+description: Head protection forged from Urska trophies.
+icon: /assets/icons/armours/urska/AdversarysGuile.png
+type: Head
+strength: Frost
+weakness: Blaze
+cells: Utility
+resistance:
+  0: 25
+  1: 30
+perks:
+  - name: Cascade
+    value: 2
+    from: 0
+    to: 0
+  - name: Cascade
+    value: 3
+    from: 1
+    to: 1

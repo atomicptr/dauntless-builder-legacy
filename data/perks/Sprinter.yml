@@ -1,23 +1,23 @@
 name: Sprinter
 description: Reduces max stamina. Increases movespeed and reduces sprint cost.
 type: Mobility
-key: [ReduceStamina, Sprinter]
+key: Sprinter
 effects:
   1:
-    description: [-5 max stamina, +5% movement speed and -5% reduced sprint cost]
-    value: [-5, 1.05]
+    description: +5% movement speed and -5% reduced sprint cost
+    value: 1.05
   2:
-    description: [-10 max stamina, +7.5% movement speed and -7.5% reduced sprint cost]
-    value: [-10, 1.075]
+    description: +7.5% movement speed and -7.5% reduced sprint cost
+    value: 1.075
   3:
-    description: [-15 max stamina, +10% movement speed and -10% reduced sprint cost]
-    value: [-15, 1.1]
+    description: +10% movement speed and -10% reduced sprint cost
+    value: 1.1
   4:
-    description: [-20 max stamina, +12.5% movement speed and -12.5% reduced sprint cost]
-    value: [-20, 1.125]
+    description: +12.5% movement speed and -12.5% reduced sprint cost
+    value: 1.125
   5:
-    description: [-25 max stamina, +15% movement speed and -15% reduced sprint cost]
-    value: [-25, 1.15]
+    description: +15% movement speed and -15% reduced sprint cost
+    value: 1.15
   6:
-    description: [-30 max stamina, +17.5% movement speed and -17.5% reduced sprint cost]
-    value: [-30, 1.175]
+    description: +17.5% movement speed and -17.5% reduced sprint cost
+    value: 1.175

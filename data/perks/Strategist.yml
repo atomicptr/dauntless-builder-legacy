@@ -1,23 +1,23 @@
 name: Strategist
 description: Reduces max health. Dodging through Behemoth attacks grants health shields to all Slayers.
 type: Defence
-key: [ReducedHealth, ShieldShare]
+key: ShieldShare
 effects:
   1:
-    description: [-50 max health, "After dodging through an attack, grant 25 health shield to all slayers"]
-    value: [-50, 25]
+    description: "After dodging through an attack, grant 50 health shield to all slayers"
+    value: 50
   2:
-    description: [-100 max health, "After dodging through an attack, grant 50 health shield to all slayers"]
-    value: [-100, 50]
+    description: "After dodging through an attack, grant 75 health shield to all slayers"
+    value: 75
   3:
-    description: [-150 max health, "After dodging through an attack, grant 75 health shield to all slayers"]
-    value: [-150, 75]
+    description: "After dodging through an attack, grant 100 health shield to all slayers"
+    value: 100
   4:
-    description: [-200 max health, "After dodging through an attack, grant 100 health shield to all slayers"]
-    value: [-200, 100]
+    description: "After dodging through an attack, grant 125 health shield to all slayers"
+    value: 125
   5:
-    description: [-250 max health, "After dodging through an attack, grant 125 health shield to all slayers"]
-    value: [-250, 125]
+    description: "After dodging through an attack, grant 150 health shield to all slayers"
+    value: 150
   6:
-    description: [-300 max health, "After dodging through an attack, grant 150 health shield to all slayers"]
-    value: [-300, 150]
+    description: "After dodging through an attack, grant 175 health shield to all slayers"
+    value: 175
