@@ -7,7 +7,7 @@ elemental: null
 cells: [Technique, Mobility]
 rarity: exotic
 power:
-  0: 80
+  0: 100
   1: 120
 unique_effects:
   - name: TwinSunsBarrel
