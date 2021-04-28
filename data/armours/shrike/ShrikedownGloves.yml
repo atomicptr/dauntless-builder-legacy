@@ -6,7 +6,7 @@ strength: null
 weakness: null
 cells: Mobility
 resistance:
-  0: 20
+  0: 10
   1: 30
 perks:
   - name: Weighted Strikes
