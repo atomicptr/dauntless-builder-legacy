@@ -1,0 +1,19 @@
+name: Chronogrips
+description: Arms protection forged from Chronovore trophies.
+icon: /assets/icons/armours/chronovore/Chronogrips.png
+type: Arms
+strength: Radiant
+weakness: Umbral
+cells: Defence
+resistance:
+  0: 25
+  1: 30
+perks:
+  - name: Pulse
+    value: 2
+    from: 0
+    to: 0
+  - name: Pulse
+    value: 3
+    from: 1
+    to: 1

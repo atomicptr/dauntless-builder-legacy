@@ -1,0 +1,19 @@
+name: Chronohelm
+description: Head protection forged from Chronovore trophies.
+icon: /assets/icons/armours/chronovore/Chronohelm.png
+type: Head
+strength: Radiant
+weakness: Umbral
+cells: Power
+resistance:
+  0: 25
+  1: 30
+perks:
+  - name: Zeal
+    value: 2
+    from: 0
+    to: 0
+  - name: Zeal
+    value: 3
+    from: 1
+    to: 1

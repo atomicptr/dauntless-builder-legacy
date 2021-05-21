@@ -5,7 +5,7 @@ function optimize_path () {
     do
         if [[ $(identify -format "%wx%h" $file) != "128x128" ]]; then
             # resize to 128px height
-            imconvert -resize 128x128 -gravity center -extent 128x128 -background none "$file" "$file"
+            convert -resize 128x128 -gravity center -extent 128x128 -background none "$file" "$file"
         fi
 
         # optmize images

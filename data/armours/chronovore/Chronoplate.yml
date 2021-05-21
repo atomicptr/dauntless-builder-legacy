@@ -1,0 +1,19 @@
+name: Chronoplate
+description: Torso protection forged from Chronovore trophies.
+icon: /assets/icons/armours/chronovore/Chronoplate.png
+type: Torso
+strength: Radiant
+weakness: Umbral
+cells: Technique
+resistance:
+  0: 25
+  1: 30
+perks:
+  - name: Grace
+    value: 2
+    from: 0
+    to: 0
+  - name: Grace
+    value: 3
+    from: 1
+    to: 1
