@@ -1,0 +1,19 @@
+name: Timeweave Gauntlets
+description: Arms protection, part of the Timeweave set.
+icon: /assets/icons/armours/timeweave/TimeweaveGauntlets.png
+type: Arms
+strength: Radiant
+weakness: Umbral
+cells: Technique
+resistance:
+  0: 20
+  1: 30
+perks:
+  - name: Overpower
+    value: 2
+    from: 0
+    to: 0
+  - name: Overpower
+    value: 3
+    from: 1
+    to: 1

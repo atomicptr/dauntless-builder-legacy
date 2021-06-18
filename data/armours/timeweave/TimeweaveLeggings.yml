@@ -1,0 +1,19 @@
+name: Timeweave Leggings
+description: Leg and foot protection, part of the Timeweave set.
+icon: /assets/icons/armours/timeweave/TimeweaveLeggings.png
+type: Legs
+strength: Radiant
+weakness: Umbral
+cells: Power
+resistance:
+  0: 20
+  1: 30
+perks:
+  - name: Catalyst
+    value: 2
+    from: 0
+    to: 0
+  - name: Catalyst
+    value: 3
+    from: 1
+    to: 1
