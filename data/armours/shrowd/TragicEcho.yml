@@ -9,6 +9,15 @@ rarity: exotic
 resistance:
   0: 20
   1: 30
+perks:
+  - name: Rage
+    value: 2
+    from: 0
+    to: 0
+  - name: Rage
+    value: 3
+    from: 1
+    to: 1
 unique_effects:
   - name: TragicEchoDamageIncrease
     description: Upon your first death, become a shadow clone that deals 100% increased damage for 15 seconds.

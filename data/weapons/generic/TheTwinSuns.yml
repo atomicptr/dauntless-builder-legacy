@@ -4,11 +4,20 @@ icon: /assets/icons/weapons/generic/TheTwinSuns.png
 type: Repeater
 damage: Slashing
 elemental: null
-cells: [Technique, Mobility]
+cells: [Technique, Prismatic]
 rarity: exotic
 power:
   0: 100
   1: 120
+perks:
+  - name: Evasive Fury
+    value: 2
+    from: 0
+    to: 0
+  - name: Evasive Fury
+    value: 3
+    from: 1
+    to: 1
 unique_effects:
   - name: TwinSunsBarrel
     icon: /assets/icons/parts/repeaters/specials/TheTwinSuns.png

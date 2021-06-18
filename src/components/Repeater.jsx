@@ -9,6 +9,7 @@ import BuildModel from "../models/BuildModel";
 import RepeaterPart from "./RepeaterPart";
 import ItemUtility from "../utility/ItemUtility";
 import UniqueEffects from "./UniqueEffects";
+import PerkString from "./PerkString";
 
 export default class Repeater extends React.Component {
     constructor(props, context) {
@@ -107,6 +108,13 @@ export default class Repeater extends React.Component {
                             <div className="stat-data">
                                 <strong>Power</strong>: {this.getTotalPower()}
                             </div>
+                            {this.props.item.perks ?
+                                <PerkString perks={
+                                    BuildModel.getAvailablePerksByLevel(this.props.item.name,
+                                        ItemUtility.itemType(this.props.item.type),
+                                        this.props.level
+                                    )
+                                } /> : null}
                         </div>
                     </div>
                     <CellGroup

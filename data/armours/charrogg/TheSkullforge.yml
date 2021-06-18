@@ -9,6 +9,15 @@ rarity: exotic
 resistance:
   0: 10
   1: 30
+perks:
+  - name: Molten
+    value: 2
+    from: 0
+    to: 0
+  - name: Molten
+    value: 3
+    from: 1
+    to: 1
 unique_effects:
   - name: DamageStaminaShield
     description: 1.5% of all damage dealt becomes a stamina shield (max 50) that depletes first when spending stamina. Depletes slowly after 5 seconds not dealing damage.
