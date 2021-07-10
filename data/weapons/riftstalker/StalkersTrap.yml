@@ -9,11 +9,11 @@ power:
   0: 60
   1: 120
 perks:
-  - name: Wild Frenzy
+  - name: Assassin's Frenzy
     value: 2
     from: 0
     to: 0
-  - name: Wild Frenzy
+  - name: Assassin's Frenzy
     value: 3
     from: 1
     to: 1

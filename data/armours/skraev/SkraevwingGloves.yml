@@ -9,11 +9,11 @@ resistance:
   0: 15
   1: 30
 perks:
-  - name: Iceborne
+  - name: Aetheric Evasion
     value: 2
     from: 0
     to: 0
-  - name: Iceborne
+  - name: Aetheric Evasion
     value: 3
     from: 1
     to: 1

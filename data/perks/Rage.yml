@@ -1,23 +1,23 @@
 name: Rage
-description: Increases your damage when your health is low.
+description: When you take damage, increases your damage.
 type: Power
 key: Rage
 effects:
   1:
-    description: When under 50% health, deal +5% damage
-    value: 1.05
+    description: When you take damage, deal +20% increased damage for 15 seconds.
+    value: 1.2
   2:
-    description: When under 50% health, deal +8% damage
-    value: 1.08
+    description: When you take damage, deal +20% increased damage for 20 seconds.
+    value: 1.2
   3:
-    description: When under 50% health, deal +12% damage
-    value: 1.12
+    description: When you take damage, deal +20% increased damage for 25 seconds.
+    value: 1.2
   4:
-    description: When under 50% health, deal +16% damage
-    value: 1.16
+    description: When you take damage, deal +20% increased damage for 30 seconds.
+    value: 1.2
   5:
-    description: When under 50% health, deal +20% damage
+    description: When you take damage, deal +20% increased damage for 40 seconds.
     value: 1.2
   6:
-    description: When under 50% health, deal +25% damage
-    value: 1.25
+    description: When you take damage, deal +20% increased damage for 50 seconds.
+    value: 1.2

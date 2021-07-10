@@ -9,11 +9,11 @@ resistance:
   0: 5
   1: 30
 perks:
-  - name: Rage
+  - name: Tenacious
     value: 1
     from: 0
     to: 0
-  - name: Rage
+  - name: Tenacious
     value: 3
     from: 1
     to: 1

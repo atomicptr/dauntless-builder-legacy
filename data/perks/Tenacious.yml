@@ -13,11 +13,11 @@ effects:
     description: ["For every 100 current HP, gain 1% bonus damage", null]
     value: [0.01, null]
   4:
-    description: ["For every 100 current HP, gain 1.33% bonus damage", "For every 100 Shield gain 1% bonus critical strike chance"]
-    value: [0.0133, 0.01]
+    description: ["For every 100 current HP, gain 1.33% bonus damage", null]
+    value: [0.0133, null]
   5:
-    description: ["For every 100 current HP, gain 1.66% bonus damage", "For every 75 Shield gain 1% bonus critical strike chance"]
-    value: [0.0166, 0.01]
+    description: ["For every 100 current HP, gain 1.66% bonus damage", null]
+    value: [0.0166, null]
   6:
-    description: ["For every 100 current HP, gain 2% bonus damage", "For every 50 Shield gain 1% bonus critical strike chance"]
-    value: [0.02, 0.01]
+    description: ["For every 100 current HP, gain 2% bonus damage", null]
+    value: [0.02, null]
