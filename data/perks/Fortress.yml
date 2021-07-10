@@ -4,20 +4,20 @@ type: Defence
 key: not_hit_health_shield
 effects:
   1:
-    description: Grants a 75 health shield after not getting hit for 10s
-    value: 75
+    description: Grants a 65 health shield after not getting hit for 10s. Stacks 3 times.
+    value: 65
   2:
-    description: Grants a 100 health shield after not getting hit for 10s
-    value: 100
+    description: Grants a 75 health shield after not getting hit for 10s. Stacks 3 times.
+    value: 75
   3:
-    description: Grants a 125 health shield after not getting hit for 10s
-    value: 125
+    description: Grants a 90 health shield after not getting hit for 10s. Stacks 3 times.
+    value: 90
   4:
-    description: Grants a 150 health shield after not getting hit for 10s
-    value: 150
+    description: Grants a 105 health shield after not getting hit for 10s. Stacks 3 times.
+    value: 105
   5:
-    description: Grants a 175 health shield after not getting hit for 10s
-    value: 175
+    description: Grants a 120 health shield after not getting hit for 10s. Stacks 3 times.
+    value: 120
   6:
-    description: Grants a 200 health shield after not getting hit for 10s
-    value: 200
+    description: Grants a 135 health shield after not getting hit for 10s. Stacks 3 times.
+    value: 135
