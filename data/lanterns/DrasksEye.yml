@@ -3,5 +3,5 @@ icon: /assets/icons/lanterns/DrasksEye.png
 description: null
 cells: Utility
 lantern_ability:
-  instant: Deal 30% increased damage for 6 seconds.
+  instant: null
   hold: Fires a lightning bolt in a direction that deals 150 Shock damage multiple times as it passes through enemies.

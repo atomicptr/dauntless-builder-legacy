@@ -56,7 +56,7 @@ function makeBuild(buildId) {
         weapon_part2_name: getString(partsType, idcounter++),
         weapon_part3_name: getString(partsType, idcounter++),
         weapon_part4_name: getString(partsType, idcounter++),
-        bond_weapon_name: getString(partsType, idcounter++),
+        bond_weapon_name: getString("Weapons", idcounter++),
         weapon_part6_name: getString(partsType, idcounter++),
         head_name: getString("Armours", idcounter++),
         head_level: numbers[idcounter++],
@@ -71,7 +71,8 @@ function makeBuild(buildId) {
         legs_level: numbers[idcounter++],
         legs_cell: getString("Cells", idcounter++),
         lantern_name: getString("Lanterns", idcounter++),
-        lantern_cell: getString("Cells", idcounter++)
+        lantern_cell: getString("Cells", idcounter++),
+        omnicell: getString("Omnicells", idcounter++),
     };
 
     return data;
@@ -90,77 +91,34 @@ function assertValid(data) {
     }
 }
 
-function assertUpgradeFrom2To3Works(v2str, v3str) {
-    let numbers = hashids.decode(v2str);
-
-    let data = {
-        __version: 3,
-        weapon_name: numbers[1],
-        weapon_level: numbers[2],
-        weapon_cell0: numbers[3],
-        weapon_cell1: numbers[4],
-        weapon_part1_name: numbers[5],
-        weapon_part2_name: numbers[7],
-        weapon_part3_name: numbers[9],
-        weapon_part4_name: numbers[11],
-        bond_weapon_name: numbers[13],
-        weapon_part6_name: numbers[15],
-        head_name: numbers[17],
-        head_level: numbers[18],
-        head_cell: numbers[19],
-        torso_name: numbers[20],
-        torso_level: numbers[21],
-        torso_cell: numbers[22],
-        arms_name: numbers[23],
-        arms_level: numbers[24],
-        arms_cell: numbers[25],
-        legs_name: numbers[26],
-        legs_level: numbers[27],
-        legs_cell: numbers[28],
-        lantern_name: numbers[29],
-        lantern_cell: numbers[30]
-    };
-
-    assert.equal(
-        v3str,
-        hashids.encode(Object.values(data))
-    );
-}
-
-
 describe("Dauntless Builder - Build IDs", () => {
     it("should be able to deserialize builds", () => {
         // a random build that someone send me :)
         assertValid([
-            ["5OUrCoCRnSBUVcztOTjToTeTaCWC12cOFoCBFYUOCqpFxtjCP2fAt01", [
-                {field: "weapon_name", value: "Brutality of Boreus"},
-                {field: "weapon_level", value: 15},
-                {field: "weapon_part1_name", value: "Mighty Landbreaker"},
-                {field: "weapon_part2_name", value: "Impulse Crown"},
-                {field: "weapon_cell0", value: "+3 Deconstruction Cell"},
-                {field: "weapon_cell1", value: "+3 Assassin's Vigour Cell"},
-                {field: "torso_name", value: "Boreal Resolve"},
-                {field: "torso_level", value: 15},
-                {field: "torso_cell", value: "+3 Iceborne Cell"},
-                {field: "arms_name", value: "Boreal Might"},
-                {field: "arms_level", value: 15},
-                {field: "arms_cell", value: "+3 Aetherhunter Cell"},
-                {field: "legs_name", value: "Boreal March"},
-                {field: "legs_level", value: 15},
-                {field: "legs_cell", value: "+3 Predator Cell"},
-                {field: "head_name", value: "Boreal Epiphany"},
-                {field: "head_level", value: 15},
-                {field: "head_cell", value: "+3 Aetheric Attunement Cell"},
+            ["0WFnMtnC5kSkBHEU3tmTaT4RFeTbzizC0nc4SgCAafVWT1C4eFWhXCB2HLtx0UX", [
+                {field: "weapon_name", value: "Ice Breakers"},
+                {field: "weapon_level", value: 1},
+                {field: "weapon_part1_name", value: "Titan's Crash"},
+                {field: "weapon_part2_name", value: "Cyclonic Strikeplate"},
+                {field: "weapon_cell0", value: "+3 Berserker Cell"},
+                {field: "weapon_cell1", value: "+3 Overpower Cell"},
+                {field: "head_name", value: "Dark Watch"},
+                {field: "head_level", value: 1},
+                {field: "head_cell", value: "+3 Knockout King Cell"},
+                {field: "torso_name", value: "Mantle of Thorns"},
+                {field: "torso_level", value: 1},
+                {field: "torso_cell", value: "+3 Conduit Cell"},
+                {field: "arms_name", value: "Malkarion's Grasp"},
+                {field: "arms_level", value: 1},
+                {field: "arms_cell", value: "+3 Assassin's Frenzy Cell"},
+                {field: "legs_name", value: "Volcanic Treads"},
+                {field: "legs_level", value: 1},
+                {field: "legs_cell", value: "+3 Overpower Cell"},
                 {field: "lantern_name", value: "Embermane's Rapture"},
-                {field: "lantern_cell", value: "+3 Aetheric Attunement Cell"}
+                {field: "lantern_cell", value: "+3 Conduit Cell"},
+                {field: "omnicell", value: "Discipline"},
             ]]
             // TODO: add more items / build variations etc
         ])
     });
-    it("should be able to upgrade build version 2 to 3", () => {
-        assertUpgradeFrom2To3Works(
-            "4WtbC3CQaSNU6cNTYtxT4TQT4T7TgTBTQTJTkCnCyRI4FjCzFWUyCorFqt0CN3tvtpd",
-            "5OUrCoCRnSBUVcztOTjToTeTaCWC12cOFoCBFYUOCqpFxtjCP2fAt01"
-        )
-    })
 });

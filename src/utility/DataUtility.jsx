@@ -50,6 +50,10 @@ class DataUtility {
         return this.getMapIdByValue(`Parts:${ItemUtility.formatWeaponTypeForParts(weaponType).capitalize()}`, value);
     }
 
+    getOmnicellId(value) {
+        return this.getMapIdByValue("Omnicells", value);
+    }
+
     getJSON(url) {
         return new Promise((resolve, reject) => {
             const request = new XMLHttpRequest();

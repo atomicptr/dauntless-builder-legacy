@@ -97,6 +97,11 @@ strong {
     height: unset !important;
 }
 
+.build-column .notification {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
 @media screen and (max-width: 1300px) {
     .hidden-on-large-screens {
         display: block;

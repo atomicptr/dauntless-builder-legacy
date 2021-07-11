@@ -3,5 +3,5 @@ icon: /assets/icons/lanterns/PangarsShine.png
 description: null
 cells: Utility
 lantern_ability:
-  instant: Restore 25% of your maximum stamina.
+  instant: null
   hold: Create a frost pillar in front of you that deals 960 Frost damage to nearby enemies over 12 seconds.

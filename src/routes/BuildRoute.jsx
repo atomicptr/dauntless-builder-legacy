@@ -9,7 +9,7 @@ import ReactTooltip from "react-tooltip";
 
 import Helmet from "react-helmet";
 
-import BuildModel from "../models/BuildModel";
+import BuildModel, {CURRENT_BUILD_ID} from "../models/BuildModel";
 import DataUtility from "../utility/DataUtility";
 
 import Item from "../components/Item";
@@ -27,6 +27,8 @@ import DarkModeToggle from "../components/DarkModeToggle";
 import WeaponPartSelectModal from "../components/WeaponPartSelectModal";
 import WeaponPart from "../components/WeaponPart";
 import BondSelectModal from "../components/BondSelectModal";
+import Omnicell from "../components/Omnicell";
+import OmnicellSelectModal from "../components/OmnicellSelectModal";
 
 export default class BuildRoute extends React.Component {
 
@@ -39,6 +41,7 @@ export default class BuildRoute extends React.Component {
             bondItemModalOpen: false,
             repeaterPartSelectModalOpen: false,
             weaponPartSelectModalOpen: false,
+            omnicellSelectModalOpen: false,
             modalData: {}
         };
     }
@@ -53,6 +56,11 @@ export default class BuildRoute extends React.Component {
 
         if (BuildModel.version(buildData) === 2) {
             buildData = BuildModel.convertVersion2To3(buildData);
+            window.history.replaceState({}, "Dauntless Builder: " + buildData, "/b/" + buildData);
+        }
+
+        if (BuildModel.version(buildData) === 3) {
+            buildData = BuildModel.convertVersion3To4(buildData);
             window.history.replaceState({}, "Dauntless Builder: " + buildData, "/b/" + buildData);
         }
 
@@ -104,6 +112,7 @@ export default class BuildRoute extends React.Component {
         build.head_cell = "+3 Aetheric Attunement Cell";
         build.lantern_name = "Embermane's Rapture";
         build.lantern_cell = "+3 Aetheric Attunement Cell";
+        build.omnicell = "Bastion";
 
         this.setState({
             build
@@ -276,6 +285,11 @@ export default class BuildRoute extends React.Component {
             build[key] = changes[key];
         }
 
+        // if you're looking at an old build and you change something its a new build!
+        if (this.state.build.__version !== CURRENT_BUILD_ID) {
+            build.__version = CURRENT_BUILD_ID;
+        }
+
         this.setState({build, itemSelectModalOpen: false}, () => {
             this.updateUrl();
             this.onModalClosed();
@@ -333,6 +347,21 @@ export default class BuildRoute extends React.Component {
     onBondItemModalClosed() {
         this.onModalClosed();
         this.setState({bondItemModalOpen: false, modalData: {}});
+    }
+
+    onOmnicellClicked() {
+        this.onModalOpen();
+        this.setState({omnicellSelectModalOpen: true, modalData: {}});
+    }
+
+    onOmnicellSelected(itemName) {
+        this.applyItemSelection({omnicell: itemName});
+        this.onOmnicellModalClosed();
+    }
+
+    onOmnicellModalClosed() {
+        this.onModalClosed();
+        this.setState({omnicellSelectModalOpen: false, modalData: {}});
     }
 
     renderWeapon() {
@@ -542,7 +571,17 @@ export default class BuildRoute extends React.Component {
                 </div>
             </div>
             <div className="columns">
-                <div className="column is-two-thirds">
+                <div className="column is-two-thirds build-column">
+                    {this.state.build.__version !== CURRENT_BUILD_ID ?
+                        <div className="notification is-warning is-light">
+                            {"You're looking at an outdated build and some items may have been changed or been removed."}
+                        </div> : null}
+
+                    <Omnicell
+                        parent={this}
+                        onItemClicked={this.onOmnicellClicked.bind(this)}
+                        selected={this.state.build.omnicell} />
+
                     {this.renderWeapon()}
                     {this.renderWeaponBond()}
                     {this.renderWeaponParts()}
@@ -636,6 +675,11 @@ export default class BuildRoute extends React.Component {
                 onClosed={this.onWeaponPartSelectModalClosed.bind(this)}
                 onSelected={this.onWeaponPartSelected.bind(this)}
                 isOpen={this.state.weaponPartSelectModalOpen} />
+            <OmnicellSelectModal
+                itemData={this.state.itemData}
+                onSelected={this.onOmnicellSelected.bind(this)}
+                onCanceled={this.onOmnicellModalClosed.bind(this)}
+                isOpen={this.state.omnicellSelectModalOpen} />
         </React.Fragment>;
     }
 }

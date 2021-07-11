@@ -3,5 +3,5 @@ icon: /assets/icons/lanterns/KoshaisBloom.png
 description: null
 cells: Utility
 lantern_ability:
-  instant: 10% of damage dealt will heal you for 8 seconds.
+  instant: null
   hold: Dash in a direction, deal 750 Terra damage to nearby enemies upon arrival.

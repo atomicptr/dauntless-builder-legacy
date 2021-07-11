@@ -3,5 +3,5 @@ icon: /assets/icons/lanterns/GenericLantern.png
 description: null
 cells: null
 lantern_ability:
-  instant: Grants a 50 hit point shield (doesn't stack)
+  instant: null
   hold: Disperses aether that allows the Slayer to track the Behemoth.

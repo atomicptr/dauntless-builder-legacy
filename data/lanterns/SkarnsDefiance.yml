@@ -3,5 +3,5 @@ icon: /assets/icons/lanterns/SkarnsDefiance.png
 description: null
 cells: Utility
 lantern_ability:
-  instant: Grants a 250 hit point shield for 12 seconds.
+  instant: null
   hold: Surrounds the slayer in swirling stone that deals 900 Terra damage to nearby enemies over 10 seconds.

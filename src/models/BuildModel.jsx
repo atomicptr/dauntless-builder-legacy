@@ -4,10 +4,13 @@ import ItemUtility from "../utility/ItemUtility";
 
 const hashids = new Hashids("spicy");
 
+export const CURRENT_BUILD_ID = 4;
+
 export default class BuildModel {
+
     constructor(data) {
         // set default parameter values
-        this.__version = 3;
+        this.__version = CURRENT_BUILD_ID;
         this.weapon_name = "";
         this.weapon_level = 0;
         this.weapon_part1_name = "";
@@ -32,6 +35,7 @@ export default class BuildModel {
         this.head_cell = "";
         this.lantern_name = "";
         this.lantern_cell = "";
+        this.omnicell = "";
 
         for(let key of Object.keys(data)) {
             this[key] = data[key];
@@ -72,7 +76,8 @@ export default class BuildModel {
             this.legs_level,
             DataUtility.getCellId(this.legs_cell),
             DataUtility.getLanternId(this.lantern_name),
-            DataUtility.getCellId(this.lantern_cell)
+            DataUtility.getCellId(this.lantern_cell),
+            DataUtility.getOmnicellId(this.omnicell),
         ];
 
         return hashids.encode.apply(hashids, params);
@@ -129,7 +134,8 @@ export default class BuildModel {
             legs_level: numbers[idcounter++],
             legs_cell: getString("Cells", idcounter++),
             lantern_name: getString("Lanterns", idcounter++),
-            lantern_cell: getString("Cells", idcounter++)
+            lantern_cell: getString("Cells", idcounter++),
+            omnicell: getString("Omnicells", idcounter++)
         };
 
         const maxLevel = (collection, itemName, value) => {
@@ -150,9 +156,8 @@ export default class BuildModel {
     }
 
     static convertVersion2To3(version2BuildString) {
-        let numbers = hashids.decode(version2BuildString);
-
-        let data = {
+        const numbers = hashids.decode(version2BuildString);
+        const data = {
             __version: 3,
             weapon_name: numbers[1],
             weapon_level: numbers[2],
@@ -178,6 +183,41 @@ export default class BuildModel {
             legs_cell: numbers[28],
             lantern_name: numbers[29],
             lantern_cell: numbers[30]
+        };
+
+        return hashids.encode(Object.values(data));
+    }
+
+    static convertVersion3To4(version3BuildString) {
+        const numbers = hashids.decode(version3BuildString);
+
+        const data = {
+            __version: 3, // keep version number because we want to display an "this is an old build" text
+            weapon_name: numbers[1],
+            weapon_level: numbers[2],
+            weapon_cell0: numbers[3],
+            weapon_cell1: numbers[4],
+            weapon_part1_name: numbers[5],
+            weapon_part2_name: numbers[6],
+            weapon_part3_name: numbers[7],
+            weapon_part4_name: numbers[8],
+            bond_weapon_name: numbers[9],
+            weapon_part6_name: numbers[10],
+            head_name: numbers[11],
+            head_level: numbers[12],
+            head_cell: numbers[13],
+            torso_name: numbers[14],
+            torso_level: numbers[15],
+            torso_cell: numbers[16],
+            arms_name: numbers[17],
+            arms_level: numbers[18],
+            arms_cell: numbers[19],
+            legs_name: numbers[20],
+            legs_level: numbers[21],
+            legs_cell: numbers[22],
+            lantern_name: numbers[23],
+            lantern_cell: numbers[24],
+            omnicell: 0,
         };
 
         return hashids.encode(Object.values(data));
@@ -313,6 +353,14 @@ export default class BuildModel {
         return null;
     }
 
+    static findOmnicell(name) {
+        if(name in DataUtility.data().omnicells) {
+            return DataUtility.data().omnicells[name];
+        }
+
+        return null;
+    }
+
     static findPart(weaponType, partType, partName) {
         if(partName in DataUtility.data().parts[ItemUtility.formatWeaponTypeForParts(weaponType)][partType]) {
             return DataUtility.data().parts[ItemUtility.formatWeaponTypeForParts(weaponType)][partType][partName];
@@ -429,7 +477,7 @@ export default class BuildModel {
 
     static empty() {
         return new BuildModel({
-            __version: 3,
+            __version: CURRENT_BUILD_ID,
             weapon_name: "",
             weapon_level: 0,
             weapon_part1_name: "",
@@ -454,11 +502,13 @@ export default class BuildModel {
             head_cell: "",
             lantern_name: "",
             lantern_cell: "",
+            omnicell: "",
         });
     }
 
     static isValid(str) {
         const data = hashids.decode(str);
-        return data.length === 25;
+        const validBuildLength = Object.keys(this.empty()).length;
+        return data.length === validBuildLength;
     }
 }
