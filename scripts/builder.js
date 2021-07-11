@@ -83,6 +83,8 @@ function build(path) {
                         type = "Weapons";
                     } else if (file.indexOf("/armours/") > 0) {
                         type = "Armours";
+                    } else if (file.indexOf("/omnicells/") > 0) {
+                        type = "Omnicells";
                     }
 
                     tryInsertToStringMap(type, doc.name);
@@ -123,6 +125,7 @@ Promise.all([
     build("data/perks/*.yml"),
     build("data/weapons/*/*.yml"),
     build("data/parts/*/*/*.yml"),
+    build("data/omnicells/*.yml"),
     build("data/misc.yml")
 ]).then(data => {
     let objectCounter = 0;
@@ -134,6 +137,7 @@ Promise.all([
         perks: data[objectCounter++],
         weapons: data[objectCounter++],
         parts: data[objectCounter++],
+        omnicells: data[objectCounter++],
         misc: data[objectCounter++]
     };
 
