@@ -6,42 +6,36 @@ effects:
   1:
     description: [
       Your Flask heals over 20 seconds, but for 20% increased healing.
-      While this heal is active, generate 8 Lantern Charge each second.,
-      null
+      While this heal is active generate 15 Lantern Charge each second.
     ]
-    value: [1.2, 8]
+    value: [1.2, 15]
   2:
     description: [
       Your Flask heals over 20 seconds, but for 20% increased healing.
-      While this heal is active, generate 16 Lantern Charge each second.,
-      null
+      While this heal is active generate 25 Lantern Charge each second.
     ]
-    value: [1.2, 16]
+    value: [1.2, 25]
   3:
     description: [
       Your Flask heals over 20 seconds, but for 20% increased healing.
-      While this heal is active, generate 25 Lantern Charge each second.,
-      null
+      While this heal is active generate 35 Lantern Charge each second.
     ]
-    value: [1.2, 25]
+    value: [1.2, 35]
   4:
     description: [
       Your Flask heals over 20 seconds, but for 20% increased healing.
-      While this heal is active, generate 37.5 Lantern Charge each second.,
-      null
+      While this heal is active generate 40 Lantern Charge each second.
     ]
-    value: [1.2, 37.5]
+    value: [1.2, 40]
   5:
     description: [
       Your Flask heals over 20 seconds, but for 20% increased healing.
-      While this heal is active, generate 50 Lantern Charge each second.,
-      null
+      While this heal is active generate 45 Lantern Charge each second.
     ]
-    value: [1.2, 50]
+    value: [1.2, 45]
   6:
     description: [
       Your Flask heals over 20 seconds, but for 20% increased healing.
-      While this heal is active, generate 75 Lantern Charge each second.,
-      null
+      While this heal is active generate 50 Lantern Charge each second.
     ]
-    value: [1.2, 75]
+    value: [1.2, 50]
