@@ -459,6 +459,10 @@ export default class BuildRoute extends React.Component {
     }
 
     getMetaTitle() {
+        if (this.state.build.omnicell && this.state.build.weapon_name) {
+            return this.state.build.weapon_name + " " + this.state.build.omnicell + " Build - Dauntless Builder";
+        }
+
         if(this.state.build.weapon_name) {
             return this.state.build.weapon_name + " Build - Dauntless Builder";
         }
