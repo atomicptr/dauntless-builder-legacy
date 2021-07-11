@@ -63,6 +63,7 @@ describe("Dauntless Builder Data", () => {
         it("should contain every perk", checkIfItemIsInDataFor("perks"));
         it("should contain every cell", checkIfItemIsInDataFor("cells", cellName =>
             Object.keys(data.cells[cellName].variants).every(variant => Object.values(localMap["Cells"]).indexOf(variant) > -1)));
+        it("should contain every omnicell", checkIfItemIsInDataFor("omnicells"));
     });
 
     describe("Validity of built data", () => {
@@ -78,15 +79,16 @@ describe("Dauntless Builder Data", () => {
             return dataWrapper;
         }
 
-        const checkIconsFor = field => {
+        const checkIconsFor = (field, alternativeIconFieldName) => {
+            const iconFieldName = alternativeIconFieldName ? alternativeIconFieldName : "icon";
             return () => {
                 const dataWrapper = mineDataFromField(data, field);
 
                 for(let itemName in dataWrapper) {
-                    let item = dataWrapper[itemName];
+                    const item = dataWrapper[itemName];
 
                     if(item.icon) {
-                        let iconPath = path.join(process.cwd(), item.icon);
+                        const iconPath = path.join(process.cwd(), item[iconFieldName]);
 
                         assert.ok(
                             fs.existsSync(iconPath),
@@ -116,7 +118,8 @@ describe("Dauntless Builder Data", () => {
         it("Repeater Grips should not have invalid icons", checkIconsFor("parts.repeater.grips"));
         it("Repeater Prisms should not have invalid icons", checkIconsFor("parts.repeater.prisms"));
         it("Repeater Mods should not have invalid icons", checkIconsFor("parts.repeater.mods"));
-        //it("Repeater Specials should not have invalid icons", checkIconsFor("parts.repeater.specials"));
+        it("Omnicells should not have invalid icons", checkIconsFor("omnicells"));
+        it("Omnicells should not have ability invalid icons", checkIconsFor("omnicells", "ability_icon"));
 
         const checkCellSlotsFor = field => {
             return () => {
@@ -261,6 +264,7 @@ describe("Dauntless Builder Data", () => {
         it("Repeater Chambers format should have a valid schema", checkIfHasValidSchema("parts.repeater.chambers"));
         it("Repeater Grips format should have a valid schema", checkIfHasValidSchema("parts.repeater.grips"));
         it("Repeater Prisms format should have a valid schema", checkIfHasValidSchema("parts.repeater.prisms"));
+        it("Omnicells format should have a valid schema", checkIfHasValidSchema("omnicells"));
 
         // validate specials on all weapons
         it("Axe Specials format should have a valid schema", checkIfHasValidSchema("parts.axe.specials", "parts.generic.specials"));
