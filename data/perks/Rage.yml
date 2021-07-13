@@ -4,20 +4,20 @@ type: Power
 key: Rage
 effects:
   1:
-    description: When you take damage, deal +20% increased damage for 15 seconds.
-    value: 1.2
+    description: Once every 50 seconds, when you take damage, deal +20% increased damage for 15 seconds.
+    value: 50
   2:
-    description: When you take damage, deal +20% increased damage for 20 seconds.
-    value: 1.2
+    description: Once every 40 seconds, when you take damage, deal +20% increased damage for 15 seconds.
+    value: 40
   3:
-    description: When you take damage, deal +20% increased damage for 25 seconds.
-    value: 1.2
+    description: Once every 30 seconds, when you take damage, deal +20% increased damage for 15 seconds.
+    value: 30
   4:
-    description: When you take damage, deal +20% increased damage for 30 seconds.
-    value: 1.2
+    description: Once every 25 seconds, when you take damage, deal +20% increased damage for 15 seconds.
+    value: 25
   5:
-    description: When you take damage, deal +20% increased damage for 40 seconds.
-    value: 1.2
+    description: Once every 20 seconds, when you take damage, deal +20% increased damage for 15 seconds.
+    value: 20
   6:
-    description: When you take damage, deal +20% increased damage for 50 seconds.
-    value: 1.2
+    description: Once every 15 seconds, when you take damage, deal +20% increased damage for 15 seconds.
+    value: 15
