@@ -1,5 +1,5 @@
 name: Sprinter
-description: Reduces max stamina. Increases movespeed and reduces sprint cost.
+description: Increases movespeed and reduces sprint cost.
 type: Mobility
 key: Sprinter
 effects:

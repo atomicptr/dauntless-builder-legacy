@@ -4,4 +4,4 @@ description: null
 cells: null
 lantern_ability:
   instant: null
-  hold: Disperses aether that allows the Slayer to track the Behemoth.
+  hold: Grants a 300 hit point shield that lasts 15 seconds.

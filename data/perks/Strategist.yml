@@ -1,5 +1,5 @@
 name: Strategist
-description: Reduces max health. Dodging through Behemoth attacks grants health shields to all Slayers.
+description: Dodging through Behemoth attacks grants health shields to all Slayers.
 type: Defence
 key: ShieldShare
 effects:

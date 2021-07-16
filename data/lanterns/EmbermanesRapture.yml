@@ -4,4 +4,4 @@ description: null
 cells: Utility
 lantern_ability:
   instant: null
-  hold: Create a fire ball in front of you that explodes after 5 seconds, dealing 850 Blaze damage to all nearby Behemoths.
+  hold: Create a fire ball in front of you that explodes after 4 seconds, dealing 3250 Blaze damage to all nearby enemies.

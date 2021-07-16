@@ -4,4 +4,4 @@ description: null
 cells: Utility
 lantern_ability:
   instant: null
-  hold: Surrounds the slayer in swirling stone that deals 900 Terra damage to nearby enemies over 10 seconds.
+  hold: Surrounds the slayer in swirling stone that deals 2500 Terra damage to nearby enemies for 10 seconds. Also generates 30 hit point shields per second that expire after 25 seconds. (Max 600 shields)

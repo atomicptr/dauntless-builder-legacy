@@ -2,7 +2,7 @@ name: Discipline
 icon: /assets/icons/omnicells/Discipline.png
 ability_icon: /assets/icons/omnicells/DisciplineAbility.png
 passive: >
-  Critical strike chance and damage increased by 10%. Healing is reduced bz 50%. Reaching max stacks of Flaming Fist
+  Critical strike chance and damage increased by 10%. Healing is reduced by 50%. Reaching max stacks of Flaming Fist
   makes you Disciplined, increasing your critical strike chance by 50% for 40 seconds but increased damage received
   by 100%. When Disciplined ends, stacks are cleared.
 active: >

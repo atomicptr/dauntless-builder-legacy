@@ -4,4 +4,4 @@ description: null
 cells: Utility
 lantern_ability:
   instant: null
-  hold: Fires a lightning bolt in a direction that deals 150 Shock damage multiple times as it passes through enemies.
+  hold: Fires a lightning bolt in a direction that deals 400 Shock damage multiple times as it passes through enemies.

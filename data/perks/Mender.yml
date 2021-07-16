@@ -1,5 +1,5 @@
 name: Mender
-description: Reduces healing from Slayer Flask. Using your flask restores other Slayers' health.
+description: Using your flask restores other Slayers' health.
 type: Utility
 key: HealGroup
 effects:

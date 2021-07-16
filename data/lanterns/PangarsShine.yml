@@ -4,4 +4,4 @@ description: null
 cells: Utility
 lantern_ability:
   instant: null
-  hold: Create a frost pillar in front of you that deals 960 Frost damage to nearby enemies over 12 seconds.
+  hold: Create a frost pillar in front of you that deals 2500 Frost damage to nearby enemies over 10 seconds.

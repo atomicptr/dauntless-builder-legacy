@@ -4,4 +4,4 @@ description: null
 cells: Utility
 lantern_ability:
   instant: null
-  hold: Creates an aura that grants nearby slayers 15% increased move speed and attack speed for 15 seconds.
+  hold: Creates an aura that grants nearby Slayers 15% increased move speed and attack speed for 10 seconds.

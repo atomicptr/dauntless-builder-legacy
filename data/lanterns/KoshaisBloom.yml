@@ -4,4 +4,4 @@ description: null
 cells: Utility
 lantern_ability:
   instant: null
-  hold: Dash in a direction, deal 750 Terra damage to nearby enemies upon arrival.
+  hold: Dash in a direction, deal 2250 Terra damage to nearby enemies upon arrival, and gain 15% lifesteal for 10 seconds.

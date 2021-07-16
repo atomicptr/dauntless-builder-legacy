@@ -1,23 +1,23 @@
 name: Zeal
-description: Increases Lantern tap ability effectiveness.
+description: Increases Lantern ability effectiveness.
 type: Utility
 key: LanternTapEffectiveness
 effects:
   1:
-    description: +15% Lantern tap ability effectiveness
+    description: +15% Lantern ability effectiveness.
     value: 1.15
   2:
-    description: +25% Lantern tap ability effectiveness
+    description: +25% Lantern ability effectiveness.
     value: 1.25
   3:
-    description: +35% Lantern tap ability effectiveness
+    description: +35% Lantern ability effectiveness.
     value: 1.35
   4:
-    description: +45% Lantern tap ability effectiveness
+    description: +45% Lantern ability effectiveness.
     value: 1.45
   5:
-    description: +55% Lantern tap ability effectiveness
+    description: +55% Lantern ability effectiveness.
     value: 1.55
   6:
-    description: +65% Lantern tap ability effectiveness
+    description: +65% Lantern ability effectiveness.
     value: 1.65

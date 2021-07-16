@@ -1,5 +1,5 @@
 name: Engineer
-description: Reduces healing from Slayer flask. Increases range of pylons.
+description: Increases range of pylons.
 type: Utility
 key: IncreasedPylonRange
 effects:
