@@ -1,0 +1,19 @@
+name: Thunderdeep's Turbines
+description: Leg and foot protection forged from Thunderdeep Drask trophies.
+icon: /assets/icons/armours/thunderdeep/ThunderdeepsTurbines.png
+type: Legs
+strength: Shock
+weakness: Terra
+cells: Technique
+resistance:
+  0: 20
+  1: 30
+perks:
+  - name: Zeal
+    value: 2
+    from: 0
+    to: 0
+  - name: Zeal
+    value: 3
+    from: 1
+    to: 1
