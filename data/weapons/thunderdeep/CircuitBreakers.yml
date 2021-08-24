@@ -1,0 +1,30 @@
+name: Circuit Breakers
+description: A Slayer's chain blades forged with Thunderdeep Drask trophies.
+icon: /assets/icons/weapons/thunderdeep/CircuitBreakers.png
+type: Chain Blades
+damage: Slashing
+elemental: Shock
+cells: [Power, Technique]
+power:
+  0: 80
+  1: 120
+perks:
+  - name: Aetheric Evasion
+    value: 2
+    from: 0
+    to: 0
+  - name: Aetheric Evasion
+    value: 3
+    from: 1
+    to: 1
+unique_effects:
+  - name: TailDamage
+    description: 20% damage vs Behemoth Tails
+    value: 1.2
+    from: 0
+    to: 0
+  - name: TailDamage
+    description: 30% damage vs Behemoth Tails
+    value: 1.3
+    from: 1
+    to: 1

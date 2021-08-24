@@ -1,0 +1,19 @@
+name: Thunderdeep's Capacitor
+description: Head protection forged from Thunderdeep Drask trophies.
+icon: /assets/icons/armours/thunderdeep/ThunderdeepsCapacitor.png
+type: Head
+strength: Shock
+weakness: Terra
+cells: Technique
+resistance:
+  0: 20
+  1: 30
+perks:
+  - name: Sharpened
+    value: 2
+    from: 0
+    to: 0
+  - name: Sharpened
+    value: 3
+    from: 1
+    to: 1
