@@ -4,20 +4,20 @@ type: Technique
 key: [aether_rush_duration, aether_rush_effect]
 effects:
   1:
-    description: [Increases the duration of your aether rush by 20%, null]
+    description: [Increases the duration of your aether rush by +20%, null]
     value: [1.2, null]
   2:
-    description: [Increases the duration of your aether rush by 30%, null]
+    description: [Increases the duration of your aether rush by +30%, null]
     value: [1.3, null]
   3:
-    description: [Increases the duration of your aether rush by 50%, null]
+    description: [Increases the duration of your aether rush by +50%, null]
     value: [1.5, null]
   4:
-    description: [Increases the duration of your aether rush by 50%, Increases the effect and duration of aether rush by 20%]
+    description: [Increases the duration of your aether rush by +50%, Increases the effects of aether rush by +20%]
     value: [1.5, 1.2]
   5:
-    description: [Increases the duration of your aether rush by 50%, Increases the effect and duration of aether rush by 30%]
+    description: [Increases the duration of your aether rush by +50%, Increases the effects of aether rush by +30%]
     value: [1.5, 1.3]
   6:
-    description: [Increases the duration of your aether rush by 50%, Increases the effect and duration of aether rush by 50%]
+    description: [Increases the duration of your aether rush by +50%, Increases the effects of aether rush by +50%]
     value: [1.5, 1.5]
