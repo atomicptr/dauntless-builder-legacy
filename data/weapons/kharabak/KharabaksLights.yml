@@ -1,0 +1,24 @@
+name: Kharabak's Lights
+description: A Slayer's repeaters forged with Kharabak trophies.
+icon: /assets/icons/weapons/kharabak/KharabaksLights.png
+type: Repeater
+damage: Slashing
+elemental: Terra
+cells: [Technique, Mobility]
+power:
+  0: 40
+  1: 120
+perks:
+  - name: Bladestorm
+    value: 1
+    from: 0
+    to: 0
+  - name: Bladestorm
+    value: 3
+    from: 1
+    to: 1
+unique_effects:
+  - name: KharabacBlades
+    description: >
+      Once charged, your next attack unleashes whirling blades that deal 25 terra damage. Additional attacks speed
+      up the blades, which explode at the end of the duration and deal damage based on blade speed.

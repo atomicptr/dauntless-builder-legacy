@@ -1,0 +1,22 @@
+name: Storm Shooters
+description: A Slayer's repeaters forged with Stormclaw trophies.
+icon: /assets/icons/weapons/stormclaw/StormShooters.png
+type: Repeater
+damage: Slashing
+elemental: Shock
+cells: [Power, Mobility]
+power:
+  0: 80
+  1: 120
+perks:
+  - name: Aetheric Attunement
+    value: 2
+    from: 0
+    to: 0
+  - name: Aetheric Attunement
+    value: 3
+    from: 1
+    to: 1
+unique_effects:
+  - name: DodgeReload
+    description: On dodging through a Behemoth attack, reload.

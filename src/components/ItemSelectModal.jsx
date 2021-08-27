@@ -334,7 +334,7 @@ export default class ItemSelectModal extends React.Component {
             for(let weaponName in this.props.itemData.weapons) {
                 let weapon = this.props.itemData.weapons[weaponName];
 
-                if(weapon.type && options.indexOf(weapon.type) == -1) {
+                if(weapon.type && options.indexOf(weapon.type) === -1) {
                     if(weapon.hidden && !window.isDeveloperModeEnabled()) {
                         continue;
                     }
@@ -357,9 +357,7 @@ export default class ItemSelectModal extends React.Component {
         }
 
         const elementOptions = this.getElementOptions();
-        const isRepeater = this.state.weaponTypeFilter !== null && this.state.weaponTypeFilter.value === "Repeater";
-        // armor or weapon that isn't repeater
-        if(this.isType("Armour") || (this.isType("Weapon") && !isRepeater)) {
+        if(this.isType("Armour") || (this.isType("Weapon"))) {
             fields.push(
                 <div key="elementFilter" className="field is-hidden-touch">
                     <Select

@@ -4,7 +4,7 @@ import ItemUtility from "../utility/ItemUtility";
 
 const hashids = new Hashids("spicy");
 
-export const CURRENT_BUILD_ID = 4;
+export const CURRENT_BUILD_ID = 5;
 
 export default class BuildModel {
 
@@ -16,9 +16,7 @@ export default class BuildModel {
         this.weapon_part1_name = "";
         this.weapon_part2_name = "";
         this.weapon_part3_name = "";
-        this.weapon_part4_name = "";
         this.bond_weapon_name = "";
-        this.weapon_part6_name = "";
         this.weapon_cell0 = "";
         this.weapon_cell1 = "";
         this.torso_name = "";
@@ -60,9 +58,7 @@ export default class BuildModel {
             DataUtility.getPartId(weaponType, this.weapon_part1_name),
             DataUtility.getPartId(weaponType, this.weapon_part2_name),
             DataUtility.getPartId(weaponType, this.weapon_part3_name),
-            DataUtility.getPartId(weaponType, this.weapon_part4_name),
             DataUtility.getWeaponId(this.bond_weapon_name),
-            DataUtility.getPartId(weaponType, this.weapon_part6_name),
             DataUtility.getArmourId(this.head_name),
             this.head_level,
             DataUtility.getCellId(this.head_cell),
@@ -117,10 +113,7 @@ export default class BuildModel {
             weapon_part1_name: getString(partsType, idcounter++),
             weapon_part2_name: getString(partsType, idcounter++),
             weapon_part3_name: getString(partsType, idcounter++),
-            weapon_part4_name: getString(partsType, idcounter++),
-            // part 5 was unused and is now used for bond weapons
             bond_weapon_name: getString("Weapons", idcounter++),
-            weapon_part6_name: getString(partsType, idcounter++),
             head_name: getString("Armours", idcounter++),
             head_level: numbers[idcounter++],
             head_cell: getString("Cells", idcounter++),
@@ -219,6 +212,51 @@ export default class BuildModel {
             lantern_cell: numbers[24],
             omnicell: 0,
         };
+
+        return hashids.encode(Object.values(data));
+    }
+
+    static convertVersion4To5(version4BuildString) {
+        const numbers = hashids.decode(version4BuildString);
+
+        const data = {
+            __version: 4, // keep version number because we want to display an "this is an old build" text
+            weapon_name: numbers[1],
+            weapon_level: numbers[2],
+            weapon_cell0: numbers[3],
+            weapon_cell1: numbers[4],
+            weapon_part1_name: numbers[5],
+            weapon_part2_name: numbers[6],
+            weapon_part3_name: numbers[7],
+            bond_weapon_name: numbers[9],
+            head_name: numbers[11],
+            head_level: numbers[12],
+            head_cell: numbers[13],
+            torso_name: numbers[14],
+            torso_level: numbers[15],
+            torso_cell: numbers[16],
+            arms_name: numbers[17],
+            arms_level: numbers[18],
+            arms_cell: numbers[19],
+            legs_name: numbers[20],
+            legs_level: numbers[21],
+            legs_cell: numbers[22],
+            lantern_name: numbers[23],
+            lantern_cell: numbers[24],
+            omnicell: numbers[25],
+        };
+
+        // replace old modular Repeater with Recruits Repeater
+        const modularRepeaterWeaponId = 27;
+        if (data.weapon_name === modularRepeaterWeaponId) {
+            data.weapon_name = 169; // Recruits Repeater
+            data.weapon_level = 0;
+            data.weapon_cell0 = 0;
+            data.weapon_cell1 = 0;
+            data.weapon_part1_name = numbers[6];
+            data.weapon_part2_name = numbers[7];
+            data.weapon_part3_name = numbers[10];
+        }
 
         return hashids.encode(Object.values(data));
     }
@@ -483,9 +521,7 @@ export default class BuildModel {
             weapon_part1_name: "",
             weapon_part2_name: "",
             weapon_part3_name: "",
-            weapon_part4_name: "",
             bond_weapon_name: "",
-            weapon_part6_name: "",
             weapon_cell0: "",
             weapon_cell1: "",
             torso_name: "",
@@ -508,7 +544,8 @@ export default class BuildModel {
 
     static isValid(str) {
         const data = hashids.decode(str);
-        const validBuildLength = Object.keys(this.empty()).length;
+        const validBuildLength = Object.keys(BuildModel.empty()).length;
+        console.log(str, data, validBuildLength, Object.keys(BuildModel.empty()), data.length);
         return data.length === validBuildLength;
     }
 }

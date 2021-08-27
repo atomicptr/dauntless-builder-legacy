@@ -2,5 +2,5 @@ name: Salvo Chamber
 description: The Salvo Chamber is part of a craftable weapon in Dauntless.
 icon: /assets/icons/parts/repeaters/chambers/SalvoChamber.png
 part_effect:
-  - Fires an explosive missile in a line, dealing 400 damage in an area upon impact.
+  - Fires an explosive missile in a line, dealing 450 damage in an area upon impact.
   - "Empowered: Fires 3 missiles in a spread."

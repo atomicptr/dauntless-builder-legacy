@@ -21,8 +21,6 @@ import FavoriteBuildsModel from "../models/FavoriteBuildsModel";
 import ItemUtility from "../utility/ItemUtility";
 import MenuDropdown from "../components/MenuDropdown";
 
-import Repeater from "../components/Repeater";
-import RepeaterPartSelectModal from "../components/RepeaterPartSelectModal";
 import DarkModeToggle from "../components/DarkModeToggle";
 import WeaponPartSelectModal from "../components/WeaponPartSelectModal";
 import WeaponPart from "../components/WeaponPart";
@@ -39,7 +37,6 @@ export default class BuildRoute extends React.Component {
             ready: false,
             itemSelectModalOpen: false,
             bondItemModalOpen: false,
-            repeaterPartSelectModalOpen: false,
             weaponPartSelectModalOpen: false,
             omnicellSelectModalOpen: false,
             modalData: {}
@@ -61,6 +58,11 @@ export default class BuildRoute extends React.Component {
 
         if (BuildModel.version(buildData) === 3) {
             buildData = BuildModel.convertVersion3To4(buildData);
+            window.history.replaceState({}, "Dauntless Builder: " + buildData, "/b/" + buildData);
+        }
+
+        if (BuildModel.version(buildData) === 4) {
+            buildData = BuildModel.convertVersion4To5(buildData);
             window.history.replaceState({}, "Dauntless Builder: " + buildData, "/b/" + buildData);
         }
 
@@ -166,23 +168,8 @@ export default class BuildRoute extends React.Component {
                 changes.weapon_part1_name = "";
                 changes.weapon_part2_name = "";
                 changes.weapon_part3_name = "";
-                changes.weapon_part4_name = "";
-                changes.weapon_part6_name = "";
             } else if(this.state.build.weapon.restrict_specials) {
                 changes.weapon_part1_name = "";
-            }
-
-            // switching to a non modular repeater clears all parts
-            if (this.state.build.weapon &&
-                this.state.build.weapon.type === "Repeater" &&
-                itemType === "Repeater" &&
-                item.name !== "Repeater"
-            ) {
-                changes.weapon_part1_name = "";
-                changes.weapon_part2_name = "";
-                changes.weapon_part3_name = "";
-                changes.weapon_part4_name = "";
-                changes.bond_weapon_name = "";
             }
 
             const changesKeys = [
@@ -309,21 +296,6 @@ export default class BuildRoute extends React.Component {
         this.setState({});
     }
 
-    openRepeaterPartSelectModal(partType, fieldName) {
-        this.onModalOpen();
-        this.setState({repeaterPartSelectModalOpen: true, modalData: {partType, fieldName}});
-    }
-
-    onRepeaterPartSelectModalClosed() {
-        this.onModalClosed();
-        this.setState({repeaterPartSelectModalOpen: false, modalData: {}});
-    }
-
-    onRepeaterPartSelected(fieldPrefix, part) {
-        this.onPartSelected(fieldPrefix, part);
-        this.onRepeaterPartSelectModalClosed();
-    }
-
     openWeaponPartSelectModal(weaponType, partType, fieldName) {
         this.onModalOpen();
         this.setState({weaponPartSelectModalOpen: true, modalData: {weaponType, partType, fieldName}});
@@ -367,19 +339,6 @@ export default class BuildRoute extends React.Component {
     renderWeapon() {
         const weapon = BuildModel.findWeapon(this.state.build.weapon_name);
 
-        if(weapon && ItemUtility.isRepeater(weapon)) {
-            return <Repeater
-                parent={this}
-                onItemClicked={this.onItemClicked.bind(this)}
-                onCellClicked={this.onCellClicked.bind(this)}
-                item={weapon}
-                level={this.state.build.weapon_level}
-                cells={[
-                    [this.state.build.weapon_cell0, BuildModel.findCellByVariantName(this.state.build.weapon_cell0)],
-                    [this.state.build.weapon_cell1, BuildModel.findCellByVariantName(this.state.build.weapon_cell1)],
-                ]} />;
-        }
-
         return <Item
             parent={this}
             onItemClicked={this.onItemClicked.bind(this)}
@@ -406,7 +365,9 @@ export default class BuildRoute extends React.Component {
 
         let parts = [];
 
-        if (weaponHasParts("specials") && weapon.restrict_specials !== true && !ItemUtility.isRepeater(weapon)) {
+        const isRepeater = weapon.type === "Repeater";
+
+        if (weaponHasParts("specials") && weapon.restrict_specials !== true && !isRepeater) {
             let slot = "weapon_part1_name";
 
             const part = BuildModel.findPart(weapon.type, "specials", this.state.build[slot]);
@@ -418,12 +379,28 @@ export default class BuildRoute extends React.Component {
             );
         }
 
-        if (weaponHasParts("mods")) {
-            let slot = "weapon_part2_name";
+        if (isRepeater) {
+            const chamberSlot = "weapon_part1_name";
+            const chamber = BuildModel.findPart(weapon.type, "chambers", this.state.build[chamberSlot]);
 
-            if (ItemUtility.isRepeater(weapon)) {
-                slot = "weapon_part6_name";
-            }
+            parts.push(
+                <WeaponPart key={weapon.type + "_chamber"} part={chamber} partType="chambers" onClicked={
+                    () => this.openWeaponPartSelectModal(weapon.type, "chambers", chamberSlot)
+                } />
+            );
+
+            const gripSlot = "weapon_part2_name";
+            const grip = BuildModel.findPart(weapon.type, "grips", this.state.build[gripSlot]);
+
+            parts.push(
+                <WeaponPart key={weapon.type + "_grip"} part={grip} partType="grips" onClicked={
+                    () => this.openWeaponPartSelectModal(weapon.type, "grips", gripSlot)
+                } />
+            );
+        }
+
+        if (weaponHasParts("mods")) {
+            let slot = isRepeater ? "weapon_part3_name" : "weapon_part2_name";
 
             const part = BuildModel.findPart(weapon.type, "mods", this.state.build[slot]);
 
@@ -666,13 +643,6 @@ export default class BuildRoute extends React.Component {
                 onSelected={this.onBondItemSelected.bind(this)}
                 onCanceled={this.onBondItemModalClosed.bind(this)}
                 isOpen={this.state.bondItemModalOpen} />
-            <RepeaterPartSelectModal
-                data={this.state.modalData}
-                itemData={this.state.itemData}
-                itemLevel={this.state.build.weapon_level}
-                onClosed={this.onRepeaterPartSelectModalClosed.bind(this)}
-                onSelected={this.onRepeaterPartSelected.bind(this)}
-                isOpen={this.state.repeaterPartSelectModalOpen} />
             <WeaponPartSelectModal
                 data={this.state.modalData}
                 itemData={this.state.itemData}

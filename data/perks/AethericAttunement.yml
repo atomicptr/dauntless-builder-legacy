@@ -4,20 +4,20 @@ type: Utility
 key: percent_lantern_charge
 effects:
   1:
-    description: Reduces the cooldown of your lantern ability by 10%
+    description: Increases the recharge rate of your lantern ability by 10%
     value: 1.1
   2:
-    description: Reduces the cooldown of your lantern ability by 15%
+    description: Increases the recharge rate of your lantern ability by 15%
     value: 1.15
   3:
-    description: Reduces the cooldown of your lantern ability by 20%
+    description: Increases the recharge rate of your lantern ability by 20%
     value: 1.2
   4:
-    description: Reduces the cooldown of your lantern ability by 30%
+    description: Increases the recharge rate of your lantern ability by 30%
     value: 1.3
   5:
-    description: Reduces the cooldown of your lantern ability by 40%
+    description: Increases the recharge rate of your lantern ability by 40%
     value: 1.4
   6:
-    description: Reduces the cooldown of your lantern ability by 50%
+    description: Increases the recharge rate of your lantern ability by 50%
     value: 1.5

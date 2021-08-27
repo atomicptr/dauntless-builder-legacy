@@ -1,5 +1,0 @@
-name: Ferocious Prism
-description: The Ferocious Prism is part of a craftable weapon in Dauntless.
-icon: /assets/icons/parts/repeaters/prisms/FerociousPrism.png
-part_effect:
-  - Periodically enter a rage, dealing +5% damage and gaining immunity to stagger. Taking damage causes you to enrage more quickly.

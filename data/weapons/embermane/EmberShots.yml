@@ -1,0 +1,30 @@
+name: Ember Shots
+description: A Slayer's repeaters forged with Embermane trophies.
+icon: /assets/icons/weapons/embermane/EmberShots.png
+type: Repeater
+damage: Slashing
+elemental: Blaze
+cells: [Technique, Mobility]
+power:
+  0: 20
+  1: 120
+perks:
+  - name: Evasive Fury
+    value: 1
+    from: 0
+    to: 0
+  - name: Evasive Fury
+    value: 3
+    from: 1
+    to: 1
+unique_effects:
+  - name: SixthHitBonusDamagePercent
+    description: The sixth hit in a row deals +100% part damage.
+    value: 100
+    from: 0
+    to: 0
+  - name: SixthHitBonusDamagePercent
+    description: The sixth hit in a row deals +250% part damage.
+    value: 250
+    from: 1
+    to: 1

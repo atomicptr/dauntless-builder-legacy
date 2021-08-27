@@ -1,0 +1,34 @@
+name: Valomyr's Instincts
+description: A Slayer's repeaters forged with Valomyr trophies.
+icon: /assets/icons/weapons/valomyr/ValomyrsInstincts.png
+type: Repeater
+damage: Slashing
+elemental: Radiant
+cells: [Power, Utility]
+power:
+  0: 60
+  1: 120
+perks:
+  - name: Aetherhunter
+    value: 2
+    from: 0
+    to: 0
+  - name: Aetherhunter
+    value: 3
+    from: 1
+    to: 1
+unique_effects:
+  - name: ValomyrCharge
+    description: >-
+      Once charged, your next attack will deal 550 bonus radiant damage.
+      Charge rate increases with current health.
+    value: 550
+    from: 0
+    to: 0
+  - name: ValomyrCharge
+    description: >-
+      Once charged, your next attack will deal 700 bonus radiant damage.
+      Charge rate increases with current health.
+    value: 700
+    from: 1
+    to: 1

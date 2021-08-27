@@ -1,9 +1,0 @@
-name: Twilight Barrel
-description: The Twilight Barrel is part of a craftable weapon in Dauntless.
-icon: /assets/icons/parts/repeaters/barrels/TwilightBarrel.png
-elemental: Umbral
-power:
-  0: 60
-  1: 120
-part_effect:
-  - Shots and abilities deal umbral damage.

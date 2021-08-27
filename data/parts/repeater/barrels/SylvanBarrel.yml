@@ -1,9 +1,0 @@
-name: Sylvan Barrel
-description: The Sylvan Barrel is part of a craftable weapon in Dauntless.
-icon: /assets/icons/parts/repeaters/barrels/SylvanBarrel.png
-elemental: Terra
-power:
-  0: 40
-  1: 120
-part_effect:
-  - Shots and abilities deal terra damage.

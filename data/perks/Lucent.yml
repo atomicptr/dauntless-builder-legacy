@@ -1,41 +1,35 @@
 name: Lucent
 description: Flask heals over time and generates lantern charge.
 type: Utility
-key: [increased_healing, flat_lantern_charge]
+key: Lucent
 effects:
   1:
-    description: [
-      Your Flask heals over 20 seconds, but for 20% increased healing.
-      While this heal is active generate 15 Lantern Charge each second.
-    ]
-    value: [1.2, 15]
+    description: |
+      Your Flask heals over 20 seconds, but for 20% more healing - while this heal is active, increase the recharge
+      rate of your Lantern ability by 15%.
+    value: 15
   2:
-    description: [
-      Your Flask heals over 20 seconds, but for 20% increased healing.
-      While this heal is active generate 25 Lantern Charge each second.
-    ]
-    value: [1.2, 25]
+    description: |
+      Your Flask heals over 20 seconds, but for 20% more healing - while this heal is active, increase the recharge
+      rate of your Lantern ability by 25%.
+    value: 25
   3:
-    description: [
-      Your Flask heals over 20 seconds, but for 20% increased healing.
-      While this heal is active generate 35 Lantern Charge each second.
-    ]
-    value: [1.2, 35]
+    description: |
+      Your Flask heals over 20 seconds, but for 20% more healing - while this heal is active, increase the recharge
+      rate of your Lantern ability by 35%.
+    value: 35
   4:
-    description: [
-      Your Flask heals over 20 seconds, but for 20% increased healing.
-      While this heal is active generate 40 Lantern Charge each second.
-    ]
-    value: [1.2, 40]
+    description: |
+      Your Flask heals over 20 seconds, but for 20% more healing - while this heal is active, increase the recharge
+      rate of your Lantern ability by 40%.
+    value: 40
   5:
-    description: [
-      Your Flask heals over 20 seconds, but for 20% increased healing.
-      While this heal is active generate 45 Lantern Charge each second.
-    ]
-    value: [1.2, 45]
+    description: |
+      Your Flask heals over 20 seconds, but for 20% more healing - while this heal is active, increase the recharge
+      rate of your Lantern ability by 40%.
+    value: 45
   6:
-    description: [
-      Your Flask heals over 20 seconds, but for 20% increased healing.
-      While this heal is active generate 50 Lantern Charge each second.
-    ]
-    value: [1.2, 50]
+    description: |
+      Your Flask heals over 20 seconds, but for 20% more healing - while this heal is active, increase the recharge
+      rate of your Lantern ability by 50%.
+    value: 50

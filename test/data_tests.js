@@ -113,10 +113,8 @@ describe("Dauntless Builder Data", () => {
         it("Aether Striker Mods should not have invalid icons", checkIconsFor("parts.aetherstrikers.mods"));
         it("Aether Striker Specials should not have invalid icons", checkIconsFor("parts.aetherstrikers.specials"));
         it("Armours should not have invalid icons", checkIconsFor("armours"));
-        it("Repeater Barrels should not have invalid icons", checkIconsFor("parts.repeater.barrels"));
         it("Repeater Chambers should not have invalid icons", checkIconsFor("parts.repeater.chambers"));
         it("Repeater Grips should not have invalid icons", checkIconsFor("parts.repeater.grips"));
-        it("Repeater Prisms should not have invalid icons", checkIconsFor("parts.repeater.prisms"));
         it("Repeater Mods should not have invalid icons", checkIconsFor("parts.repeater.mods"));
         it("Omnicells should not have invalid icons", checkIconsFor("omnicells"));
         it("Omnicells should not have ability invalid icons", checkIconsFor("omnicells", "ability_icon"));
@@ -185,7 +183,6 @@ describe("Dauntless Builder Data", () => {
 
         it("Weapons should not have invalid elements", checkElementsFor("weapons"));
         it("Armours should not have invalid elements", checkElementsFor("armours"));
-        it("Repeater Barrels should not have invalid elements", checkElementsFor("parts.repeater.barrels"));
 
         const checkPerksFor = (field, getPerksFunc) => {
             return () => {
@@ -260,10 +257,8 @@ describe("Dauntless Builder Data", () => {
         it("Lanterns format should have a valid schema", checkIfHasValidSchema("lanterns"));
         it("Cells format should have a valid schema", checkIfHasValidSchema("cells"));
         it("Perks format should have a valid schema", checkIfHasValidSchema("perks"));
-        it("Repeater Barrels format should have a valid schema", checkIfHasValidSchema("parts.repeater.barrels"));
         it("Repeater Chambers format should have a valid schema", checkIfHasValidSchema("parts.repeater.chambers"));
         it("Repeater Grips format should have a valid schema", checkIfHasValidSchema("parts.repeater.grips"));
-        it("Repeater Prisms format should have a valid schema", checkIfHasValidSchema("parts.repeater.prisms"));
         it("Omnicells format should have a valid schema", checkIfHasValidSchema("omnicells"));
 
         // validate specials on all weapons

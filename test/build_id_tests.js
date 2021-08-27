@@ -55,9 +55,7 @@ function makeBuild(buildId) {
         weapon_part1_name: getString(partsType, idcounter++),
         weapon_part2_name: getString(partsType, idcounter++),
         weapon_part3_name: getString(partsType, idcounter++),
-        weapon_part4_name: getString(partsType, idcounter++),
         bond_weapon_name: getString("Weapons", idcounter++),
-        weapon_part6_name: getString(partsType, idcounter++),
         head_name: getString("Armours", idcounter++),
         head_level: numbers[idcounter++],
         head_cell: getString("Cells", idcounter++),
@@ -95,7 +93,7 @@ describe("Dauntless Builder - Build IDs", () => {
     it("should be able to deserialize builds", () => {
         // a random build that someone send me :)
         assertValid([
-            ["0WFnMtnC5kSkBHEU3tmTaT4RFeTbzizC0nc4SgCAafVWT1C4eFWhXCB2HLtx0UX", [
+            ["a5cy2cZCKaHWPHMU6t3T6EUVLijC3eFMSdCPjSEbTbC14hkhvCnkHktePfP", [
                 {field: "weapon_name", value: "Ice Breakers"},
                 {field: "weapon_level", value: 1},
                 {field: "weapon_part1_name", value: "Titan's Crash"},

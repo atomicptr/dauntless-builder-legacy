@@ -1,0 +1,30 @@
+name: Sovereign's Decrees
+description: A Slayer's repeaters forged with Koshai trophies.
+icon: /assets/icons/weapons/koshai/SovereignsDecrees.png
+type: Repeater
+damage: Slashing
+elemental: Terra
+cells: [Power, Utility]
+power:
+  0: 60
+  1: 120
+perks:
+  - name: Sharpened
+    value: 1
+    from: 0
+    to: 0
+  - name: Sharpened
+    value: 3
+    from: 1
+    to: 1
+unique_effects:
+  - name: NoAttackDamage
+    description: After not dealing damage for 4 seconds, the next 4 attacks deal 50% increased damage.
+    value: 1.5
+    from: 0
+    to: 0
+  - name: NoAttackDamage
+    description: After not dealing damage for 4 seconds, the next 6 attacks deal 50% increased damage.
+    value: 1.5
+    from: 1
+    to: 1

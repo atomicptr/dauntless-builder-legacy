@@ -32,10 +32,6 @@ export default class ItemData extends React.Component {
                     {perkElement}
                 </React.Fragment>;
 
-                if(ItemUtility.isRepeater(this.props.item)) {
-                    stats = null;
-                }
-
                 break;
             case "Armour":
                 stats = <React.Fragment>

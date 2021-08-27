@@ -1,0 +1,17 @@
+name: Tainted Needles
+description: A Slayer's repeaters forged with Agarus trophies.
+icon: /assets/icons/weapons/agarus/TaintedNeedles.png
+type: Repeater
+damage: Slashing
+elemental: Terra
+cells: [Prismatic, Prismatic]
+power:
+  0: 100
+  1: 120
+bond:
+  elemental: Terra
+unique_effects:
+  - name: AgarusLegendaryAbility
+    icon: /assets/icons/abilities/AgarusLegendaryWeaponAbility.png
+    description: |
+      Legendary Ability: Revive all Slayers in a large radius, granting them healing over time and immunity to stagger. Usable while downed.

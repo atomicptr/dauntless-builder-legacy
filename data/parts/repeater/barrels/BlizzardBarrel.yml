@@ -1,9 +1,0 @@
-name: Blizzard Barrel
-description: The Blizzard Barrel is part of a craftable weapon in Dauntless.
-icon: /assets/icons/parts/repeaters/barrels/BlizzardBarrel.png
-elemental: Frost
-power:
-  0: 60
-  1: 120
-part_effect:
-  - Shots and abilities deal frost damage.
