@@ -1,5 +1,0 @@
-name: Frostbite Prism
-description: The Frostbite Prism is part of a craftable weapon in Dauntless.
-icon: /assets/icons/parts/repeaters/prisms/FrostbitePrism.png
-part_effect:
-  - Once charged, your next attack places a frost brand that deals 1,000 frost damage after 30 seconds. Slayers can destroy the brand, prematurely detonating it for 50% increased damage. Charges every 90 seconds.

@@ -1,0 +1,9 @@
+name: Recruit's Repeaters
+description: A set of Slayer's Repeaters designed for the novice.
+icon: /assets/icons/weapons/generic/RecruitsRepeaters.png
+type: Repeater
+damage: Slashing
+elemental: null
+cells: null
+power:
+  0: 10

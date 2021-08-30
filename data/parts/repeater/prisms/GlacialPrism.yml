@@ -1,5 +1,0 @@
-name: Glacial Prism
-description: The Glacial Prism is part of a craftable weapon in Dauntless.
-icon: /assets/icons/parts/repeaters/prisms/GlacialPrism.png
-part_effect:
-  - Evading drops 6 Ice Mines on a 30 second cooldown.

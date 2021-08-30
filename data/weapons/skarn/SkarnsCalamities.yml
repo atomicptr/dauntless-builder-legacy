@@ -1,0 +1,30 @@
+name: Skarn's Calamities
+description: A Slayer's repeaters forged with Skarn trophies.
+icon: /assets/icons/weapons/skarn/SkarnsCalamities.png
+type: Repeater
+damage: Slashing
+elemental: Terra
+cells: [Power, Defence]
+power:
+  0: 20
+  1: 120
+perks:
+  - name: Weighted Strikes
+    value: 1
+    from: 0
+    to: 0
+  - name: Weighted Strikes
+    value: 3
+    from: 1
+    to: 1
+unique_effects:
+  - name: DamageChanceStackShield
+    description: After using your lantern ability, grant a stackable 175 health shield that lasts for 25 seconds (max 600 shields).
+    value: 175
+    from: 0
+    to: 0
+  - name: DamageChanceStackShield
+    description: After using your lantern ability, grant a stackable 250 health shield that lasts for 25 seconds (max 600 shields).
+    value: 250
+    from: 1
+    to: 1

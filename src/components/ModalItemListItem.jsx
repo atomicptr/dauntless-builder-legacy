@@ -12,10 +12,6 @@ export default class ModalItemListItem extends React.Component {
             return 0;
         }
 
-        if(ItemUtility.isRepeater(this.props.item)) {
-            return 0;
-        }
-
         const itemType = ItemUtility.itemType(this.props.item.type);
 
         const level = Math.min(

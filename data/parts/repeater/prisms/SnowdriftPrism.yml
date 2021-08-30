@@ -1,7 +1,0 @@
-name: Snowdrift Prism
-description: The Snowdrift Prism is part of a craftable weapon in Dauntless.
-icon: /assets/icons/parts/repeaters/prisms/SnowdriftPrism.png
-part_effect:
-  - > 
-    The last 4 shots in your magazine generate a Frost Sprite that cause your next attack
-    to deal 60 bonus damage and minor frost damage. Max 4 Sprites.

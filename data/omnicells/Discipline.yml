@@ -6,5 +6,5 @@ passive: >
   makes you Disciplined, increasing your critical strike chance by 50% for 40 seconds but increased damage received
   by 100%. When Disciplined ends, stacks are cleared.
 active: >
-  Perform a quick parrying punch that deals 300 blaze damage. Parrying an attack does +300% damage and grants a stack
-  of Flaming Fist, giving +6% critical strike damage. This can stack 4 times. 15 second cooldown.
+  Perform a quick parrying punch that deals 200 blaze damage. Parrying an attack does +300% damage and grants a stack
+  of Flaming Fist, giving +4% critical strike damage. This can stack 4 times. 15 second cooldown.

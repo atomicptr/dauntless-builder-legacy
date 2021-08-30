@@ -1,0 +1,30 @@
+name: Nayzaga's Spikes
+description: A Slayer's repeaters forged with Nayzaga trophies.
+icon: /assets/icons/weapons/nayzaga/NayzagasSpikes.png
+type: Repeater
+damage: Slashing
+elemental: Shock
+cells: [Technique, Utility]
+power:
+  0: 40
+  1: 120
+perks:
+  - name: Savagery
+    value: 1
+    from: 0
+    to: 0
+  - name: Savagery
+    value: 3
+    from: 1
+    to: 1
+unique_effects:
+  - name: StaggerHeal
+    description: When you fire the last shot in your magazine, heal for 15.
+    value: 15
+    from: 0
+    to: 0
+  - name: StaggerHeal
+    description: When you fire the last shot in your magazine, heal for 30.
+    value: 30
+    from: 1
+    to: 1

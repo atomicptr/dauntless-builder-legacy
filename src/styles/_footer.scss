@@ -11,11 +11,8 @@
     justify-content: space-around;
 
     a {
-        // dark backgrounds
         color: #FFF;
-
-        // bright backgrounds
-        // color: #2C2C2D;
+        text-shadow: 0 0 10px black;
 
         transition: color 0.3s ease;
 

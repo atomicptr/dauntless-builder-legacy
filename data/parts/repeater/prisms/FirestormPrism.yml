@@ -1,5 +1,0 @@
-name: Firestorm Prism
-description: The Firestorm Prism is part of a craftable weapon in Dauntless.
-icon: /assets/icons/parts/repeaters/prisms/FirestormPrism.png
-part_effect:
-  - After spending 150 stamina, next attack emits a cone of flame that deals +200 blaze damage to each unique target within the cone.

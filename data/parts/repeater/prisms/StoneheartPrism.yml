@@ -1,5 +1,0 @@
-name: Stoneheart Prism
-description: The Stoneheart Prism is part of a craftable weapon in Dauntless.
-icon: /assets/icons/parts/repeaters/prisms/StoneheartPrism.png
-part_effect:
-  - Dealing damage has a chance (based on damage dealt) to grant a stacking, refreshing 40 health shield that lasts for 12s.

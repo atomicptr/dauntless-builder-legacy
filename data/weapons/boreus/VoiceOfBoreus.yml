@@ -1,0 +1,34 @@
+name: Voice of Boreus
+description: A Slayer's repeaters forged with Boreus trophies.
+icon: /assets/icons/weapons/boreus/VoiceOfBoreus.png
+type: Repeater
+damage: Slashing
+elemental: Frost
+cells: [Power, Defence]
+power:
+  0: 20
+  1: 120
+perks:
+  - name: Conditioning
+    value: 1
+    from: 0
+    to: 0
+  - name: Conditioning
+    value: 3
+    from: 1
+    to: 1
+unique_effects:
+  - name: BoreusFrostSprite
+    description: >-
+      The last 4 shots in your magazine generate Frost Sprites that grant your next attack +30 damage
+      and minor frost damage (Max 4 Sprites)
+    value: 30
+    from: 0
+    to: 0
+  - name: BoreusFrostSprite
+    description: >-
+      The last 4 shots in your magazine generate Frost Sprites that grant your next attack +60 damage
+      and minor frost damage (Max 4 Sprites)
+    value: 60
+    from: 1
+    to: 1

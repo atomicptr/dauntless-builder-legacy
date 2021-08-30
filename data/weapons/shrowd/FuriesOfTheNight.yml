@@ -1,0 +1,24 @@
+name: Furies of the Night
+description: A Slayer's repeaters forged with Shrowd trophies.
+icon: /assets/icons/weapons/shrowd/FuriesOfTheNight.png
+type: Repeater
+damage: Slashing
+elemental: Umbral
+cells: [Power, Utility]
+power:
+  0: 80
+  1: 120
+perks:
+  - name: Cunning
+    value: 2
+    from: 0
+    to: 0
+  - name: Cunning
+    value: 3
+    from: 1
+    to: 1
+unique_effects:
+  - name: LowHpDamage
+    description: When under 20% health, deal +50% damage
+    value: 1.5
+

@@ -1,0 +1,18 @@
+name: Cryo-Cannons
+description: A Slayer's repeaters forged with Urska trophies.
+icon: /assets/icons/weapons/urska/CryoCannons.png
+type: Repeater
+damage: Slashing
+elemental: Frost
+cells: [Prismatic, Prismatic]
+power:
+  0: 100
+  1: 120
+bond:
+  elemental: Frost
+unique_effects:
+  - name: UrskaLegendaryAbility
+    icon: /assets/icons/abilities/UrskaLegendaryWeaponAbility.png
+    description: |
+      Legendary Ability: Create a Frost Shield that blocks hostile projectiles for 6 seconds. Damages and chills
+      Behemoths that contact it (can interrupt).

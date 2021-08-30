@@ -1,0 +1,30 @@
+name: Inferno's Roar
+description: A Slayer's repeaters forged with Hellion trophies.
+icon: /assets/icons/weapons/hellion/InfernosRoar.png
+type: Repeater
+damage: Slashing
+elemental: Blaze
+cells: [Power, Power]
+power:
+  0: 80
+  1: 120
+perks:
+  - name: Overpower
+    value: 2
+    from: 0
+    to: 0
+  - name: Overpower
+    value: 3
+    from: 1
+    to: 1
+unique_effects:
+  - name: BlazeDamageOnNthHit
+    description: The tenth hit in a row deals +150 damage and major blaze damage
+    value: 100
+    from: 0
+    to: 0
+  - name: BlazeDamageOnNthHit
+    description: The tenth hit in a row deals +250 damage and major blaze damage
+    value: 250
+    from: 1
+    to: 1

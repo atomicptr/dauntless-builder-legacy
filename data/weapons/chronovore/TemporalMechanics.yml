@@ -1,0 +1,19 @@
+name: Temporal Mechanics
+description: A Slayer's repeaters forged with Chronovore trophies.
+icon: /assets/icons/weapons/chronovore/TemporalMechanics.png
+type: Repeater
+damage: Slashing
+elemental: Radiant
+cells: [Prismatic, Prismatic]
+power:
+  0: 100
+  1: 120
+bond:
+  elemental: Radiant
+unique_effects:
+  - name: ChronovoreLegendaryAbility
+    icon: /assets/icons/abilities/ChronovoreLegendaryWeaponAbility.png
+    description: |
+      Legendary Ability: Rewind to your position 3 seconds prior to activation. Restores health and stamina lost
+      in that time, and removes debuffs. Become invulnerable and gain increased move speed for 6 seconds. Usable
+      while downed. Resets on Behemoth kill or after 90 seconds.

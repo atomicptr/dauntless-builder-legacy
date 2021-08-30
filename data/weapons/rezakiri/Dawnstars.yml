@@ -1,0 +1,23 @@
+name: Dawnstars
+description: A Slayer's repeaters forged with Rezakiri trophies.
+icon: /assets/icons/weapons/rezakiri/Dawnstars.png
+type: Repeater
+damage: Slashing
+elemental: Radiant
+cells: [Technique, Utility]
+power:
+  0: 80
+  1: 120
+perks:
+  - name: Cunning
+    value: 2
+    from: 0
+    to: 0
+  - name: Cunning
+    value: 3
+    from: 1
+    to: 1
+unique_effects:
+  - name: HitTwice
+    description: 8% chance for attacks to Hit twice.
+    value: 0.08

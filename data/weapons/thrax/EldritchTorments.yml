@@ -1,0 +1,18 @@
+name: Eldritch Torments
+description: A Slayer's repeaters forged with Thrax trophies.
+icon: /assets/icons/weapons/thrax/EldritchTorments.png
+type: Repeater
+damage: Slashing
+elemental: Umbral
+cells: [Prismatic, Prismatic]
+power:
+  0: 100
+  1: 120
+bond:
+  elemental: Umbral
+unique_effects:
+  - name: ThraxLegendaryAbility
+    icon: /assets/icons/abilities/ThraxLegendaryWeaponAbility.png
+    description: >-
+      Legendary Ability: Deal umbral damage to nearby enemies and teleport high into the sky. Then choose a spot
+      to slam down on to, dealing additional umbral damage. Usable once, but resets on Behemoth kill.

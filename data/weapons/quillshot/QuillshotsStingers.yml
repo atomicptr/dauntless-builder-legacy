@@ -1,0 +1,19 @@
+name: Quillshot's Stingers
+description: A Slayer's repeaters forged with Quillshot trophies.
+icon: /assets/icons/weapons/quillshot/QuillshotsStingers.png
+type: Repeater
+damage: Slashing
+elemental: null
+cells: [Power, Defence]
+power:
+  0: 20
+  1: 120
+perks:
+  - name: Acidic
+    value: 1
+    from: 0
+    to: 0
+  - name: Acidic
+    value: 3
+    from: 1
+    to: 1

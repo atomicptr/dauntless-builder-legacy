@@ -2,5 +2,5 @@ name: Marksman Chamber
 description: The Marksman Chamber is part of a craftable weapon in Dauntless.
 icon: /assets/icons/parts/repeaters/chambers/MarksmanChamber.png
 part_effect:
-  - Fires a shot in a line, dealing 250 damage to the first Behemoth hit. If a part is struck, that part takes 40% more damage from Shots for 10 seconds.
+  - Fires a shot in a line, dealing 350 damage to the first Behemoth hit. If a part is struck, that part takes 40% more damage from Shots for 10 seconds.
   - "Empowered: Damage bonus increased to 80%, and 25% to all allies."

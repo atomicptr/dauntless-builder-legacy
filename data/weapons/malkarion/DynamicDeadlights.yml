@@ -1,0 +1,16 @@
+name: Dynamic Deadlights
+description: A Slayer's repeaters forged with Malkarion trophies.
+icon: /assets/icons/weapons/malkarion/DynamicDeadlights.png
+type: Repeater
+damage: Slashing
+elemental: Shock
+cells: [Prismatic, Prismatic]
+power:
+  0: 100
+  1: 120
+bond:
+  elemental: Shock
+unique_effects:
+  - name: MalkarionLegendaryAbility
+    icon: /assets/icons/abilities/MalkarionLegendaryWeaponAbility.png
+    description: "Legendary Ability: Teleport to a Behemoth, dealing Shock damage. Usable once, but resets on Behemoth kill."

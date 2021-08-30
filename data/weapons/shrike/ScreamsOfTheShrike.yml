@@ -1,0 +1,30 @@
+name: Screams of the Shrike
+description: A Slayer's repeaters forged with Shrike trophies.
+icon: /assets/icons/weapons/shrike/ScreamsOfTheShrike.png
+type: Repeater
+damage: Slashing
+elemental: null
+cells: [Technique, Mobility]
+power:
+  0: 40
+  1: 120
+perks:
+  - name: Conditioning
+    value: 1
+    from: 0
+    to: 0
+  - name: Conditioning
+    value: 3
+    from: 1
+    to: 1
+unique_effects:
+  - name: DodgePartDamage
+    description: After dodging, your next attack deals +50 bonus damage and part damage
+    value: 50
+    from: 0
+    to: 0
+  - name: DodgePartDamage
+    description: After dodging, your next attack deals +100 bonus damage and part damage
+    value: 100
+    from: 1
+    to: 1
