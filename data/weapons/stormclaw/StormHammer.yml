@@ -19,12 +19,12 @@ perks:
     to: 1
 unique_effects:
   - name: DodgeReload
-    description: Reloads 1 hammer ammo after dodging through an attack
-    value: 1
+    description: After dodging through an attack, reload 2 aethercharged ammo
+    value: 2
     from: 0
     to: 0
   - name: DodgeReload
-    description: Reloads 3 hammer ammo after dodging through an attack
+    description: After dodging through an attack, reload 3 aethercharged ammo
     value: 3
     from: 1
     to: 1

@@ -20,15 +20,13 @@ perks:
 unique_effects:
   - name: BoreusFrostSprite
     description: >-
-      Using Pips generates 3 Frost Sprites that cause your next attack to deal
-      30 bonus damage and minor frost damage each. Max 4 Sprites.
+      After using your Special, generate 3 Frost Sprites that grant your next attack +30 damage and minor frost damage (Max 4 Sprites)
     value: 30
     from: 0
     to: 0
   - name: BoreusFrostSprite
     description: >-
-      Using Pips generates 3 Frost Sprites that cause your next attack to deal
-      60 bonus damage and minor frost damage each. Max 4 Sprites.
+      After using your Special, generate 3 Frost Sprites that grant your next attack +60 damage and minor frost damage (Max 4 Sprites)
     value: 60
     from: 1
     to: 1

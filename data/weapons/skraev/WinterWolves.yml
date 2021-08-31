@@ -19,10 +19,10 @@ perks:
     to: 1
 unique_effects:
   - name: IceMines
-    description: Evading drops 1 Ice Mines on a 30 second cooldown.
+    description: After dodging, drop 2 Ice Mines around you on a 30 second cooldown that deal 300 damage.
     from: 0
     to: 0
   - name: IceMines
-    description: Evading drops 3 Ice Mines on a 30 second cooldown.
+    description: After dodging, drop 3 Ice Mines around you on a 30 second cooldown that deal 300 damage.
     from: 1
     to: 1

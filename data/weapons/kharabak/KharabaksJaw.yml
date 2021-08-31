@@ -22,3 +22,13 @@ unique_effects:
     description: >
       Once charged, your next attack unleashes whirling blades that deal 25 terra damage. Additional attacks speed
       up the blades, which explode at the end of the duration and deal damage based on blade speed.
+    value: 25
+    from: 0
+    to: 0
+  - name: KharabacBlades
+    description: >
+      Once charged, your next attack unleashes whirling blades that deal 75 terra damage. Additional attacks speed
+      up the blades, which explode at the end of the duration and deal damage based on blade speed.
+    value: 75
+    from: 1
+    to: 1

@@ -20,15 +20,13 @@ perks:
 unique_effects:
   - name: BoreusFrostSprite
     description: >-
-      The last 4 shots in your magazine generate Frost Sprites that grant your next attack +30 damage
-      and minor frost damage (Max 4 Sprites)
+      The last 4 shots in your magazine generates Frost Sprites that grant your next attack +30 damage and minor frost damage (Max 4 Sprites)
     value: 30
     from: 0
     to: 0
   - name: BoreusFrostSprite
     description: >-
-      The last 4 shots in your magazine generate Frost Sprites that grant your next attack +60 damage
-      and minor frost damage (Max 4 Sprites)
+      The last 4 shots in your magazine generates Frost Sprites that grant your next attack +60 damage and minor frost damage (Max 4 Sprites)
     value: 60
     from: 1
     to: 1

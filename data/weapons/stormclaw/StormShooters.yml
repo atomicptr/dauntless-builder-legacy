@@ -19,4 +19,10 @@ perks:
     to: 1
 unique_effects:
   - name: DodgeReload
-    description: On dodging through a Behemoth attack, reload.
+    description: On dodging through a Behemoth attack, Reload.
+    from: 0
+    to: 0
+  - name: DodgeReload
+    description: On dodging through a Behemoth attack, Empowered Reload.
+    from: 1
+    to: 1

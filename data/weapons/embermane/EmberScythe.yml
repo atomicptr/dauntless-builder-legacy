@@ -19,12 +19,12 @@ perks:
     to: 1
 unique_effects:
   - name: FourthHitBonusDamage
-    description: The third hit in quick succession deals 100 bonus part damage.
+    description: The third hit in quick succession deals +100 bonus part damage.
     value: 100
     from: 0
     to: 0
   - name: FourthHitBonusDamage
-    description: The third hit in quick succession deals 250 bonus part damage.
+    description: The third hit in quick succession deals +250 bonus part damage.
     value: 250
     from: 1
     to: 1

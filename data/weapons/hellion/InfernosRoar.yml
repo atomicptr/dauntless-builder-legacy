@@ -20,11 +20,11 @@ perks:
 unique_effects:
   - name: BlazeDamageOnNthHit
     description: The tenth hit in a row deals +150 damage and major blaze damage
-    value: 100
+    value: 150
     from: 0
     to: 0
   - name: BlazeDamageOnNthHit
-    description: The tenth hit in a row deals +250 damage and major blaze damage
-    value: 250
+    description: The tenth hit in a row deals +225 damage and major blaze damage
+    value: 225
     from: 1
     to: 1

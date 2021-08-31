@@ -19,5 +19,12 @@ perks:
     to: 1
 unique_effects:
   - name: HitTwice
-    description: 8% chance for attacks to Hit twice.
+    description: 8% chance for attacks to hit twice.
     value: 0.08
+    from: 0
+    to: 0
+  - name: HitTwice
+    description: 12% chance for attacks to hit twice.
+    value: 0.12
+    from: 1
+    to: 1

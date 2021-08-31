@@ -19,12 +19,12 @@ perks:
     to: 1
 unique_effects:
   - name: DamageChanceStackShield
-    description: Grants a stackable 175 shield that lasts for 25 seconds (max 600 shields) after using your Lantern ability.
+    description: After using your lantern ability, grant a stackable 175 health shield that lasts for 25 seconds (max 600 shields).
     value: 175
     from: 0
     to: 0
   - name: DamageChanceStackShield
-    description: Grants a stackable 250 shield that lasts for 25 seconds (max 600 shields) after using your Lantern ability.
+    description: After using your lantern ability, grant a stackable 250 health shield that lasts for 25 seconds (max 600 shields).
     value: 250
     from: 1
     to: 1

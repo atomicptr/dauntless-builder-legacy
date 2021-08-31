@@ -19,12 +19,12 @@ perks:
     to: 1
 unique_effects:
   - name: WoundedPartsLifesteal
-    description: +3% lifesteal vs broken parts
-    value: 1.03
+    description: When Behemoth part is broken, heal for 100
+    value: 100
     from: 0
     to: 0
   - name: WoundedPartsLifesteal
-    description: +5% lifesteal vs broken parts
-    value: 1.05
+    description: When Behemoth part is broken, heal for 200
+    value: 200
     from: 1
     to: 1

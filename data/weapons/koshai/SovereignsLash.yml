@@ -19,12 +19,12 @@ perks:
     to: 1
 unique_effects:
   - name: NoAttackDamage
-    description: After not dealing damage for 4 seconds, the next 4 attacks deal 50% increased damage.
+    description: After not dealing damage for 4 seconds, your next 5 attacks deal +50% damage
     value: 1.5
     from: 0
     to: 0
   - name: NoAttackDamage
-    description: After not dealing damage for 4 seconds, the next 6 attacks deal 50% increased damage.
+    description: After not dealing damage for 4 seconds, your next 6 attacks deal +50% damage
     value: 1.5
     from: 1
     to: 1
