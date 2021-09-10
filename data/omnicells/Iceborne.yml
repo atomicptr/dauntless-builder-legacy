@@ -5,5 +5,5 @@ passive: >
   Increase max health by 100. Gain 1% lifesteal and 5% reduced damage, then again for every 150 missing health.
   Taking damage reduces cooldown of the Active Ability by 5 seconds (only once every 5 seconds).
 active: >
-  Throw an ice lance that does 350 frost damage, double damage if thrown at full health. Also prevents you from
+  Throw an ice lance that does 750 frost damage, double damage if thrown at full health. Also prevents you from
   being staggered and grants +10% lifesteal for 8 seconds. 60 second cooldown.
