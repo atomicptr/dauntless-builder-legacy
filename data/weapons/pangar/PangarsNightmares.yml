@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/pangar/PangarsNightmares.png
 type: Repeater
 damage: Slashing
 elemental: Frost
-cells: [Technique, Defence]
+cells: [Technique, Mobility]
 power:
   0: 40
   1: 120

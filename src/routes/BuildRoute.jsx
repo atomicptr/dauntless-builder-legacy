@@ -172,6 +172,12 @@ export default class BuildRoute extends React.Component {
                 changes.weapon_part1_name = "";
             }
 
+            // exotic repeaters don't chamber and grip
+            if (itemType === "Repeater" && item.rarity === "exotic") {
+                changes.weapon_part1_name = "";
+                changes.weapon_part2_name = "";
+            }
+
             const changesKeys = [
                 "weapon_cell0",
                 "weapon_cell1"
@@ -379,7 +385,8 @@ export default class BuildRoute extends React.Component {
             );
         }
 
-        if (isRepeater) {
+        // exotic repeaters don't have chamber and grip
+        if (isRepeater && weapon.rarity !== "exotic") {
             const chamberSlot = "weapon_part1_name";
             const chamber = BuildModel.findPart(weapon.type, "chambers", this.state.build[chamberSlot]);
 
