@@ -1,0 +1,25 @@
+name: Talons of the Firebird
+description: A Slayer's chain blades forged with Phaelanx trophies.
+icon: /assets/icons/weapons/phaelanx/TalonsOfTheFirebird.png
+type: Chain Blades
+damage: Slashing
+elemental: Blaze
+cells: [Utility, Mobility]
+power:
+  0: 80
+  1: 120
+perks:
+  - name: Aetheric Evasion
+    value: 2
+    from: 0
+    to: 0
+  - name: Aetheric Evasion
+    value: 3
+    from: 1
+    to: 1
+unique_effects:
+  - name: PhaelanxLegendaryAbility
+    description: |
+      Attack a Behemoth part to lock onto it and load a homing missile. Missile deals 100 damage and increases the
+      damage of every other missile in the volley by 100. Deal damage to load up to a maximum of 3 additional missiles.
+      Dodging fires all loaded missiles on the locked-on part. 90 second cooldown.

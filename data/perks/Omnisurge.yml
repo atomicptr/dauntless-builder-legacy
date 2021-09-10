@@ -1,0 +1,23 @@
+name: Omnisurge
+description: Percent increase the recharge rate of your Lantern ability.
+type: Utility
+key: ReduceOmnicellCooldown
+effects:
+  1:
+    description: Reduce the cooldown of your Omnicell ability by 5%.
+    value: 1.05
+  2:
+    description: Reduce the cooldown of your Omnicell ability by 8%.
+    value: 1.08
+  3:
+    description: Reduce the cooldown of your Omnicell ability by 11%.
+    value: 1.11
+  4:
+    description: Reduce the cooldown of your Omnicell ability by 14%. On Omnicell ability activation, reduce the cooldown of your Lantern ability by 20%.
+    value: 1.14
+  5:
+    description: Reduce the cooldown of your Omnicell ability by 17%. On Omnicell ability activation, reduce the cooldown of your Lantern ability by 30%.
+    value: 1.17
+  6:
+    description: Reduce the cooldown of your Omnicell ability by 20%. On Omnicell ability activation, reduce the cooldown of your Lantern ability by 40%.
+    value: 1.2

@@ -1,0 +1,19 @@
+name: Phaelanx's Spearhead
+description: Head protection forged from Phaelanx trophies.
+icon: /assets/icons/armours/phaelanx/PhaelanxsSpearhead.png
+type: Head
+strength: Blaze
+weakness: Frost
+cells: Mobility
+resistance:
+  0: 20
+  1: 30
+perks:
+  - name: Omnisurge
+    value: 2
+    from: 0
+    to: 0
+  - name: Omnisurge
+    value: 3
+    from: 1
+    to: 1
