@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/pangar/PangarsRampage.png
 type: Hammer
 damage: Blunt
 elemental: Frost
-cells: [Power, Defence]
+cells: [Brutality, Fortitude]
 power:
   0: 40
   1: 120

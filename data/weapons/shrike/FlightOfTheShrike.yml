@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/shrike/FlightOfTheShrike.png
 type: Chain Blades
 damage: Slashing
 elemental: null
-cells: [Technique, Mobility]
+cells: [Finesse, Alacrity]
 power:
   0: 40
   1: 120

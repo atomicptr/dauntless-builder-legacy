@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/kharabak/KharabaksSpur.png
 type: Sword
 damage: Slashing
 elemental: Terra
-cells: [Technique, Mobility]
+cells: [Finesse, Alacrity]
 power:
   0: 40
   1: 120

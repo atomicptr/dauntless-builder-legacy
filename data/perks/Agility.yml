@@ -1,6 +1,6 @@
 name: Agility
 description: Reduces the stamina cost of dodging.
-type: Mobility
+type: Alacrity
 key: dodge_cost_reduction
 effects:
   1:

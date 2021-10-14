@@ -1,6 +1,6 @@
 name: Nimble
 description: Restores Stamina when dodging through Behemoth attacks.
-type: Mobility
+type: Alacrity
 key: dodge_stamina
 effects:
   1:

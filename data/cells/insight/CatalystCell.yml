@@ -1,5 +1,5 @@
 name: Catalyst Cell
-slot: Utility
+slot: Insight
 variants:
   "+1 Catalyst Cell":
     rarity: uncommon

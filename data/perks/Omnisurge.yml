@@ -1,6 +1,6 @@
 name: Omnisurge
 description: Percent increase the recharge rate of your Lantern ability.
-type: Utility
+type: Insight
 key: ReduceOmnicellCooldown
 effects:
   1:

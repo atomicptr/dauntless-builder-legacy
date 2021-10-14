@@ -4,7 +4,7 @@ icon: /assets/icons/armours/urska/AdversarysWrath.png
 type: Arms
 strength: Frost
 weakness: Blaze
-cells: Technique
+cells: Finesse
 resistance:
   0: 25
   1: 30

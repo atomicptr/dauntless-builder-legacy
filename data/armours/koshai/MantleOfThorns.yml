@@ -4,7 +4,7 @@ icon: /assets/icons/armours/koshai/MantleOfThorns.png
 type: Torso
 strength: Terra
 weakness: Shock
-cells: Utility
+cells: Insight
 resistance:
   0: 15
   1: 30

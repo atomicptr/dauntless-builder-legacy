@@ -4,7 +4,7 @@ icon: /assets/icons/armours/koshai/GraspOfThorns.png
 type: Arms
 strength: Terra
 weakness: Shock
-cells: Power
+cells: Brutality
 resistance:
   0: 15
   1: 30

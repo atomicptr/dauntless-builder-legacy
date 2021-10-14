@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/stormclaw/StormPike.png
 type: War Pike
 damage: Piercing
 elemental: Shock
-cells: [Technique, Mobility]
+cells: [Finesse, Alacrity]
 power:
   0: 80
   1: 120

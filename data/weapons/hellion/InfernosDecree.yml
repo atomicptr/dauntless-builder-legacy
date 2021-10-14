@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/hellion/InfernosDecree.png
 type: Axe
 damage: Cutting
 elemental: Blaze
-cells: [Power, Power]
+cells: [Brutality, Brutality]
 power:
   0: 80
   1: 120

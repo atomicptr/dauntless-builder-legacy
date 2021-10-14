@@ -1,6 +1,6 @@
 name: Sprinter
 description: Increases movespeed and reduces sprint cost.
-type: Mobility
+type: Alacrity
 key: Sprinter
 effects:
   1:

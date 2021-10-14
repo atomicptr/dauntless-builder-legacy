@@ -1,6 +1,6 @@
 name: Engineer
 description: Increases range of pylons.
-type: Utility
+type: Insight
 key: IncreasedPylonRange
 effects:
   1:

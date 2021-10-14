@@ -1,6 +1,6 @@
 name: Aetheric Evasion
 description: Gains a flat amount of Lantern Charge on each weapon hit.
-type: Technique
+type: Finesse
 key: flat_lantern_charge
 effects:
   1:

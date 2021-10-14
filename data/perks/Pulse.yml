@@ -1,6 +1,6 @@
 name: Pulse
 description: Guarantees a critical hit after a number of hits. At higher ranks, also increases critical damage.
-type: Technique
+type: Finesse
 key: [CriticalGuaranteedAfterHits, CritialDamageIncrease]
 effects:
   1:

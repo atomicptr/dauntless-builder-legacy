@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/pangar/PangarsClaws.png
 type: Chain Blades
 damage: Slashing
 elemental: Frost
-cells: [Technique, Defence]
+cells: [Finesse, Fortitude]
 power:
   0: 40
   1: 120

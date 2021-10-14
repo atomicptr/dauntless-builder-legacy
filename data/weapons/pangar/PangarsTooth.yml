@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/pangar/PangarsTooth.png
 type: War Pike
 damage: Piercing
 elemental: Frost
-cells: [Technique, Defence]
+cells: [Finesse, Fortitude]
 power:
   0: 40
   1: 120

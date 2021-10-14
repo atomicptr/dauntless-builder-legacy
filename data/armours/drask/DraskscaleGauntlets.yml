@@ -4,7 +4,7 @@ icon: /assets/icons/armours/drask/DraskscaleGauntlets.png
 type: Arms
 strength: Shock
 weakness: Terra
-cells: Utility
+cells: Insight
 resistance:
   0: 5
   1: 30

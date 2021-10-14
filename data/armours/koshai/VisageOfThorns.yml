@@ -4,7 +4,7 @@ icon: /assets/icons/armours/koshai/VisageOfThorns.png
 type: Head
 strength: Terra
 weakness: Shock
-cells: Technique
+cells: Finesse
 resistance:
   0: 15
   1: 30

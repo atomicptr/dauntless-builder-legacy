@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/generic/TheTwinSuns.png
 type: Repeater
 damage: Slashing
 elemental: null
-cells: [Technique, Prismatic]
+cells: [Finesse, Prismatic]
 rarity: exotic
 power:
   0: 100

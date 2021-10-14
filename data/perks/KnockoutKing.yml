@@ -1,6 +1,6 @@
 name: Knockout King
 description: Percent increase to Stagger damage.
-type: Power
+type: Brutality
 key: [stagger_damage, dodge_stagger_damage]
 effects:
   1:

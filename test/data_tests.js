@@ -134,7 +134,7 @@ describe("Dauntless Builder Data", () => {
                         cells = [item.cells];
                     }
 
-                    const slots = ["Power", "Technique", "Defence", "Utility", "Mobility", "Prismatic"];
+                    const slots = ["Brutality", "Finesse", "Fortitude", "Insight", "Alacrity", "Prismatic"];
 
                     for(let cellSlot of cells) {
                         assert.ok(

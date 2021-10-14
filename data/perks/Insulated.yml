@@ -1,6 +1,6 @@
 name: Insulated
 description: Protects against Shocked status effect and allows you to attack electric shields.
-type: Defence
+type: Fortitude
 key: [shock_immunity, percent_part_damage]
 effects:
   1:

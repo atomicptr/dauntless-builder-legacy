@@ -1,6 +1,6 @@
 name: Bloodless
 description: Protects against Wounded and Crippling Wounds statuses.
-type: Defence
+type: Fortitude
 key: [wound_reduction, crippling_wound_reduction]
 effects:
   1:

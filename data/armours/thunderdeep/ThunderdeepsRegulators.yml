@@ -4,7 +4,7 @@ icon: /assets/icons/armours/thunderdeep/ThunderdeepsRegulators.png
 type: Arms
 strength: Shock
 weakness: Terra
-cells: Power
+cells: Brutality
 resistance:
   0: 20
   1: 30

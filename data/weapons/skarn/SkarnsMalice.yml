@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/skarn/SkarnsMalice.png
 type: Chain Blades
 damage: Slashing
 elemental: Terra
-cells: [Technique, Defence]
+cells: [Finesse, Fortitude]
 power:
   0: 20
   1: 120

@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/nayzaga/NayzagasRazor.png
 type: Sword
 damage: Slashing
 elemental: Shock
-cells: [Utility, Mobility]
+cells: [Insight, Alacrity]
 power:
   0: 40
   1: 120

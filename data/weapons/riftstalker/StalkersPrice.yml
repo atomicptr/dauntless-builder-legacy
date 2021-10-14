@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/riftstalker/StalkersPrice.png
 type: Hammer
 damage: Blunt
 elemental: Umbral
-cells: [Technique, Utility]
+cells: [Finesse, Insight]
 power:
   0: 60
   1: 120

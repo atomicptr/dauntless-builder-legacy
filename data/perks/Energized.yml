@@ -1,6 +1,6 @@
 name: Energized
 description: Increase weapon meter gain rate.
-type: Utility
+type: Insight
 key: weapon_charge_rate
 effects:
   1:

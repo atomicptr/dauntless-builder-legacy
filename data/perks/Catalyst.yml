@@ -1,6 +1,6 @@
 name: Catalyst
 description: Increases effectiveness of Tonics. At later ranks, increases duration as well.
-type: Utility
+type: Insight
 key: [TonicEffectiveness, TonicDuration]
 effects:
   1:

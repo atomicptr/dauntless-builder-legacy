@@ -4,7 +4,7 @@ icon: /assets/icons/armours/shrowd/DarkPath.png
 type: Legs
 strength: Umbral
 weakness: Radiant
-cells: Utility
+cells: Insight
 resistance:
   0: 20
   1: 30

@@ -1,6 +1,6 @@
 name: Barbed
 description: Adds a flat amount of Wound damage on hit.
-type: Technique
+type: Finesse
 key: [wound_damage, dodge_expose_damage]
 effects:
   1:

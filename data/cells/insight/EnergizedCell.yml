@@ -1,5 +1,5 @@
 name: Energized Cell
-slot: Utility
+slot: Insight
 variants:
   "+1 Energized Cell":
     rarity: uncommon

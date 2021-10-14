@@ -4,7 +4,7 @@ icon: /assets/icons/armours/skraev/SkraevwingGloves.png
 type: Arms
 strength: Frost
 weakness: Blaze
-cells: Mobility
+cells: Alacrity
 resistance:
   0: 15
   1: 30

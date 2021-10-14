@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/skraev/WinterSquall.png
 type: Hammer
 damage: Blunt
 elemental: Frost
-cells: [Power, Mobility]
+cells: [Brutality, Alacrity]
 power:
   0: 60
   1: 120

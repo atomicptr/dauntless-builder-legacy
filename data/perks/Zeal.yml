@@ -1,6 +1,6 @@
 name: Zeal
 description: Increases Lantern ability effectiveness.
-type: Utility
+type: Insight
 key: LanternTapEffectiveness
 effects:
   1:

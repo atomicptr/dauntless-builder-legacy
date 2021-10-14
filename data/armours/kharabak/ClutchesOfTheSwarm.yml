@@ -4,7 +4,7 @@ icon: /assets/icons/armours/kharabak/ClutchesOfTheSwarm.png
 type: Arms
 strength: Terra
 weakness: Shock
-cells: Mobility
+cells: Alacrity
 resistance:
   0: 10
   1: 30

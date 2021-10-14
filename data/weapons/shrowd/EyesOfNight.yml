@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/shrowd/EyesOfNight.png
 type: Chain Blades
 damage: Slashing
 elemental: Umbral
-cells: [Technique, Utility]
+cells: [Finesse, Insight]
 power:
   0: 80
   1: 120

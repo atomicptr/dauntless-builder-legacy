@@ -1,6 +1,6 @@
 name: Savagery
 description: Increases damage against Wounded parts.
-type: Technique
+type: Finesse
 key: damage_wounded
 effects:
   1:

@@ -1,6 +1,6 @@
 name: Sharpened
 description: Percent increase to Part damage.
-type: Power
+type: Brutality
 key: [percent_part_damage, dodge_percent_part_damage]
 effects:
   1:

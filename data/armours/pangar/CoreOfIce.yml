@@ -4,7 +4,7 @@ icon: /assets/icons/armours/pangar/CoreOfIce.png
 type: Torso
 strength: Frost
 weakness: Blaze
-cells: Power
+cells: Brutality
 resistance:
   0: 10
   1: 30

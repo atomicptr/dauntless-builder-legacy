@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/charrogg/CharredSaber.png
 type: Sword
 damage: Cutting
 elemental: Blaze
-cells: [Power, Defence]
+cells: [Brutality, Fortitude]
 power:
   0: 40
   1: 120

@@ -1,6 +1,6 @@
 name: Ragehunter
 description: Increases damage against enraged Behemoths.
-type: Power
+type: Brutality
 key: damage_enraged
 effects:
   1:

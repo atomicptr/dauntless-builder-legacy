@@ -4,7 +4,7 @@ icon: /assets/icons/armours/charrogg/VolcanicHelm.png
 type: Head
 strength: Blaze
 weakness: Frost
-cells: Defence
+cells: Fortitude
 resistance:
   0: 10
   1: 30

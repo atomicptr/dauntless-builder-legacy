@@ -4,7 +4,7 @@ icon: /assets/icons/armours/torgadoro/TorgadorosApex.png
 type: Head
 strength: Blaze
 weakness: Frost
-cells: Utility
+cells: Insight
 resistance:
   0: 25
   1: 30

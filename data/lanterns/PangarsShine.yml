@@ -1,7 +1,7 @@
 name: Pangar's Shine
 icon: /assets/icons/lanterns/PangarsShine.png
 description: null
-cells: Utility
+cells: Insight
 lantern_ability:
   instant: null
   hold: Create a frost pillar in front of you that deals 2500 Frost damage to nearby enemies over 10 seconds.

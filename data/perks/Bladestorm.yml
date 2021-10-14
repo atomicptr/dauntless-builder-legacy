@@ -1,6 +1,6 @@
 name: Bladestorm
 description: Adds a flat amount of Part damage on hit.
-type: Technique
+type: Brutality
 key: [flat_part_damage, dodge_part_damage]
 effects:
   1:

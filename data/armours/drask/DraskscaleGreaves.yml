@@ -4,7 +4,7 @@ icon: /assets/icons/armours/drask/DraskscaleGreaves.png
 type: Legs
 strength: Shock
 weakness: Terra
-cells: Utility
+cells: Insight
 resistance:
   0: 5
   1: 30

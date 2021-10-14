@@ -4,7 +4,7 @@ icon: /assets/icons/armours/quillshot/QuillspikeGrips.png
 type: Arms
 strength: null
 weakness: null
-cells: Technique
+cells: Finesse
 resistance:
   0: 10
   1: 30

@@ -4,7 +4,7 @@ icon: /assets/icons/armours/thrax/ThraxsScream.png
 type: Head
 strength: Umbral
 weakness: Radiant
-cells: Utility
+cells: Insight
 resistance:
   0: 25
   1: 30

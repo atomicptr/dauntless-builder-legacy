@@ -1,6 +1,6 @@
 name: Relentless
 description: Increases the duration of your aether rush
-type: Technique
+type: Finesse
 key: [aether_rush_duration, aether_rush_effect]
 effects:
   1:

@@ -4,7 +4,7 @@ icon: /assets/icons/armours/chronovore/Chronoplate.png
 type: Torso
 strength: Radiant
 weakness: Umbral
-cells: Technique
+cells: Finesse
 resistance:
   0: 25
   1: 30

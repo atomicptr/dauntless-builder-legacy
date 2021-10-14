@@ -4,7 +4,7 @@ icon: /assets/icons/armours/malkarion/MalkarionsSight.png
 type: Head
 strength: Shock
 weakness: Terra
-cells: Mobility
+cells: Alacrity
 resistance:
   0: 25
   1: 30

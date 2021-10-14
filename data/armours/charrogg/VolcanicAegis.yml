@@ -4,7 +4,7 @@ icon: /assets/icons/armours/charrogg/VolcanicAegis.png
 type: Torso
 strength: Blaze
 weakness: Frost
-cells: Utility
+cells: Insight
 resistance:
   0: 10
   1: 30

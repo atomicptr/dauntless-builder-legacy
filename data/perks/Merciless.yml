@@ -1,6 +1,6 @@
 name: Merciless
 description: Increases Wound damage against staggered Behemoths.
-type: Technique
+type: Finesse
 key: wound_damage
 effects:
   1:

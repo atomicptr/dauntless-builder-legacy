@@ -225,7 +225,7 @@ export default class BuildModel {
         }
 
         const data = {
-            __version: 4, // keep version number because we want to display an "this is an old build" text
+            __version: 5,
             weapon_name: numbers[1],
             weapon_level: numbers[2],
             weapon_cell0: numbers[3],
@@ -254,6 +254,8 @@ export default class BuildModel {
         // replace old modular Repeater with Recruits Repeater
         const modularRepeaterWeaponId = 27;
         if (data.weapon_name === modularRepeaterWeaponId) {
+            // keep version number because we want to display an "this is an old build" text
+            data.__version = 4;
             data.weapon_name = 169; // Recruits Repeater
             data.weapon_level = 0;
             data.weapon_cell0 = 0;

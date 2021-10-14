@@ -4,7 +4,7 @@ icon: /assets/icons/armours/charrogg/TheSkullforge.png
 type: Head
 strength: Blaze
 weakness: Frost
-cells: Defence
+cells: Fortitude
 rarity: exotic
 resistance:
   0: 10

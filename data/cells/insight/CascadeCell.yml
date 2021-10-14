@@ -1,5 +1,5 @@
 name: Cascade Cell
-slot: Utility
+slot: Insight
 variants:
   "+1 Cascade Cell":
     rarity: uncommon

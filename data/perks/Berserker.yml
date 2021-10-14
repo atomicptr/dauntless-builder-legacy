@@ -1,6 +1,6 @@
 name: Berserker
 description: Reduces max health. Dealing damage stacks increased damage dealt for a short period.
-type: Technique
+type: Brutality
 key: [ReducedHealth, DealDamageDoDamage]
 effects:
   1:

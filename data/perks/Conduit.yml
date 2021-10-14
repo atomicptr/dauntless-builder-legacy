@@ -1,6 +1,6 @@
 name: Conduit
 description: Using a Lantern's hold ability increases all Slayers' attack speed temporarily.
-type: Utility
+type: Insight
 key: attack_speed_all_slayers
 effects:
   1:

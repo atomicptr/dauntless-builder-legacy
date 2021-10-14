@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/rezakiri/EdgeOfDawn.png
 type: Axe
 damage: Slashing
 elemental: Radiant
-cells: [Power, Mobility]
+cells: [Brutality, Alacrity]
 power:
   0: 80
   1: 120

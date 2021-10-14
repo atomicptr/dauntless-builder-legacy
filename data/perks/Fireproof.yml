@@ -1,6 +1,6 @@
 name: Fireproof
 description: Protects against being set on fire.
-type: Defence
+type: Fortitude
 key: fire_immunity
 effects:
   1:

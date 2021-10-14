@@ -1,5 +1,5 @@
 name: Engineer Cell
-slot: Utility
+slot: Insight
 variants:
   "+1 Engineer Cell":
     rarity: uncommon

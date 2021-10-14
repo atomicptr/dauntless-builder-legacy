@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/embermane/EmberShots.png
 type: Repeater
 damage: Slashing
 elemental: Blaze
-cells: [Technique, Mobility]
+cells: [Finesse, Alacrity]
 power:
   0: 20
   1: 120

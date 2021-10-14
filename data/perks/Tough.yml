@@ -1,6 +1,6 @@
 name: Tough
 description: Increases Max Health.
-type: Defence
+type: Fortitude
 key: [max_hp, increased_healing]
 effects:
   1:

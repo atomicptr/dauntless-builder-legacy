@@ -1,5 +1,5 @@
 name: Mender Cell
-slot: Utility
+slot: Insight
 variants:
   "+1 Mender Cell":
     rarity: uncommon

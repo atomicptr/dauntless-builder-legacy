@@ -4,7 +4,7 @@ icon: /assets/icons/armours/urska/AdversarysPride.png
 type: Torso
 strength: Frost
 weakness: Blaze
-cells: Mobility
+cells: Alacrity
 resistance:
   0: 25
   1: 30

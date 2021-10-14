@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/phaelanx/FistsOfTheFirebird.png
 type: Aether Strikers
 damage: Blunt
 elemental: Blaze
-cells: [Utility, Mobility]
+cells: [Insight, Alacrity]
 power:
   0: 80
   1: 120

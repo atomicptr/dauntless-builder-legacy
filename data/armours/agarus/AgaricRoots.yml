@@ -4,7 +4,7 @@ icon: /assets/icons/armours/agarus/AgaricRoots.png
 type: Legs
 strength: Terra
 weakness: Shock
-cells: Defence
+cells: Fortitude
 resistance:
   0: 25
   1: 30

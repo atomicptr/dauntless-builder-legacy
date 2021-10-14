@@ -1,5 +1,5 @@
 name: Conduit Cell
-slot: Utility
+slot: Insight
 variants:
   "+1 Conduit Cell":
     rarity: uncommon

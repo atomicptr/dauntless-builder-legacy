@@ -1,6 +1,6 @@
 name: Aetheric Attunement
 description: Reduces the cooldown of your lantern ability.
-type: Utility
+type: Insight
 key: percent_lantern_charge
 effects:
   1:

@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/skraev/WinterWinds.png
 type: Chain Blades
 damage: Slashing
 elemental: Frost
-cells: [Technique, Mobility]
+cells: [Finesse, Alacrity]
 power:
   0: 60
   1: 120

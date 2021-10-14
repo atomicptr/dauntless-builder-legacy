@@ -1,6 +1,6 @@
 name: Galvanized
 description: Grants increased critical strike chance based on the amount of shield stacks you have, and at higher ranks it also grants increased critical strike damage
-type: Power
+type: Finesse
 key: [stagger_damage, dodge_stagger_damage]
 effects:
   1:
