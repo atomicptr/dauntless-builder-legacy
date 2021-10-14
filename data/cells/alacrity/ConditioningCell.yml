@@ -1,0 +1,15 @@
+name: Conditioning Cell
+slot: Alacrity
+variants:
+  "+1 Conditioning Cell":
+    rarity: uncommon
+    perks:
+      Conditioning: 1
+  "+2 Conditioning Cell":
+    rarity: rare
+    perks:
+      Conditioning: 2
+  "+3 Conditioning Cell":
+    rarity: epic
+    perks:
+      Conditioning: 3

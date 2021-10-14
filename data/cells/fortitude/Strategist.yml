@@ -1,0 +1,15 @@
+name: Strategist Cell
+slot: Fortitude
+variants:
+  "+1 Strategist Cell":
+    rarity: uncommon
+    perks:
+      Strategist: 1
+  "+2 Strategist Cell":
+    rarity: rare
+    perks:
+      Strategist: 2
+  "+3 Strategist Cell":
+    rarity: epic
+    perks:
+      Strategist: 3

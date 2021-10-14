@@ -1,0 +1,15 @@
+name: Warmth Cell
+slot: Fortitude
+variants:
+  "+1 Warmth Cell":
+    rarity: uncommon
+    perks:
+      Warmth: 1
+  "+2 Warmth Cell":
+    rarity: rare
+    perks:
+      Warmth: 2
+  "+3 Warmth Cell":
+    rarity: epic
+    perks:
+      Warmth: 3

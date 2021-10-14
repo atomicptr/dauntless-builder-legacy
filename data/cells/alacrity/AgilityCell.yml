@@ -1,0 +1,15 @@
+name: Agility Cell
+slot: Alacrity
+variants:
+  "+1 Agility Cell":
+    rarity: uncommon
+    perks:
+      Agility: 1
+  "+2 Agility Cell":
+    rarity: rare
+    perks:
+      Agility: 2
+  "+3 Agility Cell":
+    rarity: epic
+    perks:
+      Agility: 3

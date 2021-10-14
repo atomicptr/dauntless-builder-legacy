@@ -1,0 +1,15 @@
+name: Tenacious Cell
+slot: Brutality
+variants:
+  "+1 Tenacious Cell":
+    rarity: uncommon
+    perks:
+      Tenacious: 1
+  "+2 Tenacious Cell":
+    rarity: rare
+    perks:
+      Tenacious: 2
+  "+3 Tenacious Cell":
+    rarity: epic
+    perks:
+      Tenacious: 3

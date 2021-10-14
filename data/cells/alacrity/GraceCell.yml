@@ -1,0 +1,15 @@
+name: Grace Cell
+slot: Alacrity
+variants:
+  "+1 Grace Cell":
+    rarity: uncommon
+    perks:
+      Grace: 1
+  "+2 Grace Cell":
+    rarity: rare
+    perks:
+      Grace: 2
+  "+3 Grace Cell":
+    rarity: epic
+    perks:
+      Grace: 3
