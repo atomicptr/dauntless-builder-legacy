@@ -1,0 +1,29 @@
+name: Tactician
+description: Increases Wound damage against staggered Behemoths.
+type: Finesse
+key: wound_damage
+effects:
+  1:
+    description: >-
+      After dodging through an attack 3 times, grant all nearby slayers +15% wound damage based on their part damage for 15 seconds.
+    value: 1.15
+  2:
+    description: >-
+      After dodging through an attack 3 times, grant all nearby slayers +20% wound damage based on their part damage for 15 seconds.
+    value: 1.2
+  3:
+    description: >-
+      After dodging through an attack 3 times, grant all nearby slayers +25% wound damage based on their part damage for 15 seconds.
+    value: 1.25
+  4:
+    description: >-
+      After dodging through an attack 3 times, grant all nearby slayers +30% wound damage based on their part damage for 15 seconds.
+    value: 1.3
+  5:
+    description: >-
+      After dodging through an attack 3 times, grant all nearby slayers +35% wound damage based on their part damage for 15 seconds.
+    value: 1.35
+  6:
+    description: >-
+      After dodging through an attack 3 times, grant all nearby slayers +40% wound damage based on their part damage for 15 seconds.
+    value: 1.4

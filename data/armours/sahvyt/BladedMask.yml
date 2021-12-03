@@ -1,0 +1,19 @@
+name: Bladed Mask
+description: Head protection forged from Sahvyt trophies.
+icon: /assets/icons/armours/sahvyt/BladedMask.png
+type: Head
+strength: Shock
+weakness: Terra
+cells: Insight
+resistance:
+  0: 15
+  1: 30
+perks:
+  - name: Tactician
+    value: 2
+    from: 0
+    to: 0
+  - name: Tactician
+    value: 3
+    from: 1
+    to: 1

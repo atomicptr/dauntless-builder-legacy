@@ -2,6 +2,6 @@ name: Reaper's Dance
 icon: /assets/icons/parts/chainblades/specials/ReapersDance.png
 part_effect:
   - >-
-    From afar: Pull to targets and grant a stack of Reaper's Dance. While close: Push off targets,
-    then use primary or secondary attacks to perform a followup. Primary followup grants a stack of
-    Reaper's Dance. Secondary followup expends stacks to deal +40% damage per stack.
+    Push off a nearby target with invulnerability, then use primary or secondary attacks to perform a follow up. Primary:
+    A dash attack to the target that consumes 1 momentum. Secondary: A spinning slam that consumes all momentum and deals
+    greatly increased damage per momentum consumed. (Consume 1 momentum if no follow up is performed)
