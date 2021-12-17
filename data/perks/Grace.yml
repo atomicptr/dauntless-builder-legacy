@@ -1,6 +1,6 @@
 name: Grace
 description: Sprinting increases movespeed. At higher levels, converts increased movespeed to attack speed.
-type: Mobility
+type: Alacrity
 key: [IncreasedMovementSpeed, IncreasedAttackSpeed]
 effects:
   1:

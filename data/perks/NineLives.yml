@@ -1,6 +1,6 @@
 name: Nine Lives
 description: Grants a chance to reduce damage, and later the ability to cheat death.
-type: Defence
+type: Fortitude
 key: [half_damage, death_heal]
 effects:
   1:

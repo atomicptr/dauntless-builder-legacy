@@ -4,7 +4,7 @@ icon: /assets/icons/armours/quillshot/QuillspikeBoots.png
 type: Legs
 strength: null
 weakness: null
-cells: Technique
+cells: Finesse
 resistance:
   0: 10
   1: 30

@@ -4,7 +4,7 @@ icon: /assets/icons/armours/torgadoro/TorgadorosGait.png
 type: Legs
 strength: Blaze
 weakness: Frost
-cells: Power
+cells: Brutality
 resistance:
   0: 25
   1: 30

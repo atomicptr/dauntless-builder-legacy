@@ -41,6 +41,7 @@ function makeBuild(buildId) {
     let idcounter = 0;
 
     const version = numbers[idcounter++];
+    const flags = numbers[idcounter++];
 
     const weaponName = getString("Weapons", idcounter++);
     const weapon = findWeapon(weaponName);
@@ -48,6 +49,7 @@ function makeBuild(buildId) {
 
     let data = {
         __version: version,
+        __flag: flags,
         weapon_name: weaponName,
         weapon_level: numbers[idcounter++],
         weapon_cell0: getString("Cells", idcounter++),
@@ -93,26 +95,26 @@ describe("Dauntless Builder - Build IDs", () => {
     it("should be able to deserialize builds", () => {
         // a random build that someone send me :)
         assertValid([
-            ["a5cy2cZCKaHWPHMU6t3T6EUVLijC3eFMSdCPjSEbTbC14hkhvCnkHktePfP", [
+            ["1afXt0gcECovFa4HLUyt3T4rIaQtKC5Yc4NtACxdTn5imCkKTgAhbC6Oh7F0vt2", [
                 {field: "weapon_name", value: "Ice Breakers"},
                 {field: "weapon_level", value: 1},
                 {field: "weapon_part1_name", value: "Titan's Crash"},
                 {field: "weapon_part2_name", value: "Cyclonic Strikeplate"},
                 {field: "weapon_cell0", value: "+3 Berserker Cell"},
                 {field: "weapon_cell1", value: "+3 Overpower Cell"},
-                {field: "head_name", value: "Dark Watch"},
+                {field: "head_name", value: "Timeweave Helm"},
                 {field: "head_level", value: 1},
-                {field: "head_cell", value: "+3 Knockout King Cell"},
-                {field: "torso_name", value: "Mantle of Thorns"},
+                {field: "head_cell", value: "+3 Acidic Cell"},
+                {field: "torso_name", value: "Thrax's Shadow"},
                 {field: "torso_level", value: 1},
-                {field: "torso_cell", value: "+3 Conduit Cell"},
-                {field: "arms_name", value: "Malkarion's Grasp"},
+                {field: "torso_cell", value: "+3 Acidic Cell"},
+                {field: "arms_name", value: "Timeweave Gauntlets"},
                 {field: "arms_level", value: 1},
-                {field: "arms_cell", value: "+3 Assassin's Frenzy Cell"},
-                {field: "legs_name", value: "Volcanic Treads"},
+                {field: "arms_cell", value: "+3 Acidic Cell"},
+                {field: "legs_name", value: "Thrax's Guile"},
                 {field: "legs_level", value: 1},
-                {field: "legs_cell", value: "+3 Overpower Cell"},
-                {field: "lantern_name", value: "Embermane's Rapture"},
+                {field: "legs_cell", value: "+3 Acidic Cell"},
+                {field: "lantern_name", value: "Pangar's Shine"},
                 {field: "lantern_cell", value: "+3 Conduit Cell"},
                 {field: "omnicell", value: "Discipline"},
             ]]

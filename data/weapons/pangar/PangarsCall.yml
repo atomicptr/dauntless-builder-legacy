@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/pangar/PangarsCall.png
 type: Sword
 damage: Slashing
 elemental: Frost
-cells: [Power, Defence]
+cells: [Brutality, Fortitude]
 power:
   0: 40
   1: 120

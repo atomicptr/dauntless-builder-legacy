@@ -1,6 +1,6 @@
 name: Warmth
 description: Protects against Chilled and Frozen status effects.
-type: Defence
+type: Fortitude
 key: [frozen_immunity, chilled_immunity]
 effects:
   1:

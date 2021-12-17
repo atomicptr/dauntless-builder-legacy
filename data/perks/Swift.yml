@@ -1,6 +1,6 @@
 name: Swift
 description: Increases Movement Speed when your weapon is sheathed.
-type: Mobility
+type: Alacrity
 key: sheathed_weapon_movement_speed
 effects:
   1:

@@ -1,0 +1,15 @@
+name: Acidic Cell
+slot: Finesse
+variants:
+  "+1 Acidic Cell":
+    rarity: uncommon
+    perks:
+      Acidic: 1
+  "+2 Acidic Cell":
+    rarity: rare
+    perks:
+      Acidic: 2
+  "+3 Acidic Cell":
+    rarity: epic
+    perks:
+      Acidic: 3

@@ -4,7 +4,7 @@ icon: /assets/icons/armours/valomyr/GreavesOfValour.png
 type: Legs
 strength: Radiant
 weakness: Umbral
-cells: Utility
+cells: Insight
 resistance:
   0: 15
   1: 30

@@ -1,0 +1,15 @@
+name: Tough Cell
+slot: Fortitude
+variants:
+  "+1 Tough Cell":
+    rarity: uncommon
+    perks:
+      Tough: 1
+  "+2 Tough Cell":
+    rarity: rare
+    perks:
+      Tough: 2
+  "+3 Tough Cell":
+    rarity: epic
+    perks:
+      Tough: 3

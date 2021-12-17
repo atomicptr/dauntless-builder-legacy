@@ -1,0 +1,15 @@
+name: Sprinter Cell
+slot: Alacrity
+variants:
+  "+1 Sprinter Cell":
+    rarity: uncommon
+    perks:
+      Sprinter: 1
+  "+2 Sprinter Cell":
+    rarity: rare
+    perks:
+      Sprinter: 2
+  "+3 Sprinter Cell":
+    rarity: epic
+    perks:
+      Sprinter: 3

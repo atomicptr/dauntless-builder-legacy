@@ -1,6 +1,6 @@
 name: Rage
 description: When you take damage, increases your damage.
-type: Power
+type: Brutality
 key: Rage
 effects:
   1:

@@ -1,0 +1,15 @@
+name: Bloodless Cell
+slot: Fortitude
+variants:
+  "+1 Bloodless Cell":
+    rarity: uncommon
+    perks:
+      Bloodless: 1
+  "+2 Bloodless Cell":
+    rarity: rare
+    perks:
+      Bloodless: 2
+  "+3 Bloodless Cell":
+    rarity: epic
+    perks:
+      Bloodless: 3

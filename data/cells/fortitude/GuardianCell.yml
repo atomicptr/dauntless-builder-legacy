@@ -1,0 +1,15 @@
+name: Guardian Cell
+slot: Fortitude
+variants:
+  "+1 Guardian Cell":
+    rarity: uncommon
+    perks:
+      Guardian: 1
+  "+2 Guardian Cell":
+    rarity: rare
+    perks:
+      Guardian: 2
+  "+3 Guardian Cell":
+    rarity: epic
+    perks:
+      Guardian: 3

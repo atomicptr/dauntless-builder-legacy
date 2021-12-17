@@ -1,0 +1,15 @@
+name: Berserker Cell
+slot: Brutality
+variants:
+  "+1 Berserker Cell":
+    rarity: uncommon
+    perks:
+      Berserker: 1
+  "+2 Berserker Cell":
+    rarity: rare
+    perks:
+      Berserker: 2
+  "+3 Berserker Cell":
+    rarity: epic
+    perks:
+      Berserker: 3

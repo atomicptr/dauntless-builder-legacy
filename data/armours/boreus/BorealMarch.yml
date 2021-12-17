@@ -4,7 +4,7 @@ icon: /assets/icons/armours/boreus/BorealMarch.png
 type: Legs
 strength: Frost
 weakness: Blaze
-cells: Technique
+cells: Finesse
 resistance:
   0: 5
   1: 30

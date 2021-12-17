@@ -1,6 +1,6 @@
 name: Tenacious
 description: Gain bonus damage based on current HP.
-type: Power
+type: Brutality
 key: TenaciousDamageBonus
 effects:
   1:

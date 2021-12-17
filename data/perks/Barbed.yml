@@ -1,6 +1,6 @@
 name: Barbed
 description: Adds a flat amount of Wound damage on hit.
-type: Technique
+type: Finesse
 key: [wound_damage, dodge_expose_damage]
 effects:
   1:
@@ -13,11 +13,11 @@ effects:
     description: [+15 Wound Damage on Hit, null]
     value: [15, null]
   4:
-    description: [+20 Wound Damage on Hit, After dodging through an attack the next attack's Expose Damage is increased by 200]
+    description: [+20 Wound Damage on Hit, After dodging through an attack the next attack's Expose Damage is increased by 250]
     value: [20, 200]
   5:
-    description: [+30 Wound Damage on Hit, After dodging through an attack the next attack's Expose Damage is increased by 200]
+    description: [+30 Wound Damage on Hit, After dodging through an attack the next attack's Expose Damage is increased by 350]
     value: [30, 200]
   6:
-    description: [+40 Wound Damage on Hit, After dodging through an attack the next attack's Expose Damage is increased by 400]
+    description: [+40 Wound Damage on Hit, After dodging through an attack the next attack's Expose Damage is increased by 500]
     value: [40, 400]

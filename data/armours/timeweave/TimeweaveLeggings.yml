@@ -4,7 +4,7 @@ icon: /assets/icons/armours/timeweave/TimeweaveLeggings.png
 type: Legs
 strength: Radiant
 weakness: Umbral
-cells: Power
+cells: Brutality
 resistance:
   0: 20
   1: 30

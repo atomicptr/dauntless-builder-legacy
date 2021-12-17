@@ -4,7 +4,7 @@ icon: /assets/icons/armours/hellion/HellplateGreaves.png
 type: Legs
 strength: Blaze
 weakness: Frost
-cells: Power
+cells: Brutality
 resistance:
   0: 20
   1: 30

@@ -1,6 +1,6 @@
 name: Deconstruction
 description: Bonus damage against objects created by Behemoths.
-type: Power
+type: Brutality
 key: damage_object
 effects:
   1:

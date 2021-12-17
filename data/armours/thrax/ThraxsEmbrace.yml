@@ -4,7 +4,7 @@ icon: /assets/icons/armours/thrax/ThraxsEmbrace.png
 type: Arms
 strength: Umbral
 weakness: Radiant
-cells: Power
+cells: Brutality
 resistance:
   0: 25
   1: 30

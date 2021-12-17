@@ -4,7 +4,7 @@ icon: /assets/icons/armours/pangar/ArmsOfIce.png
 type: Arms
 strength: Frost
 weakness: Blaze
-cells: Defence
+cells: Fortitude
 resistance:
   0: 10
   1: 30

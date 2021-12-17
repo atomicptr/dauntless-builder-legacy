@@ -1,0 +1,15 @@
+name: Merciless Cell
+slot: Finesse
+variants:
+  "+1 Merciless Cell":
+    rarity: uncommon
+    perks:
+      Merciless: 1
+  "+2 Merciless Cell":
+    rarity: rare
+    perks:
+      Merciless: 2
+  "+3 Merciless Cell":
+    rarity: epic
+    perks:
+      Merciless: 3

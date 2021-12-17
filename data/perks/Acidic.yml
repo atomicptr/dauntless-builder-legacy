@@ -1,6 +1,6 @@
 name: Acidic
 description: Increases Wound damage at the cost of Part damage.
-type: Technique
+type: Finesse
 key: [part_to_wound_damage, percent_part_damage]
 effects:
   1:

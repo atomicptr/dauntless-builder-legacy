@@ -1,0 +1,15 @@
+name: Weighted Strikes Cell
+slot: Brutality
+variants:
+  "+1 Weighted Strikes Cell":
+    rarity: uncommon
+    perks:
+      Weighted Strikes: 1
+  "+2 Weighted Strikes Cell":
+    rarity: rare
+    perks:
+      Weighted Strikes: 2
+  "+3 Weighted Strikes Cell":
+    rarity: epic
+    perks:
+      Weighted Strikes: 3

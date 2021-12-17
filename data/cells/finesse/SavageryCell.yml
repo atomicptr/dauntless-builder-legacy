@@ -1,0 +1,15 @@
+name: Savagery Cell
+slot: Finesse
+variants:
+  "+1 Savagery Cell":
+    rarity: uncommon
+    perks:
+      Savagery: 1
+  "+2 Savagery Cell":
+    rarity: rare
+    perks:
+      Savagery: 2
+  "+3 Savagery Cell":
+    rarity: epic
+    perks:
+      Savagery: 3

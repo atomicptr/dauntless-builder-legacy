@@ -1,0 +1,15 @@
+name: Galvanized Cell
+slot: Finesse
+variants:
+  "+1 Galvanized Cell":
+    rarity: uncommon
+    perks:
+      Galvanized: 1
+  "+2 Galvanized Cell":
+    rarity: rare
+    perks:
+      Galvanized: 2
+  "+3 Galvanized Cell":
+    rarity: epic
+    perks:
+      Galvanized: 3

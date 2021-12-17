@@ -4,7 +4,7 @@ icon: /assets/icons/armours/nayzaga/ShockingGaze.png
 type: Head
 strength: Shock
 weakness: Terra
-cells: Utility
+cells: Insight
 resistance:
   0: 10
   1: 30

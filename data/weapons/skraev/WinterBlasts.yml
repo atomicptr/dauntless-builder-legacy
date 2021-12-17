@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/skraev/WinterBlasts.png
 type: Repeater
 damage: Slashing
 elemental: Frost
-cells: [Technique, Mobility]
+cells: [Finesse, Alacrity]
 power:
   0: 60
   1: 120

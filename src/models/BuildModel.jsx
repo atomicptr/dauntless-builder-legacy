@@ -4,13 +4,19 @@ import ItemUtility from "../utility/ItemUtility";
 
 const hashids = new Hashids("spicy");
 
-export const CURRENT_BUILD_ID = 5;
+export const CURRENT_BUILD_ID = 6;
+
+export const BuildFlags = {
+    UPGRADED_BUILD: 0b0001,
+    INVALID_BUILD: 0b0010,
+};
 
 export default class BuildModel {
 
     constructor(data) {
         // set default parameter values
         this.__version = CURRENT_BUILD_ID;
+        this.__flags = 0;
         this.weapon_name = "";
         this.weapon_level = 0;
         this.weapon_part1_name = "";
@@ -45,12 +51,37 @@ export default class BuildModel {
         return numbers[0];
     }
 
+    hasFlag(flag) {
+        if (Object.values(BuildFlags).indexOf(flag) === -1) {
+            return false;
+        }
+        return (this.__flags & flag) >= 1;
+    }
+
+    addFlag(flag) {
+        if (Object.values(BuildFlags).indexOf(flag) === -1) {
+            throw Error("Unknown flag: " + flag);
+        }
+        this.__flags |= flag;
+    }
+
+    removeFlag(flag) {
+        if (Object.values(BuildFlags).indexOf(flag) === -1) {
+            throw Error("Unknown flag: " + flag);
+        }
+        if (!this.hasFlag(flag)) {
+            return;
+        }
+        this.__flags ^= flag;
+    }
+
     serialize() {
         const weapon = BuildModel.findWeapon(this.weapon_name);
         const weaponType = weapon ? weapon.type : null;
 
         let params = [
             this.__version,
+            this.__flags,
             DataUtility.getWeaponId(this.weapon_name),
             this.weapon_level,
             DataUtility.getCellId(this.weapon_cell0),
@@ -99,6 +130,7 @@ export default class BuildModel {
         let idcounter = 0;
 
         const version = numbers[idcounter++];
+        const flags = numbers[idcounter++];
 
         const weaponName = getString("Weapons", idcounter++);
         const weapon = BuildModel.findWeapon(weaponName);
@@ -106,6 +138,7 @@ export default class BuildModel {
 
         let data = {
             __version: version,
+            __flags: flags,
             weapon_name: weaponName,
             weapon_level: numbers[idcounter++],
             weapon_cell0: getString("Cells", idcounter++),
@@ -225,7 +258,7 @@ export default class BuildModel {
         }
 
         const data = {
-            __version: 4, // keep version number because we want to display an "this is an old build" text
+            __version: 5,
             weapon_name: numbers[1],
             weapon_level: numbers[2],
             weapon_cell0: numbers[3],
@@ -254,6 +287,8 @@ export default class BuildModel {
         // replace old modular Repeater with Recruits Repeater
         const modularRepeaterWeaponId = 27;
         if (data.weapon_name === modularRepeaterWeaponId) {
+            // keep version number because we want to display an "this is an old build" text
+            data.__version = 4;
             data.weapon_name = 169; // Recruits Repeater
             data.weapon_level = 0;
             data.weapon_cell0 = 0;
@@ -262,6 +297,40 @@ export default class BuildModel {
             data.weapon_part2_name = numbers[7];
             data.weapon_part3_name = numbers[10];
         }
+
+        return hashids.encode(Object.values(data));
+    }
+
+    static convertVersion5To6(version6BuildString) {
+        const numbers = hashids.decode(version6BuildString);
+
+        const data = {
+            __version: 6,
+            __flags: 0,
+            weapon_name: numbers[1],
+            weapon_level: numbers[2],
+            weapon_cell0: numbers[3],
+            weapon_cell1: numbers[4],
+            weapon_part1_name: numbers[5],
+            weapon_part2_name: numbers[6],
+            weapon_part3_name: numbers[7],
+            bond_weapon_name: numbers[8],
+            head_name: numbers[9],
+            head_level: numbers[10],
+            head_cell: numbers[11],
+            torso_name: numbers[12],
+            torso_level: numbers[13],
+            torso_cell: numbers[14],
+            arms_name: numbers[15],
+            arms_level: numbers[16],
+            arms_cell: numbers[17],
+            legs_name: numbers[18],
+            legs_level: numbers[19],
+            legs_cell: numbers[20],
+            lantern_name: numbers[21],
+            lantern_cell: numbers[22],
+            omnicell: numbers[23],
+        };
 
         return hashids.encode(Object.values(data));
     }
@@ -370,6 +439,23 @@ export default class BuildModel {
         insertItemPerks(this.lantern_name, "Lantern", null, 0);
 
         return perks;
+    }
+
+    static doesCellFitInSlot(slot, cell) {
+        if (typeof cell === "string") {
+            cell = BuildModel.findCellByVariantName(cell);
+        }
+
+        if (slot === "Prismatic") {
+            return true;
+        }
+
+        if (!slot || !cell) {
+            return false;
+
+        }
+
+        return slot === cell.slot;
     }
 
     static findWeapon(name) {
@@ -521,6 +607,7 @@ export default class BuildModel {
     static empty() {
         return new BuildModel({
             __version: CURRENT_BUILD_ID,
+            __flags: 0,
             weapon_name: "",
             weapon_level: 0,
             weapon_part1_name: "",

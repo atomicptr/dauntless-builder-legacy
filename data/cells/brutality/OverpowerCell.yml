@@ -1,0 +1,15 @@
+name: Overpower Cell
+slot: Brutality
+variants:
+  "+1 Overpower Cell":
+    rarity: uncommon
+    perks:
+      Overpower: 1
+  "+2 Overpower Cell":
+    rarity: rare
+    perks:
+      Overpower: 2
+  "+3 Overpower Cell":
+    rarity: epic
+    perks:
+      Overpower: 3

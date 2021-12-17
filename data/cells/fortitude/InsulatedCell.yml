@@ -1,0 +1,15 @@
+name: Insulated Cell
+slot: Fortitude
+variants:
+  "+1 Insulated Cell":
+    rarity: uncommon
+    perks:
+      Insulated: 1
+  "+2 Insulated Cell":
+    rarity: rare
+    perks:
+      Insulated: 2
+  "+3 Insulated Cell":
+    rarity: epic
+    perks:
+      Insulated: 3

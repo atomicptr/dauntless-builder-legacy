@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/drask/ThunderingCutters.png
 type: Chain Blades
 damage: Slashing
 elemental: Shock
-cells: [Technique, Power]
+cells: [Finesse, Brutality]
 power:
   0: 20
   1: 120

@@ -1,6 +1,6 @@
 name: Assassin's Frenzy
 description: Each time you break or assist in breaking a part, gain +15% attack speed for x seconds.
-type: Technique
+type: Alacrity
 key: low_hp_attack_speed
 effects:
   1:

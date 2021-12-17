@@ -1,6 +1,6 @@
 name: Strategist
 description: Dodging through Behemoth attacks grants health shields to all Slayers.
-type: Defence
+type: Fortitude
 key: ShieldShare
 effects:
   1:

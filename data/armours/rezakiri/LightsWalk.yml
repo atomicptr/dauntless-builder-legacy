@@ -4,7 +4,7 @@ icon: /assets/icons/armours/rezakiri/LightsWalk.png
 type: Legs
 strength: Radiant
 weakness: Umbral
-cells: Mobility
+cells: Alacrity
 resistance:
   0: 20
   1: 30

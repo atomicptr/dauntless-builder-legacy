@@ -27,6 +27,8 @@ import WeaponPart from "../components/WeaponPart";
 import BondSelectModal from "../components/BondSelectModal";
 import Omnicell from "../components/Omnicell";
 import OmnicellSelectModal from "../components/OmnicellSelectModal";
+import BuildWarning from "../components/BuildWarning";
+import {validateBuild} from "../service/build-validator";
 
 export default class BuildRoute extends React.Component {
 
@@ -66,12 +68,24 @@ export default class BuildRoute extends React.Component {
             window.history.replaceState({}, "Dauntless Builder: " + buildData, "/b/" + buildData);
         }
 
+        if (BuildModel.version(buildData) === 5) {
+            buildData = BuildModel.convertVersion5To6(buildData);
+            window.history.replaceState({}, "Dauntless Builder: " + buildData, "/b/" + buildData);
+        }
+
         this.loadBuild(buildData);
     }
 
     loadBuild(buildData) {
         const itemData = DataUtility.data();
-        const build = BuildModel.tryDeserialize(buildData);
+        let build = BuildModel.tryDeserialize(buildData);
+        build = validateBuild(build);
+
+        // validator changed something
+        const postValidatorBuildData = build.serialize();
+        if (postValidatorBuildData !== buildData) {
+            window.history.replaceState({}, "Dauntless Builder: " + postValidatorBuildData, "/b/" + postValidatorBuildData);
+        }
 
         this.setState({
             itemData, build, buildData, ready: true
@@ -102,7 +116,7 @@ export default class BuildRoute extends React.Component {
         build.weapon_cell1 = "+3 Assassin's Vigour Cell";
         build.torso_name = "Boreal Resolve";
         build.torso_level = 1;
-        build.torso_cell = "+3 Iceborne Cell";
+        build.torso_cell = "+3 Guardian Cell";
         build.arms_name = "Boreal Might";
         build.arms_level = 1;
         build.arms_cell = "+3 Aetherhunter Cell";
@@ -277,6 +291,9 @@ export default class BuildRoute extends React.Component {
         for(let key in changes) {
             build[key] = changes[key];
         }
+
+        // we've changed something, which means we can reset the flags!
+        build.__flags = 0;
 
         // if you're looking at an old build and you change something its a new build!
         if (this.state.build.__version !== CURRENT_BUILD_ID) {
@@ -560,10 +577,7 @@ export default class BuildRoute extends React.Component {
             </div>
             <div className="columns">
                 <div className="column is-two-thirds build-column">
-                    {this.state.build.__version !== CURRENT_BUILD_ID ?
-                        <div className="notification is-warning is-light">
-                            {"You're looking at an outdated build and some items may have been changed or been removed."}
-                        </div> : null}
+                    <BuildWarning build={this.state.build} />
 
                     <Omnicell
                         parent={this}

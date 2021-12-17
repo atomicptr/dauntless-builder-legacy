@@ -1,0 +1,15 @@
+name: Pacifier Cell
+slot: Brutality
+variants:
+  "+1 Pacifier Cell":
+    rarity: uncommon
+    perks:
+      Pacifier: 1
+  "+2 Pacifier Cell":
+    rarity: rare
+    perks:
+      Pacifier: 2
+  "+3 Pacifier Cell":
+    rarity: epic
+    perks:
+      Pacifier: 3

@@ -1,0 +1,15 @@
+name: Swift Cell
+slot: Alacrity
+variants:
+  "+1 Swift Cell":
+    rarity: uncommon
+    perks:
+      Swift: 1
+  "+2 Swift Cell":
+    rarity: rare
+    perks:
+      Swift: 2
+  "+3 Swift Cell":
+    rarity: epic
+    perks:
+      Swift: 3

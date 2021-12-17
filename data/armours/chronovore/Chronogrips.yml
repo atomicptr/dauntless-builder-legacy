@@ -4,7 +4,7 @@ icon: /assets/icons/armours/chronovore/Chronogrips.png
 type: Arms
 strength: Radiant
 weakness: Umbral
-cells: Defence
+cells: Fortitude
 resistance:
   0: 25
   1: 30

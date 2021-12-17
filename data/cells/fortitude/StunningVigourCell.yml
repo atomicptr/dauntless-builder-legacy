@@ -1,0 +1,15 @@
+name: Stunning Vigour Cell
+slot: Fortitude
+variants:
+  "+1 Stunning Vigour Cell":
+    rarity: uncommon
+    perks:
+      Stunning Vigour: 1
+  "+2 Stunning Vigour Cell":
+    rarity: rare
+    perks:
+      Stunning Vigour: 2
+  "+3 Stunning Vigour Cell":
+    rarity: epic
+    perks:
+      Stunning Vigour: 3

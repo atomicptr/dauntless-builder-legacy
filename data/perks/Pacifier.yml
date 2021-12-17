@@ -1,6 +1,6 @@
 name: Pacifier
 description: Increases stagger damage against enraged Behemoths.
-type: Power
+type: Brutality
 key: stagger_enraged
 effects:
   1:

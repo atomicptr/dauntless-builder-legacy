@@ -1,0 +1,15 @@
+name: Lucent Cell
+slot: Insight
+variants:
+  "+1 Lucent Cell":
+    rarity: uncommon
+    perks:
+      Lucent: 1
+  "+2 Lucent Cell":
+    rarity: rare
+    perks:
+      Lucent: 2
+  "+3 Lucent Cell":
+    rarity: epic
+    perks:
+      Lucent: 3

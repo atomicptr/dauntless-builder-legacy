@@ -4,7 +4,7 @@ icon: /assets/icons/armours/malkarion/MalkarionsGrasp.png
 type: Arms
 strength: Shock
 weakness: Terra
-cells: Technique
+cells: Finesse
 resistance:
   0: 25
   1: 30

@@ -4,7 +4,7 @@ icon: /assets/icons/armours/chronovore/Chronotreads.png
 type: Legs
 strength: Radiant
 weakness: Umbral
-cells: Technique
+cells: Finesse
 resistance:
   0: 25
   1: 30

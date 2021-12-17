@@ -4,7 +4,7 @@ icon: /assets/icons/armours/boreus/BorealResolve.png
 type: Torso
 strength: Frost
 weakness: Blaze
-cells: Defence
+cells: Fortitude
 resistance:
   0: 5
   1: 30

@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/thunderdeep/TheGovernor.png
 type: Sword
 damage: Slashing
 elemental: Shock
-cells: [Power, Technique]
+cells: [Brutality, Finesse]
 power:
   0: 80
   1: 120

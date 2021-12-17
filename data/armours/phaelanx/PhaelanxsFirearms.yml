@@ -4,7 +4,7 @@ icon: /assets/icons/armours/phaelanx/PhaelanxsFirearms.png
 type: Arms
 strength: Blaze
 weakness: Frost
-cells: Utility
+cells: Insight
 resistance:
   0: 20
   1: 30

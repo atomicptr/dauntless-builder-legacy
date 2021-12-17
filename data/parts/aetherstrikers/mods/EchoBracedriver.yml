@@ -1,4 +1,4 @@
 name: Echo Bracedriver
 icon: /assets/icons/parts/aetherstrikers/mods/EchoBracedriver.png
 part_effect:
-  - Critical strikes increase the damage dealt by Karma Breaker's damage over time by 5% until the debuff ends or is refreshed.
+  - Critical strikes increase the damage dealt by Karma Breaker's damage over time by 10% until the debuff ends or is refreshed.

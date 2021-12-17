@@ -1,0 +1,15 @@
+name: Knockout King Cell
+slot: Brutality
+variants:
+  "+1 Knockout King Cell":
+    rarity: uncommon
+    perks:
+      Knockout King: 1
+  "+2 Knockout King Cell":
+    rarity: rare
+    perks:
+      Knockout King: 2
+  "+3 Knockout King Cell":
+    rarity: epic
+    perks:
+      Knockout King: 3

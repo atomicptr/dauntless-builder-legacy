@@ -1,0 +1,15 @@
+name: Evasive Fury Cell
+slot: Alacrity
+variants:
+  "+1 Evasive Fury Cell":
+    rarity: uncommon
+    perks:
+      Evasive Fury: 1
+  "+2 Evasive Fury Cell":
+    rarity: rare
+    perks:
+      Evasive Fury: 2
+  "+3 Evasive Fury Cell":
+    rarity: epic
+    perks:
+      Evasive Fury: 3

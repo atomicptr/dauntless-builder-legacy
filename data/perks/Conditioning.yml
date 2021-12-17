@@ -1,6 +1,6 @@
 name: Conditioning
 description: Increases Stamina Regen.
-type: Mobility
+type: Alacrity
 key: stamina_regen
 effects:
   1:

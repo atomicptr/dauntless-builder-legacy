@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/charrogg/CharredCrusher.png
 type: Hammer
 damage: Blunt
 elemental: Blaze
-cells: [Power, Defence]
+cells: [Brutality, Fortitude]
 power:
   0: 40
   1: 120

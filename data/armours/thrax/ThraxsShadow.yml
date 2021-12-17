@@ -4,7 +4,7 @@ icon: /assets/icons/armours/thrax/ThraxsShadow.png
 type: Torso
 strength: Umbral
 weakness: Radiant
-cells: Technique
+cells: Finesse
 resistance:
   0: 25
   1: 30

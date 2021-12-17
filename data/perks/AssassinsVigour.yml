@@ -1,6 +1,6 @@
 name: Assassin's Vigour
 description: Grants Health after breaking a Behemoth part.
-type: Defence
+type: Fortitude
 key: part_break_heal
 effects:
   1:

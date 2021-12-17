@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/charrogg/MoltenEdict.png
 type: Hammer
 damage: Blunt
 elemental: Blaze
-cells: [Power, Prismatic]
+cells: [Brutality, Prismatic]
 rarity: exotic
 restrict_specials: true
 power:

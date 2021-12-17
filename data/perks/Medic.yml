@@ -1,6 +1,6 @@
 name: Medic
 description: Improves your ability to revive allies.
-type: Utility
+type: Insight
 key: [revive_heal, revive_speed, revive_shield]
 effects:
   1:

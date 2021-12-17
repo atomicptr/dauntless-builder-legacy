@@ -1,0 +1,15 @@
+name: Engineer Cell
+slot: Insight
+variants:
+  "+1 Engineer Cell":
+    rarity: uncommon
+    perks:
+      Engineer: 1
+  "+2 Engineer Cell":
+    rarity: rare
+    perks:
+      Engineer: 2
+  "+3 Engineer Cell":
+    rarity: epic
+    perks:
+      Engineer: 3

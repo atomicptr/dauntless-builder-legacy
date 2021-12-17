@@ -1,0 +1,15 @@
+name: Ragehunter Cell
+slot: Brutality
+variants:
+  "+1 Ragehunter Cell":
+    rarity: uncommon
+    perks:
+      Ragehunter: 1
+  "+2 Ragehunter Cell":
+    rarity: rare
+    perks:
+      Ragehunter: 2
+  "+3 Ragehunter Cell":
+    rarity: epic
+    perks:
+      Ragehunter: 3

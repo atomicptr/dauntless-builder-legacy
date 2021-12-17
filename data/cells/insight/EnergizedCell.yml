@@ -1,0 +1,15 @@
+name: Energized Cell
+slot: Insight
+variants:
+  "+1 Energized Cell":
+    rarity: uncommon
+    perks:
+      Energized: 1
+  "+2 Energized Cell":
+    rarity: rare
+    perks:
+      Energized: 2
+  "+3 Energized Cell":
+    rarity: epic
+    perks:
+      Energized: 3

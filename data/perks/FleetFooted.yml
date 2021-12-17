@@ -1,6 +1,6 @@
 name: Fleet Footed
 description: Temporarily increases Movement Speed after a dodge.
-type: Mobility
+type: Alacrity
 key: dodge_movement_speed
 effects:
   1:

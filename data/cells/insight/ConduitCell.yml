@@ -1,0 +1,15 @@
+name: Conduit Cell
+slot: Insight
+variants:
+  "+1 Conduit Cell":
+    rarity: uncommon
+    perks:
+      Conduit: 1
+  "+2 Conduit Cell":
+    rarity: rare
+    perks:
+      Conduit: 2
+  "+3 Conduit Cell":
+    rarity: epic
+    perks:
+      Conduit: 3

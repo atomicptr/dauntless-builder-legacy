@@ -1,6 +1,6 @@
 name: Aetherborne
 description: Increases the benefits of using aether vents.
-type: Utility
+type: Insight
 key: [aether_vent_not_used, aether_vent_bonus_heal]
 effects:
   1:

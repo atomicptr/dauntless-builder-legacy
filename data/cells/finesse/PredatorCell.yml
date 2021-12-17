@@ -1,0 +1,15 @@
+name: Predator Cell
+slot: Finesse
+variants:
+  "+1 Predator Cell":
+    rarity: uncommon
+    perks:
+      Predator: 1
+  "+2 Predator Cell":
+    rarity: rare
+    perks:
+      Predator: 2
+  "+3 Predator Cell":
+    rarity: epic
+    perks:
+      Predator: 3

@@ -1,0 +1,19 @@
+name: Bladed Gloves
+description: Arms protection forged from Sahvyt trophies.
+icon: /assets/icons/armours/sahvyt/BladedGloves.png
+type: Arms
+strength: Shock
+weakness: Terra
+cells: Alacrity
+resistance:
+  0: 15
+  1: 30
+perks:
+  - name: Relentless
+    value: 2
+    from: 0
+    to: 0
+  - name: Relentless
+    value: 3
+    from: 1
+    to: 1

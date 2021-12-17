@@ -1,6 +1,6 @@
 name: Lucent
 description: Flask heals over time and generates lantern charge.
-type: Utility
+type: Insight
 key: Lucent
 effects:
   1:

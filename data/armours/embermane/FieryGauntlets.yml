@@ -4,7 +4,7 @@ icon: /assets/icons/armours/embermane/FieryGauntlets.png
 type: Arms
 strength: Blaze
 weakness: Frost
-cells: Technique
+cells: Finesse
 resistance:
   0: 5
   1: 30

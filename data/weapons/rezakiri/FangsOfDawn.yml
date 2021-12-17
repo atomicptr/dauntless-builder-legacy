@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/rezakiri/FangsOfDawn.png
 type: Chain Blades
 damage: Slashing
 elemental: Radiant
-cells: [Technique, Power]
+cells: [Finesse, Brutality]
 power:
   0: 80
   1: 120

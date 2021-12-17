@@ -1,6 +1,6 @@
 name: Sturdy
 description: Prevents being staggered on a cooldown.
-type: Defence
+type: Fortitude
 key: stagger_prevention
 effects:
   1:

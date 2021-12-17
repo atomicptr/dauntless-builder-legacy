@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/quillshot/QuillshotsFury.png
 type: Axe
 damage: Slashing
 elemental: null
-cells: [Power, Defence]
+cells: [Brutality, Fortitude]
 power:
   0: 20
   1: 120

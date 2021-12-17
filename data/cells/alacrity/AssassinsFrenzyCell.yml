@@ -1,0 +1,15 @@
+name: Assassin's Frenzy Cell
+slot: Alacrity
+variants:
+  "+1 Assassin's Frenzy Cell":
+    rarity: uncommon
+    perks:
+      Assassin's Frenzy: 1
+  "+2 Assassin's Frenzy Cell":
+    rarity: rare
+    perks:
+      Assassin's Frenzy: 2
+  "+3 Assassin's Frenzy Cell":
+    rarity: epic
+    perks:
+      Assassin's Frenzy: 3

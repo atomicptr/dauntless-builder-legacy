@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/stormclaw/StormBlades.png
 type: Chain Blades
 damage: Slashing
 elemental: Shock
-cells: [Technique, Mobility]
+cells: [Finesse, Alacrity]
 power:
   0: 80
   1: 120

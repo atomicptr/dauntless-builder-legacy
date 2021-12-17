@@ -4,7 +4,7 @@ icon: /assets/icons/armours/skraev/SkraevwingBoots.png
 type: Legs
 strength: Frost
 weakness: Blaze
-cells: Utility
+cells: Insight
 resistance:
   0: 15
   1: 30

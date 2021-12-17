@@ -1,6 +1,6 @@
 name: Parasitic
 description: When you take damage, it gets delayed and instead dealt over time. While taking delayed damage, gain lifesteal.
-type: Defence
+type: Fortitude
 key: Parasitic
 effects:
   1:

@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/gnasher/RagingCrash.png
 type: Hammer
 damage: Blunt
 elemental: null
-cells: [Power, Utility]
+cells: [Brutality, Insight]
 power:
   0: 20
   1: 120

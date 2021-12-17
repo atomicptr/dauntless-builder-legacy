@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/quillshot/QuillshotsTusk.png
 type: Sword
 damage: Slashing
 elemental: null
-cells: [Technique, Defence]
+cells: [Finesse, Fortitude]
 power:
   0: 20
   1: 120

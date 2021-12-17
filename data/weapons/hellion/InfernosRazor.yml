@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/hellion/InfernosRazor.png
 type: Sword
 damage: Cutting
 elemental: Blaze
-cells: [Power, Power]
+cells: [Brutality, Brutality]
 power:
   0: 80
   1: 120

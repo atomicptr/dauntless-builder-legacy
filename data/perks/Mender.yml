@@ -1,6 +1,6 @@
 name: Mender
 description: Using your flask restores other Slayers' health.
-type: Utility
+type: Insight
 key: HealGroup
 effects:
   1:

@@ -1,6 +1,6 @@
 name: Fortress
 description: Grants a small shield after avoiding damage for a short time.
-type: Defence
+type: Fortitude
 key: not_hit_health_shield
 effects:
   1:

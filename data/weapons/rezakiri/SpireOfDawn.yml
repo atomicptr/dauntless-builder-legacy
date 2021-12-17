@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/rezakiri/SpireOfDawn.png
 type: War Pike
 damage: Piercing
 elemental: Radiant
-cells: [Technique, Power]
+cells: [Finesse, Brutality]
 power:
   0: 80
   1: 120

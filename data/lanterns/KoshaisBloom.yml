@@ -1,7 +1,7 @@
 name: Koshai's Bloom
 icon: /assets/icons/lanterns/KoshaisBloom.png
 description: null
-cells: Utility
+cells: Insight
 lantern_ability:
   instant: null
   hold: Dash in a direction, deal 2250 Terra damage to nearby enemies upon arrival, and gain 15% lifesteal for 10 seconds.

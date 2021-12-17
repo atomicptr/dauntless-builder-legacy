@@ -1,0 +1,15 @@
+name: Tactician Cell
+slot: Finesse
+variants:
+  "+1 Tactician Cell":
+    rarity: uncommon
+    perks:
+      Tactician: 1
+  "+2 Tactician Cell":
+    rarity: rare
+    perks:
+      Tactician: 2
+  "+3 Tactician Cell":
+    rarity: epic
+    perks:
+      Tactician: 3

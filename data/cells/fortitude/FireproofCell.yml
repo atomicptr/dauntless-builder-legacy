@@ -1,0 +1,15 @@
+name: Fireproof Cell
+slot: Fortitude
+variants:
+  "+1 Fireproof Cell":
+    rarity: uncommon
+    perks:
+      Fireproof: 1
+  "+2 Fireproof Cell":
+    rarity: rare
+    perks:
+      Fireproof: 2
+  "+3 Fireproof Cell":
+    rarity: epic
+    perks:
+      Fireproof: 3

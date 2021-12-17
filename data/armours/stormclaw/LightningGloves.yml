@@ -4,7 +4,7 @@ icon: /assets/icons/armours/stormclaw/LightningGloves.png
 type: Arms
 strength: Shock
 weakness: Terra
-cells: Mobility
+cells: Alacrity
 resistance:
   0: 20
   1: 30

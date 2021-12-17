@@ -4,7 +4,7 @@ icon: /assets/icons/armours/kharabak/ShellOfTheSwarm.png
 type: Torso
 strength: Terra
 weakness: Shock
-cells: Technique
+cells: Finesse
 resistance:
   0: 10
   1: 30

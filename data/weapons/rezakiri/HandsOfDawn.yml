@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/rezakiri/HandsOfDawn.png
 type: Aether Strikers
 damage: Blunt
 elemental: Radiant
-cells: [Technique, Power]
+cells: [Finesse, Brutality]
 power:
   0: 80
   1: 120

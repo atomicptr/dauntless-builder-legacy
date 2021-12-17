@@ -1,0 +1,15 @@
+name: Relentless
+slot: Finesse
+variants:
+  "+1 Relentless Cell":
+    rarity: uncommon
+    perks:
+      Relentless: 1
+  "+2 Relentless Cell":
+    rarity: rare
+    perks:
+      Relentless: 2
+  "+3 Relentless Cell":
+    rarity: epic
+    perks:
+      Relentless: 3

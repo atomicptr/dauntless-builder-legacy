@@ -1,23 +1,23 @@
 name: Cascade
 description: On Lantern Hold, generate random effect.
-type: Utility
+type: Insight
 key: LanternHoldRandomEffect
 effects:
   1:
-    description: "On Lantern Hold, randomly generate 1 of the following Boosts: Healing, Stamina, Power."
+    description: "On Lantern Hold, randomly generate 1 of the following Boosts: Healing, Stamina, Brutality."
     value: null
   2:
-    description: "On Lantern Hold, randomly generate 2 of the following Boosts: Healing, Stamina, Power."
+    description: "On Lantern Hold, randomly generate 2 of the following Boosts: Healing, Stamina, Brutality."
     value: null
   3:
-    description: "On Lantern Hold, randomly generate 3 of the following Boosts: Healing, Stamina, Power."
+    description: "On Lantern Hold, randomly generate 3 of the following Boosts: Healing, Stamina, Brutality."
     value: null
   4:
-    description: "On Lantern Hold, randomly generate 4 of the following Boosts: Healing, Stamina, Power. Stamina Boost duration increased."
+    description: "On Lantern Hold, randomly generate 4 of the following Boosts: Healing, Stamina, Brutality. Stamina Boost duration increased."
     value: null
   5:
-    description: "On Lantern Hold, randomly generate 4 of the following Boosts: Healing, Stamina, Power. Healing Boost also grants shields."
+    description: "On Lantern Hold, randomly generate 4 of the following Boosts: Healing, Stamina, Brutality. Healing Boost also grants shields."
     value: null
   6:
-    description: "On Lantern Hold, randomly generate 4 of the following Boosts: Healing, Stamina, Power. Power Boost duration increased. Chance to generate Invincibility Boost."
+    description: "On Lantern Hold, randomly generate 4 of the following Boosts: Healing, Stamina, Brutality. Brutality Boost duration increased. Chance to generate Invincibility Boost."
     value: null

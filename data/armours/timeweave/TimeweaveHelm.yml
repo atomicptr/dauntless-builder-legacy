@@ -4,7 +4,7 @@ icon: /assets/icons/armours/timeweave/TimeweaveHelm.png
 type: Head
 strength: Radiant
 weakness: Umbral
-cells: Technique
+cells: Finesse
 resistance:
   0: 20
   1: 30

@@ -1,0 +1,15 @@
+name: Aetherborne Cell
+slot: Insight
+variants:
+  "+1 Aetherborne Cell":
+    rarity: uncommon
+    perks:
+      Aetherborne: 1
+  "+2 Aetherborne Cell":
+    rarity: rare
+    perks:
+      Aetherborne: 2
+  "+3 Aetherborne Cell":
+    rarity: epic
+    perks:
+      Aetherborne: 3

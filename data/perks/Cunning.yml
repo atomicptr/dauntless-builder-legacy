@@ -1,6 +1,6 @@
 name: Cunning
 description: Grants a chance to deal double damage.
-type: Technique
+type: Finesse
 key: CriticalStrike
 effects:
   1:

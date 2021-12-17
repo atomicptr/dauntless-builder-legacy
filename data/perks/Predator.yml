@@ -1,6 +1,6 @@
 name: Predator
 description: Increases damage after avoiding damage for a short time.
-type: Technique
+type: Finesse
 key: EffectPredator
 effects:
   1:

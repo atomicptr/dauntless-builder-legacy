@@ -1,6 +1,6 @@
 name: Weighted Strikes
 description: Adds a flat amount of Stagger damage on hit. At later ranks, allows more weapon attacks to interrupt.
-type: Technique
+type: Brutality
 key: [stagger_damage, dpdge_stagger_damage, revive_shield]
 effects:
   1:

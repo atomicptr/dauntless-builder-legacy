@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/nayzaga/NayzagasScythe.png
 type: Axe
 damage: Slashing
 elemental: Shock
-cells: [Power, Utility]
+cells: [Brutality, Insight]
 power:
   0: 40
   1: 120

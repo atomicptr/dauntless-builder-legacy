@@ -1,6 +1,6 @@
 name: Adrenaline
 description: Increases damage dealt based on stamina spent.
-type: Technique
+type: Alacrity
 key: AdrenalineDamage
 effects:
   1:

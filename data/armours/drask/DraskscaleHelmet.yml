@@ -4,7 +4,7 @@ icon: /assets/icons/armours/drask/DraskscaleHelmet.png
 type: Head
 strength: Shock
 weakness: Terra
-cells: Power
+cells: Brutality
 resistance:
   0: 5
   1: 30

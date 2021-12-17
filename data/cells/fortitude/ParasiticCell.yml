@@ -1,0 +1,15 @@
+name: Parasitic Cell
+slot: Fortitude
+variants:
+  "+1 Parasitic Cell":
+    rarity: uncommon
+    perks:
+      Parasitic: 1
+  "+2 Parasitic Cell":
+    rarity: rare
+    perks:
+      Parasitic: 2
+  "+3 Parasitic Cell":
+    rarity: epic
+    perks:
+      Parasitic: 3

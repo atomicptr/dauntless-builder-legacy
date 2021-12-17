@@ -1,6 +1,6 @@
 name: Stunning Vigour
 description: Restores some health whenever a Behemoth is staggered.
-type: Utility
+type: Fortitude
 key: stagger_heal
 effects:
   1:

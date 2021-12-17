@@ -1,6 +1,6 @@
 name: Guardian
 description: Grant a portion of any shield applied to your nearest ally.
-type: Defence
+type: Fortitude
 key: shield_share
 effects:
   1:

@@ -1,0 +1,15 @@
+name: Barbed Cell
+slot: Finesse
+variants:
+  "+1 Barbed Cell":
+    rarity: uncommon
+    perks:
+      Barbed: 1
+  "+2 Barbed Cell":
+    rarity: rare
+    perks:
+      Barbed: 2
+  "+3 Barbed Cell":
+    rarity: epic
+    perks:
+      Barbed: 3

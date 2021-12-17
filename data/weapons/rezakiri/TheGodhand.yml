@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/rezakiri/TheGodhand.png
 type: War Pike
 damage: Piercing
 elemental: Radiant
-cells: [Power, Prismatic]
+cells: [Brutality, Prismatic]
 rarity: exotic
 restrict_specials: true
 power:

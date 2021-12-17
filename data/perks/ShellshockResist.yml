@@ -1,6 +1,6 @@
 name: Shellshock Resist
 description: Protects against the explosion damage and status effect of Shellshock.
-type: Defence
+type: Fortitude
 key: shellshock_immunity
 effects:
   1:

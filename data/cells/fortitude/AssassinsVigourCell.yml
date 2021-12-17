@@ -1,0 +1,15 @@
+name: Assassin's Vigour Cell
+slot: Fortitude
+variants:
+  "+1 Assassin's Vigour Cell":
+    rarity: uncommon
+    perks:
+      Assassin's Vigour: 1
+  "+2 Assassin's Vigour Cell":
+    rarity: rare
+    perks:
+      Assassin's Vigour: 2
+  "+3 Assassin's Vigour Cell":
+    rarity: epic
+    perks:
+      Assassin's Vigour: 3

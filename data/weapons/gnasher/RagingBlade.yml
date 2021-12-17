@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/gnasher/RagingBlade.png
 type: Sword
 damage: Slashing
 elemental: null
-cells: [Utility, Defence]
+cells: [Insight, Fortitude]
 power:
   0: 20
   1: 120

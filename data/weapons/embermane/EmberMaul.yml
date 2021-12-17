@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/embermane/EmberMaul.png
 type: Hammer
 damage: Blunt
 elemental: Blaze
-cells: [Power, Mobility]
+cells: [Brutality, Alacrity]
 power:
   0: 20
   1: 120

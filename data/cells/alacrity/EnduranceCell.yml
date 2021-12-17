@@ -1,0 +1,15 @@
+name: Endurance Cell
+slot: Alacrity
+variants:
+  "+1 Endurance Cell":
+    rarity: uncommon
+    perks:
+      Endurance: 1
+  "+2 Endurance Cell":
+    rarity: rare
+    perks:
+      Endurance: 2
+  "+3 Endurance Cell":
+    rarity: epic
+    perks:
+      Endurance: 3

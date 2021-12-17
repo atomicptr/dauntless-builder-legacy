@@ -4,7 +4,7 @@ icon: /assets/icons/armours/phaelanx/PhaelanxsHeatsinks.png
 type: Legs
 strength: Blaze
 weakness: Frost
-cells: Mobility
+cells: Alacrity
 resistance:
   0: 20
   1: 30

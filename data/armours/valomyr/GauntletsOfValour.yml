@@ -4,7 +4,7 @@ icon: /assets/icons/armours/valomyr/GauntletsOfValour.png
 type: Arms
 strength: Radiant
 weakness: Umbral
-cells: Defence
+cells: Fortitude
 resistance:
   0: 15
   1: 30

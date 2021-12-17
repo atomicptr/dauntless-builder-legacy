@@ -1,0 +1,15 @@
+name: Bladestorm Cell
+slot: Brutality
+variants:
+  "+1 Bladestorm Cell":
+    rarity: uncommon
+    perks:
+      Bladestorm: 1
+  "+2 Bladestorm Cell":
+    rarity: rare
+    perks:
+      Bladestorm: 2
+  "+3 Bladestorm Cell":
+    rarity: epic
+    perks:
+      Bladestorm: 3

@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/stormclaw/StormCutter.png
 type: Axe
 damage: Slashing
 elemental: Shock
-cells: [Power, Mobility]
+cells: [Brutality, Alacrity]
 power:
   0: 80
   1: 120

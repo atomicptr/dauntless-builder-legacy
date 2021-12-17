@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/thunderdeep/BreakdownVoltage.png
 type: Axe
 damage: Slashing
 elemental: Shock
-cells: [Power, Technique]
+cells: [Brutality, Finesse]
 power:
   0: 80
   1: 120

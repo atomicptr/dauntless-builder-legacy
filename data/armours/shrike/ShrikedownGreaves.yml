@@ -4,7 +4,7 @@ icon: /assets/icons/armours/shrike/ShrikedownGreaves.png
 type: Legs
 strength: null
 weakness: null
-cells: Mobility
+cells: Alacrity
 resistance:
   0: 10
   1: 30

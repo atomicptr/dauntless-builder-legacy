@@ -4,7 +4,7 @@ icon: /assets/icons/armours/chronovore/Chronohelm.png
 type: Head
 strength: Radiant
 weakness: Umbral
-cells: Power
+cells: Brutality
 resistance:
   0: 25
   1: 30

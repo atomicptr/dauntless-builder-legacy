@@ -4,7 +4,7 @@ icon: /assets/icons/armours/valomyr/CrestOfValour.png
 type: Head
 strength: Radiant
 weakness: Umbral
-cells: Power
+cells: Brutality
 resistance:
   0: 15
   1: 30

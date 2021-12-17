@@ -4,7 +4,7 @@ icon: /assets/icons/weapons/boreus/RevolutionOfBoreus.png
 type: War Pike
 damage: Piercing
 elemental: Frost
-cells: [Power, Defence]
+cells: [Brutality, Fortitude]
 power:
   0: 20
   1: 120

@@ -1,0 +1,15 @@
+name: Mender Cell
+slot: Insight
+variants:
+  "+1 Mender Cell":
+    rarity: uncommon
+    perks:
+      Mender: 1
+  "+2 Mender Cell":
+    rarity: rare
+    perks:
+      Mender: 2
+  "+3 Mender Cell":
+    rarity: epic
+    perks:
+      Mender: 3

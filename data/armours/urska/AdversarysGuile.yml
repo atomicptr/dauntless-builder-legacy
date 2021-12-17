@@ -4,7 +4,7 @@ icon: /assets/icons/armours/urska/AdversarysGuile.png
 type: Head
 strength: Frost
 weakness: Blaze
-cells: Utility
+cells: Insight
 resistance:
   0: 25
   1: 30

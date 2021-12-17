@@ -4,7 +4,7 @@ icon: /assets/icons/armours/skarn/MightOfStone.png
 type: Arms
 strength: Terra
 weakness: Shock
-cells: Defence
+cells: Fortitude
 resistance:
   0: 5
   1: 30

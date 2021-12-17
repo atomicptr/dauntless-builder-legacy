@@ -1,4 +1,4 @@
 name: Lightweight Chain
 icon: /assets/icons/parts/chainblades/mods/LightweightChain.png
 part_effect:
-  - Dashing towards a Behemoth reduces stamina cost of the dash by 50%.
+  - Increase the length of your chains by +25%. Your Chain Pull deals +25% damage and generates an additional 20 meter.
