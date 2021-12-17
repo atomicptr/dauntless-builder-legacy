@@ -1,4 +1,4 @@
 name: Balanced Spearhead
 icon: /assets/icons/parts/warpike/mods/BalancedSpearhead.png
 part_effect:
-  - Increases damage dealt by 3% each time Piercing and Harvesting attacks are alternated. Resets upon combo end.
+  - Increases damage dealt by 5% each time Piercing and Harvesting attacks are alternated. After the fifth alternating attack, increase damage dealth by 25% for 8 seconds. Resets upon combo end.

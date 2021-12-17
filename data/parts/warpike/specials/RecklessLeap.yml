@@ -1,4 +1,4 @@
 name: Reckless Leap
 icon: /assets/icons/parts/warpike/specials/RecklessLeap.png
 part_effect:
-  - Press to convert meter into ammo. Hold to spend ammo and perform a flying lunge attack that deals up to 1200 damage based on distance and ammo quality.
+  - Press to convert meter into ammo. Hold to spend ammo and perform a flying lunge attack that deals up to 1500 damage based on distance and ammo quality.
