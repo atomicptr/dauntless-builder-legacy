@@ -1,4 +1,4 @@
 name: Demolition Blades
 icon: /assets/icons/parts/chainblades/mods/DemolitionBlades.png
 part_effect:
-  - After using a special, deal +100% damage to objects created by Behemoths for 6 seconds.
+  - Deal +50% damage to minions, fauna and objects created by Behemoths. On killing a minion, fauna, or object, gain 1 momentum.

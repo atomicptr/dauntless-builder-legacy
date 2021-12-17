@@ -13,11 +13,11 @@ effects:
     description: [Increases the duration of your aether rush by +50%, null]
     value: [1.5, null]
   4:
-    description: [Increases the duration of your aether rush by +50%, Increases the effects of your aether rush by +20%]
-    value: [1.5, 1.2]
+    description: [Increases the duration of your aether rush by +50%, Increases the effects of your aether rush by +40%]
+    value: [1.5, 1.4]
   5:
-    description: [Increases the duration of your aether rush by +50%, Increases the effects of your aether rush by +30%]
-    value: [1.5, 1.3]
+    description: [Increases the duration of your aether rush by +50%, Increases the effects of your aether rush by +70%]
+    value: [1.5, 1.7]
   6:
-    description: [Increases the duration of your aether rush by +50%, Increases the effects of your aether rush by +50%]
-    value: [1.5, 1.5]
+    description: [Increases the duration of your aether rush by +50%, Increases the effects of your aether rush by +100%]
+    value: [1.5, 2]

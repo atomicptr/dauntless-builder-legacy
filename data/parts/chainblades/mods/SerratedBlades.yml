@@ -1,4 +1,4 @@
 name: Serrated Blades
 icon: /assets/icons/parts/chainblades/mods/SerratedBlades.png
 part_effect:
-  - Bladed attacks have a chance to cause your next swinging blades to be a critical strike.
+  - Bladed attacks have a chance to cause your next 4 lacerating attacks to deal +50% wound damage.

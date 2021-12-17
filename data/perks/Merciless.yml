@@ -1,23 +1,23 @@
 name: Merciless
-description: Increases Wound damage against staggered Behemoths.
+description: Increases Wound damage against Staggered behemoths. At later ranks, increases wound duration.
 type: Finesse
 key: wound_damage
 effects:
   1:
-    description: +25 Wound Damage vs Staggered Behemoths
-    value: 25
+    description: [+40 wound damage vs staggered Behemoths, null]
+    value: [40, null]
   2:
-    description: +40 Wound Damage vs Staggered Behemoths
-    value: 40
+    description: [+60 wound damage vs staggered Behemoths, null]
+    value: [60, null]
   3:
-    description: +55 Wound Damage vs Staggered Behemoths
-    value: 55
+    description: [+80 wound damage vs staggered Behemoths, null]
+    value: [80, null]
   4:
-    description: +70 Wound Damage vs Staggered Behemoths
-    value: 70
+    description: [+100 wound damage vs staggered Behemoths, Increases the duration a part stays wounded by 20%.]
+    value: [100, 1.2]
   5:
-    description: +85 Wound Damage vs Staggered Behemoths
-    value: 85
+    description: [+115 wound damage vs staggered Behemoths, Increases the duration a part stays wounded by 40%.]
+    value: [115, 1.4]
   6:
-    description: +100 Wound Damage vs Staggered Behemoths
-    value: 100
+    description: [+130 wound damage vs staggered Behemoths, Increases the duration a part stays wounded by 60%.]
+    value: [130, 1.6]

@@ -4,20 +4,20 @@ type: Finesse
 key: [wound_damage, dodge_expose_damage]
 effects:
   1:
-    description: [+5 Wound Damage on Hit, null]
-    value: [5, null]
-  2:
-    description: [+10 Wound Damage on Hit, null]
+    description: [+10 wound damage, null]
     value: [10, null]
+  2:
+    description: [+20 wound damage, null]
+    value: [20, null]
   3:
-    description: [+15 Wound Damage on Hit, null]
-    value: [15, null]
+    description: [+30 wound damage, null]
+    value: [30, null]
   4:
-    description: [+20 Wound Damage on Hit, After dodging through an attack the next attack's Expose Damage is increased by 250]
-    value: [20, 200]
+    description: [+40 wound damage, After dodging through an attack, your next attack deals +250 wound damage]
+    value: [40, 250]
   5:
-    description: [+30 Wound Damage on Hit, After dodging through an attack the next attack's Expose Damage is increased by 350]
-    value: [30, 200]
+    description: [+50 wound damage, After dodging through an attack, your next attack deals +350 wound damage]
+    value: [50, 350]
   6:
-    description: [+40 Wound Damage on Hit, After dodging through an attack the next attack's Expose Damage is increased by 500]
-    value: [40, 400]
+    description: [+60 wound damage, After dodging through an attack, your next attack deals +500 wound damage]
+    value: [60, 500]
