@@ -2,9 +2,9 @@
 
 CONVERT="convert"
 
-# on windows there ImageMagick convert is called "imconvert" instead of "convert"
+# on windows there ImageMagick convert is called "magick convert" instead of "convert"
 if [[ "$OSTYPE" == "win32" || "$OSTYPE" == "msys" ]]; then
-    CONVERT="imconvert"
+    CONVERT="magick convert"
 fi
 
 function optimize_path () {

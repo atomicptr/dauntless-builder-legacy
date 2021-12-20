@@ -1,0 +1,32 @@
+name: Frostwülf's Chillers
+description: A Slayer's repeaters forged with Frostwülf trophies.
+icon: /assets/icons/weapons/frostwulf/FrostwulfsChillers.png
+type: Repeater
+damage: Slashing
+elemental: Frost
+cells: [Insight, Fortitude]
+power:
+  0: 60
+  1: 120
+perks:
+  - name: Galvanized
+    value: 2
+    from: 0
+    to: 0
+  - name: Galvanized
+    value: 3
+    from: 1
+    to: 1
+unique_effects:
+  - name: LanternsMakeGeyser
+    description: >-
+      After using your Lantern ability, create a geyser that frequently deals 60 frost damage. Any Slayer moving through
+      the geyser for the first time is granted a stackable 125 health shield that lasts for 25 seconds (max 600 shields).
+    from: 0
+    to: 0
+  - name: LanternsMakeGeyser
+    description: >-
+      After using your Lantern ability, create a geyser that frequently deals 100 frost damage. Any Slayer moving
+      through the geyser for the first time is granted a stackable 125 health shield that lasts for 25 seconds (max 600 shields).
+    from: 1
+    to: 1

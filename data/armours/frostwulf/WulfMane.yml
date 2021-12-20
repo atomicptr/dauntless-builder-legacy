@@ -1,0 +1,19 @@
+name: Wülf Mane
+description: Head protection forged from Frostwülf trophies.
+icon: /assets/icons/armours/frostwulf/WulfMane.png
+type: Head
+strength: Frost
+weakness: Blaze
+cells: Brutality
+resistance:
+  0: 15
+  1: 30
+perks:
+  - name: Aegis
+    value: 2
+    from: 0
+    to: 0
+  - name: Aegis
+    value: 3
+    from: 1
+    to: 1

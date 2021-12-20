@@ -1,0 +1,15 @@
+name: Aegis Cell
+slot: Fortitude
+variants:
+  "+1 Aegis Cell":
+    rarity: uncommon
+    perks:
+      Aegis: 1
+  "+2 Aegis Cell":
+    rarity: rare
+    perks:
+      Aegis: 2
+  "+3 Aegis Cell":
+    rarity: epic
+    perks:
+      Aegis: 3
