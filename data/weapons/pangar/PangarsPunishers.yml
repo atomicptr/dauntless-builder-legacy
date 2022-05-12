@@ -27,8 +27,8 @@ unique_effects:
     to: 0
   - name: PangarBomb
     description: |
-      Once charged, your next attack places a frost brand that deals 3,000 frost damage after 30 seconds. Slayers
+      Once charged, your next attack places a frost brand that deals 2,500 frost damage after 30 seconds. Slayers
       can destroy the brand, prematurely detonating it for 50% increased damage. Charges every 90 seconds.
-    value: 3000
+    value: 2500
     from: 1
     to: 1

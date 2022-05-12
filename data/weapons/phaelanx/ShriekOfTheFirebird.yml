@@ -22,15 +22,15 @@ unique_effects:
     description: |
       Attack a Behemoth part to lock onto it and load a homing missile. Missile deals 100 damage and increases the
       damage of every other missile in the volley by 100. Deal damage to load up to a maximum of 3 additional missiles.
-      Dodging fires all loaded missiles on the locked-on part. 90 second cooldown.
+      Dodging fires all loaded missiles on the locked-on part. 45 second cooldown.
     value: 100
     from: 0
     to: 0
   - name: PhaelanxLegendaryAbility
     description: |
-      Attack a Behemoth part to lock onto it and load a homing missile. Missile deals 150 damage and increases the
-      damage of every other missile in the volley by 150. Deal damage to load up to a maximum of 3 additional missiles.
-      Dodging fires all loaded missiles on the locked-on part. 90 second cooldown.
-    value: 150
+      Attack a Behemoth part to lock onto it and load a homing missile. Missile deals 175 damage and increases the
+      damage of every other missile in the volley by 175. Deal damage to load up to a maximum of 3 additional missiles.
+      Dodging fires all loaded missiles on the locked-on part. 45 second cooldown.
+    value: 175
     from: 1
     to: 1

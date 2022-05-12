@@ -2,7 +2,7 @@ name: Revenant
 icon: /assets/icons/omnicells/Revenant.png
 ability_icon: /assets/icons/omnicells/RevenantAbility.png
 passive: >
-  Lifesteal +2%. When Revenant state ends, each stack of Void Energy grants 125 health per second for 10 seconds.
+  Lifesteal +2%. When Revenant state ends, each stack of Void Energy grants 115 health per second for 10 seconds.
 active: >
   Drain up to 500 health to enter Revenant state and spawn a Void Orb. For every 100 health drained, summon an
   Umbral Tendril that deals 700 umbral damage. If an Umbral Tendril hits a target, it spawns an additional Void

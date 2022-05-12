@@ -1,5 +1,5 @@
 name: Aetheric Evasion
-description: Gains a flat amount of Lantern Charge on each weapon hit.
+description: On dodging through an attack, reduce the cooldown of your Lantern ability.
 type: Insight
 key: flat_lantern_charge
 effects:

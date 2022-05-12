@@ -5,6 +5,6 @@ passive: >
   Attack speed +10%. Dodging through an attack grants a stack of Velocity. Each stack lasts 45 seconds and
   increases movement speed by 3%
 active: >
-  Consume a stack of Velocity to dash ahead and deal 400 shock damage to a nearby target, prioritizing unbroken
+  Consume a stack of Velocity to dash ahead and deal 450 shock damage to a nearby target, prioritizing unbroken
   behemoth parts. For every 1% increase in movement speed, deal +5% damage to unbroken parts. Stacks are refreshed
   on use. 4 second cooldown.

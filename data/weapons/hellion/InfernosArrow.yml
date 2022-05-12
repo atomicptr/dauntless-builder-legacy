@@ -19,12 +19,12 @@ perks:
     to: 1
 unique_effects:
   - name: BlazeDamageOnNthHit
-    description: The eighth hit in a row deals +150 damage and major blaze damage
+    description: The fifteenth hit in a row deals +150 damage and major blaze damage
     value: 150
     from: 0
     to: 0
   - name: BlazeDamageOnNthHit
-    description: The eighth hit in a row deals +225 damage and major blaze damage
-    value: 225
+    description: The fifteenth hit in a row deals +200 damage and major blaze damage
+    value: 200
     from: 1
     to: 1

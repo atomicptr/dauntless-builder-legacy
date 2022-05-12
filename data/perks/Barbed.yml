@@ -16,8 +16,8 @@ effects:
     description: [+40 wound damage, After dodging through an attack, your next attack deals +250 wound damage]
     value: [40, 250]
   5:
-    description: [+50 wound damage, After dodging through an attack, your next attack deals +350 wound damage]
-    value: [50, 350]
+    description: [+50 wound damage, After dodging through an attack, your next attack deals +360 wound damage]
+    value: [50, 360]
   6:
     description: [+60 wound damage, After dodging through an attack, your next attack deals +500 wound damage]
     value: [60, 500]

@@ -26,7 +26,7 @@ unique_effects:
     to: 0
   - name: SahvytBoomerang
     description: >-
-      Once charged, your next weapon swing/shot unleashes a boomerang projectile that frequently deals 350 shock damage
+      Once charged, your next weapon swing/shot unleashes a boomerang projectile that frequently deals 325 shock damage
       to any target hit. Dodging through an attack reduces charge cooldown.
     from: 1
     to: 1

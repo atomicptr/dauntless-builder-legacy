@@ -20,13 +20,13 @@ perks:
 unique_effects:
   - name: LanternsMakeGeyser
     description: >-
-      After using your Lantern ability, create a geyser that frequently deals 60 frost damage. Any Slayer moving through
+      After using your Lantern ability, create a geyser that frequently deals 50 frost damage. Any Slayer moving through
       the geyser for the first time is granted a stackable 125 health shield that lasts for 25 seconds (max 600 shields).
     from: 0
     to: 0
   - name: LanternsMakeGeyser
     description: >-
-      After using your Lantern ability, create a geyser that frequently deals 100 frost damage. Any Slayer moving
+      After using your Lantern ability, create a geyser that frequently deals 70 frost damage. Any Slayer moving
       through the geyser for the first time is granted a stackable 125 health shield that lasts for 25 seconds (max 600 shields).
     from: 1
     to: 1

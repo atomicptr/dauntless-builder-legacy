@@ -1,23 +1,23 @@
 name: Warmth
-description: Protects against Chilled and Frozen status effects.
+description: Protects against Chilled status effect.
 type: Fortitude
-key: [frozen_immunity, chilled_immunity]
+key: chilled_immunity
 effects:
   1:
-    description: [Reduces duration of Frozen status by 30%, null]
-    value: [-0.3, null]
+    description: Reduces duration of Chilled status by 10%
+    value: -0.1
   2:
-    description: [Reduces duration of Frozen status by 60%, null]
-    value: [-0.6, null]
+    description: Reduces duration of Chilled status by 20%
+    value: -0.2
   3:
-    description: [Immune to being Frozen, null]
-    value: [-1, null]
+    description: Reduces duration of Chilled status by 40%
+    value: -0.4
   4:
-    description: [Immune to being Frozen, Reduces duration of Chilled status by 30%]
-    value: [-1, -0.3]
+    description: Reduces duration of Chilled status by 60%
+    value: -0.6
   5:
-    description: [Immune to being Frozen, Reduces duration of Chilled status by 60%]
-    value: [-1, -0.6]
+    description: Reduces duration of Chilled status by 80%
+    value: -0.8
   6:
-    description: [Immune to being Frozen, Immune to being Chilled]
-    value: [-1, -1]
+    description: Immune to being Chilled
+    value: -1

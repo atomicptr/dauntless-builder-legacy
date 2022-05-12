@@ -20,13 +20,13 @@ perks:
 unique_effects:
   - name: BoreusFrostSprite
     description: >-
-      After each charge attack level, generate a Frost Sprite that grant your next attack +30 damage and minor frost damage (Max 4 Sprites)
+      After each charge attack level, generate two Frost Sprites that grant your next attack +30 damage and minor frost damage (Max 4 Sprites)
     value: 30
     from: 0
     to: 0
   - name: BoreusFrostSprite
     description: >-
-      After each charge attack level, generate a Frost Sprite that grant your next attack +60 damage and minor frost damage (Max 4 Sprites)
+      After each charge attack level, generate two Frost Sprites that grant your next attack +60 damage and minor frost damage (Max 4 Sprites)
     value: 60
     from: 1
     to: 1
