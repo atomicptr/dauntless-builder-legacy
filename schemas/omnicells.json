@@ -19,8 +19,6 @@
             "type": "string"
         }
     },
-    "required": [
-        "name", "passive", "active"
-    ],
+    "required": ["name", "passive", "active"],
     "additionalProperties": false
 }

@@ -28,17 +28,12 @@
                             "type": ["number", "array", "null"]
                         }
                     },
-                    "required": [
-                        "description",
-                        "value"
-                    ],
+                    "required": ["description", "value"],
                     "additionalProperties": false
                 }
             }
         }
     },
-    "required": [
-        "name", "type", "effects"
-    ],
+    "required": ["name", "type", "effects"],
     "additionalProperties": false
 }

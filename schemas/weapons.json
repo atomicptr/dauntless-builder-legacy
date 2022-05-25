@@ -74,9 +74,7 @@
                     "type": "number"
                 }
             },
-            "required": [
-                "0"
-            ]
+            "required": ["0"]
         },
         "perks": {
             "type": "array",
@@ -96,10 +94,7 @@
                         "type": "number"
                     }
                 },
-                "required": [
-                    "name",
-                    "value"
-                ],
+                "required": ["name", "value"],
                 "additionalProperties": false
             },
             "uniqueItems": true
@@ -131,10 +126,7 @@
                         "type": "number"
                     }
                 },
-                "required": [
-                    "name",
-                    "description"
-                ],
+                "required": ["name", "description"],
                 "additionalProperties": false
             },
             "uniqueItems": true
@@ -143,9 +135,6 @@
             "type": "object"
         }
     },
-    "required": [
-        "name",
-        "type"
-    ],
+    "required": ["name", "type"],
     "additionalProperties": false
 }

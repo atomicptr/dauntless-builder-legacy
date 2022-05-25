@@ -1,7 +1,6 @@
 ---
 name: Feature Request
 about: You want to see a new feature added to dauntless-builder?
-
 ---
 
 ### Feature summary

@@ -1,0 +1,12 @@
+{
+    "drawer.home": "Home",
+    "drawer.new-build": "New Build",
+    "drawer.my-builds": "My Builds",
+    "drawer.settings": "Settings",
+
+    "appbar.dev-menu.translation-check": "Translation Check",
+
+    "pages.404.not-found": "Page Not Found",
+    "pages.settings.title": "Settings",
+    "pages.newbuild.title": "Create a new build"
+}

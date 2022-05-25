@@ -6,7 +6,7 @@ const md5 = require("md5");
 let stringMap = {};
 let stringCounter = {};
 
-if(fs.existsSync(`./.map/names.json`)) {
+if (fs.existsSync(`./.map/names.json`)) {
     let data = fs.readFileSync(`./.map/names.json`);
     stringMap = JSON.parse(data);
 }
@@ -27,7 +27,7 @@ function tryInsertToStringMap(category, string) {
     }
 
     while (true) {
-        if(Object.keys(stringMap[category]).indexOf(`${stringCounter[category]}`) === -1) {
+        if (Object.keys(stringMap[category]).indexOf(`${stringCounter[category]}`) === -1) {
             stringMap[category][stringCounter[category]] = string;
             console.log("Added " + string + " to " + category + " at " + stringCounter[category]);
             break;
@@ -42,34 +42,35 @@ function build(path) {
         glob(path, (err, files) => {
             let data = {};
 
-            for(let file of files) {
+            for (let file of files) {
                 let content = fs.readFileSync(file, "utf8");
-                let doc = yaml.safeLoad(content);
+                let doc = yaml.load(content);
 
                 // it is a cell use variant names instead of name
-                if(file.indexOf("/cells/") > -1) {
+                if (file.indexOf("/cells/") > -1) {
                     data[doc.name] = doc;
 
-                    for(let v of Object.keys(doc.variants)) {
+                    for (let v of Object.keys(doc.variants)) {
                         tryInsertToStringMap("Cells", v);
                     }
-                } else if(file.indexOf("/parts/") > -1) {
+                } else if (file.indexOf("/parts/") > -1) {
                     const parts = file.split("/");
                     const partsFolderIndex = parts.indexOf("parts");
 
                     const [weaponType, partType] = parts.slice(partsFolderIndex + 1);
 
-                    if(!data[weaponType]) {
+                    if (!data[weaponType]) {
                         data[weaponType] = {};
                     }
 
-                    if(!data[weaponType][partType]) {
+                    if (!data[weaponType][partType]) {
                         data[weaponType][partType] = {};
                     }
 
                     data[weaponType][partType][doc.name] = doc;
                     tryInsertToStringMap(`Parts:${ucfirst(weaponType)}`, doc.name);
-                } else if(file.indexOf("misc.yml") > -1) { // don't use string maps on misc
+                } else if (file.indexOf("misc.yml") > -1) {
+                    // don't use string maps on misc
                     data = doc;
                 } else {
                     data[doc.name] = doc;
@@ -126,7 +127,7 @@ Promise.all([
     build("data/weapons/*/*.yml"),
     build("data/parts/*/*/*.yml"),
     build("data/omnicells/*.yml"),
-    build("data/misc.yml")
+    build("data/misc.yml"),
 ]).then(data => {
     let objectCounter = 0;
 
@@ -138,16 +139,16 @@ Promise.all([
         weapons: data[objectCounter++],
         parts: data[objectCounter++],
         omnicells: data[objectCounter++],
-        misc: data[objectCounter++]
+        misc: data[objectCounter++],
     };
 
-    if(!fs.existsSync("./dist")) {
-        fs.mkdirSync("./dist");
+    if (!fs.existsSync("./public")) {
+        fs.mkdirSync("./public");
     }
 
     const dataString = JSON.stringify(object);
 
-    fs.writeFileSync("./dist/data.json", dataString);
+    fs.writeFileSync("./public/data.json", dataString);
 
     console.log("Built data.json");
 
@@ -157,11 +158,20 @@ Promise.all([
 
     fs.writeFileSync(`./.map/names.json`, mapString);
 
-    fs.writeFileSync("./dist/meta.json", JSON.stringify({
-        "build_time": new Date().getTime(),
-        "data_hash": md5(dataString),
-        "map_hash": md5(mapString)
-    }));
+    if (!fs.existsSync("./public/map")) {
+        fs.mkdirSync("./public/map");
+    }
+
+    fs.writeFileSync(`./public/map/names.json`, mapString);
+
+    fs.writeFileSync(
+        "./public/meta.json",
+        JSON.stringify({
+            build_time: new Date().getTime(),
+            data_hash: md5(dataString),
+            map_hash: md5(mapString),
+        }),
+    );
 
     const num = Object.keys(stringMap)
         .map(key => Object.keys(stringMap[key]).length)

@@ -1,7 +1,6 @@
 ---
 name: Add new Item
 about: I want an item added to your data.
-
 ---
 
 ### Item details

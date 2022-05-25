@@ -12,24 +12,20 @@ New version coming soon... In the meantime you can check out the old Documentati
 
 You can access the data via the following URLs:
 
-* https://www.dauntless-builder.com/data.json - The data
-* https://www.dauntless-builder.com/meta.json - Meta data, with a hash (to check if the data has changed), a timestamp etc.
-* https://www.dauntless-builder.com/map/names.json - The ID to Name map
+-   https://www.dauntless-builder.com/data.json - The data
+-   https://www.dauntless-builder.com/meta.json - Meta data, with a hash (to check if the data has changed), a timestamp etc.
+-   https://www.dauntless-builder.com/map/names.json - The ID to Name map
+
+## Contact me
+
+If you find an issue or want to provide feedback please use
+[Github Issues](https://github.com/atomicptr/dauntless-builder/issues) or join the
+[Dauntless Builder Discord](https://discord.gg/hkMvhsfPjH) server.
 
 ## Assets
 
 All Dauntless related assets are the property of Phoenix Labs.
 
-## Contact me
+## Source Code License
 
-If you want to contact me, you can do so via these methods:
-
-* E-Mail: me@atomicptr.de
-* Discord: Hecate#0001 (You'll not be able to contact me via Discord if you're not in the official Dauntless Discord server)
-* Reddit: /u/SirNullptr
-
-Please use [Github Issues](https://github.com/atomicptr/dauntless-builder/issues) for feature requests, bug reports and stuff along those lines.
-
-## License
-
-[Mozilla Public License v2](https://tldrlegal.com/license/mozilla-public-license-2.0-(mpl-2))
+[AGPL v3](https://tldrlegal.com/license/gnu-affero-general-public-license-v3-(agpl-3.0))

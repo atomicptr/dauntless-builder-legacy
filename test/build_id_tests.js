@@ -22,7 +22,7 @@ function makeBuild(buildId) {
     };
 
     const findWeapon = name => {
-        if(name in itemData.weapons) {
+        if (name in itemData.weapons) {
             return itemData.weapons[name];
         }
 
@@ -79,14 +79,11 @@ function makeBuild(buildId) {
 }
 
 function assertValid(data) {
-    for(let [buildId, assertions] of data) {
+    for (let [buildId, assertions] of data) {
         let build = makeBuild(buildId);
 
-        for(let assertion of assertions) {
-            assert.equal(
-                build[assertion.field],
-                assertion.value
-            );
+        for (let assertion of assertions) {
+            assert.equal(build[assertion.field], assertion.value);
         }
     }
 }
@@ -95,30 +92,33 @@ describe("Dauntless Builder - Build IDs", () => {
     it("should be able to deserialize builds", () => {
         // a random build that someone send me :)
         assertValid([
-            ["1afXt0gcECovFa4HLUyt3T4rIaQtKC5Yc4NtACxdTn5imCkKTgAhbC6Oh7F0vt2", [
-                {field: "weapon_name", value: "Ice Breakers"},
-                {field: "weapon_level", value: 1},
-                {field: "weapon_part1_name", value: "Titan's Crash"},
-                {field: "weapon_part2_name", value: "Cyclonic Strikeplate"},
-                {field: "weapon_cell0", value: "+3 Berserker Cell"},
-                {field: "weapon_cell1", value: "+3 Overpower Cell"},
-                {field: "head_name", value: "Timeweave Helm"},
-                {field: "head_level", value: 1},
-                {field: "head_cell", value: "+3 Acidic Cell"},
-                {field: "torso_name", value: "Thrax's Shadow"},
-                {field: "torso_level", value: 1},
-                {field: "torso_cell", value: "+3 Acidic Cell"},
-                {field: "arms_name", value: "Timeweave Gauntlets"},
-                {field: "arms_level", value: 1},
-                {field: "arms_cell", value: "+3 Acidic Cell"},
-                {field: "legs_name", value: "Thrax's Guile"},
-                {field: "legs_level", value: 1},
-                {field: "legs_cell", value: "+3 Acidic Cell"},
-                {field: "lantern_name", value: "Pangar's Shine"},
-                {field: "lantern_cell", value: "+3 Conduit Cell"},
-                {field: "omnicell", value: "Discipline"},
-            ]]
+            [
+                "1afXt0gcECovFa4HLUyt3T4rIaQtKC5Yc4NtACxdTn5imCkKTgAhbC6Oh7F0vt2",
+                [
+                    { field: "weapon_name", value: "Ice Breakers" },
+                    { field: "weapon_level", value: 1 },
+                    { field: "weapon_part1_name", value: "Titan's Crash" },
+                    { field: "weapon_part2_name", value: "Cyclonic Strikeplate" },
+                    { field: "weapon_cell0", value: "+3 Berserker Cell" },
+                    { field: "weapon_cell1", value: "+3 Overpower Cell" },
+                    { field: "head_name", value: "Timeweave Helm" },
+                    { field: "head_level", value: 1 },
+                    { field: "head_cell", value: "+3 Acidic Cell" },
+                    { field: "torso_name", value: "Thrax's Shadow" },
+                    { field: "torso_level", value: 1 },
+                    { field: "torso_cell", value: "+3 Acidic Cell" },
+                    { field: "arms_name", value: "Timeweave Gauntlets" },
+                    { field: "arms_level", value: 1 },
+                    { field: "arms_cell", value: "+3 Acidic Cell" },
+                    { field: "legs_name", value: "Thrax's Guile" },
+                    { field: "legs_level", value: 1 },
+                    { field: "legs_cell", value: "+3 Acidic Cell" },
+                    { field: "lantern_name", value: "Pangar's Shine" },
+                    { field: "lantern_cell", value: "+3 Conduit Cell" },
+                    { field: "omnicell", value: "Discipline" },
+                ],
+            ],
             // TODO: add more items / build variations etc
-        ])
+        ]);
     });
 });

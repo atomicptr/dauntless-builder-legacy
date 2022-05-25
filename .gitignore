@@ -1,6 +1,7 @@
 /deploy
 /dist
-/public
+/public/*.json
+/public/map
 
 # dev stuff
 /map

@@ -13,10 +13,9 @@ const data = JSON.parse(fs.readFileSync("./dist/data.json"));
 
 describe("Dauntless Builder Data", () => {
     describe("Validity of map", () => {
-
         it("should not change currently used IDs", done => {
             request.get(remoteMapUrl, (err, res, body) => {
-                if(err) {
+                if (err) {
                     throw err;
                 }
 
@@ -35,7 +34,7 @@ describe("Dauntless Builder Data", () => {
         });
 
         const checkIfItemIsInDataFor = (field, checkFunction) => {
-            if(!checkFunction) {
+            if (!checkFunction) {
                 checkFunction = itemName => {
                     for (let mapName of Object.keys(localMap)) {
                         if (Object.values(localMap[mapName]).indexOf(itemName) > -1) {
@@ -44,25 +43,28 @@ describe("Dauntless Builder Data", () => {
                     }
 
                     return false;
-                }
+                };
             }
 
             return () => {
-                for(let itemName in data[field]) {
-                    assert.ok(
-                        checkFunction(itemName),
-                        `${itemName} is not in the map, rebuilt map to fix.`
-                    );
+                for (let itemName in data[field]) {
+                    assert.ok(checkFunction(itemName), `${itemName} is not in the map, rebuilt map to fix.`);
                 }
-            }
-        }
+            };
+        };
 
         it("should contain every weapon", checkIfItemIsInDataFor("weapons"));
         it("should contain every armour piece", checkIfItemIsInDataFor("armours"));
         it("should contain every lantern", checkIfItemIsInDataFor("lanterns"));
         it("should contain every perk", checkIfItemIsInDataFor("perks"));
-        it("should contain every cell", checkIfItemIsInDataFor("cells", cellName =>
-            Object.keys(data.cells[cellName].variants).every(variant => Object.values(localMap["Cells"]).indexOf(variant) > -1)));
+        it(
+            "should contain every cell",
+            checkIfItemIsInDataFor("cells", cellName =>
+                Object.keys(data.cells[cellName].variants).every(
+                    variant => Object.values(localMap["Cells"]).indexOf(variant) > -1,
+                ),
+            ),
+        );
         it("should contain every omnicell", checkIfItemIsInDataFor("omnicells"));
     });
 
@@ -72,32 +74,29 @@ describe("Dauntless Builder Data", () => {
 
             let dataWrapper = data;
 
-            for(let part of fieldParts) {
+            for (let part of fieldParts) {
                 dataWrapper = dataWrapper[part];
             }
 
             return dataWrapper;
-        }
+        };
 
         const checkIconsFor = (field, alternativeIconFieldName) => {
             const iconFieldName = alternativeIconFieldName ? alternativeIconFieldName : "icon";
             return () => {
                 const dataWrapper = mineDataFromField(data, field);
 
-                for(let itemName in dataWrapper) {
+                for (let itemName in dataWrapper) {
                     const item = dataWrapper[itemName];
 
-                    if(item.icon) {
+                    if (item.icon) {
                         const iconPath = path.join(process.cwd(), item[iconFieldName]);
 
-                        assert.ok(
-                            fs.existsSync(iconPath),
-                            `${item.name}'s icon doesn't exist: "${iconPath}".`
-                        );
+                        assert.ok(fs.existsSync(iconPath), `${item.name}'s icon doesn't exist: "${iconPath}".`);
                     }
                 }
-            }
-        }
+            };
+        };
 
         it("Weapons should not have invalid icons", checkIconsFor("weapons"));
         it("Axe Mods should not have invalid icons", checkIconsFor("parts.axe.mods"));
@@ -121,30 +120,34 @@ describe("Dauntless Builder Data", () => {
 
         const checkCellSlotsFor = field => {
             return () => {
-                for(let itemName in data[field]) {
+                for (let itemName in data[field]) {
                     let item = data[field][itemName];
 
                     let cells = item.cells;
 
-                    if(!cells) {
+                    if (!cells) {
                         cells = [];
                     }
 
-                    if(!Array.isArray(cells)) {
+                    if (!Array.isArray(cells)) {
                         cells = [item.cells];
                     }
 
                     const slots = ["Brutality", "Finesse", "Fortitude", "Insight", "Alacrity", "Prismatic"];
 
-                    for(let cellSlot of cells) {
+                    for (let cellSlot of cells) {
                         assert.ok(
                             slots.indexOf(cellSlot) > -1,
-                            `${item.name} has an unknown cell slot type: "${cellSlot}", must be one of the following: ${slots.join(", ")}`
+                            `${
+                                item.name
+                            } has an unknown cell slot type: "${cellSlot}", must be one of the following: ${slots.join(
+                                ", ",
+                            )}`,
                         );
                     }
                 }
             };
-        }
+        };
 
         it("Weapons should not have invalid cell slots", checkCellSlotsFor("weapons"));
         it("Armours should not have invalid cell slots", checkCellSlotsFor("armours"));
@@ -154,31 +157,35 @@ describe("Dauntless Builder Data", () => {
             return () => {
                 const dataWrapper = mineDataFromField(data, field);
 
-                for(let itemName in dataWrapper) {
+                for (let itemName in dataWrapper) {
                     let item = dataWrapper[itemName];
 
                     const elements = ["Blaze", "Frost", "Shock", "Terra", "Radiant", "Umbral"];
 
                     let itemFields = [];
 
-                    if(field === "weapons") {
-                        itemFields = ["elemental"]
-                    } else if(field === "armours") {
+                    if (field === "weapons") {
+                        itemFields = ["elemental"];
+                    } else if (field === "armours") {
                         itemFields = ["strength", "weakness"];
                     }
 
                     let values = itemFields.map(field => item[field]);
 
-                    for(let value of values) {
-                        if(value) {
+                    for (let value of values) {
+                        if (value) {
                             assert.ok(
                                 elements.indexOf(value) > -1,
-                                `${item.name} has an unknown element: "${value}", must be one of the following: ${elements.join(", ")}`
+                                `${
+                                    item.name
+                                } has an unknown element: "${value}", must be one of the following: ${elements.join(
+                                    ", ",
+                                )}`,
                             );
                         }
                     }
                 }
-            }
+            };
         };
 
         it("Weapons should not have invalid elements", checkElementsFor("weapons"));
@@ -186,32 +193,34 @@ describe("Dauntless Builder Data", () => {
 
         const checkPerksFor = (field, getPerksFunc) => {
             return () => {
-                for(let itemName in data[field]) {
+                for (let itemName in data[field]) {
                     let item = data[field][itemName];
 
                     const perks = getPerksFunc(item);
 
-                    for(let perk of perks) {
-                        assert.ok(
-                            perk in data.perks,
-                            `${item.name} has an unknown perk: "${perk}".`
-                        );
+                    for (let perk of perks) {
+                        assert.ok(perk in data.perks, `${item.name} has an unknown perk: "${perk}".`);
                     }
                 }
-            }
-        }
+            };
+        };
 
-        it("Weapons should not have invalid perks", checkPerksFor("weapons", item =>
-            item.perks ? item.perks.map(p => p.name) : []
-        ));
+        it(
+            "Weapons should not have invalid perks",
+            checkPerksFor("weapons", item => (item.perks ? item.perks.map(p => p.name) : [])),
+        );
 
-        it("Armours should not have invalid perks", checkPerksFor("armours", item =>
-            item.perks ? item.perks.map(p => p.name) : []
-        ));
+        it(
+            "Armours should not have invalid perks",
+            checkPerksFor("armours", item => (item.perks ? item.perks.map(p => p.name) : [])),
+        );
 
-        it("Cells should not have invalid perks", checkPerksFor("cells", item =>
-            [].concat(...Object.keys(item.variants).map(v => Object.keys(item.variants[v].perks)))
-        ));
+        it(
+            "Cells should not have invalid perks",
+            checkPerksFor("cells", item =>
+                [].concat(...Object.keys(item.variants).map(v => Object.keys(item.variants[v].perks))),
+            ),
+        );
 
         const checkIfHasValidSchema = (field, seperateSchemaField = null) => {
             const schemaField = seperateSchemaField ? seperateSchemaField : field;
@@ -223,7 +232,7 @@ describe("Dauntless Builder Data", () => {
 
             const schemaPath = path.join(__dirname, `../schemas`, ...pathParts);
 
-            if(!fs.existsSync(schemaPath)) {
+            if (!fs.existsSync(schemaPath)) {
                 return () => {
                     assert.fail("No schema found for " + field);
                 };
@@ -236,21 +245,23 @@ describe("Dauntless Builder Data", () => {
                 const dataWrapper = mineDataFromField(data, field);
 
                 return () => {
-                    for(let itemName in dataWrapper) {
+                    for (let itemName in dataWrapper) {
                         let item = dataWrapper[itemName];
 
                         assert.ok(
                             validator.validate(schema, item),
-                            `${item.name} does not confirm to the schema defined in ${schemaPath}: ${validator.errorsText()}`
+                            `${
+                                item.name
+                            } does not confirm to the schema defined in ${schemaPath}: ${validator.errorsText()}`,
                         );
                     }
-                }
+                };
             } catch (ex) {
                 return () => {
                     assert.fail(ex);
-                }
+                };
             }
-        }
+        };
 
         it("Weapons format should have a valid schema", checkIfHasValidSchema("weapons"));
         it("Armours format should have a valid schema", checkIfHasValidSchema("armours"));
@@ -262,20 +273,56 @@ describe("Dauntless Builder Data", () => {
         it("Omnicells format should have a valid schema", checkIfHasValidSchema("omnicells"));
 
         // validate specials on all weapons
-        it("Axe Specials format should have a valid schema", checkIfHasValidSchema("parts.axe.specials", "parts.generic.specials"));
-        it("Chain Blades Specials format should have a valid schema", checkIfHasValidSchema("parts.chainblades.specials", "parts.generic.specials"));
-        it("Hammer Specials format should have a valid schema", checkIfHasValidSchema("parts.hammer.specials", "parts.generic.specials"));
-        it("Swords Specials format should have a valid schema", checkIfHasValidSchema("parts.sword.specials", "parts.generic.specials"));
-        it("War Pike Specials format should have a valid schema", checkIfHasValidSchema("parts.warpike.specials", "parts.generic.specials"));
-        it("Aether Striker Specials format should have a valid schema", checkIfHasValidSchema("parts.aetherstrikers.specials", "parts.generic.specials"));
+        it(
+            "Axe Specials format should have a valid schema",
+            checkIfHasValidSchema("parts.axe.specials", "parts.generic.specials"),
+        );
+        it(
+            "Chain Blades Specials format should have a valid schema",
+            checkIfHasValidSchema("parts.chainblades.specials", "parts.generic.specials"),
+        );
+        it(
+            "Hammer Specials format should have a valid schema",
+            checkIfHasValidSchema("parts.hammer.specials", "parts.generic.specials"),
+        );
+        it(
+            "Swords Specials format should have a valid schema",
+            checkIfHasValidSchema("parts.sword.specials", "parts.generic.specials"),
+        );
+        it(
+            "War Pike Specials format should have a valid schema",
+            checkIfHasValidSchema("parts.warpike.specials", "parts.generic.specials"),
+        );
+        it(
+            "Aether Striker Specials format should have a valid schema",
+            checkIfHasValidSchema("parts.aetherstrikers.specials", "parts.generic.specials"),
+        );
 
         // validate mods on all weapons
         it("Axe Mods format should have a valid schema", checkIfHasValidSchema("parts.axe.mods", "parts.generic.mods"));
-        it("Chain Blades Mods format should have a valid schema", checkIfHasValidSchema("parts.chainblades.mods", "parts.generic.mods"));
-        it("Hammer Mods format should have a valid schema", checkIfHasValidSchema("parts.hammer.mods", "parts.generic.mods"));
-        it("Swords Mods format should have a valid schema", checkIfHasValidSchema("parts.sword.mods", "parts.generic.mods"));
-        it("War Pike Mods format should have a valid schema", checkIfHasValidSchema("parts.warpike.mods", "parts.generic.mods"));
-        it("Aether Striker Mods format should have a valid schema", checkIfHasValidSchema("parts.aetherstrikers.mods", "parts.generic.mods"));
-        it("Repeater Mods format should have a valid schema", checkIfHasValidSchema("parts.repeater.mods", "parts.generic.mods"));
+        it(
+            "Chain Blades Mods format should have a valid schema",
+            checkIfHasValidSchema("parts.chainblades.mods", "parts.generic.mods"),
+        );
+        it(
+            "Hammer Mods format should have a valid schema",
+            checkIfHasValidSchema("parts.hammer.mods", "parts.generic.mods"),
+        );
+        it(
+            "Swords Mods format should have a valid schema",
+            checkIfHasValidSchema("parts.sword.mods", "parts.generic.mods"),
+        );
+        it(
+            "War Pike Mods format should have a valid schema",
+            checkIfHasValidSchema("parts.warpike.mods", "parts.generic.mods"),
+        );
+        it(
+            "Aether Striker Mods format should have a valid schema",
+            checkIfHasValidSchema("parts.aetherstrikers.mods", "parts.generic.mods"),
+        );
+        it(
+            "Repeater Mods format should have a valid schema",
+            checkIfHasValidSchema("parts.repeater.mods", "parts.generic.mods"),
+        );
     });
 });

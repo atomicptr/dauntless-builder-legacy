@@ -28,8 +28,6 @@
             "additionalProperties": false
         }
     },
-    "required": [
-        "name", "cells", "lantern_ability"
-    ],
+    "required": ["name", "cells", "lantern_ability"],
     "additionalProperties": false
 }
