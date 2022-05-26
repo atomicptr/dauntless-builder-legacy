@@ -5,4 +5,5 @@ script:
     - yarn build:data
     - yarn build:i18n
     - yarn build:frontend
+    - tsc
     - yarn test

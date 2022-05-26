@@ -3,7 +3,6 @@
         "target": "ESNext",
         "useDefineForClassFields": true,
         "lib": ["DOM", "DOM.Iterable", "ESNext"],
-        "types": ["vite/types"],
         "allowJs": false,
         "skipLibCheck": true,
         "esModuleInterop": false,
