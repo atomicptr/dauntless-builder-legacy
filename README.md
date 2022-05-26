@@ -26,6 +26,8 @@ If you find an issue or want to provide feedback please use
 
 All Dauntless related assets are the property of Phoenix Labs.
 
-## Source Code License
+The collected data itself is public domain.
 
-[AGPL v3](<https://tldrlegal.com/license/gnu-affero-general-public-license-v3-(agpl-3.0)>)
+## License
+
+[![](https://www.gnu.org/graphics/agplv3-155x51.png)](<https://tldrlegal.com/license/gnu-affero-general-public-license-v3-(agpl-3.0)>)
