@@ -1,5 +1,5 @@
 import { StrictMode } from "react";
-import {createRoot, Root} from "react-dom/client";
+import { createRoot, Root } from "react-dom/client";
 import { Provider } from "react-redux";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
@@ -12,6 +12,8 @@ import { ThemeProvider } from "@mui/material";
 import theme from "./components/theme/theme";
 import NotFound from "./pages/404/NotFound";
 import Settings from "./pages/settings/Settings";
+import BuildSearch from "./pages/build/BuildSearch";
+import MetaBuilds from "./pages/build/MetaBuilds";
 
 const DauntlessBuilderApp = () => {
     return (
@@ -26,6 +28,8 @@ const DauntlessBuilderApp = () => {
                                 <Route path="b">
                                     <Route index element={<Navigate to={"/b/new"} />} />
                                     <Route path="new" element={<NewBuild />} />
+                                    <Route path="search" element={<BuildSearch />} />
+                                    <Route path="meta" element={<MetaBuilds />} />
                                     <Route path=":buildId" element={<Build />} />
                                 </Route>
 
@@ -41,10 +45,10 @@ const DauntlessBuilderApp = () => {
     );
 };
 
-let container: HTMLElement|null = null;
-let root: Root|null = null;
+let container: HTMLElement | null = null;
+let root: Root | null = null;
 
-document.addEventListener("DOMContentLoaded", ev => {
+document.addEventListener("DOMContentLoaded", () => {
     if (!container) {
         container = document.querySelector<HTMLElement>("#app");
 
@@ -59,5 +63,5 @@ document.addEventListener("DOMContentLoaded", ev => {
         <StrictMode>
             <DauntlessBuilderApp />
         </StrictMode>,
-    )
-})
+    );
+});

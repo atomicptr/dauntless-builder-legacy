@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material";
-import {muiLocaleComponent} from "../../i18n";
+import { muiLocaleComponent } from "../../i18n";
 
 export const drawerWidth = 240;
 
@@ -17,7 +17,7 @@ const baseTheme = createTheme({
 
 const makeTheme = () => {
     return createTheme(baseTheme, muiLocaleComponent());
-}
+};
 
 const theme = makeTheme();
 

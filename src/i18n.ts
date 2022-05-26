@@ -1,8 +1,8 @@
 import i18n from "i18next";
-import {initReactI18next} from "react-i18next";
-import {deDE, enUS} from "@mui/material/locale";
+import { initReactI18next } from "react-i18next";
+import { deDE, enUS } from "@mui/material/locale";
 import LanguageDetector from "i18next-browser-languagedetector";
-import { i18nextPlugin as translationCheckPlugin } from 'translation-check'
+import { i18nextPlugin as translationCheckPlugin } from "translation-check";
 
 import en from "./translations/en.json";
 import enItems from "./translations/items/items.en.json";
@@ -10,13 +10,13 @@ import de from "./translations/de.json";
 import jp from "./translations/jp.json";
 
 const resources = {
-    en: {translation: {...en, ...enItems}},
-    de: {translation: de},
-    jp: {translation: jp},
+    en: { translation: { ...en, ...enItems } },
+    de: { translation: de },
+    jp: { translation: jp },
 };
 
 export enum Language {
-    English= "en",
+    English = "en",
     German = "de",
     Japanese = "jp",
 }
@@ -25,7 +25,7 @@ const nativeLanguageNames = {
     [Language.English]: "English",
     [Language.German]: "Deutsch",
     [Language.Japanese]: "日本語",
-}
+};
 
 i18n.use(initReactI18next)
     .use(LanguageDetector)
@@ -36,12 +36,12 @@ i18n.use(initReactI18next)
         load: "languageOnly",
         debug: DB_DEVMODE,
         interpolation: {
-            escapeValue: false
+            escapeValue: false,
         },
         detection: {
-            order: ['localStorage', 'navigator'],
+            order: ["localStorage", "navigator"],
             lookupLocalStorage: "language",
-        }
+        },
     });
 
 export function muiLocaleComponent() {
@@ -54,7 +54,7 @@ export function muiLocaleComponent() {
     }
 }
 
-export function getNativeLanguageName(lang: Language): string|null {
+export function getNativeLanguageName(lang: Language): string | null {
     return nativeLanguageNames[lang] ?? null;
 }
 

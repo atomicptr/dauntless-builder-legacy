@@ -1,6 +1,7 @@
 import React, { ReactNode, useState } from "react";
 import {
     Box,
+    Button,
     Container,
     CssBaseline,
     Divider,
@@ -21,8 +22,18 @@ import { NavLink } from "react-router-dom";
 import { AppBar } from "./AppBar";
 import { DrawerHeader } from "./Drawer";
 import { FaDiscord, FaGithub } from "react-icons/fa";
-import { AddCircle, Bookmarks, ChevronLeft, ChevronRight, Home, Menu, Settings } from "@mui/icons-material";
-import {useTranslation} from "react-i18next";
+import {
+    AddCircle,
+    Bookmarks,
+    ChevronLeft,
+    ChevronRight,
+    Home,
+    ManageSearch,
+    Menu,
+    Settings,
+    Stars,
+} from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 import DevMenu from "../dev-menu/DevMenu";
 
 interface LayoutProps {
@@ -33,7 +44,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     const theme = useTheme();
     const isMobile = useMediaQuery("(max-width: 760px)");
     const [open, setOpen] = useState(false);
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
     const handleDrawerOpen = () => setOpen(true);
     const handleDrawerClose = () => setOpen(false);
@@ -42,6 +53,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         { text: t("drawer.home"), icon: <Home />, link: "/" },
         { text: t("drawer.new-build"), icon: <AddCircle />, link: "/b/new" },
         { text: t("drawer.my-builds"), icon: <Bookmarks />, link: "/favorites" },
+        { text: t("drawer.build-search"), icon: <ManageSearch />, link: "/b/search", disabled: true },
+        { text: t("drawer.meta-builds"), icon: <Stars />, link: "/b/meta", disabled: true },
         { text: t("drawer.settings"), icon: <Settings />, link: "/settings" },
     ];
 
@@ -113,6 +126,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                                 component={NavLink}
                                 to={item.link}
                                 onClick={isMobile ? handleDrawerClose : undefined}
+                                disabled={item.disabled}
+                                title={item.disabled ? "coming soon..." : undefined}
                             >
                                 <ListItemIcon>{item.icon}</ListItemIcon>
                                 <ListItemText primary={item.text} />
@@ -120,32 +135,46 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         </ListItem>
                     ))}
                 </List>
-                <List sx={{ marginTop: "auto", pb: 0, position: "fixed", width: drawerWidth, bottom: 0 }}>
-                    <Divider />
-                    <ListItem
-                        style={{
-                            display: "flex",
-                            justifyContent: "center",
-                        }}
-                    >
-                        <IconButton
-                            component="a"
-                            href="https://github.com/atomicptr/dauntless-builder"
-                            target="_blank"
-                            title="Github Repository"
+                <Box
+                    sx={{
+                        position: "fixed",
+                        marginTop: "auto",
+                        textAlign: "center",
+                        width: drawerWidth,
+                        pb: 0,
+                        bottom: 0,
+                    }}
+                >
+                    <Button component={"a"} target="_blank" href="https://playdauntless.com/patch-notes/1-9-3/">
+                        Dauntless v1.9.3
+                    </Button>
+                    <List sx={{ marginTop: "auto" }}>
+                        <Divider />
+                        <ListItem
+                            style={{
+                                display: "flex",
+                                justifyContent: "center",
+                            }}
                         >
-                            <FaGithub />
-                        </IconButton>
-                        <IconButton
-                            component="a"
-                            href="https://discord.gg/hkMvhsfPjH"
-                            target="_blank"
-                            title="Dauntless Builder Discord Server"
-                        >
-                            <FaDiscord />
-                        </IconButton>
-                    </ListItem>
-                </List>
+                            <IconButton
+                                component="a"
+                                href="https://github.com/atomicptr/dauntless-builder"
+                                target="_blank"
+                                title="Github Repository"
+                            >
+                                <FaGithub />
+                            </IconButton>
+                            <IconButton
+                                component="a"
+                                href="https://discord.gg/hkMvhsfPjH"
+                                target="_blank"
+                                title="Dauntless Builder Discord Server"
+                            >
+                                <FaDiscord />
+                            </IconButton>
+                        </ListItem>
+                    </List>
+                </Box>
             </Drawer>
             <Container maxWidth={"xl"}>
                 <DrawerHeader sx={{ marginBottom: "16px" }} />

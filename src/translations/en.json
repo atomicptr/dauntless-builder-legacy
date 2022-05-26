@@ -2,6 +2,8 @@
     "drawer.home": "Home",
     "drawer.new-build": "New Build",
     "drawer.my-builds": "My Builds",
+    "drawer.build-search": "Build Search",
+    "drawer.meta-builds": "Meta Builds",
     "drawer.settings": "Settings",
 
     "appbar.dev-menu.translation-check": "Translation Check",

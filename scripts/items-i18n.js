@@ -12,16 +12,12 @@ const data = JSON.parse(fs.readFileSync(dataJsonPath).toString());
 
 // This code HAS to be the same as the one in src/utils/item-translation-identifier.ts
 const createItemTranslationIdentifier = (...parts) =>
-    ["item", ...parts].map(p => p.toString()
-        .toLowerCase()
-        .replace(/\s/g, "-")
-        .replace(/ü/g, "u")
-        .replace(/[']/g, "")
-        .trim()
-    ).join(".");
+    ["item", ...parts]
+        .map(p => p.toString().toLowerCase().replace(/\s/g, "-").replace(/ü/g, "u").replace(/[']/g, "").trim())
+        .join(".");
 
 const i18nValues = {
-    en: {}
+    en: {},
 };
 
 const skipCategory = ["misc"];
@@ -49,8 +45,9 @@ for (let category of Object.keys(data)) {
                 const ue = item.unique_effects[index];
 
                 if (ue.description) {
-                    i18nValues.en[createItemTranslationIdentifier(category, itemName, "unique_effects", index, "description")] =
-                        ue.description;
+                    i18nValues.en[
+                        createItemTranslationIdentifier(category, itemName, "unique_effects", index, "description")
+                    ] = ue.description;
                 }
             }
         }
@@ -67,11 +64,13 @@ for (let category of Object.keys(data)) {
 
         if (category === "lanterns" && item.lantern_ability) {
             if (item.lantern_ability.instant) {
-                i18nValues.en[createItemTranslationIdentifier(category, itemName, "lantern_ability", "instant")] = item.lantern_ability.instant;
+                i18nValues.en[createItemTranslationIdentifier(category, itemName, "lantern_ability", "instant")] =
+                    item.lantern_ability.instant;
             }
 
             if (item.lantern_ability.hold) {
-                i18nValues.en[createItemTranslationIdentifier(category, itemName, "lantern_ability", "hold")] = item.lantern_ability.hold;
+                i18nValues.en[createItemTranslationIdentifier(category, itemName, "lantern_ability", "hold")] =
+                    item.lantern_ability.hold;
             }
         }
 
@@ -91,12 +90,21 @@ for (let category of Object.keys(data)) {
                     const part = item[partType][partName];
 
                     if (part.name) {
-                        i18nValues.en[createItemTranslationIdentifier(category, itemName, partType, partName, "name")] = part.name;
+                        i18nValues.en[createItemTranslationIdentifier(category, itemName, partType, partName, "name")] =
+                            part.name;
                     }
 
                     for (let index in part.part_effect) {
-                        i18nValues.en[createItemTranslationIdentifier(category, itemName, partType, partName, "part_effect", index)] =
-                            part.part_effect[index];
+                        i18nValues.en[
+                            createItemTranslationIdentifier(
+                                category,
+                                itemName,
+                                partType,
+                                partName,
+                                "part_effect",
+                                index,
+                            )
+                        ] = part.part_effect[index];
                     }
                 }
             }
@@ -107,13 +115,16 @@ for (let category of Object.keys(data)) {
                 const effect = item.effects[key];
 
                 if (effect.description && typeof effect.description === "string") {
-                    i18nValues.en[createItemTranslationIdentifier(category, itemName, "effects", key, "description")] = effect.description;
+                    i18nValues.en[createItemTranslationIdentifier(category, itemName, "effects", key, "description")] =
+                        effect.description;
                     continue;
                 }
 
                 if (effect.description && Array.isArray(effect.description)) {
                     for (let index in effect.description) {
-                        i18nValues.en[createItemTranslationIdentifier(category, itemName, "effects", key, "description", index)] = effect.description[index];
+                        i18nValues.en[
+                            createItemTranslationIdentifier(category, itemName, "effects", key, "description", index)
+                        ] = effect.description[index];
                     }
                 }
             }
@@ -144,11 +155,15 @@ for (let category of Object.keys(data)) {
 
                             if (typeof v === "object") {
                                 if (v.name) {
-                                    i18nValues[lang][createItemTranslationIdentifier(category, itemName, field, index, "name")] = v.name;
+                                    i18nValues[lang][
+                                        createItemTranslationIdentifier(category, itemName, field, index, "name")
+                                    ] = v.name;
                                 }
 
                                 if (v.description) {
-                                    i18nValues[lang][createItemTranslationIdentifier(category, itemName, field, index, "description")] = v.description;
+                                    i18nValues[lang][
+                                        createItemTranslationIdentifier(category, itemName, field, index, "description")
+                                    ] = v.description;
                                 }
                             }
                         }

@@ -28,4 +28,4 @@ All Dauntless related assets are the property of Phoenix Labs.
 
 ## Source Code License
 
-[AGPL v3](https://tldrlegal.com/license/gnu-affero-general-public-license-v3-(agpl-3.0))
+[AGPL v3](<https://tldrlegal.com/license/gnu-affero-general-public-license-v3-(agpl-3.0)>)
