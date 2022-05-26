@@ -6,7 +6,7 @@ import {Lantern} from "./Lantern";
 import {Perk} from "./Perks";
 import {Part} from "./Part";
 
-interface Data {
+interface DauntlessBuilderData {
     armours: {
         [name: string]: Armour,
     };
@@ -66,9 +66,13 @@ interface Data {
                 [name: string]: Part;
             };
         }
+    },
+    misc: {
+        dauntless_version: string;
+        patchnotes_version_string: string;
     }
 }
 
-const data: Data = dataJson;
+const dauntlessBuilderData: DauntlessBuilderData = dataJson;
 
-export default data;
+export default dauntlessBuilderData;

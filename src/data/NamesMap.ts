@@ -21,7 +21,7 @@ export type NamesMap = {
 
 import namesJson from "../../.map/names.json";
 
-const names: NamesMap = namesJson;
+const dauntlessBuilderNamesMap: NamesMap = namesJson;
 
-export default names;
+export default dauntlessBuilderNamesMap;
 

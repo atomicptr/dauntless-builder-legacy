@@ -1,8 +1,8 @@
 import Hashids from "hashids";
 
 import {Weapon, WeaponType} from "./Weapon";
-import names, {NamesMapType} from "./NamesMap";
-import data from "./Data";
+import dauntlessBuilderNamesMap, {NamesMapType} from "./NamesMap";
+import dauntlessBuilderData from "./Data";
 
 const hashids = new Hashids("spicy");
 
@@ -117,11 +117,11 @@ export class BuildModel {
                 return null;
             }
 
-            if (!(type in names)) {
+            if (!(type in dauntlessBuilderNamesMap)) {
                 return null;
             }
 
-            return names[type][id];
+            return dauntlessBuilderNamesMap[type][id];
         };
 
         const build = new BuildModel();
@@ -187,14 +187,14 @@ export class BuildModel {
 }
 
 export const findWeaponByName = (weaponName: string): Weapon|null =>
-    weaponName in data.weapons ? data.weapons[weaponName] : null;
+    weaponName in dauntlessBuilderData.weapons ? dauntlessBuilderData.weapons[weaponName] : null;
 
 export const mapIdByName = (type: NamesMapType, name: string): number => {
-    if (!(type in names)) {
+    if (!(type in dauntlessBuilderNamesMap)) {
         return 0;
     }
 
-    const id = Object.keys(names[type]).find(key => names[type][key] === name);
+    const id = Object.keys(dauntlessBuilderNamesMap[type]).find(key => dauntlessBuilderNamesMap[type][key] === name);
     return id ? Number(id) : 0;
 };
 

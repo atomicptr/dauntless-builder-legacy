@@ -35,6 +35,7 @@ import {
 } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import DevMenu from "../dev-menu/DevMenu";
+import dauntlessBuilderData from "../../data/Data";
 
 interface LayoutProps {
     children: ReactNode;
@@ -145,8 +146,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         bottom: 0,
                     }}
                 >
-                    <Button component={"a"} target="_blank" href="https://playdauntless.com/patch-notes/1-9-3/">
-                        Dauntless v1.9.3
+                    <Button
+                        component={"a"}
+                        target="_blank"
+                        href={`https://playdauntless.com/patch-notes/${dauntlessBuilderData.misc.patchnotes_version_string}/`}
+                    >
+                        Dauntless v{dauntlessBuilderData.misc.dauntless_version}
                     </Button>
                     <List sx={{ marginTop: "auto" }}>
                         <Divider />
