@@ -5,11 +5,12 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import { i18nextPlugin as translationCheckPlugin } from 'translation-check'
 
 import en from "./translations/en.json";
+import enItems from "./translations/items/items.en.json";
 import de from "./translations/de.json";
 import jp from "./translations/jp.json";
 
 const resources = {
-    en: {translation: en},
+    en: {translation: {...en, ...enItems}},
     de: {translation: de},
     jp: {translation: jp},
 };

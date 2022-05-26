@@ -2,6 +2,7 @@ language: node_js
 node_js:
 - '14'
 script:
-    - yarn build-data
-    - yarn build-frontend
+    - yarn build:data
+    - yarn build:i18n
+    - yarn build:frontend
     - yarn test
