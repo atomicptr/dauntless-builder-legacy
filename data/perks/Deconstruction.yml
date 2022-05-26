@@ -3,21 +3,38 @@ description: Bonus damage against objects created by Behemoths.
 type: Brutality
 key: damage_object
 effects:
-  1:
+  '1':
     description: Deal 110% damage to objects created by Behemoths
     value: 1.1
-  2:
+  '2':
     description: Deal 120% damage to objects created by Behemoths
     value: 1.2
-  3:
+  '3':
     description: Deal 130% damage to objects created by Behemoths
     value: 1.3
-  4:
+  '4':
     description: Deal 150% damage to objects created by Behemoths
     value: 1.5
-  5:
+  '5':
     description: Deal 170% damage to objects created by Behemoths
     value: 1.7
-  6:
+  '6':
     description: Deal 200% damage to objects created by Behemoths
     value: 2
+i18n:
+  fr:
+    name: Démolition
+    description: Augmente les dégâts contre les objets créés par les Béhemoths.
+    effects:
+      '1':
+        description: Infligez 110% de dégâts aux objets créés par les Behemoths.
+      '2':
+        description: Infligez 120% de dégâts aux objets créés par les Behemoths.
+      '3':
+        description: Infligez 130% de dégâts aux objets créés par les Behemoths.
+      '4':
+        description: Infligez 150% de dégâts aux objets créés par les Behemoths.
+      '5':
+        description: Infligez 170% de dégâts aux objets créés par les Behemoths.
+      '6':
+        description: Infligez 200% de dégâts aux objets créés par les Behemoths.

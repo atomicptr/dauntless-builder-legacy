@@ -3,21 +3,38 @@ description: Increases the time you are invincible when dodging.
 type: Alacrity
 key: iframe_increase
 effects:
-  1:
+  '1':
     description: Increases Dodge invulnerability windows by 7%
     value: 0.07
-  2:
+  '2':
     description: Increases Dodge invulnerability windows by 14%
     value: 0.14
-  3:
+  '3':
     description: Increases Dodge invulnerability windows by 21%
     value: 0.21
-  4:
+  '4':
     description: Increases Dodge invulnerability windows by 28%
     value: 0.28
-  5:
+  '5':
     description: Increases Dodge invulnerability windows by 35%
     value: 0.35
-  6:
+  '6':
     description: Increases Dodge invulnerability windows by 42%
     value: 0.42
+i18n:
+  fr:
+    name: Évasion
+    description: Augmente la durée d'invulnéribilité lors des esquives.
+    effects:
+      '1':
+        description: Augmente la durée d'invincibilité lors des esquives de 7%
+      '2':
+        description: Augmente la durée d'invincibilité lors des esquives de 14%
+      '3':
+        description: Augmente la durée d'invincibilité lors des esquives de 21%
+      '4':
+        description: Augmente la durée d'invincibilité lors des esquives de 28%
+      '5':
+        description: Augmente la durée d'invincibilité lors des esquives de 35%
+      '6':
+        description: Augmente la durée d'invincibilité lors des esquives de 42%

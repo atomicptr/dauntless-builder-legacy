@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/gnasher/RagingFists.png
 type: Aether Strikers
 damage: Blunt
 elemental: null
-cells: [Finesse, Insight]
+cells:
+  - Finesse
+  - Insight
 power:
-  0: 20
-  1: 120
+  '0': 20
+  '1': 120
 perks:
   - name: Ragehunter
     value: 1
@@ -20,15 +22,28 @@ perks:
 unique_effects:
   - name: GnasherRage
     description: >
-      Periodically enter a rage, dealing +5% damage and gaining immunity to stagger. Taking damage causes you to
-      enrage more quickly.
+      Periodically enter a rage, dealing +5% damage and gaining immunity to
+      stagger. Taking damage causes you to enrage more quickly.
     value: 0.05
     from: 0
     to: 0
   - name: GnasherRage
     description: >
-      Periodically enter a rage, dealing +15% damage and gaining immunity to stagger. Taking damage causes you to
-      enrage more quickly.
+      Periodically enter a rage, dealing +15% damage and gaining immunity to
+      stagger. Taking damage causes you to enrage more quickly.
     value: 0.15
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Poings enragés
+    description: Cestes aethériques forgée à partir de trophées de Gnasher.
+    unique_effects:
+      - description: >-
+          Entrez périodiquement en rage, infligeant +5% de dégâts et gagnez une
+          immunité aux étourdissements. Subir des dégâts vous permet de vous
+          enrager plus rapidement.
+      - description: >-
+          Entrez périodiquement en rage, infligeant +15% de dégâts et gagnez une
+          immunité aux étourdissements. Subir des dégâts vous permet de vous
+          enrager plus rapidement.

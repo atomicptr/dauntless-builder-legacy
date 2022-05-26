@@ -1,15 +1,22 @@
 name: Predator Cell
 slot: Finesse
 variants:
-  "+1 Predator Cell":
+  +1 Predator Cell:
     rarity: uncommon
     perks:
       Predator: 1
-  "+2 Predator Cell":
+  +2 Predator Cell:
     rarity: rare
     perks:
       Predator: 2
-  "+3 Predator Cell":
+  +3 Predator Cell:
     rarity: epic
     perks:
       Predator: 3
+i18n:
+  fr:
+    name: Prédateur
+    variants:
+      - Prédateur +1
+      - Prédateur +2
+      - Prédateur +3

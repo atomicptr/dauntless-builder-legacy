@@ -1,15 +1,22 @@
 name: Vampiric Cell
 slot: Fortitude
 variants:
-  "+1 Vampiric Cell":
+  +1 Vampiric Cell:
     rarity: uncommon
     perks:
       Vampiric: 1
-  "+2 Vampiric Cell":
+  +2 Vampiric Cell:
     rarity: rare
     perks:
       Vampiric: 2
-  "+3 Vampiric Cell":
+  +3 Vampiric Cell:
     rarity: epic
     perks:
       Vampiric: 3
+i18n:
+  fr:
+    name: Vampirique
+    variants:
+      - Vampirique +1
+      - Vampirique +2
+      - Vampirique +3

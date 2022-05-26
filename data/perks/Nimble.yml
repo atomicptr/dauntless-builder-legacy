@@ -3,21 +3,38 @@ description: Restores Stamina when dodging through Behemoth attacks.
 type: Alacrity
 key: dodge_stamina
 effects:
-  1:
+  '1':
     description: Gain 10 Stamina after dodging through an attack
     value: 10
-  2:
+  '2':
     description: Gain 15 Stamina after dodging through an attack
     value: 15
-  3:
+  '3':
     description: Gain 20 Stamina after dodging through an attack
     value: 20
-  4:
+  '4':
     description: Gain 25 Stamina after dodging through an attack
     value: 25
-  5:
+  '5':
     description: Gain 30 Stamina after dodging through an attack
     value: 30
-  6:
+  '6':
     description: Gain 35 Stamina after dodging through an attack
     value: 35
+i18n:
+  fr:
+    name: Évasion légère
+    description: Restaure de l'endurance après une esquive parfaite.
+    effects:
+      '1':
+        description: Après avoir esquivé une attaque, gagnez +10 endurance
+      '2':
+        description: Après avoir esquivé une attaque, gagnez +15 endurance
+      '3':
+        description: Après avoir esquivé une attaque, gagnez +20 endurance
+      '4':
+        description: Après avoir esquivé une attaque, gagnez +25 endurance
+      '5':
+        description: Après avoir esquivé une attaque, gagnez +30 endurance
+      '6':
+        description: Après avoir esquivé une attaque, gagnez +35 endurance

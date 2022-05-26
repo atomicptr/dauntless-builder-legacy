@@ -1,15 +1,22 @@
 name: Medic Cell
 slot: Insight
 variants:
-  "+1 Medic Cell":
+  +1 Medic Cell:
     rarity: uncommon
     perks:
       Medic: 1
-  "+2 Medic Cell":
+  +2 Medic Cell:
     rarity: rare
     perks:
       Medic: 2
-  "+3 Medic Cell":
+  +3 Medic Cell:
     rarity: epic
     perks:
       Medic: 3
+i18n:
+  fr:
+    name: Médecin
+    variants:
+      - Médecin +1
+      - Médecin +2
+      - Médecin +3

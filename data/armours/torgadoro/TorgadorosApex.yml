@@ -6,8 +6,8 @@ strength: Blaze
 weakness: Frost
 cells: Insight
 resistance:
-  0: 25
-  1: 30
+  '0': 25
+  '1': 30
 perks:
   - name: Zeal
     value: 2
@@ -17,3 +17,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Suprématie du Torgadoro
+    description: Protection pour la tête forgée à partir de Torgadoro.

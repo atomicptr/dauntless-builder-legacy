@@ -1,15 +1,22 @@
 name: Aetherborne Cell
 slot: Insight
 variants:
-  "+1 Aetherborne Cell":
+  +1 Aetherborne Cell:
     rarity: uncommon
     perks:
       Aetherborne: 1
-  "+2 Aetherborne Cell":
+  +2 Aetherborne Cell:
     rarity: rare
     perks:
       Aetherborne: 2
-  "+3 Aetherborne Cell":
+  +3 Aetherborne Cell:
     rarity: epic
     perks:
       Aetherborne: 3
+i18n:
+  fr:
+    name: Jouvence aethérée
+    variants:
+      - Jouvence aethérée +1
+      - Jouvence aethérée +2
+      - Jouvence aethérée +3

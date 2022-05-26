@@ -1,15 +1,19 @@
 name: The Godhand
-description: The Godhand is a craftable Exotic weapon in Dauntless. It is crafted from Rezakiri reagents.
+description: >-
+  The Godhand is a craftable Exotic weapon in Dauntless. It is crafted from
+  Rezakiri reagents.
 icon: /assets/icons/weapons/rezakiri/TheGodhand.png
 type: War Pike
 damage: Piercing
 elemental: Radiant
-cells: [Brutality, Prismatic]
+cells:
+  - Brutality
+  - Prismatic
 rarity: exotic
 restrict_specials: true
 power:
-  0: 80
-  1: 120
+  '0': 80
+  '1': 120
 perks:
   - name: Savagery
     value: 2
@@ -22,5 +26,15 @@ perks:
 unique_effects:
   - name: BeamChannelDamage
     icon: /assets/icons/parts/warpike/specials/TheGodhand.png
-    description: Channel a beam that deals increasing damage, up to 200%, while it continues to hit a target.
+    description: >-
+      Channel a beam that deals increasing damage, up to 200%, while it
+      continues to hit a target.
     value: 3
+i18n:
+  fr:
+    name: Main divine
+    description: Une aetherolance exotique forgée à partir de Rezakiri.
+    unique_effects:
+      - description: >-
+          Canalise un rayon infligeant des dégâts croissants suivant la durée de
+          canalisation, jusqu'à 200%

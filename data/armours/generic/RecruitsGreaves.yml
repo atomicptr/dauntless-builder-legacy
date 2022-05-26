@@ -6,4 +6,8 @@ strength: null
 weakness: null
 cells: null
 resistance:
-  0: 20
+  '0': 20
+i18n:
+  fr:
+    name: Grèves de recrue
+    description: Protection pour les jambes de Slayer novice.

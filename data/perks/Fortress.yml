@@ -3,21 +3,52 @@ description: Grants a small shield after avoiding damage for a short time.
 type: Fortitude
 key: not_hit_health_shield
 effects:
-  1:
+  '1':
     description: Grants a 65 health shield after not getting hit for 10s. Stacks 3 times.
     value: 65
-  2:
+  '2':
     description: Grants a 75 health shield after not getting hit for 10s. Stacks 3 times.
     value: 75
-  3:
+  '3':
     description: Grants a 90 health shield after not getting hit for 10s. Stacks 3 times.
     value: 90
-  4:
+  '4':
     description: Grants a 105 health shield after not getting hit for 10s. Stacks 3 times.
     value: 105
-  5:
+  '5':
     description: Grants a 120 health shield after not getting hit for 10s. Stacks 3 times.
     value: 120
-  6:
+  '6':
     description: Grants a 135 health shield after not getting hit for 10s. Stacks 3 times.
     value: 135
+i18n:
+  fr:
+    name: Forteresse
+    description: >-
+      Offre un petit bouclier après avoir évité de prendre des dégâts pendant
+      une courte période.
+    effects:
+      '1':
+        description: >-
+          Après 10 secondes sans recevoir de dégât, gagnez un bouclier de santé
+          de 65 points
+      '2':
+        description: >-
+          Après 10 secondes sans recevoir de dégât, gagnez un bouclier de santé
+          de 75 points
+      '3':
+        description: >-
+          Après 10 secondes sans recevoir de dégât, gagnez un bouclier de santé
+          de 90 points
+      '4':
+        description: >-
+          Après 10 secondes sans recevoir de dégât, gagnez un bouclier de santé
+          de 105 points
+      '5':
+        description: >-
+          Après 10 secondes sans recevoir de dégât, gagnez un bouclier de santé
+          de 120 points
+      '6':
+        description: >-
+          Après 10 secondes sans recevoir de dégât, gagnez un bouclier de santé
+          de 135 points

@@ -3,21 +3,38 @@ description: Increases range of pylons.
 type: Insight
 key: IncreasedPylonRange
 effects:
-  1:
-    description: "+35% increase Pylon range"
+  '1':
+    description: +35% increase Pylon range
     value: 0.35
-  2:
-    description: "+50% increase Pylon range"
+  '2':
+    description: +50% increase Pylon range
     value: 0.5
-  3:
-    description: "+65% increase Pylon range"
+  '3':
+    description: +65% increase Pylon range
     value: 0.65
-  4:
-    description: "+80% increase Pylon range"
+  '4':
+    description: +80% increase Pylon range
     value: 0.8
-  5:
-    description: "+115% increase Pylon range"
+  '5':
+    description: +115% increase Pylon range
     value: 1.15
-  6:
-    description: "+150% increase Pylon range"
+  '6':
+    description: +150% increase Pylon range
     value: 1.5
+i18n:
+  fr:
+    name: Ingénieur
+    description: Augmente la portée des pylônes
+    effects:
+      '1':
+        description: +35% de portée des pylônes.
+      '2':
+        description: +50% de portée des pylônes.
+      '3':
+        description: +65% de portée des pylônes.
+      '4':
+        description: +80% de portée des pylônes.
+      '5':
+        description: +115% de portée des pylônes.
+      '6':
+        description: +150% de portée des pylônes.

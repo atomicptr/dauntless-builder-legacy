@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/boreus/DestinyOfBoreus.png
 type: Chain Blades
 damage: Slashing
 elemental: Frost
-cells: [Brutality, Fortitude]
+cells:
+  - Brutality
+  - Fortitude
 power:
-  0: 20
-  1: 120
+  '0': 20
+  '1': 120
 perks:
   - name: Conditioning
     value: 1
@@ -20,13 +22,28 @@ perks:
 unique_effects:
   - name: BoreusFrostSprite
     description: >-
-      After using your Special, generate 3 Frost Sprites that grant your next attack +30 damage and minor frost damage (Max 4 Sprites)
+      After using your Special, generate 3 Frost Sprites that grant your next
+      attack +30 damage and minor frost damage (Max 4 Sprites)
     value: 30
     from: 0
     to: 0
   - name: BoreusFrostSprite
     description: >-
-      After using your Special, generate 3 Frost Sprites that grant your next attack +60 damage and minor frost damage (Max 4 Sprites)
+      After using your Special, generate 3 Frost Sprites that grant your next
+      attack +60 damage and minor frost damage (Max 4 Sprites)
     value: 60
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Le destin de Boreus
+    description: Une paire de chaînes-lames forgée à partir de Boreus.
+    unique_effects:
+      - description: >-
+          Utiliser votre spécial génère 3 farfroidets qui ajoutent +30 dégâts
+          chacun à votre prochaine attaque et de légers dégâts de givre (4
+          farfroidets maximum)
+      - description: >-
+          Utiliser votre spécial génère 3 farfroidets qui ajoutent +60 dégâts
+          chacun à votre prochaine attaque et de légers dégâts de givre (4
+          farfroidets maximum)

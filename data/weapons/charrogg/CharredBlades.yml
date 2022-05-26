@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/charrogg/CharredBlades.png
 type: Chain Blades
 damage: Slashing
 elemental: Blaze
-cells: [Finesse, Fortitude]
+cells:
+  - Finesse
+  - Fortitude
 power:
-  0: 40
-  1: 120
+  '0': 40
+  '1': 120
 perks:
   - name: Aetherhunter
     value: 1
@@ -19,8 +21,9 @@ perks:
     to: 1
 unique_effects:
   - name: CharrogSpentStaminaFireDamage
-    description: &charrogUeDescription >-
-      After spending {{stamina}} stamina, next attack emits a cone of flame that deals +{{blazeDamage}} blaze damage to each unique target within the cone
+    description: >-
+      After spending {{stamina}} stamina, next attack emits a cone of flame that
+      deals +{{blazeDamage}} blaze damage to each unique target within the cone
     value: 100
     from: 0
     to: 0
@@ -29,7 +32,9 @@ unique_effects:
         stamina: 150
         blazeDamage: 100
   - name: CharrogSpentStaminaFireDamage
-    description: *charrogUeDescription
+    description: >-
+      After spending {{stamina}} stamina, next attack emits a cone of flame that
+      deals +{{blazeDamage}} blaze damage to each unique target within the cone
     value: 200
     from: 1
     to: 1
@@ -37,3 +42,14 @@ unique_effects:
       description:
         stamina: 150
         blazeDamage: 200
+i18n:
+  fr:
+    name: Lames charrbonisées
+    description: Une paire de chaînes-lames forgée à partir de Charrogg.
+    unique_effects:
+      - description: >-
+          Après avoir dépensé 150 d'endurance, la prochaine attaque émet un cône
+          de flammes qui inflige +100 de dégâts à chaque cible dans le cône.
+      - description: >-
+          Après avoir dépensé 150 d'endurance, la prochaine attaque émet un cône
+          de flammes qui inflige +200 de dégâts à chaque cible dans le cône.

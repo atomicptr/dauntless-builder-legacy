@@ -1,15 +1,22 @@
 name: Molten Cell
 slot: Insight
 variants:
-  "+1 Molten Cell":
+  +1 Molten Cell:
     rarity: uncommon
     perks:
       Molten: 1
-  "+2 Molten Cell":
+  +2 Molten Cell:
     rarity: rare
     perks:
       Molten: 2
-  "+3 Molten Cell":
+  +3 Molten Cell:
     rarity: epic
     perks:
       Molten: 3
+i18n:
+  fr:
+    name: Fondue
+    variants:
+      - Fondue +1
+      - Fondue +2
+      - Fondue +3

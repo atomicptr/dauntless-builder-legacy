@@ -2,3 +2,8 @@ name: Capacitive Magazine
 icon: /assets/icons/parts/repeaters/mods/CapacitiveMagazine.png
 part_effect:
   - Using an ability returns 8 standard ammo to the magazine.
+i18n:
+  fr:
+    name: Chargeur capacitif
+    part_effect:
+      - Utiliser une capacité rend 8 munitions standard au chargeur.

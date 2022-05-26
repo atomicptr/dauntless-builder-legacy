@@ -4,13 +4,26 @@ icon: /assets/icons/weapons/malkarion/CyclonicFury.png
 type: Sword
 damage: Slashing
 elemental: Shock
-cells: [Prismatic, Prismatic]
+cells:
+  - Prismatic
+  - Prismatic
 power:
-  0: 100
-  1: 120
+  '0': 100
+  '1': 120
 bond:
   elemental: Shock
 unique_effects:
   - name: MalkarionLegendaryAbility
     icon: /assets/icons/abilities/MalkarionLegendaryWeaponAbility.png
-    description: "Legendary Ability: Teleport to a Behemoth, dealing Shock damage. Usable once, but resets on Behemoth kill."
+    description: >-
+      Legendary Ability: Teleport to a Behemoth, dealing Shock damage. Usable
+      once, but resets on Behemoth kill.
+i18n:
+  fr:
+    name: Fureur cyclonique
+    description: Une épée légendaire forgée avec les trophées Malkarion.
+    unique_effects:
+      - description: >-
+          Capacité légendaire : Téléporter vous à un Behemoth, infligeant des
+          dégâts foudroyants. Utilisable une fois, mais se réinitialise lors de
+          la mort d'un Behemoth.

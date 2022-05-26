@@ -1,6 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { deDE, enUS } from "@mui/material/locale";
+import { deDE, enUS, frFR, jaJP } from "@mui/material/locale";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { i18nextPlugin as translationCheckPlugin } from "translation-check";
 
@@ -8,23 +8,28 @@ import en from "./translations/en.json";
 import enItems from "./translations/items/items.en.json";
 import de from "./translations/de.json";
 import jp from "./translations/jp.json";
+import fr from "./translations/fr.json";
+import frItems from "./translations/items/items.fr.json";
 
 const resources = {
     en: { translation: { ...en, ...enItems } },
     de: { translation: de },
     jp: { translation: jp },
+    fr: { translation: { ...fr, ...frItems } },
 };
 
 export enum Language {
     English = "en",
     German = "de",
     Japanese = "jp",
+    French = "fr",
 }
 
 const nativeLanguageNames = {
     [Language.English]: "English",
     [Language.German]: "Deutsch",
     [Language.Japanese]: "日本語",
+    [Language.French]: "Français",
 };
 
 i18n.use(initReactI18next)
@@ -51,6 +56,10 @@ export function muiLocaleComponent() {
             return enUS;
         case Language.German:
             return deDE;
+        case Language.Japanese:
+            return jaJP;
+        case Language.French:
+            return frFR;
     }
 }
 

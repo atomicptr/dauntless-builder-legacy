@@ -1,15 +1,22 @@
 name: Pulse Cell
 slot: Finesse
 variants:
-  "+1 Pulse Cell":
+  +1 Pulse Cell:
     rarity: uncommon
     perks:
       Pulse: 1
-  "+2 Pulse Cell":
+  +2 Pulse Cell:
     rarity: rare
     perks:
       Pulse: 2
-  "+3 Pulse Cell":
+  +3 Pulse Cell:
     rarity: epic
     perks:
       Pulse: 3
+i18n:
+  fr:
+    name: Pulsation
+    variants:
+      - Pulsation +1
+      - Pulsation +2
+      - Pulsation +3

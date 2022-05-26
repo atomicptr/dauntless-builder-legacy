@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/quillshot/QuillshotsShredders.png
 type: Aether Strikers
 damage: Blunt
 elemental: null
-cells: [Finesse, Fortitude]
+cells:
+  - Finesse
+  - Fortitude
 power:
-  0: 20
-  1: 120
+  '0': 20
+  '1': 120
 perks:
   - name: Acidic
     value: 1
@@ -17,3 +19,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Déchiqueteurs Quillshot
+    description: Cestes aethériques forgée à partir de trophées de Quillshot.

@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/thunderdeep/SurgeProjectors.png
 type: Aether Strikers
 damage: Blunt
 elemental: Shock
-cells: [Brutality, Finesse]
+cells:
+  - Brutality
+  - Finesse
 power:
-  0: 80
-  1: 120
+  '0': 80
+  '1': 120
 perks:
   - name: Aetheric Evasion
     value: 2
@@ -28,3 +30,10 @@ unique_effects:
     value: 1.3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Projections d'afflux
+    description: A Slayer's aether strikers forged with Thunderdeep Drask trophies.
+    unique_effects:
+      - description: 20% dégats contre les têtes de béhémoth
+      - description: 30% dégats contre les têtes de béhémoth

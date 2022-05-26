@@ -1,23 +1,104 @@
 name: Medic
 description: Improves your ability to revive allies.
 type: Insight
-key: [revive_heal, revive_speed, revive_shield]
+key:
+  - revive_heal
+  - revive_speed
+  - revive_shield
 effects:
-  1:
-    description: [When reviving an ally they are healed an additional 5%, null, null]
-    value: [1.05, null, null]
-  2:
-    description: [When reviving an ally they are healed an additional 10%, null, null]
-    value: [1.1, null, null]
-  3:
-    description: [When reviving an ally they are healed an additional 20%, null, null]
-    value: [1.2, null, null]
-  4:
-    description: [When reviving an ally they are healed an additional 20%, Increases Revive Speed by 66%, null]
-    value: [1.2, 0.66, null]
-  5:
-    description: [When reviving an ally they are healed an additional 30%, Increases Revive Speed by 66%, null]
-    value: [1.3, 0.66, null]
-  6:
-    description: [When reviving an ally they are healed an additional 40%, Increases Revive Speed by 66%, Grants a 300 health shield for 20 seconds after reviving an ally]
-    value: [1.4, 0.66, 300]
+  '1':
+    description:
+      - When reviving an ally they are healed an additional 5%
+      - null
+      - null
+    value:
+      - 1.05
+      - null
+      - null
+  '2':
+    description:
+      - When reviving an ally they are healed an additional 10%
+      - null
+      - null
+    value:
+      - 1.1
+      - null
+      - null
+  '3':
+    description:
+      - When reviving an ally they are healed an additional 20%
+      - null
+      - null
+    value:
+      - 1.2
+      - null
+      - null
+  '4':
+    description:
+      - When reviving an ally they are healed an additional 20%
+      - Increases Revive Speed by 66%
+      - null
+    value:
+      - 1.2
+      - 0.66
+      - null
+  '5':
+    description:
+      - When reviving an ally they are healed an additional 30%
+      - Increases Revive Speed by 66%
+      - null
+    value:
+      - 1.3
+      - 0.66
+      - null
+  '6':
+    description:
+      - When reviving an ally they are healed an additional 40%
+      - Increases Revive Speed by 66%
+      - Grants a 300 health shield for 20 seconds after reviving an ally
+    value:
+      - 1.4
+      - 0.66
+      - 300
+i18n:
+  fr:
+    name: Médecin
+    description: Améliore votre capacité à réanimer vos alliés.
+    effects:
+      '1':
+        description:
+          - Lorsque vous réanimez un allié
+          - ce dernier récupère 5% de vie en plus
+          - null
+          - null
+      '2':
+        description:
+          - Lorsque vous réanimez un allié
+          - ce dernier récupère 10% de vie en plus
+          - null
+          - null
+      '3':
+        description:
+          - Lorsque vous réanimez un allié
+          - ce dernier récupère 20% de vie en plus
+          - null
+          - null
+      '4':
+        description:
+          - Lorsque vous réanimez un allié
+          - ce dernier récupère 20% de vie en plus
+          - Augmente la vitesse de réanimation de 66%
+          - null
+      '5':
+        description:
+          - Lorsque vous réanimez un allié
+          - ce dernier récupère 30% de vie en plus
+          - Augmente la vitesse de réanimation de 66%
+          - null
+      '6':
+        description:
+          - Lorsque vous réanimez un allié
+          - ce dernier récupère 40% de vie en plus
+          - Augmente la vitesse de réanimation de 66%
+          - Après avoir relevé un allié
+          - gagnez un bouclier de santé de 300 points pendant 20 secondes

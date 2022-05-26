@@ -1,23 +1,78 @@
 name: Bloodless
 description: Protects against Wounded and Crippling Wounds statuses.
 type: Fortitude
-key: [wound_reduction, crippling_wound_reduction]
+key:
+  - wound_reduction
+  - crippling_wound_reduction
 effects:
-  1:
-    description: [Reduces duration of Wounded status by 50%, null]
-    value: [-0.5, null]
-  2:
-    description: [Reduces duration of Wounded status by 80%, null]
-    value: [-0.8, null]
-  3:
-    description: [Immune to Wounded status, null]
-    value: [-1, null]
-  4:
-    description: [Immune to Wounded status, Reduces effectiveness of Crippling Wounded status by 50%]
-    value: [-1, -0.5]
-  5:
-    description: [Immune to Wounded status, Reduces effectiveness of Crippling Wounded status by 80%]
-    value: [-1, -0.8]
-  6:
-    description: [Immune to Wounded status, Immune to Crippling Wound status]
-    value: [-1, -1]
+  '1':
+    description:
+      - Reduces duration of Wounded status by 50%
+      - null
+    value:
+      - -0.5
+      - null
+  '2':
+    description:
+      - Reduces duration of Wounded status by 80%
+      - null
+    value:
+      - -0.8
+      - null
+  '3':
+    description:
+      - Immune to Wounded status
+      - null
+    value:
+      - -1
+      - null
+  '4':
+    description:
+      - Immune to Wounded status
+      - Reduces effectiveness of Crippling Wounded status by 50%
+    value:
+      - -1
+      - -0.5
+  '5':
+    description:
+      - Immune to Wounded status
+      - Reduces effectiveness of Crippling Wounded status by 80%
+    value:
+      - -1
+      - -0.8
+  '6':
+    description:
+      - Immune to Wounded status
+      - Immune to Crippling Wound status
+    value:
+      - -1
+      - -1
+i18n:
+  fr:
+    name: Coagulation
+    description: Protège contre les status « Blessé » et « Hémorragie ».
+    effects:
+      '1':
+        description:
+          - Réduit la durée du statut de Blessé de 50%.
+          - null
+      '2':
+        description:
+          - Réduit la durée du statut de Blessé de 80%.
+          - null
+      '3':
+        description:
+          - Immunité au statut de blessé
+          - null
+      '4':
+        description:
+          - Immunité au statut de blessé
+          - Hémorragie -50%
+      '5':
+        description:
+          - Immunité au statut de blessé
+          - Hémorragie -80%
+      '6':
+        description:
+          - Immunité au statut de blessé
+          - Immunité au statut hémorragie

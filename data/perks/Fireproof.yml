@@ -3,21 +3,38 @@ description: Protects against being set on fire.
 type: Fortitude
 key: fire_immunity
 effects:
-  1:
+  '1':
     description: Reduces duration of On Fire status by 10%
     value: -0.1
-  2:
+  '2':
     description: Reduces duration of On Fire status by 20%
     value: -0.2
-  3:
+  '3':
     description: Reduces duration of On Fire status by 40%
     value: -0.4
-  4:
+  '4':
     description: Reduces duration of On Fire status by 60%
     value: -0.6
-  5:
+  '5':
     description: Reduces duration of On Fire status by 80%
     value: -0.8
-  6:
+  '6':
     description: Immune to being set on fire.
     value: -1
+i18n:
+  fr:
+    name: Ignifuge
+    description: Vous empêche de prendre feu.
+    effects:
+      '1':
+        description: Réduit la durée de l'effet de statut « En feu » de 10%
+      '2':
+        description: Réduit la durée de l'effet de statut « En feu » de 20%
+      '3':
+        description: Réduit la durée de l'effet de statut « En feu » de 40%
+      '4':
+        description: Réduit la durée de l'effet de statut « En feu » de 60%
+      '5':
+        description: Réduit la durée de l'effet de statut « En feu » de 80%
+      '6':
+        description: Vous ne pouvez pas prendre feu.

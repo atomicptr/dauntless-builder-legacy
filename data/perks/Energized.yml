@@ -3,21 +3,38 @@ description: Increase weapon meter gain rate.
 type: Insight
 key: weapon_charge_rate
 effects:
-  1:
+  '1':
     description: +10% Weapon Charge rate
     value: 0.1
-  2:
+  '2':
     description: +15% Weapon Charge rate
     value: 0.15
-  3:
+  '3':
     description: +20% Weapon Charge rate
     value: 0.2
-  4:
+  '4':
     description: +25% Weapon Charge rate
     value: 0.25
-  5:
+  '5':
     description: +30% Weapon Charge rate
     value: 0.3
-  6:
+  '6':
     description: +40% Weapon Charge rate
     value: 0.4
+i18n:
+  fr:
+    name: Charge
+    description: Augmente la vitesse de charge de la jauge de l'arme.
+    effects:
+      '1':
+        description: +10% de vitesse de charge de la jauge de l'arme.
+      '2':
+        description: +15% de vitesse de charge de la jauge de l'arme.
+      '3':
+        description: +20% de vitesse de charge de la jauge de l'arme.
+      '4':
+        description: +25% de vitesse de charge de la jauge de l'arme.
+      '5':
+        description: +30% de vitesse de charge de la jauge de l'arme.
+      '6':
+        description: +40% de vitesse de charge de la jauge de l'arme.

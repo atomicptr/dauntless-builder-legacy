@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/stormclaw/StormBreakers.png
 type: Aether Strikers
 damage: Blunt
 elemental: Shock
-cells: [Finesse, Alacrity]
+cells:
+  - Finesse
+  - Alacrity
 power:
-  0: 80
-  1: 120
+  '0': 80
+  '1': 120
 perks:
   - name: Aetheric Attunement
     value: 1
@@ -28,3 +30,14 @@ unique_effects:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Briseurs de tempête
+    description: Cestes aethériques forgée à partir de trophées de Stormclaw.
+    unique_effects:
+      - description: >-
+          Après avoir esquivé une attaque, allonge le délai du mantra de 2
+          secondes.
+      - description: >-
+          Après avoir esquivé une attaque, allonge le délai du mantra de 3
+          secondes.

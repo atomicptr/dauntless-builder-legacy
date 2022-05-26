@@ -1,23 +1,80 @@
 name: Merciless
-description: Increases Wound damage against Staggered behemoths. At later ranks, increases wound duration.
+description: >-
+  Increases Wound damage against Staggered behemoths. At later ranks, increases
+  wound duration.
 type: Finesse
 key: wound_damage
 effects:
-  1:
-    description: [+40 wound damage vs staggered Behemoths, null]
-    value: [40, null]
-  2:
-    description: [+60 wound damage vs staggered Behemoths, null]
-    value: [60, null]
-  3:
-    description: [+80 wound damage vs staggered Behemoths, null]
-    value: [80, null]
-  4:
-    description: [+100 wound damage vs staggered Behemoths, Increases the duration a part stays wounded by 20%.]
-    value: [100, 1.2]
-  5:
-    description: [+115 wound damage vs staggered Behemoths, Increases the duration a part stays wounded by 40%.]
-    value: [115, 1.4]
-  6:
-    description: [+130 wound damage vs staggered Behemoths, Increases the duration a part stays wounded by 60%.]
-    value: [130, 1.6]
+  '1':
+    description:
+      - +40 wound damage vs staggered Behemoths
+      - null
+    value:
+      - 40
+      - null
+  '2':
+    description:
+      - +60 wound damage vs staggered Behemoths
+      - null
+    value:
+      - 60
+      - null
+  '3':
+    description:
+      - +80 wound damage vs staggered Behemoths
+      - null
+    value:
+      - 80
+      - null
+  '4':
+    description:
+      - +100 wound damage vs staggered Behemoths
+      - Increases the duration a part stays wounded by 20%.
+    value:
+      - 100
+      - 1.2
+  '5':
+    description:
+      - +115 wound damage vs staggered Behemoths
+      - Increases the duration a part stays wounded by 40%.
+    value:
+      - 115
+      - 1.4
+  '6':
+    description:
+      - +130 wound damage vs staggered Behemoths
+      - Increases the duration a part stays wounded by 60%.
+    value:
+      - 130
+      - 1.6
+i18n:
+  fr:
+    name: Impitoyable
+    description: >-
+      Augmente les dégéts mutilants contre les Behemoths étourdis. Aux rangs
+      supérieurs, augmente la durée de la blessure.
+    effects:
+      '1':
+        description:
+          - +40 de dégâts mutilants contre les Behemoths étourdis
+          - null
+      '2':
+        description:
+          - +60 de dégâts mutilants contre les Behemoths étourdis
+          - null
+      '3':
+        description:
+          - +80 de dégâts mutilants contre les Behemoths étourdis
+          - null
+      '4':
+        description:
+          - +100 de dégâts mutilants contre les Behemoths étourdis
+          - Augmente la durée pendant laquelle une partie reste blessé de 20%
+      '5':
+        description:
+          - +115 de dégâts mutilants contre les Behemoths étourdis
+          - Augmente la durée pendant laquelle une partie reste blessé de 40%
+      '6':
+        description:
+          - +130 de dégâts mutilants contre les Behemoths étourdis
+          - Augmente la durée pendant laquelle une partie reste blessé de 60%

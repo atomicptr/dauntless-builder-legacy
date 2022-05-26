@@ -1,23 +1,90 @@
 name: Knockout King
 description: Percent increase to Stagger damage.
 type: Brutality
-key: [stagger_damage, dodge_stagger_damage]
+key:
+  - stagger_damage
+  - dodge_stagger_damage
 effects:
-  1:
-    description: [5% Stagger Damage, null]
-    value: [0.05, null]
-  2:
-    description: [10% Stagger Damage, null]
-    value: [0.1, null]
-  3:
-    description: [15% Stagger Damage, null]
-    value: [0.15, null]
-  4:
-    description: [20% Stagger Damage, After dodging through an attack the next weapon attack's Stagger is increased by 50%]
-    value: [0.2, 0.5]
-  5:
-    description: [25% Stagger Damage, After dodging through an attack the next weapon attack's Stagger is increased by 50%]
-    value: [0.25, 0.5]
-  6:
-    description: [30% Stagger Damage, After dodging through an attack the next weapon attack's Stagger is increased by 100%]
-    value: [0.3, 1]
+  '1':
+    description:
+      - 5% Stagger Damage
+      - null
+    value:
+      - 0.05
+      - null
+  '2':
+    description:
+      - 10% Stagger Damage
+      - null
+    value:
+      - 0.1
+      - null
+  '3':
+    description:
+      - 15% Stagger Damage
+      - null
+    value:
+      - 0.15
+      - null
+  '4':
+    description:
+      - 20% Stagger Damage
+      - >-
+        After dodging through an attack the next weapon attack's Stagger is
+        increased by 50%
+    value:
+      - 0.2
+      - 0.5
+  '5':
+    description:
+      - 25% Stagger Damage
+      - >-
+        After dodging through an attack the next weapon attack's Stagger is
+        increased by 50%
+    value:
+      - 0.25
+      - 0.5
+  '6':
+    description:
+      - 30% Stagger Damage
+      - >-
+        After dodging through an attack the next weapon attack's Stagger is
+        increased by 100%
+    value:
+      - 0.3
+      - 1
+i18n:
+  fr:
+    name: Assommoir
+    description: Augmentation en pourcentage des dégâts étourdissants.
+    effects:
+      '1':
+        description:
+          - 5% de dégâts étourdissants
+          - null
+      '2':
+        description:
+          - 10% de dégâts étourdissants
+          - null
+      '3':
+        description:
+          - 15% de dégâts étourdissants
+          - null
+      '4':
+        description:
+          - 20% de dégâts étourdissants
+          - >-
+            Après avoir esquivé une attaque votre prochaine attaque inflige +50%
+            de dégâts étourdissants
+      '5':
+        description:
+          - 25% de dégâts étourdissants
+          - >-
+            Après avoir esquivé une attaque votre prochaine attaque inflige +50%
+            de dégâts étourdissants
+      '6':
+        description:
+          - 30% de dégâts étourdissants
+          - >-
+            Après avoir esquivé une attaque votre prochaine attaque inflige
+            +100% de dégâts étourdissants

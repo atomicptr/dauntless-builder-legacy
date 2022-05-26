@@ -6,8 +6,8 @@ strength: Blaze
 weakness: Frost
 cells: Insight
 resistance:
-  0: 10
-  1: 30
+  '0': 10
+  '1': 30
 perks:
   - name: Rage
     value: 1
@@ -17,3 +17,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Gants volcaniques
+    description: Protection pour les bras forgée à partir de Charrogg.

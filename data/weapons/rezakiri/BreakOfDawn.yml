@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/rezakiri/BreakOfDawn.png
 type: Hammer
 damage: Blunt
 elemental: Radiant
-cells: [Brutality, Alacrity]
+cells:
+  - Brutality
+  - Alacrity
 power:
-  0: 80
-  1: 120
+  '0': 80
+  '1': 120
 perks:
   - name: Cunning
     value: 2
@@ -28,3 +30,10 @@ unique_effects:
     value: 0.12
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Brisure de l'aube
+    description: Un marteau forgé à partir de trophées de Rezakiri.
+    unique_effects:
+      - description: +8% de chance de frapper deux fois.
+      - description: 12% de chance de frapper deux fois.

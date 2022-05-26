@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/embermane/EmberFists.png
 type: Aether Strikers
 damage: Blunt
 elemental: Blaze
-cells: [Finesse, Alacrity]
+cells:
+  - Finesse
+  - Alacrity
 power:
-  0: 20
-  1: 120
+  '0': 20
+  '1': 120
 perks:
   - name: Evasive Fury
     value: 1
@@ -28,3 +30,10 @@ unique_effects:
     value: 2.5
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Poings ardents
+    description: Cestes aethériques forgée à partir de trophées d'Embermane
+    unique_effects:
+      - description: Le quatrième coup consécutif inflige +50% de dégâts étourdissants
+      - description: Le quatrième coup consécutif inflige +150% de dégâts étourdissants

@@ -3,33 +3,80 @@ description: Flask heals over time and generates lantern charge.
 type: Insight
 key: Lucent
 effects:
-  1:
-    description: |
-      Your Flask heals over 20 seconds, but for 20% more healing - while this heal is active, increase the recharge
+  '1':
+    description: >
+      Your Flask heals over 20 seconds, but for 20% more healing - while this
+      heal is active, increase the recharge
+
       rate of your Lantern ability by 15%.
     value: 15
-  2:
-    description: |
-      Your Flask heals over 20 seconds, but for 20% more healing - while this heal is active, increase the recharge
+  '2':
+    description: >
+      Your Flask heals over 20 seconds, but for 20% more healing - while this
+      heal is active, increase the recharge
+
       rate of your Lantern ability by 25%.
     value: 25
-  3:
-    description: |
-      Your Flask heals over 20 seconds, but for 20% more healing - while this heal is active, increase the recharge
+  '3':
+    description: >
+      Your Flask heals over 20 seconds, but for 20% more healing - while this
+      heal is active, increase the recharge
+
       rate of your Lantern ability by 35%.
     value: 35
-  4:
-    description: |
-      Your Flask heals over 20 seconds, but for 20% more healing - while this heal is active, increase the recharge
+  '4':
+    description: >
+      Your Flask heals over 20 seconds, but for 20% more healing - while this
+      heal is active, increase the recharge
+
       rate of your Lantern ability by 40%.
     value: 40
-  5:
-    description: |
-      Your Flask heals over 20 seconds, but for 20% more healing - while this heal is active, increase the recharge
+  '5':
+    description: >
+      Your Flask heals over 20 seconds, but for 20% more healing - while this
+      heal is active, increase the recharge
+
       rate of your Lantern ability by 40%.
     value: 45
-  6:
-    description: |
-      Your Flask heals over 20 seconds, but for 20% more healing - while this heal is active, increase the recharge
+  '6':
+    description: >
+      Your Flask heals over 20 seconds, but for 20% more healing - while this
+      heal is active, increase the recharge
+
       rate of your Lantern ability by 50%.
     value: 50
+i18n:
+  fr:
+    name: Luminescente
+    description: La flasque soigne au cours du temps et charge la lanterne.
+    effects:
+      '1':
+        description: >-
+          Votre flasque soigne sur 20 secondes, mais avec un soin accru de 20%.
+          Tant que le soin est actif accélère le rechargement de la capacité de
+          votre lanterne de 15%
+      '2':
+        description: >-
+          Votre flasque soigne sur 20 secondes, mais avec un soin accru de 20%.
+          Tant que le soin est actif accélère le rechargement de la capacité de
+          votre lanterne de 15%
+      '3':
+        description: >-
+          Votre flasque soigne sur 20 secondes, mais avec un soin accru de 20%.
+          Tant que le soin est actif accélère le rechargement de la capacité de
+          votre lanterne de 15%
+      '4':
+        description: >-
+          Votre flasque soigne sur 20 secondes, mais avec un soin accru de 20%.
+          Tant que le soin est actif accélère le rechargement de la capacité de
+          votre lanterne de 15%
+      '5':
+        description: >-
+          Votre flasque soigne sur 20 secondes, mais avec un soin accru de 20%.
+          Tant que le soin est actif accélère le rechargement de la capacité de
+          votre lanterne de 15%
+      '6':
+        description: >-
+          Votre flasque soigne sur 20 secondes, mais avec un soin accru de 20%.
+          Tant que le soin est actif accélère le rechargement de la capacité de
+          votre lanterne de 15%

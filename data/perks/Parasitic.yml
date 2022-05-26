@@ -1,41 +1,87 @@
 name: Parasitic
-description: When you take damage, it gets delayed and instead dealt over time. While taking delayed damage, gain lifesteal.
+description: >-
+  When you take damage, it gets delayed and instead dealt over time. While
+  taking delayed damage, gain lifesteal.
 type: Fortitude
 key: Parasitic
 effects:
-  1:
+  '1':
     description: >
-      When you take damage, 10% of it is delayed and instead dealt over 10 seconds.
-      While you take delayed damage, gain 5% lifesteal. Does not apply to damage under
-      10% of your max HP.
+      When you take damage, 10% of it is delayed and instead dealt over 10
+      seconds. While you take delayed damage, gain 5% lifesteal. Does not apply
+      to damage under 10% of your max HP.
     value: 0.1
-  2:
+  '2':
     description: >
-      When you take damage, 15% of it is delayed and instead dealt over 10 seconds.
-      While you take delayed damage, gain 5% lifesteal. Does not apply to damage under
-      10% of your max HP.
+      When you take damage, 15% of it is delayed and instead dealt over 10
+      seconds. While you take delayed damage, gain 5% lifesteal. Does not apply
+      to damage under 10% of your max HP.
     value: 0.15
-  3:
+  '3':
     description: >
-      When you take damage, 20% of it is delayed and instead dealt over 10 seconds.
-      While you take delayed damage, gain 5% lifesteal. Does not apply to damage under
-      10% of your max HP.
+      When you take damage, 20% of it is delayed and instead dealt over 10
+      seconds. While you take delayed damage, gain 5% lifesteal. Does not apply
+      to damage under 10% of your max HP.
     value: 0.2
-  4:
+  '4':
     description: >
-      When you take damage, 25% of it is delayed and instead dealt over 10 seconds.
-      While you take delayed damage, gain 5% lifesteal. Does not apply to damage under
-      10% of your max HP.
+      When you take damage, 25% of it is delayed and instead dealt over 10
+      seconds. While you take delayed damage, gain 5% lifesteal. Does not apply
+      to damage under 10% of your max HP.
     value: 0.25
-  5:
+  '5':
     description: >
-      When you take damage, 30% of it is delayed and instead dealt over 10 seconds.
-      While you take delayed damage, gain 5% lifesteal. Does not apply to damage under
-      10% of your max HP.
+      When you take damage, 30% of it is delayed and instead dealt over 10
+      seconds. While you take delayed damage, gain 5% lifesteal. Does not apply
+      to damage under 10% of your max HP.
     value: 0.3
-  6:
+  '6':
     description: >
-      When you take damage, 35% of it is delayed and instead dealt over 10 seconds.
-      While you take delayed damage, gain 5% lifesteal. Does not apply to damage under
-      10% of your max HP.
+      When you take damage, 35% of it is delayed and instead dealt over 10
+      seconds. While you take delayed damage, gain 5% lifesteal. Does not apply
+      to damage under 10% of your max HP.
     value: 0.35
+i18n:
+  fr:
+    name: Parasite
+    description: >-
+      Quand vous subissez des dégâts, ces dégâts sont différés et infligés à la
+      place pendant 10 secondes. Quand vous subissez les dégâts différés, vous
+      gagnez du vol vie.
+    effects:
+      '1':
+        description: >
+          Quand vous subissez des dégâts, 10% de ces dégâts sont différés et
+          infligés à la place pendant 10 secondes. Quand vous subissez les
+          dégâts différés, vous gagnez 5% de vol vie. Ne s'applique pas aux
+          dégâts inférieurs à 10% of your max HP.
+      '2':
+        description: >
+          Quand vous subissez des dégâts, 15% de ces dégâts sont différés et
+          infligés à la place pendant 10 secondes. Quand vous subissez les
+          dégâts différés, vous gagnez 5% de vol vie. Ne s'applique pas aux
+          dégâts inférieurs à 10% de vos PV max.
+      '3':
+        description: >
+          Quand vous subissez des dégâts, 20% de ces dégâts sont différés et
+          infligés à la place pendant 10 secondes. Quand vous subissez les
+          dégâts différés, vous gagnez 5% de vol vie. Ne s'applique pas aux
+          dégâts inférieurs à 10% de vos PV max.
+      '4':
+        description: >
+          Quand vous subissez des dégâts, 25% de ces dégâts sont différés et
+          infligés à la place pendant 10 secondes. Quand vous subissez les
+          dégâts différés, vous gagnez 5% de vol vie. Ne s'applique pas aux
+          dégâts inférieurs à 10% de vos PV max.
+      '5':
+        description: >
+          Quand vous subissez des dégâts, 30% de ces dégâts sont différés et
+          infligés à la place pendant 10 secondes. Quand vous subissez les
+          dégâts différés, vous gagnez 5% de vol vie. Ne s'applique pas aux
+          dégâts inférieurs à 10% de vos PV max.
+      '6':
+        description: >
+          Quand vous subissez des dégâts, 35% de ces dégâts sont différés et
+          infligés à la place pendant 10 secondes. Quand vous subissez les
+          dégâts différés, vous gagnez 5% de vol vie. Ne s'applique pas aux
+          dégâts inférieurs à 10% de vos PV max.

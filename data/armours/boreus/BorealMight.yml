@@ -6,8 +6,8 @@ strength: Frost
 weakness: Blaze
 cells: Brutality
 resistance:
-  0: 5
-  1: 30
+  '0': 5
+  '1': 30
 perks:
   - name: Tenacious
     value: 1
@@ -17,3 +17,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Puissance boréale
+    description: Protection pour les bras forgée à partir de Boreus.

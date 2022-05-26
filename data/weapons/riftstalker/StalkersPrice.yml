@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/riftstalker/StalkersPrice.png
 type: Hammer
 damage: Blunt
 elemental: Umbral
-cells: [Finesse, Insight]
+cells:
+  - Finesse
+  - Insight
 power:
-  0: 60
-  1: 120
+  '0': 60
+  '1': 120
 perks:
   - name: Assassin's Frenzy
     value: 2
@@ -20,15 +22,30 @@ perks:
 unique_effects:
   - name: DamageShadowOrbs
     description: >-
-      Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 1.5% for 5 seconds.
-      If 5 or more orbs are present, the bonus doubles.
+      Dealing damage has a chance (based on damage dealt) to generate a shadow
+      orb that increases damage dealt by 1.5% for 5 seconds. If 5 or more orbs
+      are present, the bonus doubles.
     value: 1.5
     from: 0
     to: 0
   - name: DamageShadowOrbs
     description: >-
-      Dealing damage has a chance (based on damage dealt) to generate a shadow orb that increases damage dealt by 2.25% for 5 seconds.
-      If 5 or more orbs are present, the bonus doubles.
+      Dealing damage has a chance (based on damage dealt) to generate a shadow
+      orb that increases damage dealt by 2.25% for 5 seconds. If 5 or more orbs
+      are present, the bonus doubles.
     value: 2.5
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Prix du rôdeur
+    description: Un marteau forgé à partir de trophées du Riftstalker.
+    unique_effects:
+      - description: >-
+          Infliger des dégâts donne une chance de générer des orbes d'ombre qui
+          confèrent + 1.5% de dégâts pendant 5 secondes. Avec 5 orbes ou plus,
+          le bonus est doublé
+      - description: >-
+          Infliger des dégâts donne une chance de générer des orbes d'ombre qui
+          confèrent + 2.25% de dégâts pendant 5 secondes. Avec 5 orbes ou plus,
+          le bonus est doublé

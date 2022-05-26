@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/embermane/EmberPike.png
 type: War Pike
 damage: Piercing
 elemental: Blaze
-cells: [Finesse, Alacrity]
+cells:
+  - Finesse
+  - Alacrity
 power:
-  0: 20
-  1: 120
+  '0': 20
+  '1': 120
 perks:
   - name: Evasive Fury
     value: 1
@@ -28,3 +30,14 @@ unique_effects:
     value: 300
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Glaive Embermane
+    description: Une aetherolance forgée à partir de trophées d'Embermane
+    unique_effects:
+      - description: >-
+          Le septième coup consécutif inflige +100 de dégâts mutilants
+          supplémentaires
+      - description: >-
+          Le septième coup consécutif inflige +300 de dégâts mutilants
+          supplémentaires

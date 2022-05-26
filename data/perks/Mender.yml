@@ -3,21 +3,50 @@ description: Using your flask restores other Slayers' health.
 type: Insight
 key: HealGroup
 effects:
-  1:
+  '1':
     description: Using your Flask also heals all other Slayers for 45
     value: 45
-  2:
+  '2':
     description: Using your Flask also heals all other Slayers for 90
     value: 90
-  3:
+  '3':
     description: Using your Flask also heals all other Slayers for 135
     value: 135
-  4:
+  '4':
     description: Using your Flask also heals all other Slayers for 180
     value: 180
-  5:
+  '5':
     description: Using your Flask also heals all other Slayers for 225
     value: 225
-  6:
+  '6':
     description: Using your Flask also heals all other Slayers for 270
     value: 270
+i18n:
+  fr:
+    name: Guérisseur
+    description: L'utilisation de votre flasque restaure la santé des autres Slayers.
+    effects:
+      '1':
+        description: >-
+          L'utilisation de votre flasque soigne également tous les autres
+          Slayers de 45
+      '2':
+        description: >-
+          L'utilisation de votre flasque soigne également tous les autres
+          Slayers de 90
+      '3':
+        description: >-
+          L'utilisation de votre flasque soigne également tous les autres
+          Slayers de 135
+      '4':
+        description: >-
+          L'utilisation de votre flasque soigne également tous les autres
+          Slayers de 180
+      '5':
+        description: >-
+          L'utilisation de votre flasque soigne également tous les autres
+          Slayers de 225
+      '6':
+        description: >-
+          L'utilisation de votre flasque soigne également tous les autres
+          Slayers de 270

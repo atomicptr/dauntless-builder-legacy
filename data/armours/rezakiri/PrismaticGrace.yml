@@ -1,5 +1,7 @@
 name: Prismatic Grace
-description: Prismatic Grace is a piece of craftable Exotic armour in Dauntless. It is crafted from Rezakiri reagents.
+description: >-
+  Prismatic Grace is a piece of craftable Exotic armour in Dauntless. It is
+  crafted from Rezakiri reagents.
 icon: /assets/icons/armours/rezakiri/PrismaticGrace.png
 type: Head
 strength: Radiant
@@ -7,8 +9,8 @@ weakness: Umbral
 cells: Finesse
 rarity: exotic
 resistance:
-  0: 20
-  1: 30
+  '0': 20
+  '1': 30
 perks:
   - name: Medic
     value: 2
@@ -20,11 +22,32 @@ perks:
     to: 1
 unique_effects:
   - name: PrismaticGraceRevivePrism
-    description: After reviving another player, grant them a Radiant Prism that blocks incoming damage for 5 seconds.
+    description: >-
+      After reviving another player, grant them a Radiant Prism that blocks
+      incoming damage for 5 seconds.
     value: 5
   - name: PrismaticGraceLethalDamagePrism
-    description: The first time you take lethal damage, gain a Radiant Prism that blocks incoming damage for 10 seconds.
+    description: >-
+      The first time you take lethal damage, gain a Radiant Prism that blocks
+      incoming damage for 10 seconds.
     value: 10
   - name: PrismaticGraceActivePrismRevive
-    description: While active, reviving another player fully restores both players but removes the Prism even at full danger.
+    description: >-
+      While active, reviving another player fully restores both players but
+      removes the Prism even at full danger.
     value: 1
+i18n:
+  fr:
+    name: Grâce Prismatique
+    description: Une pièce d'armure forger à partir de Rezakiri.
+    unique_effects:
+      - description: >-
+          Après avoir réanimé un autre joueur, lui donne un prisme rayonnant qui
+          bloque les dégts reçu pendant 5 secondes.
+      - description: >-
+          La première fois que vous devriez être à terre, recevez un prisme
+          rayonnant qui bloque les dégâts pendant 10 secondes.
+      - description: >-
+          Lorsqu'il est actif, le prisme vous permet de réanimer un autre
+          joueur, même au niveau de danger maximum, et vous soigne tous les deux
+          entièrement mais disparait après utilisation.

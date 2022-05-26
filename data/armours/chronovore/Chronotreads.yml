@@ -6,8 +6,8 @@ strength: Radiant
 weakness: Umbral
 cells: Finesse
 resistance:
-  0: 25
-  1: 30
+  '0': 25
+  '1': 30
 perks:
   - name: Pulse
     value: 2
@@ -17,3 +17,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Chronobottes
+    description: Protection pour les jambes forgée à partir de Chronovore.

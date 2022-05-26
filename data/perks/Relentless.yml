@@ -1,23 +1,80 @@
 name: Relentless
 description: Increases the duration of your aether rush
 type: Finesse
-key: [aether_rush_duration, aether_rush_effect]
+key:
+  - aether_rush_duration
+  - aether_rush_effect
 effects:
-  1:
-    description: [Increases the duration of your aether rush by +20%, null]
-    value: [1.2, null]
-  2:
-    description: [Increases the duration of your aether rush by +30%, null]
-    value: [1.3, null]
-  3:
-    description: [Increases the duration of your aether rush by +50%, null]
-    value: [1.5, null]
-  4:
-    description: [Increases the duration of your aether rush by +50%, Increases the effects of your aether rush by +40%]
-    value: [1.5, 1.4]
-  5:
-    description: [Increases the duration of your aether rush by +50%, Increases the effects of your aether rush by +70%]
-    value: [1.5, 1.7]
-  6:
-    description: [Increases the duration of your aether rush by +50%, Increases the effects of your aether rush by +100%]
-    value: [1.5, 2]
+  '1':
+    description:
+      - Increases the duration of your aether rush by +20%
+      - null
+    value:
+      - 1.2
+      - null
+  '2':
+    description:
+      - Increases the duration of your aether rush by +30%
+      - null
+    value:
+      - 1.3
+      - null
+  '3':
+    description:
+      - Increases the duration of your aether rush by +50%
+      - null
+    value:
+      - 1.5
+      - null
+  '4':
+    description:
+      - Increases the duration of your aether rush by +50%
+      - Increases the effects of your aether rush by +40%
+    value:
+      - 1.5
+      - 1.4
+  '5':
+    description:
+      - Increases the duration of your aether rush by +50%
+      - Increases the effects of your aether rush by +70%
+    value:
+      - 1.5
+      - 1.7
+  '6':
+    description:
+      - Increases the duration of your aether rush by +50%
+      - Increases the effects of your aether rush by +100%
+    value:
+      - 1.5
+      - 2
+i18n:
+  fr:
+    name: Implacable
+    description: >-
+      Augmente la durée de votre ruée aethérée, A haut niveau, augmentez-en
+      également les effets.
+    effects:
+      '1':
+        description:
+          - Augmente la durée de votre ruée aethérée de +20%
+          - null
+      '2':
+        description:
+          - Augmente la durée de votre ruée aethérée de +30%
+          - null
+      '3':
+        description:
+          - Augmente la durée de votre ruée aethérée de +50%
+          - null
+      '4':
+        description:
+          - Augmente la durée de votre ruée aethérée de +50%
+          - Augmente les effets de votre ruée aethérée de +40%
+      '5':
+        description:
+          - Augmente la durée de votre ruée aethérée de +50%
+          - Augmente les effets de votre ruée aethérée de +70%
+      '6':
+        description:
+          - Augmente la durée de votre ruée aethérée de +50%
+          - Augmente les effets de votre ruée aethérée de +100%

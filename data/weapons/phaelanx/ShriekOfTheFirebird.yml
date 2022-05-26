@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/phaelanx/ShriekOfTheFirebird.png
 type: Sword
 damage: Slashing
 elemental: Blaze
-cells: [Insight, Alacrity]
+cells:
+  - Insight
+  - Alacrity
 power:
-  0: 80
-  1: 120
+  '0': 80
+  '1': 120
 perks:
   - name: Aetheric Evasion
     value: 2
@@ -19,18 +21,47 @@ perks:
     to: 1
 unique_effects:
   - name: PhaelanxLegendaryAbility
-    description: |
-      Attack a Behemoth part to lock onto it and load a homing missile. Missile deals 100 damage and increases the
-      damage of every other missile in the volley by 100. Deal damage to load up to a maximum of 3 additional missiles.
-      Dodging fires all loaded missiles on the locked-on part. 45 second cooldown.
+    description: >
+      Attack a Behemoth part to lock onto it and load a homing missile. Missile
+      deals 100 damage and increases the
+
+      damage of every other missile in the volley by 100. Deal damage to load up
+      to a maximum of 3 additional missiles.
+
+      Dodging fires all loaded missiles on the locked-on part. 45 second
+      cooldown.
     value: 100
     from: 0
     to: 0
   - name: PhaelanxLegendaryAbility
-    description: |
-      Attack a Behemoth part to lock onto it and load a homing missile. Missile deals 175 damage and increases the
-      damage of every other missile in the volley by 175. Deal damage to load up to a maximum of 3 additional missiles.
-      Dodging fires all loaded missiles on the locked-on part. 45 second cooldown.
+    description: >
+      Attack a Behemoth part to lock onto it and load a homing missile. Missile
+      deals 175 damage and increases the
+
+      damage of every other missile in the volley by 175. Deal damage to load up
+      to a maximum of 3 additional missiles.
+
+      Dodging fires all loaded missiles on the locked-on part. 45 second
+      cooldown.
     value: 175
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Le cri de l'oiseau de feu
+    description: A Slayer's sword forged with Phaelanx trophies.
+    unique_effects:
+      - description: >-
+          Attaquez une partie du Béhémoth verrouille et charger un missile à
+          tête chercheuse. Le missile inflige 100 de dégâts et augmente les
+          dégâts de tous les autres missiles de la volée de 100, infliger des
+          dégâts pour charger jusqu'à un maximum de 3 missiles supplémentaires.
+          L'esquive tire tous les missiles chargés sur la partie verrouillée.
+          Temps de recharge de 90 secondes.
+      - description: >-
+          Attaquez une partie du Béhémoth verrouille et charger un missile à
+          tête chercheuse. Le missile inflige 175 de dégâts et augmente les
+          dégâts de tous les autres missiles de la volée de 100, infliger des
+          dégâts pour charger jusqu'à un maximum de 3 missiles supplémentaires.
+          L'esquive tire tous les missiles chargés sur la partie verrouillée.
+          Temps de recharge de 90 secondes.

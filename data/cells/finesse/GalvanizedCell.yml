@@ -1,15 +1,22 @@
 name: Galvanized Cell
 slot: Finesse
 variants:
-  "+1 Galvanized Cell":
+  +1 Galvanized Cell:
     rarity: uncommon
     perks:
       Galvanized: 1
-  "+2 Galvanized Cell":
+  +2 Galvanized Cell:
     rarity: rare
     perks:
       Galvanized: 2
-  "+3 Galvanized Cell":
+  +3 Galvanized Cell:
     rarity: epic
     perks:
       Galvanized: 3
+i18n:
+  fr:
+    name: Galvanisé
+    variants:
+      - Galvanisé +1
+      - Galvanisé +2
+      - Galvanisé +3

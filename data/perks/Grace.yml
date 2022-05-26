@@ -1,23 +1,97 @@
 name: Grace
-description: Sprinting increases movespeed. At higher levels, converts increased movespeed to attack speed.
+description: >-
+  Sprinting increases movespeed. At higher levels, converts increased movespeed
+  to attack speed.
 type: Alacrity
-key: [IncreasedMovementSpeed, IncreasedAttackSpeed]
+key:
+  - IncreasedMovementSpeed
+  - IncreasedAttackSpeed
 effects:
-  1:
-    description: ["While sprinting gain movespeed up to 5%", null]
-    value: [0.05, null]
-  2:
-    description: ["While sprinting gain movespeed up to 8%", null]
-    value: [0.08, null]
-  3:
-    description: ["While sprinting gain movespeed up to 11%", null]
-    value: [0.11, null]
-  4:
-    description: ["While sprinting gain movespeed up to 14%", "Grant attack speed equal to half the move speed increase, for 40 seconds."]
-    value: [0.14, 0.07]
-  5:
-    description: ["While sprinting gain movespeed up to 17%", "Grant attack speed equal to half the move speed increase, for 40 seconds."]
-    value: [0.17, 0.085]
-  6:
-    description: ["While sprinting gain movespeed up to 20%", "Grant attack speed equal to half the move speed increase, for 40 seconds."]
-    value: [0.2, 0.1]
+  '1':
+    description:
+      - While sprinting gain movespeed up to 5%
+      - null
+    value:
+      - 0.05
+      - null
+  '2':
+    description:
+      - While sprinting gain movespeed up to 8%
+      - null
+    value:
+      - 0.08
+      - null
+  '3':
+    description:
+      - While sprinting gain movespeed up to 11%
+      - null
+    value:
+      - 0.11
+      - null
+  '4':
+    description:
+      - While sprinting gain movespeed up to 14%
+      - >-
+        Grant attack speed equal to half the move speed increase, for 40
+        seconds.
+    value:
+      - 0.14
+      - 0.07
+  '5':
+    description:
+      - While sprinting gain movespeed up to 17%
+      - >-
+        Grant attack speed equal to half the move speed increase, for 40
+        seconds.
+    value:
+      - 0.17
+      - 0.085
+  '6':
+    description:
+      - While sprinting gain movespeed up to 20%
+      - >-
+        Grant attack speed equal to half the move speed increase, for 40
+        seconds.
+    value:
+      - 0.2
+      - 0.1
+i18n:
+  fr:
+    name: Grâce
+    description: >-
+      Sprinter augmente la vitesse de déplacement. Aux niveau supérieurs,
+      convertit la vitesse de déplacement accrue en vitesse d'attaque.
+    effects:
+      '1':
+        description:
+          - Pendant le sprint
+          - augmente la vitesse de déplacement jusqu'à 5%
+          - null
+      '2':
+        description:
+          - Pendant le sprint
+          - augmente la vitesse de déplacement jusqu'à 8%
+          - null
+      '3':
+        description:
+          - Pendant le sprint
+          - augmente la vitesse de déplacement jusqu'à 11%
+          - null
+      '4':
+        description:
+          - Pendant le sprint, augmente la vitesse de déplacement jusqu'à 14%
+          - >-
+            La moitier de votre bonus de vitesse de déplacement est covertit en
+            vistess d'attaque pendant 40 secondes
+      '5':
+        description:
+          - Pendant le sprint, augmente la vitesse de déplacement jusqu'à 17%
+          - >-
+            La moitier de votre bonus de vitesse de déplacement est covertit en
+            vistess d'attaque pendant 40 secondes
+      '6':
+        description:
+          - Pendant le sprint, augmente la vitesse de déplacement jusqu'à 20%
+          - >-
+            La moitier de votre bonus de vitesse de déplacement est covertit en
+            vistess d'attaque pendant 40 secondes

@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/skarn/SkarnsSpite.png
 type: War Pike
 damage: Slashing
 elemental: Terra
-cells: [Finesse, Fortitude]
+cells:
+  - Finesse
+  - Fortitude
 power:
-  0: 20
-  1: 120
+  '0': 20
+  '1': 120
 perks:
   - name: Weighted Strikes
     value: 1
@@ -19,12 +21,27 @@ perks:
     to: 1
 unique_effects:
   - name: DamageChanceStackShield
-    description: After using your lantern ability, grant a stackable 175 health shield that lasts for 25 seconds (max 600 shields).
+    description: >-
+      After using your lantern ability, grant a stackable 175 health shield that
+      lasts for 25 seconds (max 600 shields).
     value: 175
     from: 0
     to: 0
   - name: DamageChanceStackShield
-    description: After using your lantern ability, grant a stackable 250 health shield that lasts for 25 seconds (max 600 shields).
+    description: >-
+      After using your lantern ability, grant a stackable 250 health shield that
+      lasts for 25 seconds (max 600 shields).
     value: 250
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Dépit de Skarn
+    description: Une aetherolance forgée à partir de Skarn.
+    unique_effects:
+      - description: >-
+          Après utilisation de votre capacité de lanterne confère un bouclier de
+          175 points cumulable qui dure 25 secondes (maximum 600 boucliers).
+      - description: >-
+          Après utilisation de votre capacité de lanterne confère un bouclier de
+          250 points cumulable qui dure 25 secondes (maximum 600 boucliers).

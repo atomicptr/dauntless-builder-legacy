@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/kharabak/KharabaksPincers.png
 type: Aether Strikers
 damage: Blunt
 elemental: Terra
-cells: [Finesse, Alacrity]
+cells:
+  - Finesse
+  - Alacrity
 power:
-  0: 40
-  1: 120
+  '0': 40
+  '1': 120
 perks:
   - name: Bladestorm
     value: 1
@@ -20,15 +22,32 @@ perks:
 unique_effects:
   - name: KharabacBlades
     description: >
-      Once charged, your next attack unleashes whirling blades that deal 25 terra damage. Additional attacks speed
-      up the blades, which explode at the end of the duration and deal damage based on blade speed.
+      Once charged, your next attack unleashes whirling blades that deal 25
+      terra damage. Additional attacks speed up the blades, which explode at the
+      end of the duration and deal damage based on blade speed.
     value: 25
     from: 0
     to: 0
   - name: KharabacBlades
     description: >
-      Once charged, your next attack unleashes whirling blades that deal 75 terra damage. Additional attacks speed
-      up the blades, which explode at the end of the duration and deal damage based on blade speed.
+      Once charged, your next attack unleashes whirling blades that deal 75
+      terra damage. Additional attacks speed up the blades, which explode at the
+      end of the duration and deal damage based on blade speed.
     value: 75
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Pinces de Kharabak
+    description: Cestes aethériques forgée à partir de trophées de Kharabak.
+    unique_effects:
+      - description: >-
+          Une fois chargée, la prochaine attaque libère des lames
+          troubillonnantes qui infligent 25 de dégâts Tellurique. Des attaques
+          supplémentaires accélèrent les lames, qui explosent à la fin de leur
+          durée et infligent des dégâts en fonction de la vitesse des lames.
+      - description: >-
+          Une fois chargée, la prochaine attaque libère des lames
+          troubillonnantes qui infligent 75 de dégâts Tellurique. Des attaques
+          supplémentaires accélèrent les lames, qui explosent à la fin de leur
+          durée et infligent des dégâts en fonction de la vitesse des lames.

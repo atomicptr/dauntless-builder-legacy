@@ -1,23 +1,94 @@
 name: Berserker
-description: Reduces max health. Dealing damage stacks increased damage dealt for a short period.
+description: >-
+  Reduces max health. Dealing damage stacks increased damage dealt for a short
+  period.
 type: Brutality
-key: [ReducedHealth, DealDamageDoDamage]
+key:
+  - ReducedHealth
+  - DealDamageDoDamage
 effects:
-  1:
-    description: [-50 max health, "After dealing damage, gain +1% damage for 3 seconds. Stacks 10 times."]
-    value: [-50, 0.01]
-  2:
-    description: [-100 max health, "After dealing damage, gain +1.5% damage for 3 seconds. Stacks 10 times."]
-    value: [-100, 0.015]
-  3:
-    description: [-150 max health, "After dealing damage, gain +2% damage for 3 seconds. Stacks 10 times."]
-    value: [-150, 0.02]
-  4:
-    description: [-200 max health, "After dealing damage, gain +2.5% damage for 3 seconds. Stacks 10 times."]
-    value: [-200, 0.025]
-  5:
-    description: [-250 max health, "After dealing damage, gain +3% damage for 3 seconds. Stacks 10 times."]
-    value: [-250, 0.03]
-  6:
-    description: [-300 max health, "After dealing damage, gain +3.5% damage for 3 seconds. Stacks 10 times."]
-    value: [-300, 0.035]
+  '1':
+    description:
+      - '-50 max health'
+      - After dealing damage, gain +1% damage for 3 seconds. Stacks 10 times.
+    value:
+      - -50
+      - 0.01
+  '2':
+    description:
+      - '-100 max health'
+      - After dealing damage, gain +1.5% damage for 3 seconds. Stacks 10 times.
+    value:
+      - -100
+      - 0.015
+  '3':
+    description:
+      - '-150 max health'
+      - After dealing damage, gain +2% damage for 3 seconds. Stacks 10 times.
+    value:
+      - -150
+      - 0.02
+  '4':
+    description:
+      - '-200 max health'
+      - After dealing damage, gain +2.5% damage for 3 seconds. Stacks 10 times.
+    value:
+      - -200
+      - 0.025
+  '5':
+    description:
+      - '-250 max health'
+      - After dealing damage, gain +3% damage for 3 seconds. Stacks 10 times.
+    value:
+      - -250
+      - 0.03
+  '6':
+    description:
+      - '-300 max health'
+      - After dealing damage, gain +3.5% damage for 3 seconds. Stacks 10 times.
+    value:
+      - -300
+      - 0.035
+i18n:
+  fr:
+    name: Berserker
+    description: >-
+      Réduit la santé maximale. Infliger des dégâts augmente les dégâts
+      infligées pendant une courte période.
+    effects:
+      '1':
+        description:
+          - '-50 de vie max'
+          - >-
+            Après avoir infligé des dégâts, gagnez +1% de dégâts pendant 3
+            secondes. Cumulable 10 fois.
+      '2':
+        description:
+          - '-100 de vie max'
+          - >-
+            Après avoir infligé des dégâts, gagnez +1.5% de dégâts pendant 3
+            secondes. Cumulable 10 fois.
+      '3':
+        description:
+          - '-150 de vie max'
+          - >-
+            Après avoir infligé des dégâts, gagnez +2% de dégâts pendant 3
+            secondes. Cumulable 10 fois.
+      '4':
+        description:
+          - '-200 de vie max'
+          - >-
+            Après avoir infligé des dégâts, gagnez +2.5% de dégâts pendant 3
+            secondes. Cumulable 10 fois.
+      '5':
+        description:
+          - '-250 de vie max'
+          - >-
+            Après avoir infligé des dégâts, gagnez +3% de dégâts pendant 3
+            secondes. Cumulable 10 fois.
+      '6':
+        description:
+          - '-300 de vie max'
+          - >-
+            Après avoir infligé des dégâts, gagnez +3.5% de dégâts pendant 3
+            secondes. Cumulable 10 fois.

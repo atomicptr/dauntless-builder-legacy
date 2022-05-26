@@ -1,23 +1,109 @@
 name: Weighted Strikes
-description: Adds a flat amount of Stagger damage on hit. At later ranks, allows more weapon attacks to interrupt.
+description: >-
+  Adds a flat amount of Stagger damage on hit. At later ranks, allows more
+  weapon attacks to interrupt.
 type: Brutality
-key: [stagger_damage, dpdge_stagger_damage, revive_shield]
+key:
+  - stagger_damage
+  - dpdge_stagger_damage
+  - revive_shield
 effects:
-  1:
-    description: [+5 Stagger Damage on Hit, null, null]
-    value: [5, null, null]
-  2:
-    description: [+10 Stagger Damage on Hit, null, null]
-    value: [10, null, null]
-  3:
-    description: [+15 Stagger Damage on Hit, null, null]
-    value: [15, null, null]
-  4:
-    description: [+20 Stagger Damage on Hit, +200 Stagger after dodging through an attack, null]
-    value: [20, 200, null]
-  5:
-    description: [+30 Stagger Damage on Hit, +200 Stagger after dodging through an attack, null]
-    value: [30, 200, null]
-  6:
-    description: [+40 Stagger Damage on Hit, +400 Stagger after dodging through an attack, Ranged swings and missiles interrupt unstable Behemoth attacks]
-    value: [40, 400, null]
+  '1':
+    description:
+      - +5 Stagger Damage on Hit
+      - null
+      - null
+    value:
+      - 5
+      - null
+      - null
+  '2':
+    description:
+      - +10 Stagger Damage on Hit
+      - null
+      - null
+    value:
+      - 10
+      - null
+      - null
+  '3':
+    description:
+      - +15 Stagger Damage on Hit
+      - null
+      - null
+    value:
+      - 15
+      - null
+      - null
+  '4':
+    description:
+      - +20 Stagger Damage on Hit
+      - +200 Stagger after dodging through an attack
+      - null
+    value:
+      - 20
+      - 200
+      - null
+  '5':
+    description:
+      - +30 Stagger Damage on Hit
+      - +200 Stagger after dodging through an attack
+      - null
+    value:
+      - 30
+      - 200
+      - null
+  '6':
+    description:
+      - +40 Stagger Damage on Hit
+      - +400 Stagger after dodging through an attack
+      - Ranged swings and missiles interrupt unstable Behemoth attacks
+    value:
+      - 40
+      - 400
+      - null
+i18n:
+  fr:
+    name: Frappes Lourdes
+    description: >-
+      Ajoute une quantité fixe de dégats etourdissants à chaque coup. Les rangs
+      supérieurs permettent aux armes d'imterrompe les Behemoths.
+    effects:
+      '1':
+        description:
+          - +5 dégâts étourdissants
+          - null
+          - null
+      '2':
+        description:
+          - +10 dégâts étourdissants
+          - null
+          - null
+      '3':
+        description:
+          - +15 dégâts étourdissants
+          - null
+          - null
+      '4':
+        description:
+          - +20 dégâts étourdissants
+          - >-
+            Après avoir esquivé une attaque votre prochaine attaque inflige +200
+            dégâts étourdissants
+          - null
+      '5':
+        description:
+          - +30 dégâts étourdissants
+          - >-
+            Après avoir esquivé une attaque votre prochaine attaque inflige +200
+            dégâts étourdissants
+          - null
+      '6':
+        description:
+          - +40 dégâts étourdissants
+          - >-
+            Après avoir esquivé une attaque votre prochaine attaque inflige +400
+            dégâts étourdissants
+          - >-
+            Les coups à distance et missiles interrompent les attaques instables
+            des Behemoths

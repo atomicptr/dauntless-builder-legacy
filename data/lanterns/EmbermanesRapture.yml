@@ -4,4 +4,14 @@ description: null
 cells: Insight
 lantern_ability:
   instant: null
-  hold: Create a fire ball in front of you that explodes after 4 seconds, dealing 3250 Blaze damage to all nearby enemies.
+  hold: >-
+    Create a fire ball in front of you that explodes after 4 seconds, dealing
+    3250 Blaze damage to all nearby enemies.
+i18n:
+  fr:
+    name: Embuscade de l'Embermane
+    lantern_ability:
+      instant: null
+      hold: >-
+        Génère une boule de feu devant vous qui explose au bout de 4 secondes,
+        infligeant 3250 de dégâts incandescents aux ennemis proches.

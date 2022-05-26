@@ -1,15 +1,22 @@
 name: Pacifier Cell
 slot: Brutality
 variants:
-  "+1 Pacifier Cell":
+  +1 Pacifier Cell:
     rarity: uncommon
     perks:
       Pacifier: 1
-  "+2 Pacifier Cell":
+  +2 Pacifier Cell:
     rarity: rare
     perks:
       Pacifier: 2
-  "+3 Pacifier Cell":
+  +3 Pacifier Cell:
     rarity: epic
     perks:
       Pacifier: 3
+i18n:
+  fr:
+    name: Pacificateur
+    variants:
+      - Pacificateur +1
+      - Pacificateur +2
+      - Pacificateur +3

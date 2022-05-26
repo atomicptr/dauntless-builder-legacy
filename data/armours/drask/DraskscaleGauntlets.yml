@@ -6,8 +6,8 @@ strength: Shock
 weakness: Terra
 cells: Insight
 resistance:
-  0: 5
-  1: 30
+  '0': 5
+  '1': 30
 perks:
   - name: Sharpened
     value: 1
@@ -17,3 +17,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Gantelets en écailles de Drask
+    description: Protection pour les bras forgée à partir de Drask.

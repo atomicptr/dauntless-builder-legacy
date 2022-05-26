@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/nayzaga/NayzagasCharge.png
 type: Hammer
 damage: Blunt
 elemental: Shock
-cells: [Brutality, Insight]
+cells:
+  - Brutality
+  - Insight
 power:
-  0: 40
-  1: 120
+  '0': 40
+  '1': 120
 perks:
   - name: Savagery
     value: 1
@@ -28,3 +30,10 @@ unique_effects:
     value: 300
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Charge de Nayzaga
+    description: Un marteau forgé à partir de trophées de Nayzaga.
+    unique_effects:
+      - description: Après l'étourdissement d'un Behemoth, vous vous soignez de 100
+      - description: Après l'étourdissement d'un Behemoth, vous vous soignez de 300

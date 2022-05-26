@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/nayzaga/NayzagasReach.png
 type: Chain Blades
 damage: Slashing
 elemental: Shock
-cells: [Finesse, Insight]
+cells:
+  - Finesse
+  - Insight
 power:
-  0: 40
-  1: 120
+  '0': 40
+  '1': 120
 perks:
   - name: Barbed
     value: 1
@@ -28,3 +30,10 @@ unique_effects:
     value: 200
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Portée de Nayzaga
+    description: Une paire de chaînes-lames forgée à partir de Nayzaga
+    unique_effects:
+      - description: Après l'étourdissement d'un Behemoth, vous vous soignez de 100
+      - description: Après l'étourdissement d'un Behemoth, vous vous soignez de 200

@@ -1,15 +1,22 @@
 name: Conduit Cell
 slot: Insight
 variants:
-  "+1 Conduit Cell":
+  +1 Conduit Cell:
     rarity: uncommon
     perks:
       Conduit: 1
-  "+2 Conduit Cell":
+  +2 Conduit Cell:
     rarity: rare
     perks:
       Conduit: 2
-  "+3 Conduit Cell":
+  +3 Conduit Cell:
     rarity: epic
     perks:
       Conduit: 3
+i18n:
+  fr:
+    name: Conduction
+    variants:
+      - Conduction +1
+      - Conduction +2
+      - Conduction +3

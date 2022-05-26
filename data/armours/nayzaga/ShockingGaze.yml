@@ -6,8 +6,8 @@ strength: Shock
 weakness: Terra
 cells: Insight
 resistance:
-  0: 10
-  1: 30
+  '0': 10
+  '1': 30
 perks:
   - name: Medic
     value: 1
@@ -17,3 +17,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Oeil électrifié
+    description: Protection pour la tête forgée à partir de Nayzaga.

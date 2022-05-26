@@ -1,4 +1,13 @@
 name: Impulse Crown
 icon: /assets/icons/parts/hammer/mods/ImpulseCrown.png
 part_effect:
-  - Aerial Strike grants increased damage dealt for 10 seconds. Bonus is doubled if a Behemoth's head is struck.
+  - >-
+    Aerial Strike grants increased damage dealt for 10 seconds. Bonus is doubled
+    if a Behemoth's head is struck.
+i18n:
+  fr:
+    name: Couronne d'impulsion
+    part_effect:
+      - >-
+        Frappe aérienne accorde une augmentation de dégâts infligés pendant 10
+        secondes. Bonus doublé si la tete du Behemoth est touchée

@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/stormclaw/StormCutter.png
 type: Axe
 damage: Slashing
 elemental: Shock
-cells: [Brutality, Alacrity]
+cells:
+  - Brutality
+  - Alacrity
 power:
-  0: 80
-  1: 120
+  '0': 80
+  '1': 120
 perks:
   - name: Energized
     value: 1
@@ -19,12 +21,27 @@ perks:
     to: 1
 unique_effects:
   - name: DodgeMeterGain
-    description: After dodging through an attack, your attacks gain 100% bonus meter for +4 seconds
+    description: >-
+      After dodging through an attack, your attacks gain 100% bonus meter for +4
+      seconds
     value: 100
     from: 0
     to: 0
   - name: DodgeMeterGain
-    description: After dodging through an attack, your attacks gain 100% bonus meter for +5 seconds
+    description: >-
+      After dodging through an attack, your attacks gain 100% bonus meter for +5
+      seconds
     value: 100
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Taille tempête
+    description: Une hache forgée à partir de Stormclaw.
+    unique_effects:
+      - description: >-
+          Après avoir esquivé une attaque, vos attaques génèrent 100% de jauge
+          de spécial supplémentaire pendant +3 secondes.
+      - description: >-
+          Après avoir esquivé une attaque, vos attaques génèrent 100% de jauge
+          de spécial supplémentaire pendant +4 secondes.

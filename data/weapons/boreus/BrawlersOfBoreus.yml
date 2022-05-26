@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/boreus/BrawlersOfBoreus.png
 type: Aether Strikers
 damage: Blunt
 elemental: Frost
-cells: [Brutality, Fortitude]
+cells:
+  - Brutality
+  - Fortitude
 power:
-  0: 20
-  1: 120
+  '0': 20
+  '1': 120
 perks:
   - name: Conditioning
     value: 1
@@ -20,13 +22,28 @@ perks:
 unique_effects:
   - name: BoreusFrostSprite
     description: >-
-      After Surging, continually generate Frost Sprites for 6 seconds that grant your next attack +30 damage and minor frost damage (Max 4 Sprites)
+      After Surging, continually generate Frost Sprites for 6 seconds that grant
+      your next attack +30 damage and minor frost damage (Max 4 Sprites)
     value: 30
     from: 0
     to: 0
   - name: BoreusFrostSprite
     description: >-
-      After Surging, continually generate Frost Sprites for 6 seconds that grant your next attack +60 damage and minor frost damage (Max 4 Sprites)
+      After Surging, continually generate Frost Sprites for 6 seconds that grant
+      your next attack +60 damage and minor frost damage (Max 4 Sprites)
     value: 60
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Castagneurs du Boreus
+    description: Cestes aethériques forgée à partir de trophés de Boreus.
+    unique_effects:
+      - description: >-
+          Après un afflux, génère des farfroidets pendant 6 secondes qui
+          ajoutent 30 de dégâts à votre prochaine attaque et de légers dégâts de
+          givre (4 farfroidets maximum)
+      - description: >-
+          Après un afflux, génère des farfroidets pendant 6 secondes qui
+          ajoutent 60 de dégâts à votre prochaine attaque et de légers dégâts de
+          givre (4 farfroidets maximum)

@@ -1,15 +1,22 @@
 name: Conditioning Cell
 slot: Alacrity
 variants:
-  "+1 Conditioning Cell":
+  +1 Conditioning Cell:
     rarity: uncommon
     perks:
       Conditioning: 1
-  "+2 Conditioning Cell":
+  +2 Conditioning Cell:
     rarity: rare
     perks:
       Conditioning: 2
-  "+3 Conditioning Cell":
+  +3 Conditioning Cell:
     rarity: epic
     perks:
       Conditioning: 3
+i18n:
+  fr:
+    name: Constitution
+    variants:
+      - Constitution +1
+      - Constitution +2
+      - Constitution +3

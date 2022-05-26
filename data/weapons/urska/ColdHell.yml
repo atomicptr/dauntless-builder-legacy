@@ -4,15 +4,29 @@ icon: /assets/icons/weapons/urska/ColdHell.png
 type: War Pike
 damage: Piercing
 elemental: Frost
-cells: [Prismatic, Prismatic]
+cells:
+  - Prismatic
+  - Prismatic
 power:
-  0: 100
-  1: 120
+  '0': 100
+  '1': 120
 bond:
   elemental: Frost
 unique_effects:
   - name: UrskaLegendaryAbility
     icon: /assets/icons/abilities/UrskaLegendaryWeaponAbility.png
-    description: |
-      Legendary Ability: Create a Frost Shield that blocks hostile projectiles for 6 seconds. Damages and chills
+    description: >
+      Legendary Ability: Create a Frost Shield that blocks hostile projectiles
+      for 6 seconds. Damages and chills
+
       Behemoths that contact it (can interrupt).
+i18n:
+  fr:
+    name: Enfer glacé
+    description: Une aetherolance forgée à partir de Urska.
+    unique_effects:
+      - description: >-
+          Capacité légendaire : Créer un bouclier de givre qui bloque les
+          projectiles hostile pendant 6 secondes. Blesse et gèle les Behemoths
+          qui le touchent (peut interrompre). Se réinitialise à la mort du
+          Behemoth ou au bout de 3,5 minutes.

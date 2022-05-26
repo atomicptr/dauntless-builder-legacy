@@ -1,23 +1,82 @@
 name: Pulse
-description: Guarantees a critical hit after a number of hits. At higher ranks, also increases critical damage.
+description: >-
+  Guarantees a critical hit after a number of hits. At higher ranks, also
+  increases critical damage.
 type: Finesse
-key: [CriticalGuaranteedAfterHits, CritialDamageIncrease]
+key:
+  - CriticalGuaranteedAfterHits
+  - CritialDamageIncrease
 effects:
-  1:
-    description: [Every 10th hit with your weapon is a critical hit., null]
-    value: [10, null]
-  2:
-    description: [Every 9th hit with your weapon is a critical hit., null]
-    value: [9, null]
-  3:
-    description: [Every 8th hit with your weapon is a critical hit., null]
-    value: [8, null]
-  4:
-    description: [Every 7th hit with your weapon is a critical hit., +5% critical strike damage]
-    value: [7, 1.05]
-  5:
-    description: [Every 6th hit with your weapon is a critical hit., +10% critical strike damage]
-    value: [6, 1.1]
-  6:
-    description: [Every 5th hit with your weapon is a critical hit., +15% critical strike damage]
-    value: [5, 1.15]
+  '1':
+    description:
+      - Every 10th hit with your weapon is a critical hit.
+      - null
+    value:
+      - 10
+      - null
+  '2':
+    description:
+      - Every 9th hit with your weapon is a critical hit.
+      - null
+    value:
+      - 9
+      - null
+  '3':
+    description:
+      - Every 8th hit with your weapon is a critical hit.
+      - null
+    value:
+      - 8
+      - null
+  '4':
+    description:
+      - Every 7th hit with your weapon is a critical hit.
+      - +5% critical strike damage
+    value:
+      - 7
+      - 1.05
+  '5':
+    description:
+      - Every 6th hit with your weapon is a critical hit.
+      - +10% critical strike damage
+    value:
+      - 6
+      - 1.1
+  '6':
+    description:
+      - Every 5th hit with your weapon is a critical hit.
+      - +15% critical strike damage
+    value:
+      - 5
+      - 1.15
+i18n:
+  fr:
+    name: Pulsation
+    description: >-
+      Garantit un coup critique après un certain nombre de coups. Aux rangs
+      supérieurs, augmente également les dégâts critiques.
+    effects:
+      '1':
+        description:
+          - Tous les 10 coups votre arme donne un coup critique.
+          - null
+      '2':
+        description:
+          - Tous les 9 coups votre arme donne un coup critique.
+          - null
+      '3':
+        description:
+          - Tous les 8 coups votre arme donne un coup critique.
+          - null
+      '4':
+        description:
+          - Tous les 7 coups votre arme donne un coup critique.
+          - +5% dégâts des coups critiques
+      '5':
+        description:
+          - Tous les 6 coups votre arme donne un coup critique.
+          - +10% dégâts des coups critiques
+      '6':
+        description:
+          - Tous les 5 coups votre arme donne un coup critique.
+          - +15% dégâts des coups critiques

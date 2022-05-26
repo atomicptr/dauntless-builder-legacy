@@ -3,21 +3,62 @@ description: Grant a portion of any shield applied to your nearest ally.
 type: Fortitude
 key: shield_share
 effects:
-  1:
+  '1':
     description: +5% of shield applied to you is also applied to your nearest ally for 15s.
     value: 5
-  2:
-    description: +10% of shield applied to you is also applied to your nearest ally for 15s.
+  '2':
+    description: >-
+      +10% of shield applied to you is also applied to your nearest ally for
+      15s.
     value: 10
-  3:
-    description: +15% of shield applied to you is also applied to your nearest ally for 15s.
+  '3':
+    description: >-
+      +15% of shield applied to you is also applied to your nearest ally for
+      15s.
     value: 15
-  4:
-    description: +20% of shield applied to you is also applied to your nearest ally for 15s.
+  '4':
+    description: >-
+      +20% of shield applied to you is also applied to your nearest ally for
+      15s.
     value: 20
-  5:
-    description: +25% of shield applied to you is also applied to your nearest ally for 15s.
+  '5':
+    description: >-
+      +25% of shield applied to you is also applied to your nearest ally for
+      15s.
     value: 25
-  6:
-    description: +30% of shield applied to you is also applied to your nearest ally for 15s.
+  '6':
+    description: >-
+      +30% of shield applied to you is also applied to your nearest ally for
+      15s.
     value: 30
+i18n:
+  fr:
+    name: Gardien
+    description: >-
+      Octroie une portion de n'importe quel bouclier qui vous est appliqué à
+      votre allié le plus proche.
+    effects:
+      '1':
+        description: >-
+          +5% des boucliers de santé qui vous sont appliqués sont également
+          appliqués à votre allié le plus proche pendant 15 secondes
+      '2':
+        description: >-
+          +10% des boucliers de santé qui vous sont appliqués sont également
+          appliqués à votre allié le plus proche pendant 15 secondes
+      '3':
+        description: >-
+          +15% des boucliers de santé qui vous sont appliqués sont également
+          appliqués à votre allié le plus proche pendant 15 secondes
+      '4':
+        description: >-
+          +20% des boucliers de santé qui vous sont appliqués sont également
+          appliqués à votre allié le plus proche pendant 15 secondes
+      '5':
+        description: >-
+          +25% des boucliers de santé qui vous sont appliqués sont également
+          appliqués à votre allié le plus proche pendant 15 secondes
+      '6':
+        description: >-
+          +30% des boucliers de santé qui vous sont appliqués sont également
+          appliqués à votre allié le plus proche pendant 15 secondes

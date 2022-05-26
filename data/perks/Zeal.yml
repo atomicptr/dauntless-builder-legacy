@@ -3,21 +3,38 @@ description: Increases Lantern ability effectiveness.
 type: Insight
 key: LanternTapEffectiveness
 effects:
-  1:
+  '1':
     description: +15% Lantern ability effectiveness.
     value: 1.15
-  2:
+  '2':
     description: +25% Lantern ability effectiveness.
     value: 1.25
-  3:
+  '3':
     description: +35% Lantern ability effectiveness.
     value: 1.35
-  4:
+  '4':
     description: +45% Lantern ability effectiveness.
     value: 1.45
-  5:
+  '5':
     description: +55% Lantern ability effectiveness.
     value: 1.55
-  6:
+  '6':
     description: +65% Lantern ability effectiveness.
     value: 1.65
+i18n:
+  fr:
+    name: Zèle
+    description: Améliore l'efficacité des capacités instantanées de laterne.
+    effects:
+      '1':
+        description: +15% d'efficacité de la capacité de lanterne.
+      '2':
+        description: +25% d'efficacité de la capacité de lanterne.
+      '3':
+        description: +35% d'efficacité de la capacité de lanterne.
+      '4':
+        description: +45% d'efficacité de la capacité de lanterne.
+      '5':
+        description: +55% d'efficacité de la capacité de lanterne.
+      '6':
+        description: +65% d'efficacité de la capacité de lanterne.

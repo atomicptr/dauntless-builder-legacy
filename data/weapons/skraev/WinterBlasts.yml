@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/skraev/WinterBlasts.png
 type: Repeater
 damage: Slashing
 elemental: Frost
-cells: [Finesse, Alacrity]
+cells:
+  - Finesse
+  - Alacrity
 power:
-  0: 60
-  1: 120
+  '0': 60
+  '1': 120
 perks:
   - name: Nimble
     value: 2
@@ -19,10 +21,25 @@ perks:
     to: 1
 unique_effects:
   - name: IceMines
-    description: After dodging, drop 2 Ice Mines around you on a 30 second cooldown that deal 300 damage.
+    description: >-
+      After dodging, drop 2 Ice Mines around you on a 30 second cooldown that
+      deal 300 damage.
     from: 0
     to: 0
   - name: IceMines
-    description: After dodging, drop 3 Ice Mines around you on a 30 second cooldown that deal 300 damage.
+    description: >-
+      After dodging, drop 3 Ice Mines around you on a 30 second cooldown that
+      deal 300 damage.
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Tir hivernal
+    description: Un repeaters forgée à partir de Skraev.
+    unique_effects:
+      - description: >-
+          Après une esquive, déposez 2 mines de glace autour de vous qui
+          infligent 300 dégâts. 30s de recharge
+      - description: >-
+          Après une esquive, déposez 3 mines de glace autour de vous qui
+          infligent 300 dégâts. 30s de recharge

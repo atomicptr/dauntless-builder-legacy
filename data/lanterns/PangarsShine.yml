@@ -4,4 +4,14 @@ description: null
 cells: Insight
 lantern_ability:
   instant: null
-  hold: Create a frost pillar in front of you that deals 2500 Frost damage to nearby enemies over 10 seconds.
+  hold: >-
+    Create a frost pillar in front of you that deals 2500 Frost damage to nearby
+    enemies over 10 seconds.
+i18n:
+  fr:
+    name: Éclat de Pangar
+    lantern_ability:
+      instant: null
+      hold: >-
+        Crée un pilier de givre devant vous qui inflige 2500 de dégâts de givre
+        en 10 secondes aux ennemis proches.

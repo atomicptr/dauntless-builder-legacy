@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/stormclaw/StormShooters.png
 type: Repeater
 damage: Slashing
 elemental: Shock
-cells: [Brutality, Alacrity]
+cells:
+  - Brutality
+  - Alacrity
 power:
-  0: 80
-  1: 120
+  '0': 80
+  '1': 120
 perks:
   - name: Aetheric Attunement
     value: 2
@@ -26,3 +28,10 @@ unique_effects:
     description: On dodging through a Behemoth attack, Empowered Reload.
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Armes orageuses
+    description: Un repeaters forgée à partir de Stormclaw.
+    unique_effects:
+      - description: Après avoir esquivé une attaque, rechargez.
+      - description: Après avoir esquivé une attaque, effectue un rechargement amplifié.

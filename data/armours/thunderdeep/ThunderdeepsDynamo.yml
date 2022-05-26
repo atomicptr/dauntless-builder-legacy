@@ -6,8 +6,8 @@ strength: Shock
 weakness: Terra
 cells: Insight
 resistance:
-  0: 20
-  1: 30
+  '0': 20
+  '1': 30
 perks:
   - name: Aetheric Evasion
     value: 2
@@ -17,3 +17,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Dynamo de Sombre-orage
+    description: Torso protection forged from Thunderdeep Drask trophies.

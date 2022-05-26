@@ -1,23 +1,78 @@
 name: Acidic
 description: Increases Wound damage at the cost of Part damage.
 type: Finesse
-key: [part_to_wound_damage, percent_part_damage]
+key:
+  - part_to_wound_damage
+  - percent_part_damage
 effects:
-  1:
-    description: [Converts 30% of Part Damage to Wound Damage, null]
-    value: [0.3, null]
-  2:
-    description: [Converts 40% of Part Damage to Wound Damage, null]
-    value: [0.4, null]
-  3:
-    description: [Converts 50% of Part Damage to Wound Damage, null]
-    value: [0.5, null]
-  4:
-    description: [Converts 50% of Part Damage to Wound Damage, +10% Part damage]
-    value: [0.5, 1.1]
-  5:
-    description: [Converts 50% of Part Damage to Wound Damage, +15% Part damage]
-    value: [0.5, 1.15]
-  6:
-    description: [Converts 50% of Part Damage to Wound Damage, +20% Part damage]
-    value: [0.5, 1.2]
+  '1':
+    description:
+      - Converts 30% of Part Damage to Wound Damage
+      - null
+    value:
+      - 0.3
+      - null
+  '2':
+    description:
+      - Converts 40% of Part Damage to Wound Damage
+      - null
+    value:
+      - 0.4
+      - null
+  '3':
+    description:
+      - Converts 50% of Part Damage to Wound Damage
+      - null
+    value:
+      - 0.5
+      - null
+  '4':
+    description:
+      - Converts 50% of Part Damage to Wound Damage
+      - +10% Part damage
+    value:
+      - 0.5
+      - 1.1
+  '5':
+    description:
+      - Converts 50% of Part Damage to Wound Damage
+      - +15% Part damage
+    value:
+      - 0.5
+      - 1.15
+  '6':
+    description:
+      - Converts 50% of Part Damage to Wound Damage
+      - +20% Part damage
+    value:
+      - 0.5
+      - 1.2
+i18n:
+  fr:
+    name: Acide
+    description: Augmente les dégâts mutilants au détriment des dégâts aux membres.
+    effects:
+      '1':
+        description:
+          - Convertit 30% des dégâts aux membres en dégâts mutilants
+          - null
+      '2':
+        description:
+          - Convertit 40% des dégâts aux membres en dégâts mutilants
+          - null
+      '3':
+        description:
+          - Convertit 50% des dégâts aux membres en dégâts mutilants
+          - null
+      '4':
+        description:
+          - Convertit 50% des dégâts aux membres en dégâts mutilants
+          - +10% de dégâts aux membres
+      '5':
+        description:
+          - Convertit 50% des dégâts aux membres en dégâts mutilants
+          - +15% de dégâts aux membres
+      '6':
+        description:
+          - Convertit 50% des dégâts aux membres en dégâts mutilants
+          - +20% de dégâts aux membres

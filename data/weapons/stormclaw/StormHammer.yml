@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/stormclaw/StormHammer.png
 type: Hammer
 damage: Blunt
 elemental: Shock
-cells: [Brutality, Alacrity]
+cells:
+  - Brutality
+  - Alacrity
 power:
-  0: 80
-  1: 120
+  '0': 80
+  '1': 120
 perks:
   - name: Aetheric Attunement
     value: 1
@@ -28,3 +30,10 @@ unique_effects:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Marteau tempête
+    description: Un marteau forgé à partir de trophées de Stormclaw.
+    unique_effects:
+      - description: Après avoir esquivé une attaque, rechargez 2 munition aethérochargée
+      - description: Après avoir esquivé une attaque, rechargez 3 munitions aethérochargées

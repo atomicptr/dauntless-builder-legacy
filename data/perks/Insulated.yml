@@ -1,23 +1,88 @@
 name: Insulated
-description: Protects against Shocked status effect and allows you to attack electric shields.
+description: >-
+  Protects against Shocked status effect and allows you to attack electric
+  shields.
 type: Fortitude
-key: [shock_immunity, percent_part_damage]
+key:
+  - shock_immunity
+  - percent_part_damage
 effects:
-  1:
-    description: [Reduces duration of Shocked status by 25%, null]
-    value: [-0.25, null]
-  2:
-    description: [Reduces duration of Shocked status by 50%, null]
-    value: [-0.5, null]
-  3:
-    description: [Reduces duration of Shocked status by 75%, null]
-    value: [-0.75, null]
-  4:
-    description: [Reduces duration of Shocked status by 75%, Reduces knockback and damage of hitting electrified shields]
-    value: [-0.75, null]
-  5:
-    description: [Reduces duration of Shocked status by 75%, Prevents knockback and damage of hitting electrified shields]
-    value: [-0.75, null]
-  6:
-    description: [Immune to Shocked status, Prevents knockback and damage of hitting electrified shields]
-    value: [-1, null]
+  '1':
+    description:
+      - Reduces duration of Shocked status by 25%
+      - null
+    value:
+      - -0.25
+      - null
+  '2':
+    description:
+      - Reduces duration of Shocked status by 50%
+      - null
+    value:
+      - -0.5
+      - null
+  '3':
+    description:
+      - Reduces duration of Shocked status by 75%
+      - null
+    value:
+      - -0.75
+      - null
+  '4':
+    description:
+      - Reduces duration of Shocked status by 75%
+      - Reduces knockback and damage of hitting electrified shields
+    value:
+      - -0.75
+      - null
+  '5':
+    description:
+      - Reduces duration of Shocked status by 75%
+      - Prevents knockback and damage of hitting electrified shields
+    value:
+      - -0.75
+      - null
+  '6':
+    description:
+      - Immune to Shocked status
+      - Prevents knockback and damage of hitting electrified shields
+    value:
+      - -1
+      - null
+i18n:
+  fr:
+    name: Isolant
+    description: >-
+      Protège contre l'effet de statut « Électrisé ». Les rangs supérieurs
+      permettent d'attaquer les boucliers électriques.
+    effects:
+      '1':
+        description:
+          - Réduit la durée de l'effet de statut « Électrisé » de 25%
+          - null
+      '2':
+        description:
+          - Réduit la durée de l'effet de statut « Électrisé » de 50%
+          - null
+      '3':
+        description:
+          - Réduit la durée de l'effet de statut « Électrisé » de 75%
+          - null
+      '4':
+        description:
+          - Réduit la durée de l'effet de statut « Électrisé » de 75%
+          - >-
+            Réduit le recule et les dégâts reçus en frappant les boucliers
+            électriques
+      '5':
+        description:
+          - Réduit la durée de l'effet de statut « Électrisé » de 75%
+          - >-
+            Protège du recule et des dégâts reçus en frappant les boucliers
+            électriques
+      '6':
+        description:
+          - Immunité à l'effet de statut « Électrisé »
+          - >-
+            Protège du recul et des dégâts reçus en frappant les boucliers
+            électriques

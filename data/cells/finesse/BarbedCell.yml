@@ -1,15 +1,22 @@
 name: Barbed Cell
 slot: Finesse
 variants:
-  "+1 Barbed Cell":
+  +1 Barbed Cell:
     rarity: uncommon
     perks:
       Barbed: 1
-  "+2 Barbed Cell":
+  +2 Barbed Cell:
     rarity: rare
     perks:
       Barbed: 2
-  "+3 Barbed Cell":
+  +3 Barbed Cell:
     rarity: epic
     perks:
       Barbed: 3
+i18n:
+  fr:
+    name: Barbelée
+    variants:
+      - Barbelée +1
+      - Barbelée +2
+      - Barbelée +3

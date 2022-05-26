@@ -2,7 +2,8 @@ name: Artificer
 icon: /assets/icons/omnicells/Artificer.png
 ability_icon: /assets/icons/omnicells/ArtificerAbility.png
 passive: >
-  Amount of healing and shielding granted per second is increased by 1 for every 150 current health when activated.
+  Amount of healing and shielding granted per second is increased by 1 for every
+  150 current health when activated.
 active: >
   <b>Command:</b> Your drone acts based on the target.{{NL}}
   <b>1. Slayer:</b> Remove negative status effects and grant Artificer Aura for 15s.{{NL}}

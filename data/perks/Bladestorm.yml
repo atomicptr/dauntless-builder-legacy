@@ -1,23 +1,84 @@
 name: Bladestorm
 description: Adds a flat amount of Part damage on hit.
 type: Brutality
-key: [flat_part_damage, dodge_part_damage]
+key:
+  - flat_part_damage
+  - dodge_part_damage
 effects:
-  1:
-    description: [+5 Part Damage on Hit, null]
-    value: [5, null]
-  2:
-    description: [+10 Part Damage on Hit, null]
-    value: [10, null]
-  3:
-    description: [+15 Part Damage on Hit, null]
-    value: [15, null]
-  4:
-    description: [+20 Part Damage on Hit, +200 Part Damage after dodging through an attack]
-    value: [20, 200]
-  5:
-    description: [+30 Part Damage on Hit, +200 Part Damage after dodging through an attack]
-    value: [30, 200]
-  6:
-    description: [+40 Part Damage on Hit, +400 Part Damage after dodging through an attack]
-    value: [40, 400]
+  '1':
+    description:
+      - +5 Part Damage on Hit
+      - null
+    value:
+      - 5
+      - null
+  '2':
+    description:
+      - +10 Part Damage on Hit
+      - null
+    value:
+      - 10
+      - null
+  '3':
+    description:
+      - +15 Part Damage on Hit
+      - null
+    value:
+      - 15
+      - null
+  '4':
+    description:
+      - +20 Part Damage on Hit
+      - +200 Part Damage after dodging through an attack
+    value:
+      - 20
+      - 200
+  '5':
+    description:
+      - +30 Part Damage on Hit
+      - +200 Part Damage after dodging through an attack
+    value:
+      - 30
+      - 200
+  '6':
+    description:
+      - +40 Part Damage on Hit
+      - +400 Part Damage after dodging through an attack
+    value:
+      - 40
+      - 400
+i18n:
+  fr:
+    name: Tempête de lames
+    description: Ajoute une quantité fixe de dégâts aux membres à chaque coup.
+    effects:
+      '1':
+        description:
+          - +5 dégâts aux membres
+          - null
+      '2':
+        description:
+          - +10 dégâts aux membres
+          - null
+      '3':
+        description:
+          - +15 dégâts aux membres
+          - null
+      '4':
+        description:
+          - +20 dégâts aux membres
+          - >-
+            Après avoir esquivé une attaque votre prochaine attaque inflige +200
+            dégâts aux membres
+      '5':
+        description:
+          - +30 dégâts aux membres
+          - >-
+            Après avoir esquivé une attaque votre prochaine attaque inflige +200
+            dégâts aux membres
+      '6':
+        description:
+          - +40 dégâts aux membres
+          - >-
+            Après avoir esquivé une attaque votre prochaine attaque inflige +400
+            dégâts aux membres

@@ -6,8 +6,8 @@ strength: Radiant
 weakness: Umbral
 cells: Finesse
 resistance:
-  0: 20
-  1: 30
+  '0': 20
+  '1': 30
 perks:
   - name: Overpower
     value: 2
@@ -17,3 +17,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Gantelets de Tisseur du temps
+    description: Protection pour les bras forgée à partir de Tisseur du temps.

@@ -1,15 +1,19 @@
 name: The Hunger
-description: The Hunger is a craftable Exotic weapon in Dauntless. It is crafted from Shrowd reagents.
+description: >-
+  The Hunger is a craftable Exotic weapon in Dauntless. It is crafted from
+  Shrowd reagents.
 icon: /assets/icons/weapons/shrowd/TheHunger.png
 type: Sword
 damage: Slashing
 elemental: Umbral
-cells: [Brutality, Prismatic]
+cells:
+  - Brutality
+  - Prismatic
 rarity: exotic
 restrict_specials: true
 power:
-  0: 80
-  1: 120
+  '0': 80
+  '1': 120
 perks:
   - name: Ragehunter
     value: 2
@@ -23,5 +27,16 @@ unique_effects:
   - name: TheHungerEffect
     icon: /assets/icons/parts/sword/specials/TheHunger.png
     description: >-
-      Activate to enter Feast, taking damage over time but gaining significant lifesteal,
-      attack speed, and creating aetheric waves with each attack that deal area damage.
+      Activate to enter Feast, taking damage over time but gaining significant
+      lifesteal, attack speed, and creating aetheric waves with each attack that
+      deal area damage.
+i18n:
+  fr:
+    name: Famine
+    description: Une épée exotique forgée à partir de Shrowd.
+    unique_effects:
+      - description: >-
+          Activez avec une jauge pleine pour entrer en mode Festin, gagnant les
+          effets de Surcharge vaillante ainsi que +25% de dégâts et +12% de vol
+          vie. Votre vie se draine continuellement. La ruée accorde aussi une
+          invulnérabilié temporaire.

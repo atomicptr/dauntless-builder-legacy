@@ -170,6 +170,44 @@ for (let category of Object.keys(data)) {
                         continue;
                     }
 
+                    if (field === "lantern_ability") {
+                        if (value.instant) {
+                            i18nValues[lang][createItemTranslationIdentifier(category, itemName, field, "instant")] =
+                                value.instant;
+                        }
+
+                        if (value.hold) {
+                            i18nValues[lang][createItemTranslationIdentifier(category, itemName, field, "hold")] =
+                                value.hold;
+                        }
+                        continue;
+                    }
+
+                    if (field === "effects") {
+                        for (let key of Object.keys(value)) {
+                            if (Array.isArray(value[key].description)) {
+                                for (let index in value[key].description) {
+                                    i18nValues[lang][
+                                        createItemTranslationIdentifier(
+                                            category,
+                                            itemName,
+                                            field,
+                                            key,
+                                            "description",
+                                            index,
+                                        )
+                                    ] = value[key].description[index];
+                                }
+                                continue;
+                            }
+
+                            i18nValues[lang][
+                                createItemTranslationIdentifier(category, itemName, field, key, "description")
+                            ] = value[key].description;
+                        }
+                        continue;
+                    }
+
                     console.error("Unknown item found", lang, field, value);
                     process.exit(1);
                 }

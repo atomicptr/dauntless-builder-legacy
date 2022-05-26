@@ -6,8 +6,8 @@ strength: Terra
 weakness: Shock
 cells: Finesse
 resistance:
-  0: 15
-  1: 30
+  '0': 15
+  '1': 30
 perks:
   - name: Agility
     value: 2
@@ -17,3 +17,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Masque de ronces
+    description: Une pièce d'armure forgée à partir du Souverain des Ronces.

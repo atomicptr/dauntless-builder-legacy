@@ -1,15 +1,22 @@
 name: Strategist Cell
 slot: Fortitude
 variants:
-  "+1 Strategist Cell":
+  +1 Strategist Cell:
     rarity: uncommon
     perks:
       Strategist: 1
-  "+2 Strategist Cell":
+  +2 Strategist Cell:
     rarity: rare
     perks:
       Strategist: 2
-  "+3 Strategist Cell":
+  +3 Strategist Cell:
     rarity: epic
     perks:
       Strategist: 3
+i18n:
+  fr:
+    name: Stratège
+    variants:
+      - Stratège +1
+      - Stratège +2
+      - Stratège +3

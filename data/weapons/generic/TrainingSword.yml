@@ -6,4 +6,8 @@ damage: Slashing
 elemental: null
 cells: null
 power:
-  0: 10
+  '0': 10
+i18n:
+  fr:
+    name: Épée d'entraînement
+    description: Une lame d'entraînement, ternie et abimée.

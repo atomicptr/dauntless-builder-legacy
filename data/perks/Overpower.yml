@@ -3,21 +3,38 @@ description: Increases damage against staggered Behemoths.
 type: Brutality
 key: damage_staggered
 effects:
-  1:
+  '1':
     description: +10% Damage vs Staggered Behemoths
     value: 1.1
-  2:
+  '2':
     description: +15% Damage vs Staggered Behemoths
     value: 1.15
-  3:
+  '3':
     description: +20% Damage vs Staggered Behemoths
     value: 1.2
-  4:
+  '4':
     description: +30% Damage vs Staggered Behemoths
     value: 1.3
-  5:
+  '5':
     description: +35% Damage vs Staggered Behemoths
     value: 1.35
-  6:
+  '6':
     description: +40% Damage vs Staggered Behemoths
     value: 1.4
+i18n:
+  fr:
+    name: Domination
+    description: Augmente les dégâts contre les Behemoths étourdis.
+    effects:
+      '1':
+        description: +10% de dégâts contre les Behemoths étourdis
+      '2':
+        description: +15% de dégâts contre les Behemoths étourdis
+      '3':
+        description: +20% de dégâts contre les Behemoths étourdis
+      '4':
+        description: +30% de dégâts contre les Behemoths étourdis
+      '5':
+        description: +35% de dégâts contre les Behemoths étourdis
+      '6':
+        description: +40% de dégâts contre les Behemoths étourdis

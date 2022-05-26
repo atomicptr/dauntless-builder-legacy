@@ -1,4 +1,13 @@
 name: Keen Edge
 icon: /assets/icons/parts/sword/mods/KeenEdge.png
 part_effect:
-  - After the Bladesurge projectile travels a short distance, the damage is increased by 100%.
+  - >-
+    After the Bladesurge projectile travels a short distance, the damage is
+    increased by 100%.
+i18n:
+  fr:
+    name: Fil du rasoir
+    part_effect:
+      - >-
+        Aprés qu'un projectile de «Déferlement de lame» ait parcouru une courte
+        distance, les dégâts sont augmentés de 100%.

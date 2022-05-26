@@ -2,3 +2,10 @@ name: Antique Clip
 icon: /assets/icons/parts/hammer/mods/AntiqueClip.png
 part_effect:
   - Ammo decreased to 2, but bonus from aethercharged ammo is increased by 300%.
+i18n:
+  fr:
+    name: Chargeur antique
+    part_effect:
+      - >-
+        Munitions réduites à 2. Le bonus des munitions aetherochargées est
+        augmenté de 300%

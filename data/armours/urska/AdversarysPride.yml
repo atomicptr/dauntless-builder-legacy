@@ -6,8 +6,8 @@ strength: Frost
 weakness: Blaze
 cells: Alacrity
 resistance:
-  0: 25
-  1: 30
+  '0': 25
+  '1': 30
 perks:
   - name: Cascade
     value: 2
@@ -17,3 +17,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Fierté de l'Adversaire
+    description: Protection pour le torse forgée à partir de Urska.

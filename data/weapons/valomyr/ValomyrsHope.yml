@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/valomyr/ValomyrsHope.png
 type: War Pike
 damage: Piercing
 elemental: Radiant
-cells: [Brutality, Insight]
+cells:
+  - Brutality
+  - Insight
 power:
-  0: 60
-  1: 120
+  '0': 60
+  '1': 120
 perks:
   - name: Aetherhunter
     value: 2
@@ -20,15 +22,28 @@ perks:
 unique_effects:
   - name: ValomyrCharge
     description: >-
-      Once charged, your next attack will deal 550 bonus radiant damage.
-      Charge rate increases with current health.
+      Once charged, your next attack will deal 550 bonus radiant damage. Charge
+      rate increases with current health.
     value: 550
     from: 0
     to: 0
   - name: ValomyrCharge
     description: >-
-      Once charged, your next attack will deal 700 bonus radiant damage.
-      Charge rate increases with current health.
+      Once charged, your next attack will deal 700 bonus radiant damage. Charge
+      rate increases with current health.
     value: 700
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Espoir de Valomyr
+    description: Une aetherolance forgée à partir de Valomyr.
+    unique_effects:
+      - description: >-
+          Une fois chargée, votre prochaine attaque infligera +550 dégâts
+          rayonnants. La vitesse de charge augmente en fonction de la santé
+          actuelle
+      - description: >-
+          Une fois chargée, votre prochaine attaque infligera +700 dégâts
+          rayonnants. La vitesse de charge augmente en fonction de la santé
+          actuelle

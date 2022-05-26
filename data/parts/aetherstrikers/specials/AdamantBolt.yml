@@ -1,4 +1,15 @@
 name: Adamant Bolt
 icon: /assets/icons/parts/aetherstrikers/specials/AdamantBolt.png
 part_effect:
-  - Unleash energy in a focused blast, dealing 900 damage to the first enemy hit. Deals up to +100% damage when Tempest Form and Karma Breaker's effects are active.
+  - >-
+    Unleash energy in a focused blast, dealing 900 damage to the first enemy
+    hit. Deals up to +100% damage when Tempest Form and Karma Breaker's effects
+    are active.
+i18n:
+  fr:
+    name: Explosion implacable
+    part_effect:
+      - >-
+        Déchaîne de l'energie dans une explosion concentrée, infligeant 900
+        dégâts au premier ennemi touché. Inflige jusqu'à +100% de dégâts quand
+        les effets de Forme tempétueuse et Briseur de Karma sont actifs.

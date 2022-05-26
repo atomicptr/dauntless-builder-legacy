@@ -1,15 +1,22 @@
 name: Adrenaline Cell
 slot: Alacrity
 variants:
-  "+1 Adrenaline Cell":
+  +1 Adrenaline Cell:
     rarity: uncommon
     perks:
       Adrenaline: 1
-  "+2 Adrenaline Cell":
+  +2 Adrenaline Cell:
     rarity: rare
     perks:
       Adrenaline: 2
-  "+3 Adrenaline Cell":
+  +3 Adrenaline Cell:
     rarity: epic
     perks:
       Adrenaline: 3
+i18n:
+  fr:
+    name: Adrénaline
+    variants:
+      - Adrénaline +1
+      - Adrénaline +2
+      - Adrénaline +3

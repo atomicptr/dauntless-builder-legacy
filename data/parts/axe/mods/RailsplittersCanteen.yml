@@ -2,3 +2,10 @@ name: Railsplitter's Canteen
 icon: /assets/icons/parts/axe/mods/RailsplittersCanteen.png
 part_effect:
   - Tonics consumed while your axe is thrown have +50% effectiveness.
+i18n:
+  fr:
+    name: Gamelle du répartiteur
+    part_effect:
+      - >-
+        Les toniques utilisés pendant que votre hache est lancée ont +50%
+        d'efficacité.

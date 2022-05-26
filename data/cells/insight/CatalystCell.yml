@@ -1,15 +1,22 @@
 name: Catalyst Cell
 slot: Insight
 variants:
-  "+1 Catalyst Cell":
+  +1 Catalyst Cell:
     rarity: uncommon
     perks:
       Catalyst: 1
-  "+2 Catalyst Cell":
+  +2 Catalyst Cell:
     rarity: rare
     perks:
       Catalyst: 2
-  "+3 Catalyst Cell":
+  +3 Catalyst Cell:
     rarity: epic
     perks:
       Catalyst: 3
+i18n:
+  fr:
+    name: Catalyse
+    variants:
+      - Catalyse +1
+      - Catalyse +2
+      - Catalyse +3

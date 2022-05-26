@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/shrike/CryOfTheShrike.png
 type: Sword
 damage: Slashing
 elemental: null
-cells: [Alacrity, Alacrity]
+cells:
+  - Alacrity
+  - Alacrity
 power:
-  0: 40
-  1: 120
+  '0': 40
+  '1': 120
 perks:
   - name: Conditioning
     value: 1
@@ -28,4 +30,14 @@ unique_effects:
     value: 100
     from: 1
     to: 1
-
+i18n:
+  fr:
+    name: Lamentation du Shrike
+    description: Une épée forgée à partir de Shrike.
+    unique_effects:
+      - description: >-
+          Après avoir esquivé, votre prochaine attaque inflige +50 dégâts de
+          base et dégâts aux membres
+      - description: >-
+          Après avoir esquivé, votre prochaine attaque inflige +100 dégâts de
+          base et dégâts aux membres

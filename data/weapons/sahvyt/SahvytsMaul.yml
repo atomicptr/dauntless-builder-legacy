@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/sahvyt/SahvytsMaul.png
 type: Hammer
 damage: Blunt
 elemental: Shock
-cells: [Finesse, Finesse]
+cells:
+  - Finesse
+  - Finesse
 power:
-  0: 60
-  1: 120
+  '0': 60
+  '1': 120
 perks:
   - name: Pulse
     value: 2
@@ -20,13 +22,30 @@ perks:
 unique_effects:
   - name: SahvytBoomerang
     description: >-
-      Once charged, your next weapon swing/shot unleashes a boomerang projectile that frequently deals 250 shock damage
-      to any target hit. Dodging through an attack reduces charge cooldown.
+      Once charged, your next weapon swing/shot unleashes a boomerang projectile
+      that frequently deals 250 shock damage to any target hit. Dodging through
+      an attack reduces charge cooldown.
     from: 0
     to: 0
   - name: SahvytBoomerang
     description: >-
-      Once charged, your next weapon swing/shot unleashes a boomerang projectile that frequently deals 325 shock damage
-      to any target hit. Dodging through an attack reduces charge cooldown.
+      Once charged, your next weapon swing/shot unleashes a boomerang projectile
+      that frequently deals 325 shock damage to any target hit. Dodging through
+      an attack reduces charge cooldown.
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Masse de Sahvyt
+    description: Marteau forgé à partir du Sahvyt.
+    unique_effects:
+      - description: >-
+          Une fois chargé, votre prochain coup libère un projectile boomerang
+          qui inflige fréquemment 250 de dégâts d'électrochocs à toute cible
+          touchée. Esquiver une attaque réduit le temps de recharge de la
+          charge.
+      - description: >-
+          Une fois chargé, votre prochain coup libère un projectile boomerang
+          qui inflige fréquemment 350 de dégâts d'électrochocs à toute cible
+          touchée. Esquiver une attaque réduit le temps de recharge de la
+          charge.

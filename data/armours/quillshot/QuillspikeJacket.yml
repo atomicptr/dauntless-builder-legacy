@@ -6,8 +6,8 @@ strength: null
 weakness: null
 cells: Finesse
 resistance:
-  0: 10
-  1: 30
+  '0': 10
+  '1': 30
 perks:
   - name: Savagery
     value: 1
@@ -17,3 +17,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Gilet du quillperceur
+    description: Protection pour le torse forgée à partir de Quillshot.

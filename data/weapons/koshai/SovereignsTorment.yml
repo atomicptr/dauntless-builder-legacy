@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/koshai/SovereignsTorment.png
 type: Sword
 damage: Slashing
 elemental: Terra
-cells: [Brutality, Insight]
+cells:
+  - Brutality
+  - Insight
 power:
-  0: 60
-  1: 120
+  '0': 60
+  '1': 120
 perks:
   - name: Sharpened
     value: 2
@@ -19,12 +21,27 @@ perks:
     to: 1
 unique_effects:
   - name: NoAttackDamage
-    description: After not dealing damage for 4 seconds, your next 3 attacks deal +50% damage
+    description: >-
+      After not dealing damage for 4 seconds, your next 3 attacks deal +50%
+      damage
     value: 1.5
     from: 0
     to: 0
   - name: NoAttackDamage
-    description: After not dealing damage for 4 seconds, your next 4 attacks deal +50% damage
+    description: >-
+      After not dealing damage for 4 seconds, your next 4 attacks deal +50%
+      damage
     value: 1.5
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Tourment du souverain
+    description: Une épée forgée à partir de trophées du Koshai
+    unique_effects:
+      - description: >-
+          Après 4 secondes sans infliger de dégât, vos 3 prochaines attaques
+          infligent +50% de dégâts.
+      - description: >-
+          Après 4 secondes sans infliger de dégât, vos 4 prochaines attaques
+          infligent +50% de dégâts.

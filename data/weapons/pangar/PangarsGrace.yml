@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/pangar/PangarsGrace.png
 type: Axe
 damage: Slashing
 elemental: Frost
-cells: [Brutality, Fortitude]
+cells:
+  - Brutality
+  - Fortitude
 power:
-  0: 40
-  1: 120
+  '0': 40
+  '1': 120
 perks:
   - name: Knockout King
     value: 1
@@ -19,16 +21,37 @@ perks:
     to: 1
 unique_effects:
   - name: PangarBomb
-    description: |
-      Once charged, your next attack places a frost brand that deals 1,000 frost damage after 30 seconds. Slayers
-      can destroy the brand, prematurely detonating it for 50% increased damage. Charges every 90 seconds.
+    description: >
+      Once charged, your next attack places a frost brand that deals 1,000 frost
+      damage after 30 seconds. Slayers
+
+      can destroy the brand, prematurely detonating it for 50% increased damage.
+      Charges every 90 seconds.
     value: 1000
     from: 0
     to: 0
   - name: PangarBomb
-    description: |
-      Once charged, your next attack places a frost brand that deals 2,500 frost damage after 30 seconds. Slayers
-      can destroy the brand, prematurely detonating it for 50% increased damage. Charges every 90 seconds.
+    description: >
+      Once charged, your next attack places a frost brand that deals 2,500 frost
+      damage after 30 seconds. Slayers
+
+      can destroy the brand, prematurely detonating it for 50% increased damage.
+      Charges every 90 seconds.
     value: 2500
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Grâce de Pangar
+    description: Une hache forgée à partir de Pangar.
+    unique_effects:
+      - description: >-
+          Une fois chargée, votre prochaine attaque place une marque de givre
+          qui inflige 1000 de dégâts de givre après 30 secondes. Les Slayers
+          peuvent détruire la marque, la faisant exploser prématurément pour 50%
+          de dégâts supplémentaires. Se recharge toutes les 90 secondes.
+      - description: >-
+          Une fois chargée, votre prochaine attaque place une marque de givre
+          qui inflige 2500 de dégâts de givre après 30 secondes. Les Slayers
+          peuvent détruire la marque, la faisant exploser prématurément pour 50%
+          de dégâts supplémentaires. Se recharge toutes les 90 secondes.

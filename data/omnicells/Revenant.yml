@@ -2,10 +2,26 @@ name: Revenant
 icon: /assets/icons/omnicells/Revenant.png
 ability_icon: /assets/icons/omnicells/RevenantAbility.png
 passive: >
-  Lifesteal +2%. When Revenant state ends, each stack of Void Energy grants 115 health per second for 10 seconds.
+  Lifesteal +2%. When Revenant state ends, each stack of Void Energy grants 115
+  health per second for 10 seconds.
 active: >
-  Drain up to 500 health to enter Revenant state and spawn a Void Orb. For every 100 health drained, summon an
-  Umbral Tendril that deals 700 umbral damage. If an Umbral Tendril hits a target, it spawns an additional Void
-  Orb upon impact. Picking up a Void Orb grants a stack of Void Energy, which gives +4% damage and extends Revenant
-  state by 1 second. Revenant state lasts for 15 seconds and prevents all healing.
-
+  Drain up to 500 health to enter Revenant state and spawn a Void Orb. For every
+  100 health drained, summon an Umbral Tendril that deals 700 umbral damage. If
+  an Umbral Tendril hits a target, it spawns an additional Void Orb upon impact.
+  Picking up a Void Orb grants a stack of Void Energy, which gives +4% damage
+  and extends Revenant state by 1 second. Revenant state lasts for 15 seconds
+  and prevents all healing.
+i18n:
+  fr:
+    name: Spectre
+    passive: >
+      Lorsque l’état de Spectre prend fin, chaque charge d’Énergie du vide
+      confère 125 points de santé par seconde pendant 10 secondes.
+    active: >
+      Drainez jusqu'à 500 points de santé pour passer en état de Spectre et
+      générer un Orbe du vide. Tous les 100 points de santé drainés, invoquez
+      une Vigne obscure qui inflige 700 de dégâts obscurs. Si une Vigne obscure
+      touche une cible, elle génère un Orbe du vide supplémentaire à l’impact.
+      Ramasser un Orbe du vide confère une charge d’Énergie du vide, ce qui
+      confère +4 % de dégâts et prolonge l’état de Spectre d’1 seconde. L’état
+      de Spectre dure 15 secondes et empêche toute guérison.

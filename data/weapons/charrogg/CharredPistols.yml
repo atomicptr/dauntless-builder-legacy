@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/charrogg/CharredPistols.png
 type: Repeater
 damage: Slashing
 elemental: Blaze
-cells: [Finesse, Fortitude]
+cells:
+  - Finesse
+  - Fortitude
 power:
-  0: 40
-  1: 120
+  '0': 40
+  '1': 120
 perks:
   - name: Aetherhunter
     value: 1
@@ -30,3 +32,14 @@ unique_effects:
     value: 200
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Pistolets charrbonisés
+    description: Un repeaters forgée à partir de Charrogg.
+    unique_effects:
+      - description: >-
+          Après avoir dépensé 100 d'endurance, la prochaine attaque émet un cône
+          de flammes qui inflige +100 de dégâts à chaque cible dans le cône.
+      - description: >-
+          Après avoir dépensé 100 d'endurance, la prochaine attaque émet un cône
+          de flammes qui inflige +200 de dégâts à chaque cible dans le cône.

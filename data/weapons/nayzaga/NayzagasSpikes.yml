@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/nayzaga/NayzagasSpikes.png
 type: Repeater
 damage: Slashing
 elemental: Shock
-cells: [Finesse, Insight]
+cells:
+  - Finesse
+  - Insight
 power:
-  0: 40
-  1: 120
+  '0': 40
+  '1': 120
 perks:
   - name: Savagery
     value: 1
@@ -28,3 +30,14 @@ unique_effects:
     value: 25
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Piques de Nayzaga
+    description: Un repeaters forgée à partir de Nayzaga.
+    unique_effects:
+      - description: >-
+          Quand vous tirez le dernier coup dans votre chargeur, vous vous
+          soignez de 15pv.
+      - description: >-
+          Quand vous tirez le dernier coup dans votre chargeur, vous vous
+          soignez de 25pv.

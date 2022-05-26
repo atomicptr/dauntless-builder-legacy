@@ -1,23 +1,80 @@
 name: Catalyst
 description: Increases effectiveness of Tonics. At later ranks, increases duration as well.
 type: Insight
-key: [TonicEffectiveness, TonicDuration]
+key:
+  - TonicEffectiveness
+  - TonicDuration
 effects:
-  1:
-    description: [+10% Tonic Effectiveness, null]
-    value: [1.1, null]
-  2:
-    description: [+20% Tonic Effectiveness, null]
-    value: [1.2, null]
-  3:
-    description: [+30% Tonic Effectiveness, null]
-    value: [1.3, null]
-  4:
-    description: [+40% Tonic Effectiveness, +20% Tonic Duration]
-    value: [1.4, 1.2]
-  5:
-    description: [+50% Tonic Effectiveness, +40% Tonic Duration]
-    value: [1.5, 1.4]
-  6:
-    description: [+60% Tonic Effectiveness, +60% Tonic Duration]
-    value: [1.6, 1.6]
+  '1':
+    description:
+      - +10% Tonic Effectiveness
+      - null
+    value:
+      - 1.1
+      - null
+  '2':
+    description:
+      - +20% Tonic Effectiveness
+      - null
+    value:
+      - 1.2
+      - null
+  '3':
+    description:
+      - +30% Tonic Effectiveness
+      - null
+    value:
+      - 1.3
+      - null
+  '4':
+    description:
+      - +40% Tonic Effectiveness
+      - +20% Tonic Duration
+    value:
+      - 1.4
+      - 1.2
+  '5':
+    description:
+      - +50% Tonic Effectiveness
+      - +40% Tonic Duration
+    value:
+      - 1.5
+      - 1.4
+  '6':
+    description:
+      - +60% Tonic Effectiveness
+      - +60% Tonic Duration
+    value:
+      - 1.6
+      - 1.6
+i18n:
+  fr:
+    name: Catalyse
+    description: >-
+      Augmente l'efficacité des toniques. Augmente également la durée aux grades
+      supérieurs.
+    effects:
+      '1':
+        description:
+          - +10% Efficacité des toniques
+          - null
+      '2':
+        description:
+          - +20% Efficacité des toniques
+          - null
+      '3':
+        description:
+          - +30% Efficacité des toniques
+          - null
+      '4':
+        description:
+          - +40% Efficacité des toniques
+          - +20% Durée des toniques
+      '5':
+        description:
+          - +50% Efficacité des toniques
+          - +40% Durée des toniques
+      '6':
+        description:
+          - +60% Efficacité des toniques
+          - +60% Durée des toniques

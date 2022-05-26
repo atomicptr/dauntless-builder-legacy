@@ -1,0 +1,8 @@
+{
+    "drawer.new-build": "Nouveau",
+    "drawer.my-builds": "Mes builds",
+    "drawer.settings": "Paramètres",
+
+    "pages.settings.title": "Paramètres",
+    "pages.newbuild.title": "Creer un build"
+}

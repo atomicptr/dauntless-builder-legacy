@@ -6,8 +6,8 @@ strength: Frost
 weakness: Blaze
 cells: Finesse
 resistance:
-  0: 5
-  1: 30
+  '0': 5
+  '1': 30
 perks:
   - name: Tenacious
     value: 1
@@ -17,3 +17,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Marche boréale
+    description: Protection pour les jambes forgée à partir de Boreus.

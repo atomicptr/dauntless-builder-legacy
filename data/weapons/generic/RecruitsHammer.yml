@@ -6,4 +6,8 @@ damage: Blunt
 elemental: null
 cells: null
 power:
-  0: 10
+  '0': 10
+i18n:
+  fr:
+    name: Marteau de recrue
+    description: Un marteau de recrue.

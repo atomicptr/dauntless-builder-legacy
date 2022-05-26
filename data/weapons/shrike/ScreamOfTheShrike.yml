@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/shrike/ScreamOfTheShrike.png
 type: War Pike
 damage: Piercing
 elemental: null
-cells: [Finesse, Alacrity]
+cells:
+  - Finesse
+  - Alacrity
 power:
-  0: 40
-  1: 120
+  '0': 40
+  '1': 120
 perks:
   - name: Conditioning
     value: 1
@@ -28,3 +30,14 @@ unique_effects:
     value: 100
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Cri du Shrike
+    description: Une aetherolance forgée à partir de Shrike.
+    unique_effects:
+      - description: >-
+          Après avoir esquivé, votre prochaine attaque inflige +50 dégâts aux
+          membres
+      - description: >-
+          Après avoir esquivé, votre prochaine attaque inflige +100 dégâts aux
+          membres

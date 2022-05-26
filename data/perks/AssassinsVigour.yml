@@ -3,21 +3,38 @@ description: Grants Health after breaking a Behemoth part.
 type: Fortitude
 key: part_break_heal
 effects:
-  1:
+  '1':
     description: Heal 50 when you break a part
     value: 50
-  2:
+  '2':
     description: Heal 100 when you break a part
     value: 100
-  3:
+  '3':
     description: Heal 150 when you break a part
     value: 150
-  4:
+  '4':
     description: Heal 200 when you break a part
     value: 200
-  5:
+  '5':
     description: Heal 250 when you break a part
     value: 250
-  6:
+  '6':
     description: Heal 300 when you break a part
     value: 300
+i18n:
+  fr:
+    name: Vigueur d'assassin
+    description: Régénère de la vie après avoir brisé une partie d'un Behemoth.
+    effects:
+      '1':
+        description: Brisé une partie de behemoth vous soigne de 50 points de vie
+      '2':
+        description: Brisé une partie de behemoth vous soigne de 100 points de vie
+      '3':
+        description: Brisé une partie de behemoth vous soigne de 150 points de vie
+      '4':
+        description: Brisé une partie de behemoth vous soigne de 200 points de vie
+      '5':
+        description: Brisé une partie de behemoth vous soigne de 250 points de vie
+      '6':
+        description: Brisé une partie de behemoth vous soigne de 300 points de vie

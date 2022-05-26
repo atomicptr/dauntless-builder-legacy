@@ -1,4 +1,16 @@
 name: Grim Onslaught
 icon: /assets/icons/parts/axe/specials/GrimOnslaught.png
 part_effect:
-  - Throw the axe forward, damaging enemies in its path before landing a distance away. Hitting a Behemoth can generate Resolve and will bounce the axe back towards the user.
+  - >-
+    Throw the axe forward, damaging enemies in its path before landing a
+    distance away. Hitting a Behemoth can generate Resolve and will bounce the
+    axe back towards the user.
+i18n:
+  fr:
+    name: Assaut Sinistre
+    part_effect:
+      - >-
+        Lancez la hache vers l'avant, infligeant jusqu'à 800 de dégâts (augmenté
+        par la détermination) aux ennemis sur son passage et gagnant 15 points
+        de jauge en touchant un Behemoth. Rattrapez la hache pour gagner 30
+        points de jauge.

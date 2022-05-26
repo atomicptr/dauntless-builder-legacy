@@ -1,15 +1,22 @@
 name: Assassin's Frenzy Cell
 slot: Alacrity
 variants:
-  "+1 Assassin's Frenzy Cell":
+  +1 Assassin's Frenzy Cell:
     rarity: uncommon
     perks:
       Assassin's Frenzy: 1
-  "+2 Assassin's Frenzy Cell":
+  +2 Assassin's Frenzy Cell:
     rarity: rare
     perks:
       Assassin's Frenzy: 2
-  "+3 Assassin's Frenzy Cell":
+  +3 Assassin's Frenzy Cell:
     rarity: epic
     perks:
       Assassin's Frenzy: 3
+i18n:
+  fr:
+    name: Frénésie d'assassin
+    variants:
+      - Frénésie d'assassin +1
+      - Frénésie d'assassin +2
+      - Frénésie d'assassin +3

@@ -1,15 +1,22 @@
 name: Aetherhunter Cell
 slot: Brutality
 variants:
-  "+1 Aetherhunter Cell":
+  +1 Aetherhunter Cell:
     rarity: uncommon
     perks:
       Aetherhunter: 1
-  "+2 Aetherhunter Cell":
+  +2 Aetherhunter Cell:
     rarity: rare
     perks:
       Aetherhunter: 2
-  "+3 Aetherhunter Cell":
+  +3 Aetherhunter Cell:
     rarity: epic
     perks:
       Aetherhunter: 3
+i18n:
+  fr:
+    name: Chasse-aether
+    variants:
+      - Chasse-aether +1
+      - Chasse-aether +2
+      - Chasse-aether +3

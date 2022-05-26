@@ -1,23 +1,94 @@
 name: Galvanized
-description: Grants increased critical strike chance based on the amount of shield stacks you have, and at higher ranks it also grants increased critical strike damage
+description: >-
+  Grants increased critical strike chance based on the amount of shield stacks
+  you have, and at higher ranks it also grants increased critical strike damage
 type: Finesse
-key: [stagger_damage, dodge_stagger_damage]
+key:
+  - stagger_damage
+  - dodge_stagger_damage
 effects:
-  1:
-    description: ["For every 150 shields, gain +1% bonus critical strike chance.", null]
-    value: [150, 1.05]
-  2:
-    description: ["For every 125 shields, gain +1% bonus critical strike chance.", null]
-    value: [125, 1.05]
-  3:
-    description: ["For every 100 shields, gain +1% bonus critical strike chance.", null]
-    value: [100, 1.05]
-  4:
-    description: ["For every 85 shields, gain +1% bonus critical strike chance.", "+5% critical strike damage."]
-    value: [85, 1.05]
-  5:
-    description: ["For every 70 shields, gain +1% bonus critical strike chance.", "+10% critical strike damage."]
-    value: [70, 1.1]
-  6:
-    description: ["For every 50 shields, gain +1% bonus critical strike chance.", "+15% critical strike damage."]
-    value: [50, 1.15]
+  '1':
+    description:
+      - For every 150 shields, gain +1% bonus critical strike chance.
+      - null
+    value:
+      - 150
+      - 1.05
+  '2':
+    description:
+      - For every 125 shields, gain +1% bonus critical strike chance.
+      - null
+    value:
+      - 125
+      - 1.05
+  '3':
+    description:
+      - For every 100 shields, gain +1% bonus critical strike chance.
+      - null
+    value:
+      - 100
+      - 1.05
+  '4':
+    description:
+      - For every 85 shields, gain +1% bonus critical strike chance.
+      - +5% critical strike damage.
+    value:
+      - 85
+      - 1.05
+  '5':
+    description:
+      - For every 70 shields, gain +1% bonus critical strike chance.
+      - +10% critical strike damage.
+    value:
+      - 70
+      - 1.1
+  '6':
+    description:
+      - For every 50 shields, gain +1% bonus critical strike chance.
+      - +15% critical strike damage.
+    value:
+      - 50
+      - 1.15
+i18n:
+  fr:
+    name: Galvanisé
+    description: >-
+      Augmente les chances de coup critique en fonction du boucliers dont vous
+      disposez. A rangs plus élevés augmente les dégâts des coups critiques.
+    effects:
+      '1':
+        description:
+          - >-
+            Pour chaque tranche de 150 boucliers, gagnez +1% de chances de coup
+            critique.
+          - null
+      '2':
+        description:
+          - >-
+            Pour chaque tranche de 125 boucliers, gagnez +1% de chances de coup
+            critique.
+          - null
+      '3':
+        description:
+          - >-
+            Pour chaque tranche de 100 boucliers, gagnez +1% de chances de coup
+            critique.
+          - null
+      '4':
+        description:
+          - >-
+            Pour chaque tranche de 85 boucliers, gagnez +1% de chances de coup
+            critique.
+          - +5% de dégâts des coups critiques.
+      '5':
+        description:
+          - >-
+            Pour chaque tranche de 70 boucliers, gagnez +1% de chances de coup
+            critique.
+          - +10% de dégâts des coups critiques.
+      '6':
+        description:
+          - >-
+            Pour chaque tranche de 50 boucliers, gagnez +1% de chances de coup
+            critique.
+          - +15% de dégâts des coups critiques.

@@ -3,33 +3,68 @@ description: Generates Molten Hearts when dealing damage.
 type: Insight
 key: attack_speed
 effects:
-  1:
+  '1':
     description: >-
       Dealing damage generates a Molten Heart on a 26 second cooldown, granting
       immunity to burning and increased attack and movement speed.
     value: 1.1
-  2:
+  '2':
     description: >-
       Dealing damage generates a Molten Heart on a 23 second cooldown, granting
       immunity to burning and increased attack and movement speed.
     value: 1.1
-  3:
+  '3':
     description: >-
-      Dealing damage generates two Molten Hearts on a 23 second cooldown, granting
-      immunity to burning and increased attack and movement speed.
+      Dealing damage generates two Molten Hearts on a 23 second cooldown,
+      granting immunity to burning and increased attack and movement speed.
     value: 1.1
-  4:
+  '4':
     description: >-
-      Dealing damage generates two Molten Hearts on a 20 second cooldown, granting
-      immunity to burning and increased attack and movement speed.
+      Dealing damage generates two Molten Hearts on a 20 second cooldown,
+      granting immunity to burning and increased attack and movement speed.
     value: 1.1
-  5:
+  '5':
     description: >-
-      Dealing damage generates three Molten Hearts on a 20 second cooldown, granting
-      immunity to burning and increased attack and movement speed.
+      Dealing damage generates three Molten Hearts on a 20 second cooldown,
+      granting immunity to burning and increased attack and movement speed.
     value: 1.1
-  6:
+  '6':
     description: >-
-      Dealing damage generates three Molten Hearts on a 16 second cooldown, granting
-      immunity to burning and increased attack and movement speed.
+      Dealing damage generates three Molten Hearts on a 16 second cooldown,
+      granting immunity to burning and increased attack and movement speed.
     value: 1.1
+i18n:
+  fr:
+    name: Fondue
+    description: Génère des coeurs fondue avec temps de recharge.
+    effects:
+      '1':
+        description: >-
+          Infliger des dégâts génère un cœur fondue avec un temps de recharge de
+          26 secondes qui octroient une immunité au feu et une vitesse d'attaque
+          et de déplacement accrues
+      '2':
+        description: >-
+          Infliger des dégâts génère un cœur fondue avec un temps de recharge de
+          23 secondes qui octroient une immunité au feu et une vitesse d'attaque
+          et de déplacement accrues
+      '3':
+        description: >-
+          Infliger des dégâts génère deux cœurs fondue avec un temps de recharge
+          de 23 secondes qui octroient une immunité au feu et une vitesse
+          d'attaque et de déplacement accrues
+      '4':
+        description: >-
+          Infliger des dégâts génère deux cœurs fondue avec un temps de recharge
+          de 20 secondes qui octroient une immunité au feu et une vitesse
+          d'attaque et de déplacement accrues
+      '5':
+        description: >-
+          Infliger des dégâts génère trois cœurs fondue avec un temps de
+          recharge de 20 secondes qui octroient une immunité au feu et une
+          vitesse d'attaque et de déplacement accrues
+      '6':
+        description: >-
+          Infliger des dégâts génère trois cœurs fondue avec un temps de
+          recharge de 16 secondes qui octroient une immunité au feu et une
+          vitesse d'attaque et de déplacement accrues

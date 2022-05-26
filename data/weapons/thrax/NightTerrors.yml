@@ -4,15 +4,29 @@ icon: /assets/icons/weapons/thrax/NightTerrors.png
 type: Chain Blades
 damage: Slashing
 elemental: Umbral
-cells: [Prismatic, Prismatic]
+cells:
+  - Prismatic
+  - Prismatic
 power:
-  0: 100
-  1: 120
+  '0': 100
+  '1': 120
 bond:
   elemental: Umbral
 unique_effects:
   - name: ThraxLegendaryAbility
     icon: /assets/icons/abilities/ThraxLegendaryWeaponAbility.png
     description: >-
-      Legendary Ability: Deal umbral damage to nearby enemies and teleport high into the sky. Then choose a spot
-      to slam down on to, dealing additional umbral damage. Usable once, but resets on Behemoth kill.
+      Legendary Ability: Deal umbral damage to nearby enemies and teleport high
+      into the sky. Then choose a spot to slam down on to, dealing additional
+      umbral damage. Usable once, but resets on Behemoth kill.
+i18n:
+  fr:
+    name: Terreurs nocturnes
+    description: Une paire de chaînes-lames forgée à partir de Thrax.
+    unique_effects:
+      - description: >-
+          Capacité légendaire: Infliger des dégâts obscurs aux ennemis proches
+          et téléportez-vous haut dans le ciel. Ensuite, choisissez un endroit
+          où vous écraser pour infliger des dégâts obscurs supplémentaires.
+          Utilisable une fois, mais se réinitialise lors de la mort d'un
+          Behemoth.

@@ -1,23 +1,68 @@
 name: Conduit
-description: Using a Lantern's hold ability increases all Slayers' attack speed temporarily.
+description: >-
+  Using a Lantern's hold ability increases all Slayers' attack speed
+  temporarily.
 type: Insight
 key: attack_speed_all_slayers
 effects:
-  1:
-    description: Using your lantern hold ability grants 4% attack speed to all Slayers for 10 seconds.
+  '1':
+    description: >-
+      Using your lantern hold ability grants 4% attack speed to all Slayers for
+      10 seconds.
     value: 1.04
-  2:
-    description: Using your lantern hold ability grants 6% attack speed to all Slayers for 10 seconds.
+  '2':
+    description: >-
+      Using your lantern hold ability grants 6% attack speed to all Slayers for
+      10 seconds.
     value: 1.06
-  3:
-    description: Using your lantern hold ability grants 8% attack speed to all Slayers for 10 seconds.
+  '3':
+    description: >-
+      Using your lantern hold ability grants 8% attack speed to all Slayers for
+      10 seconds.
     value: 1.08
-  4:
-    description: Using your lantern hold ability grants 10% attack speed to all Slayers for 10 seconds.
+  '4':
+    description: >-
+      Using your lantern hold ability grants 10% attack speed to all Slayers for
+      10 seconds.
     value: 1.1
-  5:
-    description: Using your lantern hold ability grants 12.5% attack speed to all Slayers for 10 seconds.
+  '5':
+    description: >-
+      Using your lantern hold ability grants 12.5% attack speed to all Slayers
+      for 10 seconds.
     value: 1.125
-  6:
-    description: Using your lantern hold ability grants 15% attack speed to all Slayers for 10 seconds.
+  '6':
+    description: >-
+      Using your lantern hold ability grants 15% attack speed to all Slayers for
+      10 seconds.
     value: 1.15
+i18n:
+  fr:
+    name: Conduction
+    description: >-
+      La capacité de la lanterne octroie temporairement de la vitesse d'attaque
+      à tous les Slayers.
+    effects:
+      '1':
+        description: >-
+          Utiliser votre capacité de lanterne octroie +4% de vitesse d'attaque à
+          tous les Slayers pendant 10 secondes.
+      '2':
+        description: >-
+          Utiliser votre capacité de lanterne octroie +6% de vitesse d'attaque à
+          tous les Slayers pendant 10 secondes.
+      '3':
+        description: >-
+          Utiliser votre capacité de lanterne octroie +8% de vitesse d'attaque à
+          tous les Slayers pendant 10 secondes.
+      '4':
+        description: >-
+          Utiliser votre capacité de lanterne octroie +10% de vitesse d'attaque
+          à tous les Slayers pendant 10 secondes.
+      '5':
+        description: >-
+          Utiliser votre capacité de lanterne octroie +12.5% de vitesse
+          d'attaque à tous les Slayers pendant 10 secondes.
+      '6':
+        description: >-
+          Utiliser votre capacité de lanterne octroie +15% de vitesse d'attaque
+          à tous les Slayers pendant 10 secondes.

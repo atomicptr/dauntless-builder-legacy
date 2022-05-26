@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/frostwulf/FrostwulfsSlam.png
 type: Hammer
 damage: Blunt
 elemental: Frost
-cells: [Insight, Fortitude]
+cells:
+  - Insight
+  - Fortitude
 power:
-  0: 60
-  1: 120
+  '0': 60
+  '1': 120
 perks:
   - name: Galvanized
     value: 2
@@ -20,13 +22,32 @@ perks:
 unique_effects:
   - name: LanternsMakeGeyser
     description: >-
-      After using your Lantern ability, create a geyser that frequently deals 50 frost damage. Any Slayer moving through
-      the geyser for the first time is granted a stackable 125 health shield that lasts for 25 seconds (max 600 shields).
+      After using your Lantern ability, create a geyser that frequently deals 50
+      frost damage. Any Slayer moving through the geyser for the first time is
+      granted a stackable 125 health shield that lasts for 25 seconds (max 600
+      shields).
     from: 0
     to: 0
   - name: LanternsMakeGeyser
     description: >-
-      After using your Lantern ability, create a geyser that frequently deals 70 frost damage. Any Slayer moving
-      through the geyser for the first time is granted a stackable 125 health shield that lasts for 25 seconds (max 600 shields).
+      After using your Lantern ability, create a geyser that frequently deals 70
+      frost damage. Any Slayer moving through the geyser for the first time is
+      granted a stackable 125 health shield that lasts for 25 seconds (max 600
+      shields).
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Collision du Frostwülf
+    description: A Slayer's hammer forged with Frostwülf trophies.
+    unique_effects:
+      - description: >-
+          Après avoir utilisé la capacité de votre lanterne, créez un geyser qui
+          infige constamment 60 dégâts de givre. Tout Slayer traversant le
+          geyser pour la prmière fois obtient un bouclier de 125 points de santé
+          cumulable qui dure pendant 25 secondes (600 boucliers maximum).
+      - description: >-
+          Après avoir utilisé la capacité de votre lanterne, créez un geyser qui
+          infige constamment 100 dégâts de givre. Tout Slayer traversant le
+          geyser pour la prmière fois obtient un bouclier de 125 points de santé
+          cumulable qui dure pendant 25 secondes (600 boucliers maximum).

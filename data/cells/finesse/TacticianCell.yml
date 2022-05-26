@@ -1,15 +1,22 @@
 name: Tactician Cell
 slot: Finesse
 variants:
-  "+1 Tactician Cell":
+  +1 Tactician Cell:
     rarity: uncommon
     perks:
       Tactician: 1
-  "+2 Tactician Cell":
+  +2 Tactician Cell:
     rarity: rare
     perks:
       Tactician: 2
-  "+3 Tactician Cell":
+  +3 Tactician Cell:
     rarity: epic
     perks:
       Tactician: 3
+i18n:
+  fr:
+    name: Stratège-Tacticien
+    variants:
+      - Stratège-Tacticien +1
+      - Stratège-Tacticien +2
+      - Stratège-Tacticien +3

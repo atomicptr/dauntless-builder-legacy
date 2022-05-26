@@ -3,21 +3,38 @@ description: Prevents being staggered on a cooldown.
 type: Fortitude
 key: stagger_prevention
 effects:
-  1:
+  '1':
     description: Prevents you from being staggered (30 second cooldown)
     value: 120
-  2:
+  '2':
     description: Prevents you from being staggered (25 second cooldown)
     value: 100
-  3:
+  '3':
     description: Prevents you from being staggered (20 second cooldown)
     value: 80
-  4:
+  '4':
     description: Prevents you from being staggered (15 second cooldown)
     value: 60
-  5:
+  '5':
     description: Prevents you from being staggered (10 second cooldown)
     value: 40
-  6:
+  '6':
     description: Prevents you from being staggered (5 second cooldown)
     value: 15
+i18n:
+  fr:
+    name: Stabilité
+    description: Permet d'éviter régulièrement les déstabilisations.
+    effects:
+      '1':
+        description: Empêche les déstabilisations (30 secondes de recharge)
+      '2':
+        description: Empêche les déstabilisations (25 secondes de recharge)
+      '3':
+        description: Empêche les déstabilisations (20 secondes de recharge)
+      '4':
+        description: Empêche les déstabilisations (15 secondes de recharge)
+      '5':
+        description: Empêche les déstabilisations (10 secondes de recharge)
+      '6':
+        description: Empêche les déstabilisations (5 secondes de recharge)

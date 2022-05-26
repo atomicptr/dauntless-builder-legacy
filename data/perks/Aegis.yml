@@ -1,24 +1,95 @@
 name: Aegis
 description: >-
-  Increases amount of shields received. At later ranks, after gaining 1000 shields, ignore the next incoming hit within 15 seconds.
+  Increases amount of shields received. At later ranks, after gaining 1000
+  shields, ignore the next incoming hit within 15 seconds.
 type: Fortitude
-key: [IncreaseShieldsReceived, ShieldThresholdIgnoreHit]
+key:
+  - IncreaseShieldsReceived
+  - ShieldThresholdIgnoreHit
 effects:
-  1:
-    description: [Increases all shields received by 5%, null]
-    value: [0.05, null]
-  2:
-    description: [Increases all shields received by 8%, null]
-    value: [0.08, null]
-  3:
-    description: [Increases all shields received by 11%, null]
-    value: [0.11, null]
-  4:
-    description: [Increases all shields received by 14%, "After gaining 1000 shield from any source, ignore the next incoming hit within the next 15 seconds."]
-    value: [0.14, 1000]
-  5:
-    description: [Increases all shields received by 17%, "After gaining 1000 shield from any source, ignore the next incoming hit within the next 15 seconds."]
-    value: [0.17, 1000]
-  6:
-    description: [Increases all shields received by 20%, "After gaining 1000 shield from any source, ignore the next incoming hit within the next 15 seconds."]
-    value: [0.2, 1000]
+  '1':
+    description:
+      - Increases all shields received by 5%
+      - null
+    value:
+      - 0.05
+      - null
+  '2':
+    description:
+      - Increases all shields received by 8%
+      - null
+    value:
+      - 0.08
+      - null
+  '3':
+    description:
+      - Increases all shields received by 11%
+      - null
+    value:
+      - 0.11
+      - null
+  '4':
+    description:
+      - Increases all shields received by 14%
+      - >-
+        After gaining 1000 shield from any source, ignore the next incoming hit
+        within the next 15 seconds.
+    value:
+      - 0.14
+      - 1000
+  '5':
+    description:
+      - Increases all shields received by 17%
+      - >-
+        After gaining 1000 shield from any source, ignore the next incoming hit
+        within the next 15 seconds.
+    value:
+      - 0.17
+      - 1000
+  '6':
+    description:
+      - Increases all shields received by 20%
+      - >-
+        After gaining 1000 shield from any source, ignore the next incoming hit
+        within the next 15 seconds.
+    value:
+      - 0.2
+      - 1000
+i18n:
+  fr:
+    name: Égide
+    description: >-
+      Égide augmente tous les boucliers reçus. Au rang 4 et au-delà, après avoir
+      gagné 1 000 boucliers, vous ignorez le prochain coup reçu dans les 15
+      secondes.
+    effects:
+      '1':
+        description:
+          - +5% Boucliers reçus
+          - null
+      '2':
+        description:
+          - +8% Boucliers reçus
+          - null
+      '3':
+        description:
+          - +11% Boucliers reçus
+          - null
+      '4':
+        description:
+          - +14% Boucliers reçus
+          - >-
+            Après avoir gagné 1 000 boucliers vous ignorez le prochain coup reçu
+            dans les 15 secondes.
+      '5':
+        description:
+          - +17% Boucliers reçus
+          - >-
+            Après avoir gagné 1 000 boucliers vous ignorez le prochain coup reçu
+            dans les 15 secondes.
+      '6':
+        description:
+          - +20% Boucliers reçus
+          - >-
+            Après avoir gagné 1 000 boucliers vous ignorez le prochain coup reçu
+            dans les 15 secondes.

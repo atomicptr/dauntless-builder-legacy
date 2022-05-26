@@ -1,23 +1,84 @@
 name: Aetherborne
 description: Increases the benefits of using aether vents.
 type: Insight
-key: [aether_vent_not_used, aether_vent_bonus_heal]
+key:
+  - aether_vent_not_used
+  - aether_vent_bonus_heal
 effects:
-  1:
-    description: [25% chance not to consume an Aether Vent charge on use, 25 additional Aether Vent healing]
-    value: [0.25, 25]
-  2:
-    description: [25% chance not to consume an Aether Vent charge on use, 50 additional Aether Vent healing]
-    value: [0.25, 50]
-  3:
-    description: [25% chance not to consume an Aether Vent charge on use, 75 additional Aether Vent healing]
-    value: [0.25, 75]
-  4:
-    description: [25% chance not to consume an Aether Vent charge on use, 100 additional Aether Vent healing and will cause you enter aether rush.]
-    value: [0.25, 100]
-  5:
-    description: [25% chance not to consume an Aether Vent charge on use, 150 additional Aether Vent healing and will cause you enter aether rush.]
-    value: [0.25, 150]
-  6:
-    description: [25% chance not to consume an Aether Vent charge on use, 200 additional Aether Vent healing and will cause you enter aether rush.]
-    value: [0.25, 200]
+  '1':
+    description:
+      - 25% chance not to consume an Aether Vent charge on use
+      - 25 additional Aether Vent healing
+    value:
+      - 0.25
+      - 25
+  '2':
+    description:
+      - 25% chance not to consume an Aether Vent charge on use
+      - 50 additional Aether Vent healing
+    value:
+      - 0.25
+      - 50
+  '3':
+    description:
+      - 25% chance not to consume an Aether Vent charge on use
+      - 75 additional Aether Vent healing
+    value:
+      - 0.25
+      - 75
+  '4':
+    description:
+      - 25% chance not to consume an Aether Vent charge on use
+      - 100 additional Aether Vent healing and will cause you enter aether rush.
+    value:
+      - 0.25
+      - 100
+  '5':
+    description:
+      - 25% chance not to consume an Aether Vent charge on use
+      - 150 additional Aether Vent healing and will cause you enter aether rush.
+    value:
+      - 0.25
+      - 150
+  '6':
+    description:
+      - 25% chance not to consume an Aether Vent charge on use
+      - 200 additional Aether Vent healing and will cause you enter aether rush.
+    value:
+      - 0.25
+      - 200
+i18n:
+  fr:
+    name: Jouvence aethérée
+    description: Augmente les avantages liés à l'utilisation des puits d'aether.
+    effects:
+      '1':
+        description:
+          - 25% de chance de ne pas consommer le puits
+          - L'utilisation du puits donne +25 points de vie.
+      '2':
+        description:
+          - 25% de chance de ne pas consommer le puits
+          - L'utilisation du puits donne +50 points de vie.
+      '3':
+        description:
+          - 25% de chance de ne pas consommer le puits
+          - L'utilisation du puits donne +75 points de vie.
+      '4':
+        description:
+          - 25% de chance de ne pas consommer le puits
+          - >-
+            L'utilisation du puits donne +100 points de vie & passer en Ruée
+            aethérée
+      '5':
+        description:
+          - 25% de chance de ne pas consommer le puits
+          - >-
+            L'utilisation du puits donne +150 points de vie & passer en Ruée
+            aethérée
+      '6':
+        description:
+          - 25% de chance de ne pas consommer le puits
+          - >-
+            L'utilisation du puits donne +200 points de vie & passer en Ruée
+            aethérée

@@ -6,8 +6,8 @@ strength: Frost
 weakness: Blaze
 cells: Fortitude
 resistance:
-  0: 10
-  1: 30
+  '0': 10
+  '1': 30
 perks:
   - name: Overpower
     value: 1
@@ -17,3 +17,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Versants gelés
+    description: Protection pour les jambes forgée à partir de Pangar.

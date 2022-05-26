@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/drask/ThunderingSpear.png
 type: War Pike
 damage: Piercing
 elemental: Shock
-cells: [Finesse, Brutality]
+cells:
+  - Finesse
+  - Brutality
 power:
-  0: 20
-  1: 120
+  '0': 20
+  '1': 120
 perks:
   - name: Aetheric Attunement
     value: 2
@@ -28,3 +30,10 @@ unique_effects:
     value: 1.3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Lance tonnante
+    description: Une aetherolance forgée à partir de Drask.
+    unique_effects:
+      - description: 20% de dégâts contre la queue des Behemoths
+      - description: 30% de dégâts contre la queue des Behemoths

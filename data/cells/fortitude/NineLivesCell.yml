@@ -1,15 +1,22 @@
 name: Nine Lives Cell
 slot: Fortitude
 variants:
-  "+1 Nine Lives Cell":
+  +1 Nine Lives Cell:
     rarity: uncommon
     perks:
       Nine Lives: 1
-  "+2 Nine Lives Cell":
+  +2 Nine Lives Cell:
     rarity: rare
     perks:
       Nine Lives: 2
-  "+3 Nine Lives Cell":
+  +3 Nine Lives Cell:
     rarity: epic
     perks:
       Nine Lives: 3
+i18n:
+  fr:
+    name: Lernéenne
+    variants:
+      - Lernéenne +1
+      - Lernéenne +2
+      - Lernéenne +3

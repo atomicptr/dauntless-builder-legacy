@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/koshai/SovereignsGrudge.png
 type: Hammer
 damage: Blunt
 elemental: Terra
-cells: [Brutality, Insight]
+cells:
+  - Brutality
+  - Insight
 power:
-  0: 60
-  1: 120
+  '0': 60
+  '1': 120
 perks:
   - name: Sharpened
     value: 2
@@ -24,7 +26,20 @@ unique_effects:
     from: 0
     to: 0
   - name: NoAttackDamage
-    description: After not dealing damage for 4 seconds, your next 2 attacks deal +50% damage
+    description: >-
+      After not dealing damage for 4 seconds, your next 2 attacks deal +50%
+      damage
     value: 1.5
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Rancune du souverain
+    description: Un marteau forgé à partir de trophées du Koshai.
+    unique_effects:
+      - description: >-
+          Après 4 secondes sans infliger de dégât, votre prochaine attaque
+          infligent +50% de dégâts.
+      - description: >-
+          Après 4 secondes sans infliger de dégât, vos 2 prochaines attaques
+          infligent +50% de dégâts.

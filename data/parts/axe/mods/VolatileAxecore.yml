@@ -2,3 +2,10 @@ name: Volatile Axecore
 icon: /assets/icons/parts/axe/mods/VolatileAxecore.png
 part_effect:
   - Charging attack deals aoe damage to nearby enemies at each charge level.
+i18n:
+  fr:
+    name: Cœur de hache volatil
+    part_effect:
+      - >-
+        Les attaques chargées infligent des dégâts de zone aux ennemis proches
+        pour chaque niveau de charge.

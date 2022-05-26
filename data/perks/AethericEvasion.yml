@@ -3,21 +3,64 @@ description: On dodging through an attack, reduce the cooldown of your Lantern a
 type: Insight
 key: flat_lantern_charge
 effects:
-  1:
-    description: On dodging through an attack, reduce the cooldown of your lantern ability by 5%.
+  '1':
+    description: >-
+      On dodging through an attack, reduce the cooldown of your lantern ability
+      by 5%.
     value: 1.05
-  2:
-    description: On dodging through an attack, reduce the cooldown of your lantern ability by 10%.
+  '2':
+    description: >-
+      On dodging through an attack, reduce the cooldown of your lantern ability
+      by 10%.
     value: 1.1
-  3:
-    description: On dodging through an attack, reduce the cooldown of your lantern ability by 15%.
+  '3':
+    description: >-
+      On dodging through an attack, reduce the cooldown of your lantern ability
+      by 15%.
     value: 1.15
-  4:
-    description: On dodging through an attack, reduce the cooldown of your lantern ability by 25%.
+  '4':
+    description: >-
+      On dodging through an attack, reduce the cooldown of your lantern ability
+      by 25%.
     value: 1.25
-  5:
-    description: On dodging through an attack, reduce the cooldown of your lantern ability by 30%.
+  '5':
+    description: >-
+      On dodging through an attack, reduce the cooldown of your lantern ability
+      by 30%.
     value: 1.3
-  6:
-    description: On dodging through an attack, reduce the cooldown of your lantern ability by 35%.
+  '6':
+    description: >-
+      On dodging through an attack, reduce the cooldown of your lantern ability
+      by 35%.
     value: 1.35
+i18n:
+  fr:
+    name: Esquive aethérée
+    description: >-
+      Esquivez une attaque, réduisez le temps de recharge de votre capacité de
+      lanterne
+    effects:
+      '1':
+        description: >-
+          Esquivez une attaque, réduisez le temps de recharge de votre capacité
+          de lanterne de 5%
+      '2':
+        description: >-
+          Esquivez une attaque, réduisez le temps de recharge de votre capacité
+          de lanterne de 10%
+      '3':
+        description: >-
+          Esquivez une attaque, réduisez le temps de recharge de votre capacité
+          de lanterne de 15%
+      '4':
+        description: >-
+          Esquivez une attaque, réduisez le temps de recharge de votre capacité
+          de lanterne de 25%
+      '5':
+        description: >-
+          Esquivez une attaque, réduisez le temps de recharge de votre capacité
+          de lanterne de 30%
+      '6':
+        description: >-
+          Esquivez une attaque, réduisez le temps de recharge de votre capacité
+          de lanterne de 35%

@@ -6,8 +6,8 @@ strength: Frost
 weakness: Blaze
 cells: Brutality
 resistance:
-  0: 15
-  1: 30
+  '0': 15
+  '1': 30
 perks:
   - name: Aegis
     value: 2
@@ -17,3 +17,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Crinière de Wülf
+    description: Head protection forged from Frostwülf trophies.

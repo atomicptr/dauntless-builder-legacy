@@ -6,8 +6,8 @@ strength: Radiant
 weakness: Umbral
 cells: Brutality
 resistance:
-  0: 20
-  1: 30
+  '0': 20
+  '1': 30
 perks:
   - name: Catalyst
     value: 2
@@ -17,3 +17,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Jambières de Tisseur du temps
+    description: Protection pour les jambes forgée à partir de Tisseur du temps.

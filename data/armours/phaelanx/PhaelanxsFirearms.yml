@@ -6,8 +6,8 @@ strength: Blaze
 weakness: Frost
 cells: Insight
 resistance:
-  0: 20
-  1: 30
+  '0': 20
+  '1': 30
 perks:
   - name: Omnisurge
     value: 2
@@ -17,3 +17,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Armes à feu de Phaelanx
+    description: Protection pour les bras forgées à partir de Phaelanx.

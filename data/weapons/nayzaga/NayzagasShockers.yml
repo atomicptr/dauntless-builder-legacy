@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/nayzaga/NayzagasShockers.png
 type: Aether Strikers
 damage: Blunt
 elemental: Shock
-cells: [Finesse, Insight]
+cells:
+  - Finesse
+  - Insight
 power:
-  0: 40
-  1: 120
+  '0': 40
+  '1': 120
 perks:
   - name: Savagery
     value: 1
@@ -28,3 +30,10 @@ unique_effects:
     value: 200
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Tasers Nayzaga
+    description: Cestes aethériques forgée à partir de trophées de Nayzaga.
+    unique_effects:
+      - description: Après l'étourdissement d'un Behemoth, vous vous soignez de 100
+      - description: Après l'étourdissement d'un Behemoth, vous vous soignez de 300

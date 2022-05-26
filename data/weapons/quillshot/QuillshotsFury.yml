@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/quillshot/QuillshotsFury.png
 type: Axe
 damage: Slashing
 elemental: null
-cells: [Brutality, Fortitude]
+cells:
+  - Brutality
+  - Fortitude
 power:
-  0: 20
-  1: 120
+  '0': 20
+  '1': 120
 perks:
   - name: Acidic
     value: 1
@@ -17,3 +19,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Furie de Quillshot
+    description: Une hache forgée à partir de Quillshot.

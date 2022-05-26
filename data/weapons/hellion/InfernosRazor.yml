@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/hellion/InfernosRazor.png
 type: Sword
 damage: Cutting
 elemental: Blaze
-cells: [Brutality, Brutality]
+cells:
+  - Brutality
+  - Brutality
 power:
-  0: 80
-  1: 120
+  '0': 80
+  '1': 120
 perks:
   - name: Overpower
     value: 2
@@ -28,3 +30,14 @@ unique_effects:
     value: 225
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Griffes du Sixième Cercle
+    description: Une épée forgée à partir de trophées d'Hellion.
+    unique_effects:
+      - description: >-
+          Le huitième coup consécutif inflige +150 dégâts et de lourds dégâts de
+          braise
+      - description: >-
+          Le huitième coup consécutif inflige +225 dégâts et de lourds dégâts de
+          braise

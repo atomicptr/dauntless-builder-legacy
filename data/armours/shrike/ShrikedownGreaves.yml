@@ -6,8 +6,8 @@ strength: null
 weakness: null
 cells: Alacrity
 resistance:
-  0: 10
-  1: 30
+  '0': 10
+  '1': 30
 perks:
   - name: Grace
     value: 1
@@ -17,3 +17,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Grèves en duvet Shrike
+    description: Protection pour les jambes forgée à partir de Shrike.

@@ -3,21 +3,38 @@ description: Increases damage against Wounded parts.
 type: Finesse
 key: damage_wounded
 effects:
-  1:
+  '1':
     description: +20% Damage vs Wounded Parts
     value: 1.2
-  2:
+  '2':
     description: +30% Damage vs Wounded Parts
     value: 1.3
-  3:
+  '3':
     description: +40% Damage vs Wounded Parts
     value: 14
-  4:
+  '4':
     description: +60% Damage vs Wounded Parts
     value: 1.6
-  5:
+  '5':
     description: +80% Damage vs Wounded Parts
     value: 1.8
-  6:
+  '6':
     description: +100% Damage vs Wounded Parts
     value: 2
+i18n:
+  fr:
+    name: Sauvagerie
+    description: Augmente les dégâts contre les membres mutilés.
+    effects:
+      '1':
+        description: +20% de dégâts contre les membres mutilés
+      '2':
+        description: +30% de dégâts contre les membres mutilés
+      '3':
+        description: +40% de dégâts contre les membres mutilés
+      '4':
+        description: +60% de dégâts contre les membres mutilés
+      '5':
+        description: +80% de dégâts contre les membres mutilés
+      '6':
+        description: +100% de dégâts contre les membres mutilés

@@ -1,15 +1,22 @@
 name: Relentless Cell
 slot: Finesse
 variants:
-  "+1 Relentless Cell":
+  +1 Relentless Cell:
     rarity: uncommon
     perks:
       Relentless: 1
-  "+2 Relentless Cell":
+  +2 Relentless Cell:
     rarity: rare
     perks:
       Relentless: 2
-  "+3 Relentless Cell":
+  +3 Relentless Cell:
     rarity: epic
     perks:
       Relentless: 3
+i18n:
+  fr:
+    name: Implacable
+    variants:
+      - Implacable +1
+      - Implacable +2
+      - Implacable +3

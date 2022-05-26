@@ -3,21 +3,38 @@ description: Increases damage against enraged Behemoths.
 type: Brutality
 key: damage_enraged
 effects:
-  1:
+  '1':
     description: +5% Damage vs Enraged Behemoths
     value: 1.05
-  2:
+  '2':
     description: +10% Damage vs Enraged Behemoths
     value: 1.1
-  3:
+  '3':
     description: +15% Damage vs Enraged Behemoths
     value: 1.15
-  4:
+  '4':
     description: +20% Damage vs Enraged Behemoths
     value: 1.2
-  5:
+  '5':
     description: +30% Damage vs Enraged Behemoths
     value: 1.3
-  6:
+  '6':
     description: +40% Damage vs Enraged Behemoths
     value: 1.4
+i18n:
+  fr:
+    name: Chasse-rage
+    description: Augmente les dégâts contre les Behemoths enragés.
+    effects:
+      '1':
+        description: +5% de dégâts contre les Behemoths enragés
+      '2':
+        description: +10% de dégâts contre les Behemoths enragés
+      '3':
+        description: +15% de dégâts contre les Behemoths enragés
+      '4':
+        description: +20% de dégâts contre les Behemoths enragés
+      '5':
+        description: +30% de dégâts contre les Behemoths enragés
+      '6':
+        description: +40% de dégâts contre les Behemoths enragés

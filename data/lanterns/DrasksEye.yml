@@ -4,4 +4,14 @@ description: null
 cells: Insight
 lantern_ability:
   instant: null
-  hold: Fires a lightning bolt in a direction that deals 400 Shock damage multiple times as it passes through enemies.
+  hold: >-
+    Fires a lightning bolt in a direction that deals 400 Shock damage multiple
+    times as it passes through enemies.
+i18n:
+  fr:
+    name: Oeil de Drask
+    lantern_ability:
+      instant: null
+      hold: >-
+        Tire un éclair infligeant 400 de dégâts de foudre, peut frapper plusieur
+        fois lorsqu'il traverse des ennemis.

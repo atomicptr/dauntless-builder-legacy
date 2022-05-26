@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/embermane/EmberBlades.png
 type: Chain Blades
 damage: Slashing
 elemental: Blaze
-cells: [Finesse, Alacrity]
+cells:
+  - Finesse
+  - Alacrity
 power:
-  0: 20
-  1: 120
+  '0': 20
+  '1': 120
 perks:
   - name: Evasive Fury
     value: 1
@@ -28,3 +30,10 @@ unique_effects:
     value: 250
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Braise Lames
+    description: Une paire de chaînes-lames forgée à partir de trophées d'Embermane.
+    unique_effects:
+      - description: Le neuvième coup consécutif inflige +100 dégâts aux membres.
+      - description: Le neuvième coup consécutif inflige +250 dégâts aux membres.

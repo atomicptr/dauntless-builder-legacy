@@ -3,21 +3,66 @@ description: On Lantern Hold, generate random effect.
 type: Insight
 key: LanternHoldRandomEffect
 effects:
-  1:
-    description: "On Lantern Hold, randomly generate 1 of the following Boosts: Healing, Stamina, Brutality."
+  '1':
+    description: >-
+      On Lantern Hold, randomly generate 1 of the following Boosts: Healing,
+      Stamina, Brutality.
     value: null
-  2:
-    description: "On Lantern Hold, randomly generate 2 of the following Boosts: Healing, Stamina, Brutality."
+  '2':
+    description: >-
+      On Lantern Hold, randomly generate 2 of the following Boosts: Healing,
+      Stamina, Brutality.
     value: null
-  3:
-    description: "On Lantern Hold, randomly generate 3 of the following Boosts: Healing, Stamina, Brutality."
+  '3':
+    description: >-
+      On Lantern Hold, randomly generate 3 of the following Boosts: Healing,
+      Stamina, Brutality.
     value: null
-  4:
-    description: "On Lantern Hold, randomly generate 4 of the following Boosts: Healing, Stamina, Brutality. Stamina Boost duration increased."
+  '4':
+    description: >-
+      On Lantern Hold, randomly generate 4 of the following Boosts: Healing,
+      Stamina, Brutality. Stamina Boost duration increased.
     value: null
-  5:
-    description: "On Lantern Hold, randomly generate 4 of the following Boosts: Healing, Stamina, Brutality. Healing Boost also grants shields."
+  '5':
+    description: >-
+      On Lantern Hold, randomly generate 4 of the following Boosts: Healing,
+      Stamina, Brutality. Healing Boost also grants shields.
     value: null
-  6:
-    description: "On Lantern Hold, randomly generate 4 of the following Boosts: Healing, Stamina, Brutality. Brutality Boost duration increased. Chance to generate Invincibility Boost."
+  '6':
+    description: >-
+      On Lantern Hold, randomly generate 4 of the following Boosts: Healing,
+      Stamina, Brutality. Brutality Boost duration increased. Chance to generate
+      Invincibility Boost.
     value: null
+i18n:
+  fr:
+    name: Cascade
+    description: L'utilisation de la lanterne génére un effet aléatoire.
+    effects:
+      '1':
+        description: >-
+          L'utilisation de la lanterne, générez aléatoirement 1 des boosts
+          suivants : guérison, endurance, puissance.
+      '2':
+        description: >-
+          L'utilisation de la lanterne, générez aléatoirement 2 des boosts
+          suivants : guérison, endurance, puissance.
+      '3':
+        description: >-
+          L'utilisation de la lanterne, générez aléatoirement 3 des boosts
+          suivants : guérison, endurance, puissance.
+      '4':
+        description: >-
+          L'utilisation de la lanterne, générez aléatoirement 3 des boosts
+          suivants : guérison, endurance, puissance. Durée du boost d'endurance
+          accrue
+      '5':
+        description: >-
+          L'utilisation de la lanterne, générez aléatoirement 3 des boosts
+          suivants : guérison, endurance, puissance. Boost de soin confère
+          également des boucliers
+      '6':
+        description: >-
+          L'utilisation de la lanterne, générez aléatoirement 3 des boosts
+          suivants : guérison, endurance, puissance. Durée du boost de puissance
+          accrue Chance de génerer un bonus d'invicibilité

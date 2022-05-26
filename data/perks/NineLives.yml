@@ -1,23 +1,87 @@
 name: Nine Lives
 description: Grants a chance to reduce damage, and later the ability to cheat death.
 type: Fortitude
-key: [half_damage, death_heal]
+key:
+  - half_damage
+  - death_heal
 effects:
-  1:
-    description: [+5% chance to halve incoming damage, null]
-    value: [0.05, null]
-  2:
-    description: [+8% chance to halve incoming damage, null]
-    value: [0.08, null]
-  3:
-    description: [+12% chance to halve incoming damage, null]
-    value: [0.12, null]
-  4:
-    description: [+12% chance to halve incoming damage, The first time you would be knocked out stay up and heal for 400]
-    value: [0.12, 400]
-  5:
-    description: [+16% chance to halve incoming damage, The first time you would be knocked out stay up and heal for 400]
-    value: [0.16, 400]
-  6:
-    description: [+20% chance to halve incoming damage, The first time you would be knocked out stay up and heal for 400 and become empowered for 10 seconds]
-    value: [0.2, 400]
+  '1':
+    description:
+      - +5% chance to halve incoming damage
+      - null
+    value:
+      - 0.05
+      - null
+  '2':
+    description:
+      - +8% chance to halve incoming damage
+      - null
+    value:
+      - 0.08
+      - null
+  '3':
+    description:
+      - +12% chance to halve incoming damage
+      - null
+    value:
+      - 0.12
+      - null
+  '4':
+    description:
+      - +12% chance to halve incoming damage
+      - The first time you would be knocked out stay up and heal for 400
+    value:
+      - 0.12
+      - 400
+  '5':
+    description:
+      - +16% chance to halve incoming damage
+      - The first time you would be knocked out stay up and heal for 400
+    value:
+      - 0.16
+      - 400
+  '6':
+    description:
+      - +20% chance to halve incoming damage
+      - >-
+        The first time you would be knocked out stay up and heal for 400 and
+        become empowered for 10 seconds
+    value:
+      - 0.2
+      - 400
+i18n:
+  fr:
+    name: Lernéen
+    description: >-
+      Donne une chance de réduire de moitié les dégâts reçus, les rangs
+      supérieurs permettent d'éviter d'être mis à terre.
+    effects:
+      '1':
+        description:
+          - +5% de chance de réduire de moitié les dégâts reçus
+          - null
+      '2':
+        description:
+          - +8% de chance de réduire de moitié les dégâts reçus
+          - null
+      '3':
+        description:
+          - +12% de chance de réduire de moitié les dégâts reçus
+          - null
+      '4':
+        description:
+          - +12% de chance de réduire de moitié les dégâts reçus
+          - La première fois que vous devriez être mis à terre
+          - vous restez debout et récupérez 400 points de vie
+      '5':
+        description:
+          - +16% de chance de réduire de moitié les dégâts reçus
+          - La première fois que vous devriez être mis à terre
+          - vous restez debout et récupérez 400 points de vie
+      '6':
+        description:
+          - +20% de chance de réduire de moitié les dégâts reçus
+          - La première fois que vous devriez être mis à terre
+          - >-
+            vous restez debout et récupérez 400 points de vie et gagnez en
+            Brutalité pendant 10 secondes

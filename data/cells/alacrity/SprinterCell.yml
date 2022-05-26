@@ -1,15 +1,22 @@
 name: Sprinter Cell
 slot: Alacrity
 variants:
-  "+1 Sprinter Cell":
+  +1 Sprinter Cell:
     rarity: uncommon
     perks:
       Sprinter: 1
-  "+2 Sprinter Cell":
+  +2 Sprinter Cell:
     rarity: rare
     perks:
       Sprinter: 2
-  "+3 Sprinter Cell":
+  +3 Sprinter Cell:
     rarity: epic
     perks:
       Sprinter: 3
+i18n:
+  fr:
+    name: Coureur
+    variants:
+      - Coureur +1
+      - Coureur +2
+      - Coureur +3

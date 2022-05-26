@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/shrowd/HandsOfNight.png
 type: Aether Strikers
 damage: Blunt
 elemental: Umbral
-cells: [Finesse, Insight]
+cells:
+  - Finesse
+  - Insight
 power:
-  0: 80
-  1: 120
+  '0': 80
+  '1': 120
 perks:
   - name: Cunning
     value: 2
@@ -21,3 +23,11 @@ unique_effects:
   - name: LowHpDamage
     description: When under 20% health, deal +50% damage
     value: 1.5
+i18n:
+  fr:
+    name: Mains de la nuit
+    description: Cestes aethériques forgée à partir de trophées de Shrowd.
+    unique_effects:
+      - description: >-
+          Infligez 50% de dégâts supplémentaires lorsque vous avez moins de 20%
+          de vie
