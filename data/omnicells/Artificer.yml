@@ -4,15 +4,10 @@ ability_icon: /assets/icons/omnicells/ArtificerAbility.png
 passive: >
   Amount of healing and shielding granted per second is increased by 1 for every 150 current health when activated.
 active: >
-  Send your Drone to a target to have it perform one of four actions:{{NL}}
-  {{NL}}
-  1 - Revivable Slayer Revive and give a Slayer the Artificer Aura for 15 seconds. Can only perform this revive once
-  every 90 seconds. Artificer Aura Sayers in the restore 10 health second. If health is full a stackable 10 health shield
-  is granted per second. Health shield lasts for 25 seconds. Max 400 shields{{NL}}
-  {{NL}}
-  2 - Active Slayer. Cleanse the targeted Slaves of status effects and grant them the Artificer Aura for 15 seconds{{NL}}
-  {{NL}}
-  3 - Behemoth - Mark a Behemoth part to take 151 damage from all sources for 15 seconds{{NL}}
-  {{NL}}
-  4 - Ground - Surround an area with a radiant wall for 15 seconds, Radiant wall blocks hostile projectiles and beams,
-  and applies the Artificer Aura to all Slayers within 20 second cooldown
+  <b>Command:</b> Your drone acts based on the target.{{NL}}
+  <b>1. Slayer:</b> Remove negative status effects and grant Artificer Aura for 15s.{{NL}}
+  <b>2. Ground:</b> Create a wall that blocks hostile projectiles and grants Artificer Aura to nearby Slayers for 15s.{{NL}}
+  <b>3. Behemoth:</b> Make a part to take +15% damage for 15s.{{NL}}
+  <b>4. Downed Slayer:</b> Revive and grant Artificer Aura for 15s (once every 90s).{{NL}}
+  <b>Artificer Aura:</b> Restore 10 health/second. At full health, grants 10 Shields/second that last for 25s (maximum 400 Shields){{NL}}
+  <b>Cooldown:</b> 20s
