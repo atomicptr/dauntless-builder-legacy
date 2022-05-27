@@ -1,0 +1,19 @@
+name: Spellbound Boots
+description: Leg and foot protection forged from Alyra trophies.
+icon: /assets/icons/armours/alyra/SpellboundBoots.png
+type: Legs
+strength: Radiant
+weakness: Umbral
+cells: Fortitude
+resistance:
+  0: 20
+  1: 30
+perks:
+  - name: Swift
+    value: 2
+    from: 0
+    to: 0
+  - name: Swift
+    value: 3
+    from: 1
+    to: 1
