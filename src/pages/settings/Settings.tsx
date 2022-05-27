@@ -13,10 +13,10 @@ const Settings: React.FC = () => {
             </Typography>
 
             <FormControl fullWidth sx={{ mt: 4 }}>
-                <InputLabel>Language</InputLabel>
+                <InputLabel>{t("pages.settings.language")}</InputLabel>
                 <Select
                     value={i18n.languages[0]}
-                    label="Language"
+                    label={t("pages.settings.language")}
                     onChange={ev => i18n.changeLanguage(ev.target.value)}
                 >
                     {Object.keys(Language).map((key: string) => (

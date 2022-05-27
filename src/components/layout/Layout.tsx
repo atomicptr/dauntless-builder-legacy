@@ -54,7 +54,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         { text: t("drawer.home"), icon: <Home />, link: "/" },
         { text: t("drawer.new-build"), icon: <AddCircle />, link: "/b/new" },
         { text: t("drawer.my-builds"), icon: <Bookmarks />, link: "/favorites" },
-        { text: t("drawer.build-search"), icon: <ManageSearch />, link: "/b/search", disabled: true },
+        { text: t("drawer.build-finder"), icon: <ManageSearch />, link: "/b/search", disabled: true },
         { text: t("drawer.meta-builds"), icon: <Stars />, link: "/b/meta", disabled: true },
         { text: t("drawer.settings"), icon: <Settings />, link: "/settings" },
     ];

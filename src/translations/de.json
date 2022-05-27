@@ -2,7 +2,10 @@
     "drawer.home": "Startseite",
     "drawer.new-build": "Neuer Build",
     "drawer.my-builds": "Meine Builds",
+    "drawer.build-finder": "Build Finder",
+    "drawer.meta-builds": "Meta Builds",
     "drawer.settings": "Einstellungen",
 
-    "pages.settings.title": "Einstellungen"
+    "pages.settings.title": "Einstellungen",
+    "pages.settings.language": "Sprache"
 }

@@ -2,7 +2,7 @@
     "drawer.home": "Home",
     "drawer.new-build": "New Build",
     "drawer.my-builds": "My Builds",
-    "drawer.build-search": "Build Search",
+    "drawer.build-finder": "Build Finder",
     "drawer.meta-builds": "Meta Builds",
     "drawer.settings": "Settings",
 
@@ -10,5 +10,6 @@
 
     "pages.404.not-found": "Page Not Found",
     "pages.settings.title": "Settings",
+    "pages.settings.language": "Language",
     "pages.newbuild.title": "Create a new build"
 }
