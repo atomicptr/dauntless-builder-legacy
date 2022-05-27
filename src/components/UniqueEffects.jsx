@@ -4,6 +4,7 @@ import ItemUtility from "../utility/ItemUtility";
 import PropTypeUtility from "../utility/PropTypeUtility";
 import BuildModel from "../models/BuildModel";
 import LazyLoad from "react-lazy-load";
+import {parseText} from "../utility/TextUtility";
 
 export default class UniqueEffects extends React.Component {
 
@@ -24,7 +25,7 @@ export default class UniqueEffects extends React.Component {
                                 </LazyLoad>) : null}
                             <div className="item-data">
                                 <strong>{this.props.item.name} {uniqueEffect.title || "Unique Effect"}</strong>: <br/>
-                                {uniqueEffect.description}
+                                <div dangerouslySetInnerHTML={{__html: parseText(uniqueEffect.description)}}></div>
                             </div>
                         </div>
                     </div>
