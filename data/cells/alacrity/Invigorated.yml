@@ -1,0 +1,15 @@
+name: Invigorated Cell
+slot: Alacrity
+variants:
+  "+1 Invigorated Cell":
+    rarity: uncommon
+    perks:
+      Invigorated: 1
+  "+2 Invigorated Cell":
+    rarity: rare
+    perks:
+      Invigorated: 2
+  "+3 Invigorated Cell":
+    rarity: epic
+    perks:
+      Invigorated: 3

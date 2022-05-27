@@ -1,0 +1,23 @@
+name: Invigorated
+description: While below 50% of your maximum Stamina, gain +10/15/20/30/40/50% movement speed.
+type: Alacrity
+key: WhileBelowHalfStaminaGainMovementSpeed
+effects:
+  1:
+    description: While below 50% of your maximum Stamina, gain +10% movement speed.
+    value: 1.1
+  2:
+    description: While below 50% of your maximum Stamina, gain +15% movement speed.
+    value: 1.15
+  3:
+    description: While below 50% of your maximum Stamina, gain +20% movement speed.
+    value: 1.2
+  4:
+    description: While below 50% of your maximum Stamina, gain +30% movement speed.
+    value: 1.3
+  5:
+    description: While below 50% of your maximum Stamina, gain +40% movement speed.
+    value: 1.4
+  6:
+    description: While below 50% of your maximum Stamina, gain +50% movement speed.
+    value: 1.5

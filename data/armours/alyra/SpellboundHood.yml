@@ -1,0 +1,19 @@
+name: Spellbound Hood
+description: Head protection forged from Alyra trophies.
+icon: /assets/icons/armours/alyra/SpellboundHood.png
+type: Head
+strength: Radiant
+weakness: Umbral
+cells: Alacrity
+resistance:
+  0: 20
+  1: 30
+perks:
+  - name: Invigorated
+    value: 2
+    from: 0
+    to: 0
+  - name: Invigorated
+    value: 3
+    from: 1
+    to: 1

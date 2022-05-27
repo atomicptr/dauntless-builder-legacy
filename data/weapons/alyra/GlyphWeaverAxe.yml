@@ -1,0 +1,28 @@
+name: Glyph Weaver Axe
+description: A Slayer's axe forged with Alyra trophies.
+icon: /assets/icons/weapons/alyra/GlyphWeaverAxe.png
+type: Axe
+damage: Slashing
+elemental: Radiant
+cells: [Brutality, Fortitude]
+power:
+  0: 80
+  1: 120
+perks:
+  - name: Aetheric Attunement
+    value: 2
+    from: 0
+    to: 0
+  - name: Aetheric Attunement
+    value: 3
+    from: 1
+    to: 1
+unique_effects:
+  - name: AlyraUniqueEffect
+    description: >-
+      On lantern use, spawn a glyph based on your active glyph type that charges after three seconds. Once charged,
+      the glyph will activate when a Behemoth makes contact.{{NL}}
+      {{NL}}
+      Red Glyph: Deals 1500 radiant damage in a radius.{{NL}}
+      Blue Glyph: Grants 150 stacking shields that expire after 25s to slayers in a large radius (max 600 shields).{{NL}}
+      Jump to change the active glyph type. Glyphs expire after 10s.
