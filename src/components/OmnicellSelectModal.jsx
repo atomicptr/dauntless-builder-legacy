@@ -10,7 +10,7 @@ const OmnicellSelectModal = ({itemData, onSelected, onCanceled, isOpen}) => {
     }
 
     return <div className={`modal ${isOpen ? "is-active" : ""}`}>
-        <div className="modal-background" onClick={() => this.onClose()}></div>
+        <div className="modal-background" onClick={onCanceled}></div>
         <div className="modal-content">
             <div className="card modal-card">
                 <div className="item-modal-list">
@@ -44,7 +44,7 @@ const OmnicellSelectModal = ({itemData, onSelected, onCanceled, isOpen}) => {
                 </footer>
             </div>
         </div>
-        <button className="modal-close is-large" onClick={() => this.onClose()}></button>
+        <button className="modal-close is-large" onClick={onCanceled}></button>
     </div>;
 };
 
