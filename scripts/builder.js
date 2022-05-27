@@ -154,7 +154,7 @@ Promise.all([
 
     stringMap = sortByKey(stringMap);
 
-    const mapString = JSON.stringify(stringMap);
+    const mapString = JSON.stringify(stringMap, null, "    ");
 
     fs.writeFileSync(`./.map/names.json`, mapString);
 
