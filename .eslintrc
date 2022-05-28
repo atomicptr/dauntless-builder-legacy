@@ -11,7 +11,7 @@
             "jsx": true
         }
     },
-    "plugins": ["react", "@typescript-eslint", "simple-import-sort", "unused-imports"],
+    "plugins": ["react", "@typescript-eslint", "simple-import-sort", "unused-imports", "sort-keys-fix"],
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
@@ -30,6 +30,7 @@
         "strict": ["error", "global"],
         "no-new": "error",
         "prefer-const": 2,
+        "sort-keys": ["error", "asc", { "caseSensitive": true, "natural": true, "minKeys": 2 }],
         "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
         "react/prefer-stateless-function": [2],
         "simple-import-sort/imports": "error",
@@ -38,6 +39,7 @@
             "error",
             { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
         ],
-        "react/react-in-jsx-scope": 0
+        "react/react-in-jsx-scope": 0,
+        "sort-keys-fix/sort-keys-fix": "error"
     }
 }

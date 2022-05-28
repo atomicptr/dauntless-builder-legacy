@@ -12,10 +12,10 @@ import frItems from "./translations/items/items.fr.json";
 import jp from "./translations/jp.json";
 
 const resources = {
-    en: { translation: { ...en, ...enItems } },
     de: { translation: de },
-    jp: { translation: jp },
+    en: { translation: { ...en, ...enItems } },
     fr: { translation: { ...fr, ...frItems } },
+    jp: { translation: jp },
 };
 
 export enum Language {
@@ -36,17 +36,17 @@ i18n.use(initReactI18next)
     .use(LanguageDetector)
     .use(translationCheckPlugin)
     .init({
-        resources,
-        fallbackLng: Language.English,
-        load: "languageOnly",
         debug: DB_DEVMODE,
+        detection: {
+            lookupLocalStorage: "language",
+            order: ["localStorage", "navigator"],
+        },
+        fallbackLng: Language.English,
         interpolation: {
             escapeValue: false,
         },
-        detection: {
-            order: ["localStorage", "navigator"],
-            lookupLocalStorage: "language",
-        },
+        load: "languageOnly",
+        resources,
     });
 
 export function muiLocaleComponent() {

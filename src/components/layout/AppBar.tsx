@@ -11,19 +11,19 @@ interface AppBarProps extends MuiAppBarProps {
 export const AppBar = styled(MuiAppBar, {
     shouldForwardProp: prop => prop !== "open",
 })<AppBarProps>(({ theme, open, isMobile }) => ({
-    zIndex: isMobile ? theme.zIndex.drawer : theme.zIndex.drawer + 1,
     transition: theme.transitions.create(["margin", "width"], {
-        easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
+        easing: theme.transitions.easing.sharp,
     }),
+    zIndex: isMobile ? theme.zIndex.drawer : theme.zIndex.drawer + 1,
     ...(open && {
         ...(isMobile && {
-            width: `calc(100% - ${drawerWidth}px)`,
             marginLeft: `${drawerWidth}px`,
+            width: `calc(100% - ${drawerWidth}px)`,
         }),
         transition: theme.transitions.create(["margin", "width"], {
-            easing: theme.transitions.easing.easeOut,
             duration: theme.transitions.duration.enteringScreen,
+            easing: theme.transitions.easing.easeOut,
         }),
     }),
 }));

@@ -9,8 +9,8 @@ const hashids = new Hashids("spicy");
 const CURRENT_BUILD_ID = 6;
 
 export const BuildFlags = {
-    UPGRADED_BUILD: 0b0001,
     INVALID_BUILD: 0b0010,
+    UPGRADED_BUILD: 0b0001,
 };
 
 enum BuildFields {

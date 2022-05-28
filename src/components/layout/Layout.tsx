@@ -52,12 +52,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     const handleDrawerClose = () => setOpen(false);
 
     const sidebarItems = [
-        { text: t("drawer.home"), icon: <Home />, link: "/" },
-        { text: t("drawer.new-build"), icon: <AddCircle />, link: "/b/new" },
-        { text: t("drawer.my-builds"), icon: <Bookmarks />, link: "/favorites" },
-        { text: t("drawer.build-finder"), icon: <ManageSearch />, link: "/b/search", disabled: true },
-        { text: t("drawer.meta-builds"), icon: <Stars />, link: "/b/meta", disabled: true },
-        { text: t("drawer.settings"), icon: <Settings />, link: "/settings" },
+        { icon: <Home />, link: "/", text: t("drawer.home") },
+        { icon: <AddCircle />, link: "/b/new", text: t("drawer.new-build") },
+        { icon: <Bookmarks />, link: "/favorites", text: t("drawer.my-builds") },
+        { disabled: true, icon: <ManageSearch />, link: "/b/search", text: t("drawer.build-finder") },
+        { disabled: true, icon: <Stars />, link: "/b/meta", text: t("drawer.meta-builds") },
+        { icon: <Settings />, link: "/settings", text: t("drawer.settings") },
     ];
 
     return (
@@ -79,15 +79,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         </IconButton>
                     ) : null}
 
-                    <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", mr: 2 }}>
+                    <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", mr: 2 }}>
                         <img
                             alt="Dauntless Builder"
                             src="/assets/icon.png"
                             style={{
-                                width: 36,
+                                filter: theme.palette.mode === "dark" ? "invert(100%)" : undefined,
                                 height: 36,
                                 userSelect: "none",
-                                filter: theme.palette.mode === "dark" ? "invert(100%)" : undefined,
+                                width: 36,
                             }}
                         />
                     </Box>
@@ -107,12 +107,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </AppBar>
             <Drawer
                 sx={{
-                    width: drawerWidth,
-                    flexShrink: 0,
                     "& .MuiDrawer-paper": {
-                        width: drawerWidth,
                         boxSizing: "border-box",
+                        width: drawerWidth,
                     },
+                    flexShrink: 0,
+                    width: drawerWidth,
                 }}
                 variant={isMobile ? "temporary" : "permanent"}
                 anchor="left"
@@ -145,12 +145,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </List>
                 <Box
                     sx={{
-                        position: "fixed",
+                        bottom: 0,
                         marginTop: "auto",
+                        pb: 0,
+                        position: "fixed",
                         textAlign: "center",
                         width: drawerWidth,
-                        pb: 0,
-                        bottom: 0,
                     }}>
                     <Button
                         component={"a"}

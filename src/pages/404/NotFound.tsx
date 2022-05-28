@@ -10,7 +10,7 @@ const NotFound: React.FC = () => {
     return (
         <Box>
             <PageTitle title={t("pages.404.not-found")} />
-            <Box sx={{ position: "absolute", bottom: 0, right: 0 }}>
+            <Box sx={{ bottom: 0, position: "absolute", right: 0 }}>
                 <img
                     alt="Sad hoots"
                     src="/assets/sadhoots.png"

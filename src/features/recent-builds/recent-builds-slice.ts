@@ -11,14 +11,14 @@ const initialState: RecentBuildsState = {
 };
 
 export const recentBuildsSlice = createSlice({
-    name: "recentBuilds",
     initialState,
+    name: "recentBuilds",
     reducers: {
-        deleteBuildById: (state, action: PayloadAction<string>) => {
-            state.recentBuilds = state.recentBuilds.filter(build => build !== action.payload);
-        },
         addBuild: (state, action: PayloadAction<string>) => {
             state.recentBuilds.push(action.payload);
+        },
+        deleteBuildById: (state, action: PayloadAction<string>) => {
+            state.recentBuilds = state.recentBuilds.filter(build => build !== action.payload);
         },
     },
 });

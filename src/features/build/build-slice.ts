@@ -11,8 +11,8 @@ const initialState: BuildState = {
 };
 
 export const buildSlice = createSlice({
-    name: "build",
     initialState,
+    name: "build",
     reducers: {
         deleteBuild: state => {
             state.build = null;

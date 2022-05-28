@@ -35,13 +35,13 @@ const DevMenu: React.FC = () => {
                 id="dev-menu-appbar"
                 anchorEl={anchorEl}
                 anchorOrigin={{
-                    vertical: "bottom",
                     horizontal: "right",
+                    vertical: "bottom",
                 }}
                 keepMounted
                 transformOrigin={{
-                    vertical: "top",
                     horizontal: "right",
+                    vertical: "top",
                 }}
                 open={Boolean(anchorEl)}
                 onClose={handleClose}>
