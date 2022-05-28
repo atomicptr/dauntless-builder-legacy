@@ -1,14 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Typography } from "@mui/material";
+
+import PageTitle from "../../components/page-title/PageTitle";
 
 const NewBuild: React.FC = () => {
     const { t } = useTranslation();
-    return (
-        <Typography variant="h5" component="h3">
-            {t("pages.newbuild.title")}
-        </Typography>
-    );
+    return <PageTitle title={t("pages.newbuild.title")} />;
 };
 
 export default NewBuild;

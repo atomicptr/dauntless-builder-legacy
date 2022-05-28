@@ -1,10 +1,10 @@
 import dataJson from "../../dist/data.json";
-import {Weapon} from "./Weapon";
 import {Armour} from "./Armour";
 import {Cell} from "./Cell";
 import {Lantern} from "./Lantern";
-import {Perk} from "./Perks";
 import {Part} from "./Part";
+import {Perk} from "./Perks";
+import {Weapon} from "./Weapon";
 
 interface DauntlessBuilderData {
     armours: {

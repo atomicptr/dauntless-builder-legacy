@@ -1,8 +1,8 @@
 import Hashids from "hashids";
 
-import {Weapon, WeaponType} from "./Weapon";
-import dauntlessBuilderNamesMap, {NamesMapType} from "./NamesMap";
 import dauntlessBuilderData from "./Data";
+import dauntlessBuilderNamesMap, {NamesMapType} from "./NamesMap";
+import {Weapon, WeaponType} from "./Weapon";
 
 const hashids = new Hashids("spicy");
 

@@ -9,6 +9,7 @@
     "appbar.dev-menu.translation-check": "Translation Check",
 
     "pages.404.not-found": "Page Not Found",
+    "pages.home.title": "Home",
     "pages.settings.title": "Settings",
     "pages.settings.language": "Language",
     "pages.newbuild.title": "Create a new build"

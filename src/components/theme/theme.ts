@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material";
+
 import { muiLocaleComponent } from "../../i18n";
 
 export const drawerWidth = 240;

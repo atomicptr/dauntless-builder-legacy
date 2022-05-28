@@ -1,8 +1,8 @@
-import {ElementalType} from "./ElementalType";
-import {CellType} from "./Cell";
-import {UniqueEffect} from "./UniqueEffect";
-import {PerkValue} from "./Perks";
 import {Language} from "../i18n";
+import {CellType} from "./Cell";
+import {ElementalType} from "./ElementalType";
+import {PerkValue} from "./Perks";
+import {UniqueEffect} from "./UniqueEffect";
 
 export enum ArmourType {
     Torso = "Torso",

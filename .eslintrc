@@ -1,0 +1,43 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": ["react", "@typescript-eslint", "simple-import-sort", "unused-imports"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:react/recommended"
+    ],
+    "rules": {
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "linebreak-style": 1,
+        "quotes": ["error", "double"],
+        "semi": "off",
+        "@typescript-eslint/semi": ["error"],
+        "no-console": 0,
+        "curly": "error",
+        "strict": ["error", "global"],
+        "no-new": "error",
+        "prefer-const": 2,
+        "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
+        "react/prefer-stateless-function": [2],
+        "simple-import-sort/imports": "error",
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+            "error",
+            { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+        ],
+        "react/react-in-jsx-scope": 0
+    }
+}

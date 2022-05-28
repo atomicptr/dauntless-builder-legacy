@@ -1,4 +1,14 @@
-import React, { ReactNode, useState } from "react";
+import {
+    AddCircle,
+    Bookmarks,
+    ChevronLeft,
+    ChevronRight,
+    Home,
+    ManageSearch,
+    Menu,
+    Settings,
+    Stars,
+} from "@mui/icons-material";
 import {
     Box,
     Button,
@@ -17,25 +27,16 @@ import {
     useMediaQuery,
     useTheme,
 } from "@mui/material";
-import { drawerWidth } from "../theme/theme";
+import React, { ReactNode, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { FaDiscord, FaGithub } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+
+import dauntlessBuilderData from "../../data/Data";
+import DevMenu from "../dev-menu/DevMenu";
+import { drawerWidth } from "../theme/theme";
 import { AppBar } from "./AppBar";
 import { DrawerHeader } from "./Drawer";
-import { FaDiscord, FaGithub } from "react-icons/fa";
-import {
-    AddCircle,
-    Bookmarks,
-    ChevronLeft,
-    ChevronRight,
-    Home,
-    ManageSearch,
-    Menu,
-    Settings,
-    Stars,
-} from "@mui/icons-material";
-import { useTranslation } from "react-i18next";
-import DevMenu from "../dev-menu/DevMenu";
-import dauntlessBuilderData from "../../data/Data";
 
 interface LayoutProps {
     children: ReactNode;

@@ -1,8 +1,8 @@
+import {Language} from "../i18n";
 import {CellType} from "./Cell";
 import {ElementalType} from "./ElementalType";
-import {UniqueEffect} from "./UniqueEffect";
 import {PerkValue} from "./Perks";
-import {Language} from "../i18n";
+import {UniqueEffect} from "./UniqueEffect";
 
 export enum WeaponType {
     AetherStrikers = "Aether Strikers",

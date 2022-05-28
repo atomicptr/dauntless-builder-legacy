@@ -1,15 +1,15 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
 import { deDE, enUS, frFR, jaJP } from "@mui/material/locale";
+import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
+import { initReactI18next } from "react-i18next";
 import { i18nextPlugin as translationCheckPlugin } from "translation-check";
 
-import en from "./translations/en.json";
-import enItems from "./translations/items/items.en.json";
 import de from "./translations/de.json";
-import jp from "./translations/jp.json";
+import en from "./translations/en.json";
 import fr from "./translations/fr.json";
+import enItems from "./translations/items/items.en.json";
 import frItems from "./translations/items/items.fr.json";
+import jp from "./translations/jp.json";
 
 const resources = {
     en: { translation: { ...en, ...enItems } },

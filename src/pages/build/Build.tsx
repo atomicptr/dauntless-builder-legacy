@@ -1,5 +1,7 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
+
+import PageTitle from "../../components/page-title/PageTitle";
 import { BuildModel } from "../../data/BuildModel";
 
 const Build: React.FC = () => {
@@ -16,8 +18,9 @@ const Build: React.FC = () => {
 
     return (
         <div>
-            <h2>Weapon: {build.weaponName}</h2>
-            <img src={build.data.weapon?.icon} />
+            <PageTitle title={`${build.weaponName} Build`} />
+
+            <img alt={build.weaponName ?? undefined} src={build.data.weapon?.icon} />
         </div>
     );
 };

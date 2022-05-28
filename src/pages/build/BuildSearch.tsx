@@ -1,14 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Typography } from "@mui/material";
+
+import PageTitle from "../../components/page-title/PageTitle";
 
 const BuildSearch: React.FC = () => {
     const { t } = useTranslation();
-    return (
-        <Typography variant="h5" component="h3">
-            {t("pages.buildsearch.title")}
-        </Typography>
-    );
+    return <PageTitle title={t("pages.buildsearch.title")} />;
 };
 
 export default BuildSearch;

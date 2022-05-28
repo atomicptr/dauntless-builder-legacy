@@ -1,5 +1,5 @@
-import {CellType} from "./Cell";
 import {Language} from "../i18n";
+import {CellType} from "./Cell";
 
 export interface PerkValue {
     name: string;

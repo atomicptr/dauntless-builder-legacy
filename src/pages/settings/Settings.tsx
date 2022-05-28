@@ -1,16 +1,16 @@
-import { FormControl, InputLabel, MenuItem, Select, Typography } from "@mui/material";
-import { useTranslation } from "react-i18next";
-import { getNativeLanguageName, Language } from "../../i18n";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import React from "react";
+import { useTranslation } from "react-i18next";
+
+import PageTitle from "../../components/page-title/PageTitle";
+import { getNativeLanguageName, Language } from "../../i18n";
 
 const Settings: React.FC = () => {
     const { t, i18n } = useTranslation();
 
     return (
         <>
-            <Typography variant="h5" component="h3">
-                {t("pages.settings.title")}
-            </Typography>
+            <PageTitle title={t("pages.settings.title")} />
 
             <FormControl fullWidth sx={{ mt: 4 }}>
                 <InputLabel>{t("pages.settings.language")}</InputLabel>

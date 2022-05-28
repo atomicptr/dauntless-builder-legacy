@@ -1,19 +1,19 @@
+import { ThemeProvider } from "@mui/material";
 import { StrictMode } from "react";
 import { createRoot, Root } from "react-dom/client";
 import { Provider } from "react-redux";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
-import Build from "./pages/build/Build";
-import NewBuild from "./pages/build/NewBuild";
-import Home from "./pages/home/Home";
-import { store } from "./store";
 import Layout from "./components/layout/Layout";
-import { ThemeProvider } from "@mui/material";
 import theme from "./components/theme/theme";
 import NotFound from "./pages/404/NotFound";
-import Settings from "./pages/settings/Settings";
+import Build from "./pages/build/Build";
 import BuildSearch from "./pages/build/BuildSearch";
 import MetaBuilds from "./pages/build/MetaBuilds";
+import NewBuild from "./pages/build/NewBuild";
+import Home from "./pages/home/Home";
+import Settings from "./pages/settings/Settings";
+import { store } from "./store";
 
 const DauntlessBuilderApp = () => {
     return (
