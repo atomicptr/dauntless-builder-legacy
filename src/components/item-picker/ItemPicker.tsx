@@ -2,6 +2,7 @@ import { Star } from "@mui/icons-material";
 import { Box, Card, CardActionArea, CardContent, CardMedia, Stack, Typography } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { match } from "ts-pattern";
 
 import { Armour } from "../../data/Armour";
 import { BuildModel } from "../../data/BuildModel";
@@ -13,6 +14,7 @@ import { Weapon } from "../../data/Weapon";
 import { selectBuild } from "../../features/build/build-slice";
 import useIsMobile from "../../hooks/is-mobile";
 import { useAppSelector } from "../../hooks/redux";
+import { ttry } from "../../i18n";
 import { renderItemText } from "../../utils/item-text-renderer";
 import { itemTranslationIdentifier } from "../../utils/item-translation-identifier";
 import { itemPickerDefaultImageSize } from "../theme/theme";
@@ -37,26 +39,16 @@ const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, 
 
     const isMobile = useIsMobile();
 
-    const typeName = (type: ItemType): string => {
-        switch (type) {
-            case ItemType.Weapon:
-                return t("terms.weapon");
-            case ItemType.Head:
-                return t("terms.head-armour");
-            case ItemType.Torso:
-                return t("terms.torso-armour");
-            case ItemType.Arms:
-                return t("terms.arms-armour");
-            case ItemType.Legs:
-                return t("terms.legs-armour");
-            case ItemType.Lantern:
-                return t("terms.lantern");
-            case ItemType.Omnicell:
-                return t("terms.omnicell");
-        }
-
-        return "";
-    };
+    const typeName = (type: ItemType): string =>
+        match(type)
+            .with(ItemType.Weapon, () => t("terms.weapon"))
+            .with(ItemType.Head, () => t("terms.head-armour"))
+            .with(ItemType.Torso, () => t("terms.torso-armour"))
+            .with(ItemType.Arms, () => t("terms.arms-armour"))
+            .with(ItemType.Legs, () => t("terms.legs-armour"))
+            .with(ItemType.Lantern, () => t("terms.lantern"))
+            .with(ItemType.Omnicell, () => t("terms.omnicell"))
+            .otherwise(() => "???");
 
     const onItemSelected = () => {
         onClick(type);
@@ -227,7 +219,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, 
                                     component="img"
                                     sx={{ height: imageSize, width: imageSize }}
                                     image={ue.icon}
-                                    alt={`${t(itemTranslationIdentifier(type, data.name, "name"))} ${t(
+                                    alt={ttry(
                                         itemTranslationIdentifier(
                                             type,
                                             data.name,
@@ -235,8 +227,8 @@ const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, 
                                             index.toString(),
                                             "title",
                                         ),
-                                        t("terms.unique-effect"),
-                                    )}`}
+                                        "terms.unique-effect",
+                                    )}
                                 />
                             </Box>
                         ) : null}
@@ -250,7 +242,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, 
                                         variant="h6"
                                         sx={{ mb: 1 }}>
                                         {t(itemTranslationIdentifier(type, data.name, "name"))}{" "}
-                                        {t(
+                                        {ttry(
                                             itemTranslationIdentifier(
                                                 type,
                                                 data.name,
@@ -258,7 +250,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, 
                                                 index.toString(),
                                                 "title",
                                             ),
-                                            t("terms.unique-effect"),
+                                            "terms.unique-effect",
                                         )}
                                     </Typography>
                                 </Box>
@@ -323,25 +315,15 @@ const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, 
     );
 };
 
-const currentBuildDataByType = (build: BuildModel, type: ItemType): Weapon | Armour | Lantern | Omnicell | null => {
-    switch (type) {
-        case ItemType.Weapon:
-            return build.data.weapon;
-        case ItemType.Head:
-            return build.data.head;
-        case ItemType.Torso:
-            return build.data.torso;
-        case ItemType.Arms:
-            return build.data.arms;
-        case ItemType.Legs:
-            return build.data.legs;
-        case ItemType.Lantern:
-            return build.data.lantern;
-        case ItemType.Omnicell:
-            return build.data.omnicell;
-    }
-
-    return null;
-};
+const currentBuildDataByType = (build: BuildModel, type: ItemType): Weapon | Armour | Lantern | Omnicell | null =>
+    match(type)
+        .with(ItemType.Weapon, () => build.data.weapon)
+        .with(ItemType.Head, () => build.data.head)
+        .with(ItemType.Torso, () => build.data.torso)
+        .with(ItemType.Arms, () => build.data.arms)
+        .with(ItemType.Legs, () => build.data.legs)
+        .with(ItemType.Lantern, () => build.data.lantern)
+        .with(ItemType.Omnicell, () => build.data.omnicell)
+        .otherwise(() => null);
 
 export default ItemPicker;

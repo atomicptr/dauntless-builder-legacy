@@ -8,6 +8,7 @@ import {Armour} from "./Armour";
 import {Lantern} from "./Lantern";
 import {Perk} from "./Perks";
 import {Cell} from "./Cell";
+import {match} from "ts-pattern";
 
 const hashids = new Hashids("spicy");
 
@@ -188,12 +189,9 @@ export class BuildModel {
     public static isValid(buildId: string): boolean {
         const data = hashids.decode(buildId);
 
-        switch (data[BuildFields.Version]) {
-            case 6:
-                return data.length === 25;
-        }
-
-        return false;
+        return match(data[BuildFields.Version])
+            .with(6, () => data.length === 25)
+            .run();
     }
 }
 
@@ -229,21 +227,13 @@ export const mapIdByName = (type: NamesMapType, name: string): number => {
     return id ? Number(id) : 0;
 };
 
-export const partTypeByWeaponType = (weaponType: WeaponType): NamesMapType => {
-    switch (weaponType) {
-        case WeaponType.AetherStrikers:
-            return NamesMapType.AetherstrikerPart;
-        case WeaponType.Axe:
-            return NamesMapType.AxePart;
-        case WeaponType.Hammer:
-            return NamesMapType.HammerPart;
-        case WeaponType.ChainBlades:
-            return NamesMapType.ChainbladesPart;
-        case WeaponType.Sword:
-            return NamesMapType.SwordPart;
-        case WeaponType.Repeater:
-            return NamesMapType.RepeaterPart;
-        case WeaponType.WarPike:
-            return NamesMapType.WarpikePart;
-    }
-};
+export const partTypeByWeaponType = (weaponType: WeaponType): NamesMapType =>
+    match(weaponType)
+        .with(WeaponType.AetherStrikers, () => NamesMapType.AetherstrikerPart)
+        .with(WeaponType.Axe, () => NamesMapType.AxePart)
+        .with(WeaponType.Hammer, () => NamesMapType.HammerPart)
+        .with(WeaponType.ChainBlades, () => NamesMapType.ChainbladesPart)
+        .with(WeaponType.Sword, () => NamesMapType.SwordPart)
+        .with(WeaponType.Repeater, () => NamesMapType.RepeaterPart)
+        .with(WeaponType.WarPike, () => NamesMapType.WarpikePart)
+        .exhaustive();

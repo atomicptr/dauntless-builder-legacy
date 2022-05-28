@@ -7,7 +7,6 @@ import { findCellByVariantName } from "../../data/BuildModel";
 import { CellType } from "../../data/Cell";
 import { ItemType } from "../../data/ItemType";
 import { selectBuild } from "../../features/build/build-slice";
-import useIsMobile from "../../hooks/is-mobile";
 import { useAppSelector } from "../../hooks/redux";
 import { itemTranslationIdentifier } from "../../utils/item-translation-identifier";
 import { itemPickerDefaultImageSize, rarityColor } from "../theme/theme";

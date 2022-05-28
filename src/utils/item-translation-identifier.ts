@@ -1,3 +1,5 @@
+import { match, P } from "ts-pattern";
+
 import { ItemType } from "../data/ItemType";
 
 // This code HAS to be the same as the one in scripts/items-i18n.js
@@ -9,20 +11,11 @@ const createItemTranslationIdentifier = (...parts: string[]): string =>
 export const itemTranslationIdentifier = (type: ItemType, name: string, ...parts: string[]): string =>
     createItemTranslationIdentifier(typeName(type), name, ...parts);
 
-const typeName = (type: ItemType): string => {
-    switch (type) {
-        case ItemType.Weapon:
-            return "weapons";
-        case ItemType.Head:
-        case ItemType.Torso:
-        case ItemType.Arms:
-        case ItemType.Legs:
-            return "armours";
-        case ItemType.Lantern:
-            return "lanterns";
-        case ItemType.Omnicell:
-            return "omnicells";
-        case ItemType.Cell:
-            return "cells";
-    }
-};
+const typeName = (type: ItemType): string =>
+    match(type)
+        .with(ItemType.Weapon, () => "weapons")
+        .with(P.union(ItemType.Head, ItemType.Torso, ItemType.Arms, ItemType.Legs), () => "armours")
+        .with(ItemType.Lantern, () => "lanterns")
+        .with(ItemType.Omnicell, () => "omnicells")
+        .with(ItemType.Cell, () => "cells")
+        .run();
