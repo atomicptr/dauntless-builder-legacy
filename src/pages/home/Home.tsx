@@ -19,6 +19,13 @@ const Home: React.FC = () => {
                 <Button
                     component={NavLink}
                     variant="outlined"
+                    to={"/b/XafXTkTpTQT8TbTMT5TeTxTmTdTJTwT2T7T2T1TyT8TQTrTpT3"}>
+                    Empty Build
+                </Button>
+
+                <Button
+                    component={NavLink}
+                    variant="outlined"
                     to={"/b/0VfrT2mCZCkBHjhjcjUaTVTvETbC8zH0RToCggUAVtVCRtjot6CndsmfxXTe"}>
                     Test Build #1 - Iceborne / Glyph Weaver Spear
                 </Button>
