@@ -199,7 +199,6 @@ const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, 
                     </CardActionArea>
                 </Card>
 
-                {/* Cells? */}
                 {withCellPicker && (type === ItemType.Weapon || isArmor || type === ItemType.Lantern)
                     ? (Array.isArray((data as Weapon | Armour | Lantern | null)?.cells)
                         ? ((data as Weapon | Armour | Lantern | null)?.cells as CellType[]) ?? []

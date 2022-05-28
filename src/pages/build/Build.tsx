@@ -88,6 +88,8 @@ const Build: React.FC = () => {
                     <ItemPicker
                         type={ItemType.Lantern}
                         onClick={onItemPickerClicked}
+                        withCellPicker
+                        onCellClicked={onCellClicked}
                     />
                 </Grid>
                 <Grid
