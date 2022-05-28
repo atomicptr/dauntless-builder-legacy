@@ -1,5 +1,6 @@
-import { Grid } from "@mui/material";
+import { Grid, ListSubheader } from "@mui/material";
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
 
 import ItemPicker from "../../components/item-picker/ItemPicker";
@@ -14,6 +15,7 @@ import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 const Build: React.FC = () => {
     const { buildId } = useParams();
     const navigate = useNavigate();
+    const { t } = useTranslation();
 
     if (!buildId || !BuildModel.isValid(buildId)) {
         navigate("/b/new");
@@ -41,17 +43,20 @@ const Build: React.FC = () => {
     return (
         <>
             <PageTitle
-                title={`${build.weaponName} Build`}
+                title={t("pages.build.title", { ...build })}
                 hidden
             />
 
             <Grid
                 container
-                spacing={2}>
+                spacing={2}
+                sx={{ pb: 10 }}>
                 <Grid
                     item
                     sm={12}
                     md={9}>
+                    <ListSubheader sx={{ userSelect: "none" }}>{t("pages.build.title", { ...build })}</ListSubheader>
+
                     <ItemPicker
                         type={ItemType.Omnicell}
                         onClick={onItemPickerClicked}

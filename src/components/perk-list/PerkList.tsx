@@ -1,3 +1,4 @@
+import { Cake, Warning } from "@mui/icons-material";
 import { List, ListItem, ListItemIcon, ListItemText, ListSubheader } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
@@ -68,6 +69,15 @@ const PerkList: React.FC = () => {
         <List
             sx={{ bgcolor: "background.paper", maxWidth: 360, userSelect: "none", width: "100%" }}
             subheader={<ListSubheader>{t("terms.perks")}</ListSubheader>}>
+            {sortedPerks.length === 0 ? (
+                <ListItem>
+                    <ListItemIcon sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
+                        <Cake />
+                    </ListItemIcon>
+                    <ListItemText primary={t("pages.build.no-perks")} />
+                </ListItem>
+            ) : null}
+
             {sortedPerks.map(perk => (
                 <ListItem key={perk.name}>
                     <ListItemIcon sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
@@ -79,6 +89,7 @@ const PerkList: React.FC = () => {
                     <ListItemText
                         primary={`+${perk.count} ${t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))}`}
                     />
+                    {perk.count > 6 ? <Warning /> : null}
                 </ListItem>
             ))}
         </List>

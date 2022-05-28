@@ -10,6 +10,8 @@
 
     "pages.404.not-found": "Page Not Found",
     "pages.home.title": "Home",
+    "pages.build.title": "{{weaponName}} {{omnicell}} Build",
+    "pages.build.no-perks": "No perks found.",
     "pages.settings.title": "Settings",
     "pages.settings.language": "Language",
     "pages.newbuild.title": "Create a new build",
