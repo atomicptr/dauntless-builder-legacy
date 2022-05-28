@@ -53,8 +53,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
     const sidebarItems = [
         { icon: <Home />, link: "/", text: t("drawer.home") },
-        { icon: <AddCircle />, link: "/b/new", text: t("drawer.new-build") },
-        { icon: <Bookmarks />, link: "/favorites", text: t("drawer.my-builds") },
+        { disabled: true, icon: <AddCircle />, link: "/b/new", text: t("drawer.new-build") },
+        { disabled: true, icon: <Bookmarks />, link: "/favorites", text: t("drawer.my-builds") },
         { disabled: true, icon: <ManageSearch />, link: "/b/search", text: t("drawer.build-finder") },
         { disabled: true, icon: <Stars />, link: "/b/meta", text: t("drawer.meta-builds") },
         { icon: <Settings />, link: "/settings", text: t("drawer.settings") },
