@@ -1,4 +1,4 @@
-import {Button, Stack} from "@mui/material";
+import { Button, Stack } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
@@ -12,7 +12,10 @@ const Home: React.FC = () => {
         <>
             <PageTitle title={t("pages.home.title")} />
 
-            <Stack direction="column" spacing={2} sx={{mt: 2}}>
+            <Stack
+                direction="column"
+                spacing={2}
+                sx={{ mt: 2 }}>
                 <Button
                     component={NavLink}
                     variant="outlined"

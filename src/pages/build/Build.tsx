@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import ItemPicker from "../../components/item-picker/ItemPicker";
 import PageTitle from "../../components/page-title/PageTitle";
+import PerkList from "../../components/perk-list/PerkList";
 import { BuildModel } from "../../data/BuildModel";
 import { CellType } from "../../data/Cell";
 import { ItemType } from "../../data/ItemType";
@@ -96,7 +97,7 @@ const Build: React.FC = () => {
                     item
                     sm={12}
                     md={3}>
-                    Perks
+                    <PerkList />
                 </Grid>
             </Grid>
         </>

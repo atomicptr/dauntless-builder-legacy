@@ -7,4 +7,5 @@ export enum ItemType {
     Lantern,
     Omnicell,
     Cell,
+    Perk,
 }

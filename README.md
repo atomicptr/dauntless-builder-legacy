@@ -8,8 +8,8 @@ Want to contribute? Great! Read the [contribution guide first](CONTRIBUTING.md).
 
 ## Documentation
 
-* [Data Documentation](docs/contributing/Data.md) - How data is set up, how to contribute, how to use our data in your application.
-* [Translation Documentation](docs/contributing/Translation.md) - How the translation system works, how to contribute translations etc.
+-   [Data Documentation](docs/contributing/Data.md) - How data is set up, how to contribute, how to use our data in your application.
+-   [Translation Documentation](docs/contributing/Translation.md) - How the translation system works, how to contribute translations etc.
 
 ## Contact
 

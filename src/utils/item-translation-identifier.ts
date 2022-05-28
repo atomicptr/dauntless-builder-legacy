@@ -18,4 +18,5 @@ const typeName = (type: ItemType): string =>
         .with(ItemType.Lantern, () => "lanterns")
         .with(ItemType.Omnicell, () => "omnicells")
         .with(ItemType.Cell, () => "cells")
+        .with(ItemType.Perk, () => "perks")
         .run();
