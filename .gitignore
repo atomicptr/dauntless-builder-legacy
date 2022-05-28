@@ -2,6 +2,7 @@
 /dist
 /public/*.json
 /public/map
+/src/translations/items
 
 # dev stuff
 /map
