@@ -1,3 +1,6 @@
-test/
-scripts/
-webpack.config.js
+node_modules
+data
+dist
+public
+test
+scripts

@@ -12,8 +12,8 @@
         "build:frontend": "vite build",
         "dev": "vite dev",
         "deploy": "yarn build && ./scripts/deploy.sh",
-        "lint": "prettier . --check && eslint src",
-        "lint:fix": "prettier . --write && eslint src --fix"
+        "lint": "prettier . --check && eslint .",
+        "lint:fix": "prettier . --write && eslint . --fix"
     },
     "dependencies": {
         "@emotion/react": "^11.9.0",
