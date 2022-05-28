@@ -1,4 +1,4 @@
-import { Box, Card, CardActionArea, CardMedia, useTheme } from "@mui/material";
+import { Box, Card, CardActionArea, CardMedia, Typography, useTheme } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { match } from "ts-pattern";
@@ -7,6 +7,7 @@ import { findCellByVariantName } from "../../data/BuildModel";
 import { CellType } from "../../data/Cell";
 import { ItemType } from "../../data/ItemType";
 import { selectBuild } from "../../features/build/build-slice";
+import useIsMobile from "../../hooks/is-mobile";
 import { useAppSelector } from "../../hooks/redux";
 import { itemTranslationIdentifier } from "../../utils/item-translation-identifier";
 import { itemPickerDefaultImageSize, rarityColor } from "../theme/theme";
@@ -50,30 +51,33 @@ const CellPicker: React.FC<CellPickerProps> = ({ index, itemType, cellType, onCl
     return (
         <Card
             sx={{
-                alignItems: "center",
-                display: "flex",
-                justifyContent: "center",
                 mb: `${theme.spacing(1)} !important`,
                 minWidth: imageSize * 2.5,
                 userSelect: "none",
             }}>
             <CardActionArea
-                sx={{ height: "100%", width: "100%" }}
+                sx={{
+                    alignItems: "center",
+                    display: "flex",
+                    flexDirection: "column",
+                    height: "100%",
+                    justifyContent: "center",
+                    pb: 2,
+                    pt: 2,
+                    width: "100%",
+                }}
                 onClick={onClicked ? () => onClicked(itemType, cellType, index) : undefined}>
                 <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", pl: 2, pr: 2 }}>
                     <CardMedia
                         component="img"
-                        sx={{ height: imageSize * 1.25, width: imageSize * 1.25, ...cellStyle }}
+                        sx={{ height: imageSize, width: imageSize, ...cellStyle }}
                         image={`/assets/icons/perks/${cellType}.png`}
                     />
                 </Box>
                 {cell !== null ? (
-                    <Box
-                        display="flex"
-                        justifyContent="center"
-                        sx={{ pt: 1 }}>
+                    <Typography sx={{ pt: 1 }}>
                         {t(itemTranslationIdentifier(ItemType.Cell, cell.name, "variants", variantIndex.toString()))}
-                    </Box>
+                    </Typography>
                 ) : null}
             </CardActionArea>
         </Card>

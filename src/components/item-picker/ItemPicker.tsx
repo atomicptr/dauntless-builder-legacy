@@ -11,6 +11,7 @@ import { Lantern } from "../../data/Lantern";
 import { Omnicell } from "../../data/Omnicell";
 import { Weapon } from "../../data/Weapon";
 import { selectBuild } from "../../features/build/build-slice";
+import useIsMobile from "../../hooks/is-mobile";
 import { useAppSelector } from "../../hooks/redux";
 import { renderItemText } from "../../utils/item-text-renderer";
 import { itemTranslationIdentifier } from "../../utils/item-translation-identifier";
@@ -33,6 +34,8 @@ const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, 
 
     const data = currentBuildDataByType(build, type);
     const isArmor = [ItemType.Head, ItemType.Torso, ItemType.Arms, ItemType.Legs].indexOf(type) >= 0;
+
+    const isMobile = useIsMobile();
 
     const typeName = (type: ItemType): string => {
         switch (type) {
@@ -101,8 +104,8 @@ const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, 
     return (
         <>
             <Stack
-                direction="row"
-                spacing={1}>
+                direction={isMobile ? "column" : "row"}
+                spacing={isMobile ? 0 : 1}>
                 <Card sx={{ mb: 1, userSelect: "none", width: "100%" }}>
                     <CardActionArea
                         sx={{ display: "flex", justifyContent: "flex-start" }}
