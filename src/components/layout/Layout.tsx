@@ -10,6 +10,7 @@ import {
     Stars,
 } from "@mui/icons-material";
 import {
+    Alert,
     Box,
     Button,
     Container,
@@ -33,6 +34,7 @@ import { NavLink } from "react-router-dom";
 
 import dauntlessBuilderData from "../../data/Data";
 import useIsMobile from "../../hooks/is-mobile";
+import { getNativeLanguageName, Language } from "../../i18n";
 import DevMenu from "../dev-menu/DevMenu";
 import { drawerWidth } from "../theme/theme";
 import { AppBar } from "./AppBar";
@@ -46,7 +48,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     const theme = useTheme();
     const isMobile = useIsMobile();
     const [open, setOpen] = useState(false);
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const handleDrawerOpen = () => setOpen(true);
     const handleDrawerClose = () => setOpen(false);
@@ -185,6 +187,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </Drawer>
             <Container maxWidth={"xl"}>
                 <DrawerHeader sx={{ marginBottom: "16px" }} />
+
+                {i18n.languages[0] !== Language.English ? (
+                    <Alert
+                        severity="warning"
+                        sx={{ mb: 2 }}>
+                        <div
+                            dangerouslySetInnerHTML={{
+                                __html: t("alert.translation-warning", {
+                                    languageName: getNativeLanguageName(i18n.languages[0] as Language),
+                                }),
+                            }}></div>
+                    </Alert>
+                ) : null}
+
                 {children}
             </Container>
         </Box>

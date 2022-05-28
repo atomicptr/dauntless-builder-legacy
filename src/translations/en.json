@@ -30,5 +30,7 @@
     "terms.arms-armour": "Arms Armour",
     "terms.legs-armour": "Legs Armour",
     "terms.lantern": "Lantern",
-    "terms.omnicell": "Omnicell"
+    "terms.omnicell": "Omnicell",
+
+    "alert.translation-warning": "You're currently viewing this page with your language set to <b>{{languageName}}</b>, translations are currently in beta and are very spotty. If you speak this language, please consider <a style=\"color: #fff;\" target=\"_blank\" href=\"https://github.com/atomicptr/dauntless-builder/blob/master/docs/contributing/Translation.md\">contributing to the translation efforts</a>."
 }
