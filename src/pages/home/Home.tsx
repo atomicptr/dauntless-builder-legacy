@@ -12,7 +12,9 @@ const Home: React.FC = () => {
         <>
             <PageTitle title={t("pages.home.title")} />
 
-            <Button component={NavLink} to={"/b/0VfrT2mCZCkBHjhjcjUaTVTvETbC8zH0RToCggUAVtVCRtjot6CndsmfxXTe"}>
+            <Button
+                component={NavLink}
+                to={"/b/0VfrT2mCZCkBHjhjcjUaTVTvETbC8zH0RToCggUAVtVCRtjot6CndsmfxXTe"}>
                 Test Build #1
             </Button>
         </>

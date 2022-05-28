@@ -73,6 +73,6 @@ interface DauntlessBuilderData {
     }
 }
 
-const dauntlessBuilderData: DauntlessBuilderData = dataJson;
+const dauntlessBuilderData: DauntlessBuilderData = dataJson as unknown as DauntlessBuilderData;
 
 export default dauntlessBuilderData;

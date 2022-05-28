@@ -23,19 +23,43 @@ const DauntlessBuilderApp = () => {
                     <Layout>
                         <Routes>
                             <Route path="/">
-                                <Route index element={<Home />} />
+                                <Route
+                                    index
+                                    element={<Home />}
+                                />
 
                                 <Route path="b">
-                                    <Route index element={<Navigate to={"/b/new"} />} />
-                                    <Route path="new" element={<NewBuild />} />
-                                    <Route path="search" element={<BuildSearch />} />
-                                    <Route path="meta" element={<MetaBuilds />} />
-                                    <Route path=":buildId" element={<Build />} />
+                                    <Route
+                                        index
+                                        element={<Navigate to={"/b/new"} />}
+                                    />
+                                    <Route
+                                        path="new"
+                                        element={<NewBuild />}
+                                    />
+                                    <Route
+                                        path="search"
+                                        element={<BuildSearch />}
+                                    />
+                                    <Route
+                                        path="meta"
+                                        element={<MetaBuilds />}
+                                    />
+                                    <Route
+                                        path=":buildId"
+                                        element={<Build />}
+                                    />
                                 </Route>
 
-                                <Route path="/settings" element={<Settings />} />
+                                <Route
+                                    path="/settings"
+                                    element={<Settings />}
+                                />
 
-                                <Route path="*" element={<NotFound />} />
+                                <Route
+                                    path="*"
+                                    element={<NotFound />}
+                                />
                             </Route>
                         </Routes>
                     </Layout>

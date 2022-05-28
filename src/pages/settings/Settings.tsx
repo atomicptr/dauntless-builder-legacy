@@ -12,15 +12,18 @@ const Settings: React.FC = () => {
         <>
             <PageTitle title={t("pages.settings.title")} />
 
-            <FormControl fullWidth sx={{ mt: 4 }}>
+            <FormControl
+                fullWidth
+                sx={{ mt: 4 }}>
                 <InputLabel>{t("pages.settings.language")}</InputLabel>
                 <Select
                     value={i18n.languages[0]}
                     label={t("pages.settings.language")}
-                    onChange={ev => i18n.changeLanguage(ev.target.value)}
-                >
+                    onChange={ev => i18n.changeLanguage(ev.target.value)}>
                     {Object.keys(Language).map((key: string) => (
-                        <MenuItem key={key} value={Language[key as keyof typeof Language]}>
+                        <MenuItem
+                            key={key}
+                            value={Language[key as keyof typeof Language]}>
                             {getNativeLanguageName(Language[key as keyof typeof Language]) !== null
                                 ? `${getNativeLanguageName(Language[key as keyof typeof Language])} (${key})`
                                 : key}

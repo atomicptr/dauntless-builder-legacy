@@ -63,7 +63,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
         <Box sx={{ display: "flex" }}>
             <CssBaseline />
-            <AppBar position="fixed" open={open} isMobile={isMobile}>
+            <AppBar
+                position="fixed"
+                open={open}
+                isMobile={isMobile}>
                 <Toolbar>
                     {isMobile ? (
                         <IconButton
@@ -71,8 +74,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                             aria-label="open drawer"
                             onClick={handleDrawerOpen}
                             edge="start"
-                            sx={{ mr: 2, ...(open && { display: "none" }) }}
-                        >
+                            sx={{ mr: 2, ...(open && { display: "none" }) }}>
                             <Menu />
                         </IconButton>
                     ) : null}
@@ -90,7 +92,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         />
                     </Box>
 
-                    <Typography variant="h6" noWrap component="div" sx={{ userSelect: "none" }}>
+                    <Typography
+                        variant="h6"
+                        noWrap
+                        component="div"
+                        sx={{ userSelect: "none" }}>
                         Dauntless Builder
                     </Typography>
 
@@ -110,8 +116,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 }}
                 variant={isMobile ? "temporary" : "permanent"}
                 anchor="left"
-                open={open}
-            >
+                open={open}>
                 {isMobile ? (
                     <DrawerHeader>
                         <IconButton onClick={handleDrawerClose}>
@@ -123,14 +128,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 )}
                 <List>
                     {sidebarItems.map(item => (
-                        <ListItem key={item.link} disablePadding>
+                        <ListItem
+                            key={item.link}
+                            disablePadding>
                             <ListItemButton
                                 component={NavLink}
                                 to={item.link}
                                 onClick={isMobile ? handleDrawerClose : undefined}
                                 disabled={item.disabled}
-                                title={item.disabled ? "coming soon..." : undefined}
-                            >
+                                title={item.disabled ? "coming soon..." : undefined}>
                                 <ListItemIcon>{item.icon}</ListItemIcon>
                                 <ListItemText primary={item.text} />
                             </ListItemButton>
@@ -145,13 +151,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         width: drawerWidth,
                         pb: 0,
                         bottom: 0,
-                    }}
-                >
+                    }}>
                     <Button
                         component={"a"}
                         target="_blank"
-                        href={`https://playdauntless.com/patch-notes/${dauntlessBuilderData.misc.patchnotes_version_string}/`}
-                    >
+                        href={`https://playdauntless.com/patch-notes/${dauntlessBuilderData.misc.patchnotes_version_string}/`}>
                         Dauntless v{dauntlessBuilderData.misc.dauntless_version}
                     </Button>
                     <List sx={{ marginTop: "auto" }}>
@@ -160,22 +164,19 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                             style={{
                                 display: "flex",
                                 justifyContent: "center",
-                            }}
-                        >
+                            }}>
                             <IconButton
                                 component="a"
                                 href="https://github.com/atomicptr/dauntless-builder"
                                 target="_blank"
-                                title="Github Repository"
-                            >
+                                title="Github Repository">
                                 <FaGithub />
                             </IconButton>
                             <IconButton
                                 component="a"
                                 href="https://discord.gg/hkMvhsfPjH"
                                 target="_blank"
-                                title="Dauntless Builder Discord Server"
-                            >
+                                title="Dauntless Builder Discord Server">
                                 <FaDiscord />
                             </IconButton>
                         </ListItem>

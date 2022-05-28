@@ -11,7 +11,11 @@ const NotFound: React.FC = () => {
         <Box>
             <PageTitle title={t("pages.404.not-found")} />
             <Box sx={{ position: "absolute", bottom: 0, right: 0 }}>
-                <img alt="Sad hoots" src="/assets/sadhoots.png" style={{ maxWidth: "70%" }} />
+                <img
+                    alt="Sad hoots"
+                    src="/assets/sadhoots.png"
+                    style={{ maxWidth: "70%" }}
+                />
             </Box>
         </Box>
     );

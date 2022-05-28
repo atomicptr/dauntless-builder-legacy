@@ -20,7 +20,10 @@ const Build: React.FC = () => {
         <div>
             <PageTitle title={`${build.weaponName} Build`} />
 
-            <img alt={build.weaponName ?? undefined} src={build.data.weapon?.icon} />
+            <img
+                alt={build.weaponName ?? undefined}
+                src={build.data.weapon?.icon}
+            />
         </div>
     );
 };

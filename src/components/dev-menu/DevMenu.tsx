@@ -28,8 +28,7 @@ const DevMenu: React.FC = () => {
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
                 onClick={handleMenu}
-                color="inherit"
-            >
+                color="inherit">
                 <Build />
             </IconButton>
             <Menu
@@ -45,8 +44,7 @@ const DevMenu: React.FC = () => {
                     horizontal: "right",
                 }}
                 open={Boolean(anchorEl)}
-                onClose={handleClose}
-            >
+                onClose={handleClose}>
                 <MenuItem onClick={() => showTranslations(i18n)}>{t("appbar.dev-menu.translation-check")}</MenuItem>
             </Menu>
         </>
