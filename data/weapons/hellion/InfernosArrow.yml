@@ -36,8 +36,8 @@ i18n:
     description: Une aetherolance forgée à partir de trophées d'Hellion.
     unique_effects:
       - description: >-
-          Le huitième coup consécutif inflige +150 dégâts et de lourds dégâts de
-          braise
+          Le quinzième coup consécutif inflige +150 dégâts et de lourds dégâts
+          de braise
       - description: >-
-          Le huitième coup consécutif inflige +225 dégâts et de lourds dégâts de
-          braise
+          Le quinzième coup consécutif inflige +200 dégâts et de lourds dégâts
+          de braise

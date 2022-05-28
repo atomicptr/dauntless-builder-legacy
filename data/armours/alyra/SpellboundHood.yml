@@ -6,8 +6,8 @@ strength: Radiant
 weakness: Umbral
 cells: Alacrity
 resistance:
-  0: 20
-  1: 30
+  '0': 20
+  '1': 30
 perks:
   - name: Invigorated
     value: 2
@@ -17,3 +17,7 @@ perks:
     value: 3
     from: 1
     to: 1
+i18n:
+  fr:
+    name: Capuchon sorceliée
+    description: Protection pour la tête forgée à partir de Alyra.

@@ -59,24 +59,24 @@ i18n:
         description: >-
           Votre flasque soigne sur 20 secondes, mais avec un soin accru de 20%.
           Tant que le soin est actif accélère le rechargement de la capacité de
-          votre lanterne de 15%
+          votre lanterne de 25%
       '3':
         description: >-
           Votre flasque soigne sur 20 secondes, mais avec un soin accru de 20%.
           Tant que le soin est actif accélère le rechargement de la capacité de
-          votre lanterne de 15%
+          votre lanterne de 35%
       '4':
         description: >-
           Votre flasque soigne sur 20 secondes, mais avec un soin accru de 20%.
           Tant que le soin est actif accélère le rechargement de la capacité de
-          votre lanterne de 15%
+          votre lanterne de 40%
       '5':
         description: >-
           Votre flasque soigne sur 20 secondes, mais avec un soin accru de 20%.
           Tant que le soin est actif accélère le rechargement de la capacité de
-          votre lanterne de 15%
+          votre lanterne de 45%
       '6':
         description: >-
           Votre flasque soigne sur 20 secondes, mais avec un soin accru de 20%.
           Tant que le soin est actif accélère le rechargement de la capacité de
-          votre lanterne de 15%
+          votre lanterne de 50%

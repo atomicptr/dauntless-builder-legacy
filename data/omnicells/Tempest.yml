@@ -17,7 +17,7 @@ i18n:
       Vélocité. Chaque charge dure 45 secondes et augmente la vitesse de
       déplacement de 3 %. 5 charges maximum.
     active: >
-      Consomme une charge de Vélocité pour vous lancer en avant et infliger 400
+      Consomme une charge de Vélocité pour vous lancer en avant et infliger 450
       dégâts foudroyants à une cible voisine, en visant en priorité les parties
       de Behemoths non brisées. Pour chaque 1 % d’augmentation de vitesse de
       déplacement, inflige +5 % de dégâts aux parties non brisées. Les charges

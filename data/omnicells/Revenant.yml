@@ -16,7 +16,7 @@ i18n:
     name: Spectre
     passive: >
       Lorsque l’état de Spectre prend fin, chaque charge d’Énergie du vide
-      confère 125 points de santé par seconde pendant 10 secondes.
+      confère 115 points de santé par seconde pendant 10 secondes.
     active: >
       Drainez jusqu'à 500 points de santé pour passer en état de Spectre et
       générer un Orbe du vide. Tous les 100 points de santé drainés, invoquez

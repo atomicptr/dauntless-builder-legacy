@@ -15,8 +15,8 @@ variants:
       Tactician: 3
 i18n:
   fr:
-    name: Stratège-Tacticien
+    name: Tacticien
     variants:
-      - Stratège-Tacticien +1
-      - Stratège-Tacticien +2
-      - Stratège-Tacticien +3
+      - Tacticien +1
+      - Tacticien +2
+      - Tacticien +3

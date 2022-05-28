@@ -5,14 +5,14 @@ passive: >
   Amount of healing and shielding granted per second is increased by 1 for every
   150 current health when activated.
 active: >
-  <b>Command:</b> Your drone acts based on the target.{{NL}}
-  <b>1. Slayer:</b> Remove negative status effects and grant Artificer Aura for 15s.{{NL}}
-  <b>2. Ground:</b> Create a wall that blocks hostile projectiles and grants Artificer Aura to nearby Slayers for 15s.{{NL}}
-  <b>3. Behemoth:</b> Make a part to take +15% damage for 15s.{{NL}}
-  <b>4. Downed Slayer:</b> Revive and grant Artificer Aura for 15s (once every 90s).{{NL}}
-  <b>Artificer Aura:</b> Restore 10 health/second. At full health, grants 10 Shields/second that last for 25s (maximum 400 Shields){{NL}}
-  <b>Cooldown:</b> 20s
-
+  <b>Command:</b> Your drone acts based on the target.{{NL}} <b>1. Slayer:</b>
+  Remove negative status effects and grant Artificer Aura for 15s.{{NL}} <b>2.
+  Ground:</b> Create a wall that blocks hostile projectiles and grants Artificer
+  Aura to nearby Slayers for 15s.{{NL}} <b>3. Behemoth:</b> Make a part to take
+  +15% damage for 15s.{{NL}} <b>4. Downed Slayer:</b> Revive and grant Artificer
+  Aura for 15s (once every 90s).{{NL}} <b>Artificer Aura:</b> Restore 10
+  health/second. At full health, grants 10 Shields/second that last for 25s
+  (maximum 400 Shields){{NL}} <b>Cooldown:</b> 20s
 i18n:
   fr:
     name: Artificer
@@ -20,14 +20,14 @@ i18n:
       Les soins et les boucliers que vous donnez sont augmentés de 1 par tranche
       de 150 points de santé que vous donnez.
     active: >
-      Envoyez votre Drone vers une cible pour qu’il effectue l’une des quatre
-      actions suivantes: {{NL}}{{NL}}1 - Slayer ressuscitable : Ranimez un
-      Slayer et conférez-lui l’aura Artificier pendant 15 secondes. Vous ne
-      pouvez effectuer cette résurrection qu’une fois toutes les 90 secondes
-      {{NL}}{{NL}}2 - Slayer actif : Retirez les altérations d’état du Slayer
-      ciblé et conférez-lui l’aura Artificier pendant 15 secondes {{NL}}{{NL}}3
-      - Behemoth - Marquez le membre d’un Behemoth qui subira alors +15 % de
-      dégâts de toutes les sources pendant 15 secondes {{NL}}{{NL}}4 - Sol -
-      Entourez une zone d’un mur rayonnant pendant 15 secondes. Ce mur bloque
-      les projectiles et rayons hostiles tout en conférant l’aura Artificier à
-      tous les Slayers sous sa protection. 20s de rechargement 
+      <b>Commande:</b> Votre drone agit en fonction de la cible.{{NL}}{{NL}}
+      <b>1. Slayer:</b> Supprime les effets d'état négatifs et accorde l'Aura de
+      l'Artificier pendant 15s.{{NL}}{{NL}} <b>2. Sol:</b> Créez un mur qui
+      bloque les projectiles hostiles et accorde l'Aura de l'Artificier aux
+      Slayers proches pendant 15s.{{NL}}{{NL}} <b>3. Behemoth:</b> Marquez le
+      membre d’un Behemoth qui subira alors +15 % de dégâts pendant 15
+      secondes.{{NL}}{{NL}} <b>4. Slayer à terre:</b> Ranimez un Slayer et
+      conférez-lui l’aura Artificier pendant 15 secondes (une fois tous les
+      90).{{NL}}{{NL}} <b>Aura Artificier:</b> Redonne 10 points de vie par
+      seconde. A pleine santé, accorde 10 boucliers/seconde qui durent 25s
+      (maximum 400 boucliers).{{NL}}{{NL}} <b>Cooldown:</b> 20s

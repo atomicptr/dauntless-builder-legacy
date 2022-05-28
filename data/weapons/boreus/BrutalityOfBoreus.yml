@@ -40,10 +40,10 @@ i18n:
     description: Un marteau forgé à partir de trophées de Boreus
     unique_effects:
       - description: >-
-          Après avoir dépensé une munition, génère un farfroidet qui ajoute 30
+          Après avoir dépensé une munition, génère 2 farfroidet qui ajoute 30
           dégâts à votre prochaine attaque et de légers dégâts de givre (4
           farfroidets maximum)
       - description: >-
-          Après avoir dépensé une munition, génère un farfroidet qui ajoute 60
+          Après avoir dépensé une munition, génère 2 farfroidet qui ajoute 60
           dégâts à votre prochaine attaque et de légers dégâts de givre (4
           farfroidets maximum)

@@ -46,6 +46,6 @@ i18n:
           charge.
       - description: >-
           Une fois chargé, votre prochain coup libère un projectile boomerang
-          qui inflige fréquemment 350 de dégâts d'électrochocs à toute cible
+          qui inflige fréquemment 325 de dégâts d'électrochocs à toute cible
           touchée. Esquiver une attaque réduit le temps de recharge de la
           charge.

@@ -24,32 +24,17 @@ effects:
 i18n:
   fr:
     name: Tenace
-    description: >-
-      Gagnez des dégâts bonus en fonction de vos PV actuels. Aux niveaux
-      supérieurs, gagnez des chance de coups critique en fonction du bouclier
-      actuels
+    description: Gagnez des dégâts bonus en fonction de vos PV.
     effects:
       '1':
-        description:
-          - Pour chaque tranche de 100 HP présents ++0,33% de dégâts bonus.
-          - null
+        description: Pour chaque tranche de 100 PV, gagnez 0,33% de dégâts supplémentaires.
       '2':
-        description:
-          - Pour chaque tranche de 100 HP présents +0.66% de dégâts bonus.
-          - null
+        description: Pour chaque tranche de 100 PV, gagnez 0,66% de dégâts supplémentaires.
       '3':
-        description:
-          - Pour chaque tranche de 100 HP présents +1% de dégâts bonus.
-          - null
+        description: Pour chaque tranche de 100 PV, gagnez 1% de dégâts supplémentaires.
       '4':
-        description:
-          - Pour chaque tranche de 100 HP présents +1.33% de dégâts bonus.
-          - Pour chaque tranche de 100 HP gains de bouclier
+        description: Pour chaque tranche de 100 PV, gagnez 1,33% de dégâts supplémentaires.
       '5':
-        description:
-          - Pour chaque tranche de 100 HP présents +1.66% de dégâts bonus.
-          - Pour chaque tranche de 75 HP gains de bouclier
+        description: Pour chaque tranche de 100 PV, gagnez 1,66% de dégâts supplémentaires.
       '6':
-        description:
-          - Pour chaque tranche de 100 HP présents +2% de dégâts bonus.
-          - Pour chaque tranche de 50 HP gains de bouclier
+        description: Pour chaque tranche de 100 PV, gagnez 2% de dégâts supplémentaires.

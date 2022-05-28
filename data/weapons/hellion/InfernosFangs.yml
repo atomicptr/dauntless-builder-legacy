@@ -36,8 +36,8 @@ i18n:
     description: Une paire de chaînes-lames forgée avec des trophées d'Hellion.
     unique_effects:
       - description: >-
-          Le onzièmement coup consécutif inflige +150 dégâts et de lourds dégâts
+          Le quinzième coup consécutif inflige +150 dégâts et de lourds dégâts
           de braise
       - description: >-
-          Le onzièmement coup consécutif inflige +225 dégâts et de lourds dégâts
+          Le quinzième coup consécutif inflige +200 dégâts et de lourds dégâts
           de braise

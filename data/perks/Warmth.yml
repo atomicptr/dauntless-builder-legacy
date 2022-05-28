@@ -24,7 +24,7 @@ effects:
 i18n:
   fr:
     name: Chauffe
-    description: Protège contre les effets de «Gelé» et «Ralenti».
+    description: Protège contre l'effets «Ralenti».
     effects:
       '1':
         description: Réduit la durée de l'effet de statut « Ralenti» de 10%

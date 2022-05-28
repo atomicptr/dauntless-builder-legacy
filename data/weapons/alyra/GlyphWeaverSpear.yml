@@ -4,10 +4,12 @@ icon: /assets/icons/weapons/alyra/GlyphWeaverSpear.png
 type: War Pike
 damage: Piercing
 elemental: Radiant
-cells: [Brutality, Fortitude]
+cells:
+  - Brutality
+  - Fortitude
 power:
-  0: 80
-  1: 120
+  '0': 80
+  '1': 120
 perks:
   - name: Aetheric Attunement
     value: 2
@@ -20,9 +22,22 @@ perks:
 unique_effects:
   - name: AlyraUniqueEffect
     description: >-
-      On lantern use, spawn a glyph based on your active glyph type that charges after three seconds. Once charged,
-      the glyph will activate when a Behemoth makes contact.{{NL}}
-      {{NL}}
-      Red Glyph: Deals 1500 radiant damage in a radius.{{NL}}
-      Blue Glyph: Grants 150 stacking shields that expire after 25s to slayers in a large radius (max 600 shields).{{NL}}
-      Jump to change the active glyph type. Glyphs expire after 10s.
+      On lantern use, spawn a glyph based on your active glyph type that charges
+      after three seconds. Once charged, the glyph will activate when a Behemoth
+      makes contact.{{NL}} {{NL}} Red Glyph: Deals 1500 radiant damage in a
+      radius.{{NL}} Blue Glyph: Grants 150 stacking shields that expire after
+      25s to slayers in a large radius (max 600 shields).{{NL}} Jump to change
+      the active glyph type. Glyphs expire after 10s.
+i18n:
+  fr:
+    name: Lance tisseuses de glyphes
+    description: Une aetherolance forgée à partir de Alyra.
+    unique_effects:
+      - description: >-
+          En utilisant votre lanterne, un glyphe apparaît qui se charge après 3
+          secondes. Une fois chargé, le glyphe se brise quand il entre en
+          contact avec un Behemoth.{{NL}} {{NL}} Glyphe rouge : inflige 1 500
+          points de dégâts dans un rayon.{{NL}} Glyphe bleu : confère 150
+          boucliers cumulables, expire au bout de 25 secondes (600 de boucliers
+          max). {{NL}} Sauter pour changer de glyphe actif. Les glyphes expirent
+          après 10s.

@@ -40,8 +40,8 @@ i18n:
     description: Un marteau forgé à partir de trophées de Charrogg.
     unique_effects:
       - description: >-
-          Après avoir dépensé 125 d'endurance, la prochaine attaque émet un cône
+          Après avoir dépensé 50 d'endurance, la prochaine attaque émet un cône
           de flammes qui inflige +100 de dégâts à chaque cible dans le cône.
       - description: >-
-          Après avoir dépensé 125 d'endurance, la prochaine attaque émet un cône
+          Après avoir dépensé 50 d'endurance, la prochaine attaque émet un cône
           de flammes qui inflige +200 de dégâts à chaque cible dans le cône.

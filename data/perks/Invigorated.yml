@@ -1,23 +1,56 @@
 name: Invigorated
-description: While below 50% of your maximum Stamina, gain +10/15/20/30/40/50% movement speed.
+description: >-
+  While below 50% of your maximum Stamina, gain +10/15/20/30/40/50% movement
+  speed.
 type: Alacrity
 key: WhileBelowHalfStaminaGainMovementSpeed
 effects:
-  1:
+  '1':
     description: While below 50% of your maximum Stamina, gain +10% movement speed.
     value: 1.1
-  2:
+  '2':
     description: While below 50% of your maximum Stamina, gain +15% movement speed.
     value: 1.15
-  3:
+  '3':
     description: While below 50% of your maximum Stamina, gain +20% movement speed.
     value: 1.2
-  4:
+  '4':
     description: While below 50% of your maximum Stamina, gain +30% movement speed.
     value: 1.3
-  5:
+  '5':
     description: While below 50% of your maximum Stamina, gain +40% movement speed.
     value: 1.4
-  6:
+  '6':
     description: While below 50% of your maximum Stamina, gain +50% movement speed.
     value: 1.5
+i18n:
+  fr:
+    name: Vivifié
+    description: >-
+      En dessous de 50 % de votre Endurance maximale, vous gagnez
+      +10/15/20/30/40/50 % de vitesse de déplacement.
+    effects:
+      '1':
+        description: >-
+          En dessous de 50 % de votre Endurance maximale, vous gagnez +10% de
+          vitesse de déplacement.
+      '2':
+        description: >-
+          En dessous de 50 % de votre Endurance maximale, vous gagnez +15% de
+          vitesse de déplacement.
+      '3':
+        description: >-
+          En dessous de 50 % de votre Endurance maximale, vous gagnez +20% de
+          vitesse de déplacement.
+      '4':
+        description: >-
+          En dessous de 50 % de votre Endurance maximale, vous gagnez +30% de
+          vitesse de déplacement.
+      '5':
+        description: >-
+          En dessous de 50 % de votre Endurance maximale, vous gagnez +40% de
+          vitesse de déplacement.
+      '6':
+        description: >-
+          En dessous de 50 % de votre Endurance maximale, vous gagnez +50% de
+          vitesse de déplacement.

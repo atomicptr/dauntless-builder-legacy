@@ -28,25 +28,25 @@ i18n:
     effects:
       '1':
         description: >-
-          Après avoir esquivé, gagnez +10% de vitesse de déplacement pendant 3
+          Après avoir esquivé, gagnez +10% de vitesse de déplacement pendant 10
           secondes
       '2':
         description: >-
-          Après avoir esquivé, gagnez +15% de vitesse de déplacement pendant 3
+          Après avoir esquivé, gagnez +15% de vitesse de déplacement pendant 10
           secondes
       '3':
         description: >-
-          Après avoir esquivé, gagnez +20% de vitesse de déplacement pendant 3
+          Après avoir esquivé, gagnez +20% de vitesse de déplacement pendant 10
           secondes
       '4':
         description: >-
-          Après avoir esquivé, gagnez +25% de vitesse de déplacement pendant 3
+          Après avoir esquivé, gagnez +25% de vitesse de déplacement pendant 10
           secondes
       '5':
         description: >-
-          Après avoir esquivé, gagnez +30% de vitesse de déplacement pendant 3
+          Après avoir esquivé, gagnez +30% de vitesse de déplacement pendant 10
           secondes
       '6':
         description: >-
-          Après avoir esquivé, gagnez +35% de vitesse de déplacement pendant 3
+          Après avoir esquivé, gagnez +35% de vitesse de déplacement pendant 10
           secondes

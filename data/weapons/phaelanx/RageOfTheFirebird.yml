@@ -57,11 +57,11 @@ i18n:
           dégâts de tous les autres missiles de la volée de 100, infliger des
           dégâts pour charger jusqu'à un maximum de 3 missiles supplémentaires.
           L'esquive tire tous les missiles chargés sur la partie verrouillée.
-          Temps de recharge de 90 secondes.
+          Temps de recharge de 45 secondes.
       - description: >-
           Attaquez une partie du Béhémoth verrouille et charger un missile à
           tête chercheuse. Le missile inflige 175 de dégâts et augmente les
-          dégâts de tous les autres missiles de la volée de 100, infliger des
+          dégâts de tous les autres missiles de la volée de 175, infliger des
           dégâts pour charger jusqu'à un maximum de 3 missiles supplémentaires.
           L'esquive tire tous les missiles chargés sur la partie verrouillée.
-          Temps de recharge de 90 secondes.
+          Temps de recharge de 45 secondes.
