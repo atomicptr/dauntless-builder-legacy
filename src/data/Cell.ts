@@ -9,12 +9,14 @@ export enum CellType {
     Insight = "Insight"
 }
 
+type Rarity = "uncommon" | "rare" | "epic";
+
 export interface Cell {
     name: string;
     slot: CellType;
     variants: {
         [cellVariant: string]: {
-            rarity: string;
+            rarity: Rarity;
             perks: {
                 [perkName: string]: number;
             }

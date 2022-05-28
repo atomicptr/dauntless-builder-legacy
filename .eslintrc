@@ -40,6 +40,7 @@
             { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
         ],
         "react/react-in-jsx-scope": 0,
-        "sort-keys-fix/sort-keys-fix": "error"
+        "sort-keys-fix/sort-keys-fix": "error",
+        "@typescript-eslint/no-unused-vars": 0
     }
 }

@@ -49,6 +49,12 @@ for (let category of Object.keys(data)) {
                         createItemTranslationIdentifier(category, itemName, "unique_effects", index, "description")
                     ] = ue.description;
                 }
+
+                if (ue.title) {
+                    i18nValues.en[
+                        createItemTranslationIdentifier(category, itemName, "unique_effects", index, "title")
+                    ] = ue.title;
+                }
             }
         }
 

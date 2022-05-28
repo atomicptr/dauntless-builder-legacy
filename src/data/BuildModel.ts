@@ -3,6 +3,11 @@ import Hashids from "hashids";
 import dauntlessBuilderData from "./Data";
 import dauntlessBuilderNamesMap, {NamesMapType} from "./NamesMap";
 import {Weapon, WeaponType} from "./Weapon";
+import {Omnicell} from "./Omnicell";
+import {Armour} from "./Armour";
+import {Lantern} from "./Lantern";
+import {Perk} from "./Perks";
+import {Cell} from "./Cell";
 
 const hashids = new Hashids("spicy");
 
@@ -45,7 +50,7 @@ export class BuildModel {
     public version: number = CURRENT_BUILD_ID;
     public flags = 0;
     public weaponName: string|null = null;
-    public weaponSurged = true;
+    public weaponSurged: boolean = true;
     public weaponPart1: string|null = null;
     public weaponPart2: string|null = null;
     public weaponPart3: string|null = null;
@@ -53,16 +58,16 @@ export class BuildModel {
     public weaponCell1: string|null = null;
     public weaponCell2: string|null = null;
     public torsoName: string|null = null;
-    public torsoSurged = true;
+    public torsoSurged: boolean = true;
     public torsoCell: string|null = null;
     public armsName: string|null = null;
-    public armsSurged = true;
+    public armsSurged: boolean = true;
     public armsCell: string|null = null;
     public legsName: string|null = null;
-    public legsSurged = true;
+    public legsSurged: boolean = true;
     public legsCell: string|null = null;
     public headName: string|null = null;
-    public headSurged = true;
+    public headSurged: boolean = true;
     public headCell: string|null = null;
     public lantern: string|null = null;
     public lanternCell: string|null = null;
@@ -70,7 +75,13 @@ export class BuildModel {
 
     get data() {
         return {
+            omnicell: this.omnicell !== null ? findOmnicellByName(this.omnicell) : null,
             weapon: this.weaponName !== null ? findWeaponByName(this.weaponName) : null,
+            head: this.headName !== null ? findArmourByName(this.headName) : null,
+            torso: this.torsoName !== null ? findArmourByName(this.torsoName) : null,
+            arms: this.armsName !== null ? findArmourByName(this.armsName) : null,
+            legs: this.legsName !== null ? findArmourByName(this.legsName) : null,
+            lantern: this.lantern !== null ? findLanternByName(this.lantern) : null,
         };
     }
 
@@ -109,8 +120,8 @@ export class BuildModel {
         return hashids.encode(...params);
     }
 
-    public static deserialize(buildString: string): BuildModel {
-        const data = hashids.decode(buildString) as number[];
+    public static deserialize(buildId: string): BuildModel {
+        const data = hashids.decode(buildId) as number[];
 
         const nameById = (type: NamesMapType, id: number): string|null => {
             if (id === 0) {
@@ -163,9 +174,9 @@ export class BuildModel {
         return build;
     }
 
-    public static tryDeserialize(buildString: string): BuildModel {
-        if (BuildModel.isValid(buildString)) {
-            return BuildModel.deserialize(buildString);
+    public static tryDeserialize(buildId: string): BuildModel {
+        if (BuildModel.isValid(buildId)) {
+            return BuildModel.deserialize(buildId);
         }
         return BuildModel.empty();
     }
@@ -174,8 +185,8 @@ export class BuildModel {
         return new BuildModel();
     }
 
-    public static isValid(buildString: string): boolean {
-        const data = hashids.decode(buildString);
+    public static isValid(buildId: string): boolean {
+        const data = hashids.decode(buildId);
 
         switch (data[BuildFields.Version]) {
             case 6:
@@ -186,8 +197,28 @@ export class BuildModel {
     }
 }
 
-export const findWeaponByName = (weaponName: string): Weapon|null =>
-    weaponName in dauntlessBuilderData.weapons ? dauntlessBuilderData.weapons[weaponName] : null;
+export const findWeaponByName = (name: string): Weapon|null =>
+    name in dauntlessBuilderData.weapons ? dauntlessBuilderData.weapons[name] : null;
+
+export const findOmnicellByName = (name: string): Omnicell|null =>
+    name in dauntlessBuilderData.omnicells ? dauntlessBuilderData.omnicells[name] : null;
+
+export const findArmourByName = (name: string): Armour|null =>
+    name in dauntlessBuilderData.armours ? dauntlessBuilderData.armours[name] : null;
+
+export const findLanternByName = (name: string): Lantern|null =>
+    name in dauntlessBuilderData.lanterns ? dauntlessBuilderData.lanterns[name] : null;
+
+export const findPerkByName = (name: string): Perk|null =>
+    name in dauntlessBuilderData.perks ? dauntlessBuilderData.perks[name] : null;
+
+export const findCellByVariantName = (name: string): Cell|null => {
+    const cellName = Object.keys(dauntlessBuilderData.cells).find(cellName => name in dauntlessBuilderData.cells[cellName].variants);
+    if (!cellName) {
+        return null;
+    }
+    return dauntlessBuilderData.cells[cellName];
+}
 
 export const mapIdByName = (type: NamesMapType, name: string): number => {
     if (!(type in dauntlessBuilderNamesMap)) {

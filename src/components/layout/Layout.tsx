@@ -24,7 +24,6 @@ import {
     ListItemText,
     Toolbar,
     Typography,
-    useMediaQuery,
     useTheme,
 } from "@mui/material";
 import React, { ReactNode, useState } from "react";
@@ -33,6 +32,7 @@ import { FaDiscord, FaGithub } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 import dauntlessBuilderData from "../../data/Data";
+import useIsMobile from "../../hooks/is-mobile";
 import DevMenu from "../dev-menu/DevMenu";
 import { drawerWidth } from "../theme/theme";
 import { AppBar } from "./AppBar";
@@ -44,7 +44,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
     const theme = useTheme();
-    const isMobile = useMediaQuery("(max-width: 760px)");
+    const isMobile = useIsMobile();
     const [open, setOpen] = useState(false);
     const { t } = useTranslation();
 

@@ -2,6 +2,7 @@ import dataJson from "../../dist/data.json";
 import {Armour} from "./Armour";
 import {Cell} from "./Cell";
 import {Lantern} from "./Lantern";
+import { Omnicell } from "./Omnicell";
 import {Part} from "./Part";
 import {Perk} from "./Perks";
 import {Weapon} from "./Weapon";
@@ -67,6 +68,9 @@ interface DauntlessBuilderData {
             };
         }
     },
+    omnicells: {
+        [name: string]: Omnicell;
+    }
     misc: {
         dauntless_version: string;
         patchnotes_version_string: string;

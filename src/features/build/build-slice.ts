@@ -1,30 +1,31 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
+import { BuildModel } from "../../data/BuildModel";
 import { RootState } from "../../store";
 
 interface BuildState {
-    build: boolean | null;
+    build: string;
 }
 
 const initialState: BuildState = {
-    build: null,
+    build: BuildModel.empty().serialize(),
 };
 
 export const buildSlice = createSlice({
     initialState,
     name: "build",
     reducers: {
-        deleteBuild: state => {
-            state.build = null;
+        clearBuild: state => {
+            state.build = BuildModel.empty().serialize();
         },
-        updateBuild: (state, action: PayloadAction<boolean>) => {
+        setBuildId: (state, action: PayloadAction<string>) => {
             state.build = action.payload;
         },
     },
 });
 
-export const { deleteBuild, updateBuild } = buildSlice.actions;
+export const { clearBuild, setBuildId } = buildSlice.actions;
 
-export const selectBuild = (state: RootState) => state.build.build;
+export const selectBuild = (state: RootState): BuildModel => BuildModel.deserialize(state.build.build);
 
 export default buildSlice.reducer;
