@@ -1,13 +1,13 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
-import ViteFaviconsPlugin from "vite-plugin-favicon";
+import ViteFaviconsPlugin from "vite-plugin-favicon2";
 import { VitePWA } from "vite-plugin-pwa";
 
-export default defineConfig(({ command, mode }) => {
-    const isBuild = command === "build";
+export default defineConfig(({ mode }) => {
     const isDevMode = mode === "development";
 
     return {
+        base: "/",
         build: {
             assetsDir: "assets",
             minify: !isDevMode,
@@ -20,7 +20,16 @@ export default defineConfig(({ command, mode }) => {
         plugins: [
             react(),
             VitePWA({}),
-            isBuild ? ViteFaviconsPlugin("./public/assets/icon.png") : null, // https://github.com/josh-hemphill/vite-plugin-favicon/pull/4
+            ViteFaviconsPlugin({
+                favicons: {
+                    appDescription: "Create and share Dauntless builds with your friends!",
+                    appName: "Dauntless Builder",
+                    appleStatusBarStyle: "black-translucent",
+                    background: "#121212",
+                    theme_color: "#3f51b5",
+                },
+                logo: "public/assets/icon.png",
+            }),
         ],
     };
 });

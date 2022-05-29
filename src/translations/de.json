@@ -1,12 +1,11 @@
 {
-    "drawer.home": "Startseite",
-    "drawer.new-build": "Neuer Build",
-    "drawer.my-builds": "Meine Builds",
     "drawer.build-finder": "Build Finder",
+    "drawer.home": "Startseite",
     "drawer.meta-builds": "Meta Builds",
+    "drawer.my-builds": "Meine Builds",
+    "drawer.new-build": "Neuer Build",
     "drawer.settings": "Einstellungen",
-
-    "pages.settings.title": "Einstellungen",
     "pages.home.title": "Startseite",
-    "pages.settings.language": "Sprache"
+    "pages.settings.language": "Sprache",
+    "pages.settings.title": "Einstellungen"
 }

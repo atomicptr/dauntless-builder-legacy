@@ -154,14 +154,14 @@ Promise.all([
 
     stringMap = sortByKey(stringMap);
 
-    const mapString = JSON.stringify(stringMap, null, "    ");
-
-    fs.writeFileSync(`./.map/names.json`, mapString);
+    // store a nicer version in the repository
+    fs.writeFileSync(`./.map/names.json`, JSON.stringify(stringMap, null, "    ") + "\n");
 
     if (!fs.existsSync("./public/map")) {
         fs.mkdirSync("./public/map");
     }
 
+    const mapString = JSON.stringify(stringMap);
     fs.writeFileSync(`./public/map/names.json`, mapString);
 
     fs.writeFileSync(

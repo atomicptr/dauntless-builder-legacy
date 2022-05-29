@@ -1,8 +1,13 @@
 {
-    "drawer.new-build": "Nouveau",
     "drawer.my-builds": "Mes builds",
+    "drawer.new-build": "Nouveau",
     "drawer.settings": "Paramètres",
-
+    "pages.newbuild.title": "Creer un build",
     "pages.settings.title": "Paramètres",
-    "pages.newbuild.title": "Creer un build"
+    "terms.arms-armour": "Gants",
+    "terms.head-armour": "Casque",
+    "terms.lantern": "Lanterne",
+    "terms.legs-armour": "Grèves",
+    "terms.torso-armour": "Torse",
+    "terms.weapon": "Arme"
 }
