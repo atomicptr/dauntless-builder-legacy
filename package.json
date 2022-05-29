@@ -22,7 +22,7 @@
         "@mui/material": "^5.8.1",
         "@reduxjs/toolkit": "^1.8.2",
         "hashids": "^2.2.10",
-        "i18next": "^21.8.4",
+        "i18next": "^21.8.5",
         "i18next-browser-languagedetector": "^6.1.4",
         "md5": "^2.3.0",
         "react": "^18.1.0",
