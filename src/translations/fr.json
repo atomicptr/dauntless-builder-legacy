@@ -4,10 +4,13 @@
     "drawer.settings": "Paramètres",
     "pages.newbuild.title": "Creer un build",
     "pages.settings.title": "Paramètres",
+    "terms-power": "Puissance",
     "terms.arms-armour": "Gants",
     "terms.head-armour": "Casque",
     "terms.lantern": "Lanterne",
     "terms.legs-armour": "Grèves",
+    "terms.perks": "Effet",
+    "terms.resistance": "Resistance",
     "terms.torso-armour": "Torse",
     "terms.weapon": "Arme"
 }
