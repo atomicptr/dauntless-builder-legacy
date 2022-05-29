@@ -1,17 +1,4 @@
 {
-    "root": true,
-    "parser": "@typescript-eslint/parser",
-    "settings": {
-        "react": {
-            "version": "detect"
-        }
-    },
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        }
-    },
-    "plugins": ["react", "@typescript-eslint", "simple-import-sort", "unused-imports", "sort-keys-fix"],
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
@@ -19,28 +6,81 @@
         "plugin:react/jsx-runtime",
         "plugin:react/recommended"
     ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "simple-import-sort",
+        "unused-imports",
+        "sort-keys-fix"
+    ],
+    "root": true,
     "rules": {
-        "indent": ["error", 4, { "SwitchCase": 1 }],
-        "linebreak-style": 1,
-        "quotes": ["error", "double"],
-        "semi": "off",
-        "@typescript-eslint/semi": ["error"],
-        "no-console": 0,
+        "@typescript-eslint/no-unused-vars": 0,
+        "@typescript-eslint/semi": [
+            "error"
+        ],
         "curly": "error",
-        "strict": ["error", "global"],
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "linebreak-style": 1,
+        "no-console": 0,
         "no-new": "error",
         "prefer-const": 2,
-        "sort-keys": ["error", "asc", { "caseSensitive": true, "natural": true, "minKeys": 2 }],
-        "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
-        "react/prefer-stateless-function": [2],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "react/jsx-tag-spacing": [
+            "error",
+            {
+                "beforeSelfClosing": "always"
+            }
+        ],
+        "react/prefer-stateless-function": [
+            2
+        ],
+        "react/react-in-jsx-scope": 0,
+        "semi": "off",
         "simple-import-sort/imports": "error",
+        "sort-keys": [
+            "error",
+            "asc",
+            {
+                "caseSensitive": true,
+                "minKeys": 2,
+                "natural": true
+            }
+        ],
+        "sort-keys-fix/sort-keys-fix": "error",
+        "strict": [
+            "error",
+            "global"
+        ],
         "unused-imports/no-unused-imports": "error",
         "unused-imports/no-unused-vars": [
             "error",
-            { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
-        ],
-        "react/react-in-jsx-scope": 0,
-        "sort-keys-fix/sort-keys-fix": "error",
-        "@typescript-eslint/no-unused-vars": 0
+            {
+                "args": "after-used",
+                "argsIgnorePattern": "^_",
+                "vars": "all",
+                "varsIgnorePattern": "^_"
+            }
+        ]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }

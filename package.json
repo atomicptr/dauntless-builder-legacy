@@ -12,8 +12,8 @@
         "build:frontend": "vite build",
         "dev": "vite dev",
         "deploy": "yarn build && ./scripts/deploy.sh",
-        "lint": "prettier . --check && jsonsort -i 4 -c src/translations/*.json && eslint .",
-        "lint:fix": "prettier . --write && jsonsort -i 4 src/translations/*.json && eslint . --fix"
+        "lint": "prettier . --check && jsonsort -i 4 -c src/translations/*.json .eslintrc && eslint .",
+        "lint:fix": "prettier . --write && jsonsort -i 4 src/translations/*.json .eslintrc && eslint . --fix"
     },
     "dependencies": {
         "@emotion/react": "^11.9.0",
