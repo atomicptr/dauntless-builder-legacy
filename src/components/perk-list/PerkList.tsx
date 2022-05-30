@@ -23,6 +23,7 @@ const PerkList: React.FC = () => {
     build.data.torso?.perks?.filter(filterSurged(build.torsoSurged)).forEach(addPerk);
     build.data.arms?.perks?.filter(filterSurged(build.armsSurged)).forEach(addPerk);
     build.data.legs?.perks?.filter(filterSurged(build.legsSurged)).forEach(addPerk);
+    build.data.bondWeapon?.perks?.filter(filterSurged(build.weaponSurged)).forEach(addPerk);
 
     [
         build.weaponCell1,

@@ -9,6 +9,7 @@ import {Lantern} from "./Lantern";
 import {Perk} from "./Perks";
 import {Cell} from "./Cell";
 import {match} from "ts-pattern";
+import {Part, PartType} from "./Part";
 
 const hashids = new Hashids("spicy");
 
@@ -83,6 +84,33 @@ export class BuildModel {
             arms: this.armsName !== null ? findArmourByName(this.armsName) : null,
             legs: this.legsName !== null ? findArmourByName(this.legsName) : null,
             lantern: this.lantern !== null ? findLanternByName(this.lantern) : null,
+            parts: this.partData,
+            bondWeapon: this.bondWeapon !== null ? findWeaponByName(this.bondWeapon) : null,
+        };
+    }
+
+    private get partData() {
+        if (this.weaponName === null) {
+            return null;
+        }
+
+        const weapon = findWeaponByName(this.weaponName);
+
+        if (weapon === null) {
+            return null;
+        }
+
+        if (weapon.type === WeaponType.Repeater) {
+            return {
+                mod: findPartInBuild(weapon.type, PartType.Mod, this),
+                grip: findPartInBuild(weapon.type, PartType.Grip, this),
+                chamber: findPartInBuild(weapon.type, PartType.Chamber, this),
+            };
+        }
+
+        return {
+            mod: findPartInBuild(weapon.type, PartType.Mod, this),
+            special: findPartInBuild(weapon.type, PartType.Special, this),
         };
     }
 
@@ -209,6 +237,110 @@ export const findLanternByName = (name: string): Lantern|null =>
 
 export const findPerkByName = (name: string): Perk|null =>
     name in dauntlessBuilderData.perks ? dauntlessBuilderData.perks[name] : null;
+
+export const findPartByName = (weaponType: WeaponType, partType: PartType, name: string): Part|null => {
+    // there is probably a better way to do this while making the typescript compiler happy
+    return match(weaponType)
+        .with(WeaponType.AetherStrikers, () => {
+            if (partType === PartType.Mod) {
+                return dauntlessBuilderData.parts.aetherstrikers.mods[name];
+            }
+
+            if (partType === PartType.Special) {
+                return dauntlessBuilderData.parts.aetherstrikers.specials[name];
+            }
+
+            return null;
+        })
+        .with(WeaponType.Axe, () => {
+            if (partType === PartType.Mod) {
+                return dauntlessBuilderData.parts.aetherstrikers.mods[name];
+            }
+
+            if (partType === PartType.Special) {
+                return dauntlessBuilderData.parts.aetherstrikers.specials[name];
+            }
+
+            return null;
+        })
+        .with(WeaponType.ChainBlades, () => {
+            if (partType === PartType.Mod) {
+                return dauntlessBuilderData.parts.chainblades.mods[name];
+            }
+
+            if (partType === PartType.Special) {
+                return dauntlessBuilderData.parts.chainblades.specials[name];
+            }
+
+            return null;
+        })
+        .with(WeaponType.Hammer, () => {
+            if (partType === PartType.Mod) {
+                return dauntlessBuilderData.parts.hammer.mods[name];
+            }
+
+            if (partType === PartType.Special) {
+                return dauntlessBuilderData.parts.hammer.specials[name];
+            }
+
+            return null;
+        })
+        .with(WeaponType.Repeater, () => {
+            if (partType === PartType.Mod) {
+                return dauntlessBuilderData.parts.repeater.mods[name];
+            }
+
+            if (partType === PartType.Chamber) {
+                return dauntlessBuilderData.parts.repeater.chambers[name];
+            }
+
+            if (partType === PartType.Grip) {
+                return dauntlessBuilderData.parts.repeater.grips[name];
+            }
+
+            return null;
+        })
+        .with(WeaponType.Sword, () => {
+            if (partType === PartType.Mod) {
+                return dauntlessBuilderData.parts.sword.mods[name];
+            }
+
+            if (partType === PartType.Special) {
+                return dauntlessBuilderData.parts.sword.specials[name];
+            }
+
+            return null;
+        })
+        .with(WeaponType.WarPike, () => {
+            if (partType === PartType.Mod) {
+                return dauntlessBuilderData.parts.warpike.mods[name];
+            }
+
+            if (partType === PartType.Special) {
+                return dauntlessBuilderData.parts.warpike.specials[name];
+            }
+
+            return null;
+        })
+        .run();
+}
+
+export const findPartInBuild = (weaponType: WeaponType, partType: PartType, build: BuildModel): Part|null => {
+    const isRepeater = weaponType === WeaponType.Repeater;
+
+    const partName = match(partType)
+        .with(PartType.Mod, () => isRepeater ? build.weaponPart3 : build.weaponPart2)
+        .with(PartType.Special, () => isRepeater ? null : build.weaponPart1)
+        .with(PartType.Chamber, () => isRepeater ? build.weaponPart1 : null )
+        .with(PartType.Grip, () => isRepeater ? build.weaponPart2 : null )
+        .run();
+
+    if (partName === null) {
+        return null;
+    }
+
+    return findPartByName(weaponType, partType, partName);
+}
 
 export const findCellByVariantName = (name: string): Cell|null => {
     const cellName = Object.keys(dauntlessBuilderData.cells).find(cellName => name in dauntlessBuilderData.cells[cellName].variants);

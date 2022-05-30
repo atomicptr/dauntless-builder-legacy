@@ -1,41 +1,42 @@
 import { Star } from "@mui/icons-material";
 import { Box, Card, CardActionArea, CardContent, CardMedia, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { match } from "ts-pattern";
 
 import { Armour } from "../../data/Armour";
-import { BuildModel } from "../../data/BuildModel";
-import { CellType } from "../../data/Cell";
-import { ItemType } from "../../data/ItemType";
+import { isArmourType, ItemType } from "../../data/ItemType";
 import { Lantern } from "../../data/Lantern";
 import { Omnicell } from "../../data/Omnicell";
 import { Weapon } from "../../data/Weapon";
-import { selectBuild } from "../../features/build/build-slice";
 import useIsMobile from "../../hooks/is-mobile";
-import { useAppSelector } from "../../hooks/redux";
-import { ttry } from "../../i18n";
-import { renderItemText } from "../../utils/item-text-renderer";
 import { itemTranslationIdentifier } from "../../utils/item-translation-identifier";
 import { itemPickerDefaultImageSize } from "../theme/theme";
-import CellPicker from "./CellPicker";
 import PerksText from "./PerksText";
+
+export type ItemPickerItem = Weapon | Armour | Lantern | Omnicell | null;
 
 interface ItemPickerProps {
     type: ItemType;
+    item: ItemPickerItem;
+    isPowerSurged?: boolean;
     onClick: (itemType: ItemType) => void;
-    withCellPicker?: boolean;
-    onCellClicked?: (itemType: ItemType, cellType: CellType, index: number) => void;
+
+    componentsOnSide?: (item: ItemPickerItem, itemType: ItemType) => ReactNode;
+    componentsBelow?: (item: ItemPickerItem, itemType: ItemType) => ReactNode;
 }
 
 const imageSize = itemPickerDefaultImageSize;
 
-const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, onCellClicked }) => {
-    const build = useAppSelector(selectBuild);
+const ItemPicker: React.FC<ItemPickerProps> = ({
+    type,
+    item,
+    isPowerSurged,
+    onClick,
+    componentsOnSide,
+    componentsBelow,
+}) => {
     const { t } = useTranslation();
-
-    const data = currentBuildDataByType(build, type);
-    const isArmor = [ItemType.Head, ItemType.Torso, ItemType.Arms, ItemType.Legs].indexOf(type) >= 0;
 
     const isMobile = useIsMobile();
 
@@ -54,7 +55,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, 
         onClick(type);
     };
 
-    if (data === null) {
+    if (item === null) {
         return (
             <Card sx={{ mb: 1 }}>
                 <CardActionArea
@@ -72,26 +73,22 @@ const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, 
                             component="div"
                             variant="h5"
                             sx={{ mb: 1 }}>
-                            No <b>{typeName(type)}</b> selected.
+                            <span
+                                dangerouslySetInnerHTML={{
+                                    __html: t("pages.build.no-x-selected", { name: typeName(type) }),
+                                }}></span>
                         </Typography>
                         <Typography
                             variant="subtitle1"
                             color="text.secondary"
                             component="div">
-                            Click here to select one.
+                            {t("pages.build.click-here-to-select")}
                         </Typography>
                     </Box>
                 </CardActionArea>
             </Card>
         );
     }
-
-    const isPowerSurged =
-        (type === ItemType.Weapon && build.weaponSurged) ||
-        (type === ItemType.Head && build.headSurged) ||
-        (type === ItemType.Torso && build.torsoSurged) ||
-        (type === ItemType.Arms && build.armsSurged) ||
-        (type === ItemType.Legs && build.legsSurged);
 
     return (
         <>
@@ -100,14 +97,14 @@ const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, 
                 spacing={isMobile ? 0 : 1}>
                 <Card sx={{ mb: 1, userSelect: "none", width: "100%" }}>
                     <CardActionArea
-                        sx={{ display: "flex", justifyContent: "flex-start" }}
+                        sx={{ display: "flex", height: "100%", justifyContent: "flex-start" }}
                         onClick={onItemSelected}>
                         <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
                             <CardMedia
                                 component="img"
                                 sx={{ height: imageSize, width: imageSize }}
-                                image={data.icon ?? "/assets/noicon.png"}
-                                alt={t(itemTranslationIdentifier(type, data.name, "name"))}
+                                image={item.icon ?? "/assets/noicon.png"}
+                                alt={t(itemTranslationIdentifier(type, item.name, "name"))}
                             />
                         </Box>
                         <Box sx={{ display: "flex", flexDirection: "column" }}>
@@ -119,7 +116,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, 
                                         component="div"
                                         variant="h5"
                                         sx={{ alignItems: "center", display: "flex", mb: 1 }}>
-                                        {t(itemTranslationIdentifier(type, data.name, "name"))}
+                                        {t(itemTranslationIdentifier(type, item.name, "name"))}
                                         {isPowerSurged ? <Star sx={{ ml: 1 }} /> : null}
                                     </Typography>
                                 </Box>
@@ -130,15 +127,15 @@ const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, 
                                             variant="subtitle1"
                                             color="text.secondary"
                                             component="div">
-                                            <b>{t("terms.power")}</b>: {(data as Weapon).power[isPowerSurged ? 1 : 0]}
+                                            <b>{t("terms.power")}</b>: {(item as Weapon).power[isPowerSurged ? 1 : 0]}
                                         </Typography>
-                                        {((data as Weapon)?.perks ?? []).length > 0 ? (
+                                        {((item as Weapon)?.perks ?? []).length > 0 ? (
                                             <Typography
                                                 variant="subtitle1"
                                                 color="text.secondary"
                                                 component="div">
                                                 <PerksText
-                                                    perks={(data as Weapon)?.perks ?? []}
+                                                    perks={(item as Weapon)?.perks ?? []}
                                                     itemSurged={isPowerSurged}
                                                 />
                                             </Typography>
@@ -146,22 +143,22 @@ const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, 
                                     </>
                                 ) : null}
 
-                                {isArmor ? (
+                                {isArmourType(type) ? (
                                     <>
                                         <Typography
                                             variant="subtitle1"
                                             color="text.secondary"
                                             component="div">
                                             <b>{t("terms.resistance")}</b>:{" "}
-                                            {(data as Armour).resistance[isPowerSurged ? 1 : 0]}
+                                            {(item as Armour).resistance[isPowerSurged ? 1 : 0]}
                                         </Typography>
-                                        {((data as Armour)?.perks ?? []).length > 0 ? (
+                                        {((item as Armour)?.perks ?? []).length > 0 ? (
                                             <Typography
                                                 variant="subtitle1"
                                                 color="text.secondary"
                                                 component="div">
                                                 <PerksText
-                                                    perks={(data as Armour)?.perks ?? []}
+                                                    perks={(item as Armour)?.perks ?? []}
                                                     itemSurged={isPowerSurged}
                                                 />
                                             </Typography>
@@ -174,7 +171,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, 
                                         variant="subtitle1"
                                         color="text.secondary"
                                         component="div">
-                                        <b>{t("terms.hold")}</b>: {(data as Lantern).lantern_ability.hold}
+                                        <b>{t("terms.hold")}</b>: {(item as Lantern).lantern_ability.hold}
                                     </Typography>
                                 ) : null}
 
@@ -183,7 +180,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, 
                                         variant="subtitle1"
                                         color="text.secondary"
                                         component="div">
-                                        <b>{t("terms.passive")}</b>: {(data as Omnicell).passive}
+                                        <b>{t("terms.passive")}</b>: {(item as Omnicell).passive}
                                     </Typography>
                                 ) : null}
                             </CardContent>
@@ -191,139 +188,12 @@ const ItemPicker: React.FC<ItemPickerProps> = ({ type, onClick, withCellPicker, 
                     </CardActionArea>
                 </Card>
 
-                {withCellPicker && (type === ItemType.Weapon || isArmor || type === ItemType.Lantern)
-                    ? (Array.isArray((data as Weapon | Armour | Lantern | null)?.cells)
-                        ? ((data as Weapon | Armour | Lantern | null)?.cells as CellType[]) ?? []
-                        : [(data as Weapon | Armour | Lantern | null)?.cells]
-                    ).map((cellType, index) =>
-                        cellType ? (
-                            <CellPicker
-                                key={index}
-                                index={index}
-                                itemType={type}
-                                cellType={cellType as CellType}
-                                onClicked={onCellClicked}
-                            />
-                        ) : null,
-                    )
-                    : null}
+                {componentsOnSide ? componentsOnSide(item, type) : null}
             </Stack>
-            {type === ItemType.Weapon || isArmor
-                ? (data as Weapon | Armour).unique_effects?.map((ue, index) => (
-                    <Card
-                        key={index}
-                        sx={{ alignItems: "center", display: "flex", mb: 1, userSelect: "none" }}>
-                        {ue.icon ? (
-                            <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
-                                <CardMedia
-                                    component="img"
-                                    sx={{ height: imageSize, width: imageSize }}
-                                    image={ue.icon}
-                                    alt={ttry(
-                                        itemTranslationIdentifier(
-                                            type,
-                                            data.name,
-                                            "unique_effects",
-                                            index.toString(),
-                                            "title",
-                                        ),
-                                        "terms.unique-effect",
-                                    )}
-                                />
-                            </Box>
-                        ) : null}
-                        <Box sx={{ display: "flex", flexDirection: "column" }}>
-                            <CardContent sx={{ flex: "1 0 auto" }}>
-                                <Box
-                                    display="flex"
-                                    alignItems="center">
-                                    <Typography
-                                        component="div"
-                                        variant="h6"
-                                        sx={{ mb: 1 }}>
-                                        {t(itemTranslationIdentifier(type, data.name, "name"))}{" "}
-                                        {ttry(
-                                            itemTranslationIdentifier(
-                                                type,
-                                                data.name,
-                                                "unique_effects",
-                                                index.toString(),
-                                                "title",
-                                            ),
-                                            "terms.unique-effect",
-                                        )}
-                                    </Typography>
-                                </Box>
-                                <Typography
-                                    variant="subtitle1"
-                                    color="text.secondary"
-                                    component="div">
-                                    {renderItemText(
-                                        t(
-                                            itemTranslationIdentifier(
-                                                type,
-                                                data.name,
-                                                "unique_effects",
-                                                index.toString(),
-                                                "description",
-                                            ),
-                                        ),
-                                    )}
-                                </Typography>
-                            </CardContent>
-                        </Box>
-                    </Card>
-                ))
-                : null}
 
-            {type === ItemType.Omnicell ? (
-                <Card sx={{ alignItems: "center", display: "flex", mb: 1, userSelect: "none" }}>
-                    <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
-                        <CardMedia
-                            component="img"
-                            sx={{ height: imageSize, width: imageSize }}
-                            image={(data as Omnicell).ability_icon ?? "/assets/noicon.png"}
-                            alt={`${t(itemTranslationIdentifier(type, data.name, "name"))} ${t(
-                                "terms.active-ability",
-                            )}`}
-                        />
-                    </Box>
-                    <Box sx={{ display: "flex", flexDirection: "column" }}>
-                        <CardContent sx={{ flex: "1 0 auto" }}>
-                            <Box
-                                display="flex"
-                                alignItems="center">
-                                <Typography
-                                    component="div"
-                                    variant="h5"
-                                    sx={{ mb: 1 }}>
-                                    {t(itemTranslationIdentifier(type, data.name, "name"))} {t("terms.active-ability")}
-                                </Typography>
-                            </Box>
-                            <Typography
-                                variant="subtitle1"
-                                color="text.secondary"
-                                component="div">
-                                <b>{t("terms.active")}</b>:{" "}
-                                {renderItemText(t(itemTranslationIdentifier(type, data.name, "active")))}
-                            </Typography>
-                        </CardContent>
-                    </Box>
-                </Card>
-            ) : null}
+            {componentsBelow ? componentsBelow(item, type) : null}
         </>
     );
 };
-
-const currentBuildDataByType = (build: BuildModel, type: ItemType): Weapon | Armour | Lantern | Omnicell | null =>
-    match(type)
-        .with(ItemType.Weapon, () => build.data.weapon)
-        .with(ItemType.Head, () => build.data.head)
-        .with(ItemType.Torso, () => build.data.torso)
-        .with(ItemType.Arms, () => build.data.arms)
-        .with(ItemType.Legs, () => build.data.legs)
-        .with(ItemType.Lantern, () => build.data.lantern)
-        .with(ItemType.Omnicell, () => build.data.omnicell)
-        .otherwise(() => null);
 
 export default ItemPicker;

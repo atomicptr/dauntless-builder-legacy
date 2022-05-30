@@ -36,6 +36,13 @@ const Home: React.FC = () => {
                     to={"/b/LWfOTy0uzCzTdTZTvTQT5TzpIMCrbUgWcdCeyCngHMCKtBRt2CZKFkfzgsw"}>
                     Test Build #2 - Artificer / Twin Suns
                 </Button>
+
+                <Button
+                    component={NavLink}
+                    variant="outlined"
+                    to={"/b/Brf8TNQi3C1yfjqUViOhjIWOsJaFkCdBU71SVC6KFgtJCL8UjxtOCjwuEu2Oc3"}>
+                    Test Build #3 - Discipline / Tainted Needles
+                </Button>
             </Stack>
         </>
     );

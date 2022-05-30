@@ -3,6 +3,7 @@ import {CellType} from "./Cell";
 import {ElementalType} from "./ElementalType";
 import {PerkValue} from "./Perks";
 import {UniqueEffect} from "./UniqueEffect";
+import {ItemRarity} from "./ItemRarity";
 
 export enum ArmourType {
     Torso = "Torso",
@@ -27,6 +28,7 @@ export interface Armour {
     resistance: ResistanceLevel;
     perks?: PerkValue[];
     unique_effects?: UniqueEffect[];
+    rarity?: ItemRarity;
 
     i18n?: {
         [language in Language]: {

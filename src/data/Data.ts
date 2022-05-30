@@ -56,6 +56,14 @@ interface DauntlessBuilderData {
                 [name: string]: Part;
             };
         }
+        sword: {
+            mods: {
+                [name: string]: Part;
+            };
+            specials: {
+                [name: string]: Part;
+            };
+        }
         repeater: {
             chambers: {
                 [name: string]: Part;
@@ -64,6 +72,14 @@ interface DauntlessBuilderData {
                 [name: string]: Part;
             };
             mods: {
+                [name: string]: Part;
+            };
+        }
+        warpike: {
+            mods: {
+                [name: string]: Part;
+            };
+            specials: {
                 [name: string]: Part;
             };
         }

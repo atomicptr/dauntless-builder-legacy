@@ -20,7 +20,9 @@
             "not-found": "Page Not Found"
         },
         "build": {
+            "click-here-to-select": "Click here to select one.",
             "no-perks": "No perks found.",
+            "no-x-selected": "No <b>{{name}}</b> selected.",
             "title": "{{weaponName}} {{omnicell}} Build"
         },
         "home": {
@@ -43,6 +45,12 @@
         "lantern": "Lantern",
         "legs-armour": "Legs Armour",
         "omnicell": "Omnicell",
+        "parts": {
+            "chamber": "Chamber",
+            "grip": "Grip",
+            "mod": "Mod",
+            "special": "Special"
+        },
         "passive": "Passive",
         "perks": "Perks",
         "power": "Power",

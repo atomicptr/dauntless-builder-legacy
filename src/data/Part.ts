@@ -1,4 +1,12 @@
 import {Language} from "../i18n";
+import {match} from "ts-pattern";
+
+export enum PartType {
+    Mod,
+    Special,
+    Chamber,
+    Grip,
+}
 
 export interface Part {
     name: string;
@@ -12,3 +20,11 @@ export interface Part {
         }
     }
 }
+
+export const partBuildIdentifier = (partType: PartType): string =>
+    match(partType)
+        .with(PartType.Mod, () => "mods")
+        .with(PartType.Special, () => "specials")
+        .with(PartType.Chamber, () => "chambers")
+        .with(PartType.Grip, () => "grips")
+        .run();

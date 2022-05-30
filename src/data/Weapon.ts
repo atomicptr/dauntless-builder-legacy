@@ -3,6 +3,8 @@ import {CellType} from "./Cell";
 import {ElementalType} from "./ElementalType";
 import {PerkValue} from "./Perks";
 import {UniqueEffect} from "./UniqueEffect";
+import {match} from "ts-pattern";
+import {ItemRarity} from "./ItemRarity";
 
 export enum WeaponType {
     AetherStrikers = "Aether Strikers",
@@ -36,6 +38,7 @@ export interface Weapon {
     bond: ElementalType | null;
     perks?: PerkValue[];
     unique_effects?: UniqueEffect[];
+    rarity?: ItemRarity;
 
     i18n?: {
         [language in Language]: {
@@ -48,3 +51,14 @@ export interface Weapon {
         }
     }
 }
+
+export const weaponBuildIdentifier = (weaponType: WeaponType): string =>
+    match(weaponType)
+        .with(WeaponType.AetherStrikers, () => "aetherstrikers")
+        .with(WeaponType.Axe, () => "axe")
+        .with(WeaponType.ChainBlades, () => "chainblades")
+        .with(WeaponType.Hammer, () => "hammer")
+        .with(WeaponType.Repeater, () => "repeater")
+        .with(WeaponType.Sword, () => "sword")
+        .with(WeaponType.WarPike, () => "warpike")
+        .run();
