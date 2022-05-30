@@ -1,11 +1,19 @@
 {
-    "drawer.build-finder": "Build Finder",
-    "drawer.home": "Startseite",
-    "drawer.meta-builds": "Meta Builds",
-    "drawer.my-builds": "Meine Builds",
-    "drawer.new-build": "Neuer Build",
-    "drawer.settings": "Einstellungen",
-    "pages.home.title": "Startseite",
-    "pages.settings.language": "Sprache",
-    "pages.settings.title": "Einstellungen"
+    "drawer": {
+        "build-finder": "Build Finder",
+        "home": "Startseite",
+        "meta-builds": "Meta Builds",
+        "my-builds": "Meine Builds",
+        "new-build": "Neuer Build",
+        "settings": "$t(pages.settings.title)"
+    },
+    "pages": {
+        "home": {
+            "title": "Startseite"
+        },
+        "settings": {
+            "language": "Sprache",
+            "title": "Einstellungen"
+        }
+    }
 }

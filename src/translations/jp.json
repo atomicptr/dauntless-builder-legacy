@@ -1,7 +1,13 @@
 {
-    "drawer.home": "ホーム",
-    "drawer.my-builds": "マイビルド",
-    "drawer.new-build": "ビルドを作る",
-    "drawer.settings": "設定",
-    "pages.settings.title": "設定"
+    "drawer": {
+        "home": "ホーム",
+        "my-builds": "マイビルド",
+        "new-build": "ビルドを作る",
+        "settings": "$t(pages.settings.title)"
+    },
+    "pages": {
+        "settings": {
+            "title": "設定"
+        }
+    }
 }

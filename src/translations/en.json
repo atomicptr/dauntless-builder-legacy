@@ -1,32 +1,54 @@
 {
-    "alert.translation-warning": "You're currently viewing this page with your language set to <b>{{languageName}}</b>, translations are currently in beta and are very spotty. If you speak this language, please consider <a style=\"color: #fff;\" target=\"_blank\" href=\"https://github.com/atomicptr/dauntless-builder/blob/master/docs/contributing/Translation.md\">contributing to the translation efforts</a>.",
-    "appbar.dev-menu.translation-check": "Translation Check",
-    "drawer.build-finder": "Build Finder",
-    "drawer.home": "Home",
-    "drawer.meta-builds": "Meta Builds",
-    "drawer.my-builds": "My Builds",
-    "drawer.new-build": "New Build",
-    "drawer.settings": "Settings",
-    "pages.404.not-found": "Page Not Found",
-    "pages.build.no-perks": "No perks found.",
-    "pages.build.title": "{{weaponName}} {{omnicell}} Build",
-    "pages.home.title": "Home",
-    "pages.newbuild.title": "Create a new build",
-    "pages.settings.language": "Language",
-    "pages.settings.title": "Settings",
-    "terms.active": "Active",
-    "terms.active-ability": "Active Ability",
-    "terms.arms-armour": "Arms Armour",
-    "terms.head-armour": "Head Armour",
-    "terms.hold": "Hold",
-    "terms.lantern": "Lantern",
-    "terms.legs-armour": "Legs Armour",
-    "terms.omnicell": "Omnicell",
-    "terms.passive": "Passive",
-    "terms.perks": "Perks",
-    "terms.power": "Power",
-    "terms.resistance": "Resistance",
-    "terms.torso-armour": "Torso Armour",
-    "terms.unique-effect": "Unique Effect",
-    "terms.weapon": "Weapon"
+    "alert": {
+        "translation-warning": "You're currently viewing this page with your language set to <b>{{languageName}}</b>, translations are currently in beta and are very spotty. If you speak this language, please consider <a style=\"color: #fff;\" target=\"_blank\" href=\"https://github.com/atomicptr/dauntless-builder/blob/master/docs/contributing/Translation.md\">contributing to the translation efforts</a>."
+    },
+    "appbar": {
+        "dev-menu": {
+            "translation-check": "Translation Check"
+        }
+    },
+    "drawer": {
+        "build-finder": "Build Finder",
+        "home": "Home",
+        "meta-builds": "Meta Builds",
+        "my-builds": "My Builds",
+        "new-build": "New Build",
+        "settings": "$t(pages.settings.title)"
+    },
+    "pages": {
+        "404": {
+            "not-found": "Page Not Found"
+        },
+        "build": {
+            "no-perks": "No perks found.",
+            "title": "{{weaponName}} {{omnicell}} Build"
+        },
+        "home": {
+            "title": "Home"
+        },
+        "newbuild": {
+            "title": "Create a new build"
+        },
+        "settings": {
+            "language": "Language",
+            "title": "Settings"
+        }
+    },
+    "terms": {
+        "active": "Active",
+        "active-ability": "Active Ability",
+        "arms-armour": "Arms Armour",
+        "head-armour": "Head Armour",
+        "hold": "Hold",
+        "lantern": "Lantern",
+        "legs-armour": "Legs Armour",
+        "omnicell": "Omnicell",
+        "passive": "Passive",
+        "perks": "Perks",
+        "power": "Power",
+        "resistance": "Resistance",
+        "torso-armour": "Torso Armour",
+        "unique-effect": "Unique Effect",
+        "weapon": "Weapon"
+    }
 }

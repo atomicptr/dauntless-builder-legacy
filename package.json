@@ -1,6 +1,7 @@
 {
     "name": "dauntless-builder",
     "version": "2.0.0",
+    "type": "module",
     "repository": "git@github.com:atomicptr/dauntless-builder",
     "author": "Christopher Kaster <me@atomicptr.de>",
     "license": "AGPLv3",
@@ -13,7 +14,8 @@
         "dev": "vite dev",
         "deploy": "yarn build && ./scripts/deploy.sh",
         "lint": "prettier . --check && jsonsort -i 4 -c src/translations/*.json .eslintrc && eslint .",
-        "lint:fix": "prettier . --write && jsonsort -i 4 src/translations/*.json .eslintrc && eslint . --fix"
+        "lint:fix": "prettier . --write && jsonsort -i 4 src/translations/*.json .eslintrc && eslint . --fix",
+        "check:missing-translations": "node ./scripts/check-missing-translations.js"
     },
     "dependencies": {
         "@emotion/react": "^11.9.0",

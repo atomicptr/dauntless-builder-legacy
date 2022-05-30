@@ -1,16 +1,26 @@
 {
-    "drawer.my-builds": "Mes builds",
-    "drawer.new-build": "Nouveau",
-    "drawer.settings": "Paramètres",
-    "pages.newbuild.title": "Creer un build",
-    "pages.settings.title": "Paramètres",
-    "terms-power": "Puissance",
-    "terms.arms-armour": "Gants",
-    "terms.head-armour": "Casque",
-    "terms.lantern": "Lanterne",
-    "terms.legs-armour": "Grèves",
-    "terms.perks": "Effet",
-    "terms.resistance": "Resistance",
-    "terms.torso-armour": "Torse",
-    "terms.weapon": "Arme"
+    "drawer": {
+        "my-builds": "Mes builds",
+        "new-build": "Nouveau",
+        "settings": "$t(pages.settings.title)"
+    },
+    "pages": {
+        "newbuild": {
+            "title": "Creer un build"
+        },
+        "settings": {
+            "title": "Paramètres"
+        }
+    },
+    "terms": {
+        "arms-armour": "Gants",
+        "head-armour": "Casque",
+        "lantern": "Lanterne",
+        "legs-armour": "Grèves",
+        "perks": "Effet",
+        "power": "Puissance",
+        "resistance": "Resistance",
+        "torso-armour": "Torse",
+        "weapon": "Arme"
+    }
 }

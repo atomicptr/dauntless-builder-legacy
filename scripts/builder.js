@@ -1,7 +1,7 @@
-const glob = require("glob");
-const yaml = require("js-yaml");
-const fs = require("fs");
-const md5 = require("md5");
+import glob from "glob";
+import yaml from "js-yaml";
+import fs from "fs";
+import md5 from "md5";
 
 let stringMap = {};
 let stringCounter = {};
