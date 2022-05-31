@@ -66,7 +66,15 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                         <CardMedia
                             component="img"
                             sx={{ height: imageSize, width: imageSize }}
-                            image={"/assets/noicon.png" /* TODO: add generic type icon */}
+                            image={match(type)
+                                .with(ItemType.Weapon, () => "/assets/icons/generic/Weapon.png")
+                                .with(ItemType.Head, () => "/assets/icons/generic/Head.png")
+                                .with(ItemType.Torso, () => "/assets/icons/generic/Torso.png")
+                                .with(ItemType.Arms, () => "/assets/icons/generic/Arms.png")
+                                .with(ItemType.Legs, () => "/assets/icons/generic/Legs.png")
+                                .with(ItemType.Lantern, () => "/assets/icons/generic/Lantern.png")
+                                .with(ItemType.Omnicell, () => "/assets/icons/generic/Omnicell.png")
+                                .otherwise(() => "/assets/noicon.png")}
                         />
                     </Box>
                     <Box>

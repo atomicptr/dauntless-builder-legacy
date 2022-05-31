@@ -1,4 +1,4 @@
-import dataJson from "../../dist/data.json";
+import dataJson from "../../public/data.json";
 import {Armour} from "./Armour";
 import {Cell} from "./Cell";
 import {Lantern} from "./Lantern";

@@ -1,10 +1,10 @@
 language: node_js
 node_js:
-  - "16"
+    - "16"
 script:
-  - yarn build:data
-  - yarn build:i18n
-  - yarn build:frontend
-  - tsc
-  - yarn test
-  - yarn check:missing-translations || true
+    - yarn build:data
+    - yarn build:i18n
+    - yarn build:frontend
+    - tsc
+    - yarn test
+    - yarn check:missing-translations || true

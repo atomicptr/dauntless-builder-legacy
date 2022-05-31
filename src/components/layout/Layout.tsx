@@ -86,7 +86,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                             alt="Dauntless Builder"
                             src="/assets/icon.png"
                             style={{
-                                filter: theme.palette.mode === "dark" ? "invert(100%)" : undefined,
                                 height: 36,
                                 userSelect: "none",
                                 width: 36,
