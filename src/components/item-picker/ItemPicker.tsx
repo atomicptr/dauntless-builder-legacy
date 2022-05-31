@@ -12,6 +12,7 @@ import { Weapon } from "../../data/Weapon";
 import useIsMobile from "../../hooks/is-mobile";
 import { itemTranslationIdentifier } from "../../utils/item-translation-identifier";
 import { itemPickerDefaultImageSize } from "../theme/theme";
+import Elemental from "./Elemental";
 import PerksText from "./PerksText";
 
 export type ItemPickerItem = Weapon | Armour | Lantern | Omnicell | null;
@@ -123,12 +124,20 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
 
                                 {type === ItemType.Weapon ? (
                                     <>
-                                        <Typography
-                                            variant="subtitle1"
-                                            color="text.secondary"
-                                            component="div">
-                                            <b>{t("terms.power")}</b>: {(item as Weapon).power[isPowerSurged ? 1 : 0]}
-                                        </Typography>
+                                        <Box sx={{ alignItems: "center", display: "flex" }}>
+                                            <Typography
+                                                variant="subtitle1"
+                                                color="text.secondary"
+                                                component="span"
+                                                sx={{ mr: 1 }}>
+                                                <b>{t("terms.power")}</b>:{" "}
+                                                {(item as Weapon).power[isPowerSurged ? 1 : 0]}
+                                            </Typography>
+                                            <Elemental
+                                                item={item as Weapon}
+                                                itemType={type}
+                                            />
+                                        </Box>
                                         {((item as Weapon)?.perks ?? []).length > 0 ? (
                                             <Typography
                                                 variant="subtitle1"
@@ -145,13 +154,20 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
 
                                 {isArmourType(type) ? (
                                     <>
-                                        <Typography
-                                            variant="subtitle1"
-                                            color="text.secondary"
-                                            component="div">
-                                            <b>{t("terms.resistance")}</b>:{" "}
-                                            {(item as Armour).resistance[isPowerSurged ? 1 : 0]}
-                                        </Typography>
+                                        <Box sx={{ alignItems: "center", display: "flex" }}>
+                                            <Typography
+                                                variant="subtitle1"
+                                                color="text.secondary"
+                                                component="span"
+                                                sx={{ mr: 1 }}>
+                                                <b>{t("terms.resistance")}</b>:{" "}
+                                                {(item as Armour).resistance[isPowerSurged ? 1 : 0]}
+                                            </Typography>
+                                            <Elemental
+                                                item={item as Weapon}
+                                                itemType={type}
+                                            />
+                                        </Box>
                                         {((item as Armour)?.perks ?? []).length > 0 ? (
                                             <Typography
                                                 variant="subtitle1"
