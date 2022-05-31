@@ -12,6 +12,7 @@
         "build:i18n": "node ./scripts/items-i18n.js",
         "build:frontend": "vite build",
         "dev": "vite dev",
+        "test": "echo 'No tests defined yet :('",
         "deploy": "yarn build && ./scripts/deploy.sh",
         "lint": "prettier . --check && jsonsort -i 4 -c src/translations/*.json .eslintrc && eslint .",
         "lint:fix": "prettier . --write && jsonsort -i 4 src/translations/*.json .eslintrc && eslint . --fix",
