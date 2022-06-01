@@ -75,7 +75,7 @@ const UniqueEffectCard: React.FC<UniqueEffectCardProps> = ({ index, uniqueEffect
                                     index.toString(),
                                     "description",
                                 ),
-                                uniqueEffect.values.description,
+                                uniqueEffect.values?.description ?? {},
                             ),
                         )}
                     </Typography>
