@@ -15,8 +15,9 @@ Want to contribute? Great! Read the [contribution guide first](CONTRIBUTING.md).
 ## Contact
 
 If you find an issue or want to provide feedback please use
-[Github Issues](https://github.com/atomicptr/dauntless-builder/issues) or join the
-[Dauntless Builder Discord](https://discord.gg/hkMvhsfPjH) server.
+[Github Issues](https://github.com/atomicptr/dauntless-builder/issues), join the
+[Dauntless Builder Discord Server](https://discord.gg/hkMvhsfPjH) or the
+[Dauntless Builder Matrix Channel](https://matrix.to/#/#dauntlessbuilder:matrix.org).
 
 ## Assets
 

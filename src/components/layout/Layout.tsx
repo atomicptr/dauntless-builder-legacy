@@ -39,6 +39,7 @@ import DevMenu from "../dev-menu/DevMenu";
 import { drawerWidth } from "../theme/theme";
 import { AppBar } from "./AppBar";
 import { DrawerHeader } from "./Drawer";
+import {SiMatrix} from "react-icons/all";
 
 interface LayoutProps {
     children: ReactNode;
@@ -172,6 +173,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                                 target="_blank"
                                 title="Github Repository">
                                 <FaGithub />
+                            </IconButton>
+                            <IconButton
+                                component="a"
+                                href="https://matrix.to/#/#dauntlessbuilder:matrix.org"
+                                target="_blank"
+                                title="Dauntless Builder Matrix Server">
+                                <SiMatrix />
                             </IconButton>
                             <IconButton
                                 component="a"
