@@ -13,8 +13,8 @@ export enum ArmourType {
 }
 
 export interface ResistanceLevel {
-    0: number,
-    1?: number,
+    base: number,
+    powerSurged?: number,
 }
 
 export interface Armour {

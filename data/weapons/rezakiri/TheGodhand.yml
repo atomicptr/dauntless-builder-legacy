@@ -12,17 +12,15 @@ cells:
 rarity: exotic
 restrict_specials: true
 power:
-  '0': 80
-  '1': 120
+  base: 80
+  powerSurged: 120
 perks:
   - name: Savagery
     value: 2
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Savagery
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: BeamChannelDamage
     icon: /assets/icons/parts/warpike/specials/TheGodhand.png

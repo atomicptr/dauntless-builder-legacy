@@ -8,28 +8,24 @@ cells:
   - Finesse
   - Alacrity
 power:
-  '0': 20
-  '1': 120
+  base: 20
+  powerSurged: 120
 perks:
   - name: Evasive Fury
     value: 1
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Evasive Fury
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: SeventhHitWoundDamage
     description: The sixth hit in a row deals +100 wound damage
     value: 100
-    from: 0
-    to: 0
+    powerSurged: false
   - name: SeventhHitWoundDamage
     description: The sixth hit in a row deals +300 wound damage
     value: 300
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Glaive Embermane

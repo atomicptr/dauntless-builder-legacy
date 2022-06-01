@@ -8,28 +8,24 @@ cells:
   - Finesse
   - Insight
 power:
-  '0': 40
-  '1': 120
+  base: 40
+  powerSurged: 120
 perks:
   - name: Barbed
     value: 1
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Barbed
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: WoundedPartsLifesteal
     description: When Behemoth part is broken, heal for 100
     value: 100
-    from: 0
-    to: 0
+    powerSurged: false
   - name: WoundedPartsLifesteal
     description: When Behemoth part is broken, heal for 200
     value: 200
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Portée de Nayzaga

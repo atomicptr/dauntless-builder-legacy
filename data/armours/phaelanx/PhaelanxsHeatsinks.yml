@@ -6,17 +6,15 @@ strength: Blaze
 weakness: Frost
 cells: Alacrity
 resistance:
-  '0': 20
-  '1': 30
+  base: 20
+  powerSurged: 30
 perks:
   - name: Fleet Footed
     value: 2
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Fleet Footed
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Dissipateurs de Phaelanx

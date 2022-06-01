@@ -4,8 +4,7 @@ import {CellType} from "./Cell";
 export interface PerkValue {
     name: string;
     value: number;
-    from?: number;
-    to?: number;
+    powerSurged?: boolean;
 }
 
 export interface Perk {

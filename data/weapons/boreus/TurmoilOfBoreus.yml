@@ -8,32 +8,28 @@ cells:
   - Brutality
   - Fortitude
 power:
-  '0': 20
-  '1': 120
+  base: 20
+  powerSurged: 120
 perks:
   - name: Conditioning
     value: 1
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Conditioning
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: BoreusFrostSprite
     description: >-
       After each charge attack level, generate two Frost Sprites that grant your
       next attack +30 damage and minor frost damage (Max 4 Sprites)
     value: 30
-    from: 0
-    to: 0
+    powerSurged: false
   - name: BoreusFrostSprite
     description: >-
       After each charge attack level, generate two Frost Sprites that grant your
       next attack +60 damage and minor frost damage (Max 4 Sprites)
     value: 60
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Tourment de Boreus

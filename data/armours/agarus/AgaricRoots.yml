@@ -6,17 +6,15 @@ strength: Terra
 weakness: Shock
 cells: Fortitude
 resistance:
-  '0': 25
-  '1': 30
+  base: 25
+  powerSurged: 30
 perks:
   - name: Fortress
     value: 2
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Fortress
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Racines agariques

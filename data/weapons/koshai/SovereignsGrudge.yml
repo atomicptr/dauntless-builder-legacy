@@ -8,30 +8,26 @@ cells:
   - Brutality
   - Insight
 power:
-  '0': 60
-  '1': 120
+  base: 60
+  powerSurged: 120
 perks:
   - name: Sharpened
     value: 2
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Sharpened
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: NoAttackDamage
     description: After not dealing damage for 4 seconds, your next attack deals +50% damage
     value: 1.5
-    from: 0
-    to: 0
+    powerSurged: false
   - name: NoAttackDamage
     description: >-
       After not dealing damage for 4 seconds, your next 2 attacks deal +50%
       damage
     value: 1.5
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Rancune du souverain

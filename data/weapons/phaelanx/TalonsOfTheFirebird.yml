@@ -8,17 +8,15 @@ cells:
   - Insight
   - Alacrity
 power:
-  '0': 80
-  '1': 120
+  base: 80
+  powerSurged: 120
 perks:
   - name: Aetheric Evasion
     value: 2
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Aetheric Evasion
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: PhaelanxLegendaryAbility
     description: >
@@ -31,8 +29,7 @@ unique_effects:
       Dodging fires all loaded missiles on the locked-on part. 45 second
       cooldown.
     value: 100
-    from: 0
-    to: 0
+    powerSurged: false
   - name: PhaelanxLegendaryAbility
     description: >
       Attack a Behemoth part to lock onto it and load a homing missile. Missile
@@ -44,8 +41,7 @@ unique_effects:
       Dodging fires all loaded missiles on the locked-on part. 45 second
       cooldown.
     value: 175
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Les serres de l'oiseau de feu

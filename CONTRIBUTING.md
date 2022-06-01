@@ -49,8 +49,8 @@ damage: Blunt
 elemental: Terra
 cells: [ Prismatic, Prismatic ]
 power:
-  0: 100
-  1: 120
+  base: 100
+  powerSurged: 120
 bond:
   elemental: Terra
 unique_effects:
@@ -79,14 +79,12 @@ unique_effects:
     description: >-
       After spending 150 stamina, next attack emits a cone of flame that deals +100 blaze damage to each unique target within the cone
     value: 100
-    from: 0
-    to: 0
+    powerSurged: false
   - name: CharrogSpentStaminaFireDamage
     description: >-
       After spending 150 stamina, next attack emits a cone of flame that deals +200 blaze damage to each unique target within the cone
     value: 200
-    from: 1
-    to: 1
+    powerSurged: true
 ```
 
 Instead of translating the strings **with** the values included you can extract them into the new values field. By doing
@@ -100,8 +98,7 @@ unique_effects:
     description: &charrogUeDescription >-
       After spending {{stamina}} stamina, next attack emits a cone of flame that deals +{{blazeDamage}} blaze damage to each unique target within the cone
     value: 100
-    from: 0
-    to: 0
+    powerSurged: false
     values:
       description:
         stamina: 150
@@ -109,8 +106,7 @@ unique_effects:
   - name: CharrogSpentStaminaFireDamage
     description: *charrogUeDescription
     value: 200
-    from: 1
-    to: 1
+    powerSurged: true
     values:
       description:
         stamina: 150

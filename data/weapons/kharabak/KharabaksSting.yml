@@ -8,17 +8,15 @@ cells:
   - Finesse
   - Alacrity
 power:
-  '0': 40
-  '1': 120
+  base: 40
+  powerSurged: 120
 perks:
   - name: Bladestorm
     value: 1
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Bladestorm
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: KharabacBlades
     description: >
@@ -26,16 +24,14 @@ unique_effects:
       terra damage. Additional attacks speed up the blades, which explode at the
       end of the duration and deal damage based on blade speed.
     value: 25
-    from: 0
-    to: 0
+    powerSurged: false
   - name: KharabacBlades
     description: >
       Once charged, your next attack unleashes whirling blades that deal 75
       terra damage. Additional attacks speed up the blades, which explode at the
       end of the duration and deal damage based on blade speed.
     value: 75
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Dard Kharabak

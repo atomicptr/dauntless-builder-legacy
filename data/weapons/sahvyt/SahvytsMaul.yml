@@ -8,32 +8,28 @@ cells:
   - Finesse
   - Finesse
 power:
-  '0': 60
-  '1': 120
+  base: 60
+  powerSurged: 120
 perks:
   - name: Pulse
     value: 2
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Pulse
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: SahvytBoomerang
     description: >-
       Once charged, your next weapon swing/shot unleashes a boomerang projectile
       that frequently deals 250 shock damage to any target hit. Dodging through
       an attack reduces charge cooldown.
-    from: 0
-    to: 0
+    powerSurged: false
   - name: SahvytBoomerang
     description: >-
       Once charged, your next weapon swing/shot unleashes a boomerang projectile
       that frequently deals 325 shock damage to any target hit. Dodging through
       an attack reduces charge cooldown.
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Masse de Sahvyt

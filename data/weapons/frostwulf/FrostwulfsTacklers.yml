@@ -8,17 +8,15 @@ cells:
   - Insight
   - Fortitude
 power:
-  '0': 60
-  '1': 120
+  base: 60
+  powerSurged: 120
 perks:
   - name: Galvanized
     value: 2
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Galvanized
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: LanternsMakeGeyser
     description: >-
@@ -26,16 +24,14 @@ unique_effects:
       frost damage. Any Slayer moving through the geyser for the first time is
       granted a stackable 125 health shield that lasts for 25 seconds (max 600
       shields).
-    from: 0
-    to: 0
+    powerSurged: false
   - name: LanternsMakeGeyser
     description: >-
       After using your Lantern ability, create a geyser that frequently deals 70
       frost damage. Any Slayer moving through the geyser for the first time is
       granted a stackable 125 health shield that lasts for 25 seconds (max 600
       shields).
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Tacleurs du Frostwülf

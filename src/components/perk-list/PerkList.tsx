@@ -16,7 +16,7 @@ const PerkList: React.FC = () => {
     const perks: PerkValue[] = [];
 
     const addPerk = (perk: PerkValue) => perks.push(perk);
-    const filterSurged = (surged: boolean) => (perk: PerkValue) => surged ? perk.from === 1 : perk.from === 0;
+    const filterSurged = (surged: boolean) => (perk: PerkValue) => perk.powerSurged === surged;
 
     build.data.weapon?.perks?.filter(filterSurged(build.weaponSurged)).forEach(addPerk);
     build.data.head?.perks?.filter(filterSurged(build.headSurged)).forEach(addPerk);

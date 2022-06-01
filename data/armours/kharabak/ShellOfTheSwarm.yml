@@ -6,17 +6,15 @@ strength: Terra
 weakness: Shock
 cells: Finesse
 resistance:
-  '0': 10
-  '1': 30
+  base: 10
+  powerSurged: 30
 perks:
   - name: Bladestorm
     value: 1
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Bladestorm
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Carapace de l'essaim

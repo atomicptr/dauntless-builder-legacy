@@ -8,32 +8,28 @@ cells:
   - Finesse
   - Alacrity
 power:
-  '0': 80
-  '1': 120
+  base: 80
+  powerSurged: 120
 perks:
   - name: Energized
     value: 1
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Energized
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: DodgeMeterGain
     description: >-
       After dodging through an attack, your attacks gain 100% bonus meter for +3
       seconds
     value: 100
-    from: 0
-    to: 0
+    powerSurged: false
   - name: DodgeMeterGain
     description: >-
       After dodging through an attack, your attacks gain 100% bonus meter for +4
       seconds
     value: 100
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Épée tempête

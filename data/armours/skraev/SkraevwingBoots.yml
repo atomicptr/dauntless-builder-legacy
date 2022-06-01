@@ -6,17 +6,15 @@ strength: Frost
 weakness: Blaze
 cells: Insight
 resistance:
-  '0': 15
-  '1': 30
+  base: 15
+  powerSurged: 30
 perks:
   - name: Adrenaline
     value: 2
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Adrenaline
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Solerets ailes de Skraev

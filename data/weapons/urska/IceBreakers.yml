@@ -8,8 +8,8 @@ cells:
   - Prismatic
   - Prismatic
 power:
-  '0': 100
-  '1': 120
+  base: 100
+  powerSurged: 120
 bond:
   elemental: Frost
 unique_effects:

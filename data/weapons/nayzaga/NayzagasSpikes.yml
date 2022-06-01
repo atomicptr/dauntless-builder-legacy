@@ -8,28 +8,24 @@ cells:
   - Finesse
   - Insight
 power:
-  '0': 40
-  '1': 120
+  base: 40
+  powerSurged: 120
 perks:
   - name: Savagery
     value: 1
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Savagery
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: StaggerHeal
     description: When you fire the last shot in your magazine, heal for 15.
     value: 15
-    from: 0
-    to: 0
+    powerSurged: false
   - name: StaggerHeal
     description: When you fire the last shot in your magazine, heal for 25.
     value: 25
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Piques de Nayzaga

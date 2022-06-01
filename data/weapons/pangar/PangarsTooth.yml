@@ -8,17 +8,15 @@ cells:
   - Finesse
   - Fortitude
 power:
-  '0': 40
-  '1': 120
+  base: 40
+  powerSurged: 120
 perks:
   - name: Weighted Strikes
     value: 1
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Weighted Strikes
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: PangarBomb
     description: >
@@ -28,8 +26,7 @@ unique_effects:
       can destroy the brand, prematurely detonating it for 50% increased damage.
       Charges every 90 seconds.
     value: 1000
-    from: 0
-    to: 0
+    powerSurged: false
   - name: PangarBomb
     description: >
       Once charged, your next attack places a frost brand that deals 2,500 frost
@@ -38,8 +35,7 @@ unique_effects:
       can destroy the brand, prematurely detonating it for 50% increased damage.
       Charges every 90 seconds.
     value: 2500
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Croc de Pangar

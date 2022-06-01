@@ -8,28 +8,24 @@ cells:
   - Finesse
   - Alacrity
 power:
-  '0': 40
-  '1': 120
+  base: 40
+  powerSurged: 120
 perks:
   - name: Conditioning
     value: 1
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Conditioning
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: DodgePartDamage
     description: After dodging, your next attack deals +50 bonus damage and part damage
     value: 50
-    from: 0
-    to: 0
+    powerSurged: false
   - name: DodgePartDamage
     description: After dodging, your next attack deals +100 bonus damage and part damage
     value: 100
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Cri du Shrike

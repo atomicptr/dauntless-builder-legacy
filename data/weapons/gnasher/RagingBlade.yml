@@ -8,32 +8,28 @@ cells:
   - Insight
   - Fortitude
 power:
-  '0': 20
-  '1': 120
+  base: 20
+  powerSurged: 120
 perks:
   - name: Ragehunter
     value: 1
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Ragehunter
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: GnasherRage
     description: >
       Periodically enter a rage, dealing +5% damage and gaining immunity to
       stagger. Taking damage causes you to enrage more quickly.
     value: 0.05
-    from: 0
-    to: 0
+    powerSurged: false
   - name: GnasherRage
     description: >
       Periodically enter a rage, dealing +15% damage and gaining immunity to
       stagger. Taking damage causes you to enrage more quickly.
     value: 0.15
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Lame enragée

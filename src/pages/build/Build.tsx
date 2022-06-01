@@ -74,9 +74,11 @@ const Build: React.FC = () => {
             ) : null,
         );
 
-    const renderArmourUniqueEffects = (item: ItemPickerItem, type: ItemType) => (
+    const renderArmourUniqueEffects = (powerSurged: boolean) => (item: ItemPickerItem, type: ItemType) => (
         <>
-            {(item as Armour).unique_effects?.map((ue, index) => (
+            {(item as Armour).unique_effects?.filter(
+                ue => ue.powerSurged !== undefined ? ue.powerSurged === powerSurged : true
+            ).map((ue, index) => (
                 <UniqueEffectCard
                     key={index}
                     index={index}
@@ -119,7 +121,9 @@ const Build: React.FC = () => {
                         componentsOnSide={renderCellSlots}
                         componentsBelow={(item, type) => (
                             <>
-                                {(item as Weapon).unique_effects?.map((ue, index) => (
+                                {(item as Weapon).unique_effects?.filter(
+                                    ue => ue.powerSurged !== undefined ? ue.powerSurged === build.weaponSurged : true
+                                ).map((ue, index) => (
                                     <UniqueEffectCard
                                         key={index}
                                         index={index}
@@ -176,7 +180,7 @@ const Build: React.FC = () => {
                         isPowerSurged={build.headSurged}
                         onClick={onItemPickerClicked}
                         componentsOnSide={renderCellSlots}
-                        componentsBelow={renderArmourUniqueEffects}
+                        componentsBelow={renderArmourUniqueEffects(build.headSurged)}
                     />
                     <ItemPicker
                         type={ItemType.Torso}
@@ -184,7 +188,7 @@ const Build: React.FC = () => {
                         isPowerSurged={build.torsoSurged}
                         onClick={onItemPickerClicked}
                         componentsOnSide={renderCellSlots}
-                        componentsBelow={renderArmourUniqueEffects}
+                        componentsBelow={renderArmourUniqueEffects(build.torsoSurged)}
                     />
                     <ItemPicker
                         type={ItemType.Arms}
@@ -192,7 +196,7 @@ const Build: React.FC = () => {
                         isPowerSurged={build.armsSurged}
                         onClick={onItemPickerClicked}
                         componentsOnSide={renderCellSlots}
-                        componentsBelow={renderArmourUniqueEffects}
+                        componentsBelow={renderArmourUniqueEffects(build.armsSurged)}
                     />
                     <ItemPicker
                         type={ItemType.Legs}
@@ -200,14 +204,13 @@ const Build: React.FC = () => {
                         isPowerSurged={build.legsSurged}
                         onClick={onItemPickerClicked}
                         componentsOnSide={renderCellSlots}
-                        componentsBelow={renderArmourUniqueEffects}
+                        componentsBelow={renderArmourUniqueEffects(build.legsSurged)}
                     />
                     <ItemPicker
                         type={ItemType.Lantern}
                         item={build.data.lantern}
                         onClick={onItemPickerClicked}
                         componentsOnSide={renderCellSlots}
-                        componentsBelow={renderArmourUniqueEffects}
                     />
                 </Grid>
                 <Grid

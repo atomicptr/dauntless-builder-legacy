@@ -6,17 +6,15 @@ strength: Terra
 weakness: Shock
 cells: Fortitude
 resistance:
-  '0': 5
-  '1': 30
+  base: 5
+  powerSurged: 30
 perks:
   - name: Guardian
     value: 1
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Guardian
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Piliers de Pierre

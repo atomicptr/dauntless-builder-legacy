@@ -8,28 +8,24 @@ cells:
   - Finesse
   - Insight
 power:
-  '0': 80
-  '1': 120
+  base: 80
+  powerSurged: 120
 perks:
   - name: Cunning
     value: 2
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Cunning
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: HitTwice
     description: 8% chance for attacks to hit twice.
     value: 0.08
-    from: 0
-    to: 0
+    powerSurged: false
   - name: HitTwice
     description: 12% chance for attacks to hit twice.
     value: 0.12
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Aubétoiles

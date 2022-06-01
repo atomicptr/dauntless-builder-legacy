@@ -6,7 +6,7 @@ strength: null
 weakness: null
 cells: null
 resistance:
-  '0': 20
+  base: 20
 i18n:
   fr:
     name: Masque de recrue

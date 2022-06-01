@@ -6,17 +6,15 @@ strength: Frost
 weakness: Blaze
 cells: Fortitude
 resistance:
-  '0': 15
-  '1': 30
+  base: 15
+  powerSurged: 30
 perks:
   - name: Galvanized
     value: 2
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Galvanized
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Griffes de Wülf

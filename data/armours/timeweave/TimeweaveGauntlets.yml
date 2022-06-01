@@ -6,17 +6,15 @@ strength: Radiant
 weakness: Umbral
 cells: Finesse
 resistance:
-  '0': 20
-  '1': 30
+  base: 20
+  powerSurged: 30
 perks:
   - name: Overpower
     value: 2
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Overpower
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Gantelets de Tisseur du temps

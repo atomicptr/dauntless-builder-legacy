@@ -8,26 +8,22 @@ cells:
   - Brutality
   - Alacrity
 power:
-  '0': 80
-  '1': 120
+  base: 80
+  powerSurged: 120
 perks:
   - name: Aetheric Attunement
     value: 2
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Aetheric Attunement
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: DodgeReload
     description: On dodging through a Behemoth attack, Reload.
-    from: 0
-    to: 0
+    powerSurged: false
   - name: DodgeReload
     description: On dodging through a Behemoth attack, Empowered Reload.
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Armes orageuses

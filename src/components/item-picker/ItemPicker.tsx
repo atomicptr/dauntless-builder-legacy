@@ -139,7 +139,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                                 component="span"
                                                 sx={{ mr: 1 }}>
                                                 <b>{t("terms.power")}</b>:{" "}
-                                                {(item as Weapon).power[isPowerSurged ? 1 : 0]}
+                                                {isPowerSurged ? (item as Weapon).power.powerSurged : (item as Weapon).power.base}
                                             </Typography>
                                             <Elemental
                                                 item={item as Weapon}
@@ -169,7 +169,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                                 component="span"
                                                 sx={{ mr: 1 }}>
                                                 <b>{t("terms.resistance")}</b>:{" "}
-                                                {(item as Armour).resistance[isPowerSurged ? 1 : 0]}
+                                                {isPowerSurged ? (item as Armour).resistance.powerSurged : (item as Armour).resistance.base}
                                             </Typography>
                                             <Elemental
                                                 item={item as Weapon}

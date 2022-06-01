@@ -6,17 +6,15 @@ strength: Shock
 weakness: Terra
 cells: Insight
 resistance:
-  '0': 10
-  '1': 30
+  base: 10
+  powerSurged: 30
 perks:
   - name: Aetheric Attunement
     value: 1
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Aetheric Attunement
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 i18n:
   fr:
     name: Étreinte électrifiée
