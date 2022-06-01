@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 import ViteFaviconsPlugin from "vite-plugin-favicon2";
 import { VitePWA } from "vite-plugin-pwa";
 
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ command, mode }) => {
     const isDevMode = mode === "development";
 
     return {
@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => {
         plugins: [
             react(),
             VitePWA({}),
-            ViteFaviconsPlugin({
+            command === "build" ? ViteFaviconsPlugin({
                 favicons: {
                     appDescription: "Create and share Dauntless builds with your friends!",
                     appName: "Dauntless Builder",
@@ -29,7 +29,7 @@ export default defineConfig(({ mode }) => {
                     theme_color: "#3f51b5",
                 },
                 logo: "public/assets/icon.png",
-            }),
+            }) : undefined,
         ],
     };
 });
