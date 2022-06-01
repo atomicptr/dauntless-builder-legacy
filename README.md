@@ -8,9 +8,9 @@ Want to contribute? Great! Read the [contribution guide first](CONTRIBUTING.md).
 
 ## Documentation
 
-- [Data Documentation](docs/DATA.md) - How data is set up, how to contribute, how to use our data in your application.
-- [Data Deprecations](docs/DEPRECATIONS.md) - Things that have been or will be removed from the public facing data "api"
-- [Translation Documentation](docs/TRANSLATION.md) - How the translation system works, how to contribute translations etc.
+-   [Data Documentation](docs/DATA.md) - How data is set up, how to contribute, how to use our data in your application.
+-   [Data Deprecations](docs/DEPRECATIONS.md) - Things that have been or will be removed from the public facing data "api"
+-   [Translation Documentation](docs/TRANSLATION.md) - How the translation system works, how to contribute translations etc.
 
 ## Contact
 

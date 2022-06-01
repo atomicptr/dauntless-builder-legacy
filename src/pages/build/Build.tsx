@@ -10,6 +10,7 @@ import OmnicellCard from "../../components/item-picker/OmnicellCard";
 import PartPicker from "../../components/item-picker/PartPicker";
 import UniqueEffectCard from "../../components/item-picker/UniqueEffectCard";
 import PageTitle from "../../components/page-title/PageTitle";
+import MobilePerkList from "../../components/perk-list/MobilePerkList";
 import PerkList from "../../components/perk-list/PerkList";
 import { Armour } from "../../data/Armour";
 import { BuildModel } from "../../data/BuildModel";
@@ -20,11 +21,13 @@ import { Lantern } from "../../data/Lantern";
 import { PartType } from "../../data/Part";
 import { Weapon, WeaponType } from "../../data/Weapon";
 import { selectBuild, setBuildId } from "../../features/build/build-slice";
+import useIsMobile from "../../hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 
 const Build: React.FC = () => {
     const { buildId } = useParams();
     const navigate = useNavigate();
+    const isMobile = useIsMobile();
     const { t } = useTranslation();
 
     if (!buildId || !BuildModel.isValid(buildId)) {
@@ -74,21 +77,22 @@ const Build: React.FC = () => {
             ) : null,
         );
 
-    const renderArmourUniqueEffects = (powerSurged: boolean) => (item: ItemPickerItem, type: ItemType) => (
-        <>
-            {(item as Armour).unique_effects?.filter(
-                ue => ue.powerSurged !== undefined ? ue.powerSurged === powerSurged : true
-            ).map((ue, index) => (
-                <UniqueEffectCard
-                    key={index}
-                    index={index}
-                    uniqueEffect={ue}
-                    item={item as Armour}
-                    itemType={type}
-                />
-            ))}
-        </>
-    );
+    const renderArmourUniqueEffects = (powerSurged: boolean) => (item: ItemPickerItem, type: ItemType) =>
+        (
+            <>
+                {(item as Armour).unique_effects
+                    ?.filter(ue => (ue.powerSurged !== undefined ? ue.powerSurged === powerSurged : true))
+                    .map((ue, index) => (
+                        <UniqueEffectCard
+                            key={index}
+                            index={index}
+                            uniqueEffect={ue}
+                            item={item as Armour}
+                            itemType={type}
+                        />
+                    ))}
+            </>
+        );
 
     return (
         <>
@@ -121,17 +125,19 @@ const Build: React.FC = () => {
                         componentsOnSide={renderCellSlots}
                         componentsBelow={(item, type) => (
                             <>
-                                {(item as Weapon).unique_effects?.filter(
-                                    ue => ue.powerSurged !== undefined ? ue.powerSurged === build.weaponSurged : true
-                                ).map((ue, index) => (
-                                    <UniqueEffectCard
-                                        key={index}
-                                        index={index}
-                                        uniqueEffect={ue}
-                                        item={item as Weapon}
-                                        itemType={type}
-                                    />
-                                ))}
+                                {(item as Weapon).unique_effects
+                                    ?.filter(ue =>
+                                        ue.powerSurged !== undefined ? ue.powerSurged === build.weaponSurged : true,
+                                    )
+                                    .map((ue, index) => (
+                                        <UniqueEffectCard
+                                            key={index}
+                                            index={index}
+                                            uniqueEffect={ue}
+                                            item={item as Weapon}
+                                            itemType={type}
+                                        />
+                                    ))}
 
                                 <BondWeaponPicker
                                     parentWeapon={build.data.weapon}
@@ -216,8 +222,9 @@ const Build: React.FC = () => {
                 <Grid
                     item
                     sm={12}
-                    md={3}>
-                    <PerkList />
+                    md={3}
+                    sx={{ width: isMobile ? "100%" : undefined }}>
+                    {isMobile ? <MobilePerkList /> : <PerkList />}
                 </Grid>
             </Grid>
         </>

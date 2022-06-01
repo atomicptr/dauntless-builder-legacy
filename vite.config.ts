@@ -20,16 +20,18 @@ export default defineConfig(({ command, mode }) => {
         plugins: [
             react(),
             VitePWA({}),
-            command === "build" ? ViteFaviconsPlugin({
-                favicons: {
-                    appDescription: "Create and share Dauntless builds with your friends!",
-                    appName: "Dauntless Builder",
-                    appleStatusBarStyle: "black-translucent",
-                    background: "#121212",
-                    theme_color: "#3f51b5",
-                },
-                logo: "public/assets/icon.png",
-            }) : undefined,
+            command === "build"
+                ? ViteFaviconsPlugin({
+                    favicons: {
+                        appDescription: "Create and share Dauntless builds with your friends!",
+                        appName: "Dauntless Builder",
+                        appleStatusBarStyle: "black-translucent",
+                        background: "#121212",
+                        theme_color: "#3f51b5",
+                    },
+                    logo: "public/assets/icon.png",
+                })
+                : undefined,
         ],
     };
 });

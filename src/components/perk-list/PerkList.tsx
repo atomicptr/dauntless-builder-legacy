@@ -1,18 +1,77 @@
 import { Cake, Warning } from "@mui/icons-material";
-import { List, ListItem, ListItemIcon, ListItemText, ListSubheader } from "@mui/material";
+import { Box, List, ListItem, ListItemIcon, ListItemText, ListSubheader, Stack, Tooltip } from "@mui/material";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { findCellByVariantName, findPerkByName } from "../../data/BuildModel";
+import { BuildModel, findCellByVariantName, findPerkByName } from "../../data/BuildModel";
 import { ItemType } from "../../data/ItemType";
 import { Perk, PerkValue } from "../../data/Perks";
 import { selectBuild } from "../../features/build/build-slice";
 import { useAppSelector } from "../../hooks/redux";
 import { itemTranslationIdentifier } from "../../utils/item-translation-identifier";
+import theme from "../theme/theme";
 
 const PerkList: React.FC = () => {
     const build = useAppSelector(selectBuild);
     const { t } = useTranslation();
 
+    const sortedPerks = perkData(build);
+
+    const renderToolTip = (perk: Perk, count: number) => (
+        <Box>
+            {Object.keys(perk.effects).map(id => (
+                <Box
+                    key={id}
+                    sx={{ color: theme.palette.grey[id === Math.max(0, Math.min(6, count)).toString() ? 50 : 400] }}>
+                    <Stack
+                        direction="row"
+                        spacing={1}>
+                        <Box>+{id}</Box>
+                        <Box>{perk.effects[id].description}</Box>
+                    </Stack>
+                </Box>
+            ))}
+        </Box>
+    );
+
+    return (
+        <List
+            sx={{ bgcolor: "background.paper", maxWidth: 360, userSelect: "none", width: "100%" }}
+            subheader={<ListSubheader>{t("terms.perks")}</ListSubheader>}>
+            {sortedPerks.length === 0 ? (
+                <ListItem>
+                    <ListItemIcon sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
+                        <Cake />
+                    </ListItemIcon>
+                    <ListItemText primary={t("pages.build.no-perks")} />
+                </ListItem>
+            ) : null}
+
+            {sortedPerks.map(perk => (
+                <Tooltip
+                    key={perk.name}
+                    title={renderToolTip(perk.data, perk.count)}
+                    arrow
+                    followCursor>
+                    <ListItem key={perk.name}>
+                        <ListItemIcon sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
+                            <img
+                                style={{ height: 32, width: 32 }}
+                                src={`/assets/icons/perks/${perk.data.type}.png`}
+                            />
+                        </ListItemIcon>
+                        <ListItemText
+                            primary={`+${perk.count} ${t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))}`}
+                        />
+                        {perk.count > 6 ? <Warning /> : null}
+                    </ListItem>
+                </Tooltip>
+            ))}
+        </List>
+    );
+};
+
+export const perkData = (build: BuildModel) => {
     const perks: PerkValue[] = [];
 
     const addPerk = (perk: PerkValue) => perks.push(perk);
@@ -62,39 +121,9 @@ const PerkList: React.FC = () => {
         perkMap[perk.name].count += perk.value;
     });
 
-    const sortedPerks = Object.keys(perkMap)
+    return Object.keys(perkMap)
         .map(name => ({ count: perkMap[name].count, data: perkMap[name].data, name }))
         .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
-
-    return (
-        <List
-            sx={{ bgcolor: "background.paper", maxWidth: 360, userSelect: "none", width: "100%" }}
-            subheader={<ListSubheader>{t("terms.perks")}</ListSubheader>}>
-            {sortedPerks.length === 0 ? (
-                <ListItem>
-                    <ListItemIcon sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
-                        <Cake />
-                    </ListItemIcon>
-                    <ListItemText primary={t("pages.build.no-perks")} />
-                </ListItem>
-            ) : null}
-
-            {sortedPerks.map(perk => (
-                <ListItem key={perk.name}>
-                    <ListItemIcon sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
-                        <img
-                            style={{ height: 32, width: 32 }}
-                            src={`/assets/icons/perks/${perk.data.type}.png`}
-                        />
-                    </ListItemIcon>
-                    <ListItemText
-                        primary={`+${perk.count} ${t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))}`}
-                    />
-                    {perk.count > 6 ? <Warning /> : null}
-                </ListItem>
-            ))}
-        </List>
-    );
 };
 
 export default PerkList;

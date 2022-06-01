@@ -29,6 +29,7 @@ import {
 } from "@mui/material";
 import React, { ReactNode, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { SiMatrix } from "react-icons/all";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
@@ -39,7 +40,6 @@ import DevMenu from "../dev-menu/DevMenu";
 import { drawerWidth } from "../theme/theme";
 import { AppBar } from "./AppBar";
 import { DrawerHeader } from "./Drawer";
-import {SiMatrix} from "react-icons/all";
 
 interface LayoutProps {
     children: ReactNode;

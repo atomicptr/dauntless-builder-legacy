@@ -41,6 +41,9 @@
             "error",
             "double"
         ],
+        "react/display-name": [
+            0
+        ],
         "react/jsx-tag-spacing": [
             "error",
             {

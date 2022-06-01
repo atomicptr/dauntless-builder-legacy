@@ -14,15 +14,15 @@ like gear levels! More to come probably.
 
 ```yaml
 power:
-  # example for 2.
-  base: 100
-  powerSurged: 120
+    # example for 2.
+    base: 100
+    powerSurged: 120
 perks:
-  - name: Aetheric Attunement
-    value: 2
-    # example for 1.
-    powerSurged: false
-  - name: Aetheric Attunement
-    value: 3
-    powerSurged: true
+    - name: Aetheric Attunement
+      value: 2
+      # example for 1.
+      powerSurged: false
+    - name: Aetheric Attunement
+      value: 3
+      powerSurged: true
 ```
