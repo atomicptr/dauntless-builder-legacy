@@ -40,6 +40,16 @@
         "active": "Active",
         "active-ability": "Active Ability",
         "arms-armour": "Arms Armour",
+        "bond-weapon": "Bond Weapon",
+        "cell-type": {
+            "Alacrity": "Alacrity",
+            "Brutality": "Brutality",
+            "Finesse": "Finesse",
+            "Fortitude": "Fortitude",
+            "Insight": "Insight",
+            "Prismatic": "Prismatic"
+        },
+        "cells": "Cells",
         "head-armour": "Head Armour",
         "hold": "Hold",
         "lantern": "Lantern",

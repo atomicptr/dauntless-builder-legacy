@@ -49,6 +49,10 @@
             "after-props"
         ],
         "react/jsx-closing-tag-location": "error",
+        "react/jsx-curly-spacing": [
+            "error",
+            "never"
+        ],
         "react/jsx-first-prop-new-line": [
             "error",
             "always"

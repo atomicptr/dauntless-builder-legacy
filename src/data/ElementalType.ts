@@ -1,7 +1,7 @@
 export enum ElementalType {
     Terra = "Terra",
     Shock = "Shock",
-    Blaze = "Balze",
+    Blaze = "Blaze",
     Frost = "Frost",
     Radiant = "Radiant",
     Umbral = "Umbral"

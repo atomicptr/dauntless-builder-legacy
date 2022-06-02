@@ -1,7 +1,8 @@
 import { Grid, ListSubheader } from "@mui/material";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
+import { match } from "ts-pattern";
 
 import BondWeaponPicker from "../../components/item-picker/BondWeaponPicker";
 import CellPicker from "../../components/item-picker/CellPicker";
@@ -9,20 +10,28 @@ import ItemPicker, { ItemPickerItem } from "../../components/item-picker/ItemPic
 import OmnicellCard from "../../components/item-picker/OmnicellCard";
 import PartPicker from "../../components/item-picker/PartPicker";
 import UniqueEffectCard from "../../components/item-picker/UniqueEffectCard";
+import { filterByArmourType, filterByWeaponType } from "../../components/item-select-dialog/filters";
+import ItemSelectDialog, { FilterFunc } from "../../components/item-select-dialog/ItemSelectDialog";
 import PageTitle from "../../components/page-title/PageTitle";
 import MobilePerkList from "../../components/perk-list/MobilePerkList";
 import PerkList from "../../components/perk-list/PerkList";
-import { Armour } from "../../data/Armour";
+import { Armour, ArmourType } from "../../data/Armour";
 import { BuildModel } from "../../data/BuildModel";
 import { CellType } from "../../data/Cell";
 import { isExotic } from "../../data/ItemRarity";
 import { ItemType } from "../../data/ItemType";
 import { Lantern } from "../../data/Lantern";
+import { Omnicell } from "../../data/Omnicell";
 import { PartType } from "../../data/Part";
 import { Weapon, WeaponType } from "../../data/Weapon";
-import { selectBuild, setBuildId } from "../../features/build/build-slice";
+import { selectBuild, setBuildId, updateBuild } from "../../features/build/build-slice";
 import useIsMobile from "../../hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
+
+interface PickerSelection {
+    itemType: ItemType;
+    filters: FilterFunc[];
+}
 
 const Build: React.FC = () => {
     const { buildId } = useParams();
@@ -38,6 +47,9 @@ const Build: React.FC = () => {
     const dispatch = useAppDispatch();
     const build = useAppSelector(selectBuild);
 
+    const [dialogOpen, setDialogOpen] = useState<boolean>(false);
+    const [pickerSelection, setPickerSelection] = useState<PickerSelection>({ filters: [], itemType: ItemType.Weapon });
+
     useEffect(() => {
         // TODO: update to new version if necessary
         // TODO: update url path
@@ -45,8 +57,42 @@ const Build: React.FC = () => {
         dispatch(setBuildId(build.serialize()));
     }, []);
 
+    useEffect(() => {
+        navigate(`/b/${build.serialize()}`);
+    }, [build]);
+
     const onItemPickerClicked = (itemType: ItemType) => {
         console.log("clicked", itemType);
+
+        const filters = match(itemType)
+            .with(ItemType.Weapon, () => (build.data.weapon ? [filterByWeaponType(build.data.weapon.type)] : []))
+            .with(ItemType.Head, () => [filterByArmourType(ArmourType.Head)])
+            .with(ItemType.Torso, () => [filterByArmourType(ArmourType.Torso)])
+            .with(ItemType.Arms, () => [filterByArmourType(ArmourType.Arms)])
+            .with(ItemType.Legs, () => [filterByArmourType(ArmourType.Legs)])
+            .otherwise(() => []);
+
+        setPickerSelection({ filters, itemType });
+        setDialogOpen(true);
+    };
+
+    const onItemPickerItemSelected = (item: ItemPickerItem, itemType: ItemType, isPowerSurged: boolean) => {
+        console.log("selected", item);
+
+        const buildUpdates = match(itemType)
+            .with(ItemType.Weapon, () => ({ weaponName: (item as Weapon).name, weaponSurged: isPowerSurged }))
+            .with(ItemType.Head, () => ({ headName: (item as Armour).name, headSurged: isPowerSurged }))
+            .with(ItemType.Torso, () => ({ torsoName: (item as Armour).name, torsoSurged: isPowerSurged }))
+            .with(ItemType.Arms, () => ({ armsName: (item as Armour).name, armsSurged: isPowerSurged }))
+            .with(ItemType.Legs, () => ({ legsName: (item as Armour).name, legsSurged: isPowerSurged }))
+            .with(ItemType.Lantern, () => ({ lantern: (item as Lantern).name }))
+            .with(ItemType.Omnicell, () => ({ omnicell: (item as Omnicell).name }))
+            .otherwise(() => ({}));
+
+        console.log(buildUpdates);
+
+        dispatch(updateBuild({ ...buildUpdates }));
+        setDialogOpen(false);
     };
 
     const onCellClicked = (itemType: ItemType, cellType: CellType, index: number) => {
@@ -72,7 +118,15 @@ const Build: React.FC = () => {
                     cellType={cellType as CellType}
                     index={index}
                     itemType={type}
-                    onClicked={onCellClicked} />
+                    onClicked={onCellClicked}
+                    variant={match<ItemType, string | null>(type)
+                        .with(ItemType.Weapon, () => (index === 0 ? build.weaponCell1 : build.weaponCell2))
+                        .with(ItemType.Head, () => build.headCell)
+                        .with(ItemType.Torso, () => build.torsoCell)
+                        .with(ItemType.Arms, () => build.armsCell)
+                        .with(ItemType.Legs, () => build.legsCell)
+                        .with(ItemType.Lantern, () => build.lanternCell)
+                        .run()} />
             ) : null,
         );
 
@@ -214,6 +268,13 @@ const Build: React.FC = () => {
                     {isMobile ? <MobilePerkList /> : <PerkList />}
                 </Grid>
             </Grid>
+
+            <ItemSelectDialog
+                filters={pickerSelection.filters}
+                handleClose={() => setDialogOpen(false)}
+                itemType={pickerSelection.itemType}
+                onItemSelected={onItemPickerItemSelected}
+                open={dialogOpen} />
         </>
     );
 };

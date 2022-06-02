@@ -1,6 +1,7 @@
-import { Box, Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
+import { Box, Card, CardActionArea, CardContent, CardMedia, Skeleton, Typography } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 import { ItemType } from "../../data/ItemType";
 import { Weapon } from "../../data/Weapon";
@@ -44,7 +45,7 @@ const BondWeaponPicker: React.FC<BondWeaponPickerProps> = ({
                         sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
                         <CardMedia
                             component="img"
-                            image={"/assets/noicon.png" /* TODO: add generic type icon */}
+                            image={"/assets/icons/generic/Weapon.png"}
                             sx={{ height: imageSize, width: imageSize }} />
                     </Box>
                     <Box>
@@ -78,11 +79,19 @@ const BondWeaponPicker: React.FC<BondWeaponPickerProps> = ({
                 sx={{ display: "flex", justifyContent: "flex-start" }}>
                 <Box
                     sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
-                    <CardMedia
-                        alt={t(itemTranslationIdentifier(ItemType.Weapon, bondWeapon.name, "name"))}
-                        component="img"
-                        image={bondWeapon.icon ?? "/assets/noicon.png"}
-                        sx={{ height: imageSize, width: imageSize }} />
+                    <LazyLoadComponent
+                        placeholder={
+                            <Skeleton
+                                height={imageSize}
+                                variant="circular"
+                                width={imageSize} />
+                        }>
+                        <CardMedia
+                            alt={t(itemTranslationIdentifier(ItemType.Weapon, bondWeapon.name, "name"))}
+                            component={"img"}
+                            image={bondWeapon.icon ?? "/assets/noicon.png"}
+                            sx={{ height: imageSize, width: imageSize }} />
+                    </LazyLoadComponent>
                 </Box>
                 <Box
                     sx={{ display: "flex", flexDirection: "column" }}>

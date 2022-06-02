@@ -108,6 +108,12 @@ const MobilePerkList: React.FC = () => {
                     <AppBar
                         sx={{ position: "relative" }}>
                         <Toolbar>
+                            <Typography
+                                component="div"
+                                sx={{ flex: 1, ml: 2, userSelect: "none" }}
+                                variant="h6">
+                                {t(itemTranslationIdentifier(ItemType.Perk, dialogPerk.name, "name"))}
+                            </Typography>
                             <IconButton
                                 aria-label="close"
                                 color="inherit"
@@ -115,12 +121,6 @@ const MobilePerkList: React.FC = () => {
                                 onClick={handleClose}>
                                 <Close />
                             </IconButton>
-                            <Typography
-                                component="div"
-                                sx={{ flex: 1, ml: 2, userSelect: "none" }}
-                                variant="h6">
-                                {t(itemTranslationIdentifier(ItemType.Perk, dialogPerk.name, "name"))}
-                            </Typography>
                         </Toolbar>
                     </AppBar>
                     <List>

@@ -17,7 +17,7 @@ const PerksText: React.FC<PerksTextProps> = ({ perks, itemSurged }) => {
         return null;
     }
 
-    const currentPerks = perks.filter(perk => perk.powerSurged === itemSurged);
+    const currentPerks = perks.filter(perk => perk.powerSurged === (itemSurged ?? false));
     const perkList = currentPerks.map((perk, index) => (
         <Box
             key={index}

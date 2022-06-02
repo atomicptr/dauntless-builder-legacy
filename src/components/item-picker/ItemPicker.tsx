@@ -1,7 +1,8 @@
 import { Star } from "@mui/icons-material";
-import { Box, Card, CardActionArea, CardContent, CardMedia, Stack, Typography } from "@mui/material";
+import { Box, Card, CardActionArea, CardContent, CardMedia, Skeleton, Stack, Typography } from "@mui/material";
 import React, { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 import { match } from "ts-pattern";
 
 import { Armour } from "../../data/Armour";
@@ -25,6 +26,7 @@ interface ItemPickerProps {
 
     componentsOnSide?: (item: ItemPickerItem, itemType: ItemType) => ReactNode;
     componentsBelow?: (item: ItemPickerItem, itemType: ItemType) => ReactNode;
+    componentsInside?: (item: ItemPickerItem, itemType: ItemType) => ReactNode;
 }
 
 const imageSize = itemPickerDefaultImageSize;
@@ -36,6 +38,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
     onClick,
     componentsOnSide,
     componentsBelow,
+    componentsInside,
 }) => {
     const { t } = useTranslation();
 
@@ -59,7 +62,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
     if (item === null) {
         return (
             <Card
-                sx={{ mb: 1 }}>
+                sx={{ mb: 1, width: "100%" }}>
                 <CardActionArea
                     onClick={onItemSelected}
                     sx={{ display: "flex", justifyContent: "flex-start" }}>
@@ -105,7 +108,8 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
         <>
             <Stack
                 direction={isMobile ? "column" : "row"}
-                spacing={isMobile ? 0 : 1}>
+                spacing={isMobile ? 0 : 1}
+                sx={{ width: "100%" }}>
                 <Card
                     sx={{ mb: 1, userSelect: "none", width: "100%" }}>
                     <CardActionArea
@@ -113,11 +117,19 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                         sx={{ display: "flex", height: "100%", justifyContent: "flex-start" }}>
                         <Box
                             sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
-                            <CardMedia
-                                alt={t(itemTranslationIdentifier(type, item.name, "name"))}
-                                component="img"
-                                image={item.icon ?? "/assets/noicon.png"}
-                                sx={{ height: imageSize, width: imageSize }} />
+                            <LazyLoadComponent
+                                placeholder={
+                                    <Skeleton
+                                        height={imageSize}
+                                        variant="circular"
+                                        width={imageSize} />
+                                }>
+                                <CardMedia
+                                    alt={t(itemTranslationIdentifier(type, item.name, "name"))}
+                                    component={"img"}
+                                    image={item.icon ?? "/assets/noicon.png"}
+                                    sx={{ height: imageSize, width: imageSize }} />
+                            </LazyLoadComponent>
                         </Box>
                         <Box
                             sx={{ display: "flex", flexDirection: "column" }}>
@@ -215,6 +227,8 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                         <b>{t("terms.passive")}</b>: {(item as Omnicell).passive}
                                     </Typography>
                                 ) : null}
+
+                                {componentsInside ? componentsInside(item, type) : null}
                             </CardContent>
                         </Box>
                     </CardActionArea>

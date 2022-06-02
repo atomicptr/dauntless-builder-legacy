@@ -1,6 +1,7 @@
-import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Skeleton, Typography } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 import { Armour } from "../../data/Armour";
 import { ItemType } from "../../data/ItemType";
@@ -30,14 +31,28 @@ const UniqueEffectCard: React.FC<UniqueEffectCardProps> = ({ index, uniqueEffect
             {uniqueEffect.icon ? (
                 <Box
                     sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
-                    <CardMedia
-                        alt={ttry(
-                            itemTranslationIdentifier(itemType, item.name, "unique_effects", index.toString(), "title"),
-                            "terms.unique-effect",
-                        )}
-                        component="img"
-                        image={uniqueEffect.icon}
-                        sx={{ height: imageSize, width: imageSize }} />
+                    <LazyLoadComponent
+                        placeholder={
+                            <Skeleton
+                                height={imageSize}
+                                variant="circular"
+                                width={imageSize} />
+                        }>
+                        <CardMedia
+                            alt={ttry(
+                                itemTranslationIdentifier(
+                                    itemType,
+                                    item.name,
+                                    "unique_effects",
+                                    index.toString(),
+                                    "title",
+                                ),
+                                "terms.unique-effect",
+                            )}
+                            component={"img"}
+                            image={uniqueEffect.icon ?? "/assets/noicon.png"}
+                            sx={{ height: imageSize, width: imageSize }} />
+                    </LazyLoadComponent>
                 </Box>
             ) : null}
             <Box

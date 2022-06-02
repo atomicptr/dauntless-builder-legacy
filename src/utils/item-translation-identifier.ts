@@ -1,6 +1,6 @@
-import { match, P } from "ts-pattern";
+import { match } from "ts-pattern";
 
-import { ItemType } from "../data/ItemType";
+import { ArmourItemType, ItemType } from "../data/ItemType";
 import { partBuildIdentifier, PartType } from "../data/Part";
 import { weaponBuildIdentifier, WeaponType } from "../data/Weapon";
 
@@ -30,7 +30,7 @@ export const partsTranslationIdentifier = (
 const typeName = (type: ItemType): string =>
     match(type)
         .with(ItemType.Weapon, () => "weapons")
-        .with(P.union(ItemType.Head, ItemType.Torso, ItemType.Arms, ItemType.Legs), () => "armours")
+        .with(ArmourItemType, () => "armours")
         .with(ItemType.Lantern, () => "lanterns")
         .with(ItemType.Omnicell, () => "omnicells")
         .with(ItemType.Cell, () => "cells")

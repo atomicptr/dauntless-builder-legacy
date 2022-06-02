@@ -1,6 +1,7 @@
-import { Box, Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
+import { Box, Card, CardActionArea, CardContent, CardMedia, Skeleton, Typography } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 import { match } from "ts-pattern";
 
 import { Part, PartType } from "../../data/Part";
@@ -77,11 +78,19 @@ const PartPicker: React.FC<PartPickerProps> = ({ type, item, weaponType, onClick
                 sx={{ display: "flex", justifyContent: "flex-start" }}>
                 <Box
                     sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
-                    <CardMedia
-                        alt={t(partsTranslationIdentifier(weaponType, type, item.name, "name"))}
-                        component="img"
-                        image={item.icon ?? "/assets/noicon.png"}
-                        sx={{ height: imageSize, width: imageSize }} />
+                    <LazyLoadComponent
+                        placeholder={
+                            <Skeleton
+                                height={imageSize}
+                                variant="circular"
+                                width={imageSize} />
+                        }>
+                        <CardMedia
+                            alt={t(partsTranslationIdentifier(weaponType, type, item.name, "name"))}
+                            component={"img"}
+                            image={item.icon ?? "/assets/noicon.png"}
+                            sx={{ height: imageSize, width: imageSize }} />
+                    </LazyLoadComponent>
                 </Box>
                 <Box
                     sx={{ display: "flex", flexDirection: "column" }}>
