@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
+import { Box, CardContent, CardMedia, Typography } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -22,8 +22,7 @@ const OmnicellCard: React.FC<OmnicellCardProps> = ({ item }) => {
     }
 
     return (
-        <Card
-            elevation={0}
+        <Box
             sx={{ alignItems: "center", display: "flex", mb: 1, userSelect: "none" }}>
             <Box
                 sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
@@ -59,7 +58,7 @@ const OmnicellCard: React.FC<OmnicellCardProps> = ({ item }) => {
                     </Typography>
                 </CardContent>
             </Box>
-        </Card>
+        </Box>
     );
 };
 

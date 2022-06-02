@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, CardMedia, Skeleton, Typography } from "@mui/material";
+import { Box, CardContent, CardMedia, Skeleton, Typography } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
@@ -25,8 +25,7 @@ const UniqueEffectCard: React.FC<UniqueEffectCardProps> = ({ index, uniqueEffect
     const { t } = useTranslation();
 
     return (
-        <Card
-            elevation={0}
+        <Box
             sx={{ alignItems: "center", display: "flex", mb: 1, userSelect: "none" }}>
             {uniqueEffect.icon ? (
                 <Box
@@ -98,7 +97,7 @@ const UniqueEffectCard: React.FC<UniqueEffectCardProps> = ({ index, uniqueEffect
                     </Typography>
                 </CardContent>
             </Box>
-        </Card>
+        </Box>
     );
 };
 
