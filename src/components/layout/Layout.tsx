@@ -64,25 +64,27 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     ];
 
     return (
-        <Box sx={{ display: "flex" }}>
+        <Box
+            sx={{ display: "flex" }}>
             <CssBaseline />
             <AppBar
-                position="fixed"
+                isMobile={isMobile}
                 open={open}
-                isMobile={isMobile}>
+                position="fixed">
                 <Toolbar>
                     {isMobile ? (
                         <IconButton
-                            color="inherit"
                             aria-label="open drawer"
-                            onClick={handleDrawerOpen}
+                            color="inherit"
                             edge="start"
+                            onClick={handleDrawerOpen}
                             sx={{ mr: 2, ...(open && { display: "none" }) }}>
                             <Menu />
                         </IconButton>
                     ) : null}
 
-                    <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", mr: 2 }}>
+                    <Box
+                        sx={{ alignItems: "center", display: "flex", justifyContent: "center", mr: 2 }}>
                         <img
                             alt="Dauntless Builder"
                             src="/assets/icon.png"
@@ -90,24 +92,27 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                                 height: 36,
                                 userSelect: "none",
                                 width: 36,
-                            }}
-                        />
+                            }} />
                     </Box>
 
                     <Typography
-                        variant="h6"
-                        noWrap
                         component="div"
-                        sx={{ userSelect: "none" }}>
+                        noWrap
+                        sx={{ userSelect: "none" }}
+                        variant="h6">
                         Dauntless Builder
                     </Typography>
 
-                    <Box sx={{ flexGrow: 1 }}>{/* Spacer */}</Box>
+                    <Box
+                        sx={{ flexGrow: 1 }}>{/* Spacer */}
+                    </Box>
 
                     <DevMenu />
                 </Toolbar>
             </AppBar>
             <Drawer
+                anchor="left"
+                open={open}
                 sx={{
                     "& .MuiDrawer-paper": {
                         boxSizing: "border-box",
@@ -116,12 +121,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     flexShrink: 0,
                     width: drawerWidth,
                 }}
-                variant={isMobile ? "temporary" : "permanent"}
-                anchor="left"
-                open={open}>
+                variant={isMobile ? "temporary" : "permanent"}>
                 {isMobile ? (
                     <DrawerHeader>
-                        <IconButton onClick={handleDrawerClose}>
+                        <IconButton
+                            onClick={handleDrawerClose}>
                             {theme.direction === "ltr" ? <ChevronLeft /> : <ChevronRight />}
                         </IconButton>
                     </DrawerHeader>
@@ -135,12 +139,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                             disablePadding>
                             <ListItemButton
                                 component={NavLink}
-                                to={item.link}
-                                onClick={isMobile ? handleDrawerClose : undefined}
                                 disabled={item.disabled}
-                                title={item.disabled ? "coming soon..." : undefined}>
+                                onClick={isMobile ? handleDrawerClose : undefined}
+                                title={item.disabled ? "coming soon..." : undefined}
+                                to={item.link}>
                                 <ListItemIcon>{item.icon}</ListItemIcon>
-                                <ListItemText primary={item.text} />
+                                <ListItemText
+                                    primary={item.text} />
                             </ListItemButton>
                         </ListItem>
                     ))}
@@ -156,11 +161,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     }}>
                     <Button
                         component={"a"}
-                        target="_blank"
-                        href={`https://playdauntless.com/patch-notes/${dauntlessBuilderData.misc.patchnotes_version_string}/`}>
+                        href={`https://playdauntless.com/patch-notes/${dauntlessBuilderData.misc.patchnotes_version_string}/`}
+                        target="_blank">
                         Dauntless v{dauntlessBuilderData.misc.dauntless_version}
                     </Button>
-                    <List sx={{ marginTop: "auto" }}>
+                    <List
+                        sx={{ marginTop: "auto" }}>
                         <Divider />
                         <ListItem
                             style={{
@@ -192,8 +198,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     </List>
                 </Box>
             </Drawer>
-            <Container maxWidth={"xl"}>
-                <DrawerHeader sx={{ marginBottom: "16px" }} />
+            <Container
+                maxWidth={"xl"}>
+                <DrawerHeader
+                    sx={{ marginBottom: "16px" }} />
 
                 {i18n.languages[0] !== Language.English ? (
                     <Alert
@@ -204,7 +212,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                                 __html: t("alert.translation-warning", {
                                     languageName: getNativeLanguageName(i18n.languages[0] as Language),
                                 }),
-                            }}></div>
+                            }}>
+                        </div>
                     </Alert>
                 ) : null}
 

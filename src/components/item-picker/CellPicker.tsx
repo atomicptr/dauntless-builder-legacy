@@ -55,6 +55,7 @@ const CellPicker: React.FC<CellPickerProps> = ({ index, itemType, cellType, onCl
                 userSelect: "none",
             }}>
             <CardActionArea
+                onClick={onClicked ? () => onClicked(itemType, cellType, index) : undefined}
                 sx={{
                     alignItems: "center",
                     display: "flex",
@@ -64,17 +65,17 @@ const CellPicker: React.FC<CellPickerProps> = ({ index, itemType, cellType, onCl
                     pb: 2,
                     pt: 2,
                     width: "100%",
-                }}
-                onClick={onClicked ? () => onClicked(itemType, cellType, index) : undefined}>
-                <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", pl: 2, pr: 2 }}>
+                }}>
+                <Box
+                    sx={{ alignItems: "center", display: "flex", justifyContent: "center", pl: 2, pr: 2 }}>
                     <CardMedia
                         component="img"
-                        sx={{ height: imageSize, width: imageSize, ...cellStyle }}
                         image={`/assets/icons/perks/${cellType}.png`}
-                    />
+                        sx={{ height: imageSize, width: imageSize, ...cellStyle }} />
                 </Box>
                 {cell !== null ? (
-                    <Typography sx={{ pt: 1 }}>
+                    <Typography
+                        sx={{ pt: 1 }}>
                         {t(itemTranslationIdentifier(ItemType.Cell, cell.name, "variants", variantIndex.toString()))}
                     </Typography>
                 ) : null}

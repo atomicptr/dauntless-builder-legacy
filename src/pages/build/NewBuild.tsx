@@ -5,7 +5,8 @@ import PageTitle from "../../components/page-title/PageTitle";
 
 const NewBuild: React.FC = () => {
     const { t } = useTranslation();
-    return <PageTitle title={t("pages.newbuild.title")} />;
+    return <PageTitle
+        title={t("pages.newbuild.title")} />;
 };
 
 export default NewBuild;

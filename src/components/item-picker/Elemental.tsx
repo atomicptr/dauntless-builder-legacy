@@ -22,8 +22,7 @@ const Elemental: React.FC<ElementalProps> = ({ item, itemType }) => {
             <Stack>
                 <ElementalBox
                     elemental={elemental}
-                    isStrength={true}
-                />
+                    isStrength={true} />
             </Stack>
         ) : null;
     }
@@ -37,14 +36,12 @@ const Elemental: React.FC<ElementalProps> = ({ item, itemType }) => {
             {strength !== null ? (
                 <ElementalBox
                     elemental={strength}
-                    isStrength={true}
-                />
+                    isStrength={true} />
             ) : null}
             {weakness !== null ? (
                 <ElementalBox
                     elemental={weakness}
-                    isStrength={false}
-                />
+                    isStrength={false} />
             ) : null}
         </Stack>
     );
@@ -62,8 +59,7 @@ const ElementalBox: React.FC<ElementalBoxProps> = ({ elemental, isStrength }) =>
         <b>{isStrength ? "+" : "-"}&nbsp;</b>
         <img
             alt={elemental}
-            src={`/assets/icons/elements/${elemental}.png`}
-        />
+            src={`/assets/icons/elements/${elemental}.png`} />
     </Box>
 );
 

@@ -10,16 +10,17 @@ const Settings: React.FC = () => {
 
     return (
         <>
-            <PageTitle title={t("pages.settings.title")} />
+            <PageTitle
+                title={t("pages.settings.title")} />
 
             <FormControl
                 fullWidth
                 sx={{ mt: 4 }}>
                 <InputLabel>{t("pages.settings.language")}</InputLabel>
                 <Select
-                    value={i18n.languages[0]}
                     label={t("pages.settings.language")}
-                    onChange={ev => i18n.changeLanguage(ev.target.value)}>
+                    onChange={ev => i18n.changeLanguage(ev.target.value)}
+                    value={i18n.languages[0]}>
                     {Object.keys(Language).map((key: string) => (
                         <MenuItem
                             key={key}

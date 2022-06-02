@@ -15,8 +15,8 @@ const PageTitle: React.FC<PageTitleProps> = ({ title, hidden }) => (
 
         {!hidden ? (
             <Typography
-                variant="h4"
-                component="h1">
+                component="h1"
+                variant="h4">
                 {title}
             </Typography>
         ) : null}

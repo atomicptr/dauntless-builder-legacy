@@ -21,15 +21,14 @@ const PerksText: React.FC<PerksTextProps> = ({ perks, itemSurged }) => {
     const perkList = currentPerks.map((perk, index) => (
         <Box
             key={index}
+            alignItems="center"
             component="span"
-            display="flex"
-            alignItems="center">
+            display="flex">
             +{perk.value}&nbsp;
             <img
-                style={{ height: "16px", width: "16px" }}
                 alt={findPerkByName(perk.name)?.type}
                 src={`/assets/icons/perks/${findPerkByName(perk.name)?.type}.png`}
-            />
+                style={{ height: "16px", width: "16px" }} />
             &nbsp;
             {perk.name}&nbsp;
             {index !== currentPerks.length - 1 ? ", " : ""}
@@ -38,9 +37,9 @@ const PerksText: React.FC<PerksTextProps> = ({ perks, itemSurged }) => {
 
     return (
         <Box
+            alignItems="center"
             component="span"
-            display="flex"
-            alignItems="center">
+            display="flex">
             <b>{t("terms.perks")}</b>:&nbsp;{perkList}
         </Box>
     );

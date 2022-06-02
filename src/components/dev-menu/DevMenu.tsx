@@ -23,29 +23,31 @@ const DevMenu: React.FC = () => {
     return (
         <>
             <IconButton
-                size="large"
-                aria-label="account of current user"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
+                aria-label="account of current user"
+                color="inherit"
                 onClick={handleMenu}
-                color="inherit">
+                size="large">
                 <Build />
             </IconButton>
             <Menu
-                id="dev-menu-appbar"
                 anchorEl={anchorEl}
                 anchorOrigin={{
                     horizontal: "right",
                     vertical: "bottom",
                 }}
+                id="dev-menu-appbar"
                 keepMounted
+                onClose={handleClose}
+                open={Boolean(anchorEl)}
                 transformOrigin={{
                     horizontal: "right",
                     vertical: "top",
-                }}
-                open={Boolean(anchorEl)}
-                onClose={handleClose}>
-                <MenuItem onClick={() => showTranslations(i18n)}>{t("appbar.dev-menu.translation-check")}</MenuItem>
+                }}>
+                <MenuItem
+                    onClick={() => showTranslations(i18n)}>{t("appbar.dev-menu.translation-check")}
+                </MenuItem>
             </Menu>
         </>
     );

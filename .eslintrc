@@ -21,7 +21,7 @@
     ],
     "root": true,
     "rules": {
-        "@typescript-eslint/no-unused-vars": 0,
+        "@typescript-eslint/no-unused-vars": "off",
         "@typescript-eslint/semi": [
             "error"
         ],
@@ -33,16 +33,40 @@
                 "SwitchCase": 1
             }
         ],
-        "linebreak-style": 1,
-        "no-console": 0,
+        "linebreak-style": "warn",
+        "no-console": "off",
         "no-new": "error",
-        "prefer-const": 2,
+        "prefer-const": "error",
         "quotes": [
             "error",
             "double"
         ],
         "react/display-name": [
-            0
+            "off"
+        ],
+        "react/jsx-closing-bracket-location": [
+            "error",
+            "after-props"
+        ],
+        "react/jsx-closing-tag-location": "error",
+        "react/jsx-first-prop-new-line": [
+            "error",
+            "always"
+        ],
+        "react/jsx-max-props-per-line": [
+            "error",
+            {
+                "maximum": 1,
+                "when": "multiline"
+            }
+        ],
+        "react/jsx-sort-props": [
+            "error",
+            {
+                "reservedFirst": [
+                    "key"
+                ]
+            }
         ],
         "react/jsx-tag-spacing": [
             "error",
@@ -51,9 +75,9 @@
             }
         ],
         "react/prefer-stateless-function": [
-            2
+            "error"
         ],
-        "react/react-in-jsx-scope": 0,
+        "react/react-in-jsx-scope": "off",
         "semi": "off",
         "simple-import-sort/imports": "error",
         "sort-keys": [

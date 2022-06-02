@@ -28,27 +28,29 @@ const UniqueEffectCard: React.FC<UniqueEffectCardProps> = ({ index, uniqueEffect
             elevation={0}
             sx={{ alignItems: "center", display: "flex", mb: 1, userSelect: "none" }}>
             {uniqueEffect.icon ? (
-                <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
+                <Box
+                    sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
                     <CardMedia
-                        component="img"
-                        sx={{ height: imageSize, width: imageSize }}
-                        image={uniqueEffect.icon}
                         alt={ttry(
                             itemTranslationIdentifier(itemType, item.name, "unique_effects", index.toString(), "title"),
                             "terms.unique-effect",
                         )}
-                    />
+                        component="img"
+                        image={uniqueEffect.icon}
+                        sx={{ height: imageSize, width: imageSize }} />
                 </Box>
             ) : null}
-            <Box sx={{ display: "flex", flexDirection: "column" }}>
-                <CardContent sx={{ flex: "1 0 auto" }}>
+            <Box
+                sx={{ display: "flex", flexDirection: "column" }}>
+                <CardContent
+                    sx={{ flex: "1 0 auto" }}>
                     <Box
-                        display="flex"
-                        alignItems="center">
+                        alignItems="center"
+                        display="flex">
                         <Typography
                             component="div"
-                            variant="h6"
-                            sx={{ mb: 1 }}>
+                            sx={{ mb: 1 }}
+                            variant="h6">
                             {t(itemTranslationIdentifier(itemType, item.name, "name"))}{" "}
                             {ttry(
                                 itemTranslationIdentifier(
@@ -63,9 +65,9 @@ const UniqueEffectCard: React.FC<UniqueEffectCardProps> = ({ index, uniqueEffect
                         </Typography>
                     </Box>
                     <Typography
-                        variant="subtitle1"
                         color="text.secondary"
-                        component="div">
+                        component="div"
+                        variant="subtitle1">
                         {renderItemText(
                             t(
                                 itemTranslationIdentifier(

@@ -69,11 +69,10 @@ const Build: React.FC = () => {
             cellType ? (
                 <CellPicker
                     key={index}
+                    cellType={cellType as CellType}
                     index={index}
                     itemType={type}
-                    cellType={cellType as CellType}
-                    onClicked={onCellClicked}
-                />
+                    onClicked={onCellClicked} />
             ) : null,
         );
 
@@ -86,10 +85,9 @@ const Build: React.FC = () => {
                         <UniqueEffectCard
                             key={index}
                             index={index}
-                            uniqueEffect={ue}
                             item={item as Armour}
                             itemType={type}
-                        />
+                            uniqueEffect={ue} />
                     ))}
             </>
         );
@@ -97,9 +95,8 @@ const Build: React.FC = () => {
     return (
         <>
             <PageTitle
-                title={t("pages.build.title", { ...build })}
                 hidden
-            />
+                title={t("pages.build.title", { ...build })} />
 
             <Grid
                 container
@@ -107,22 +104,19 @@ const Build: React.FC = () => {
                 sx={{ pb: 10 }}>
                 <Grid
                     item
-                    sm={12}
-                    md={9}>
-                    <ListSubheader sx={{ userSelect: "none" }}>{t("pages.build.title", { ...build })}</ListSubheader>
+                    md={9}
+                    sm={12}>
+                    <ListSubheader
+                        sx={{ userSelect: "none" }}>{t("pages.build.title", { ...build })}
+                    </ListSubheader>
 
                     <ItemPicker
-                        type={ItemType.Omnicell}
+                        componentsBelow={() => <OmnicellCard
+                            item={build.data.omnicell} />}
                         item={build.data.omnicell}
                         onClick={onItemPickerClicked}
-                        componentsBelow={() => <OmnicellCard item={build.data.omnicell} />}
-                    />
+                        type={ItemType.Omnicell} />
                     <ItemPicker
-                        type={ItemType.Weapon}
-                        item={build.data.weapon}
-                        isPowerSurged={build.weaponSurged}
-                        onClick={onItemPickerClicked}
-                        componentsOnSide={renderCellSlots}
                         componentsBelow={(item, type) => (
                             <>
                                 {(item as Weapon).unique_effects
@@ -133,96 +127,89 @@ const Build: React.FC = () => {
                                         <UniqueEffectCard
                                             key={index}
                                             index={index}
-                                            uniqueEffect={ue}
                                             item={item as Weapon}
                                             itemType={type}
-                                        />
+                                            uniqueEffect={ue} />
                                     ))}
 
                                 <BondWeaponPicker
-                                    parentWeapon={build.data.weapon}
-                                    parentWeaponPowerSurged={build.weaponSurged}
                                     bondWeapon={build.data.bondWeapon}
                                     onClick={onBondWeaponClicked}
-                                />
+                                    parentWeapon={build.data.weapon}
+                                    parentWeaponPowerSurged={build.weaponSurged} />
 
                                 {!isExotic(item as Weapon) ? (
                                     (item as Weapon).type === WeaponType.Repeater ? (
                                         <>
                                             <PartPicker
-                                                type={PartType.Chamber}
                                                 item={build.data.parts?.chamber ?? null}
-                                                weaponType={build.data.weapon?.type ?? null}
                                                 onClick={onPartClicked}
-                                            />
+                                                type={PartType.Chamber}
+                                                weaponType={build.data.weapon?.type ?? null} />
                                             <PartPicker
-                                                type={PartType.Grip}
                                                 item={build.data.parts?.grip ?? null}
-                                                weaponType={build.data.weapon?.type ?? null}
                                                 onClick={onPartClicked}
-                                            />
+                                                type={PartType.Grip}
+                                                weaponType={build.data.weapon?.type ?? null} />
                                         </>
                                     ) : (
                                         <PartPicker
-                                            type={PartType.Special}
                                             item={build.data.parts?.special ?? null}
-                                            weaponType={build.data.weapon?.type ?? null}
                                             onClick={onPartClicked}
-                                        />
+                                            type={PartType.Special}
+                                            weaponType={build.data.weapon?.type ?? null} />
                                     )
                                 ) : null}
                                 <PartPicker
-                                    type={PartType.Mod}
                                     item={build.data.parts?.mod ?? null}
-                                    weaponType={build.data.weapon?.type ?? null}
                                     onClick={onPartClicked}
-                                />
+                                    type={PartType.Mod}
+                                    weaponType={build.data.weapon?.type ?? null} />
                             </>
                         )}
-                    />
-                    <ItemPicker
-                        item={build.data.head}
-                        type={ItemType.Head}
-                        isPowerSurged={build.headSurged}
-                        onClick={onItemPickerClicked}
                         componentsOnSide={renderCellSlots}
+                        isPowerSurged={build.weaponSurged}
+                        item={build.data.weapon}
+                        onClick={onItemPickerClicked}
+                        type={ItemType.Weapon} />
+                    <ItemPicker
                         componentsBelow={renderArmourUniqueEffects(build.headSurged)}
-                    />
-                    <ItemPicker
-                        type={ItemType.Torso}
-                        item={build.data.torso}
-                        isPowerSurged={build.torsoSurged}
-                        onClick={onItemPickerClicked}
                         componentsOnSide={renderCellSlots}
+                        isPowerSurged={build.headSurged}
+                        item={build.data.head}
+                        onClick={onItemPickerClicked}
+                        type={ItemType.Head} />
+                    <ItemPicker
                         componentsBelow={renderArmourUniqueEffects(build.torsoSurged)}
-                    />
-                    <ItemPicker
-                        type={ItemType.Arms}
-                        item={build.data.arms}
-                        isPowerSurged={build.armsSurged}
-                        onClick={onItemPickerClicked}
                         componentsOnSide={renderCellSlots}
+                        isPowerSurged={build.torsoSurged}
+                        item={build.data.torso}
+                        onClick={onItemPickerClicked}
+                        type={ItemType.Torso} />
+                    <ItemPicker
                         componentsBelow={renderArmourUniqueEffects(build.armsSurged)}
-                    />
-                    <ItemPicker
-                        type={ItemType.Legs}
-                        item={build.data.legs}
-                        isPowerSurged={build.legsSurged}
-                        onClick={onItemPickerClicked}
                         componentsOnSide={renderCellSlots}
-                        componentsBelow={renderArmourUniqueEffects(build.legsSurged)}
-                    />
+                        isPowerSurged={build.armsSurged}
+                        item={build.data.arms}
+                        onClick={onItemPickerClicked}
+                        type={ItemType.Arms} />
                     <ItemPicker
-                        type={ItemType.Lantern}
+                        componentsBelow={renderArmourUniqueEffects(build.legsSurged)}
+                        componentsOnSide={renderCellSlots}
+                        isPowerSurged={build.legsSurged}
+                        item={build.data.legs}
+                        onClick={onItemPickerClicked}
+                        type={ItemType.Legs} />
+                    <ItemPicker
+                        componentsOnSide={renderCellSlots}
                         item={build.data.lantern}
                         onClick={onItemPickerClicked}
-                        componentsOnSide={renderCellSlots}
-                    />
+                        type={ItemType.Lantern} />
                 </Grid>
                 <Grid
                     item
-                    sm={12}
                     md={3}
+                    sm={12}
                     sx={{ width: isMobile ? "100%" : undefined }}>
                     {isMobile ? <MobilePerkList /> : <PerkList />}
                 </Grid>

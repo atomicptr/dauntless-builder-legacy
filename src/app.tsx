@@ -17,49 +17,46 @@ import { store } from "./store";
 
 const DauntlessBuilderApp = () => {
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider
+            theme={theme}>
             <BrowserRouter>
-                <Provider store={store}>
+                <Provider
+                    store={store}>
                     <Layout>
                         <Routes>
-                            <Route path="/">
+                            <Route
+                                path="/">
                                 <Route
-                                    index
                                     element={<Home />}
-                                />
+                                    index />
 
-                                <Route path="b">
+                                <Route
+                                    path="b">
                                     <Route
-                                        index
-                                        element={<Navigate to={"/b/new"} />}
-                                    />
+                                        element={<Navigate
+                                            to={"/b/new"} />}
+                                        index />
                                     <Route
-                                        path="new"
                                         element={<NewBuild />}
-                                    />
+                                        path="new" />
                                     <Route
-                                        path="search"
                                         element={<BuildSearch />}
-                                    />
+                                        path="search" />
                                     <Route
-                                        path="meta"
                                         element={<MetaBuilds />}
-                                    />
+                                        path="meta" />
                                     <Route
-                                        path=":buildId"
                                         element={<Build />}
-                                    />
+                                        path=":buildId" />
                                 </Route>
 
                                 <Route
-                                    path="/settings"
                                     element={<Settings />}
-                                />
+                                    path="/settings" />
 
                                 <Route
-                                    path="*"
                                     element={<NotFound />}
-                                />
+                                    path="*" />
                             </Route>
                         </Routes>
                     </Layout>

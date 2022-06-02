@@ -36,33 +36,35 @@ const PerkList: React.FC = () => {
 
     return (
         <List
-            sx={{ bgcolor: "background.paper", maxWidth: 360, userSelect: "none", width: "100%" }}
-            subheader={<ListSubheader>{t("terms.perks")}</ListSubheader>}>
+            subheader={<ListSubheader>{t("terms.perks")}</ListSubheader>}
+            sx={{ bgcolor: "background.paper", maxWidth: 360, userSelect: "none", width: "100%" }}>
             {sortedPerks.length === 0 ? (
                 <ListItem>
-                    <ListItemIcon sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
+                    <ListItemIcon
+                        sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
                         <Cake />
                     </ListItemIcon>
-                    <ListItemText primary={t("pages.build.no-perks")} />
+                    <ListItemText
+                        primary={t("pages.build.no-perks")} />
                 </ListItem>
             ) : null}
 
             {sortedPerks.map(perk => (
                 <Tooltip
                     key={perk.name}
-                    title={renderToolTip(perk.data, perk.count)}
                     arrow
-                    followCursor>
-                    <ListItem key={perk.name}>
-                        <ListItemIcon sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
+                    followCursor
+                    title={renderToolTip(perk.data, perk.count)}>
+                    <ListItem
+                        key={perk.name}>
+                        <ListItemIcon
+                            sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
                             <img
-                                style={{ height: 32, width: 32 }}
                                 src={`/assets/icons/perks/${perk.data.type}.png`}
-                            />
+                                style={{ height: 32, width: 32 }} />
                         </ListItemIcon>
                         <ListItemText
-                            primary={`+${perk.count} ${t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))}`}
-                        />
+                            primary={`+${perk.count} ${t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))}`} />
                         {perk.count > 6 ? <Warning /> : null}
                     </ListItem>
                 </Tooltip>

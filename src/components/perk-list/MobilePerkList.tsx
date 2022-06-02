@@ -39,8 +39,7 @@ const Transition = React.forwardRef(function Transition(
         <Slide
             direction="up"
             ref={ref}
-            {...props}
-        />
+            {...props} />
     );
 });
 
@@ -66,30 +65,35 @@ const MobilePerkList: React.FC = () => {
 
     return (
         <Box>
-            <ListSubheader sx={{ userSelect: "none" }}>{t("terms.perks")}</ListSubheader>
+            <ListSubheader
+                sx={{ userSelect: "none" }}>{t("terms.perks")}
+            </ListSubheader>
 
             {sortedPerks.map(perk => (
                 <Card
                     key={perk.name}
                     sx={{ mb: 1 }}>
                     <CardActionArea
-                        sx={{ display: "flex", justifyContent: "flex-start" }}
-                        onClick={handleClickOpen(perk)}>
-                        <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
+                        onClick={handleClickOpen(perk)}
+                        sx={{ display: "flex", justifyContent: "flex-start" }}>
+                        <Box
+                            sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
                             <CardMedia
                                 component="img"
-                                sx={{ height: imageSize, width: imageSize }}
                                 image={`/assets/icons/perks/${perk.data.type}.png`}
-                            />
+                                sx={{ height: imageSize, width: imageSize }} />
                         </Box>
-                        <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", ml: 2 }}>
+                        <Box
+                            sx={{ alignItems: "center", display: "flex", justifyContent: "center", ml: 2 }}>
                             <Typography
                                 component="div"
-                                variant="h5"
-                                sx={{ mb: 1 }}>
+                                sx={{ mb: 1 }}
+                                variant="h5">
                                 {`+ ${perk.count} ${t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))}`}
                             </Typography>
-                            <Box sx={{ ml: 2 }}>{perk.count > 6 ? <Warning /> : null}</Box>
+                            <Box
+                                sx={{ ml: 2 }}>{perk.count > 6 ? <Warning /> : null}
+                            </Box>
                         </Box>
                     </CardActionArea>
                 </Card>
@@ -97,23 +101,24 @@ const MobilePerkList: React.FC = () => {
 
             {dialogPerk !== null ? (
                 <Dialog
+                    TransitionComponent={Transition}
                     fullScreen
-                    open={dialogOpen}
                     onClose={handleClose}
-                    TransitionComponent={Transition}>
-                    <AppBar sx={{ position: "relative" }}>
+                    open={dialogOpen}>
+                    <AppBar
+                        sx={{ position: "relative" }}>
                         <Toolbar>
                             <IconButton
-                                edge="start"
+                                aria-label="close"
                                 color="inherit"
-                                onClick={handleClose}
-                                aria-label="close">
+                                edge="start"
+                                onClick={handleClose}>
                                 <Close />
                             </IconButton>
                             <Typography
+                                component="div"
                                 sx={{ flex: 1, ml: 2, userSelect: "none" }}
-                                variant="h6"
-                                component="div">
+                                variant="h6">
                                 {t(itemTranslationIdentifier(ItemType.Perk, dialogPerk.name, "name"))}
                             </Typography>
                         </Toolbar>
@@ -130,12 +135,10 @@ const MobilePerkList: React.FC = () => {
                                 }}>
                                 <ListItemText
                                     primary={`+${id}`}
-                                    sx={{ mr: 2 }}
-                                />
+                                    sx={{ mr: 2 }} />
                                 <ListItemText
-                                    sx={{ width: "100%" }}
                                     primary={dialogPerk.data.effects[id].description}
-                                />
+                                    sx={{ width: "100%" }} />
                             </ListItem>
                         ))}
                     </List>
