@@ -55,7 +55,10 @@ const ElementalBox: React.FC<ElementalBoxProps> = ({ elemental, isStrength }) =>
     <Box
         component="span"
         sx={{ alignItems: "center", display: "flex", flexDirection: "row" }}>
-        <b>{isStrength ? "+" : "-"}&nbsp;</b>
+        <b>
+            {isStrength ? "+" : "-"}
+            &nbsp;
+        </b>
         <img
             alt={elemental}
             src={`/assets/icons/elements/${elemental}.png`} />

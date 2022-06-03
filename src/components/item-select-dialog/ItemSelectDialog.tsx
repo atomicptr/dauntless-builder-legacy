@@ -10,20 +10,19 @@ import {
     IconButton,
     List,
     ListItem,
-    Slide,
     Stack,
     TextField,
     Toolbar,
     Typography,
 } from "@mui/material";
-import { TransitionProps } from "@mui/material/transitions";
 import ItemPicker, { ItemPickerItem } from "@src/components/item-picker/ItemPicker";
 import OmnicellCard from "@src/components/item-picker/OmnicellCard";
 import UniqueEffectCard from "@src/components/item-picker/UniqueEffectCard";
+import { DialogCommon, dialogWidth } from "@src/components/item-select-dialog/dialog-common";
 import { Armour } from "@src/data/Armour";
 import { CellType } from "@src/data/Cell";
 import dauntlessBuilderData from "@src/data/Data";
-import { ArmourItemType, isArmourType, ItemType } from "@src/data/ItemType";
+import { ArmourItemType, isArmourType, ItemType, itemTypeIdentifier } from "@src/data/ItemType";
 import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
 import { Weapon } from "@src/data/Weapon";
@@ -34,20 +33,6 @@ import { match } from "ts-pattern";
 
 import { filterBySearchQuery } from "./filters";
 
-const Transition = React.forwardRef(function Transition(
-    props: TransitionProps & {
-        children: React.ReactElement;
-    },
-    ref: React.Ref<unknown>,
-) {
-    return (
-        <Slide
-            direction="up"
-            ref={ref}
-            {...props} />
-    );
-});
-
 interface ItemSelectDialogProps {
     open: boolean;
     itemType: ItemType;
@@ -55,8 +40,6 @@ interface ItemSelectDialogProps {
     onItemSelected: (item: ItemPickerItem, itemType: ItemType, isPowerSurged: boolean) => void;
     filters?: FilterFunc[];
 }
-
-const listWidth = "md";
 
 export type FilterFunc = (item: ItemPickerItem, itemType: ItemType) => boolean;
 
@@ -70,7 +53,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
     const { t } = useTranslation();
     const isMobile = useIsMobile();
 
-    const title = "Select ???";
+    const title = t("components.item-select-dialog.select-text", { name: t(itemTypeIdentifier(itemType)) });
 
     const [searchValue, setSearchValue] = useState<string>("");
     const [powerSurged, _setPowerSurged] = useState<boolean>(true);
@@ -96,10 +79,10 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
 
     return (
         <Dialog
-            TransitionComponent={Transition}
+            TransitionComponent={DialogCommon}
             fullScreen={isMobile}
             fullWidth
-            maxWidth={listWidth}
+            maxWidth={dialogWidth}
             open={open}>
             {isMobile ? (
                 <AppBar
@@ -217,7 +200,10 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
             {isMobile ? null : (
                 <DialogActions>
                     <Button
-                        onClick={handleClose}>Close
+                        onClick={handleClose}>{t("terms.unselect")}
+                    </Button>
+                    <Button
+                        onClick={handleClose}>{t("terms.close")}
                     </Button>
                 </DialogActions>
             )}

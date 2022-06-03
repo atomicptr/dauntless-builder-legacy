@@ -111,7 +111,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                 spacing={isMobile ? 0 : 1}
                 sx={{ width: "100%" }}>
                 <Card
-                    sx={{ mb: 1, userSelect: "none", width: "100%" }}>
+                    sx={{ flexGrow: 5, mb: 1, userSelect: "none", width: "100%" }}>
                     <CardActionArea
                         onClick={onItemSelected}
                         sx={{ display: "flex", height: "100%", justifyContent: "flex-start" }}>
@@ -215,7 +215,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                         color="text.secondary"
                                         component="div"
                                         variant="subtitle1">
-                                        <b>{t("terms.hold")}</b>: {(item as Lantern).lantern_ability.hold}
+                                        <b>{t("terms.hold")}</b>:{(item as Lantern).lantern_ability.hold}
                                     </Typography>
                                 ) : null}
 
@@ -224,7 +224,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                         color="text.secondary"
                                         component="div"
                                         variant="subtitle1">
-                                        <b>{t("terms.passive")}</b>: {(item as Omnicell).passive}
+                                        <b>{t("terms.passive")}</b>:{(item as Omnicell).passive}
                                     </Typography>
                                 ) : null}
 

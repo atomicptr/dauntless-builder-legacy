@@ -7,6 +7,11 @@
             "translation-check": "Translation Check"
         }
     },
+    "components": {
+        "item-select-dialog": {
+            "select-text": "Select {{name}}"
+        }
+    },
     "drawer": {
         "build-finder": "Build Finder",
         "home": "Home",
@@ -41,6 +46,7 @@
         "active-ability": "Active Ability",
         "arms-armour": "Arms Armour",
         "bond-weapon": "Bond Weapon",
+        "cell": "Cell",
         "cell-type": {
             "Alacrity": "Alacrity",
             "Brutality": "Brutality",
@@ -50,6 +56,7 @@
             "Prismatic": "Prismatic"
         },
         "cells": "Cells",
+        "close": "Close",
         "head-armour": "Head Armour",
         "hold": "Hold",
         "lantern": "Lantern",
@@ -67,6 +74,7 @@
         "resistance": "Resistance",
         "torso-armour": "Torso Armour",
         "unique-effect": "Unique Effect",
+        "unselect": "Select Nothing",
         "weapon": "Weapon"
     }
 }

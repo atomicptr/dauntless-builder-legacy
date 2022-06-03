@@ -5,6 +5,7 @@ import ItemPicker, { ItemPickerItem } from "@src/components/item-picker/ItemPick
 import OmnicellCard from "@src/components/item-picker/OmnicellCard";
 import PartPicker from "@src/components/item-picker/PartPicker";
 import UniqueEffectCard from "@src/components/item-picker/UniqueEffectCard";
+import CellSelectDialog from "@src/components/item-select-dialog/CellSelectDialog";
 import { filterByArmourType, filterByWeaponType } from "@src/components/item-select-dialog/filters";
 import ItemSelectDialog, { FilterFunc } from "@src/components/item-select-dialog/ItemSelectDialog";
 import PageTitle from "@src/components/page-title/PageTitle";
@@ -30,6 +31,10 @@ import { match } from "ts-pattern";
 interface PickerSelection {
     itemType: ItemType;
     filters: FilterFunc[];
+    cell?: {
+        index: number;
+        type: CellType;
+    };
 }
 
 const Build: React.FC = () => {
@@ -46,7 +51,8 @@ const Build: React.FC = () => {
     const dispatch = useAppDispatch();
     const build = useAppSelector(selectBuild);
 
-    const [dialogOpen, setDialogOpen] = useState<boolean>(false);
+    const [itemDialogOpen, setItemDialogOpen] = useState<boolean>(false);
+    const [cellDialogOpen, setCellDialogOpen] = useState<boolean>(false);
     const [pickerSelection, setPickerSelection] = useState<PickerSelection>({ filters: [], itemType: ItemType.Weapon });
 
     useEffect(() => {
@@ -72,7 +78,7 @@ const Build: React.FC = () => {
             .otherwise(() => []);
 
         setPickerSelection({ filters, itemType });
-        setDialogOpen(true);
+        setItemDialogOpen(true);
     };
 
     const onItemPickerItemSelected = (item: ItemPickerItem, itemType: ItemType, isPowerSurged: boolean) => {
@@ -88,14 +94,32 @@ const Build: React.FC = () => {
             .with(ItemType.Omnicell, () => ({ omnicell: (item as Omnicell).name }))
             .otherwise(() => ({}));
 
-        console.log(buildUpdates);
-
         dispatch(updateBuild({ ...buildUpdates }));
-        setDialogOpen(false);
+        setItemDialogOpen(false);
     };
 
     const onCellClicked = (itemType: ItemType, cellType: CellType, index: number) => {
-        console.log("clicked", itemType, cellType, index);
+        setPickerSelection({ cell: { index, type: cellType }, filters: [], itemType });
+        setCellDialogOpen(true);
+    };
+
+    const onCellPickerItemSelected = (variant: string, itemType: ItemType, index: number) => {
+        const buildUpdates = match(itemType)
+            .with(ItemType.Weapon, () => {
+                if (index === 0) {
+                    return { weaponCell1: variant };
+                }
+                return { weaponCell2: variant };
+            })
+            .with(ItemType.Head, () => ({ headCell: variant }))
+            .with(ItemType.Torso, () => ({ torsoCell: variant }))
+            .with(ItemType.Arms, () => ({ armsCell: variant }))
+            .with(ItemType.Legs, () => ({ legsCell: variant }))
+            .with(ItemType.Lantern, () => ({ lanternCell: variant }))
+            .otherwise(() => ({}));
+
+        dispatch(updateBuild({ ...buildUpdates }));
+        setCellDialogOpen(false);
     };
 
     const onPartClicked = (partType: PartType) => {
@@ -270,10 +294,18 @@ const Build: React.FC = () => {
 
             <ItemSelectDialog
                 filters={pickerSelection.filters}
-                handleClose={() => setDialogOpen(false)}
+                handleClose={() => setItemDialogOpen(false)}
                 itemType={pickerSelection.itemType}
                 onItemSelected={onItemPickerItemSelected}
-                open={dialogOpen} />
+                open={itemDialogOpen} />
+
+            <CellSelectDialog
+                cellIndex={pickerSelection.cell?.index ?? null}
+                cellType={pickerSelection.cell?.type ?? null}
+                handleClose={() => setCellDialogOpen(false)}
+                itemType={pickerSelection.itemType}
+                onCellSelected={onCellPickerItemSelected}
+                open={cellDialogOpen} />
         </>
     );
 };

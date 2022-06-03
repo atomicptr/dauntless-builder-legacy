@@ -2,6 +2,7 @@ import { Box, Card, CardActionArea, CardMedia, Typography, useTheme } from "@mui
 import { itemPickerDefaultImageSize, rarityColor } from "@src/components/theme/theme";
 import { findCellByVariantName } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
+import { ItemRarity } from "@src/data/ItemRarity";
 import { ItemType } from "@src/data/ItemType";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
@@ -29,7 +30,7 @@ const CellPicker: React.FC<CellPickerProps> = ({ variant, index, itemType, cellT
         variant === null
             ? {}
             : {
-                background: rarityColor[cell?.variants[variant]?.rarity ?? "uncommon"],
+                background: rarityColor[cell?.variants[variant]?.rarity ?? ItemRarity.Uncommon].main,
                 borderRadius: "200px",
                 padding: 1,
             };
@@ -50,15 +51,15 @@ const CellPicker: React.FC<CellPickerProps> = ({ variant, index, itemType, cellT
                     flexDirection: "column",
                     height: "100%",
                     justifyContent: "center",
-                    pb: 2,
-                    pt: 2,
+                    p: 2,
+                    textAlign: "center",
                     width: "100%",
                 }}>
                 <Box
                     sx={{ alignItems: "center", display: "flex", justifyContent: "center", pl: 2, pr: 2 }}>
                     <CardMedia
                         component="img"
-                        image={`/assets/icons/perks/${cellType}.png`}
+                        image={`/assets/icons/perks/${cell?.slot}.png`}
                         sx={{ height: imageSize, width: imageSize, ...cellStyle }} />
                 </Box>
                 {cell !== null ? (

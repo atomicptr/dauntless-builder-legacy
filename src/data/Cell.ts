@@ -1,4 +1,5 @@
 import {Language} from "@src/i18n";
+import {ItemRarity} from "@src/data/ItemRarity";
 
 export enum CellType {
     Prismatic = "Prismatic",
@@ -9,14 +10,12 @@ export enum CellType {
     Insight = "Insight"
 }
 
-type Rarity = "uncommon" | "rare" | "epic";
-
 export interface Cell {
     name: string;
     slot: CellType;
     variants: {
         [cellVariant: string]: {
-            rarity: Rarity;
+            rarity: ItemRarity;
             perks: {
                 [perkName: string]: number;
             }
