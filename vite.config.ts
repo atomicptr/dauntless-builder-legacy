@@ -1,4 +1,5 @@
 import react from "@vitejs/plugin-react";
+import { fileURLToPath } from "url";
 import { defineConfig } from "vite";
 import ViteFaviconsPlugin from "vite-plugin-favicon2";
 import { VitePWA } from "vite-plugin-pwa";
@@ -33,5 +34,11 @@ export default defineConfig(({ command, mode }) => {
                 })
                 : undefined,
         ],
+        resolve: {
+            alias: {
+                "@map": fileURLToPath(new URL("./.map", import.meta.url)),
+                "@src": fileURLToPath(new URL("./src", import.meta.url)),
+            },
+        },
     };
 });

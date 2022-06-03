@@ -1,9 +1,8 @@
 import { Button, Stack } from "@mui/material";
+import PageTitle from "@src/components/page-title/PageTitle";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-
-import PageTitle from "../../components/page-title/PageTitle";
 
 const Home: React.FC = () => {
     const { t } = useTranslation();

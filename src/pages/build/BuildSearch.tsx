@@ -1,7 +1,6 @@
+import PageTitle from "@src/components/page-title/PageTitle";
 import React from "react";
 import { useTranslation } from "react-i18next";
-
-import PageTitle from "../../components/page-title/PageTitle";
 
 const BuildSearch: React.FC = () => {
     const { t } = useTranslation();

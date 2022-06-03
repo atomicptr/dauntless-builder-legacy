@@ -1,10 +1,10 @@
-import { Armour, ArmourType } from "../../data/Armour";
-import { CellType } from "../../data/Cell";
-import { ElementalType } from "../../data/ElementalType";
-import { isArmourType, ItemType } from "../../data/ItemType";
-import { Lantern } from "../../data/Lantern";
-import { Weapon, WeaponType } from "../../data/Weapon";
-import { ItemPickerItem } from "../item-picker/ItemPicker";
+import { ItemPickerItem } from "@src/components/item-picker/ItemPicker";
+import { Armour, ArmourType } from "@src/data/Armour";
+import { CellType } from "@src/data/Cell";
+import { ElementalType } from "@src/data/ElementalType";
+import { isArmourType, ItemType } from "@src/data/ItemType";
+import { Lantern } from "@src/data/Lantern";
+import { Weapon, WeaponType } from "@src/data/Weapon";
 
 export const filterBySearchQuery =
     (query: string) =>

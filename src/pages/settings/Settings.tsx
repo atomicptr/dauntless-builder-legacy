@@ -1,9 +1,8 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import PageTitle from "@src/components/page-title/PageTitle";
+import { getNativeLanguageName, Language } from "@src/i18n";
 import React from "react";
 import { useTranslation } from "react-i18next";
-
-import PageTitle from "../../components/page-title/PageTitle";
-import { getNativeLanguageName, Language } from "../../i18n";
 
 const Settings: React.FC = () => {
     const { t, i18n } = useTranslation();

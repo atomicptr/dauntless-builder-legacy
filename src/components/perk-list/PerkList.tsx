@@ -1,15 +1,14 @@
 import { Cake, Warning } from "@mui/icons-material";
 import { Box, List, ListItem, ListItemIcon, ListItemText, ListSubheader, Stack, Tooltip } from "@mui/material";
+import theme from "@src/components/theme/theme";
+import { BuildModel, findCellByVariantName, findPerkByName } from "@src/data/BuildModel";
+import { ItemType } from "@src/data/ItemType";
+import { Perk, PerkValue } from "@src/data/Perks";
+import { selectBuild } from "@src/features/build/build-slice";
+import { useAppSelector } from "@src/hooks/redux";
+import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
 import { useTranslation } from "react-i18next";
-
-import { BuildModel, findCellByVariantName, findPerkByName } from "../../data/BuildModel";
-import { ItemType } from "../../data/ItemType";
-import { Perk, PerkValue } from "../../data/Perks";
-import { selectBuild } from "../../features/build/build-slice";
-import { useAppSelector } from "../../hooks/redux";
-import { itemTranslationIdentifier } from "../../utils/item-translation-identifier";
-import theme from "../theme/theme";
 
 const PerkList: React.FC = () => {
     const build = useAppSelector(selectBuild);

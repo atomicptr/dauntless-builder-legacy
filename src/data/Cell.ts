@@ -1,4 +1,4 @@
-import {Language} from "../i18n";
+import {Language} from "@src/i18n";
 
 export enum CellType {
     Prismatic = "Prismatic",

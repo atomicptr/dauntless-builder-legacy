@@ -1,12 +1,12 @@
 import { Box, Card, CardActionArea, CardContent, CardMedia, Skeleton, Typography } from "@mui/material";
+import { itemPickerDefaultImageSize } from "@src/components/theme/theme";
+import { ItemType } from "@src/data/ItemType";
+import { Weapon } from "@src/data/Weapon";
+import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 
-import { ItemType } from "../../data/ItemType";
-import { Weapon } from "../../data/Weapon";
-import { itemTranslationIdentifier } from "../../utils/item-translation-identifier";
-import { itemPickerDefaultImageSize } from "../theme/theme";
 import PerksText from "./PerksText";
 
 interface BondWeaponPickerProps {

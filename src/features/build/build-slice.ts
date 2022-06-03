@@ -1,8 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { BuildModel } from "@src/data/BuildModel";
+import { RootState } from "@src/store";
 import { match } from "ts-pattern";
-
-import { BuildModel } from "../../data/BuildModel";
-import { RootState } from "../../store";
 
 interface BuildState {
     build: string;

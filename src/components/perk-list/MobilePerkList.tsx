@@ -16,15 +16,15 @@ import {
     Typography,
 } from "@mui/material";
 import { TransitionProps } from "@mui/material/transitions";
+import theme, { itemPickerDefaultImageSize } from "@src/components/theme/theme";
+import { ItemType } from "@src/data/ItemType";
+import { Perk } from "@src/data/Perks";
+import { selectBuild } from "@src/features/build/build-slice";
+import { useAppSelector } from "@src/hooks/redux";
+import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { ItemType } from "../../data/ItemType";
-import { Perk } from "../../data/Perks";
-import { selectBuild } from "../../features/build/build-slice";
-import { useAppSelector } from "../../hooks/redux";
-import { itemTranslationIdentifier } from "../../utils/item-translation-identifier";
-import theme, { itemPickerDefaultImageSize } from "../theme/theme";
 import { perkData } from "./PerkList";
 
 const imageSize = itemPickerDefaultImageSize;

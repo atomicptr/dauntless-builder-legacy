@@ -1,13 +1,12 @@
 import { Box, Card, CardActionArea, CardContent, CardMedia, Skeleton, Typography } from "@mui/material";
+import { itemPickerDefaultImageSize } from "@src/components/theme/theme";
+import { Part, PartType } from "@src/data/Part";
+import { WeaponType } from "@src/data/Weapon";
+import { partsTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import { match } from "ts-pattern";
-
-import { Part, PartType } from "../../data/Part";
-import { WeaponType } from "../../data/Weapon";
-import { partsTranslationIdentifier } from "../../utils/item-translation-identifier";
-import { itemPickerDefaultImageSize } from "../theme/theme";
 
 interface PartPickerProps {
     type: PartType;

@@ -1,18 +1,18 @@
 import { Star } from "@mui/icons-material";
 import { Box, Card, CardActionArea, CardContent, CardMedia, Skeleton, Stack, Typography } from "@mui/material";
+import { itemPickerDefaultImageSize } from "@src/components/theme/theme";
+import { Armour } from "@src/data/Armour";
+import { isArmourType, ItemType } from "@src/data/ItemType";
+import { Lantern } from "@src/data/Lantern";
+import { Omnicell } from "@src/data/Omnicell";
+import { Weapon } from "@src/data/Weapon";
+import useIsMobile from "@src/hooks/is-mobile";
+import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React, { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import { match } from "ts-pattern";
 
-import { Armour } from "../../data/Armour";
-import { isArmourType, ItemType } from "../../data/ItemType";
-import { Lantern } from "../../data/Lantern";
-import { Omnicell } from "../../data/Omnicell";
-import { Weapon } from "../../data/Weapon";
-import useIsMobile from "../../hooks/is-mobile";
-import { itemTranslationIdentifier } from "../../utils/item-translation-identifier";
-import { itemPickerDefaultImageSize } from "../theme/theme";
 import Elemental from "./Elemental";
 import PerksText from "./PerksText";
 

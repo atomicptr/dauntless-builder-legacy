@@ -17,21 +17,21 @@ import {
     Typography,
 } from "@mui/material";
 import { TransitionProps } from "@mui/material/transitions";
+import ItemPicker, { ItemPickerItem } from "@src/components/item-picker/ItemPicker";
+import OmnicellCard from "@src/components/item-picker/OmnicellCard";
+import UniqueEffectCard from "@src/components/item-picker/UniqueEffectCard";
+import { Armour } from "@src/data/Armour";
+import { CellType } from "@src/data/Cell";
+import dauntlessBuilderData from "@src/data/Data";
+import { ArmourItemType, isArmourType, ItemType } from "@src/data/ItemType";
+import { Lantern } from "@src/data/Lantern";
+import { Omnicell } from "@src/data/Omnicell";
+import { Weapon } from "@src/data/Weapon";
+import useIsMobile from "@src/hooks/is-mobile";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { match } from "ts-pattern";
 
-import { Armour } from "../../data/Armour";
-import { CellType } from "../../data/Cell";
-import dauntlessBuilderData from "../../data/Data";
-import { ArmourItemType, isArmourType, ItemType } from "../../data/ItemType";
-import { Lantern } from "../../data/Lantern";
-import { Omnicell } from "../../data/Omnicell";
-import { Weapon } from "../../data/Weapon";
-import useIsMobile from "../../hooks/is-mobile";
-import ItemPicker, { ItemPickerItem } from "../item-picker/ItemPicker";
-import OmnicellCard from "../item-picker/OmnicellCard";
-import UniqueEffectCard from "../item-picker/UniqueEffectCard";
 import { filterBySearchQuery } from "./filters";
 
 const Transition = React.forwardRef(function Transition(

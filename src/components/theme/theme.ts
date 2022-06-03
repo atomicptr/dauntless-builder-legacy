@@ -1,6 +1,5 @@
 import { createTheme } from "@mui/material";
-
-import { muiLocaleComponent } from "../../i18n";
+import { muiLocaleComponent } from "@src/i18n";
 
 export const drawerWidth = 240;
 export const itemPickerDefaultImageSize = 64;

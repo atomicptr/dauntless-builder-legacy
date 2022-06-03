@@ -1,10 +1,9 @@
 import { Box, Stack } from "@mui/material";
+import { Armour } from "@src/data/Armour";
+import { ElementalType } from "@src/data/ElementalType";
+import { ItemType } from "@src/data/ItemType";
+import { Weapon } from "@src/data/Weapon";
 import React from "react";
-
-import { Armour } from "../../data/Armour";
-import { ElementalType } from "../../data/ElementalType";
-import { ItemType } from "../../data/ItemType";
-import { Weapon } from "../../data/Weapon";
 
 interface ElementalProps {
     item: Weapon | Armour | null;

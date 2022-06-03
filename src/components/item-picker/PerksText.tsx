@@ -1,9 +1,8 @@
 import { Box } from "@mui/material";
+import { findPerkByName } from "@src/data/BuildModel";
+import { PerkValue } from "@src/data/Perks";
 import React from "react";
 import { useTranslation } from "react-i18next";
-
-import { findPerkByName } from "../../data/BuildModel";
-import { PerkValue } from "../../data/Perks";
 
 interface PerksTextProps {
     perks: PerkValue[];

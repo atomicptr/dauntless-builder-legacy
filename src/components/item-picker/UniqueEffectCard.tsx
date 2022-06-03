@@ -1,16 +1,15 @@
 import { Box, CardContent, CardMedia, Skeleton, Typography } from "@mui/material";
+import { itemPickerDefaultImageSize } from "@src/components/theme/theme";
+import { Armour } from "@src/data/Armour";
+import { ItemType } from "@src/data/ItemType";
+import { UniqueEffect } from "@src/data/UniqueEffect";
+import { Weapon } from "@src/data/Weapon";
+import { ttry } from "@src/i18n";
+import { renderItemText } from "@src/utils/item-text-renderer";
+import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
-
-import { Armour } from "../../data/Armour";
-import { ItemType } from "../../data/ItemType";
-import { UniqueEffect } from "../../data/UniqueEffect";
-import { Weapon } from "../../data/Weapon";
-import { ttry } from "../../i18n";
-import { renderItemText } from "../../utils/item-text-renderer";
-import { itemTranslationIdentifier } from "../../utils/item-translation-identifier";
-import { itemPickerDefaultImageSize } from "../theme/theme";
 
 interface UniqueEffectCardProps {
     index: number;

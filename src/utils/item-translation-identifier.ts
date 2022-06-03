@@ -1,8 +1,7 @@
+import { ArmourItemType, ItemType } from "@src/data/ItemType";
+import { partBuildIdentifier, PartType } from "@src/data/Part";
+import { weaponBuildIdentifier, WeaponType } from "@src/data/Weapon";
 import { match } from "ts-pattern";
-
-import { ArmourItemType, ItemType } from "../data/ItemType";
-import { partBuildIdentifier, PartType } from "../data/Part";
-import { weaponBuildIdentifier, WeaponType } from "../data/Weapon";
 
 // This code HAS to be the same as the one in scripts/items-i18n.js
 const createItemTranslationIdentifier = (...parts: string[]): string =>

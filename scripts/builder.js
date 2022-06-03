@@ -147,8 +147,8 @@ Promise.all([
     }
 
     const dataString = JSON.stringify(object);
-
     fs.writeFileSync("./public/data.json", dataString);
+    fs.writeFileSync(`./src/data/data.json`, JSON.stringify(object, null, "    ") + "\n");
 
     console.log("Built data.json");
 

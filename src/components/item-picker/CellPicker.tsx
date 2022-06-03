@@ -1,12 +1,11 @@
 import { Box, Card, CardActionArea, CardMedia, Typography, useTheme } from "@mui/material";
+import { itemPickerDefaultImageSize, rarityColor } from "@src/components/theme/theme";
+import { findCellByVariantName } from "@src/data/BuildModel";
+import { CellType } from "@src/data/Cell";
+import { ItemType } from "@src/data/ItemType";
+import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
 import { useTranslation } from "react-i18next";
-
-import { findCellByVariantName } from "../../data/BuildModel";
-import { CellType } from "../../data/Cell";
-import { ItemType } from "../../data/ItemType";
-import { itemTranslationIdentifier } from "../../utils/item-translation-identifier";
-import { itemPickerDefaultImageSize, rarityColor } from "../theme/theme";
 
 interface CellPickerProps {
     variant: string | null;

@@ -1,12 +1,11 @@
 import { Box, CardContent, CardMedia, Typography } from "@mui/material";
+import { itemPickerDefaultImageSize } from "@src/components/theme/theme";
+import { ItemType } from "@src/data/ItemType";
+import { Omnicell } from "@src/data/Omnicell";
+import { renderItemText } from "@src/utils/item-text-renderer";
+import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
 import { useTranslation } from "react-i18next";
-
-import { ItemType } from "../../data/ItemType";
-import { Omnicell } from "../../data/Omnicell";
-import { renderItemText } from "../../utils/item-text-renderer";
-import { itemTranslationIdentifier } from "../../utils/item-translation-identifier";
-import { itemPickerDefaultImageSize } from "../theme/theme";
 
 interface OmnicellCardProps {
     item: Omnicell | null;
