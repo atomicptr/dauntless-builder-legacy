@@ -31,7 +31,7 @@ import DevMenu from "@src/components/dev-menu/DevMenu";
 import { drawerWidth } from "@src/components/theme/theme";
 import dauntlessBuilderData from "@src/data/Data";
 import useIsMobile from "@src/hooks/is-mobile";
-import { getNativeLanguageName, Language } from "@src/i18n";
+import { currentLanguage, getNativeLanguageName, isBetaLanguage, Language } from "@src/i18n";
 import React, { ReactNode, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { SiMatrix } from "react-icons/all";
@@ -49,7 +49,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     const theme = useTheme();
     const isMobile = useIsMobile();
     const [open, setOpen] = useState(false);
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     const handleDrawerOpen = () => setOpen(true);
     const handleDrawerClose = () => setOpen(false);
@@ -203,14 +203,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <DrawerHeader
                     sx={{ marginBottom: "16px" }} />
 
-                {i18n.languages[0] !== Language.English ? (
+                {isBetaLanguage(currentLanguage()) ? (
                     <Alert
                         severity="warning"
                         sx={{ mb: 2 }}>
                         <div
                             dangerouslySetInnerHTML={{
                                 __html: t("alert.translation-warning", {
-                                    languageName: getNativeLanguageName(i18n.languages[0] as Language),
+                                    languageName: getNativeLanguageName(currentLanguage() as Language),
                                 }),
                             }}>
                         </div>

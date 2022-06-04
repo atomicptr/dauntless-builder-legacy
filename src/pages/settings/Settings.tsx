@@ -1,6 +1,6 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import PageTitle from "@src/components/page-title/PageTitle";
-import { getNativeLanguageName, Language } from "@src/i18n";
+import { currentLanguage, getNativeLanguageName, Language } from "@src/i18n";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -19,7 +19,7 @@ const Settings: React.FC = () => {
                 <Select
                     label={t("pages.settings.language")}
                     onChange={ev => i18n.changeLanguage(ev.target.value)}
-                    value={i18n.languages[0]}>
+                    value={currentLanguage()}>
                     {Object.keys(Language).map((key: string) => (
                         <MenuItem
                             key={key}

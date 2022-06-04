@@ -33,6 +33,29 @@ const nativeLanguageNames = {
     [Language.French]: "Français",
 };
 
+const betaLanguages = [Language.German, Language.Japanese, Language.French];
+
+export const currentLanguage = (): Language => i18n.languages[0] as Language;
+
+export const muiLocaleComponent = () =>
+    match(i18n.languages[0])
+        .with(Language.English, () => enUS)
+        .with(Language.German, () => deDE)
+        .with(Language.Japanese, () => jaJP)
+        .with(Language.French, () => frFR)
+        .otherwise(() => enUS);
+
+export const getNativeLanguageName = (lang: Language): string | null => nativeLanguageNames[lang] ?? null;
+
+export const isBetaLanguage = (lang: Language): boolean => betaLanguages.indexOf(lang) > -1;
+
+export const ttry = (tryIdent: string, elseIdent: string): string => {
+    if (i18n.exists(tryIdent)) {
+        return i18n.t(tryIdent);
+    }
+    return i18n.t(elseIdent);
+};
+
 i18n.use(initReactI18next)
     .use(LanguageDetector)
     .use(translationCheckPlugin)
@@ -49,22 +72,5 @@ i18n.use(initReactI18next)
         load: "languageOnly",
         resources,
     });
-
-export const muiLocaleComponent = () =>
-    match(i18n.languages[0])
-        .with(Language.English, () => enUS)
-        .with(Language.German, () => deDE)
-        .with(Language.Japanese, () => jaJP)
-        .with(Language.French, () => frFR)
-        .otherwise(() => enUS);
-
-export const getNativeLanguageName = (lang: Language): string | null => nativeLanguageNames[lang] ?? null;
-
-export const ttry = (tryIdent: string, elseIdent: string): string => {
-    if (i18n.exists(tryIdent)) {
-        return i18n.t(tryIdent);
-    }
-    return i18n.t(elseIdent);
-};
 
 export default i18n;
