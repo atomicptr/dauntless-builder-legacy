@@ -1,4 +1,5 @@
 import { Box, Card, CardActionArea, CardContent, CardMedia, Skeleton, Typography } from "@mui/material";
+import PerksText from "@src/components/perks-text/PerksText";
 import { itemPickerDefaultImageSize } from "@src/components/theme/theme";
 import { ItemType } from "@src/data/ItemType";
 import { Weapon } from "@src/data/Weapon";
@@ -6,8 +7,6 @@ import { itemTranslationIdentifier } from "@src/utils/item-translation-identifie
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
-
-import PerksText from "./PerksText";
 
 interface BondWeaponPickerProps {
     parentWeapon: Weapon | null;

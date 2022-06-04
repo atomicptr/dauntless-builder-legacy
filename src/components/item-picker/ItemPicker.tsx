@@ -1,5 +1,7 @@
 import { Star } from "@mui/icons-material";
 import { Box, Card, CardActionArea, CardContent, CardMedia, Skeleton, Stack, Typography } from "@mui/material";
+import ElementalIcon from "@src/components/elemental-icon/ElementalIcon";
+import PerksText from "@src/components/perks-text/PerksText";
 import { itemPickerDefaultImageSize } from "@src/components/theme/theme";
 import { Armour } from "@src/data/Armour";
 import { isArmourType, ItemType } from "@src/data/ItemType";
@@ -12,9 +14,6 @@ import React, { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import { match } from "ts-pattern";
-
-import Elemental from "./Elemental";
-import PerksText from "./PerksText";
 
 export type ItemPickerItem = Weapon | Armour | Lantern | Omnicell | null;
 
@@ -162,7 +161,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                                     ? (item as Weapon).power.powerSurged
                                                     : (item as Weapon).power.base}
                                             </Typography>
-                                            <Elemental
+                                            <ElementalIcon
                                                 item={item as Weapon}
                                                 itemType={type} />
                                         </Box>
@@ -193,7 +192,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                                     ? (item as Armour).resistance.powerSurged
                                                     : (item as Armour).resistance.base}
                                             </Typography>
-                                            <Elemental
+                                            <ElementalIcon
                                                 item={item as Weapon}
                                                 itemType={type} />
                                         </Box>

@@ -10,7 +10,7 @@ interface ElementalProps {
     itemType: ItemType;
 }
 
-const Elemental: React.FC<ElementalProps> = ({ item, itemType }) => {
+const ElementalIcon: React.FC<ElementalProps> = ({ item, itemType }) => {
     if (item === null) {
         return null;
     }
@@ -65,4 +65,4 @@ const ElementalBox: React.FC<ElementalBoxProps> = ({ elemental, isStrength }) =>
     </Box>
 );
 
-export default Elemental;
+export default ElementalIcon;

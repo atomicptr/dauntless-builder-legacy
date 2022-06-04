@@ -20,6 +20,7 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { itemPickerDefaultImageSize, rarityColor } from "@src/components/theme/theme";
+import { Transition } from "@src/components/theme/transition";
 import { findCellByVariantName, findPerkByName } from "@src/data/BuildModel";
 import { Cell, CellType } from "@src/data/Cell";
 import dauntlessBuilderData from "@src/data/Data";
@@ -30,8 +31,6 @@ import useIsMobile from "@src/hooks/is-mobile";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-
-import { DialogCommon, dialogWidth } from "./dialog-common";
 
 interface CellSelectDialogProps {
     open: boolean;
@@ -55,6 +54,7 @@ const CellButton = styled(Button)<CellButtonProps>(({ rarity, theme }) => ({
 }));
 
 const imageSize = itemPickerDefaultImageSize;
+const dialogWidth = "md";
 
 const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
     open,
@@ -96,7 +96,7 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
 
     return (
         <Dialog
-            TransitionComponent={DialogCommon}
+            TransitionComponent={Transition}
             fullScreen={isMobile}
             fullWidth
             maxWidth={dialogWidth}

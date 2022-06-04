@@ -16,9 +16,9 @@ import {
     Typography,
 } from "@mui/material";
 import ItemPicker, { ItemPickerItem } from "@src/components/item-picker/ItemPicker";
-import OmnicellCard from "@src/components/item-picker/OmnicellCard";
-import UniqueEffectCard from "@src/components/item-picker/UniqueEffectCard";
-import { DialogCommon, dialogWidth } from "@src/components/item-select-dialog/dialog-common";
+import OmnicellCard from "@src/components/omnicell-card/OmnicellCard";
+import { Transition } from "@src/components/theme/transition";
+import UniqueEffectCard from "@src/components/unique-effect-card/UniqueEffectCard";
 import { Armour } from "@src/data/Armour";
 import { CellType } from "@src/data/Cell";
 import dauntlessBuilderData from "@src/data/Data";
@@ -42,6 +42,7 @@ interface ItemSelectDialogProps {
 }
 
 export type FilterFunc = (item: ItemPickerItem, itemType: ItemType) => boolean;
+const dialogWidth = "md";
 
 const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
     open,
@@ -79,7 +80,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
 
     return (
         <Dialog
-            TransitionComponent={DialogCommon}
+            TransitionComponent={Transition}
             fullScreen={isMobile}
             fullWidth
             maxWidth={dialogWidth}
