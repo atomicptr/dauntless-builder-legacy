@@ -120,7 +120,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                     <TextField
                         fullWidth
                         onChange={ev => setSearchValue(ev.target.value)}
-                        placeholder={"Search"}
+                        placeholder={t("terms.search")}
                         value={searchValue}
                         variant="standard" />
                 </Box>

@@ -29,7 +29,7 @@ import { ItemType, itemTypeIdentifier } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
 import useIsMobile from "@src/hooks/is-mobile";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 interface CellSelectDialogProps {
@@ -84,6 +84,11 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
         [preFilteredItems, searchValue],
     );
 
+    // reset filter values whenever open state changes
+    useEffect(() => {
+        setSearchValue("");
+    }, [open]);
+
     const findPerkByCell = (cell: Cell): Perk | null => {
         const variantName = Object.keys(cell.variants).at(-1) as string;
         const variant = cell.variants[variantName] as { perks: { [perkName: string]: number } };
@@ -137,7 +142,7 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
                     <TextField
                         fullWidth
                         onChange={ev => setSearchValue(ev.target.value)}
-                        placeholder={"Search"}
+                        placeholder={t("terms.search")}
                         value={searchValue}
                         variant="standard" />
                 </Box>
