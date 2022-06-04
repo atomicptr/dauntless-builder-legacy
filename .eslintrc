@@ -17,7 +17,8 @@
         "@typescript-eslint",
         "simple-import-sort",
         "unused-imports",
-        "sort-keys-fix"
+        "sort-keys-fix",
+        "i18next"
     ],
     "root": true,
     "rules": {
@@ -26,6 +27,9 @@
             "error"
         ],
         "curly": "error",
+        "i18next/no-literal-string": [
+            "error"
+        ],
         "indent": [
             "error",
             4,

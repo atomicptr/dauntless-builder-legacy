@@ -207,7 +207,7 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
                                                 rarity={rarity}
                                                 sx={{ flexGrow: isMobile ? 1 : 0 }}
                                                 variant="contained">
-                                                +{variantIndex + 1}
+                                                {`+${variantIndex + 1}`}
                                             </CellButton>
                                         );
                                     })}

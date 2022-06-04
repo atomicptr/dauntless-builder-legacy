@@ -100,7 +100,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         noWrap
                         sx={{ userSelect: "none" }}
                         variant="h6">
-                        Dauntless Builder
+                        {t("app-name")}
                     </Typography>
 
                     <Box
@@ -163,7 +163,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         component={"a"}
                         href={`https://playdauntless.com/patch-notes/${dauntlessBuilderData.misc.patchnotes_version_string}/`}
                         target="_blank">
-                        Dauntless v{dauntlessBuilderData.misc.dauntless_version}
+                        {t("misc.dauntless-version", { version: dauntlessBuilderData.misc.dauntless_version })}
                     </Button>
                     <List
                         sx={{ marginTop: "auto" }}>

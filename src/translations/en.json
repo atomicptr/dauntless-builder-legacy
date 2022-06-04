@@ -2,6 +2,7 @@
     "alert": {
         "translation-warning": "You're currently viewing this page with your language set to <b>{{languageName}}</b>, translations are currently in beta and are very spotty. If you speak this language, please consider <a style=\"color: #fff;\" target=\"_blank\" href=\"https://github.com/atomicptr/dauntless-builder/blob/master/docs/contributing/Translation.md\">contributing to the translation efforts</a>."
     },
+    "app-name": "Dauntless Builder",
     "appbar": {
         "dev-menu": {
             "translation-check": "Translation Check"
@@ -19,6 +20,9 @@
         "my-builds": "My Builds",
         "new-build": "New Build",
         "settings": "$t(pages.settings.title)"
+    },
+    "misc": {
+        "dauntless-version": "Dauntless v{{version}}"
     },
     "pages": {
         "404": {
