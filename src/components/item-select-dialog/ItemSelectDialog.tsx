@@ -59,18 +59,22 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
     const [searchValue, setSearchValue] = useState<string>("");
     const [powerSurged, _setPowerSurged] = useState<boolean>(true);
 
-    const items = match(itemType)
-        .with(ItemType.Weapon, () => dauntlessBuilderData.weapons)
-        .with(ArmourItemType, () => dauntlessBuilderData.armours)
-        .with(ItemType.Lantern, () => dauntlessBuilderData.lanterns)
-        .with(ItemType.Omnicell, () => dauntlessBuilderData.omnicells)
-        .run();
-
-    const filterFuncs: FilterFunc[] = [...(filters ?? []), filterBySearchQuery(searchValue)];
+    const preFilteredItems = useMemo(
+        () =>
+            Object.values(
+                match(itemType)
+                    .with(ItemType.Weapon, () => dauntlessBuilderData.weapons)
+                    .with(ArmourItemType, () => dauntlessBuilderData.armours)
+                    .with(ItemType.Lantern, () => dauntlessBuilderData.lanterns)
+                    .with(ItemType.Omnicell, () => dauntlessBuilderData.omnicells)
+                    .run(),
+            ).filter(item => (filters ?? []).every(func => func(item, itemType))),
+        [itemType, filters],
+    );
 
     const filteredItems = useMemo(
-        () => Object.values(items).filter(item => filterFuncs.every(func => func(item, itemType))),
-        [searchValue, itemType, filters],
+        () => preFilteredItems.filter(item => filterBySearchQuery(searchValue)(item, itemType)),
+        [preFilteredItems, itemType, searchValue],
     );
 
     // reset filter values whenever open state changes
@@ -201,7 +205,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
             {isMobile ? null : (
                 <DialogActions>
                     <Button
-                        onClick={handleClose}>{t("terms.unselect")}
+                        onClick={() => onItemSelected(null, itemType, powerSurged)}>{t("terms.unselect")}
                     </Button>
                     <Button
                         onClick={handleClose}>{t("terms.close")}

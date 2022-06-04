@@ -64,14 +64,6 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
     handleClose,
     onCellSelected,
 }) => {
-    if (cellIndex === null) {
-        return null;
-    }
-
-    if (cellType === null) {
-        return null;
-    }
-
     const { t } = useTranslation();
     const isMobile = useIsMobile();
 
@@ -79,12 +71,17 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
 
     const [searchValue, setSearchValue] = useState<string>("");
 
-    const filteredItems = useMemo(
+    const preFilteredItems = useMemo(
         () =>
-            Object.values(dauntlessBuilderData.cells)
-                .filter(cell => cellType === CellType.Prismatic || cell.slot === cellType)
-                .filter(cell => cell.name.toLowerCase().indexOf(searchValue.toLowerCase()) > -1),
-        [searchValue, cellType],
+            Object.values(dauntlessBuilderData.cells).filter(
+                cell => cellType === CellType.Prismatic || cell.slot === cellType,
+            ),
+        [cellType],
+    );
+
+    const filteredItems = useMemo(
+        () => preFilteredItems.filter(cell => cell.name.toLowerCase().indexOf(searchValue.toLowerCase()) > -1),
+        [preFilteredItems, searchValue],
     );
 
     const findPerkByCell = (cell: Cell): Perk | null => {
@@ -93,6 +90,14 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
         const perkName = Object.keys(variant.perks)[0];
         return findPerkByName(perkName);
     };
+
+    if (cellIndex === null) {
+        return null;
+    }
+
+    if (cellType === null) {
+        return null;
+    }
 
     return (
         <Dialog
@@ -219,7 +224,7 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
             </DialogContent>
             <DialogActions>
                 <Button
-                    onClick={handleClose}>{t("terms.unselect")}
+                    onClick={() => onCellSelected("", itemType, cellIndex)}>{t("terms.unselect")}
                 </Button>
                 <Button
                     onClick={handleClose}>{t("terms.close")}

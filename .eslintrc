@@ -18,7 +18,8 @@
         "simple-import-sort",
         "unused-imports",
         "sort-keys-fix",
-        "i18next"
+        "i18next",
+        "react-hooks"
     ],
     "root": true,
     "rules": {
@@ -45,6 +46,8 @@
             "error",
             "double"
         ],
+        "react-hooks/exhaustive-deps": "error",
+        "react-hooks/rules-of-hooks": "error",
         "react/display-name": [
             "off"
         ],

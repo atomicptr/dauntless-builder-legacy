@@ -43,11 +43,6 @@ const Build: React.FC = () => {
     const isMobile = useIsMobile();
     const { t } = useTranslation();
 
-    if (!buildId || !BuildModel.isValid(buildId)) {
-        navigate("/b/new");
-        return null;
-    }
-
     const dispatch = useAppDispatch();
     const build = useAppSelector(selectBuild);
 
@@ -58,13 +53,18 @@ const Build: React.FC = () => {
     useEffect(() => {
         // TODO: update to new version if necessary
         // TODO: update url path
-        const build = BuildModel.tryDeserialize(buildId);
+        const build = BuildModel.tryDeserialize(buildId ?? null);
         dispatch(setBuildId(build.serialize()));
-    }, []);
+    }, [buildId, dispatch]);
 
     useEffect(() => {
         navigate(`/b/${build.serialize()}`);
-    }, [build]);
+    }, [build, navigate]);
+
+    if (!buildId || !BuildModel.isValid(buildId)) {
+        navigate("/b/new");
+        return null;
+    }
 
     const onItemPickerClicked = (itemType: ItemType) => {
         console.log("clicked", itemType);
@@ -82,16 +82,14 @@ const Build: React.FC = () => {
     };
 
     const onItemPickerItemSelected = (item: ItemPickerItem, itemType: ItemType, isPowerSurged: boolean) => {
-        console.log("selected", item);
-
         const buildUpdates = match(itemType)
-            .with(ItemType.Weapon, () => ({ weaponName: (item as Weapon).name, weaponSurged: isPowerSurged }))
-            .with(ItemType.Head, () => ({ headName: (item as Armour).name, headSurged: isPowerSurged }))
-            .with(ItemType.Torso, () => ({ torsoName: (item as Armour).name, torsoSurged: isPowerSurged }))
-            .with(ItemType.Arms, () => ({ armsName: (item as Armour).name, armsSurged: isPowerSurged }))
-            .with(ItemType.Legs, () => ({ legsName: (item as Armour).name, legsSurged: isPowerSurged }))
-            .with(ItemType.Lantern, () => ({ lantern: (item as Lantern).name }))
-            .with(ItemType.Omnicell, () => ({ omnicell: (item as Omnicell).name }))
+            .with(ItemType.Weapon, () => ({ weaponName: (item as Weapon)?.name, weaponSurged: isPowerSurged }))
+            .with(ItemType.Head, () => ({ headName: (item as Armour)?.name, headSurged: isPowerSurged }))
+            .with(ItemType.Torso, () => ({ torsoName: (item as Armour)?.name, torsoSurged: isPowerSurged }))
+            .with(ItemType.Arms, () => ({ armsName: (item as Armour)?.name, armsSurged: isPowerSurged }))
+            .with(ItemType.Legs, () => ({ legsName: (item as Armour)?.name, legsSurged: isPowerSurged }))
+            .with(ItemType.Lantern, () => ({ lantern: (item as Lantern)?.name }))
+            .with(ItemType.Omnicell, () => ({ omnicell: (item as Omnicell)?.name }))
             .otherwise(() => ({}));
 
         dispatch(updateBuild({ ...buildUpdates }));

@@ -203,8 +203,8 @@ export class BuildModel {
         return build;
     }
 
-    public static tryDeserialize(buildId: string): BuildModel {
-        if (BuildModel.isValid(buildId)) {
+    public static tryDeserialize(buildId: string|null): BuildModel {
+        if (buildId !== null && BuildModel.isValid(buildId)) {
             return BuildModel.deserialize(buildId);
         }
         return BuildModel.empty();

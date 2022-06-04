@@ -59,7 +59,7 @@ const CellPicker: React.FC<CellPickerProps> = ({ variant, index, itemType, cellT
                     sx={{ alignItems: "center", display: "flex", justifyContent: "center", pl: 2, pr: 2 }}>
                     <CardMedia
                         component="img"
-                        image={`/assets/icons/perks/${cell?.slot}.png`}
+                        image={`/assets/icons/perks/${cell?.slot ?? cellType}.png`}
                         sx={{ height: imageSize, width: imageSize, ...cellStyle }} />
                 </Box>
                 {cell !== null ? (
