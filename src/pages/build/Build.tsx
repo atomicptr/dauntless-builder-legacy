@@ -1,9 +1,9 @@
-import { Grid, ListSubheader } from "@mui/material";
+import { Box, FormControl, Grid, InputLabel, ListSubheader, MenuItem, Select } from "@mui/material";
 import BondWeaponPicker from "@src/components/bond-weapon-picker/BondWeaponPicker";
 import CellPicker from "@src/components/cell-picker/CellPicker";
 import CellSelectDialog from "@src/components/cell-select-dialog/CellSelectDialog";
 import ItemPicker, { ItemPickerItem } from "@src/components/item-picker/ItemPicker";
-import { filterByArmourType, filterByWeaponType } from "@src/components/item-select-dialog/filters";
+import { filterByArmourType } from "@src/components/item-select-dialog/filters";
 import ItemSelectDialog, { FilterFunc } from "@src/components/item-select-dialog/ItemSelectDialog";
 import OmnicellCard from "@src/components/omnicell-card/OmnicellCard";
 import PageTitle from "@src/components/page-title/PageTitle";
@@ -21,6 +21,7 @@ import { Omnicell } from "@src/data/Omnicell";
 import { PartType } from "@src/data/Part";
 import { Weapon, WeaponType } from "@src/data/Weapon";
 import { selectBuild, setBuildId, updateBuild } from "@src/features/build/build-slice";
+import { selectWeaponFilter, setWeaponFilterType } from "@src/features/item-select-filter/item-select-filter-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import React, { useEffect, useState } from "react";
@@ -50,6 +51,8 @@ const Build: React.FC = () => {
     const [cellDialogOpen, setCellDialogOpen] = useState<boolean>(false);
     const [pickerSelection, setPickerSelection] = useState<PickerSelection>({ filters: [], itemType: ItemType.Weapon });
 
+    const weaponFilter = useAppSelector(selectWeaponFilter);
+
     useEffect(() => {
         // TODO: update to new version if necessary
         // TODO: update url path
@@ -70,7 +73,7 @@ const Build: React.FC = () => {
         console.log("clicked", itemType);
 
         const filters = match(itemType)
-            .with(ItemType.Weapon, () => (build.data.weapon ? [filterByWeaponType(build.data.weapon.type)] : []))
+            .with(ItemType.Weapon, () => [])
             .with(ItemType.Head, () => [filterByArmourType(ArmourType.Head)])
             .with(ItemType.Torso, () => [filterByArmourType(ArmourType.Torso)])
             .with(ItemType.Arms, () => [filterByArmourType(ArmourType.Arms)])
@@ -82,6 +85,10 @@ const Build: React.FC = () => {
     };
 
     const onItemPickerItemSelected = (item: ItemPickerItem, itemType: ItemType, isPowerSurged: boolean) => {
+        if (item !== null && itemType === ItemType.Weapon) {
+            dispatch(setWeaponFilterType((item as Weapon).type));
+        }
+
         const buildUpdates = match(itemType)
             .with(ItemType.Weapon, () => ({ weaponName: (item as Weapon)?.name, weaponSurged: isPowerSurged }))
             .with(ItemType.Head, () => ({ headName: (item as Armour)?.name, headSurged: isPowerSurged }))
@@ -291,11 +298,38 @@ const Build: React.FC = () => {
             </Grid>
 
             <ItemSelectDialog
-                filters={pickerSelection.filters}
+                filterComponents={(itemType: ItemType) => (
+                    <>
+                        <Box
+                            sx={{ mt: 3 }}>
+                            {itemType === ItemType.Weapon ? (
+                                <FormControl
+                                    fullWidth>
+                                    <InputLabel>{t("terms.weapon-type")}</InputLabel>
+                                    <Select
+                                        onChange={ev => dispatch(setWeaponFilterType(ev.target.value as WeaponType))}
+                                        value={weaponFilter.weaponType}
+                                        variant="standard">
+                                        {Object.keys(WeaponType)
+                                            .sort()
+                                            .map(weaponType => (
+                                                <MenuItem
+                                                    key={weaponType}
+                                                    value={WeaponType[weaponType as keyof typeof WeaponType]}>
+                                                    {t(`terms.weapon-types.${weaponType}`)}
+                                                </MenuItem>
+                                            ))}
+                                    </Select>
+                                </FormControl>
+                            ) : null}
+                        </Box>
+                    </>
+                )}
                 handleClose={() => setItemDialogOpen(false)}
                 itemType={pickerSelection.itemType}
                 onItemSelected={onItemPickerItemSelected}
-                open={itemDialogOpen} />
+                open={itemDialogOpen}
+                preDefinedFilters={pickerSelection.filters} />
 
             <CellSelectDialog
                 cellIndex={pickerSelection.cell?.index ?? null}

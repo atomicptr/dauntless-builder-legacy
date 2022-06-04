@@ -219,7 +219,7 @@ export class BuildModel {
 
         return match(data[BuildFields.Version])
             .with(6, () => data.length === 25)
-            .run();
+            .otherwise(() => false);
     }
 }
 

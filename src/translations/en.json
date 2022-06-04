@@ -80,6 +80,16 @@
         "torso-armour": "Torso Armour",
         "unique-effect": "Unique Effect",
         "unselect": "Select Nothing",
-        "weapon": "Weapon"
+        "weapon": "Weapon",
+        "weapon-type": "Weapon Type",
+        "weapon-types": {
+            "AetherStrikers": "Aether Strikers",
+            "Axe": "Axe",
+            "ChainBlades": "Chain Blades",
+            "Hammer": "Hammer",
+            "Repeater": "Repeater",
+            "Sword": "Sword",
+            "WarPike": "War Pike"
+        }
     }
 }

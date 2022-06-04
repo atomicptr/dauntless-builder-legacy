@@ -26,19 +26,22 @@ import { ArmourItemType, isArmourType, ItemType, itemTypeIdentifier } from "@src
 import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
 import { Weapon } from "@src/data/Weapon";
+import { selectItemSelectFilter } from "@src/features/item-select-filter/item-select-filter-slice";
 import useIsMobile from "@src/hooks/is-mobile";
-import React, { useEffect, useMemo, useState } from "react";
+import { useAppSelector } from "@src/hooks/redux";
+import React, { ReactNode, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { match } from "ts-pattern";
 
-import { filterBySearchQuery } from "./filters";
+import { filterBySearchQuery, filterByWeaponType } from "./filters";
 
 interface ItemSelectDialogProps {
     open: boolean;
     itemType: ItemType;
     handleClose: () => void;
     onItemSelected: (item: ItemPickerItem, itemType: ItemType, isPowerSurged: boolean) => void;
-    filters?: FilterFunc[];
+    preDefinedFilters?: FilterFunc[];
+    filterComponents?: (itemType: ItemType) => ReactNode;
 }
 
 export type FilterFunc = (item: ItemPickerItem, itemType: ItemType) => boolean;
@@ -49,7 +52,8 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
     itemType,
     handleClose,
     onItemSelected,
-    filters,
+    preDefinedFilters,
+    filterComponents,
 }) => {
     const { t } = useTranslation();
     const isMobile = useIsMobile();
@@ -58,6 +62,8 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
 
     const [searchValue, setSearchValue] = useState<string>("");
     const [powerSurged, _setPowerSurged] = useState<boolean>(true);
+
+    const itemFilter = useAppSelector(selectItemSelectFilter);
 
     const preFilteredItems = useMemo(
         () =>
@@ -68,13 +74,23 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                     .with(ItemType.Lantern, () => dauntlessBuilderData.lanterns)
                     .with(ItemType.Omnicell, () => dauntlessBuilderData.omnicells)
                     .run(),
-            ).filter(item => (filters ?? []).every(func => func(item, itemType))),
-        [itemType, filters],
+            ).filter(item => (preDefinedFilters ?? []).every(func => func(item, itemType))),
+        [itemType, preDefinedFilters],
     );
 
+    const selectedFilters = useMemo(() => {
+        if (itemType === ItemType.Weapon) {
+            const weaponType = itemFilter[ItemType.Weapon].weaponType;
+            return preFilteredItems.filter(item =>
+                weaponType !== null ? filterByWeaponType(weaponType)(item, itemType) : true,
+            );
+        }
+        return preFilteredItems;
+    }, [itemType, itemFilter, preFilteredItems]);
+
     const filteredItems = useMemo(
-        () => preFilteredItems.filter(item => filterBySearchQuery(searchValue)(item, itemType)),
-        [preFilteredItems, itemType, searchValue],
+        () => selectedFilters.filter(item => filterBySearchQuery(searchValue)(item, itemType)),
+        [selectedFilters, itemType, searchValue],
     );
 
     // reset filter values whenever open state changes
@@ -124,6 +140,8 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                         value={searchValue}
                         variant="standard" />
                 </Box>
+
+                {filterComponents ? filterComponents(itemType) : null}
 
                 <List
                     style={{ maxHeight: "100%", overflow: "auto" }}>

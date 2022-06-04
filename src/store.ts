@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import buildReducer from "./features/build/build-slice";
+import itemSelectFilterReducer from "./features/item-select-filter/item-select-filter-slice";
 
 export const store = configureStore({
     reducer: {
         build: buildReducer,
+        itemSelectFilter: itemSelectFilterReducer,
     },
 });
 
