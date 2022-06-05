@@ -46,3 +46,8 @@ export const filterByCellSlot =
     (cellSlot: CellType) =>
         (item: ItemPickerItem, _itemType: ItemType): boolean =>
             ((item as Weapon | Armour | Lantern).cells?.indexOf(cellSlot) ?? -1) > -1;
+
+export const filterByPerk =
+    (perk: string) =>
+        (item: ItemPickerItem, _itemType: ItemType): boolean =>
+            ((item as Weapon | Armour).perks ?? []).some(p => p.name === perk);

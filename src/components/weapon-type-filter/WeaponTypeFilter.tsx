@@ -17,7 +17,7 @@ const WeaponTypeFilter: React.FC = () => {
             <Select
                 multiple
                 onChange={ev => dispatch(setWeaponTypeFilter(ev.target.value as WeaponType[]))}
-                value={weaponFilter.weaponType}
+                value={weaponFilter.weaponTypes}
                 variant="standard">
                 {Object.keys(WeaponType)
                     .sort()

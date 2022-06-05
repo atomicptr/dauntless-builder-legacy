@@ -2,7 +2,7 @@ import { Box, FormControl, InputLabel, ListItemIcon, ListItemText, MenuItem, Sel
 import { ElementalType } from "@src/data/ElementalType";
 import { ItemType } from "@src/data/ItemType";
 import {
-    ElementFilterItemTypes,
+    GenericItemType,
     selectItemSelectFilter,
     setElementFilter,
 } from "@src/features/item-select-filter/item-select-filter-slice";
@@ -49,7 +49,7 @@ const ElementalTypeFilter: React.FC<ElementalTypeFilterProps> = ({ itemType }) =
                         ))}
                     </Stack>
                 )}
-                value={itemSelectFilter[itemType as ElementFilterItemTypes].elementType}
+                value={itemSelectFilter[itemType as GenericItemType].elementTypes}
                 variant="standard">
                 {Object.keys(ElementalType)
                     .sort()
@@ -59,7 +59,8 @@ const ElementalTypeFilter: React.FC<ElementalTypeFilterProps> = ({ itemType }) =
                             value={ElementalType[elementalType as keyof typeof ElementalType]}>
                             <ListItemIcon>
                                 <img
-                                    src={`/assets/icons/elements/${elementalType}.png`} />
+                                    src={`/assets/icons/elements/${elementalType}.png`}
+                                    style={{ height: "16px", width: "16px" }} />
                             </ListItemIcon>
 
                             <ListItemText>{t(`terms.elemental-types.${elementalType}`)}</ListItemText>

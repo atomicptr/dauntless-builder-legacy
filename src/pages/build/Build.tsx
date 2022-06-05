@@ -9,6 +9,7 @@ import ItemSelectDialog, { FilterFunc } from "@src/components/item-select-dialog
 import OmnicellCard from "@src/components/omnicell-card/OmnicellCard";
 import PageTitle from "@src/components/page-title/PageTitle";
 import PartPicker from "@src/components/part-picker/PartPicker";
+import PerkFilter from "@src/components/perk-filter/PerkFilter";
 import MobilePerkList from "@src/components/perk-list/MobilePerkList";
 import PerkList from "@src/components/perk-list/PerkList";
 import UniqueEffectCard from "@src/components/unique-effect-card/UniqueEffectCard";
@@ -307,6 +308,9 @@ const Build: React.FC = () => {
                         {itemType === ItemType.Weapon || isArmourType(itemType) ? (
                             <>
                                 <ElementalTypeFilter
+                                    itemType={itemType} />
+
+                                <PerkFilter
                                     itemType={itemType} />
                             </>
                         ) : null}

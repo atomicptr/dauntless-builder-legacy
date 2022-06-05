@@ -1,6 +1,8 @@
 import { Box } from "@mui/material";
 import { findPerkByName } from "@src/data/BuildModel";
+import { ItemType } from "@src/data/ItemType";
 import { PerkValue } from "@src/data/Perks";
+import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -30,7 +32,9 @@ const PerksText: React.FC<PerksTextProps> = ({ perks, itemSurged }) => {
                 src={`/assets/icons/perks/${findPerkByName(perk.name)?.type}.png`}
                 style={{ height: "16px", width: "16px" }} />
 
-            {` ${perk.name} ${index !== currentPerks.length - 1 ? ", " : ""}`}
+            {` ${t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))} ${
+                index !== currentPerks.length - 1 ? ", " : ""
+            }`}
         </Box>
     ));
 

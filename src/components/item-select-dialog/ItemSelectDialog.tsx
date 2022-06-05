@@ -22,22 +22,17 @@ import UniqueEffectCard from "@src/components/unique-effect-card/UniqueEffectCar
 import VirtualizedList from "@src/components/virtualized-list/VirtualizedList";
 import { Armour } from "@src/data/Armour";
 import { CellType } from "@src/data/Cell";
-import dauntlessBuilderData from "@src/data/Data";
-import { ArmourItemType, isArmourType, ItemType, itemTypeIdentifier } from "@src/data/ItemType";
+import { isArmourType, ItemType, itemTypeData, itemTypeIdentifier } from "@src/data/ItemType";
 import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
 import { Weapon } from "@src/data/Weapon";
-import {
-    ElementFilterItemTypes,
-    selectItemSelectFilter,
-} from "@src/features/item-select-filter/item-select-filter-slice";
+import { GenericItemType, selectItemSelectFilter } from "@src/features/item-select-filter/item-select-filter-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppSelector } from "@src/hooks/redux";
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { match } from "ts-pattern";
 
-import { filterByElement, filterBySearchQuery, filterByWeaponType } from "./filters";
+import { filterByCellSlot, filterByElement, filterByPerk, filterBySearchQuery, filterByWeaponType } from "./filters";
 
 interface ItemSelectDialogProps {
     open: boolean;
@@ -75,33 +70,37 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
 
     const preFilteredItems = useMemo(
         () =>
-            Object.values(
-                match(itemType)
-                    .with(ItemType.Weapon, () => dauntlessBuilderData.weapons)
-                    .with(ArmourItemType, () => dauntlessBuilderData.armours)
-                    .with(ItemType.Lantern, () => dauntlessBuilderData.lanterns)
-                    .with(ItemType.Omnicell, () => dauntlessBuilderData.omnicells)
-                    .run(),
-            ).filter(item => (preDefinedFilters ?? []).every(func => func(item, itemType))),
+            Object.values(itemTypeData(itemType)).filter(item =>
+                (preDefinedFilters ?? []).every(func => func(item, itemType)),
+            ),
         [itemType, preDefinedFilters],
     );
 
     const selectedFilters = useMemo(() => {
         if (itemType === ItemType.Weapon) {
-            const { weaponType, elementType } = itemFilter[ItemType.Weapon];
+            const { weaponTypes, elementTypes, perks, cellSlots } = itemFilter[ItemType.Weapon];
             return preFilteredItems
                 .filter(item =>
-                    weaponType.length > 0 ? weaponType.some(wt => filterByWeaponType(wt)(item, itemType)) : true,
+                    weaponTypes.length > 0 ? weaponTypes.some(wt => filterByWeaponType(wt)(item, itemType)) : true,
                 )
                 .filter(item =>
-                    elementType.length > 0 ? elementType.some(et => filterByElement(et)(item, itemType)) : true,
+                    elementTypes.length > 0 ? elementTypes.some(et => filterByElement(et)(item, itemType)) : true,
+                )
+                .filter(item => (perks.length > 0 ? perks.some(perk => filterByPerk(perk)(item, itemType)) : true))
+                .filter(item =>
+                    cellSlots.length > 0 ? cellSlots.some(perk => filterByCellSlot(perk)(item, itemType)) : true,
                 );
         }
         if (isArmourType(itemType)) {
-            const { elementType } = itemFilter[itemType as ElementFilterItemTypes];
-            return preFilteredItems.filter(item =>
-                elementType.length > 0 ? elementType.some(et => filterByElement(et)(item, itemType)) : true,
-            );
+            const { elementTypes, perks, cellSlots } = itemFilter[itemType as GenericItemType];
+            return preFilteredItems
+                .filter(item =>
+                    elementTypes.length > 0 ? elementTypes.some(et => filterByElement(et)(item, itemType)) : true,
+                )
+                .filter(item => (perks.length > 0 ? perks.some(perk => filterByPerk(perk)(item, itemType)) : true))
+                .filter(item =>
+                    cellSlots.length > 0 ? cellSlots.some(perk => filterByCellSlot(perk)(item, itemType)) : true,
+                );
         }
         return preFilteredItems;
     }, [itemType, itemFilter, preFilteredItems]);

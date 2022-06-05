@@ -1,4 +1,5 @@
 import {match, P} from "ts-pattern";
+import dauntlessBuilderData from "@src/data/Data";
 
 export enum ItemType {
     Weapon,
@@ -30,4 +31,12 @@ export const itemTypeIdentifier = (itemType: ItemType) =>
         .with(ItemType.Part, () => "terms.part")
         .with(ItemType.Cell, () => "terms.cell")
         .with(ItemType.Perk, () => "terms.perk")
+        .run();
+
+export const itemTypeData = (itemType: ItemType) =>
+    match(itemType)
+        .with(ItemType.Weapon, () => dauntlessBuilderData.weapons)
+        .with(ArmourItemType, () => dauntlessBuilderData.armours)
+        .with(ItemType.Lantern, () => dauntlessBuilderData.lanterns)
+        .with(ItemType.Omnicell, () => dauntlessBuilderData.omnicells)
         .run();
