@@ -33,7 +33,9 @@
             "filter-by": "Filter by {{name}}",
             "no-perks": "No perks found.",
             "no-x-selected": "No <b>{{name}}</b> selected.",
-            "title": "{{weaponName}} {{omnicell}} Build"
+            "title": "{{weaponName}} {{omnicell}} Build",
+            "toggle-filters": "Toggle display of filters",
+            "toggle-unique-effects": "Toggle display of unique effects"
         },
         "home": {
             "title": "Home"

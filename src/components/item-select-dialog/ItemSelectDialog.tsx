@@ -1,4 +1,4 @@
-import { Close, Search } from "@mui/icons-material";
+import { Close, FilterAlt, FilterAltOff, Search, UnfoldLess, UnfoldMore } from "@mui/icons-material";
 import {
     AppBar,
     Box,
@@ -66,6 +66,8 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
 
     const [searchValue, setSearchValue] = useState<string>("");
     const [powerSurged, _setPowerSurged] = useState<boolean>(true);
+    const [showFilters, setShowFilters] = useState<boolean>(!isMobile);
+    const [showUniqueEffects, setShowUniqueEffects] = useState<boolean>(!isMobile);
 
     const filterAreaRef = useRef<HTMLElement>(null);
 
@@ -120,6 +122,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
             fullScreen={isMobile}
             fullWidth
             maxWidth={dialogWidth}
+            onClose={handleClose}
             open={open}>
             {isMobile ? (
                 <AppBar
@@ -132,7 +135,22 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                             {title}
                         </Typography>
                         <IconButton
-                            aria-label="close"
+                            color="inherit"
+                            edge="start"
+                            onClick={() => setShowUniqueEffects(!showUniqueEffects)}
+                            sx={{ mr: 2 }}
+                            title={t("pages.build.toggle-unique-effects")}>
+                            {showUniqueEffects ? <UnfoldLess /> : <UnfoldMore />}
+                        </IconButton>
+                        <IconButton
+                            color="inherit"
+                            edge="start"
+                            onClick={() => setShowFilters(!showFilters)}
+                            sx={{ mr: 2 }}
+                            title={t("pages.build.toggle-filters")}>
+                            {showFilters ? <FilterAltOff /> : <FilterAlt />}
+                        </IconButton>
+                        <IconButton
                             color="inherit"
                             edge="start"
                             onClick={handleClose}>
@@ -146,27 +164,29 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
 
             <DialogContent
                 sx={{ minHeight: "80vh", overflow: "hidden" }}>
-                <Stack
-                    ref={filterAreaRef}
-                    spacing={2}
-                    sx={{ m: 1 }}>
-                    <TextField
-                        InputProps={{
-                            startAdornment: (
-                                <InputAdornment
-                                    position="start">
-                                    <Search />
-                                </InputAdornment>
-                            ),
-                        }}
-                        fullWidth
-                        onChange={ev => setSearchValue(ev.target.value)}
-                        placeholder={t("terms.search")}
-                        value={searchValue}
-                        variant="standard" />
+                {showFilters ? (
+                    <Stack
+                        ref={filterAreaRef}
+                        spacing={2}
+                        sx={{ m: 1 }}>
+                        <TextField
+                            InputProps={{
+                                startAdornment: (
+                                    <InputAdornment
+                                        position="start">
+                                        <Search />
+                                    </InputAdornment>
+                                ),
+                            }}
+                            fullWidth
+                            onChange={ev => setSearchValue(ev.target.value)}
+                            placeholder={t("terms.search")}
+                            value={searchValue}
+                            variant="standard" />
 
-                    {filterComponents ? filterComponents(itemType) : null}
-                </Stack>
+                        {filterComponents ? filterComponents(itemType) : null}
+                    </Stack>
+                ) : null}
 
                 <VirtualizedList
                     count={filteredItems.length}
@@ -185,31 +205,33 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                                     ref={rowRef}
                                     sx={{ width: "100%" }}>
                                     <ItemPicker
-                                        componentsBelow={() => (
-                                            <>
-                                                {itemType === ItemType.Weapon || isArmourType(itemType)
-                                                    ? (item as Weapon | Armour).unique_effects
-                                                        ?.filter(ue =>
-                                                            ue.powerSurged !== undefined
-                                                                ? ue.powerSurged === powerSurged
-                                                                : true,
-                                                        )
-                                                        .map((ue, index) => (
-                                                            <UniqueEffectCard
-                                                                key={index}
-                                                                index={index}
-                                                                item={item}
-                                                                itemType={itemType}
-                                                                uniqueEffect={ue} />
-                                                        ))
-                                                    : null}
+                                        componentsBelow={() =>
+                                            showUniqueEffects ? (
+                                                <>
+                                                    {itemType === ItemType.Weapon || isArmourType(itemType)
+                                                        ? (item as Weapon | Armour).unique_effects
+                                                            ?.filter(ue =>
+                                                                ue.powerSurged !== undefined
+                                                                    ? ue.powerSurged === powerSurged
+                                                                    : true,
+                                                            )
+                                                            .map((ue, index) => (
+                                                                <UniqueEffectCard
+                                                                    key={index}
+                                                                    index={index}
+                                                                    item={item}
+                                                                    itemType={itemType}
+                                                                    uniqueEffect={ue} />
+                                                            ))
+                                                        : null}
 
-                                                {itemType === ItemType.Omnicell ? (
-                                                    <OmnicellCard
-                                                        item={item as Omnicell} />
-                                                ) : null}
-                                            </>
-                                        )}
+                                                    {itemType === ItemType.Omnicell ? (
+                                                        <OmnicellCard
+                                                            item={item as Omnicell} />
+                                                    ) : null}
+                                                </>
+                                            ) : null
+                                        }
                                         componentsInside={() => (
                                             <Typography
                                                 color="text.secondary"
@@ -249,19 +271,41 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                             </ListItem>
                         );
                     }}
-                    subtractFromHeight={filterAreaRef.current?.clientHeight ?? 0} />
+                    subtractFromHeight={showFilters ? filterAreaRef.current?.clientHeight ?? 0 : 0} />
             </DialogContent>
 
-            {isMobile ? null : (
-                <DialogActions>
-                    <Button
-                        onClick={() => onItemSelected(null, itemType, powerSurged)}>{t("terms.unselect")}
-                    </Button>
-                    <Button
-                        onClick={handleClose}>{t("terms.close")}
-                    </Button>
-                </DialogActions>
-            )}
+            <DialogActions>
+                {!isMobile ? (
+                    <>
+                        <IconButton
+                            color="inherit"
+                            edge="start"
+                            onClick={() => setShowUniqueEffects(!showUniqueEffects)}
+                            sx={{ ml: 1 }}
+                            title={t("pages.build.toggle-unique-effects")}>
+                            {showUniqueEffects ? <UnfoldLess /> : <UnfoldMore />}
+                        </IconButton>
+                        <IconButton
+                            color="inherit"
+                            edge="start"
+                            onClick={() => setShowFilters(!showFilters)}
+                            title={t("pages.build.toggle-filters")}>
+                            {showFilters ? <FilterAltOff /> : <FilterAlt />}
+                        </IconButton>
+                    </>
+                ) : null}
+
+                <Box
+                    sx={{ flexGrow: 1 }}>{/* Spacer */}
+                </Box>
+
+                <Button
+                    onClick={() => onItemSelected(null, itemType, powerSurged)}>{t("terms.unselect")}
+                </Button>
+                <Button
+                    onClick={handleClose}>{t("terms.close")}
+                </Button>
+            </DialogActions>
         </Dialog>
     );
 };

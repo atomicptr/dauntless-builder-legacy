@@ -112,6 +112,7 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
             fullScreen={isMobile}
             fullWidth
             maxWidth={dialogWidth}
+            onClose={handleClose}
             open={open}>
             {isMobile ? (
                 <AppBar
