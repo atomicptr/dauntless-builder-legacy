@@ -18,6 +18,7 @@ import ItemPicker, { ItemPickerItem } from "@src/components/item-picker/ItemPick
 import OmnicellCard from "@src/components/omnicell-card/OmnicellCard";
 import { Transition } from "@src/components/theme/transition";
 import UniqueEffectCard from "@src/components/unique-effect-card/UniqueEffectCard";
+import VirtualizedList from "@src/components/virtualized-list/VirtualizedList";
 import { Armour } from "@src/data/Armour";
 import { CellType } from "@src/data/Cell";
 import dauntlessBuilderData from "@src/data/Data";
@@ -30,8 +31,6 @@ import useIsMobile from "@src/hooks/is-mobile";
 import { useAppSelector } from "@src/hooks/redux";
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import AutoSizer from "react-virtualized-auto-sizer";
-import { ListChildComponentProps, VariableSizeList } from "react-window";
 import { match } from "ts-pattern";
 
 import { filterBySearchQuery, filterByWeaponType } from "./filters";
@@ -47,7 +46,6 @@ interface ItemSelectDialogProps {
 
 export type FilterFunc = (item: ItemPickerItem, itemType: ItemType) => boolean;
 const dialogWidth = "md";
-const defaultRowHeight = 200;
 
 const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
     open,
@@ -66,8 +64,6 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
     const [powerSurged, _setPowerSurged] = useState<boolean>(true);
 
     const filterAreaRef = useRef<HTMLElement>(null);
-    const listRef = useRef<VariableSizeList>(null);
-    const rowHeights = useRef<{ [index: number]: number }>({});
 
     const itemFilter = useAppSelector(selectItemSelectFilter);
 
@@ -104,96 +100,6 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
         setSearchValue("");
     }, [open]);
 
-    const getRowHeight = (index: number) =>
-        index in rowHeights.current ? rowHeights.current[index] : defaultRowHeight;
-
-    const setRowHeight = (index: number, size: number) => {
-        listRef.current?.resetAfterIndex(0);
-        rowHeights.current = { ...rowHeights.current, [index]: size };
-    };
-
-    const Row = ({ index, style }: ListChildComponentProps) => {
-        const rowRef = useRef<HTMLElement>(null);
-
-        const item = filteredItems[index];
-
-        useEffect(() => {
-            if (rowRef.current) {
-                setRowHeight(index, rowRef.current.clientHeight);
-            }
-        }, [rowRef, index]);
-
-        return (
-            <ListItem
-                key={index}
-                component={"div"}
-                disablePadding
-                style={style}
-                sx={{ width: "100%" }}>
-                <Stack
-                    ref={rowRef}
-                    sx={{ width: "100%" }}>
-                    <ItemPicker
-                        componentsBelow={() => (
-                            <>
-                                {itemType === ItemType.Weapon || isArmourType(itemType)
-                                    ? (item as Weapon | Armour).unique_effects
-                                        ?.filter(ue =>
-                                            ue.powerSurged !== undefined ? ue.powerSurged === powerSurged : true,
-                                        )
-                                        .map((ue, index) => (
-                                            <UniqueEffectCard
-                                                key={index}
-                                                index={index}
-                                                item={item}
-                                                itemType={itemType}
-                                                uniqueEffect={ue} />
-                                        ))
-                                    : null}
-
-                                {itemType === ItemType.Omnicell ? <OmnicellCard
-                                    item={item as Omnicell} /> : null}
-                            </>
-                        )}
-                        componentsInside={() => (
-                            <Typography
-                                color="text.secondary"
-                                component="div"
-                                variant="subtitle1">
-                                <Stack
-                                    direction={isMobile ? "column" : "row"}
-                                    spacing={isMobile ? 0 : 1}>
-                                    <Box>
-                                        <b>{t("terms.cells")}:</b>
-                                    </Box>
-                                    {(Array.isArray((item as Weapon | Armour | Lantern | null)?.cells)
-                                        ? ((item as Weapon | Armour | Lantern | null)?.cells as CellType[]) ?? []
-                                        : [(item as Weapon | Armour | Lantern | null)?.cells]
-                                    ).map((cellType, index) =>
-                                        cellType ? (
-                                            <Box
-                                                key={index}
-                                                sx={{ alignItems: "center", display: "flex" }}>
-                                                <img
-                                                    src={`/assets/icons/perks/${cellType}.png`}
-                                                    style={{ height: "16px", width: "16px" }} />
-                                                &nbsp;
-                                                {t(`terms.cell-type.${cellType}`)}
-                                            </Box>
-                                        ) : null,
-                                    )}
-                                </Stack>
-                            </Typography>
-                        )}
-                        isPowerSurged={powerSurged}
-                        item={item}
-                        onClick={() => onItemSelected(item, itemType, powerSurged)}
-                        type={itemType} />
-                </Stack>
-            </ListItem>
-        );
-    };
-
     return (
         <Dialog
             TransitionComponent={Transition}
@@ -225,7 +131,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
             )}
 
             <DialogContent
-                sx={{ minHeight: "80vh" }}>
+                sx={{ minHeight: "80vh", overflow: "hidden" }}>
                 <Box
                     ref={filterAreaRef}>
                     <Box
@@ -243,18 +149,88 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                     {filterComponents ? filterComponents(itemType) : null}
                 </Box>
 
-                <AutoSizer>
-                    {({ height, width }) => (
-                        <VariableSizeList
-                            height={height - (filterAreaRef.current?.clientHeight ?? 0) - 16}
-                            itemCount={filteredItems.length}
-                            itemSize={getRowHeight}
-                            ref={listRef}
-                            width={width}>
-                            {Row}
-                        </VariableSizeList>
-                    )}
-                </AutoSizer>
+                <VirtualizedList
+                    count={filteredItems.length}
+                    defaultRowHeight={300}
+                    renderItems={(rowRef, index, style) => {
+                        const item = filteredItems[index];
+
+                        return (
+                            <ListItem
+                                key={index}
+                                component={"div"}
+                                disablePadding
+                                style={style}
+                                sx={{ width: "100%" }}>
+                                <Stack
+                                    ref={rowRef}
+                                    sx={{ width: "100%" }}>
+                                    <ItemPicker
+                                        componentsBelow={() => (
+                                            <>
+                                                {itemType === ItemType.Weapon || isArmourType(itemType)
+                                                    ? (item as Weapon | Armour).unique_effects
+                                                        ?.filter(ue =>
+                                                            ue.powerSurged !== undefined
+                                                                ? ue.powerSurged === powerSurged
+                                                                : true,
+                                                        )
+                                                        .map((ue, index) => (
+                                                            <UniqueEffectCard
+                                                                key={index}
+                                                                index={index}
+                                                                item={item}
+                                                                itemType={itemType}
+                                                                uniqueEffect={ue} />
+                                                        ))
+                                                    : null}
+
+                                                {itemType === ItemType.Omnicell ? (
+                                                    <OmnicellCard
+                                                        item={item as Omnicell} />
+                                                ) : null}
+                                            </>
+                                        )}
+                                        componentsInside={() => (
+                                            <Typography
+                                                color="text.secondary"
+                                                component="div"
+                                                variant="subtitle1">
+                                                <Stack
+                                                    direction={isMobile ? "column" : "row"}
+                                                    spacing={isMobile ? 0 : 1}>
+                                                    <Box>
+                                                        <b>{t("terms.cells")}:</b>
+                                                    </Box>
+                                                    {(Array.isArray((item as Weapon | Armour | Lantern | null)?.cells)
+                                                        ? ((item as Weapon | Armour | Lantern | null)
+                                                            ?.cells as CellType[]) ?? []
+                                                        : [(item as Weapon | Armour | Lantern | null)?.cells]
+                                                    ).map((cellType, index) =>
+                                                        cellType ? (
+                                                            <Box
+                                                                key={index}
+                                                                sx={{ alignItems: "center", display: "flex" }}>
+                                                                <img
+                                                                    src={`/assets/icons/perks/${cellType}.png`}
+                                                                    style={{ height: "16px", width: "16px" }} />
+                                                                &nbsp;
+                                                                {t(`terms.cell-type.${cellType}`)}
+                                                            </Box>
+                                                        ) : null,
+                                                    )}
+                                                </Stack>
+                                            </Typography>
+                                        )}
+                                        isPowerSurged={powerSurged}
+                                        item={item}
+                                        onClick={() => onItemSelected(item, itemType, powerSurged)}
+                                        type={itemType} />
+                                </Stack>
+                            </ListItem>
+                        );
+                    }}
+                    subtractFromHeight={filterAreaRef.current?.clientHeight ?? 0} />
             </DialogContent>
 
             {isMobile ? null : (

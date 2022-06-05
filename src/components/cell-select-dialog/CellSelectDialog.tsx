@@ -12,7 +12,6 @@ import {
     DialogContent,
     DialogTitle,
     IconButton,
-    List,
     ListItem,
     TextField,
     Toolbar,
@@ -21,6 +20,7 @@ import {
 import { styled } from "@mui/material/styles";
 import { itemPickerDefaultImageSize, rarityColor } from "@src/components/theme/theme";
 import { Transition } from "@src/components/theme/transition";
+import VirtualizedList from "@src/components/virtualized-list/VirtualizedList";
 import { findCellByVariantName, findPerkByName } from "@src/data/BuildModel";
 import { Cell, CellType } from "@src/data/Cell";
 import dauntlessBuilderData from "@src/data/Data";
@@ -29,7 +29,7 @@ import { ItemType, itemTypeIdentifier } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
 import useIsMobile from "@src/hooks/is-mobile";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 interface CellSelectDialogProps {
@@ -69,6 +69,7 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
 
     const title = t("components.item-select-dialog.select-text", { name: t(itemTypeIdentifier(ItemType.Cell)) });
 
+    const searchFieldRef = useRef<HTMLElement>(null);
     const [searchValue, setSearchValue] = useState<string>("");
 
     const preFilteredItems = useMemo(
@@ -134,8 +135,10 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
                 <DialogTitle>{title}</DialogTitle>
             )}
 
-            <DialogContent>
+            <DialogContent
+                sx={{ minHeight: "80vh", overflow: "hidden" }}>
                 <Box
+                    ref={searchFieldRef}
                     sx={{ alignItems: "flex-end", display: "flex", m: 1 }}>
                     <Search
                         sx={{ color: "action.active", mr: 1, my: 0.5 }} />
@@ -147,86 +150,97 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
                         variant="standard" />
                 </Box>
 
-                <List
-                    style={{ maxHeight: "100%", overflow: "auto" }}>
-                    {filteredItems.map((cell, index) => (
-                        <ListItem
-                            key={index}
-                            component={"div"}
-                            disablePadding
-                            sx={{ mb: 2, width: "100%" }}>
-                            <Card
+                <VirtualizedList
+                    count={filteredItems.length}
+                    defaultRowHeight={165}
+                    renderItems={(rowRef, index, style) => {
+                        const cell = filteredItems[index];
+
+                        return (
+                            <ListItem
+                                key={index}
+                                component={"div"}
+                                disablePadding
+                                style={style}
                                 sx={{ width: "100%" }}>
                                 <Box
-                                    sx={{
-                                        alignItems: "center",
-                                        display: "flex",
-                                        flexDirection: "row",
-                                        height: "100%",
-                                        justifyContent: "flex-start",
-                                        width: "100%",
-                                    }}>
-                                    <Box
-                                        sx={{
-                                            alignItems: "center",
-                                            display: "flex",
-                                            justifyContent: "center",
-                                            pl: 2,
-                                            pr: 2,
-                                        }}>
-                                        <CardMedia
-                                            component="img"
-                                            image={`/assets/icons/perks/${cell.slot}.png`}
-                                            sx={{ height: imageSize, width: imageSize }} />
-                                    </Box>
-                                    <CardContent>
-                                        <Typography
-                                            component="div"
-                                            sx={{ alignItems: "center", display: "flex", mb: 1 }}
-                                            variant="h5">
-                                            {t(itemTranslationIdentifier(ItemType.Cell, cell.name, "name"))}
-                                        </Typography>
+                                    ref={rowRef}
+                                    sx={{ width: "100%" }}>
+                                    <Card
+                                        sx={{ mb: 1, width: "100%" }}>
+                                        <Box
+                                            sx={{
+                                                alignItems: "center",
+                                                display: "flex",
+                                                flexDirection: "row",
+                                                height: "100%",
+                                                justifyContent: "flex-start",
+                                                width: "100%",
+                                            }}>
+                                            <Box
+                                                sx={{
+                                                    alignItems: "center",
+                                                    display: "flex",
+                                                    justifyContent: "center",
+                                                    pl: 2,
+                                                    pr: 2,
+                                                }}>
+                                                <CardMedia
+                                                    component="img"
+                                                    image={`/assets/icons/perks/${cell.slot}.png`}
+                                                    sx={{ height: imageSize, width: imageSize }} />
+                                            </Box>
+                                            <CardContent>
+                                                <Typography
+                                                    component="div"
+                                                    sx={{ alignItems: "center", display: "flex", mb: 1 }}
+                                                    variant="h5">
+                                                    {t(itemTranslationIdentifier(ItemType.Cell, cell.name, "name"))}
+                                                </Typography>
 
-                                        <Typography>
-                                            {t(
-                                                itemTranslationIdentifier(
-                                                    ItemType.Perk,
-                                                    findPerkByCell(cell)?.name ?? "null",
-                                                    "description",
-                                                ),
-                                            )}
-                                        </Typography>
-                                    </CardContent>
+                                                <Typography>
+                                                    {t(
+                                                        itemTranslationIdentifier(
+                                                            ItemType.Perk,
+                                                            findPerkByCell(cell)?.name ?? "null",
+                                                            "description",
+                                                        ),
+                                                    )}
+                                                </Typography>
+                                            </CardContent>
+                                        </Box>
+                                        <CardActions
+                                            sx={{ justifyContent: "flex-end" }}>
+                                            {Object.keys(cell.variants).map((variant, index) => {
+                                                const cell = findCellByVariantName(variant);
+                                                const variantIndex =
+                                                    cell != null && variant !== null
+                                                        ? Object.keys(cell.variants).indexOf(variant)
+                                                        : -1;
+                                                const rarity =
+                                                    cell != null && variant !== null
+                                                        ? cell.variants[variant].rarity
+                                                        : ItemRarity.Uncommon;
+                                                return (
+                                                    <CellButton
+                                                        key={index}
+                                                        onClick={() => onCellSelected(variant, itemType, cellIndex)}
+                                                        rarity={rarity}
+                                                        sx={{ flexGrow: isMobile ? 1 : 0 }}
+                                                        variant="contained">
+                                                        {`+${variantIndex + 1}`}
+                                                    </CellButton>
+                                                );
+                                            })}
+                                        </CardActions>
+                                    </Card>
                                 </Box>
-                                <CardActions
-                                    sx={{ justifyContent: "flex-end" }}>
-                                    {Object.keys(cell.variants).map((variant, index) => {
-                                        const cell = findCellByVariantName(variant);
-                                        const variantIndex =
-                                            cell != null && variant !== null
-                                                ? Object.keys(cell.variants).indexOf(variant)
-                                                : -1;
-                                        const rarity =
-                                            cell != null && variant !== null
-                                                ? cell.variants[variant].rarity
-                                                : ItemRarity.Uncommon;
-                                        return (
-                                            <CellButton
-                                                key={index}
-                                                onClick={() => onCellSelected(variant, itemType, cellIndex)}
-                                                rarity={rarity}
-                                                sx={{ flexGrow: isMobile ? 1 : 0 }}
-                                                variant="contained">
-                                                {`+${variantIndex + 1}`}
-                                            </CellButton>
-                                        );
-                                    })}
-                                </CardActions>
-                            </Card>
-                        </ListItem>
-                    ))}
-                </List>
+                            </ListItem>
+                        );
+                    }}
+                    subtractFromHeight={searchFieldRef.current?.clientHeight ?? 0} />
             </DialogContent>
+
             <DialogActions>
                 <Button
                     onClick={() => onCellSelected("", itemType, cellIndex)}>{t("terms.unselect")}
