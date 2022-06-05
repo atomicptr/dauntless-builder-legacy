@@ -2,6 +2,8 @@
 
 Create and share Dauntless builds with your friends!
 
+![Screenshot of Dauntless Builder](docs/assets/app-screenshot.png)
+
 ## Contributing
 
 Want to contribute? Great! Read the [contribution guide first](CONTRIBUTING.md).
