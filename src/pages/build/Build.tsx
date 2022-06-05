@@ -1,7 +1,4 @@
-import {
-    Grid,
-    ListSubheader,
-} from "@mui/material";
+import { Grid, ListSubheader } from "@mui/material";
 import BondWeaponPicker from "@src/components/bond-weapon-picker/BondWeaponPicker";
 import CellPicker from "@src/components/cell-picker/CellPicker";
 import CellSelectDialog from "@src/components/cell-select-dialog/CellSelectDialog";
@@ -26,10 +23,7 @@ import { Omnicell } from "@src/data/Omnicell";
 import { PartType } from "@src/data/Part";
 import { Weapon, WeaponType } from "@src/data/Weapon";
 import { selectBuild, setBuildId, updateBuild } from "@src/features/build/build-slice";
-import {
-    resetFilter,
-    setWeaponTypeFilter,
-} from "@src/features/item-select-filter/item-select-filter-slice";
+import { resetFilter, setWeaponTypeFilter } from "@src/features/item-select-filter/item-select-filter-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import React, { useEffect, useState } from "react";

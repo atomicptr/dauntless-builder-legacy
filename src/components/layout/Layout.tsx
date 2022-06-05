@@ -203,6 +203,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <DrawerHeader
                     sx={{ marginBottom: "16px" }} />
 
+                <Alert
+                    severity="warning"
+                    sx={{ mb: 2 }}>
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: t("alert.alpha-version"),
+                        }}>
+                    </div>
+                </Alert>
+
                 {isBetaLanguage(currentLanguage()) ? (
                     <Alert
                         severity="warning"
