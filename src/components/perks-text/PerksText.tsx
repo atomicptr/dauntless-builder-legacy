@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import { findPerkByName } from "@src/data/BuildModel";
 import { ItemType } from "@src/data/ItemType";
 import { PerkValue } from "@src/data/Perks";
+import useIsMobile from "@src/hooks/is-mobile";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -13,6 +14,7 @@ interface PerksTextProps {
 
 const PerksText: React.FC<PerksTextProps> = ({ perks, itemSurged }) => {
     const { t } = useTranslation();
+    const isMobile = useIsMobile();
 
     if (perks.length === 0) {
         return null;
@@ -46,12 +48,15 @@ const PerksText: React.FC<PerksTextProps> = ({ perks, itemSurged }) => {
 
     return (
         <Box
-            alignItems="center"
+            alignItems={isMobile ? "flex-start" : "center"}
             component="span"
             display="flex"
+            flexDirection={isMobile ? "column" : "row"}
             gap={0.5}>
-            <b>{t("terms.perks") + ":"}</b>
-            {perkList}
+            <Box>
+                <b>{t("terms.perks") + ":"}</b>
+            </Box>
+            <Box>{perkList}</Box>
         </Box>
     );
 };

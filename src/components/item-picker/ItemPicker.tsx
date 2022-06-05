@@ -40,7 +40,6 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
     componentsInside,
 }) => {
     const { t } = useTranslation();
-
     const isMobile = useIsMobile();
 
     const typeName = (type: ItemType): string =>
