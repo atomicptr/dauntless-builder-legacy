@@ -27,14 +27,17 @@ import { ArmourItemType, isArmourType, ItemType, itemTypeIdentifier } from "@src
 import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
 import { Weapon } from "@src/data/Weapon";
-import { selectItemSelectFilter } from "@src/features/item-select-filter/item-select-filter-slice";
+import {
+    ElementFilterItemTypes,
+    selectItemSelectFilter,
+} from "@src/features/item-select-filter/item-select-filter-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppSelector } from "@src/hooks/redux";
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { match } from "ts-pattern";
 
-import { filterBySearchQuery, filterByWeaponType } from "./filters";
+import { filterByElement, filterBySearchQuery, filterByWeaponType } from "./filters";
 
 interface ItemSelectDialogProps {
     open: boolean;
@@ -83,9 +86,19 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
 
     const selectedFilters = useMemo(() => {
         if (itemType === ItemType.Weapon) {
-            const weaponType = itemFilter[ItemType.Weapon].weaponType;
+            const { weaponType, elementType } = itemFilter[ItemType.Weapon];
+            return preFilteredItems
+                .filter(item =>
+                    weaponType.length > 0 ? weaponType.some(wt => filterByWeaponType(wt)(item, itemType)) : true,
+                )
+                .filter(item =>
+                    elementType.length > 0 ? elementType.some(et => filterByElement(et)(item, itemType)) : true,
+                );
+        }
+        if (isArmourType(itemType)) {
+            const { elementType } = itemFilter[itemType as ElementFilterItemTypes];
             return preFilteredItems.filter(item =>
-                weaponType.length > 0 ? weaponType.some(wt => filterByWeaponType(wt)(item, itemType)) : true,
+                elementType.length > 0 ? elementType.some(et => filterByElement(et)(item, itemType)) : true,
             );
         }
         return preFilteredItems;
@@ -133,8 +146,9 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
 
             <DialogContent
                 sx={{ minHeight: "80vh", overflow: "hidden" }}>
-                <Box
+                <Stack
                     ref={filterAreaRef}
+                    spacing={2}
                     sx={{ m: 1 }}>
                     <TextField
                         InputProps={{
@@ -152,7 +166,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                         variant="standard" />
 
                     {filterComponents ? filterComponents(itemType) : null}
-                </Box>
+                </Stack>
 
                 <VirtualizedList
                     count={filteredItems.length}

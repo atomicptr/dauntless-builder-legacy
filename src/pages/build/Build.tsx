@@ -1,4 +1,15 @@
-import { Box, FormControl, Grid, InputLabel, ListSubheader, MenuItem, Select } from "@mui/material";
+import {
+    Box,
+    FormControl,
+    Grid,
+    InputLabel,
+    ListItemIcon,
+    ListItemText,
+    ListSubheader,
+    MenuItem,
+    Select,
+    Stack,
+} from "@mui/material";
 import BondWeaponPicker from "@src/components/bond-weapon-picker/BondWeaponPicker";
 import CellPicker from "@src/components/cell-picker/CellPicker";
 import CellSelectDialog from "@src/components/cell-select-dialog/CellSelectDialog";
@@ -14,14 +25,22 @@ import UniqueEffectCard from "@src/components/unique-effect-card/UniqueEffectCar
 import { Armour, ArmourType } from "@src/data/Armour";
 import { BuildModel } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
+import { ElementalType } from "@src/data/ElementalType";
 import { isExotic } from "@src/data/ItemRarity";
-import { ItemType } from "@src/data/ItemType";
+import { isArmourType, ItemType } from "@src/data/ItemType";
 import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
 import { PartType } from "@src/data/Part";
 import { Weapon, WeaponType } from "@src/data/Weapon";
 import { selectBuild, setBuildId, updateBuild } from "@src/features/build/build-slice";
-import { selectWeaponFilter, setWeaponFilterType } from "@src/features/item-select-filter/item-select-filter-slice";
+import {
+    ElementFilterItemTypes,
+    resetFilter,
+    selectItemSelectFilter,
+    selectWeaponFilter,
+    setElementFilter,
+    setWeaponTypeFilter,
+} from "@src/features/item-select-filter/item-select-filter-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import React, { useEffect, useState } from "react";
@@ -52,6 +71,7 @@ const Build: React.FC = () => {
     const [pickerSelection, setPickerSelection] = useState<PickerSelection>({ filters: [], itemType: ItemType.Weapon });
 
     const weaponFilter = useAppSelector(selectWeaponFilter);
+    const itemSelectFilter = useAppSelector(selectItemSelectFilter);
 
     useEffect(() => {
         // TODO: update to new version if necessary
@@ -85,8 +105,10 @@ const Build: React.FC = () => {
     };
 
     const onItemPickerItemSelected = (item: ItemPickerItem, itemType: ItemType, isPowerSurged: boolean) => {
+        dispatch(resetFilter());
+
         if (item !== null && itemType === ItemType.Weapon) {
-            dispatch(setWeaponFilterType([(item as Weapon).type]));
+            dispatch(setWeaponTypeFilter([(item as Weapon).type]));
         }
 
         const buildUpdates = match(itemType)
@@ -300,15 +322,16 @@ const Build: React.FC = () => {
             <ItemSelectDialog
                 filterComponents={(itemType: ItemType) => (
                     <>
-                        <Box
-                            sx={{ mt: 3 }}>
-                            {itemType === ItemType.Weapon ? (
+                        {itemType === ItemType.Weapon ? (
+                            <>
                                 <FormControl
                                     fullWidth>
-                                    <InputLabel>{t("terms.weapon-type")}</InputLabel>
+                                    <InputLabel>
+                                        {t("pages.build.filter-by", { name: t("terms.weapon-type") })}
+                                    </InputLabel>
                                     <Select
                                         multiple
-                                        onChange={ev => dispatch(setWeaponFilterType(ev.target.value as WeaponType[]))}
+                                        onChange={ev => dispatch(setWeaponTypeFilter(ev.target.value as WeaponType[]))}
                                         value={weaponFilter.weaponType}
                                         variant="standard">
                                         {Object.keys(WeaponType)
@@ -322,8 +345,64 @@ const Build: React.FC = () => {
                                             ))}
                                     </Select>
                                 </FormControl>
-                            ) : null}
-                        </Box>
+                            </>
+                        ) : null}
+
+                        {itemType === ItemType.Weapon || isArmourType(itemType) ? (
+                            <FormControl
+                                fullWidth>
+                                <InputLabel>
+                                    {t("pages.build.filter-by", { name: t("terms.elemental-type") })}
+                                </InputLabel>
+                                <Select
+                                    multiple
+                                    onChange={ev =>
+                                        dispatch(setElementFilter([itemType, ev.target.value as ElementalType[]]))
+                                    }
+                                    renderValue={selected => (
+                                        <Stack
+                                            direction="row"
+                                            spacing={1}>
+                                            {selected.map((elementalType, index) => (
+                                                <Stack
+                                                    key={index}
+                                                    component="span"
+                                                    direction="row"
+                                                    spacing={0.5}
+                                                    sx={{ alignItems: "center", display: "flex" }}>
+                                                    <img
+                                                        src={`/assets/icons/elements/${elementalType}.png`}
+                                                        style={{ height: "16px", width: "16px" }} />
+                                                    <Box
+                                                        component="span">
+                                                        {t(`terms.elemental-types.${elementalType}`)}
+                                                        {index !== selected.length - 1 ? ", " : ""}
+                                                    </Box>
+                                                </Stack>
+                                            ))}
+                                        </Stack>
+                                    )}
+                                    value={itemSelectFilter[itemType as ElementFilterItemTypes].elementType}
+                                    variant="standard">
+                                    {Object.keys(ElementalType)
+                                        .sort()
+                                        .map(elementalType => (
+                                            <MenuItem
+                                                key={elementalType}
+                                                value={ElementalType[elementalType as keyof typeof ElementalType]}>
+                                                <ListItemIcon>
+                                                    <img
+                                                        src={`/assets/icons/elements/${elementalType}.png`} />
+                                                </ListItemIcon>
+
+                                                <ListItemText>
+                                                    {t(`terms.elemental-types.${elementalType}`)}
+                                                </ListItemText>
+                                            </MenuItem>
+                                        ))}
+                                </Select>
+                            </FormControl>
+                        ) : null}
                     </>
                 )}
                 handleClose={() => setItemDialogOpen(false)}

@@ -30,6 +30,7 @@
         },
         "build": {
             "click-here-to-select": "Click here to select one.",
+            "filter-by": "Filter by {{name}}",
             "no-perks": "No perks found.",
             "no-x-selected": "No <b>{{name}}</b> selected.",
             "title": "{{weaponName}} {{omnicell}} Build"
@@ -61,6 +62,15 @@
         },
         "cells": "Cells",
         "close": "Close",
+        "elemental-type": "Element",
+        "elemental-types": {
+            "Blaze": "Blaze",
+            "Frost": "Frost",
+            "Radiant": "Radiant",
+            "Shock": "Shock",
+            "Terra": "Terra",
+            "Umbral": "Umbral"
+        },
         "head-armour": "Head Armour",
         "hold": "Hold",
         "lantern": "Lantern",
