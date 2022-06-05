@@ -57,6 +57,7 @@
         "arms-armour": "Arms Armour",
         "bond-weapon": "Bond Weapon",
         "cell": "Cell",
+        "cell-slot": "Cell Slot",
         "cell-type": {
             "Alacrity": "Alacrity",
             "Brutality": "Brutality",

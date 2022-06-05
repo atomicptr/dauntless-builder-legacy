@@ -2,6 +2,7 @@ import { Grid, ListSubheader } from "@mui/material";
 import BondWeaponPicker from "@src/components/bond-weapon-picker/BondWeaponPicker";
 import CellPicker from "@src/components/cell-picker/CellPicker";
 import CellSelectDialog from "@src/components/cell-select-dialog/CellSelectDialog";
+import CellSlotFilter from "@src/components/cell-slot-filter/CellSlotFilter";
 import ElementalTypeFilter from "@src/components/elemental-type-filter/ElementalTypeFilter";
 import ItemPicker, { ItemPickerItem } from "@src/components/item-picker/ItemPicker";
 import { filterByArmourType } from "@src/components/item-select-dialog/filters";
@@ -311,6 +312,9 @@ const Build: React.FC = () => {
                                     itemType={itemType} />
 
                                 <PerkFilter
+                                    itemType={itemType} />
+
+                                <CellSlotFilter
                                     itemType={itemType} />
                             </>
                         ) : null}
