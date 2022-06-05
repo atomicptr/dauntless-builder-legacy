@@ -7,7 +7,8 @@ import {
     DialogActions,
     DialogContent,
     DialogTitle,
-    IconButton, InputAdornment,
+    IconButton,
+    InputAdornment,
     ListItem,
     Stack,
     TextField,
@@ -84,7 +85,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
         if (itemType === ItemType.Weapon) {
             const weaponType = itemFilter[ItemType.Weapon].weaponType;
             return preFilteredItems.filter(item =>
-                weaponType !== null ? filterByWeaponType(weaponType)(item, itemType) : true,
+                weaponType.length > 0 ? weaponType.some(wt => filterByWeaponType(wt)(item, itemType)) : true,
             );
         }
         return preFilteredItems;
@@ -136,16 +137,19 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                     ref={filterAreaRef}
                     sx={{ m: 1 }}>
                     <TextField
+                        InputProps={{
+                            startAdornment: (
+                                <InputAdornment
+                                    position="start">
+                                    <Search />
+                                </InputAdornment>
+                            ),
+                        }}
                         fullWidth
                         onChange={ev => setSearchValue(ev.target.value)}
                         placeholder={t("terms.search")}
                         value={searchValue}
-                        variant="standard"
-                        InputProps={{
-                            startAdornment: <InputAdornment position="start">
-                                <Search />
-                            </InputAdornment>
-                        }} />
+                        variant="standard" />
 
                     {filterComponents ? filterComponents(itemType) : null}
                 </Box>

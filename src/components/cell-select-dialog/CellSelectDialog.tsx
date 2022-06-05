@@ -11,7 +11,8 @@ import {
     DialogActions,
     DialogContent,
     DialogTitle,
-    IconButton, InputAdornment,
+    IconButton,
+    InputAdornment,
     ListItem,
     TextField,
     Toolbar,
@@ -141,16 +142,19 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
                     ref={searchFieldRef}
                     sx={{ m: 1 }}>
                     <TextField
+                        InputProps={{
+                            startAdornment: (
+                                <InputAdornment
+                                    position="start">
+                                    <Search />
+                                </InputAdornment>
+                            ),
+                        }}
                         fullWidth
                         onChange={ev => setSearchValue(ev.target.value)}
                         placeholder={t("terms.search")}
                         value={searchValue}
-                        variant="standard"
-                        InputProps={{
-                            startAdornment: <InputAdornment position="start">
-                                <Search />
-                            </InputAdornment>
-                        }} />
+                        variant="standard" />
                 </Box>
 
                 <VirtualizedList

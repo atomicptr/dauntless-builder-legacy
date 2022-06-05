@@ -29,7 +29,6 @@ export const buildSlice = createSlice({
             const build = BuildModel.deserialize(state.build);
             for (const key of Object.keys(action.payload)) {
                 const value = action.payload[key];
-                console.log(key, value, key in build);
                 if (key in build) {
                     match(key)
                         .with("weaponName", () => (build.weaponName = value as string | null))
@@ -58,7 +57,7 @@ export const buildSlice = createSlice({
                         .run();
                 }
             }
-            console.log(build);
+            console.log("updated build:", build);
             state.build = build.serialize();
         },
     },

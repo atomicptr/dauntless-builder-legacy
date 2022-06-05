@@ -86,7 +86,7 @@ const Build: React.FC = () => {
 
     const onItemPickerItemSelected = (item: ItemPickerItem, itemType: ItemType, isPowerSurged: boolean) => {
         if (item !== null && itemType === ItemType.Weapon) {
-            dispatch(setWeaponFilterType((item as Weapon).type));
+            dispatch(setWeaponFilterType([(item as Weapon).type]));
         }
 
         const buildUpdates = match(itemType)
@@ -307,7 +307,8 @@ const Build: React.FC = () => {
                                     fullWidth>
                                     <InputLabel>{t("terms.weapon-type")}</InputLabel>
                                     <Select
-                                        onChange={ev => dispatch(setWeaponFilterType(ev.target.value as WeaponType))}
+                                        multiple
+                                        onChange={ev => dispatch(setWeaponFilterType(ev.target.value as WeaponType[]))}
                                         value={weaponFilter.weaponType}
                                         variant="standard">
                                         {Object.keys(WeaponType)
