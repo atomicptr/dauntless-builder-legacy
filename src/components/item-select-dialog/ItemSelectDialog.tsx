@@ -7,7 +7,7 @@ import {
     DialogActions,
     DialogContent,
     DialogTitle,
-    IconButton,
+    IconButton, InputAdornment,
     ListItem,
     Stack,
     TextField,
@@ -133,18 +133,19 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
             <DialogContent
                 sx={{ minHeight: "80vh", overflow: "hidden" }}>
                 <Box
-                    ref={filterAreaRef}>
-                    <Box
-                        sx={{ alignItems: "flex-end", display: "flex", m: 1 }}>
-                        <Search
-                            sx={{ color: "action.active", mr: 1, my: 0.5 }} />
-                        <TextField
-                            fullWidth
-                            onChange={ev => setSearchValue(ev.target.value)}
-                            placeholder={t("terms.search")}
-                            value={searchValue}
-                            variant="standard" />
-                    </Box>
+                    ref={filterAreaRef}
+                    sx={{ m: 1 }}>
+                    <TextField
+                        fullWidth
+                        onChange={ev => setSearchValue(ev.target.value)}
+                        placeholder={t("terms.search")}
+                        value={searchValue}
+                        variant="standard"
+                        InputProps={{
+                            startAdornment: <InputAdornment position="start">
+                                <Search />
+                            </InputAdornment>
+                        }} />
 
                     {filterComponents ? filterComponents(itemType) : null}
                 </Box>
