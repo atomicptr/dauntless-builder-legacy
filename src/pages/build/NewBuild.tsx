@@ -1,11 +1,13 @@
-import PageTitle from "@src/components/page-title/PageTitle";
-import React from "react";
-import { useTranslation } from "react-i18next";
+import { BuildModel } from "@src/data/BuildModel";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const NewBuild: React.FC = () => {
-    const { t } = useTranslation();
-    return <PageTitle
-        title={t("pages.newbuild.title")} />;
+    const navigate = useNavigate();
+    useEffect(() => {
+        navigate(`/b/${BuildModel.empty().serialize()}`);
+    });
+    return null;
 };
 
 export default NewBuild;

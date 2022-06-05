@@ -18,13 +18,6 @@ const Home: React.FC = () => {
                 sx={{ mt: 2 }}>
                 <Button
                     component={NavLink}
-                    to={"/b/XafXTkTpTQT8TbTMT5TeTxTmTdTJTwT2T7T2T1TyT8TQTrTpT3"}
-                    variant="outlined">
-                    {"Empty Build"}
-                </Button>
-
-                <Button
-                    component={NavLink}
                     to={"/b/0VfrT2mCZCkBHjhjcjUaTVTvETbC8zH0RToCggUAVtVCRtjot6CndsmfxXTe"}
                     variant="outlined">
                     {"Test Build #1 - Iceborne / Glyph Weaver Spear"}
