@@ -214,7 +214,13 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                         color="text.secondary"
                                         component="div"
                                         variant="subtitle1">
-                                        <b>{t("terms.hold")}</b>:{(item as Lantern).lantern_ability.hold}
+                                        <div
+                                            dangerouslySetInnerHTML={{
+                                                __html: t("components.item-picker.lantern-hold-line", {
+                                                    hold: (item as Lantern).lantern_ability.hold,
+                                                }),
+                                            }}>
+                                        </div>
                                     </Typography>
                                 ) : null}
 
@@ -223,7 +229,13 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                         color="text.secondary"
                                         component="div"
                                         variant="subtitle1">
-                                        <b>{t("terms.passive")}</b>:{(item as Omnicell).passive}
+                                        <div
+                                            dangerouslySetInnerHTML={{
+                                                __html: t("components.item-picker.omnicell-passive-line", {
+                                                    passive: (item as Omnicell).passive,
+                                                }),
+                                            }}>
+                                        </div>
                                     </Typography>
                                 ) : null}
 

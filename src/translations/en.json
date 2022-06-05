@@ -10,6 +10,10 @@
         }
     },
     "components": {
+        "item-picker": {
+            "lantern-hold-line": "<b>$t(terms.hold)</b>: {{hold}}",
+            "omnicell-passive-line": "<b>$t(terms.passive)</b>: {{passive}}"
+        },
         "item-select-dialog": {
             "select-text": "Select {{name}}"
         }
