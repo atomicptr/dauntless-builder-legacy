@@ -33,6 +33,8 @@
             "filter-by": "Filter by {{name}}",
             "no-perks": "No perks found.",
             "no-x-selected": "No <b>{{name}}</b> selected.",
+            "power-surged-add": "Power Surge",
+            "power-surged-remove": "Base Power",
             "title": "{{weaponName}} {{omnicell}} Build",
             "toggle-filters": "Toggle display of filters",
             "toggle-unique-effects": "Toggle display of unique effects"

@@ -1,4 +1,4 @@
-import { Close, FilterAlt, FilterAltOff, Search, UnfoldLess, UnfoldMore } from "@mui/icons-material";
+import { Close, FilterAlt, FilterAltOff, Search, Star, StarOutline, UnfoldLess, UnfoldMore } from "@mui/icons-material";
 import {
     AppBar,
     Box,
@@ -65,7 +65,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
     const title = t("components.item-select-dialog.select-text", { name: t(itemTypeIdentifier(itemType)) });
 
     const [searchValue, setSearchValue] = useState<string>("");
-    const [powerSurged, _setPowerSurged] = useState<boolean>(true);
+    const [powerSurged, setPowerSurged] = useState<boolean>(true);
     const [showFilters, setShowFilters] = useState<boolean>(!isMobile);
     const [showUniqueEffects, setShowUniqueEffects] = useState<boolean>(!isMobile);
 
@@ -278,7 +278,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                 {!isMobile ? (
                     <>
                         <IconButton
-                            color="inherit"
+                            color="primary"
                             edge="start"
                             onClick={() => setShowUniqueEffects(!showUniqueEffects)}
                             sx={{ ml: 1 }}
@@ -286,7 +286,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                             {showUniqueEffects ? <UnfoldLess /> : <UnfoldMore />}
                         </IconButton>
                         <IconButton
-                            color="inherit"
+                            color="primary"
                             edge="start"
                             onClick={() => setShowFilters(!showFilters)}
                             title={t("pages.build.toggle-filters")}>
@@ -294,6 +294,12 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                         </IconButton>
                     </>
                 ) : null}
+
+                <Button
+                    onClick={() => setPowerSurged(!powerSurged)}
+                    startIcon={powerSurged ? <StarOutline /> : <Star />}>
+                    {powerSurged ? t("pages.build.power-surged-remove") : t("pages.build.power-surged-add")}
+                </Button>
 
                 <Box
                     sx={{ flexGrow: 1 }}>{/* Spacer */}
@@ -303,7 +309,9 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                     onClick={() => onItemSelected(null, itemType, powerSurged)}>{t("terms.unselect")}
                 </Button>
                 <Button
-                    onClick={handleClose}>{t("terms.close")}
+                    onClick={handleClose}
+                    sx={{ display: isMobile ? "none" : undefined }}>
+                    {t("terms.close")}
                 </Button>
             </DialogActions>
         </Dialog>
