@@ -36,7 +36,7 @@
         },
         "about": {
             "contributors": "Contributors",
-            "dependencies": "Dependencies",
+            "dependencies": "Dependencies ({{number}})",
             "title": "About"
         },
         "build": {

@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material";
+import { Avatar, Box, Card, CardActionArea, CardContent, Grid, Typography } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -22,30 +22,106 @@ export interface Dependency {
 const contributors: Contributor[] = contributorsJson;
 const dependencies: Dependency[] = dependenciesJson;
 
+// remove specific version from dependency list
+const dependencyRegex = /(@?.*)@.*/g;
+
 const About: React.FC = () => {
     const { t } = useTranslation();
-    return (
-        <>
-            <h1>{t("pages.about.contributors")}</h1>
-            {contributors.map(contributor => (
-                <Stack
-                    key={contributor.login}
-                    direction="row"
-                    spacing={2}
-                >
-                    <img
-                        src={contributor.avatar_url}
-                        style={{ height: "64px", width: "64px" }}
-                    />
-                    <h2>{contributor.login}</h2>
-                </Stack>
-            ))}
 
-            <h1>{t("pages.about.dependencies")}</h1>
-            {dependencies.map(dependency => (
-                <h2 key={dependency.name}>{`${dependency.name} - ${dependency.license}`}</h2>
-            ))}
-        </>
+    const renderContributor = (contributor: Contributor) => (
+        <Grid
+            item
+            md={4}
+            xs={12}
+        >
+            <Card>
+                <CardActionArea
+                    component="a"
+                    href={contributor.html_url}
+                    target="_blank"
+                >
+                    <CardContent sx={{ alignItems: "center", display: "flex", gap: 2 }}>
+                        <Box>
+                            <Avatar
+                                src={contributor.avatar_url}
+                                sx={{ height: 64, width: 64 }}
+                            />
+                        </Box>
+                        <Typography
+                            component="div"
+                            variant="h5"
+                        >
+                            {`${contributor.login}`}
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+        </Grid>
+    );
+
+    const renderDependency = (dependency: Dependency) => (
+        <Grid
+            item
+            md={6}
+            xs={12}
+        >
+            <Card>
+                <CardActionArea
+                    component="a"
+                    disabled={!dependency.repository}
+                    href={dependency.repository ? dependency.repository : undefined}
+                    target="_blank"
+                >
+                    <CardContent sx={{ alignItems: "center", display: "flex", flexDirection: "column", gap: 1 }}>
+                        <Typography
+                            component="div"
+                            variant="h6"
+                        >
+                            {`${dependency.name.replace(dependencyRegex, "$1")}`}
+                        </Typography>
+                        <Typography
+                            color="text.secondary"
+                            component="div"
+                            variant="subtitle1"
+                        >
+                            {`${dependency.license}`}
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+        </Grid>
+    );
+
+    return (
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 4, mb: 2 }}>
+            <Typography
+                component="div"
+                variant="h4"
+            >
+                {t("pages.about.contributors")}
+            </Typography>
+
+            <Grid
+                container
+                spacing={2}
+            >
+                {contributors.map(renderContributor)}
+            </Grid>
+
+            <Typography
+                component="div"
+                variant="h4"
+            >
+                {t("pages.about.dependencies", { number: dependencies.length })}
+            </Typography>
+
+            <Grid
+                container
+                spacing={2}
+            >
+                {dependencies.map(renderDependency)}
+            </Grid>
+        </Box>
     );
 };
 
