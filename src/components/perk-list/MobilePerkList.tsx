@@ -140,15 +140,35 @@ const MobilePerkList: React.FC = () => {
                                     sx={{ mr: 2 }}
                                 />
                                 <ListItemText
-                                    primary={t(
-                                        itemTranslationIdentifier(
-                                            ItemType.Perk,
-                                            dialogPerk.data.name,
-                                            "effects",
-                                            id,
-                                            "description",
-                                        ),
-                                    )}
+                                    primary={
+                                        Array.isArray(dialogPerk.data.effects[id].description)
+                                            ? (dialogPerk.data.effects[id].description as (string | null)[])
+                                                .map((description, index) =>
+                                                    description !== null
+                                                        ? t(
+                                                            itemTranslationIdentifier(
+                                                                ItemType.Perk,
+                                                                dialogPerk.data.name,
+                                                                "effects",
+                                                                id,
+                                                                "description",
+                                                                index.toString(),
+                                                            ),
+                                                        )
+                                                        : null,
+                                                )
+                                                .filter(description => !!description)
+                                                .join(", ")
+                                            : t(
+                                                itemTranslationIdentifier(
+                                                    ItemType.Perk,
+                                                    dialogPerk.data.name,
+                                                    "effects",
+                                                    id,
+                                                    "description",
+                                                ),
+                                            )
+                                    }
                                     sx={{ width: "100%" }}
                                 />
                             </ListItem>

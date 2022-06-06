@@ -29,7 +29,25 @@ const PerkList: React.FC = () => {
                     >
                         <Box sx={{ whiteSpace: "nowrap" }}>{`+ ${id}`}</Box>
                         <Box>
-                            {t(itemTranslationIdentifier(ItemType.Perk, perk.name, "effects", id, "description"))}
+                            {Array.isArray(perk.effects[id].description)
+                                ? (perk.effects[id].description as (string | null)[])
+                                    .map((description, index) =>
+                                        description !== null
+                                            ? t(
+                                                itemTranslationIdentifier(
+                                                    ItemType.Perk,
+                                                    perk.name,
+                                                    "effects",
+                                                    id,
+                                                    "description",
+                                                    index.toString(),
+                                                ),
+                                            )
+                                            : null,
+                                    )
+                                    .filter(description => !!description)
+                                    .join(", ")
+                                : t(itemTranslationIdentifier(ItemType.Perk, perk.name, "effects", id, "description"))}
                         </Box>
                     </Stack>
                 </Box>
