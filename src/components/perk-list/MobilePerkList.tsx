@@ -140,7 +140,15 @@ const MobilePerkList: React.FC = () => {
                                     sx={{ mr: 2 }}
                                 />
                                 <ListItemText
-                                    primary={dialogPerk.data.effects[id].description}
+                                    primary={t(
+                                        itemTranslationIdentifier(
+                                            ItemType.Perk,
+                                            dialogPerk.data.name,
+                                            "effects",
+                                            id,
+                                            "description",
+                                        ),
+                                    )}
                                     sx={{ width: "100%" }}
                                 />
                             </ListItem>

@@ -229,7 +229,14 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                         <div
                                             dangerouslySetInnerHTML={{
                                                 __html: t("components.item-picker.lantern-hold-line", {
-                                                    hold: (item as Lantern).lantern_ability.hold,
+                                                    hold: t(
+                                                        itemTranslationIdentifier(
+                                                            ItemType.Lantern,
+                                                            item.name,
+                                                            "lantern_ability",
+                                                            "hold",
+                                                        ),
+                                                    ),
                                                 }),
                                             }}
                                         />

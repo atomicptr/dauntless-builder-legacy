@@ -19,13 +19,13 @@
         }
     },
     "drawer": {
+        "about": "$t(pages.about.title)",
         "build-finder": "Build Finder",
         "home": "Home",
         "meta-builds": "Meta Builds",
         "my-builds": "My Builds",
         "new-build": "New Build",
-        "settings": "$t(pages.settings.title)",
-        "about": "$t(pages.about.title)"
+        "settings": "$t(pages.settings.title)"
     },
     "misc": {
         "dauntless-version": "Dauntless v{{version}}"

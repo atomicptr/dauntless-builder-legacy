@@ -28,6 +28,7 @@ import { selectBuild, setBuildId, updateBuild } from "@src/features/build/build-
 import { resetFilter, setWeaponTypeFilter } from "@src/features/item-select-filter/item-select-filter-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
+import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
@@ -193,7 +194,18 @@ const Build: React.FC = () => {
                     md={9}
                     sm={12}
                 >
-                    <ListSubheader sx={{ userSelect: "none" }}>{t("pages.build.title", { ...build })}</ListSubheader>
+                    <ListSubheader sx={{ userSelect: "none" }}>
+                        {t("pages.build.title", {
+                            omnicell:
+                                build.data.omnicell !== null
+                                    ? t(itemTranslationIdentifier(ItemType.Omnicell, build.data.omnicell.name, "name"))
+                                    : "",
+                            weaponName:
+                                build.data.weapon !== null
+                                    ? t(itemTranslationIdentifier(ItemType.Weapon, build.data.weapon.name, "name"))
+                                    : "",
+                        })}
+                    </ListSubheader>
 
                     <ItemPicker
                         componentsBelow={() => <OmnicellCard item={build.data.omnicell} />}

@@ -18,7 +18,9 @@
     },
     "terms": {
         "active": "Actif",
+        "active-ability": "Capacité actif",
         "arms-armour": "Gants",
+        "bond-weapon": "Lien",
         "elemental-types": {
             "Blaze": "Incandescant",
             "Frost": "Givrant",
@@ -44,6 +46,7 @@
         "resistance": "Resistance",
         "search": "Chercher...",
         "torso-armour": "Torse",
+        "unique-effect": "effet unique",
         "weapon": "Arme",
         "weapon-types": {
             "AetherStrikers": "Cestes aethériques",

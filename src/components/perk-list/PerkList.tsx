@@ -27,7 +27,7 @@ const PerkList: React.FC = () => {
                         direction="row"
                         spacing={1}
                     >
-                        <Box>{`+ ${id}`}</Box>
+                        <Box sx={{ whiteSpace: "nowrap" }}>{`+ ${id}`}</Box>
                         <Box>
                             {t(itemTranslationIdentifier(ItemType.Perk, perk.name, "effects", id, "description"))}
                         </Box>
