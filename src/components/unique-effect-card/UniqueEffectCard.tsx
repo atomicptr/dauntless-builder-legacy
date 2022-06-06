@@ -24,18 +24,18 @@ const UniqueEffectCard: React.FC<UniqueEffectCardProps> = ({ index, uniqueEffect
     const { t } = useTranslation();
 
     return (
-        <Box
-            sx={{ alignItems: "center", display: "flex", mb: 1, userSelect: "none" }}>
+        <Box sx={{ alignItems: "center", display: "flex", mb: 1, userSelect: "none" }}>
             {uniqueEffect.icon ? (
-                <Box
-                    sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
+                <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
                     <LazyLoadComponent
                         placeholder={
                             <Skeleton
                                 height={imageSize}
                                 variant="circular"
-                                width={imageSize} />
-                        }>
+                                width={imageSize}
+                            />
+                        }
+                    >
                         <CardMedia
                             alt={ttry(
                                 itemTranslationIdentifier(
@@ -49,22 +49,24 @@ const UniqueEffectCard: React.FC<UniqueEffectCardProps> = ({ index, uniqueEffect
                             )}
                             component={"img"}
                             image={uniqueEffect.icon ?? "/assets/noicon.png"}
-                            sx={{ height: imageSize, width: imageSize }} />
+                            sx={{ height: imageSize, width: imageSize }}
+                        />
                     </LazyLoadComponent>
                 </Box>
             ) : null}
-            <Box
-                sx={{ display: "flex", flexDirection: "column" }}>
-                <CardContent
-                    sx={{ flex: "1 0 auto" }}>
+            <Box sx={{ display: "flex", flexDirection: "column" }}>
+                <CardContent sx={{ flex: "1 0 auto" }}>
                     <Box
                         alignItems="center"
-                        display="flex">
+                        display="flex"
+                    >
                         <Typography
                             component="div"
                             sx={{ mb: 1 }}
-                            variant="h6">
-                            {t(itemTranslationIdentifier(itemType, item.name, "name"))}{" "}
+                            variant="h6"
+                        >
+                            {t(itemTranslationIdentifier(itemType, item.name, "name"))}
+                            {" "}
                             {ttry(
                                 itemTranslationIdentifier(
                                     itemType,
@@ -80,7 +82,8 @@ const UniqueEffectCard: React.FC<UniqueEffectCardProps> = ({ index, uniqueEffect
                     <Typography
                         color="text.secondary"
                         component="div"
-                        variant="subtitle1">
+                        variant="subtitle1"
+                    >
                         {renderItemText(
                             t(
                                 itemTranslationIdentifier(

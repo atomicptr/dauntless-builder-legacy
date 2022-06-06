@@ -11,20 +11,21 @@ const WeaponTypeFilter: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <FormControl
-            fullWidth>
+        <FormControl fullWidth>
             <InputLabel>{t("pages.build.filter-by", { name: t("terms.weapon-type") })}</InputLabel>
             <Select
                 multiple
                 onChange={ev => dispatch(setWeaponTypeFilter(ev.target.value as WeaponType[]))}
                 value={weaponFilter.weaponTypes}
-                variant="standard">
+                variant="standard"
+            >
                 {Object.keys(WeaponType)
                     .sort()
                     .map(weaponType => (
                         <MenuItem
                             key={weaponType}
-                            value={WeaponType[weaponType as keyof typeof WeaponType]}>
+                            value={WeaponType[weaponType as keyof typeof WeaponType]}
+                        >
                             {t(`terms.weapon-types.${weaponType}`)}
                         </MenuItem>
                     ))}

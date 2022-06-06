@@ -46,7 +46,8 @@ const VirtualizedList: React.FC<VirtualizedListProps> = ({
                     itemCount={count}
                     itemSize={getRowHeight}
                     ref={listRef}
-                    width={width}>
+                    width={width}
+                >
                     {Row}
                 </VariableSizeList>
             )}

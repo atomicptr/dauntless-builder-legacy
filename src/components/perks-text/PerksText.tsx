@@ -27,18 +27,17 @@ const PerksText: React.FC<PerksTextProps> = ({ perks, itemSurged }) => {
             alignItems="center"
             component="span"
             display="flex"
-            gap={0.5}>
-            <Box
-                component="span">{` + ${perk.value} `}
-            </Box>
+            gap={0.5}
+        >
+            <Box component="span">{` + ${perk.value} `}</Box>
 
             <img
                 alt={findPerkByName(perk.name)?.type}
                 src={`/assets/icons/perks/${findPerkByName(perk.name)?.type}.png`}
-                style={{ height: "16px", width: "16px" }} />
+                style={{ height: "16px", width: "16px" }}
+            />
 
-            <Box
-                component="span">
+            <Box component="span">
                 {` ${t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))} ${
                     index !== currentPerks.length - 1 ? ", " : ""
                 }`}
@@ -52,7 +51,8 @@ const PerksText: React.FC<PerksTextProps> = ({ perks, itemSurged }) => {
             component="span"
             display="flex"
             flexDirection={isMobile ? "column" : "row"}
-            gap={0.5}>
+            gap={0.5}
+        >
             <Box>
                 <b>{t("terms.perks") + ":"}</b>
             </Box>

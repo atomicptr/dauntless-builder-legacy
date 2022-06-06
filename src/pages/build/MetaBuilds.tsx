@@ -4,8 +4,7 @@ import { useTranslation } from "react-i18next";
 
 const MetaBuilds: React.FC = () => {
     const { t } = useTranslation();
-    return <PageTitle
-        title={t("pages.metabuilds.title")} />;
+    return <PageTitle title={t("pages.metabuilds.title")} />;
 };
 
 export default MetaBuilds;

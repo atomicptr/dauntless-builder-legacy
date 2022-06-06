@@ -21,38 +21,40 @@ const OmnicellCard: React.FC<OmnicellCardProps> = ({ item }) => {
     }
 
     return (
-        <Box
-            sx={{ alignItems: "center", display: "flex", mb: 1, userSelect: "none" }}>
-            <Box
-                sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
+        <Box sx={{ alignItems: "center", display: "flex", mb: 1, userSelect: "none" }}>
+            <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
                 <CardMedia
                     alt={`${t(itemTranslationIdentifier(ItemType.Omnicell, item.name, "name"))} ${t(
                         "terms.active-ability",
                     )}`}
                     component="img"
                     image={(item as Omnicell).ability_icon ?? "/assets/noicon.png"}
-                    sx={{ height: imageSize, width: imageSize }} />
+                    sx={{ height: imageSize, width: imageSize }}
+                />
             </Box>
-            <Box
-                sx={{ display: "flex", flexDirection: "column" }}>
-                <CardContent
-                    sx={{ flex: "1 0 auto" }}>
+            <Box sx={{ display: "flex", flexDirection: "column" }}>
+                <CardContent sx={{ flex: "1 0 auto" }}>
                     <Box
                         alignItems="center"
-                        display="flex">
+                        display="flex"
+                    >
                         <Typography
                             component="div"
                             sx={{ mb: 1 }}
-                            variant="h5">
-                            {t(itemTranslationIdentifier(ItemType.Omnicell, item.name, "name"))}{" "}
+                            variant="h5"
+                        >
+                            {t(itemTranslationIdentifier(ItemType.Omnicell, item.name, "name"))}
+                            {" "}
                             {t("terms.active-ability")}
                         </Typography>
                     </Box>
                     <Typography
                         color="text.secondary"
                         component="div"
-                        variant="subtitle1">
-                        <b>{t("terms.active")}</b>:{" "}
+                        variant="subtitle1"
+                    >
+                        <b>{t("terms.active")}</b>
+                        {": "}
                         {renderItemText(t(itemTranslationIdentifier(ItemType.Omnicell, item.name, "active")))}
                     </Typography>
                 </CardContent>

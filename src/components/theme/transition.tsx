@@ -12,7 +12,8 @@ export const Transition = React.forwardRef(function Transition(
         <Slide
             direction="up"
             ref={ref}
-            {...props} />
+            {...props}
+        />
     );
 });
 

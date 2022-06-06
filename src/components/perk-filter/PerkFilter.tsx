@@ -39,8 +39,7 @@ const PerkFilter: React.FC<PerkFilterProps> = ({ itemType }) => {
     );
 
     return (
-        <FormControl
-            fullWidth>
+        <FormControl fullWidth>
             <InputLabel>{t("pages.build.filter-by", { name: t("terms.perks") })}</InputLabel>
             <Select
                 multiple
@@ -48,7 +47,8 @@ const PerkFilter: React.FC<PerkFilterProps> = ({ itemType }) => {
                 renderValue={(selected: string[]) => (
                     <Stack
                         direction="row"
-                        spacing={1}>
+                        spacing={1}
+                    >
                         {selected.map((perkName, index) => {
                             const perk = findPerkByName(perkName);
                             return (
@@ -57,12 +57,13 @@ const PerkFilter: React.FC<PerkFilterProps> = ({ itemType }) => {
                                     component="span"
                                     direction="row"
                                     spacing={0.5}
-                                    sx={{ alignItems: "center", display: "flex" }}>
+                                    sx={{ alignItems: "center", display: "flex" }}
+                                >
                                     <img
                                         src={`/assets/icons/perks/${perk?.type}.png`}
-                                        style={{ height: "16px", width: "16px" }} />
-                                    <Box
-                                        component="span">
+                                        style={{ height: "16px", width: "16px" }}
+                                    />
+                                    <Box component="span">
                                         {t(itemTranslationIdentifier(ItemType.Perk, perkName, "name"))}
                                         {index !== selected.length - 1 ? ", " : ""}
                                     </Box>
@@ -72,15 +73,18 @@ const PerkFilter: React.FC<PerkFilterProps> = ({ itemType }) => {
                     </Stack>
                 )}
                 value={itemSelectFilter[itemType as GenericItemType].perks}
-                variant="standard">
+                variant="standard"
+            >
                 {perksAvailable.map(perk => (
                     <MenuItem
                         key={perk.name}
-                        value={perk.name}>
+                        value={perk.name}
+                    >
                         <ListItemIcon>
                             <img
                                 src={`/assets/icons/perks/${perk.type}.png`}
-                                style={{ height: "16px", width: "16px" }} />
+                                style={{ height: "16px", width: "16px" }}
+                            />
                         </ListItemIcon>
 
                         <ListItemText>{t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))}</ListItemText>

@@ -64,13 +64,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     ];
 
     return (
-        <Box
-            sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex" }}>
             <CssBaseline />
             <AppBar
                 isMobile={isMobile}
                 open={open}
-                position="fixed">
+                position="fixed"
+            >
                 <Toolbar>
                     {isMobile ? (
                         <IconButton
@@ -78,13 +78,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                             color="inherit"
                             edge="start"
                             onClick={handleDrawerOpen}
-                            sx={{ mr: 2, ...(open && { display: "none" }) }}>
+                            sx={{ mr: 2, ...(open && { display: "none" }) }}
+                        >
                             <Menu />
                         </IconButton>
                     ) : null}
 
-                    <Box
-                        sx={{ alignItems: "center", display: "flex", justifyContent: "center", mr: 2 }}>
+                    <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", mr: 2 }}>
                         <img
                             alt="Dauntless Builder"
                             src="/assets/icon.png"
@@ -92,20 +92,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                                 height: 36,
                                 userSelect: "none",
                                 width: 36,
-                            }} />
+                            }}
+                        />
                     </Box>
 
                     <Typography
                         component="div"
                         noWrap
                         sx={{ userSelect: "none" }}
-                        variant="h6">
+                        variant="h6"
+                    >
                         {t("app-name")}
                     </Typography>
 
-                    <Box
-                        sx={{ flexGrow: 1 }}>{/* Spacer */}
-                    </Box>
+                    <Box sx={{ flexGrow: 1 }}>{/* Spacer */}</Box>
 
                     <DevMenu />
                 </Toolbar>
@@ -121,11 +121,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     flexShrink: 0,
                     width: drawerWidth,
                 }}
-                variant={isMobile ? "temporary" : "permanent"}>
+                variant={isMobile ? "temporary" : "permanent"}
+            >
                 {isMobile ? (
                     <DrawerHeader>
-                        <IconButton
-                            onClick={handleDrawerClose}>
+                        <IconButton onClick={handleDrawerClose}>
                             {theme.direction === "ltr" ? <ChevronLeft /> : <ChevronRight />}
                         </IconButton>
                     </DrawerHeader>
@@ -136,16 +136,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     {sidebarItems.map(item => (
                         <ListItem
                             key={item.link}
-                            disablePadding>
+                            disablePadding
+                        >
                             <ListItemButton
                                 component={NavLink}
                                 disabled={item.disabled}
                                 onClick={isMobile ? handleDrawerClose : undefined}
                                 title={item.disabled ? "coming soon..." : undefined}
-                                to={item.link}>
+                                to={item.link}
+                            >
                                 <ListItemIcon>{item.icon}</ListItemIcon>
-                                <ListItemText
-                                    primary={item.text} />
+                                <ListItemText primary={item.text} />
                             </ListItemButton>
                         </ListItem>
                     ))}
@@ -158,72 +159,77 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         position: "fixed",
                         textAlign: "center",
                         width: drawerWidth,
-                    }}>
+                    }}
+                >
                     <Button
                         component={"a"}
                         href={`https://playdauntless.com/patch-notes/${dauntlessBuilderData.misc.patchnotes_version_string}/`}
-                        target="_blank">
+                        target="_blank"
+                    >
                         {t("misc.dauntless-version", { version: dauntlessBuilderData.misc.dauntless_version })}
                     </Button>
-                    <List
-                        sx={{ marginTop: "auto" }}>
+                    <List sx={{ marginTop: "auto" }}>
                         <Divider />
                         <ListItem
                             style={{
                                 display: "flex",
                                 justifyContent: "center",
-                            }}>
+                            }}
+                        >
                             <IconButton
                                 component="a"
                                 href="https://github.com/atomicptr/dauntless-builder"
                                 target="_blank"
-                                title="Github Repository">
+                                title="Github Repository"
+                            >
                                 <FaGithub />
                             </IconButton>
                             <IconButton
                                 component="a"
                                 href="https://matrix.to/#/#dauntlessbuilder:matrix.org"
                                 target="_blank"
-                                title="Dauntless Builder Matrix Server">
+                                title="Dauntless Builder Matrix Server"
+                            >
                                 <SiMatrix />
                             </IconButton>
                             <IconButton
                                 component="a"
                                 href="https://discord.gg/hkMvhsfPjH"
                                 target="_blank"
-                                title="Dauntless Builder Discord Server">
+                                title="Dauntless Builder Discord Server"
+                            >
                                 <FaDiscord />
                             </IconButton>
                         </ListItem>
                     </List>
                 </Box>
             </Drawer>
-            <Container
-                maxWidth={"xl"}>
-                <DrawerHeader
-                    sx={{ marginBottom: "16px" }} />
+            <Container maxWidth={"xl"}>
+                <DrawerHeader sx={{ marginBottom: "16px" }} />
 
                 <Alert
                     severity="warning"
-                    sx={{ mb: 2 }}>
+                    sx={{ mb: 2 }}
+                >
                     <div
                         dangerouslySetInnerHTML={{
                             __html: t("alert.alpha-version"),
-                        }}>
-                    </div>
+                        }}
+                    />
                 </Alert>
 
                 {isBetaLanguage(currentLanguage()) ? (
                     <Alert
                         severity="warning"
-                        sx={{ mb: 2 }}>
+                        sx={{ mb: 2 }}
+                    >
                         <div
                             dangerouslySetInnerHTML={{
                                 __html: t("alert.translation-warning", {
                                     languageName: getNativeLanguageName(currentLanguage() as Language),
                                 }),
-                            }}>
-                        </div>
+                            }}
+                        />
                     </Alert>
                 ) : null}
 

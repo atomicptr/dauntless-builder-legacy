@@ -28,7 +28,8 @@ const DevMenu: React.FC = () => {
                 aria-label="account of current user"
                 color="inherit"
                 onClick={handleMenu}
-                size="large">
+                size="large"
+            >
                 <Build />
             </IconButton>
             <Menu
@@ -44,10 +45,9 @@ const DevMenu: React.FC = () => {
                 transformOrigin={{
                     horizontal: "right",
                     vertical: "top",
-                }}>
-                <MenuItem
-                    onClick={() => showTranslations(i18n)}>{t("appbar.dev-menu.translation-check")}
-                </MenuItem>
+                }}
+            >
+                <MenuItem onClick={() => showTranslations(i18n)}>{t("appbar.dev-menu.translation-check")}</MenuItem>
             </Menu>
         </>
     );

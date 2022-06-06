@@ -59,13 +59,12 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
 
     if (item === null) {
         return (
-            <Card
-                sx={{ mb: 1, width: "100%" }}>
+            <Card sx={{ mb: 1, width: "100%" }}>
                 <CardActionArea
                     onClick={onItemSelected}
-                    sx={{ display: "flex", justifyContent: "flex-start" }}>
-                    <Box
-                        sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
+                    sx={{ display: "flex", justifyContent: "flex-start" }}
+                >
+                    <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
                         <CardMedia
                             component="img"
                             image={match(type)
@@ -77,23 +76,26 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                 .with(ItemType.Lantern, () => "/assets/icons/generic/Lantern.png")
                                 .with(ItemType.Omnicell, () => "/assets/icons/generic/Omnicell.png")
                                 .otherwise(() => "/assets/noicon.png")}
-                            sx={{ height: imageSize, width: imageSize }} />
+                            sx={{ height: imageSize, width: imageSize }}
+                        />
                     </Box>
                     <Box>
                         <Typography
                             component="div"
                             sx={{ mb: 1 }}
-                            variant="h5">
+                            variant="h5"
+                        >
                             <span
                                 dangerouslySetInnerHTML={{
                                     __html: t("pages.build.no-x-selected", { name: typeName(type) }),
-                                }}>
-                            </span>
+                                }}
+                            />
                         </Typography>
                         <Typography
                             color="text.secondary"
                             component="div"
-                            variant="subtitle1">
+                            variant="subtitle1"
+                        >
                             {t("pages.build.click-here-to-select")}
                         </Typography>
                     </Box>
@@ -107,71 +109,77 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
             <Stack
                 direction={isMobile ? "column" : "row"}
                 spacing={isMobile ? 0 : 1}
-                sx={{ width: "100%" }}>
-                <Card
-                    sx={{ flexGrow: 5, mb: 1, userSelect: "none", width: "100%" }}>
+                sx={{ width: "100%" }}
+            >
+                <Card sx={{ flexGrow: 5, mb: 1, userSelect: "none", width: "100%" }}>
                     <CardActionArea
                         onClick={onItemSelected}
-                        sx={{ display: "flex", height: "100%", justifyContent: "flex-start" }}>
-                        <Box
-                            sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
+                        sx={{ display: "flex", height: "100%", justifyContent: "flex-start" }}
+                    >
+                        <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
                             <LazyLoadComponent
                                 placeholder={
                                     <Skeleton
                                         height={imageSize}
                                         variant="circular"
-                                        width={imageSize} />
-                                }>
+                                        width={imageSize}
+                                    />
+                                }
+                            >
                                 <CardMedia
                                     alt={t(itemTranslationIdentifier(type, item.name, "name"))}
                                     component={"img"}
                                     image={item.icon ?? "/assets/noicon.png"}
-                                    sx={{ height: imageSize, width: imageSize }} />
+                                    sx={{ height: imageSize, width: imageSize }}
+                                />
                             </LazyLoadComponent>
                         </Box>
-                        <Box
-                            sx={{ display: "flex", flexDirection: "column" }}>
-                            <CardContent
-                                sx={{ flex: "1 0 auto" }}>
+                        <Box sx={{ display: "flex", flexDirection: "column" }}>
+                            <CardContent sx={{ flex: "1 0 auto" }}>
                                 <Box
                                     alignItems="center"
-                                    display="flex">
+                                    display="flex"
+                                >
                                     <Typography
                                         component="div"
                                         sx={{ alignItems: "center", display: "flex", mb: 1 }}
-                                        variant="h5">
+                                        variant="h5"
+                                    >
                                         {t(itemTranslationIdentifier(type, item.name, "name"))}
-                                        {isPowerSurged ? <Star
-                                            sx={{ ml: 1 }} /> : null}
+                                        {isPowerSurged ? <Star sx={{ ml: 1 }} /> : null}
                                     </Typography>
                                 </Box>
 
                                 {type === ItemType.Weapon ? (
                                     <>
-                                        <Box
-                                            sx={{ alignItems: "center", display: "flex" }}>
+                                        <Box sx={{ alignItems: "center", display: "flex" }}>
                                             <Typography
                                                 color="text.secondary"
                                                 component="span"
                                                 sx={{ mr: 1 }}
-                                                variant="subtitle1">
-                                                <b>{t("terms.power")}</b>:{" "}
+                                                variant="subtitle1"
+                                            >
+                                                <b>{t("terms.power")}</b>
+                                                {": "}
                                                 {isPowerSurged
                                                     ? (item as Weapon).power.powerSurged
                                                     : (item as Weapon).power.base}
                                             </Typography>
                                             <ElementalIcon
                                                 item={item as Weapon}
-                                                itemType={type} />
+                                                itemType={type}
+                                            />
                                         </Box>
                                         {((item as Weapon)?.perks ?? []).length > 0 ? (
                                             <Typography
                                                 color="text.secondary"
                                                 component="div"
-                                                variant="subtitle1">
+                                                variant="subtitle1"
+                                            >
                                                 <PerksText
                                                     itemSurged={isPowerSurged}
-                                                    perks={(item as Weapon)?.perks ?? []} />
+                                                    perks={(item as Weapon)?.perks ?? []}
+                                                />
                                             </Typography>
                                         ) : null}
                                     </>
@@ -179,30 +187,34 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
 
                                 {isArmourType(type) ? (
                                     <>
-                                        <Box
-                                            sx={{ alignItems: "center", display: "flex" }}>
+                                        <Box sx={{ alignItems: "center", display: "flex" }}>
                                             <Typography
                                                 color="text.secondary"
                                                 component="span"
                                                 sx={{ mr: 1 }}
-                                                variant="subtitle1">
-                                                <b>{t("terms.resistance")}</b>:{" "}
+                                                variant="subtitle1"
+                                            >
+                                                <b>{t("terms.resistance")}</b>
+                                                {": "}
                                                 {isPowerSurged
                                                     ? (item as Armour).resistance.powerSurged
                                                     : (item as Armour).resistance.base}
                                             </Typography>
                                             <ElementalIcon
                                                 item={item as Weapon}
-                                                itemType={type} />
+                                                itemType={type}
+                                            />
                                         </Box>
                                         {((item as Armour)?.perks ?? []).length > 0 ? (
                                             <Typography
                                                 color="text.secondary"
                                                 component="div"
-                                                variant="subtitle1">
+                                                variant="subtitle1"
+                                            >
                                                 <PerksText
                                                     itemSurged={isPowerSurged}
-                                                    perks={(item as Armour)?.perks ?? []} />
+                                                    perks={(item as Armour)?.perks ?? []}
+                                                />
                                             </Typography>
                                         ) : null}
                                     </>
@@ -212,14 +224,15 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                     <Typography
                                         color="text.secondary"
                                         component="div"
-                                        variant="subtitle1">
+                                        variant="subtitle1"
+                                    >
                                         <div
                                             dangerouslySetInnerHTML={{
                                                 __html: t("components.item-picker.lantern-hold-line", {
                                                     hold: (item as Lantern).lantern_ability.hold,
                                                 }),
-                                            }}>
-                                        </div>
+                                            }}
+                                        />
                                     </Typography>
                                 ) : null}
 
@@ -227,14 +240,15 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                     <Typography
                                         color="text.secondary"
                                         component="div"
-                                        variant="subtitle1">
+                                        variant="subtitle1"
+                                    >
                                         <div
                                             dangerouslySetInnerHTML={{
                                                 __html: t("components.item-picker.omnicell-passive-line", {
                                                     passive: (item as Omnicell).passive,
                                                 }),
-                                            }}>
-                                        </div>
+                                            }}
+                                        />
                                     </Typography>
                                 ) : null}
 

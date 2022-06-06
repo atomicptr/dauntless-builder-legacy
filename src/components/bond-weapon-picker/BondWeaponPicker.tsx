@@ -35,33 +35,35 @@ const BondWeaponPicker: React.FC<BondWeaponPickerProps> = ({
 
     if (bondWeapon === null) {
         return (
-            <Card
-                sx={{ mb: 1 }}>
+            <Card sx={{ mb: 1 }}>
                 <CardActionArea
                     onClick={() => onClick()}
-                    sx={{ display: "flex", justifyContent: "flex-start" }}>
-                    <Box
-                        sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
+                    sx={{ display: "flex", justifyContent: "flex-start" }}
+                >
+                    <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
                         <CardMedia
                             component="img"
                             image={"/assets/icons/generic/Weapon.png"}
-                            sx={{ height: imageSize, width: imageSize }} />
+                            sx={{ height: imageSize, width: imageSize }}
+                        />
                     </Box>
                     <Box>
                         <Typography
                             component="div"
                             sx={{ mb: 1 }}
-                            variant="h5">
+                            variant="h5"
+                        >
                             <span
                                 dangerouslySetInnerHTML={{
                                     __html: t("pages.build.no-x-selected", { name: t("terms.bond-weapon") }),
-                                }}>
-                            </span>
+                                }}
+                            />
                         </Typography>
                         <Typography
                             color="text.secondary"
                             component="div"
-                            variant="subtitle1">
+                            variant="subtitle1"
+                        >
                             {t("pages.build.click-here-to-select")}
                         </Typography>
                     </Box>
@@ -71,38 +73,40 @@ const BondWeaponPicker: React.FC<BondWeaponPickerProps> = ({
     }
 
     return (
-        <Card
-            sx={{ mb: 1, userSelect: "none", width: "100%" }}>
+        <Card sx={{ mb: 1, userSelect: "none", width: "100%" }}>
             <CardActionArea
                 onClick={() => onClick()}
-                sx={{ display: "flex", justifyContent: "flex-start" }}>
-                <Box
-                    sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
+                sx={{ display: "flex", justifyContent: "flex-start" }}
+            >
+                <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
                     <LazyLoadComponent
                         placeholder={
                             <Skeleton
                                 height={imageSize}
                                 variant="circular"
-                                width={imageSize} />
-                        }>
+                                width={imageSize}
+                            />
+                        }
+                    >
                         <CardMedia
                             alt={t(itemTranslationIdentifier(ItemType.Weapon, bondWeapon.name, "name"))}
                             component={"img"}
                             image={bondWeapon.icon ?? "/assets/noicon.png"}
-                            sx={{ height: imageSize, width: imageSize }} />
+                            sx={{ height: imageSize, width: imageSize }}
+                        />
                     </LazyLoadComponent>
                 </Box>
-                <Box
-                    sx={{ display: "flex", flexDirection: "column" }}>
-                    <CardContent
-                        sx={{ flex: "1 0 auto" }}>
+                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                    <CardContent sx={{ flex: "1 0 auto" }}>
                         <Box
                             alignItems="center"
-                            display="flex">
+                            display="flex"
+                        >
                             <Typography
                                 component="div"
                                 sx={{ alignItems: "center", display: "flex", mb: 1 }}
-                                variant="h5">
+                                variant="h5"
+                            >
                                 {t(itemTranslationIdentifier(ItemType.Weapon, bondWeapon.name, "name"))}
                             </Typography>
                         </Box>
@@ -110,10 +114,12 @@ const BondWeaponPicker: React.FC<BondWeaponPickerProps> = ({
                             <Typography
                                 color="text.secondary"
                                 component="div"
-                                variant="subtitle1">
+                                variant="subtitle1"
+                            >
                                 <PerksText
                                     itemSurged={parentWeaponPowerSurged}
-                                    perks={bondWeapon.perks ?? []} />
+                                    perks={bondWeapon.perks ?? []}
+                                />
                             </Typography>
                         ) : null}
                     </CardContent>

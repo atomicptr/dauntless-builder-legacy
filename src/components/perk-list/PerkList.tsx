@@ -21,11 +21,13 @@ const PerkList: React.FC = () => {
             {Object.keys(perk.effects).map(id => (
                 <Box
                     key={id}
-                    sx={{ color: theme.palette.grey[id === Math.max(0, Math.min(6, count)).toString() ? 50 : 400] }}>
+                    sx={{ color: theme.palette.grey[id === Math.max(0, Math.min(6, count)).toString() ? 50 : 400] }}
+                >
                     <Stack
                         direction="row"
-                        spacing={1}>
-                        <Box>+{id}</Box>
+                        spacing={1}
+                    >
+                        <Box>{`+ ${id}`}</Box>
                         <Box>
                             {t(itemTranslationIdentifier(ItemType.Perk, perk.name, "effects", id, "description"))}
                         </Box>
@@ -38,15 +40,14 @@ const PerkList: React.FC = () => {
     return (
         <List
             subheader={<ListSubheader>{t("terms.perks")}</ListSubheader>}
-            sx={{ bgcolor: "background.paper", maxWidth: 360, userSelect: "none", width: "100%" }}>
+            sx={{ bgcolor: "background.paper", maxWidth: 360, userSelect: "none", width: "100%" }}
+        >
             {sortedPerks.length === 0 ? (
                 <ListItem>
-                    <ListItemIcon
-                        sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
+                    <ListItemIcon sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
                         <Cake />
                     </ListItemIcon>
-                    <ListItemText
-                        primary={t("pages.build.no-perks")} />
+                    <ListItemText primary={t("pages.build.no-perks")} />
                 </ListItem>
             ) : null}
 
@@ -55,17 +56,18 @@ const PerkList: React.FC = () => {
                     key={perk.name}
                     arrow
                     followCursor
-                    title={renderToolTip(perk.data, perk.count)}>
-                    <ListItem
-                        key={perk.name}>
-                        <ListItemIcon
-                            sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
+                    title={renderToolTip(perk.data, perk.count)}
+                >
+                    <ListItem key={perk.name}>
+                        <ListItemIcon sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
                             <img
                                 src={`/assets/icons/perks/${perk.data.type}.png`}
-                                style={{ height: 32, width: 32 }} />
+                                style={{ height: 32, width: 32 }}
+                            />
                         </ListItemIcon>
                         <ListItemText
-                            primary={`+${perk.count} ${t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))}`} />
+                            primary={`+${perk.count} ${t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))}`}
+                        />
                         {perk.count > 6 ? <Warning /> : null}
                     </ListItem>
                 </Tooltip>

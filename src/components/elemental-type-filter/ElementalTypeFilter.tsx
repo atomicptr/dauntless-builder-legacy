@@ -20,8 +20,7 @@ const ElementalTypeFilter: React.FC<ElementalTypeFilterProps> = ({ itemType }) =
     const { t } = useTranslation();
 
     return (
-        <FormControl
-            fullWidth>
+        <FormControl fullWidth>
             <InputLabel>{t("pages.build.filter-by", { name: t("terms.elemental-type") })}</InputLabel>
             <Select
                 multiple
@@ -29,19 +28,21 @@ const ElementalTypeFilter: React.FC<ElementalTypeFilterProps> = ({ itemType }) =
                 renderValue={selected => (
                     <Stack
                         direction="row"
-                        spacing={1}>
+                        spacing={1}
+                    >
                         {selected.map((elementalType, index) => (
                             <Stack
                                 key={index}
                                 component="span"
                                 direction="row"
                                 spacing={0.5}
-                                sx={{ alignItems: "center", display: "flex" }}>
+                                sx={{ alignItems: "center", display: "flex" }}
+                            >
                                 <img
                                     src={`/assets/icons/elements/${elementalType}.png`}
-                                    style={{ height: "16px", width: "16px" }} />
-                                <Box
-                                    component="span">
+                                    style={{ height: "16px", width: "16px" }}
+                                />
+                                <Box component="span">
                                     {t(`terms.elemental-types.${elementalType}`)}
                                     {index !== selected.length - 1 ? ", " : ""}
                                 </Box>
@@ -50,17 +51,20 @@ const ElementalTypeFilter: React.FC<ElementalTypeFilterProps> = ({ itemType }) =
                     </Stack>
                 )}
                 value={itemSelectFilter[itemType as GenericItemType].elementTypes}
-                variant="standard">
+                variant="standard"
+            >
                 {Object.keys(ElementalType)
                     .sort()
                     .map(elementalType => (
                         <MenuItem
                             key={elementalType}
-                            value={ElementalType[elementalType as keyof typeof ElementalType]}>
+                            value={ElementalType[elementalType as keyof typeof ElementalType]}
+                        >
                             <ListItemIcon>
                                 <img
                                     src={`/assets/icons/elements/${elementalType}.png`}
-                                    style={{ height: "16px", width: "16px" }} />
+                                    style={{ height: "16px", width: "16px" }}
+                                />
                             </ListItemIcon>
 
                             <ListItemText>{t(`terms.elemental-types.${elementalType}`)}</ListItemText>

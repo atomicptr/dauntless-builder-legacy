@@ -14,7 +14,7 @@
         "dev": "vite dev",
         "test": "echo 'No tests defined yet :('",
         "deploy": "yarn build && ./scripts/deploy.sh",
-        "lint": "prettier . --check && jsonsort -i 4 -c src/translations/*.json .eslintrc tsconfig.json && eslint .",
+        "lint": "jsonsort -i 4 -c src/translations/*.json .eslintrc tsconfig.json && eslint .",
         "lint:fix": "prettier . --write && jsonsort -i 4 src/translations/*.json .eslintrc tsconfig.json && eslint . --fix",
         "check:missing-translations": "node ./scripts/check-missing-translations.js"
     },

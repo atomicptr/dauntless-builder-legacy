@@ -53,7 +53,7 @@
         ],
         "react/jsx-closing-bracket-location": [
             "error",
-            "after-props"
+            "line-aligned"
         ],
         "react/jsx-closing-tag-location": "error",
         "react/jsx-curly-spacing": [
@@ -62,7 +62,7 @@
         ],
         "react/jsx-first-prop-new-line": [
             "error",
-            "always"
+            "multiline"
         ],
         "react/jsx-max-props-per-line": [
             "error",
@@ -71,6 +71,15 @@
                 "when": "multiline"
             }
         ],
+        "react/jsx-no-useless-fragment": "error",
+        "react/jsx-one-expression-per-line": [
+            "error",
+            {
+                "allow": "single-child"
+            }
+        ],
+        "react/jsx-pascal-case": "error",
+        "react/jsx-props-no-multi-spaces": "error",
         "react/jsx-sort-props": [
             "error",
             {
@@ -89,6 +98,13 @@
             "error"
         ],
         "react/react-in-jsx-scope": "off",
+        "react/self-closing-comp": [
+            "error",
+            {
+                "component": true,
+                "html": true
+            }
+        ],
         "semi": "off",
         "simple-import-sort/imports": "error",
         "sort-keys": [

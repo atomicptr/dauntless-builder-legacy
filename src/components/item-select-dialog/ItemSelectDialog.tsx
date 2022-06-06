@@ -122,15 +122,16 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
             fullWidth
             maxWidth={dialogWidth}
             onClose={handleClose}
-            open={open}>
+            open={open}
+        >
             {isMobile ? (
-                <AppBar
-                    sx={{ position: "relative" }}>
+                <AppBar sx={{ position: "relative" }}>
                     <Toolbar>
                         <Typography
                             component="div"
                             sx={{ flex: 1, ml: 2, userSelect: "none" }}
-                            variant="h6">
+                            variant="h6"
+                        >
                             {title}
                         </Typography>
                         <IconButton
@@ -138,7 +139,8 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                             edge="start"
                             onClick={() => setShowUniqueEffects(!showUniqueEffects)}
                             sx={{ mr: 2 }}
-                            title={t("pages.build.toggle-unique-effects")}>
+                            title={t("pages.build.toggle-unique-effects")}
+                        >
                             {showUniqueEffects ? <UnfoldLess /> : <UnfoldMore />}
                         </IconButton>
                         <IconButton
@@ -146,13 +148,15 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                             edge="start"
                             onClick={() => setShowFilters(!showFilters)}
                             sx={{ mr: 2 }}
-                            title={t("pages.build.toggle-filters")}>
+                            title={t("pages.build.toggle-filters")}
+                        >
                             {showFilters ? <FilterAltOff /> : <FilterAlt />}
                         </IconButton>
                         <IconButton
                             color="inherit"
                             edge="start"
-                            onClick={handleClose}>
+                            onClick={handleClose}
+                        >
                             <Close />
                         </IconButton>
                     </Toolbar>
@@ -161,18 +165,17 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                 <DialogTitle>{title}</DialogTitle>
             )}
 
-            <DialogContent
-                sx={{ minHeight: "80vh", overflow: "hidden" }}>
+            <DialogContent sx={{ minHeight: "80vh", overflow: "hidden" }}>
                 {showFilters ? (
                     <Stack
                         ref={filterAreaRef}
                         spacing={2}
-                        sx={{ m: 1 }}>
+                        sx={{ m: 1 }}
+                    >
                         <TextField
                             InputProps={{
                                 startAdornment: (
-                                    <InputAdornment
-                                        position="start">
+                                    <InputAdornment position="start">
                                         <Search />
                                     </InputAdornment>
                                 ),
@@ -181,7 +184,8 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                             onChange={ev => setSearchValue(ev.target.value)}
                             placeholder={t("terms.search")}
                             value={searchValue}
-                            variant="standard" />
+                            variant="standard"
+                        />
 
                         {filterComponents ? filterComponents(itemType) : null}
                     </Stack>
@@ -199,10 +203,12 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                                 component={"div"}
                                 disablePadding
                                 style={style}
-                                sx={{ width: "100%" }}>
+                                sx={{ width: "100%" }}
+                            >
                                 <Stack
                                     ref={rowRef}
-                                    sx={{ width: "100%" }}>
+                                    sx={{ width: "100%" }}
+                                >
                                     <ItemPicker
                                         componentsBelow={() =>
                                             showUniqueEffects ? (
@@ -220,13 +226,13 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                                                                     index={index}
                                                                     item={item}
                                                                     itemType={itemType}
-                                                                    uniqueEffect={ue} />
+                                                                    uniqueEffect={ue}
+                                                                />
                                                             ))
                                                         : null}
 
                                                     {itemType === ItemType.Omnicell ? (
-                                                        <OmnicellCard
-                                                            item={item as Omnicell} />
+                                                        <OmnicellCard item={item as Omnicell} />
                                                     ) : null}
                                                 </>
                                             ) : null
@@ -235,12 +241,14 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                                             <Typography
                                                 color="text.secondary"
                                                 component="div"
-                                                variant="subtitle1">
+                                                variant="subtitle1"
+                                            >
                                                 <Stack
                                                     direction={isMobile ? "column" : "row"}
-                                                    spacing={isMobile ? 0 : 1}>
+                                                    spacing={isMobile ? 0 : 1}
+                                                >
                                                     <Box>
-                                                        <b>{t("terms.cells")}:</b>
+                                                        <b>{`${t("terms.cells")}:`}</b>
                                                     </Box>
                                                     {(Array.isArray((item as Weapon | Armour | Lantern | null)?.cells)
                                                         ? ((item as Weapon | Armour | Lantern | null)
@@ -250,10 +258,12 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                                                         cellType ? (
                                                             <Box
                                                                 key={index}
-                                                                sx={{ alignItems: "center", display: "flex" }}>
+                                                                sx={{ alignItems: "center", display: "flex" }}
+                                                            >
                                                                 <img
                                                                     src={`/assets/icons/perks/${cellType}.png`}
-                                                                    style={{ height: "16px", width: "16px" }} />
+                                                                    style={{ height: "16px", width: "16px" }}
+                                                                />
                                                                 &nbsp;
                                                                 {t(`terms.cell-type.${cellType}`)}
                                                             </Box>
@@ -265,12 +275,14 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                                         isPowerSurged={powerSurged}
                                         item={item}
                                         onClick={() => onItemSelected(item, itemType, powerSurged)}
-                                        type={itemType} />
+                                        type={itemType}
+                                    />
                                 </Stack>
                             </ListItem>
                         );
                     }}
-                    subtractFromHeight={showFilters ? filterAreaRef.current?.clientHeight ?? 0 : 0} />
+                    subtractFromHeight={showFilters ? filterAreaRef.current?.clientHeight ?? 0 : 0}
+                />
             </DialogContent>
 
             <DialogActions>
@@ -281,14 +293,16 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                             edge="start"
                             onClick={() => setShowUniqueEffects(!showUniqueEffects)}
                             sx={{ ml: 1 }}
-                            title={t("pages.build.toggle-unique-effects")}>
+                            title={t("pages.build.toggle-unique-effects")}
+                        >
                             {showUniqueEffects ? <UnfoldLess /> : <UnfoldMore />}
                         </IconButton>
                         <IconButton
                             color="primary"
                             edge="start"
                             onClick={() => setShowFilters(!showFilters)}
-                            title={t("pages.build.toggle-filters")}>
+                            title={t("pages.build.toggle-filters")}
+                        >
                             {showFilters ? <FilterAltOff /> : <FilterAlt />}
                         </IconButton>
                     </>
@@ -296,20 +310,18 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
 
                 <Button
                     onClick={() => setPowerSurged(!powerSurged)}
-                    startIcon={powerSurged ? <StarOutline /> : <Star />}>
+                    startIcon={powerSurged ? <StarOutline /> : <Star />}
+                >
                     {powerSurged ? t("pages.build.power-surged-remove") : t("pages.build.power-surged-add")}
                 </Button>
 
-                <Box
-                    sx={{ flexGrow: 1 }}>{/* Spacer */}
-                </Box>
+                <Box sx={{ flexGrow: 1 }}>{/* Spacer */}</Box>
 
-                <Button
-                    onClick={() => onItemSelected(null, itemType, powerSurged)}>{t("terms.unselect")}
-                </Button>
+                <Button onClick={() => onItemSelected(null, itemType, powerSurged)}>{t("terms.unselect")}</Button>
                 <Button
                     onClick={handleClose}
-                    sx={{ display: isMobile ? "none" : undefined }}>
+                    sx={{ display: isMobile ? "none" : undefined }}
+                >
                     {t("terms.close")}
                 </Button>
             </DialogActions>

@@ -113,22 +113,24 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
             fullWidth
             maxWidth={dialogWidth}
             onClose={handleClose}
-            open={open}>
+            open={open}
+        >
             {isMobile ? (
-                <AppBar
-                    sx={{ position: "relative" }}>
+                <AppBar sx={{ position: "relative" }}>
                     <Toolbar>
                         <Typography
                             component="div"
                             sx={{ flex: 1, ml: 2, userSelect: "none" }}
-                            variant="h6">
+                            variant="h6"
+                        >
                             {title}
                         </Typography>
                         <IconButton
                             aria-label="close"
                             color="inherit"
                             edge="start"
-                            onClick={handleClose}>
+                            onClick={handleClose}
+                        >
                             <Close />
                         </IconButton>
                     </Toolbar>
@@ -137,16 +139,15 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
                 <DialogTitle>{title}</DialogTitle>
             )}
 
-            <DialogContent
-                sx={{ minHeight: "80vh", overflow: "hidden" }}>
+            <DialogContent sx={{ minHeight: "80vh", overflow: "hidden" }}>
                 <Box
                     ref={searchFieldRef}
-                    sx={{ m: 1 }}>
+                    sx={{ m: 1 }}
+                >
                     <TextField
                         InputProps={{
                             startAdornment: (
-                                <InputAdornment
-                                    position="start">
+                                <InputAdornment position="start">
                                     <Search />
                                 </InputAdornment>
                             ),
@@ -155,7 +156,8 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
                         onChange={ev => setSearchValue(ev.target.value)}
                         placeholder={t("terms.search")}
                         value={searchValue}
-                        variant="standard" />
+                        variant="standard"
+                    />
                 </Box>
 
                 <VirtualizedList
@@ -170,12 +172,13 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
                                 component={"div"}
                                 disablePadding
                                 style={style}
-                                sx={{ width: "100%" }}>
+                                sx={{ width: "100%" }}
+                            >
                                 <Box
                                     ref={rowRef}
-                                    sx={{ width: "100%" }}>
-                                    <Card
-                                        sx={{ mb: 1, width: "100%" }}>
+                                    sx={{ width: "100%" }}
+                                >
+                                    <Card sx={{ mb: 1, width: "100%" }}>
                                         <Box
                                             sx={{
                                                 alignItems: "center",
@@ -184,7 +187,8 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
                                                 height: "100%",
                                                 justifyContent: "flex-start",
                                                 width: "100%",
-                                            }}>
+                                            }}
+                                        >
                                             <Box
                                                 sx={{
                                                     alignItems: "center",
@@ -192,17 +196,20 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
                                                     justifyContent: "center",
                                                     pl: 2,
                                                     pr: 2,
-                                                }}>
+                                                }}
+                                            >
                                                 <CardMedia
                                                     component="img"
                                                     image={`/assets/icons/perks/${cell.slot}.png`}
-                                                    sx={{ height: imageSize, width: imageSize }} />
+                                                    sx={{ height: imageSize, width: imageSize }}
+                                                />
                                             </Box>
                                             <CardContent>
                                                 <Typography
                                                     component="div"
                                                     sx={{ alignItems: "center", display: "flex", mb: 1 }}
-                                                    variant="h5">
+                                                    variant="h5"
+                                                >
                                                     {t(itemTranslationIdentifier(ItemType.Cell, cell.name, "name"))}
                                                 </Typography>
 
@@ -217,8 +224,7 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
                                                 </Typography>
                                             </CardContent>
                                         </Box>
-                                        <CardActions
-                                            sx={{ justifyContent: "flex-end" }}>
+                                        <CardActions sx={{ justifyContent: "flex-end" }}>
                                             {Object.keys(cell.variants).map((variant, index) => {
                                                 const cell = findCellByVariantName(variant);
                                                 const variantIndex =
@@ -235,7 +241,8 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
                                                         onClick={() => onCellSelected(variant, itemType, cellIndex)}
                                                         rarity={rarity}
                                                         sx={{ flexGrow: isMobile ? 1 : 0 }}
-                                                        variant="contained">
+                                                        variant="contained"
+                                                    >
                                                         {`+${variantIndex + 1}`}
                                                     </CellButton>
                                                 );
@@ -246,16 +253,13 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
                             </ListItem>
                         );
                     }}
-                    subtractFromHeight={searchFieldRef.current?.clientHeight ?? 0} />
+                    subtractFromHeight={searchFieldRef.current?.clientHeight ?? 0}
+                />
             </DialogContent>
 
             <DialogActions>
-                <Button
-                    onClick={() => onCellSelected("", itemType, cellIndex)}>{t("terms.unselect")}
-                </Button>
-                <Button
-                    onClick={handleClose}>{t("terms.close")}
-                </Button>
+                <Button onClick={() => onCellSelected("", itemType, cellIndex)}>{t("terms.unselect")}</Button>
+                <Button onClick={handleClose}>{t("terms.close")}</Button>
             </DialogActions>
         </Dialog>
     );

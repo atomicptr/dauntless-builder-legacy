@@ -20,8 +20,7 @@ const CellSlotFilter: React.FC<CellSlotFilterProps> = ({ itemType }) => {
     const { t } = useTranslation();
 
     return (
-        <FormControl
-            fullWidth>
+        <FormControl fullWidth>
             <InputLabel>{t("pages.build.filter-by", { name: t("terms.cell-slot") })}</InputLabel>
             <Select
                 multiple
@@ -29,7 +28,8 @@ const CellSlotFilter: React.FC<CellSlotFilterProps> = ({ itemType }) => {
                 renderValue={selected => (
                     <Stack
                         direction="row"
-                        spacing={1}>
+                        spacing={1}
+                    >
                         {selected.map((cellType, index) => {
                             return (
                                 <Stack
@@ -37,12 +37,13 @@ const CellSlotFilter: React.FC<CellSlotFilterProps> = ({ itemType }) => {
                                     component="span"
                                     direction="row"
                                     spacing={0.5}
-                                    sx={{ alignItems: "center", display: "flex" }}>
+                                    sx={{ alignItems: "center", display: "flex" }}
+                                >
                                     <img
                                         src={`/assets/icons/perks/${cellType}.png`}
-                                        style={{ height: "16px", width: "16px" }} />
-                                    <Box
-                                        component="span">
+                                        style={{ height: "16px", width: "16px" }}
+                                    />
+                                    <Box component="span">
                                         {t(`terms.cell-type.${cellType}`)}
                                         {index !== selected.length - 1 ? ", " : ""}
                                     </Box>
@@ -52,17 +53,20 @@ const CellSlotFilter: React.FC<CellSlotFilterProps> = ({ itemType }) => {
                     </Stack>
                 )}
                 value={itemSelectFilter[itemType as GenericItemType].cellSlots}
-                variant="standard">
+                variant="standard"
+            >
                 {Object.keys(CellType)
                     .sort()
                     .map(cellType => (
                         <MenuItem
                             key={cellType}
-                            value={cellType}>
+                            value={cellType}
+                        >
                             <ListItemIcon>
                                 <img
                                     src={`/assets/icons/perks/${cellType}.png`}
-                                    style={{ height: "16px", width: "16px" }} />
+                                    style={{ height: "16px", width: "16px" }}
+                                />
                             </ListItemIcon>
 
                             <ListItemText>{t(`terms.cell-type.${cellType}`)}</ListItemText>

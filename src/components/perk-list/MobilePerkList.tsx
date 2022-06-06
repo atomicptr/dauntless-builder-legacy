@@ -39,7 +39,8 @@ const Transition = React.forwardRef(function Transition(
         <Slide
             direction="up"
             ref={ref}
-            {...props} />
+            {...props}
+        />
     );
 });
 
@@ -65,35 +66,33 @@ const MobilePerkList: React.FC = () => {
 
     return (
         <Box>
-            <ListSubheader
-                sx={{ userSelect: "none" }}>{t("terms.perks")}
-            </ListSubheader>
+            <ListSubheader sx={{ userSelect: "none" }}>{t("terms.perks")}</ListSubheader>
 
             {sortedPerks.map(perk => (
                 <Card
                     key={perk.name}
-                    sx={{ mb: 1 }}>
+                    sx={{ mb: 1 }}
+                >
                     <CardActionArea
                         onClick={handleClickOpen(perk)}
-                        sx={{ display: "flex", justifyContent: "flex-start" }}>
-                        <Box
-                            sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
+                        sx={{ display: "flex", justifyContent: "flex-start" }}
+                    >
+                        <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
                             <CardMedia
                                 component="img"
                                 image={`/assets/icons/perks/${perk.data.type}.png`}
-                                sx={{ height: imageSize, width: imageSize }} />
+                                sx={{ height: imageSize, width: imageSize }}
+                            />
                         </Box>
-                        <Box
-                            sx={{ alignItems: "center", display: "flex", justifyContent: "center", ml: 2 }}>
+                        <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", ml: 2 }}>
                             <Typography
                                 component="div"
                                 sx={{ mb: 1 }}
-                                variant="h5">
+                                variant="h5"
+                            >
                                 {`+ ${perk.count} ${t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))}`}
                             </Typography>
-                            <Box
-                                sx={{ ml: 2 }}>{perk.count > 6 ? <Warning /> : null}
-                            </Box>
+                            <Box sx={{ ml: 2 }}>{perk.count > 6 ? <Warning /> : null}</Box>
                         </Box>
                     </CardActionArea>
                 </Card>
@@ -104,21 +103,23 @@ const MobilePerkList: React.FC = () => {
                     TransitionComponent={Transition}
                     fullScreen
                     onClose={handleClose}
-                    open={dialogOpen}>
-                    <AppBar
-                        sx={{ position: "relative" }}>
+                    open={dialogOpen}
+                >
+                    <AppBar sx={{ position: "relative" }}>
                         <Toolbar>
                             <Typography
                                 component="div"
                                 sx={{ flex: 1, ml: 2, userSelect: "none" }}
-                                variant="h6">
+                                variant="h6"
+                            >
                                 {t(itemTranslationIdentifier(ItemType.Perk, dialogPerk.name, "name"))}
                             </Typography>
                             <IconButton
                                 aria-label="close"
                                 color="inherit"
                                 edge="start"
-                                onClick={handleClose}>
+                                onClick={handleClose}
+                            >
                                 <Close />
                             </IconButton>
                         </Toolbar>
@@ -132,13 +133,16 @@ const MobilePerkList: React.FC = () => {
                                         id === Math.max(0, Math.min(6, dialogPerk.count)).toString() ? 50 : 400
                                     ],
                                     userSelect: "none",
-                                }}>
+                                }}
+                            >
                                 <ListItemText
                                     primary={`+${id}`}
-                                    sx={{ mr: 2 }} />
+                                    sx={{ mr: 2 }}
+                                />
                                 <ListItemText
                                     primary={dialogPerk.data.effects[id].description}
-                                    sx={{ width: "100%" }} />
+                                    sx={{ width: "100%" }}
+                                />
                             </ListItem>
                         ))}
                     </List>
