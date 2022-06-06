@@ -1,7 +1,7 @@
 {
     "alert": {
         "alpha-version": "Dauntless Builder v2 is currently in alpha, if you encounter problems or have feedback please submit them to our <a style=\"color: #fff;\" href=\"https://github.com/atomicptr/dauntless-builder/issues\">Github Issues</a>, <a style=\"color: #fff;\" href=\"https://matrix.to/#/#dauntlessbuilder:matrix.org\">Matrix Channel</a> or <a style=\"color: #fff;\" href=\"https://discord.gg/hkMvhsfPjH\">Discord Server</a>.",
-        "translation-warning": "You're currently viewing this page with your language set to <b>{{languageName}}</b>, translations are currently in beta and are very spotty. If you speak this language, please consider <a style=\"color: #fff;\" target=\"_blank\" href=\"https://github.com/atomicptr/dauntless-builder/blob/master/docs/contributing/Translation.md\">contributing to the translation efforts</a>."
+        "translation-warning": "You're currently viewing this page with your language set to <b>{{languageName}}</b>, translations are currently in beta and are very spotty. If you speak this language, please consider <a style=\"color: #fff;\" target=\"_blank\" href=\"https://github.com/atomicptr/dauntless-builder/blob/master/docs/contributing/TRANSLATION.md\">contributing to the translation efforts</a>."
     },
     "app-name": "Dauntless Builder",
     "appbar": {
@@ -36,7 +36,7 @@
         "build": {
             "click-here-to-select": "Click here to select one.",
             "filter-by": "Filter by {{name}}",
-            "no-perks": "No perks found.",
+            "no-perks": "No perks available.",
             "no-x-selected": "No <b>{{name}}</b> selected.",
             "power-surged-add": "Power Surge",
             "power-surged-remove": "Base Power",

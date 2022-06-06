@@ -1,3 +1,4 @@
+import { QuestionMark } from "@mui/icons-material";
 import { Box, Card, CardActionArea, CardContent, CardMedia, Skeleton, Typography } from "@mui/material";
 import { itemPickerDefaultImageSize } from "@src/components/theme/theme";
 import { Part, PartType } from "@src/data/Part";
@@ -7,7 +8,6 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import { match } from "ts-pattern";
-import {QuestionMark} from "@mui/icons-material";
 
 interface PartPickerProps {
     type: PartType;

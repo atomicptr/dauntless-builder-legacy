@@ -26,7 +26,9 @@ const PerkList: React.FC = () => {
                         direction="row"
                         spacing={1}>
                         <Box>+{id}</Box>
-                        <Box>{perk.effects[id].description}</Box>
+                        <Box>
+                            {t(itemTranslationIdentifier(ItemType.Perk, perk.name, "effects", id, "description"))}
+                        </Box>
                     </Stack>
                 </Box>
             ))}

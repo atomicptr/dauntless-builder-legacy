@@ -115,6 +115,79 @@ for (let category of Object.keys(data)) {
                             )
                         ] = part.part_effect[index];
                     }
+
+                    if (part.i18n) {
+                        for (let lang of Object.keys(part.i18n)) {
+                            if (!(lang in i18nValues)) {
+                                i18nValues[lang] = {};
+                            }
+
+                            for (let field of Object.keys(part.i18n[lang])) {
+                                const value = part.i18n[lang][field];
+
+                                if (typeof value === "string") {
+                                    i18nValues[lang][
+                                        createItemTranslationIdentifier(category, itemName, partType, partName, field)
+                                    ] = value;
+                                    continue;
+                                }
+
+                                if (Array.isArray(value)) {
+                                    for (let index in value) {
+                                        const v = value[index];
+
+                                        if (typeof v === "string") {
+                                            i18nValues[lang][
+                                                createItemTranslationIdentifier(
+                                                    category,
+                                                    itemName,
+                                                    partType,
+                                                    partName,
+                                                    field,
+                                                    index,
+                                                )
+                                            ] = v;
+                                            continue;
+                                        }
+
+                                        if (typeof v === "object") {
+                                            if (v.name) {
+                                                i18nValues[lang][
+                                                    createItemTranslationIdentifier(
+                                                        category,
+                                                        itemName,
+                                                        partType,
+                                                        partName,
+                                                        field,
+                                                        index,
+                                                        "name",
+                                                    )
+                                                ] = v.name;
+                                            }
+
+                                            if (v.description) {
+                                                i18nValues[lang][
+                                                    createItemTranslationIdentifier(
+                                                        category,
+                                                        itemName,
+                                                        partType,
+                                                        partName,
+                                                        field,
+                                                        index,
+                                                        "description",
+                                                    )
+                                                ] = v.description;
+                                            }
+                                        }
+                                    }
+                                    continue;
+                                }
+
+                                console.error("Unknown item found", lang, partType, partName, field, value);
+                                process.exit(1);
+                            }
+                        }
+                    }
                 }
             }
         }

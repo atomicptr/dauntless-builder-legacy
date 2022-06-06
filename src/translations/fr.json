@@ -5,6 +5,9 @@
         "settings": "$t(pages.settings.title)"
     },
     "pages": {
+        "build": {
+            "no-perks": "Aucun effet disponible."
+        },
         "newbuild": {
             "title": "Creer un build"
         },
@@ -14,13 +17,38 @@
     },
     "terms": {
         "arms-armour": "Gants",
+        "elemental-types": {
+            "Blaze": "Incandescant",
+            "Frost": "Givrant",
+            "Radiant": "Radiant",
+            "Shock": "Foudroyant",
+            "Terra": "Tellurique",
+            "Umbral": "Obscur"
+        },
         "head-armour": "Casque",
+        "hold": "Maintenu",
         "lantern": "Lanterne",
         "legs-armour": "Grèves",
+        "parts": {
+            "chamber": "Chambre",
+            "grip": "Poignée",
+            "mod": "Mod",
+            "special": "Spécial"
+        },
         "perks": "Effet",
         "power": "Puissance",
         "resistance": "Resistance",
+        "search": "Chercher...",
         "torso-armour": "Torse",
-        "weapon": "Arme"
+        "weapon": "Arme",
+        "weapon-types": {
+            "AetherStrikers": "Cestes aethériques",
+            "Axe": "Hache",
+            "ChainBlades": "Chaînes-lames",
+            "Hammer": "Marteau",
+            "Repeater": "Répéteurs",
+            "Sword": "Épée",
+            "WarPike": "Aéthérolance"
+        }
     }
 }
