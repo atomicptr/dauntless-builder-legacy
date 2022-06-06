@@ -14,6 +14,7 @@ import {
     TextField,
     Toolbar,
     Typography,
+    useTheme,
 } from "@mui/material";
 import ItemPicker, { ItemPickerItem } from "@src/components/item-picker/ItemPicker";
 import OmnicellCard from "@src/components/omnicell-card/OmnicellCard";
@@ -56,8 +57,13 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
 }) => {
     const { t } = useTranslation();
     const isMobile = useIsMobile();
+    const theme = useTheme();
 
     const title = t("components.item-select-dialog.select-text", { name: t(itemTypeIdentifier(itemType)) });
+
+    const hasCollapsableEffect = [ItemType.Weapon, ItemType.Head, ItemType.Omnicell].indexOf(itemType) > -1;
+    const canBePowerSurged =
+        [ItemType.Weapon, ItemType.Head, ItemType.Torso, ItemType.Arms, ItemType.Legs].indexOf(itemType) > -1;
 
     const [searchValue, setSearchValue] = useState<string>("");
     const [powerSurged, setPowerSurged] = useState<boolean>(true);
@@ -276,7 +282,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                                                 </Typography>
                                             ) : null
                                         }
-                                        isPowerSurged={powerSurged}
+                                        isPowerSurged={canBePowerSurged && powerSurged}
                                         item={item}
                                         onClick={() => onItemSelected(item, itemType, powerSurged)}
                                         type={itemType}
@@ -290,17 +296,19 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
             </DialogContent>
 
             <DialogActions>
+                <Box sx={{ width: theme.spacing(2) }} />
                 {!isMobile ? (
                     <>
-                        <IconButton
-                            color="primary"
-                            edge="start"
-                            onClick={() => setShowUniqueEffects(!showUniqueEffects)}
-                            sx={{ ml: 1 }}
-                            title={t("pages.build.toggle-unique-effects")}
-                        >
-                            {showUniqueEffects ? <UnfoldLess /> : <UnfoldMore />}
-                        </IconButton>
+                        {hasCollapsableEffect ? (
+                            <IconButton
+                                color="primary"
+                                edge="start"
+                                onClick={() => setShowUniqueEffects(!showUniqueEffects)}
+                                title={t("pages.build.toggle-unique-effects")}
+                            >
+                                {showUniqueEffects ? <UnfoldLess /> : <UnfoldMore />}
+                            </IconButton>
+                        ) : null}
                         <IconButton
                             color="primary"
                             edge="start"
@@ -312,12 +320,14 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                     </>
                 ) : null}
 
-                <Button
-                    onClick={() => setPowerSurged(!powerSurged)}
-                    startIcon={powerSurged ? <StarOutline /> : <Star />}
-                >
-                    {powerSurged ? t("pages.build.power-surged-remove") : t("pages.build.power-surged-add")}
-                </Button>
+                {canBePowerSurged ? (
+                    <Button
+                        onClick={() => setPowerSurged(!powerSurged)}
+                        startIcon={powerSurged ? <StarOutline /> : <Star />}
+                    >
+                        {powerSurged ? t("pages.build.power-surged-remove") : t("pages.build.power-surged-add")}
+                    </Button>
+                ) : null}
 
                 <Box sx={{ flexGrow: 1 }}>{/* Spacer */}</Box>
 
