@@ -24,7 +24,8 @@
         "meta-builds": "Meta Builds",
         "my-builds": "My Builds",
         "new-build": "New Build",
-        "settings": "$t(pages.settings.title)"
+        "settings": "$t(pages.settings.title)",
+        "about": "$t(pages.about.title)"
     },
     "misc": {
         "dauntless-version": "Dauntless v{{version}}"
@@ -32,6 +33,9 @@
     "pages": {
         "404": {
             "not-found": "Page Not Found"
+        },
+        "about": {
+            "title": "About"
         },
         "build": {
             "click-here-to-select": "Click here to select one.",

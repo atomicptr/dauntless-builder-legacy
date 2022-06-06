@@ -3,7 +3,7 @@ import {
     Bookmarks,
     ChevronLeft,
     ChevronRight,
-    Home,
+    Home, Info,
     ManageSearch,
     Menu,
     Settings,
@@ -60,6 +60,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         { disabled: true, icon: <Bookmarks />, link: "/favorites", text: t("drawer.my-builds") },
         { disabled: true, icon: <ManageSearch />, link: "/b/search", text: t("drawer.build-finder") },
         { disabled: true, icon: <Stars />, link: "/b/meta", text: t("drawer.meta-builds") },
+        { disabled: true, icon: <Info />, link: "/about", text: t("drawer.about")},
         { icon: <Settings />, link: "/settings", text: t("drawer.settings") },
     ];
 
