@@ -237,41 +237,45 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                                                 </>
                                             ) : null
                                         }
-                                        componentsInside={() => (
-                                            <Typography
-                                                color="text.secondary"
-                                                component="div"
-                                                variant="subtitle1"
-                                            >
-                                                <Stack
-                                                    direction={isMobile ? "column" : "row"}
-                                                    spacing={isMobile ? 0 : 1}
+                                        componentsInside={() =>
+                                            itemType === ItemType.Weapon || isArmourType(itemType) ? (
+                                                <Typography
+                                                    color="text.secondary"
+                                                    component="div"
+                                                    variant="subtitle1"
                                                 >
-                                                    <Box>
-                                                        <b>{`${t("terms.cells")}:`}</b>
-                                                    </Box>
-                                                    {(Array.isArray((item as Weapon | Armour | Lantern | null)?.cells)
-                                                        ? ((item as Weapon | Armour | Lantern | null)
-                                                            ?.cells as CellType[]) ?? []
-                                                        : [(item as Weapon | Armour | Lantern | null)?.cells]
-                                                    ).map((cellType, index) =>
-                                                        cellType ? (
-                                                            <Box
-                                                                key={index}
-                                                                sx={{ alignItems: "center", display: "flex" }}
-                                                            >
-                                                                <img
-                                                                    src={`/assets/icons/perks/${cellType}.png`}
-                                                                    style={{ height: "16px", width: "16px" }}
-                                                                />
-                                                                &nbsp;
-                                                                {t(`terms.cell-type.${cellType}`)}
-                                                            </Box>
-                                                        ) : null,
-                                                    )}
-                                                </Stack>
-                                            </Typography>
-                                        )}
+                                                    <Stack
+                                                        direction={isMobile ? "column" : "row"}
+                                                        spacing={isMobile ? 0 : 1}
+                                                    >
+                                                        <Box>
+                                                            <b>{`${t("terms.cells")}:`}</b>
+                                                        </Box>
+                                                        {(Array.isArray(
+                                                            (item as Weapon | Armour | Lantern | null)?.cells,
+                                                        )
+                                                            ? ((item as Weapon | Armour | Lantern | null)
+                                                                ?.cells as CellType[]) ?? []
+                                                            : [(item as Weapon | Armour | Lantern | null)?.cells]
+                                                        ).map((cellType, index) =>
+                                                            cellType ? (
+                                                                <Box
+                                                                    key={index}
+                                                                    sx={{ alignItems: "center", display: "flex" }}
+                                                                >
+                                                                    <img
+                                                                        src={`/assets/icons/perks/${cellType}.png`}
+                                                                        style={{ height: "16px", width: "16px" }}
+                                                                    />
+                                                                    &nbsp;
+                                                                    {t(`terms.cell-type.${cellType}`)}
+                                                                </Box>
+                                                            ) : null,
+                                                        )}
+                                                    </Stack>
+                                                </Typography>
+                                            ) : null
+                                        }
                                         isPowerSurged={powerSurged}
                                         item={item}
                                         onClick={() => onItemSelected(item, itemType, powerSurged)}

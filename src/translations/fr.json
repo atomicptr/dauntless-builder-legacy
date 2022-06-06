@@ -6,6 +6,7 @@
     },
     "pages": {
         "build": {
+            "click-here-to-select": "Cliquez pour ajouter.",
             "no-perks": "Aucun effet disponible."
         },
         "newbuild": {
@@ -16,6 +17,7 @@
         }
     },
     "terms": {
+        "active": "Actif",
         "arms-armour": "Gants",
         "elemental-types": {
             "Blaze": "Incandescant",
@@ -29,12 +31,14 @@
         "hold": "Maintenu",
         "lantern": "Lanterne",
         "legs-armour": "Grèves",
+        "omnicell": "Omnicellule",
         "parts": {
             "chamber": "Chambre",
             "grip": "Poignée",
             "mod": "Mod",
             "special": "Spécial"
         },
+        "passive": "Passif",
         "perks": "Effet",
         "power": "Puissance",
         "resistance": "Resistance",

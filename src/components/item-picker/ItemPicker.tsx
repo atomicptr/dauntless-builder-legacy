@@ -245,7 +245,13 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                         <div
                                             dangerouslySetInnerHTML={{
                                                 __html: t("components.item-picker.omnicell-passive-line", {
-                                                    passive: (item as Omnicell).passive,
+                                                    passive: t(
+                                                        itemTranslationIdentifier(
+                                                            ItemType.Omnicell,
+                                                            item.name,
+                                                            "passive",
+                                                        ),
+                                                    ),
                                                 }),
                                             }}
                                         />
