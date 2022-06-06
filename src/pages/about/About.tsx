@@ -1,4 +1,6 @@
-import { Avatar, Box, Card, CardActionArea, CardContent, Grid, Typography } from "@mui/material";
+import { GitHub } from "@mui/icons-material";
+import { Avatar, Box, Button, Card, CardActionArea, CardContent, Grid, Stack, Typography } from "@mui/material";
+import PageTitle from "@src/components/page-title/PageTitle";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -94,6 +96,48 @@ const About: React.FC = () => {
 
     return (
         <Box sx={{ display: "flex", flexDirection: "column", gap: 4, mb: 2 }}>
+            <PageTitle title={t("pages.about.title")} />
+
+            <Typography>
+                <span
+                    dangerouslySetInnerHTML={{
+                        __html: t("pages.about.main-text"),
+                    }}
+                />
+            </Typography>
+
+            <Stack
+                direction="row"
+                spacing={2}
+            >
+                <Button
+                    component="a"
+                    href="https://github.com/atomicptr/dauntless-builder"
+                    startIcon={<GitHub />}
+                    target="_blank"
+                >
+                    {t("pages.about.source-code")}
+                </Button>
+            </Stack>
+
+            <Typography
+                component="div"
+                variant="h4"
+            >
+                {t("pages.about.privacy")}
+            </Typography>
+
+            <Typography>{t("pages.about.privacy-text")}</Typography>
+
+            <Typography
+                component="div"
+                variant="h4"
+            >
+                {t("pages.about.assets")}
+            </Typography>
+
+            <Typography>{t("pages.about.assets-text")}</Typography>
+
             <Typography
                 component="div"
                 variant="h4"
