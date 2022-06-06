@@ -35,6 +35,8 @@
             "not-found": "Page Not Found"
         },
         "about": {
+            "contributors": "Contributors",
+            "dependencies": "Dependencies",
             "title": "About"
         },
         "build": {

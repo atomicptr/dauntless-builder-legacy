@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@mui/material";
+import About from "@src/pages/about/About";
 import { StrictMode } from "react";
 import { createRoot, Root } from "react-dom/client";
 import { Provider } from "react-redux";
@@ -50,6 +51,11 @@ const DauntlessBuilderApp = () => {
                                         path=":buildId"
                                     />
                                 </Route>
+
+                                <Route
+                                    element={<About />}
+                                    path="/about"
+                                />
 
                                 <Route
                                     element={<Settings />}

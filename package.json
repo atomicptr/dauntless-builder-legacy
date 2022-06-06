@@ -7,9 +7,10 @@
     "license": "AGPLv3",
     "private": true,
     "scripts": {
-        "build": "yarn build:data && yarn build:i18n && yarn build:frontend",
+        "build": "yarn build:data && yarn build:i18n && yarn build:about && yarn build:frontend",
         "build:data": "node scripts/build-data.js",
         "build:i18n": "node scripts/build-i18n.js",
+        "build:about": "ts-node --esm scripts/build-about.ts",
         "build:frontend": "vite build",
         "dev": "vite dev",
         "test": "echo 'No tests defined yet :('",
@@ -42,6 +43,7 @@
         "ts-pattern": "^4.0.2"
     },
     "devDependencies": {
+        "@types/node": "^17.0.40",
         "@types/react": "^18.0.12",
         "@types/react-dom": "^18.0.5",
         "@types/react-helmet": "^6.1.5",
@@ -52,6 +54,7 @@
         "@typescript-eslint/eslint-plugin": "^5.27.0",
         "@typescript-eslint/parser": "^5.27.0",
         "@vitejs/plugin-react": "^1.3.2",
+        "axios": "^0.27.2",
         "eslint": "^8.17.0",
         "eslint-plugin-i18next": "^6.0.0-4",
         "eslint-plugin-react": "^7.30.0",
@@ -62,6 +65,8 @@
         "glob": "^8.0.3",
         "js-yaml": "^4.1.0",
         "json-sort-cli": "^2.0.14",
+        "license-checker": "^25.0.1",
+        "ts-node": "^10.8.1",
         "typescript": "^4.7.3",
         "vite": "^2.9.9",
         "vite-plugin-favicon2": "^1.1.4",

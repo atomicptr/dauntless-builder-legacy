@@ -27,7 +27,8 @@
         "strict": true,
         "target": "ESNext",
         "types": [
-            "vite/client"
+            "vite/client",
+            "node"
         ],
         "useDefineForClassFields": true
     },
