@@ -7,6 +7,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import { match } from "ts-pattern";
+import {QuestionMark} from "@mui/icons-material";
 
 interface PartPickerProps {
     type: PartType;
@@ -42,8 +43,7 @@ const PartPicker: React.FC<PartPickerProps> = ({ type, item, weaponType, onClick
                     <Box
                         sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
                         <CardMedia
-                            component="img"
-                            image={"/assets/noicon.png" /* TODO: add generic type icon */}
+                            component={QuestionMark}
                             sx={{ height: imageSize, width: imageSize }} />
                     </Box>
                     <Box>
