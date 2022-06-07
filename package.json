@@ -7,10 +7,11 @@
     "license": "AGPLv3",
     "private": true,
     "scripts": {
-        "build": "yarn build:data && yarn build:i18n && yarn build:about && yarn build:frontend",
+        "build": "yarn build:deps && yarn build:frontend",
         "build:data": "node scripts/build-data.js",
         "build:i18n": "node scripts/build-i18n.js",
         "build:about": "ts-node --esm scripts/build-about.ts",
+        "build:deps": "yarn build:data && yarn build:i18n && yarn build:about",
         "build:frontend": "vite build",
         "dev": "vite dev",
         "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
