@@ -4,9 +4,11 @@
 
 Builds are not stored on a server, but instead stored in your address bar. If we take a look at the following
 
-Dauntless Builder URL: `https://www.dauntless-builder.com/b/axfWTxZIOCKVimPCjcWtgT0Sm5I3C08fdPcpCE2Urbc2CjmHzjhnCvOc7SPNtw`
+Dauntless Builder
+URL: `https://www.dauntless-builder.com/b/axfWTxZIOCKVimPCjcWtgT0Sm5I3C08fdPcpCE2Urbc2CjmHzjhnCvOc7SPNtw`
 
-You can see a very long cryptic string at the end in this case **axfWTxZIOCKVimPCjcWtgT0Sm5I3C08fdPcpCE2Urbc2CjmHzjhnCvOc7SPNtw**,
+You can see a very long cryptic string at the end in this case
+**axfWTxZIOCKVimPCjcWtgT0Sm5I3C08fdPcpCE2Urbc2CjmHzjhnCvOc7SPNtw**,
 this is what we call the **build id**.
 
 ### Parsing the build id
@@ -134,6 +136,7 @@ To expand on our earlier example:
 // I want to know what the name of the weapon is... how do i do this?
 // First we need to pull the names.json data from Dauntless Builder
 const namesMap = await fetch("https://www.dauntless-builder.com/map/names.json");
+
 if (!namesMap.ok) {
     throw Error("TODO: Something went wrong, but I can't be bothered to fix this rn");
 }
@@ -152,4 +155,100 @@ console.log("Weapon Name:", namesJson["Weapons"][weaponId]); // => Incinerator's
 
 ### Using the data
 
-TODO...
+The Dauntless Builder item data is available at https://www.dauntless-builder.com/data.json
+
+In this example we'll continue the example from the last section:
+
+```ts
+// first we'll fetch the data
+const itemData = await fetch("https://www.dauntless-builder.com/data.json");
+
+if (!itemData.ok) {
+    throw Error("TODO: Something went wrong, but I can't be bothered to fix this rn");
+}
+
+const dataJson = await itemData.json();
+
+// see the example above where these variables come from
+const weaponName = namesJson["Weapons"][weaponId];
+
+const weapon = dataJson["weapons"][weaponName];
+
+// lets print the weapon
+console.log("Weapon:", weapon);
+
+// this is what stdout would look like...
+const output = {
+    name: "Incinerator's Song",
+    description: "A Slayer's axe forged with Torgadoro trophies.",
+    icon: "/assets/icons/weapons/torgadoro/IncineratorsSong.png",
+    type: "Axe",
+    damage: "Slashing",
+    elemental: "Blaze",
+    cells: ["Prismatic", "Prismatic"],
+    power: {
+        base: 100,
+        powerSurged: 120,
+    },
+    bond: {
+        elemental: "Blaze",
+    },
+    unique_effects: [
+        {
+            name: "TorgadoroLegendaryAbility",
+            icon: "/assets/icons/abilities/TorgadoroLegendaryWeaponAbility.png",
+            description:
+                "Legendary Ability: Enter a rage, gaining new attacks for 15 seconds. Deals +25% damage when the target is below\n50% health. Usable once, but resets on Behemoth kill.\n",
+        },
+    ],
+};
+```
+
+### Checking for changes
+
+Under https://www.dauntless-builder.com/meta.json you can also find out when was the last time the data
+set was generated (build_time) and an md5 hash to check against to see if your data is different.
+
+Here is an example of this file:
+
+```json
+{
+    "build_time": 1653743142838,
+    "data_hash": "b4174f01954cc0136d9d01d3f51be92d",
+    "map_hash": "3a1a54c45fc36ae9b68d55f95c9598de"
+}
+```
+
+### Creating links to Dauntless Builder
+
+This is fairly similar to "Parsing the build id" above, just in reverse.
+
+Here is a short code snippet showing how this can be done:
+
+```ts
+import Hashids from "hashids";
+
+const hashids = new Hashids("spicy");
+
+const newBuild = [
+    // the current version string, since we mostly update them on the fly (if possible) you don't
+    // need to worry too much about this
+    6,
+    // flags, just set this to this is only for DB itself
+    0,
+    weaponId,
+    Number(weaponSurged),
+    weaponCell1Id,
+    // ... you get the drill
+];
+
+// This should now be an array of integers similar to before.
+// Now you can just call hashids again:
+const buildId = hashids.encode(newBuild);
+
+// attach it after /b/...
+const linkToDauntlessBuilder = `https://www.dauntless-builder.com/b/${buildId}`;
+
+// And thats pretty much it.
+console.log(linkToDauntlessBuilder);
+```
