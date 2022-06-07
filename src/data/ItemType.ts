@@ -39,4 +39,5 @@ export const itemTypeData = (itemType: ItemType) =>
         .with(ArmourItemType, () => dauntlessBuilderData.armours)
         .with(ItemType.Lantern, () => dauntlessBuilderData.lanterns)
         .with(ItemType.Omnicell, () => dauntlessBuilderData.omnicells)
+        .with(ItemType.Cell, () => dauntlessBuilderData.cells)
         .run();

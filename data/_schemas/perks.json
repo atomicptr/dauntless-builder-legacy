@@ -1,0 +1,104 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "properties": {
+        "description": {
+            "type": "string"
+        },
+        "effects": {
+            "patternProperties": {
+                "^[1-6]$": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "description": {
+                            "type": [
+                                "string",
+                                "array"
+                            ]
+                        },
+                        "value": {
+                            "type": [
+                                "number",
+                                "array",
+                                "null"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "description",
+                        "value"
+                    ],
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "i18n": {
+            "patternProperties": {
+                "^[a-z]{2}$": {
+                    "properties": {
+                        "description": {
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        },
+                        "effects": {
+                            "patternProperties": {
+                                "^[1-6]$": {
+                                    "properties": {
+                                        "description": {
+                                            "type": [
+                                                "string",
+                                                "array",
+                                                "null"
+                                            ]
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "type": [
+                                "object",
+                                "null"
+                            ]
+                        },
+                        "name": {
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        }
+                    },
+                    "type": [
+                        "object",
+                        "null"
+                    ]
+                }
+            },
+            "type": [
+                "object",
+                "null"
+            ]
+        },
+        "key": {
+            "type": [
+                "string",
+                "array"
+            ]
+        },
+        "name": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "name",
+        "type",
+        "effects"
+    ],
+    "title": "Dauntless-Builder Perk Schema",
+    "type": "object"
+}

@@ -1,0 +1,193 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "properties": {
+        "bond": {
+            "type": "object"
+        },
+        "cells": {
+            "items": {
+                "type": "string"
+            },
+            "type": [
+                "array",
+                "null"
+            ],
+            "uniqueItems": false
+        },
+        "damage": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "elemental": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "hidden": {
+            "type": "boolean"
+        },
+        "i18n": {
+            "patternProperties": {
+                "^[a-z]{2}$": {
+                    "properties": {
+                        "description": {
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        },
+                        "name": {
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        },
+                        "unique_effects": {
+                            "items": [
+                                {
+                                    "properties": {
+                                        "description": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            ],
+                            "type": [
+                                "array",
+                                "null"
+                            ]
+                        }
+                    },
+                    "type": [
+                        "object",
+                        "null"
+                    ]
+                }
+            },
+            "type": [
+                "object",
+                "null"
+            ]
+        },
+        "icon": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "perks": {
+            "items": {
+                "additionalProperties": false,
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "powerSurged": {
+                        "type": "boolean"
+                    },
+                    "value": {
+                        "type": "number"
+                    }
+                },
+                "required": [
+                    "name",
+                    "value"
+                ],
+                "type": "object"
+            },
+            "type": "array",
+            "uniqueItems": true
+        },
+        "power": {
+            "properties": {
+                "base": {
+                    "type": "number"
+                },
+                "powerSurged": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "base"
+            ],
+            "type": "object"
+        },
+        "rarity": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "restrict_specials": {
+            "type": "boolean"
+        },
+        "type": {
+            "type": "string"
+        },
+        "unique_effects": {
+            "items": {
+                "additionalProperties": false,
+                "properties": {
+                    "description": {
+                        "type": "string"
+                    },
+                    "icon": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": [
+                            "string",
+                            "array"
+                        ]
+                    },
+                    "powerSurged": {
+                        "type": "boolean"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": [
+                            "number",
+                            "array"
+                        ]
+                    },
+                    "values": {
+                        "patternProperties": {
+                            "^.*$": {
+                                "patternProperties": {
+                                    "^.*$": {
+                                        "type": "number"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        },
+                        "type": [
+                            "object",
+                            "null"
+                        ]
+                    }
+                },
+                "required": [
+                    "name",
+                    "description"
+                ],
+                "type": "object"
+            },
+            "type": "array",
+            "uniqueItems": true
+        }
+    },
+    "required": [
+        "name",
+        "type"
+    ],
+    "title": "Dauntless-Builder Weapon Schema",
+    "type": "object"
+}

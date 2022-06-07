@@ -2,10 +2,20 @@ import dataJson from "@src/data/data.json";
 import {Armour} from "./Armour";
 import {Cell} from "./Cell";
 import {Lantern} from "./Lantern";
-import { Omnicell } from "./Omnicell";
+import {Omnicell} from "./Omnicell";
 import {Part} from "./Part";
 import {Perk} from "./Perks";
 import {Weapon} from "./Weapon";
+
+export type DauntlessBuilderDataIndex =
+    "armours" |
+    "cells" |
+    "lanterns" |
+    "perks" |
+    "weapons" |
+    "parts" |
+    "omnicells" |
+    "misc";
 
 interface DauntlessBuilderData {
     armours: {

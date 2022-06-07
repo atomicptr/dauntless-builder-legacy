@@ -10,6 +10,7 @@ import {Perk} from "./Perks";
 import {Cell} from "./Cell";
 import {match} from "ts-pattern";
 import {Part, PartType} from "./Part";
+import {ArmourItemType, ItemType} from "@src/data/ItemType";
 
 const hashids = new Hashids("spicy");
 
@@ -223,6 +224,15 @@ export class BuildModel {
     }
 }
 
+export const findItem = (itemType: ItemType, name: string): Weapon|Omnicell|Armour|Lantern|Perk|Cell|null =>
+    match(itemType)
+        .with(ItemType.Weapon, () => findWeaponByName(name))
+        .with(ArmourItemType, () => findArmourByName(name))
+        .with(ItemType.Lantern, () => findLanternByName(name))
+        .with(ItemType.Omnicell, () => findOmnicellByName(name))
+        .with(ItemType.Cell, () => findCellByName(name))
+        .run();
+
 export const findWeaponByName = (name: string): Weapon|null =>
     name in dauntlessBuilderData.weapons ? dauntlessBuilderData.weapons[name] : null;
 
@@ -237,6 +247,9 @@ export const findLanternByName = (name: string): Lantern|null =>
 
 export const findPerkByName = (name: string): Perk|null =>
     name in dauntlessBuilderData.perks ? dauntlessBuilderData.perks[name] : null;
+
+export const findCellByName = (name: string): Cell|null =>
+    name in dauntlessBuilderData.cells ? dauntlessBuilderData.cells[name] : null;
 
 export const findPartByName = (weaponType: WeaponType, partType: PartType, name: string): Part|null => {
     // there is probably a better way to do this while making the typescript compiler happy

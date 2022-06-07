@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Dauntless-Builder Repeater Grips Part Schema",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "icon": {
+            "type": "string"
+        },
+        "hidden": {
+            "type": "boolean"
+        },
+        "part_effect": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "i18n": {
+            "type": ["object", "null"],
+            "patternProperties": {
+                "^[a-z]{2}$": {
+                    "type": ["object", "null"],
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "part_effect": {
+                            "type": "array",
+                            "items": {"type": ["string", "null"]}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "required": ["name"],
+    "additionalProperties": false
+}
