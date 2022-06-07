@@ -344,7 +344,7 @@ export const findPartInBuild = (weaponType: WeaponType, partType: PartType, buil
 
 export const findCellByVariantName = (name: string): Cell|null => {
     const cellName = Object.keys(dauntlessBuilderData.cells).find(cellName => name in dauntlessBuilderData.cells[cellName].variants);
-    if (!cellName) {
+    if (!cellName || !(cellName in dauntlessBuilderData.cells)) {
         return null;
     }
     return dauntlessBuilderData.cells[cellName];

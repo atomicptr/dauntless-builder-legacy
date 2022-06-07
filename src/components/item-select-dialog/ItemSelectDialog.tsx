@@ -23,7 +23,7 @@ import UniqueEffectCard from "@src/components/unique-effect-card/UniqueEffectCar
 import VirtualizedList from "@src/components/virtualized-list/VirtualizedList";
 import { Armour } from "@src/data/Armour";
 import { CellType } from "@src/data/Cell";
-import { isArmourType, ItemType, itemTypeData, itemTypeIdentifier } from "@src/data/ItemType";
+import { isArmourType, ItemType, itemTypeData, itemTypeLocalizationIdentifier } from "@src/data/ItemType";
 import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
 import { Weapon } from "@src/data/Weapon";
@@ -59,7 +59,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
     const isMobile = useIsMobile();
     const theme = useTheme();
 
-    const title = t("components.item-select-dialog.select-text", { name: t(itemTypeIdentifier(itemType)) });
+    const title = t("components.item-select-dialog.select-text", { name: t(itemTypeLocalizationIdentifier(itemType)) });
 
     const hasCollapsableEffect = [ItemType.Weapon, ItemType.Head, ItemType.Omnicell].indexOf(itemType) > -1;
     const canBePowerSurged =

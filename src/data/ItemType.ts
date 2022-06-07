@@ -19,7 +19,7 @@ export const ArmourItemType = P.union(ItemType.Head, ItemType.Torso, ItemType.Ar
 export const isArmourType = (type: ItemType): boolean =>
     [ItemType.Head, ItemType.Torso, ItemType.Arms, ItemType.Legs].indexOf(type) >= 0;
 
-export const itemTypeIdentifier = (itemType: ItemType) =>
+export const itemTypeLocalizationIdentifier = (itemType: ItemType) =>
     match(itemType)
         .with(ItemType.Weapon, () => "terms.weapon")
         .with(ItemType.Head, () => "terms.head-armour")

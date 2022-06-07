@@ -26,7 +26,7 @@ import { findCellByVariantName, findPerkByName } from "@src/data/BuildModel";
 import { Cell, CellType } from "@src/data/Cell";
 import dauntlessBuilderData from "@src/data/Data";
 import { ItemRarity } from "@src/data/ItemRarity";
-import { ItemType, itemTypeIdentifier } from "@src/data/ItemType";
+import { ItemType, itemTypeLocalizationIdentifier } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
 import useIsMobile from "@src/hooks/is-mobile";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
@@ -68,7 +68,9 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
     const { t } = useTranslation();
     const isMobile = useIsMobile();
 
-    const title = t("components.item-select-dialog.select-text", { name: t(itemTypeIdentifier(ItemType.Cell)) });
+    const title = t("components.item-select-dialog.select-text", {
+        name: t(itemTypeLocalizationIdentifier(ItemType.Cell)),
+    });
 
     const searchFieldRef = useRef<HTMLElement>(null);
     const [searchValue, setSearchValue] = useState<string>("");
