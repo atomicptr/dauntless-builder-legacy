@@ -1,4 +1,5 @@
 import { deDE, enUS, frFR, jaJP } from "@mui/material/locale";
+import { store } from "@src/store";
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
@@ -10,19 +11,19 @@ import en from "./translations/en.json";
 import fr from "./translations/fr.json";
 import enItems from "./translations/items/items.en.json";
 import frItems from "./translations/items/items.fr.json";
-import jp from "./translations/jp.json";
+import ja from "./translations/ja.json";
 
 const resources = {
     de: { translation: de },
     en: { translation: { ...en, ...enItems } },
     fr: { translation: { ...fr, ...frItems } },
-    jp: { translation: jp },
+    ja: { translation: ja },
 };
 
 export enum Language {
     English = "en",
     German = "de",
-    Japanese = "jp",
+    Japanese = "ja",
     French = "fr",
 }
 
@@ -56,14 +57,20 @@ export const ttry = (tryIdent: string, elseIdent: string): string => {
     return i18n.t(elseIdent);
 };
 
+const detector = new LanguageDetector();
+detector.addDetector({
+    lookup: () => store.getState().configuration.language,
+    name: "reduxState",
+});
+
 i18n.use(initReactI18next)
-    .use(LanguageDetector)
+    .use(detector)
     .use(translationCheckPlugin)
     .init({
         debug: DB_DEVMODE,
         detection: {
-            lookupLocalStorage: "language",
-            order: ["localStorage", "navigator"],
+            caches: [],
+            order: ["reduxState", "navigator"],
         },
         fallbackLng: Language.English,
         interpolation: {

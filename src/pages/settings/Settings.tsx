@@ -1,11 +1,15 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import PageTitle from "@src/components/page-title/PageTitle";
+import { selectConfiguration, setLanguage } from "@src/features/configuration/configuration-slice";
+import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import { currentLanguage, getNativeLanguageName, Language } from "@src/i18n";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
 const Settings: React.FC = () => {
-    const { t, i18n } = useTranslation();
+    const dispatch = useAppDispatch();
+    const { t } = useTranslation();
+    const _configuration = useAppSelector(selectConfiguration);
 
     return (
         <>
@@ -18,7 +22,7 @@ const Settings: React.FC = () => {
                 <InputLabel>{t("pages.settings.language")}</InputLabel>
                 <Select
                     label={t("pages.settings.language")}
-                    onChange={ev => i18n.changeLanguage(ev.target.value)}
+                    onChange={ev => dispatch(setLanguage(ev.target.value as Language))}
                     value={currentLanguage()}
                 >
                     {Object.keys(Language).map((key: string) => (
