@@ -219,6 +219,11 @@ export class BuildModel {
         const data = hashids.decode(buildId);
 
         return match(data[BuildFields.Version])
+            .with(1, () => false) // v1 is invalid by definition
+            .with(2, () => data.length === 31)
+            .with(3, () => data.length === 25)
+            .with(4, () => data.length === 26) // Patch 1.7.0
+            .with(5, () => data.length === 24) // Patch 1.7.3
             .with(6, () => data.length === 25)
             .otherwise(() => false);
     }
