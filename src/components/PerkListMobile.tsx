@@ -16,7 +16,7 @@ import {
     Typography,
 } from "@mui/material";
 import { TransitionProps } from "@mui/material/transitions";
-import theme, { itemPickerDefaultImageSize } from "@src/components/theme/theme";
+import theme, { itemPickerDefaultImageSize } from "@src/components/theme";
 import { ItemType } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
 import { selectBuild } from "@src/features/build/build-slice";
@@ -44,7 +44,7 @@ const Transition = React.forwardRef(function Transition(
     );
 });
 
-const MobilePerkList: React.FC = () => {
+const PerkListMobile: React.FC = () => {
     const build = useAppSelector(selectBuild);
     const { t } = useTranslation();
 
@@ -180,4 +180,4 @@ const MobilePerkList: React.FC = () => {
     );
 };
 
-export default MobilePerkList;
+export default PerkListMobile;

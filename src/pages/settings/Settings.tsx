@@ -1,5 +1,5 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-import PageTitle from "@src/components/page-title/PageTitle";
+import PageTitle from "@src/components/PageTitle";
 import { selectConfiguration, setLanguage } from "@src/features/configuration/configuration-slice";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import { currentLanguage, getNativeLanguageName, Language } from "@src/i18n";

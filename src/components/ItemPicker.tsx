@@ -1,8 +1,8 @@
 import { Star } from "@mui/icons-material";
 import { Box, Card, CardActionArea, CardContent, CardMedia, Skeleton, Stack, Typography } from "@mui/material";
-import ElementalIcon from "@src/components/elemental-icon/ElementalIcon";
-import PerksText from "@src/components/perks-text/PerksText";
-import { itemPickerDefaultImageSize } from "@src/components/theme/theme";
+import ElementalIcon from "@src/components/ElementalIcon";
+import PerksText from "@src/components/PerksText";
+import { itemPickerDefaultImageSize } from "@src/components/theme";
 import { Armour } from "@src/data/Armour";
 import { isArmourType, ItemType } from "@src/data/ItemType";
 import { Lantern } from "@src/data/Lantern";

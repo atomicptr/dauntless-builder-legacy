@@ -1,6 +1,6 @@
 import { Box, Card, CardActionArea, CardContent, CardMedia, Skeleton, Typography } from "@mui/material";
-import PerksText from "@src/components/perks-text/PerksText";
-import { itemPickerDefaultImageSize } from "@src/components/theme/theme";
+import PerksText from "@src/components/PerksText";
+import { itemPickerDefaultImageSize } from "@src/components/theme";
 import { ItemType } from "@src/data/ItemType";
 import { Weapon } from "@src/data/Weapon";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";

@@ -1,5 +1,5 @@
 import { Box, CardContent, CardMedia, Skeleton, Typography } from "@mui/material";
-import { itemPickerDefaultImageSize } from "@src/components/theme/theme";
+import { itemPickerDefaultImageSize } from "@src/components/theme";
 import { Armour } from "@src/data/Armour";
 import { ItemType } from "@src/data/ItemType";
 import { UniqueEffect } from "@src/data/UniqueEffect";

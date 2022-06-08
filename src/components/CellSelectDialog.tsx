@@ -19,9 +19,9 @@ import {
     Typography,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { itemPickerDefaultImageSize, rarityColor } from "@src/components/theme/theme";
-import { Transition } from "@src/components/theme/transition";
-import VirtualizedList from "@src/components/virtualized-list/VirtualizedList";
+import { DialogTransition } from "@src/components/DialogTransition";
+import { itemPickerDefaultImageSize, rarityColor } from "@src/components/theme";
+import VirtualizedList from "@src/components/VirtualizedList";
 import { findCellByVariantName, findPerkByName } from "@src/data/BuildModel";
 import { Cell, CellType } from "@src/data/Cell";
 import dauntlessBuilderData from "@src/data/Data";
@@ -110,7 +110,7 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
 
     return (
         <Dialog
-            TransitionComponent={Transition}
+            TransitionComponent={DialogTransition}
             fullScreen={isMobile}
             fullWidth
             maxWidth={dialogWidth}

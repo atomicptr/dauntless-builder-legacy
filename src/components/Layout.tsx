@@ -28,9 +28,9 @@ import {
     Typography,
     useTheme,
 } from "@mui/material";
-import BuildMenu from "@src/components/build-menu/BuildMenu";
-import DevMenu from "@src/components/dev-menu/DevMenu";
-import { drawerWidth } from "@src/components/theme/theme";
+import BuildMenu from "@src/components/BuildMenu";
+import DevMenu from "@src/components/DevMenu";
+import { drawerWidth } from "@src/components/theme";
 import dauntlessBuilderData from "@src/data/Data";
 import useIsMobile from "@src/hooks/is-mobile";
 import { currentLanguage, getNativeLanguageName, isBetaLanguage, Language } from "@src/i18n";

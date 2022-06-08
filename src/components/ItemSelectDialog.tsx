@@ -16,24 +16,23 @@ import {
     Typography,
     useTheme,
 } from "@mui/material";
-import ItemPicker, { ItemPickerItem } from "@src/components/item-picker/ItemPicker";
-import OmnicellCard from "@src/components/omnicell-card/OmnicellCard";
-import { Transition } from "@src/components/theme/transition";
-import UniqueEffectCard from "@src/components/unique-effect-card/UniqueEffectCard";
-import VirtualizedList from "@src/components/virtualized-list/VirtualizedList";
-import { Armour } from "@src/data/Armour";
+import { DialogTransition } from "@src/components/DialogTransition";
+import ItemPicker, { ItemPickerItem } from "@src/components/ItemPicker";
+import OmnicellCard from "@src/components/OmnicellCard";
+import UniqueEffectCard from "@src/components/UniqueEffectCard";
+import VirtualizedList from "@src/components/VirtualizedList";
+import { Armour, ArmourType } from "@src/data/Armour";
 import { CellType } from "@src/data/Cell";
+import { ElementalType } from "@src/data/ElementalType";
 import { isArmourType, ItemType, itemTypeData, itemTypeLocalizationIdentifier } from "@src/data/ItemType";
 import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
-import { Weapon } from "@src/data/Weapon";
+import { Weapon, WeaponType } from "@src/data/Weapon";
 import { GenericItemType, selectItemSelectFilter } from "@src/features/item-select-filter/item-select-filter-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppSelector } from "@src/hooks/redux";
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-
-import { filterByCellSlot, filterByElement, filterByPerk, filterBySearchQuery, filterByWeaponType } from "./filters";
 
 interface ItemSelectDialogProps {
     open: boolean;
@@ -123,7 +122,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
 
     return (
         <Dialog
-            TransitionComponent={Transition}
+            TransitionComponent={DialogTransition}
             fullScreen={isMobile}
             fullWidth
             maxWidth={dialogWidth}
@@ -344,3 +343,49 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
 };
 
 export default ItemSelectDialog;
+
+export const filterBySearchQuery =
+    (query: string) =>
+        (item: ItemPickerItem, itemType: ItemType): boolean => {
+            if (!item) {
+                return false;
+            }
+
+            if (item.name.toLowerCase().indexOf(query.toLowerCase()) > -1) {
+                return true;
+            }
+
+            if (itemType === ItemType.Weapon || isArmourType(itemType) || itemType === ItemType.Lantern) {
+                const description = (item as Weapon | Armour | Lantern).description?.toLowerCase();
+                return description ? description.toLowerCase().indexOf(query.toLowerCase()) > -1 : false;
+            }
+
+            return false;
+        };
+
+export const filterByWeaponType =
+    (weaponType: WeaponType) =>
+        (item: ItemPickerItem, _itemType: ItemType): boolean =>
+            (item as Weapon).type === weaponType;
+
+export const filterByArmourType =
+    (armourType: ArmourType) =>
+        (item: ItemPickerItem, _itemType: ItemType): boolean =>
+            (item as Armour).type === armourType;
+
+export const filterByElement =
+    (elemental: ElementalType) =>
+        (item: ItemPickerItem, itemType: ItemType): boolean =>
+            itemType === ItemType.Weapon
+                ? (item as Weapon).elemental === elemental
+                : (item as Armour).strength === elemental;
+
+export const filterByCellSlot =
+    (cellSlot: CellType) =>
+        (item: ItemPickerItem, _itemType: ItemType): boolean =>
+            ((item as Weapon | Armour | Lantern).cells?.indexOf(cellSlot) ?? -1) > -1;
+
+export const filterByPerk =
+    (perk: string) =>
+        (item: ItemPickerItem, _itemType: ItemType): boolean =>
+            ((item as Weapon | Armour).perks ?? []).some(p => p.name === perk);

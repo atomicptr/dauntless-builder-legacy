@@ -1,6 +1,6 @@
 import { styled } from "@mui/material";
 import MuiDrawer from "@mui/material/Drawer";
-import { drawerWidth } from "@src/components/theme/theme";
+import { drawerWidth } from "@src/components/theme";
 
 export const DrawerHeader = styled("div")(({ theme }) => ({
     alignItems: "center",

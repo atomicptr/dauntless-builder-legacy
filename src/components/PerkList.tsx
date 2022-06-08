@@ -1,6 +1,6 @@
 import { Cake, Warning } from "@mui/icons-material";
 import { Box, List, ListItem, ListItemIcon, ListItemText, ListSubheader, Stack, Tooltip } from "@mui/material";
-import theme from "@src/components/theme/theme";
+import theme from "@src/components/theme";
 import { BuildModel, findCellByVariantName, findPerkByName } from "@src/data/BuildModel";
 import { ItemType } from "@src/data/ItemType";
 import { Perk, PerkValue } from "@src/data/Perks";

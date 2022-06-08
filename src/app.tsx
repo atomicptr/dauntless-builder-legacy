@@ -7,8 +7,8 @@ import { createRoot, Root } from "react-dom/client";
 import { Provider } from "react-redux";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
-import Layout from "./components/layout/Layout";
-import theme from "./components/theme/theme";
+import Layout from "./components/Layout";
+import theme from "./components/theme";
 import NotFound from "./pages/404/NotFound";
 import Build from "./pages/build/Build";
 import BuildSearch from "./pages/build/BuildSearch";

@@ -1,5 +1,5 @@
 import { Box, Card, CardActionArea, CardMedia, Typography, useTheme } from "@mui/material";
-import { itemPickerDefaultImageSize, rarityColor } from "@src/components/theme/theme";
+import { itemPickerDefaultImageSize, rarityColor } from "@src/components/theme";
 import { findCellByVariantName } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
 import { ItemRarity } from "@src/data/ItemRarity";

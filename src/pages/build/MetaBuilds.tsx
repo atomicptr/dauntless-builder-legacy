@@ -1,4 +1,4 @@
-import PageTitle from "@src/components/page-title/PageTitle";
+import PageTitle from "@src/components/PageTitle";
 import React from "react";
 import { useTranslation } from "react-i18next";
 

@@ -1,5 +1,5 @@
 import { Button, Stack } from "@mui/material";
-import PageTitle from "@src/components/page-title/PageTitle";
+import PageTitle from "@src/components/PageTitle";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";

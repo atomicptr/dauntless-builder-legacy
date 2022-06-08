@@ -1,5 +1,5 @@
 import { Box, CardContent, CardMedia, Typography } from "@mui/material";
-import { itemPickerDefaultImageSize } from "@src/components/theme/theme";
+import { itemPickerDefaultImageSize } from "@src/components/theme";
 import { ItemType } from "@src/data/ItemType";
 import { Omnicell } from "@src/data/Omnicell";
 import { renderItemText } from "@src/utils/item-text-renderer";

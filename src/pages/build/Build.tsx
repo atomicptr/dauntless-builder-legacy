@@ -1,20 +1,19 @@
 import { Grid, ListSubheader } from "@mui/material";
-import BondWeaponPicker from "@src/components/bond-weapon-picker/BondWeaponPicker";
-import CellPicker from "@src/components/cell-picker/CellPicker";
-import CellSelectDialog from "@src/components/cell-select-dialog/CellSelectDialog";
-import CellSlotFilter from "@src/components/cell-slot-filter/CellSlotFilter";
-import ElementalTypeFilter from "@src/components/elemental-type-filter/ElementalTypeFilter";
-import ItemPicker, { ItemPickerItem } from "@src/components/item-picker/ItemPicker";
-import { filterByArmourType } from "@src/components/item-select-dialog/filters";
-import ItemSelectDialog, { FilterFunc } from "@src/components/item-select-dialog/ItemSelectDialog";
-import OmnicellCard from "@src/components/omnicell-card/OmnicellCard";
-import PageTitle from "@src/components/page-title/PageTitle";
-import PartPicker from "@src/components/part-picker/PartPicker";
-import PerkFilter from "@src/components/perk-filter/PerkFilter";
-import MobilePerkList from "@src/components/perk-list/MobilePerkList";
-import PerkList from "@src/components/perk-list/PerkList";
-import UniqueEffectCard from "@src/components/unique-effect-card/UniqueEffectCard";
-import WeaponTypeFilter from "@src/components/weapon-type-filter/WeaponTypeFilter";
+import BondWeaponPicker from "@src/components/BondWeaponPicker";
+import CellPicker from "@src/components/CellPicker";
+import CellSelectDialog from "@src/components/CellSelectDialog";
+import CellSlotFilter from "@src/components/CellSlotFilter";
+import ElementalTypeFilter from "@src/components/ElementalTypeFilter";
+import ItemPicker, { ItemPickerItem } from "@src/components/ItemPicker";
+import ItemSelectDialog, { filterByArmourType, FilterFunc } from "@src/components/ItemSelectDialog";
+import OmnicellCard from "@src/components/OmnicellCard";
+import PageTitle from "@src/components/PageTitle";
+import PartPicker from "@src/components/PartPicker";
+import PerkFilter from "@src/components/PerkFilter";
+import PerkList from "@src/components/PerkList";
+import PerkListMobile from "@src/components/PerkListMobile";
+import UniqueEffectCard from "@src/components/UniqueEffectCard";
+import WeaponTypeFilter from "@src/components/WeaponTypeFilter";
 import { Armour, ArmourType } from "@src/data/Armour";
 import { BuildModel } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
@@ -321,7 +320,7 @@ const Build: React.FC = () => {
                     sm={12}
                     sx={{ width: isMobile ? "100%" : undefined }}
                 >
-                    {isMobile ? <MobilePerkList /> : <PerkList />}
+                    {isMobile ? <PerkListMobile /> : <PerkList />}
                 </Grid>
             </Grid>
 

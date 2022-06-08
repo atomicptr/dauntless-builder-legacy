@@ -1,6 +1,6 @@
 import { QuestionMark } from "@mui/icons-material";
 import { Box, Card, CardActionArea, CardContent, CardMedia, Skeleton, Typography } from "@mui/material";
-import { itemPickerDefaultImageSize } from "@src/components/theme/theme";
+import { itemPickerDefaultImageSize } from "@src/components/theme";
 import { Part, PartType } from "@src/data/Part";
 import { WeaponType } from "@src/data/Weapon";
 import { partsTranslationIdentifier } from "@src/utils/item-translation-identifier";
