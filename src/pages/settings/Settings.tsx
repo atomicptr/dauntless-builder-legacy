@@ -1,6 +1,6 @@
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { Checkbox, FormControl, FormControlLabel, InputLabel, MenuItem, Select } from "@mui/material";
 import PageTitle from "@src/components/PageTitle";
-import { selectConfiguration, setLanguage } from "@src/features/configuration/configuration-slice";
+import { selectConfiguration, setDevMode, setLanguage } from "@src/features/configuration/configuration-slice";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import { currentLanguage, getNativeLanguageName, Language } from "@src/i18n";
 import React from "react";
@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 const Settings: React.FC = () => {
     const dispatch = useAppDispatch();
     const { t } = useTranslation();
-    const _configuration = useAppSelector(selectConfiguration);
+    const configuration = useAppSelector(selectConfiguration);
 
     return (
         <>
@@ -37,6 +37,17 @@ const Settings: React.FC = () => {
                     ))}
                 </Select>
             </FormControl>
+
+            <FormControlLabel
+                control={
+                    <Checkbox
+                        checked={configuration.devMode}
+                        disabled={DB_DEVMODE}
+                        onChange={ev => dispatch(setDevMode(ev.target.checked))}
+                    />
+                }
+                label={t("pages.settings.dev-mode-toggle")}
+            />
         </>
     );
 };

@@ -1,5 +1,7 @@
 import { Build } from "@mui/icons-material";
 import { IconButton, Menu, MenuItem } from "@mui/material";
+import { selectConfiguration } from "@src/features/configuration/configuration-slice";
+import { useAppSelector } from "@src/hooks/redux";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { showTranslations } from "translation-check";
@@ -8,7 +10,9 @@ const DevMenu: React.FC = () => {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const { t, i18n } = useTranslation();
 
-    if (!DB_DEVMODE) {
+    const configuration = useAppSelector(selectConfiguration);
+
+    if (!configuration.devMode) {
         return null;
     }
 

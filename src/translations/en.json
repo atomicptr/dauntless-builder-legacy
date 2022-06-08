@@ -70,6 +70,7 @@
             "title": "Create a new build"
         },
         "settings": {
+            "dev-mode-toggle": "Toggle Developer Mode",
             "language": "Language",
             "title": "Settings"
         }

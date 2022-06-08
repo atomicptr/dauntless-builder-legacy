@@ -1,3 +1,9 @@
+/* eslint-disable simple-import-sort/imports */
+// these two files have to be included first and in this exact order
+import "./i18n";
+import { store } from "./store";
+/* eslint-enable simple-import-sort/imports */
+
 import { ThemeProvider } from "@mui/material";
 import { Slide } from "@mui/material";
 import About from "@src/pages/about/About";
@@ -16,7 +22,6 @@ import MetaBuilds from "./pages/build/MetaBuilds";
 import NewBuild from "./pages/build/NewBuild";
 import Home from "./pages/home/Home";
 import Settings from "./pages/settings/Settings";
-import { store } from "./store";
 
 const DauntlessBuilderApp = () => {
     return (
