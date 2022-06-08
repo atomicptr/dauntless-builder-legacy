@@ -5,7 +5,7 @@ import configurationReducer from "./features/configuration/configuration-slice";
 import itemSelectFilterReducer from "./features/item-select-filter/item-select-filter-slice";
 
 const stateIdentifier = "state";
-const reducersNotToBePersisted: string[] = [];
+const reducersNotToBePersisted = ["itemSelectFilter"];
 
 const persistedState =
     stateIdentifier in localStorage ? JSON.parse(localStorage.getItem(stateIdentifier) as string) : {};

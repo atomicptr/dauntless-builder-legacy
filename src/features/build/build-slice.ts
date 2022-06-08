@@ -5,6 +5,7 @@ import { match } from "ts-pattern";
 
 interface BuildState {
     build: string;
+    lastEditedBuild: string | null;
 }
 
 interface BuildUpdate {
@@ -13,6 +14,7 @@ interface BuildUpdate {
 
 const initialState: BuildState = {
     build: BuildModel.empty().serialize(),
+    lastEditedBuild: null,
 };
 
 export const buildSlice = createSlice({
@@ -59,6 +61,7 @@ export const buildSlice = createSlice({
             }
             console.log("updated build:", build);
             state.build = build.serialize();
+            state.lastEditedBuild = state.build;
         },
     },
 });
@@ -66,5 +69,8 @@ export const buildSlice = createSlice({
 export const { clearBuild, setBuildId, updateBuild } = buildSlice.actions;
 
 export const selectBuild = (state: RootState): BuildModel => BuildModel.deserialize(state.build.build);
+
+export const selectLastEditedBuild = (state: RootState) =>
+    state.build.lastEditedBuild !== null ? BuildModel.deserialize(state.build.lastEditedBuild) : null;
 
 export default buildSlice.reducer;

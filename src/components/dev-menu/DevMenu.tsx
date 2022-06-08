@@ -25,7 +25,6 @@ const DevMenu: React.FC = () => {
             <IconButton
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
-                aria-label="account of current user"
                 color="inherit"
                 onClick={handleMenu}
                 size="large"

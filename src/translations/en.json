@@ -10,6 +10,13 @@
         }
     },
     "components": {
+        "build-menu": {
+            "copied-to-clipboard": "Copied to Clipboard",
+            "copy-to-clipboard": "Copy build to clipboard",
+            "favorite-build": "Add this build to your favorites",
+            "open-last-edited-build": "Open your last edited build",
+            "unfavorite-build": "Remove this build from your favorites"
+        },
         "item-picker": {
             "lantern-hold-line": "<b>$t(terms.hold)</b>: {{hold}}",
             "omnicell-passive-line": "<b>$t(terms.passive)</b>: {{passive}}"

@@ -1,5 +1,7 @@
 import { ThemeProvider } from "@mui/material";
+import { Slide } from "@mui/material";
 import About from "@src/pages/about/About";
+import { SnackbarProvider } from "notistack";
 import { StrictMode } from "react";
 import { createRoot, Root } from "react-dom/client";
 import { Provider } from "react-redux";
@@ -21,54 +23,63 @@ const DauntlessBuilderApp = () => {
         <ThemeProvider theme={theme}>
             <BrowserRouter>
                 <Provider store={store}>
-                    <Layout>
-                        <Routes>
-                            <Route path="/">
-                                <Route
-                                    element={<Home />}
-                                    index
-                                />
-
-                                <Route path="b">
+                    <SnackbarProvider
+                        TransitionComponent={Slide}
+                        anchorOrigin={{
+                            horizontal: "right",
+                            vertical: "bottom",
+                        }}
+                        maxSnack={3}
+                    >
+                        <Layout>
+                            <Routes>
+                                <Route path="/">
                                     <Route
-                                        element={<Navigate to={"/b/new"} />}
+                                        element={<Home />}
                                         index
                                     />
+
+                                    <Route path="b">
+                                        <Route
+                                            element={<Navigate to={"/b/new"} />}
+                                            index
+                                        />
+                                        <Route
+                                            element={<NewBuild />}
+                                            path="new"
+                                        />
+                                        <Route
+                                            element={<BuildSearch />}
+                                            path="search"
+                                        />
+                                        <Route
+                                            element={<MetaBuilds />}
+                                            path="meta"
+                                        />
+                                        <Route
+                                            element={<Build />}
+                                            path=":buildId"
+                                        />
+                                    </Route>
+
                                     <Route
-                                        element={<NewBuild />}
-                                        path="new"
+                                        element={<About />}
+                                        path="/about"
                                     />
+
                                     <Route
-                                        element={<BuildSearch />}
-                                        path="search"
+                                        element={<Settings />}
+                                        path="/settings"
                                     />
+
                                     <Route
-                                        element={<MetaBuilds />}
-                                        path="meta"
-                                    />
-                                    <Route
-                                        element={<Build />}
-                                        path=":buildId"
+                                        element={<NotFound />}
+                                        path="*"
                                     />
                                 </Route>
-
-                                <Route
-                                    element={<About />}
-                                    path="/about"
-                                />
-
-                                <Route
-                                    element={<Settings />}
-                                    path="/settings"
-                                />
-
-                                <Route
-                                    element={<NotFound />}
-                                    path="*"
-                                />
-                            </Route>
-                        </Routes>
-                    </Layout>
+                            </Routes>
+                        </Layout>
+                    </SnackbarProvider>
                 </Provider>
             </BrowserRouter>
         </ThemeProvider>

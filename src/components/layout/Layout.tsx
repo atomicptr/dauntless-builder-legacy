@@ -28,6 +28,7 @@ import {
     Typography,
     useTheme,
 } from "@mui/material";
+import BuildMenu from "@src/components/build-menu/BuildMenu";
 import DevMenu from "@src/components/dev-menu/DevMenu";
 import { drawerWidth } from "@src/components/theme/theme";
 import dauntlessBuilderData from "@src/data/Data";
@@ -109,6 +110,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
                     <Box sx={{ flexGrow: 1 }}>{/* Spacer */}</Box>
 
+                    <BuildMenu />
                     <DevMenu />
                 </Toolbar>
             </AppBar>

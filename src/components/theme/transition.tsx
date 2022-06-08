@@ -16,5 +16,3 @@ export const Transition = React.forwardRef(function Transition(
         />
     );
 });
-
-export const dialogWidth = "md";
