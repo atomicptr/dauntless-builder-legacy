@@ -71,7 +71,9 @@
         },
         "settings": {
             "dev-mode-toggle": "Toggle Developer Mode",
+            "general": "General",
             "language": "Language",
+            "misc": "Misc",
             "title": "Settings"
         }
     },
