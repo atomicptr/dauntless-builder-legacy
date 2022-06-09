@@ -93,7 +93,9 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                 )
                 .filter(item => (perks.length > 0 ? perks.some(perk => filterByPerk(perk)(item, itemType)) : true))
                 .filter(item =>
-                    cellSlots.length > 0 ? cellSlots.some(perk => filterByCellSlot(perk)(item, itemType)) : true,
+                    cellSlots.length > 0
+                        ? cellSlots.some(cellSlot => filterByCellSlot(cellSlot)(item, itemType))
+                        : true,
                 );
         }
         if (isArmourType(itemType)) {
@@ -104,7 +106,9 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                 )
                 .filter(item => (perks.length > 0 ? perks.some(perk => filterByPerk(perk)(item, itemType)) : true))
                 .filter(item =>
-                    cellSlots.length > 0 ? cellSlots.some(perk => filterByCellSlot(perk)(item, itemType)) : true,
+                    cellSlots.length > 0
+                        ? cellSlots.some(cellSlot => filterByCellSlot(cellSlot)(item, itemType))
+                        : true,
                 );
         }
         return preFilteredItems;
