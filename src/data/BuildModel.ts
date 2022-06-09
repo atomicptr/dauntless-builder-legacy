@@ -11,15 +11,17 @@ import {Cell} from "./Cell";
 import {match} from "ts-pattern";
 import {Part, PartType} from "./Part";
 import {ArmourItemType, ItemType} from "@src/data/ItemType";
+import BuildMenu from "@src/components/BuildMenu";
+import {number} from "ts-pattern/dist/patterns";
 
 const hashids = new Hashids("spicy");
 
 const CURRENT_BUILD_ID = 6;
 
-export const BuildFlags = {
-    INVALID_BUILD: 0b0010,
-    UPGRADED_BUILD: 0b0001,
-};
+export enum BuildFlags {
+    UpgradedBuild = 0b0001,
+    InvalidBuild = 0b0010,
+}
 
 enum BuildFields {
     Version,
@@ -113,6 +115,21 @@ export class BuildModel {
             mod: findPartInBuild(weapon.type, PartType.Mod, this),
             special: findPartInBuild(weapon.type, PartType.Special, this),
         };
+    }
+
+    public hasFlag(flag: BuildFlags): boolean {
+        return (this.flags & flag) >= 1;
+    }
+
+    public addFlag(flag: BuildFlags) {
+        this.flags |= flag;
+    }
+
+    public removeFlag(flag: BuildFlags) {
+        if (!this.hasFlag(flag)) {
+            return;
+        }
+        this.flags ^= flag;
     }
 
     public serialize() {
