@@ -1,5 +1,6 @@
 import { Grid, ListSubheader } from "@mui/material";
 import BondWeaponPicker from "@src/components/BondWeaponPicker";
+import BuildWarning from "@src/components/BuildWarning";
 import CellPicker from "@src/components/CellPicker";
 import CellSelectDialog from "@src/components/CellSelectDialog";
 import CellSlotFilter from "@src/components/CellSlotFilter";
@@ -182,6 +183,8 @@ const Build: React.FC = () => {
                 hidden
                 title={t("pages.build.title", { ...build })}
             />
+
+            <BuildWarning />
 
             <Grid
                 container

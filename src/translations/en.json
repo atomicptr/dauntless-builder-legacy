@@ -17,6 +17,10 @@
             "open-last-edited-build": "Open your last edited build",
             "unfavorite-build": "Remove this build from your favorites"
         },
+        "build-warning": {
+            "invalid-build": "Due to changes in Dauntless this build is no longer compatible with the current version of Dauntless Builder, one or more parts have been removed in order to display it.",
+            "upgraded-build": "This build was made for an earlier version of Dauntless and might be outdated."
+        },
         "item-picker": {
             "lantern-hold-line": "<b>$t(terms.hold)</b>: {{hold}}",
             "omnicell-passive-line": "<b>$t(terms.passive)</b>: {{passive}}"
