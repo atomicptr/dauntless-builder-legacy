@@ -1,5 +1,6 @@
 import Hashids from "hashids";
 import {BuildFlags, BuildModel, CURRENT_BUILD_ID, HASHIDS_SALT} from "@src/data/BuildModel";
+import {validateBuild} from "@src/data/validate-build";
 
 export const convertVersion2To3 = (version2BuildId: string): string => {
     const hashids = new Hashids(HASHIDS_SALT);
@@ -193,13 +194,11 @@ export const upgradeBuild = (buildId: string): string => {
         buildWasUpgraded = true;
     }
 
+    const build = BuildModel.deserialize(buildId);
+
     if (buildWasUpgraded) {
-        const build = BuildModel.deserialize(buildId);
         build.addFlag(BuildFlags.UpgradedBuild);
-        return build.serialize();
     }
 
-    // TODO: validate / remove items
-
-    return buildId;
+    return build.serialize();
 };

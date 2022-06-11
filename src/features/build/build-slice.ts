@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { BuildModel } from "@src/data/BuildModel";
+import { BuildModel, CURRENT_BUILD_ID } from "@src/data/BuildModel";
+import { validateBuild } from "@src/data/validate-build";
 import { RootState } from "@src/store";
 import { match } from "ts-pattern";
 
@@ -28,7 +29,12 @@ export const buildSlice = createSlice({
             state.build = action.payload;
         },
         updateBuild: (state, action: PayloadAction<BuildUpdate>) => {
-            const build = BuildModel.deserialize(state.build);
+            let build = BuildModel.deserialize(state.build);
+
+            // set build id to current and reset flags when editing
+            build.version = CURRENT_BUILD_ID;
+            build.flags = 0;
+
             for (const key of Object.keys(action.payload)) {
                 const value = action.payload[key];
                 if (key in build) {
@@ -59,6 +65,7 @@ export const buildSlice = createSlice({
                         .run();
                 }
             }
+            build = validateBuild(build);
             console.log("updated build:", build);
             state.build = build.serialize();
             state.lastEditedBuild = state.build;

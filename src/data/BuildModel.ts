@@ -12,6 +12,7 @@ import {match} from "ts-pattern";
 import {Part, PartType} from "./Part";
 import {ArmourItemType, ItemType} from "@src/data/ItemType";
 import {upgradeBuild} from "@src/data/build-updates";
+import {validateBuild} from "@src/data/validate-build";
 
 export const HASHIDS_SALT = "spicy";
 export const CURRENT_BUILD_ID = 6;
@@ -227,7 +228,9 @@ export class BuildModel {
         }
 
         buildId = upgradeBuild(buildId);
-        return BuildModel.deserialize(buildId);
+        let build = BuildModel.deserialize(buildId);
+
+        return validateBuild(build, true);
     }
 
     public static empty(): BuildModel {
