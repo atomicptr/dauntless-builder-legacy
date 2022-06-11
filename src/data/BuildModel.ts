@@ -193,7 +193,7 @@ export class BuildModel {
             const weapon = findWeaponByName(build.weaponName) as Weapon;
             const weaponPart = partTypeByWeaponType(weapon.type);
 
-            build.weaponSurged = data[BuildFields.WeaponSurged] === 1;
+            build.weaponSurged = data[BuildFields.WeaponSurged] >= 1;
             build.weaponPart1 = weaponPart ? nameById(weaponPart, data[BuildFields.WeaponPart1]) : null;
             build.weaponPart2 = weaponPart ? nameById(weaponPart, data[BuildFields.WeaponPart2]) : null;
             build.weaponPart3 = weaponPart ? nameById(weaponPart, data[BuildFields.WeaponPart3]) : null;
@@ -204,16 +204,16 @@ export class BuildModel {
         }
 
         build.torsoName = nameById(NamesMapType.Armour, data[BuildFields.TorsoName]);
-        build.torsoSurged = data[BuildFields.TorsoSurged] === 1;
+        build.torsoSurged = data[BuildFields.TorsoSurged] >= 1;
         build.torsoCell = nameById(NamesMapType.Cell, data[BuildFields.TorsoCell]);
         build.armsName = nameById(NamesMapType.Armour, data[BuildFields.ArmsName]);
-        build.armsSurged = data[BuildFields.ArmsSurged] === 1;
+        build.armsSurged = data[BuildFields.ArmsSurged] >= 1;
         build.armsCell = nameById(NamesMapType.Cell, data[BuildFields.ArmsCell]);
         build.legsName = nameById(NamesMapType.Armour, data[BuildFields.LegsName]);
-        build.legsSurged = data[BuildFields.LegsSurged] === 1;
+        build.legsSurged = data[BuildFields.LegsSurged] >= 1;
         build.legsCell = nameById(NamesMapType.Cell, data[BuildFields.LegsCell]);
         build.headName = nameById(NamesMapType.Armour, data[BuildFields.HeadName]);
-        build.headSurged = data[BuildFields.HeadSurged] === 1;
+        build.headSurged = data[BuildFields.HeadSurged] >= 1;
         build.headCell = nameById(NamesMapType.Cell, data[BuildFields.HeadCell]);
         build.lantern = nameById(NamesMapType.Lantern, data[BuildFields.Lantern]);
         build.lanternCell = nameById(NamesMapType.Cell, data[BuildFields.LanternCell]);
