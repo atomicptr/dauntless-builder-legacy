@@ -4,6 +4,7 @@ import { findCellByVariantName } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
 import { ItemRarity } from "@src/data/ItemRarity";
 import { ItemType } from "@src/data/ItemType";
+import useIsMobile from "@src/hooks/is-mobile";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -21,6 +22,7 @@ const imageSize = itemPickerDefaultImageSize;
 const CellPicker: React.FC<CellPickerProps> = ({ variant, index, itemType, cellType, onClicked }) => {
     const theme = useTheme();
     const { t } = useTranslation();
+    const isMobile = useIsMobile();
 
     const cell = variant !== null ? findCellByVariantName(variant) : null;
 
@@ -39,8 +41,8 @@ const CellPicker: React.FC<CellPickerProps> = ({ variant, index, itemType, cellT
         <Card
             sx={{
                 mb: `${theme.spacing(1)} !important`,
-                minWidth: imageSize * 2.5,
                 userSelect: "none",
+                width: isMobile ? undefined : imageSize * 4,
             }}
         >
             <CardActionArea

@@ -11,12 +11,12 @@ import {Cell} from "./Cell";
 import {match} from "ts-pattern";
 import {Part, PartType} from "./Part";
 import {ArmourItemType, ItemType} from "@src/data/ItemType";
-import BuildMenu from "@src/components/BuildMenu";
-import {number} from "ts-pattern/dist/patterns";
+import {upgradeBuild} from "@src/data/build-updates";
 
-const hashids = new Hashids("spicy");
+export const HASHIDS_SALT = "spicy";
+export const CURRENT_BUILD_ID = 6;
 
-const CURRENT_BUILD_ID = 6;
+const hashids = new Hashids(HASHIDS_SALT);
 
 export enum BuildFlags {
     UpgradedBuild = 0b0001,
@@ -222,10 +222,12 @@ export class BuildModel {
     }
 
     public static tryDeserialize(buildId: string|null): BuildModel {
-        if (buildId !== null && BuildModel.isValid(buildId)) {
-            return BuildModel.deserialize(buildId);
+        if (buildId === null || !BuildModel.isValid(buildId)) {
+            return BuildModel.empty();
         }
-        return BuildModel.empty();
+
+        buildId = upgradeBuild(buildId);
+        return BuildModel.deserialize(buildId);
     }
 
     public static empty(): BuildModel {
@@ -238,7 +240,7 @@ export class BuildModel {
         return match(data[BuildFields.Version])
             .with(1, () => false) // v1 is invalid by definition
             .with(2, () => data.length === 31)
-            .with(3, () => data.length === 25)
+            .with(3, () => data.length >= 25 && data.length <= 26)
             .with(4, () => data.length === 26) // Patch 1.7.0
             .with(5, () => data.length === 24) // Patch 1.7.3
             .with(6, () => data.length === 25)
