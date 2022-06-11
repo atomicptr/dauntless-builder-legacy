@@ -4,7 +4,6 @@ import {markBuildInvalid} from "@src/data/validate-build";
 
 export const validateDoCellSlotsFitInTheirSlots  = (build: BuildModel, markBuildInvalidOnFailure: boolean): BuildModel => {
     const isCellSlotValid = (cellSlot: CellType|null, variantName: string|null): boolean => {
-        console.log("Step 1", cellSlot, variantName);
         if (cellSlot === null) {
             return variantName === null;
         }
@@ -14,7 +13,6 @@ export const validateDoCellSlotsFitInTheirSlots  = (build: BuildModel, markBuild
         }
 
         const cell = findCellByVariantName(variantName);
-        console.log("Step 2", cell, "Slot is Prismatic?", cell?.slot === CellType.Prismatic, "Cell slot fits?", cell?.slot === cellSlot);
         return cellSlot=== CellType.Prismatic || cell?.slot === cellSlot;
     }
 

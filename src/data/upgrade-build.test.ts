@@ -1,4 +1,4 @@
-import {convertVersion3To4, upgradeBuild} from "@src/data/build-updates";
+import {convertVersion3To4, upgradeBuild} from "@src/data/upgrade-build";
 import Hashids from "hashids";
 import {BuildModel, CURRENT_BUILD_ID, HASHIDS_SALT} from "@src/data/BuildModel";
 

@@ -11,7 +11,7 @@ import {Cell} from "./Cell";
 import {match} from "ts-pattern";
 import {Part, PartType} from "./Part";
 import {ArmourItemType, ItemType} from "@src/data/ItemType";
-import {upgradeBuild} from "@src/data/build-updates";
+import {upgradeBuild} from "@src/data/upgrade-build";
 import {validateBuild} from "@src/data/validate-build";
 
 export const HASHIDS_SALT = "spicy";
@@ -244,7 +244,7 @@ export class BuildModel {
             .with(1, () => false) // v1 is invalid by definition
             .with(2, () => data.length === 31)
             .with(3, () => data.length >= 25 && data.length <= 26)
-            .with(4, () => data.length === 26) // Patch 1.7.0
+            .with(4, () => data.length === 26 || data.length === 24) // Patch 1.7.0
             .with(5, () => data.length === 24) // Patch 1.7.3
             .with(6, () => data.length === 25)
             .otherwise(() => false);
