@@ -24,6 +24,7 @@
         "active": "アクティブ",
         "arms-armour": "ガントレット",
         "cell": "セル",
+        "cell-slot": "セルスロット",
         "cell-type": {
             "Alacrity": "敏速セル",
             "Brutality": "残忍セル",
@@ -33,6 +34,7 @@
             "Prismatic": "プリズムセル"
         },
         "cells": "セル",
+        "elemental-type": "属性",
         "elemental-types": {
             "Blaze": "炎属性",
             "Frost": "氷属性",
@@ -55,8 +57,8 @@
         "passive": "パッシブ",
         "perk": "パーク",
         "perks": "パーク",
-        "power": "攻撃スコア",
-        "resistance": "耐性スコア",
+        "power": "攻撃力",
+        "resistance": "防御力",
         "torso-armour": "胴防具",
         "weapon": "武器",
         "weapon-types": {
