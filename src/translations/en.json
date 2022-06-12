@@ -11,10 +11,12 @@
     },
     "components": {
         "build-menu": {
+            "added-build-to-favorites": "Added build \"{{name}}\" to favorites.",
             "copied-to-clipboard": "Copied to Clipboard",
             "copy-to-clipboard": "Copy build to clipboard",
             "favorite-build": "Add this build to your favorites",
             "open-last-edited-build": "Open your last edited build",
+            "remove-build-from-favorites": "Removed build \"{{name}}\" from favorites.",
             "unfavorite-build": "Remove this build from your favorites"
         },
         "build-warning": {

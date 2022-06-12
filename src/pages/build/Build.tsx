@@ -28,9 +28,8 @@ import { selectBuild, setBuildId, updateBuild } from "@src/features/build/build-
 import { resetFilter, setWeaponTypeFilter } from "@src/features/item-select-filter/item-select-filter-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
-import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
+import { defaultBuildName } from "@src/utils/default-build-name";
 import React, { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
 import { match } from "ts-pattern";
 
@@ -47,7 +46,6 @@ const Build: React.FC = () => {
     const { buildId } = useParams();
     const navigate = useNavigate();
     const isMobile = useIsMobile();
-    const { t } = useTranslation();
 
     const dispatch = useAppDispatch();
     const build = useAppSelector(selectBuild);
@@ -57,8 +55,6 @@ const Build: React.FC = () => {
     const [pickerSelection, setPickerSelection] = useState<PickerSelection>({ filters: [], itemType: ItemType.Weapon });
 
     useEffect(() => {
-        // TODO: update to new version if necessary
-        // TODO: update url path
         const build = BuildModel.tryDeserialize(buildId ?? null);
         dispatch(setBuildId(build.serialize()));
     }, [buildId, dispatch]);
@@ -177,11 +173,13 @@ const Build: React.FC = () => {
                 />
             ));
 
+    const buildName = defaultBuildName(build);
+
     return (
         <>
             <PageTitle
                 hidden
-                title={t("pages.build.title", { ...build })}
+                title={buildName}
             />
 
             <BuildWarning />
@@ -196,18 +194,7 @@ const Build: React.FC = () => {
                     md={9}
                     sm={12}
                 >
-                    <ListSubheader sx={{ userSelect: "none" }}>
-                        {t("pages.build.title", {
-                            omnicell:
-                                build.data.omnicell !== null
-                                    ? t(itemTranslationIdentifier(ItemType.Omnicell, build.data.omnicell.name, "name"))
-                                    : "",
-                            weaponName:
-                                build.data.weapon !== null
-                                    ? t(itemTranslationIdentifier(ItemType.Weapon, build.data.weapon.name, "name"))
-                                    : "",
-                        })}
-                    </ListSubheader>
+                    <ListSubheader sx={{ userSelect: "none" }}>{buildName}</ListSubheader>
 
                     <ItemPicker
                         componentsBelow={() => <OmnicellCard item={build.data.omnicell} />}
