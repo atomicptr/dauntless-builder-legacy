@@ -46,6 +46,9 @@ interface ItemSelectDialogProps {
     onItemSelected: (item: ItemPickerItem, itemType: ItemType, isPowerSurged: boolean) => void;
     preDefinedFilters?: FilterFunc[];
     filterComponents?: (itemType: ItemType) => ReactNode;
+    disableUniqueEffectDisplay?: boolean;
+    disablePowerSurgeSelection?: boolean;
+    disableComponentsInside?: boolean;
 }
 
 export type FilterFunc = (item: ItemPickerItem, itemType: ItemType) => boolean;
@@ -58,6 +61,9 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
     onItemSelected,
     preDefinedFilters,
     filterComponents,
+    disableUniqueEffectDisplay,
+    disablePowerSurgeSelection,
+    disableComponentsInside,
 }) => {
     const { t } = useTranslation();
     const isMobile = useIsMobile();
@@ -65,14 +71,15 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
 
     const title = t("components.item-select-dialog.select-text", { name: t(itemTypeLocalizationIdentifier(itemType)) });
 
-    const hasCollapsableEffect = [ItemType.Weapon, ItemType.Head, ItemType.Omnicell].indexOf(itemType) > -1;
+    const hasCollapsableEffect =
+        [ItemType.Weapon, ItemType.Head, ItemType.Omnicell].indexOf(itemType) > -1 && !disableUniqueEffectDisplay;
     const canBePowerSurged =
         [ItemType.Weapon, ItemType.Head, ItemType.Torso, ItemType.Arms, ItemType.Legs].indexOf(itemType) > -1;
 
     const [searchValue, setSearchValue] = useState<string>("");
     const [powerSurged, setPowerSurged] = useState<boolean>(true);
     const [showFilters, setShowFilters] = useState<boolean>(!isMobile);
-    const [showUniqueEffects, setShowUniqueEffects] = useState<boolean>(!isMobile);
+    const [showUniqueEffects, setShowUniqueEffects] = useState<boolean>(!isMobile && !disableUniqueEffectDisplay);
 
     const filterAreaRef = useRef<HTMLElement>(null);
 
@@ -149,29 +156,34 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                         >
                             {title}
                         </Typography>
-                        <IconButton
-                            color="inherit"
-                            edge="start"
-                            onClick={() => setShowUniqueEffects(!showUniqueEffects)}
-                            sx={{ mr: 2 }}
-                            title={t("pages.build.toggle-unique-effects")}
-                        >
-                            {showUniqueEffects ? <UnfoldLess /> : <UnfoldMore />}
-                        </IconButton>
-                        <IconButton
-                            color="inherit"
-                            edge="start"
-                            onClick={() => setShowFilters(!showFilters)}
-                            sx={{ mr: 2 }}
-                            title={t("pages.build.toggle-filters")}
-                        >
-                            <Badge
-                                badgeContent={filterCount}
-                                color="primary"
+                        {hasCollapsableEffect ? (
+                            <IconButton
+                                color="inherit"
+                                edge="start"
+                                onClick={() => setShowUniqueEffects(!showUniqueEffects)}
+                                sx={{ mr: 2 }}
+                                title={t("pages.build.toggle-unique-effects")}
                             >
-                                {showFilters ? <FilterAltOff /> : <FilterAlt />}
-                            </Badge>
-                        </IconButton>
+                                {showUniqueEffects ? <UnfoldLess /> : <UnfoldMore />}
+                            </IconButton>
+                        ) : null}
+
+                        {filterComponents && filterComponents.length > 0 ? (
+                            <IconButton
+                                color="inherit"
+                                edge="start"
+                                onClick={() => setShowFilters(!showFilters)}
+                                sx={{ mr: 2 }}
+                                title={t("pages.build.toggle-filters")}
+                            >
+                                <Badge
+                                    badgeContent={filterCount}
+                                    color="primary"
+                                >
+                                    {showFilters ? <FilterAltOff /> : <FilterAlt />}
+                                </Badge>
+                            </IconButton>
+                        ) : null}
                         <IconButton
                             color="inherit"
                             edge="start"
@@ -259,43 +271,44 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                                             ) : null
                                         }
                                         componentsInside={() =>
-                                            itemType === ItemType.Weapon || isArmourType(itemType) ? (
-                                                <Typography
-                                                    color="text.secondary"
-                                                    component="div"
-                                                    variant="subtitle1"
-                                                >
-                                                    <Stack
-                                                        direction={isMobile ? "column" : "row"}
-                                                        spacing={isMobile ? 0 : 1}
+                                            (itemType === ItemType.Weapon || isArmourType(itemType)) &&
+                                            !disableComponentsInside ? (
+                                                    <Typography
+                                                        color="text.secondary"
+                                                        component="div"
+                                                        variant="subtitle1"
                                                     >
-                                                        <Box>
-                                                            <b>{`${t("terms.cells")}:`}</b>
-                                                        </Box>
-                                                        {(Array.isArray(
-                                                            (item as Weapon | Armour | Lantern | null)?.cells,
-                                                        )
-                                                            ? ((item as Weapon | Armour | Lantern | null)
-                                                                ?.cells as CellType[]) ?? []
-                                                            : [(item as Weapon | Armour | Lantern | null)?.cells]
-                                                        ).map((cellType, index) =>
-                                                            cellType ? (
-                                                                <Box
-                                                                    key={index}
-                                                                    sx={{ alignItems: "center", display: "flex" }}
-                                                                >
-                                                                    <img
-                                                                        src={`/assets/icons/perks/${cellType}.png`}
-                                                                        style={{ height: "16px", width: "16px" }}
-                                                                    />
+                                                        <Stack
+                                                            direction={isMobile ? "column" : "row"}
+                                                            spacing={isMobile ? 0 : 1}
+                                                        >
+                                                            <Box>
+                                                                <b>{`${t("terms.cells")}:`}</b>
+                                                            </Box>
+                                                            {(Array.isArray(
+                                                                (item as Weapon | Armour | Lantern | null)?.cells,
+                                                            )
+                                                                ? ((item as Weapon | Armour | Lantern | null)
+                                                                    ?.cells as CellType[]) ?? []
+                                                                : [(item as Weapon | Armour | Lantern | null)?.cells]
+                                                            ).map((cellType, index) =>
+                                                                cellType ? (
+                                                                    <Box
+                                                                        key={index}
+                                                                        sx={{ alignItems: "center", display: "flex" }}
+                                                                    >
+                                                                        <img
+                                                                            src={`/assets/icons/perks/${cellType}.png`}
+                                                                            style={{ height: "16px", width: "16px" }}
+                                                                        />
                                                                     &nbsp;
-                                                                    {t(`terms.cell-type.${cellType}`)}
-                                                                </Box>
-                                                            ) : null,
-                                                        )}
-                                                    </Stack>
-                                                </Typography>
-                                            ) : null
+                                                                        {t(`terms.cell-type.${cellType}`)}
+                                                                    </Box>
+                                                                ) : null,
+                                                            )}
+                                                        </Stack>
+                                                    </Typography>
+                                                ) : null
                                         }
                                         isPowerSurged={canBePowerSurged && powerSurged}
                                         item={item}
@@ -324,18 +337,22 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                                 {showUniqueEffects ? <UnfoldLess /> : <UnfoldMore />}
                             </IconButton>
                         ) : null}
-                        <IconButton
-                            color="primary"
-                            edge="start"
-                            onClick={() => setShowFilters(!showFilters)}
-                            title={t("pages.build.toggle-filters")}
-                        >
-                            <Badge badgeContent={filterCount}>{showFilters ? <FilterAltOff /> : <FilterAlt />}</Badge>
-                        </IconButton>
+                        {filterComponents && filterComponents.length > 0 ? (
+                            <IconButton
+                                color="primary"
+                                edge="start"
+                                onClick={() => setShowFilters(!showFilters)}
+                                title={t("pages.build.toggle-filters")}
+                            >
+                                <Badge badgeContent={filterCount}>
+                                    {showFilters ? <FilterAltOff /> : <FilterAlt />}
+                                </Badge>
+                            </IconButton>
+                        ) : null}
                     </>
                 ) : null}
 
-                {canBePowerSurged ? (
+                {canBePowerSurged && !disablePowerSurgeSelection ? (
                     <Button
                         onClick={() => setPowerSurged(!powerSurged)}
                         startIcon={powerSurged ? <StarOutline /> : <Star />}
@@ -405,3 +422,8 @@ export const filterByPerk =
     (perk: string) =>
         (item: ItemPickerItem, _itemType: ItemType): boolean =>
             ((item as Weapon | Armour).perks ?? []).some(p => p.name === perk);
+
+export const filterRemoveBondWeapons =
+    () =>
+        (item: ItemPickerItem, _itemType: ItemType): boolean =>
+            !(item as Weapon).bond;

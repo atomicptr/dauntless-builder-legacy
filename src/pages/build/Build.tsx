@@ -1,12 +1,19 @@
-import { Grid, ListSubheader } from "@mui/material";
+import { Grid, ListSubheader, Typography } from "@mui/material";
 import BondWeaponPicker from "@src/components/BondWeaponPicker";
 import BuildWarning from "@src/components/BuildWarning";
 import CellPicker from "@src/components/CellPicker";
 import CellSelectDialog from "@src/components/CellSelectDialog";
 import CellSlotFilter from "@src/components/CellSlotFilter";
 import ElementalTypeFilter from "@src/components/ElementalTypeFilter";
+import GenericItemSelectDialog, { GenericItem } from "@src/components/GenericItemSelectDialog";
 import ItemPicker, { ItemPickerItem } from "@src/components/ItemPicker";
-import ItemSelectDialog, { filterByArmourType, FilterFunc } from "@src/components/ItemSelectDialog";
+import ItemSelectDialog, {
+    filterByArmourType,
+    filterByElement,
+    filterByWeaponType,
+    FilterFunc,
+    filterRemoveBondWeapons,
+} from "@src/components/ItemSelectDialog";
 import OmnicellCard from "@src/components/OmnicellCard";
 import PageTitle from "@src/components/PageTitle";
 import PartPicker from "@src/components/PartPicker";
@@ -16,20 +23,22 @@ import PerkListMobile from "@src/components/PerkListMobile";
 import UniqueEffectCard from "@src/components/UniqueEffectCard";
 import WeaponTypeFilter from "@src/components/WeaponTypeFilter";
 import { Armour, ArmourType } from "@src/data/Armour";
-import { BuildModel } from "@src/data/BuildModel";
+import { BuildModel, findPartSlotName } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
 import { isExotic } from "@src/data/ItemRarity";
 import { isArmourType, ItemType } from "@src/data/ItemType";
 import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
-import { PartType } from "@src/data/Part";
-import { Weapon, WeaponType } from "@src/data/Weapon";
+import { Part, partBuildIdentifier, PartType, partTypeData } from "@src/data/Part";
+import { Weapon, weaponBuildIdentifier, WeaponType } from "@src/data/Weapon";
 import { selectBuild, setBuildId, updateBuild } from "@src/features/build/build-slice";
 import { resetFilter, setWeaponTypeFilter } from "@src/features/item-select-filter/item-select-filter-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import { defaultBuildName } from "@src/utils/default-build-name";
+import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
 import { match } from "ts-pattern";
 
@@ -40,10 +49,15 @@ interface PickerSelection {
         index: number;
         type: CellType;
     };
+    part?: {
+        partType: PartType;
+        weaponType: WeaponType;
+    };
 }
 
 const Build: React.FC = () => {
     const { buildId } = useParams();
+    const { t } = useTranslation();
     const navigate = useNavigate();
     const isMobile = useIsMobile();
 
@@ -52,6 +66,8 @@ const Build: React.FC = () => {
 
     const [itemDialogOpen, setItemDialogOpen] = useState<boolean>(false);
     const [cellDialogOpen, setCellDialogOpen] = useState<boolean>(false);
+    const [partDialogOpen, setPartDialogOpen] = useState<boolean>(false);
+    const [bondDialogOpen, setBondDialogOpen] = useState<boolean>(false);
     const [pickerSelection, setPickerSelection] = useState<PickerSelection>({ filters: [], itemType: ItemType.Weapon });
 
     useEffect(() => {
@@ -129,11 +145,55 @@ const Build: React.FC = () => {
     };
 
     const onPartClicked = (partType: PartType) => {
-        console.log("clicked", partType);
+        if (!build.data.weapon) {
+            return;
+        }
+
+        setPickerSelection({
+            filters: [],
+            itemType: ItemType.Part,
+            part: {
+                partType,
+                weaponType: build.data.weapon.type,
+            },
+        });
+        setPartDialogOpen(true);
+    };
+
+    const onPartItemSelected = (item: GenericItem | null) => {
+        if (!pickerSelection.part) {
+            return;
+        }
+
+        const slotName = findPartSlotName(pickerSelection.part.weaponType, pickerSelection.part.partType);
+
+        if (!slotName) {
+            return;
+        }
+
+        dispatch(updateBuild({ [slotName]: item?.name ?? null }));
+        setPartDialogOpen(false);
     };
 
     const onBondWeaponClicked = () => {
-        console.log("clicked bond weapon");
+        if (!build.data.weapon || !build.data.weapon.bond?.elemental) {
+            return;
+        }
+
+        setPickerSelection({
+            filters: [
+                filterByWeaponType(build.data.weapon.type),
+                filterByElement(build.data.weapon.bond.elemental),
+                filterRemoveBondWeapons(),
+            ],
+            itemType: ItemType.Weapon,
+        });
+        setBondDialogOpen(true);
+    };
+
+    const onBondWeaponSelected = (item: GenericItem | null) => {
+        dispatch(updateBuild({ bondWeapon: item?.name ?? null }));
+        setBondDialogOpen(false);
     };
 
     const renderCellSlots = (item: ItemPickerItem, type: ItemType) =>
@@ -344,6 +404,63 @@ const Build: React.FC = () => {
                 itemType={pickerSelection.itemType}
                 onCellSelected={onCellPickerItemSelected}
                 open={cellDialogOpen}
+            />
+
+            {build.data.weapon && pickerSelection.part ? (
+                <GenericItemSelectDialog
+                    componentsInside={(item, itemType) => {
+                        if (!build.data.weapon || !pickerSelection.part) {
+                            return null;
+                        }
+
+                        const weaponIdent = weaponBuildIdentifier(build.data.weapon.type);
+                        const partIdent = partBuildIdentifier(pickerSelection.part.partType);
+
+                        return (
+                            <>
+                                <Typography
+                                    component="div"
+                                    sx={{ alignItems: "center", display: "flex", mb: 1 }}
+                                    variant="h5"
+                                >
+                                    {t(itemTranslationIdentifier(itemType, weaponIdent, partIdent, item.name, "name"))}
+                                </Typography>
+
+                                {(item as Part).part_effect.map((_, index) => (
+                                    <Typography key={index}>
+                                        {t(
+                                            itemTranslationIdentifier(
+                                                itemType,
+                                                weaponIdent,
+                                                partIdent,
+                                                item.name,
+                                                "part_effect",
+                                                index.toString(),
+                                            ),
+                                        )}
+                                    </Typography>
+                                ))}
+                            </>
+                        );
+                    }}
+                    handleClose={() => setPartDialogOpen(false)}
+                    itemType={ItemType.Part}
+                    items={Object.values(partTypeData(build.data.weapon.type, pickerSelection.part.partType))}
+                    onItemSelected={onPartItemSelected}
+                    open={partDialogOpen}
+                    title={t("pages.build.part-select-dialog-title")}
+                />
+            ) : null}
+
+            <ItemSelectDialog
+                disableComponentsInside
+                disablePowerSurgeSelection
+                disableUniqueEffectDisplay
+                handleClose={() => setBondDialogOpen(false)}
+                itemType={ItemType.Weapon}
+                onItemSelected={onBondWeaponSelected}
+                open={bondDialogOpen}
+                preDefinedFilters={pickerSelection.filters}
             />
         </>
     );

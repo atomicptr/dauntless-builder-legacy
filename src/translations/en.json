@@ -63,6 +63,7 @@
             "filter-by": "Filter by {{name}}",
             "no-perks": "No perks available.",
             "no-x-selected": "No <b>{{name}}</b> selected.",
+            "part-select-dialog-title": "Select weapon part",
             "power-surged-add": "Power Surge",
             "power-surged-remove": "Base Power",
             "title": "{{weaponName}} {{omnicell}} Build",
@@ -120,6 +121,7 @@
         "lantern": "Lantern",
         "legs-armour": "Legs Armour",
         "omnicell": "Omnicell",
+        "part": "Part",
         "parts": {
             "chamber": "Chamber",
             "grip": "Grip",

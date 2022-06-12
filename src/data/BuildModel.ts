@@ -294,11 +294,11 @@ export const findPartByName = (weaponType: WeaponType, partType: PartType, name:
         })
         .with(WeaponType.Axe, () => {
             if (partType === PartType.Mod) {
-                return dauntlessBuilderData.parts.aetherstrikers.mods[name];
+                return dauntlessBuilderData.parts.axe.mods[name];
             }
 
             if (partType === PartType.Special) {
-                return dauntlessBuilderData.parts.aetherstrikers.specials[name];
+                return dauntlessBuilderData.parts.axe.specials[name];
             }
 
             return null;
@@ -362,6 +362,16 @@ export const findPartByName = (weaponType: WeaponType, partType: PartType, name:
 
             return null;
         })
+        .run();
+}
+
+export const findPartSlotName = (weaponType: WeaponType, partType: PartType): "weaponPart1"|"weaponPart2"|"weaponPart3"|null => {
+    const isRepeater = weaponType === WeaponType.Repeater;
+    return match(partType)
+        .with(PartType.Mod, () => isRepeater ? "weaponPart3" : "weaponPart2")
+        .with(PartType.Special, () => isRepeater ? null : "weaponPart1")
+        .with(PartType.Chamber, () => isRepeater ? "weaponPart1" : null )
+        .with(PartType.Grip, () => isRepeater ? "weaponPart2" : null )
         .run();
 }
 

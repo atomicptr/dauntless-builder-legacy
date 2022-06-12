@@ -35,7 +35,9 @@ export interface Weapon {
     elemental: ElementalType|null;
     cells: CellType|CellType[]|null;
     power: PowerLevel;
-    bond: ElementalType | null;
+    bond?: {
+        elemental: ElementalType;
+    };
     perks?: PerkValue[];
     unique_effects?: UniqueEffect[];
     rarity?: ItemRarity;
@@ -52,8 +54,10 @@ export interface Weapon {
     }
 }
 
-export const weaponBuildIdentifier = (weaponType: WeaponType): string =>
-    match(weaponType)
+export type WeaponName = "aetherstrikers"|"axe"|"chainblades"|"hammer"|"repeater"|"sword"|"warpike";
+
+export const weaponBuildIdentifier = (weaponType: WeaponType): WeaponName =>
+    match<WeaponType, WeaponName>(weaponType)
         .with(WeaponType.AetherStrikers, () => "aetherstrikers")
         .with(WeaponType.Axe, () => "axe")
         .with(WeaponType.ChainBlades, () => "chainblades")

@@ -17,6 +17,27 @@ export type DauntlessBuilderDataIndex =
     "omnicells" |
     "misc";
 
+export interface RegularWeaponParts {
+    mods: {
+        [name: string]: Part;
+    };
+    specials: {
+        [name: string]: Part;
+    };
+}
+
+export interface RepeaterParts {
+    chambers: {
+        [name: string]: Part;
+    };
+    grips: {
+        [name: string]: Part;
+    };
+    mods: {
+        [name: string]: Part;
+    };
+}
+
 interface DauntlessBuilderData {
     armours: {
         [name: string]: Armour,
@@ -34,65 +55,13 @@ interface DauntlessBuilderData {
         [name: string]: Weapon;
     };
     parts: {
-        aetherstrikers: {
-            mods: {
-                [name: string]: Part;
-            };
-            specials: {
-                [name: string]: Part;
-            };
-        };
-        axe: {
-            mods: {
-                [name: string]: Part;
-            };
-            specials: {
-                [name: string]: Part;
-            };
-        };
-        chainblades: {
-            mods: {
-                [name: string]: Part;
-            };
-            specials: {
-                [name: string]: Part;
-            };
-        };
-        hammer: {
-            mods: {
-                [name: string]: Part;
-            };
-            specials: {
-                [name: string]: Part;
-            };
-        }
-        sword: {
-            mods: {
-                [name: string]: Part;
-            };
-            specials: {
-                [name: string]: Part;
-            };
-        }
-        repeater: {
-            chambers: {
-                [name: string]: Part;
-            };
-            grips: {
-                [name: string]: Part;
-            };
-            mods: {
-                [name: string]: Part;
-            };
-        }
-        warpike: {
-            mods: {
-                [name: string]: Part;
-            };
-            specials: {
-                [name: string]: Part;
-            };
-        }
+        aetherstrikers: RegularWeaponParts;
+        axe: RegularWeaponParts;
+        chainblades: RegularWeaponParts;
+        hammer: RegularWeaponParts;
+        sword: RegularWeaponParts;
+        repeater: RepeaterParts;
+        warpike: RegularWeaponParts;
     },
     omnicells: {
         [name: string]: Omnicell;
