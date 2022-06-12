@@ -32,7 +32,9 @@ import BuildMenu from "@src/components/BuildMenu";
 import DevMenu from "@src/components/DevMenu";
 import { drawerWidth } from "@src/components/theme";
 import dauntlessBuilderData from "@src/data/Data";
+import { selectFavorites } from "@src/features/favorites/favorites-slice";
 import useIsMobile from "@src/hooks/is-mobile";
+import { useAppSelector } from "@src/hooks/redux";
 import { currentLanguage, getNativeLanguageName, isBetaLanguage, Language } from "@src/i18n";
 import React, { ReactNode, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -56,10 +58,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     const handleDrawerOpen = () => setOpen(true);
     const handleDrawerClose = () => setOpen(false);
 
+    const favorites = useAppSelector(selectFavorites);
+
     const sidebarItems = [
         { icon: <Home />, link: "/", text: t("drawer.home") },
         { icon: <AddCircle />, link: "/b/new", text: t("drawer.new-build") },
-        { icon: <Bookmarks />, link: "/favorites", text: t("drawer.my-builds") },
+        { disabled: favorites.length === 0, icon: <Bookmarks />, link: "/favorites", text: t("drawer.my-builds") },
         { disabled: true, icon: <ManageSearch />, link: "/b/search", text: t("drawer.build-finder") },
         { disabled: true, icon: <Stars />, link: "/b/meta", text: t("drawer.meta-builds") },
         { icon: <Info />, link: "/about", text: t("drawer.about") },

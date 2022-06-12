@@ -1,5 +1,6 @@
 import { Bookmark, BookmarkBorder, ContentCopy, Undo } from "@mui/icons-material";
-import { IconButton } from "@mui/material";
+import { Fab, IconButton } from "@mui/material";
+import theme from "@src/components/theme";
 import { selectBuild, selectLastEditedBuild } from "@src/features/build/build-slice";
 import {
     addFavorite,
@@ -7,6 +8,7 @@ import {
     removeFavoriteByBuildId,
     selectFavorites,
 } from "@src/features/favorites/favorites-slice";
+import useIsMobile from "@src/hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import { defaultBuildName } from "@src/utils/default-build-name";
 import { useSnackbar } from "notistack";
@@ -19,6 +21,7 @@ const BuildMenu: React.FC = () => {
     const { t } = useTranslation();
     const location = useLocation();
     const { enqueueSnackbar } = useSnackbar();
+    const isMobile = useIsMobile();
 
     const build = useAppSelector(selectBuild);
     const lastEditedBuild = useAppSelector(selectLastEditedBuild);
@@ -28,13 +31,14 @@ const BuildMenu: React.FC = () => {
 
     const isUserEditedBuild = build.serialize() === lastEditedBuild?.serialize();
     const isFavorite = isBuildInFavorites(favorites, buildId);
+    const isCopyToClipboardEnabled = navigator.clipboard !== undefined;
 
     if (!location.pathname.startsWith("/b/")) {
         return null;
     }
 
-    const handleCopyToClipboardClicked = () => {
-        navigator.clipboard.writeText(window.location.toString());
+    const handleCopyToClipboardClicked = async () => {
+        await navigator.clipboard.writeText(window.location.toString());
         enqueueSnackbar(t("components.build-menu.copied-to-clipboard"));
     };
 
@@ -82,16 +86,34 @@ const BuildMenu: React.FC = () => {
             >
                 {isFavorite ? <Bookmark /> : <BookmarkBorder />}
             </IconButton>
-            <IconButton
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                color="inherit"
-                onClick={handleCopyToClipboardClicked}
-                size="large"
-                title={t("components.build-menu.copy-to-clipboard")}
-            >
-                <ContentCopy />
-            </IconButton>
+
+            {isCopyToClipboardEnabled ? (
+                isMobile ? (
+                    <Fab
+                        color="primary"
+                        onClick={handleCopyToClipboardClicked}
+                        sx={{
+                            bottom: theme.spacing(2),
+                            position: "fixed",
+                            right: theme.spacing(3),
+                        }}
+                        title={t("components.build-menu.copy-to-clipboard")}
+                    >
+                        <ContentCopy />
+                    </Fab>
+                ) : (
+                    <IconButton
+                        aria-controls="menu-appbar"
+                        aria-haspopup="true"
+                        color="inherit"
+                        onClick={handleCopyToClipboardClicked}
+                        size="large"
+                        title={t("components.build-menu.copy-to-clipboard")}
+                    >
+                        <ContentCopy />
+                    </IconButton>
+                )
+            ) : null}
         </>
     );
 };

@@ -24,8 +24,11 @@ import Home from "./pages/home/Home";
 import Settings from "./pages/settings/Settings";
 import BackgroundTasks from "@src/components/BackgroundTasks";
 import Favorites from "@src/pages/favorites/Favorites";
+import useIsMobile from "@src/hooks/is-mobile";
 
 const DauntlessBuilderApp = () => {
+    const isMobile = useIsMobile();
+
     return (
         <ThemeProvider theme={theme}>
             <BrowserRouter>
@@ -33,7 +36,7 @@ const DauntlessBuilderApp = () => {
                     <SnackbarProvider
                         TransitionComponent={Slide}
                         anchorOrigin={{
-                            horizontal: "right",
+                            horizontal: isMobile ? "center" : "right",
                             vertical: "bottom",
                         }}
                         maxSnack={3}
