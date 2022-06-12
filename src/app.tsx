@@ -22,6 +22,7 @@ import MetaBuilds from "./pages/build/MetaBuilds";
 import NewBuild from "./pages/build/NewBuild";
 import Home from "./pages/home/Home";
 import Settings from "./pages/settings/Settings";
+import BackgroundTasks from "@src/components/BackgroundTasks";
 
 const DauntlessBuilderApp = () => {
     return (
@@ -83,6 +84,7 @@ const DauntlessBuilderApp = () => {
                                     />
                                 </Route>
                             </Routes>
+                            <BackgroundTasks />
                         </Layout>
                     </SnackbarProvider>
                 </Provider>

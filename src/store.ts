@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import buildReducer from "./features/build/build-slice";
 import configurationReducer from "./features/configuration/configuration-slice";
+import favoritesReducer from "./features/favorites/favorites-slice";
 import itemSelectFilterReducer from "./features/item-select-filter/item-select-filter-slice";
 
 const stateIdentifier = "state";
@@ -15,6 +16,7 @@ export const store = configureStore({
     reducer: {
         build: buildReducer,
         configuration: configurationReducer,
+        favorites: favoritesReducer,
         itemSelectFilter: itemSelectFilterReducer,
     },
 });
