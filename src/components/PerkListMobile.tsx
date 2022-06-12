@@ -86,7 +86,7 @@ const PerkListMobile: React.FC = () => {
                             />
                         </Box>
                         <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", ml: 2 }}>
-                            <Stack direction="column">
+                            <Stack direction="column" spacing={0.5} sx={{pt: 1, pb: 1}}>
                                 <Typography
                                     component="div"
                                     variant="h5"
