@@ -41,7 +41,8 @@
         "settings": "$t(pages.settings.title)"
     },
     "misc": {
-        "dauntless-version": "Dauntless v{{version}}"
+        "dauntless-version": "Dauntless v{{version}}",
+        "patch-url": "https://playdauntless.com/patch-notes/{{version}}"
     },
     "pages": {
         "404": {

@@ -4,6 +4,9 @@
         "new-build": "Nouveau",
         "settings": "$t(pages.settings.title)"
     },
+    "misc": {
+        "patch-url": "https://playdauntless.com/fr/patch-notes/{{version}}"
+    },
     "pages": {
         "build": {
             "click-here-to-select": "Cliquez pour ajouter.",

@@ -5,9 +5,68 @@
         "new-build": "ビルドを作る",
         "settings": "$t(pages.settings.title)"
     },
+    "misc": {
+        "dauntless-version": "ドーントレスパッチ{{version}}",
+        "patch-url": "https://playdauntless.com/ja/patch-notes/{{version}}"
+    },
     "pages": {
+        "build": {
+            "power-surged-add": "パワー活性"
+        },
         "settings": {
+            "general": "一般",
+            "language": "言語",
+            "misc": "雑多",
             "title": "設定"
+        }
+    },
+    "terms": {
+        "active": "アクティブ",
+        "arms-armour": "ガントレット",
+        "cell": "セル",
+        "cell-type": {
+            "Alacrity": "敏速セル",
+            "Brutality": "残忍セル",
+            "Finesse": "技巧セル",
+            "Fortitude": "不屈セル",
+            "Insight": "洞察セル",
+            "Prismatic": "プリズムセル"
+        },
+        "cells": "セル",
+        "elemental-types": {
+            "Blaze": "炎属性",
+            "Frost": "氷属性",
+            "Radiant": "光属性",
+            "Shock": "雷属性",
+            "Terra": "地属性",
+            "Umbral": "闇属性"
+        },
+        "head-armour": "頭防具",
+        "hold": "長押し",
+        "lantern": "ランタン",
+        "legs-armour": "ブーツ",
+        "omnicell": "オムニセル",
+        "parts": {
+            "chamber": "ちゃんばー",
+            "grip": "グリップ",
+            "mod": "Mod",
+            "special": "スペシャル"
+        },
+        "passive": "パッシブ",
+        "perk": "パーク",
+        "perks": "パーク",
+        "power": "攻撃スコア",
+        "resistance": "耐性スコア",
+        "torso-armour": "胴防具",
+        "weapon": "武器",
+        "weapon-types": {
+            "AetherStrikers": "エーテルストライカー",
+            "Axe": "アックス",
+            "ChainBlades": "チェインブレード",
+            "Hammer": "ハンマー",
+            "Repeater": "リピーター",
+            "Sword": "ソード",
+            "WarPike": "パイク"
         }
     }
 }

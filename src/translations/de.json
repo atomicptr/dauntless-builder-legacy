@@ -7,6 +7,9 @@
         "new-build": "Neuer Build",
         "settings": "$t(pages.settings.title)"
     },
+    "misc": {
+        "patch-url": "https://playdauntless.com/de/patch-notes/{{version}}"
+    },
     "pages": {
         "home": {
             "title": "Startseite"

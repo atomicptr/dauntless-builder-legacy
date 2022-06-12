@@ -171,7 +171,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 >
                     <Button
                         component={"a"}
-                        href={`https://playdauntless.com/patch-notes/${dauntlessBuilderData.misc.patchnotes_version_string}/`}
+                        href={t("misc.patch-url", { version: dauntlessBuilderData.misc.patchnotes_version_string })}
                         target="_blank"
                     >
                         {t("misc.dauntless-version", { version: dauntlessBuilderData.misc.dauntless_version })}
