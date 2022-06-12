@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "@src/store";
 
-interface Favorite {
+export interface Favorite {
     name: string;
     buildId: string;
 }
@@ -42,6 +42,10 @@ export const favoritesSlice = createSlice({
             }
             state.favorites.splice(index, 1);
         },
+        updateFavorite: (state, action: PayloadAction<Favorite>) => {
+            const index = state.favorites.findIndex(fav => fav.buildId === action.payload.buildId);
+            state.favorites[index] = action.payload;
+        },
     },
 });
 
@@ -51,7 +55,8 @@ const arrayMove = <T>(array: T[], fromIndex: number, toIndex: number) => {
     array.splice(toIndex, 0, elem);
 };
 
-export const { addFavorite, removeFavoriteByBuildId, moveUpByBuildId, moveDownByBuildId } = favoritesSlice.actions;
+export const { addFavorite, updateFavorite, removeFavoriteByBuildId, moveUpByBuildId, moveDownByBuildId } =
+    favoritesSlice.actions;
 
 export const selectConfiguration = (state: RootState) => ({
     ...state.configuration,

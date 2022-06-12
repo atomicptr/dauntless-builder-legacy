@@ -23,6 +23,7 @@ import NewBuild from "./pages/build/NewBuild";
 import Home from "./pages/home/Home";
 import Settings from "./pages/settings/Settings";
 import BackgroundTasks from "@src/components/BackgroundTasks";
+import Favorites from "@src/pages/favorites/Favorites";
 
 const DauntlessBuilderApp = () => {
     return (
@@ -67,6 +68,11 @@ const DauntlessBuilderApp = () => {
                                             path=":buildId"
                                         />
                                     </Route>
+
+                                    <Route
+                                        element={<Favorites />}
+                                        path="/favorites"
+                                    />
 
                                     <Route
                                         element={<About />}

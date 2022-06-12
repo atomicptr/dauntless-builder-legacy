@@ -36,7 +36,7 @@
         "build-finder": "Build Finder",
         "home": "Home",
         "meta-builds": "Meta Builds",
-        "my-builds": "My Builds",
+        "my-builds": "$t(pages.favorites.title)",
         "new-build": "New Build",
         "settings": "$t(pages.settings.title)"
     },
@@ -69,6 +69,11 @@
             "toggle-filters": "Toggle display of filters",
             "toggle-unique-effects": "Toggle display of unique effects"
         },
+        "favorites": {
+            "build-name": "Build Name",
+            "edit-name": "Edit {{name}}",
+            "title": "My Builds"
+        },
         "home": {
             "title": "Home"
         },
@@ -88,6 +93,7 @@
         "active-ability": "Active Ability",
         "arms-armour": "Arms Armour",
         "bond-weapon": "Bond Weapon",
+        "cancel": "Cancel",
         "cell": "Cell",
         "cell-slot": "Cell Slot",
         "cell-type": {
@@ -124,6 +130,7 @@
         "perks": "Perks",
         "power": "Power",
         "resistance": "Resistance",
+        "save": "Save",
         "search": "Search",
         "torso-armour": "Torso Armour",
         "unique-effect": "Unique Effect",
