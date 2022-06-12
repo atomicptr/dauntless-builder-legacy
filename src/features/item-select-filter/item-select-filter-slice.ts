@@ -94,4 +94,13 @@ export const selectWeaponFilter = (state: RootState): WeaponFilter => state.item
 
 export const selectItemSelectFilter = (state: RootState): ItemSelectFilterState => state.itemSelectFilter;
 
+export const selectFilterCount = (state: RootState): number =>
+    Object.values(state.itemSelectFilter)
+        .map(itemTypeFilters =>
+            Object.values(itemTypeFilters)
+                .map(filters => (Array.isArray(filters) ? filters.length : filters !== null ? 1 : 0))
+                .reduce((prev, cur) => prev + cur, 0),
+        )
+        .reduce((prev, cur) => prev + cur, 0);
+
 export default buildSlice.reducer;

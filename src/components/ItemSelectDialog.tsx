@@ -1,6 +1,7 @@
 import { Close, FilterAlt, FilterAltOff, Search, Star, StarOutline, UnfoldLess, UnfoldMore } from "@mui/icons-material";
 import {
     AppBar,
+    Badge,
     Box,
     Button,
     Dialog,
@@ -28,7 +29,11 @@ import { isArmourType, ItemType, itemTypeData, itemTypeLocalizationIdentifier } 
 import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
 import { Weapon, WeaponType } from "@src/data/Weapon";
-import { GenericItemType, selectItemSelectFilter } from "@src/features/item-select-filter/item-select-filter-slice";
+import {
+    GenericItemType,
+    selectFilterCount,
+    selectItemSelectFilter,
+} from "@src/features/item-select-filter/item-select-filter-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppSelector } from "@src/hooks/redux";
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
@@ -72,6 +77,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
     const filterAreaRef = useRef<HTMLElement>(null);
 
     const itemFilter = useAppSelector(selectItemSelectFilter);
+    const filterCount = useAppSelector(selectFilterCount);
 
     const preFilteredItems = useMemo(
         () =>
@@ -159,7 +165,12 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                             sx={{ mr: 2 }}
                             title={t("pages.build.toggle-filters")}
                         >
-                            {showFilters ? <FilterAltOff /> : <FilterAlt />}
+                            <Badge
+                                badgeContent={filterCount}
+                                color="primary"
+                            >
+                                {showFilters ? <FilterAltOff /> : <FilterAlt />}
+                            </Badge>
                         </IconButton>
                         <IconButton
                             color="inherit"
@@ -175,27 +186,28 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
             )}
 
             <DialogContent sx={{ minHeight: "80vh", overflow: "hidden" }}>
+                <TextField
+                    InputProps={{
+                        startAdornment: (
+                            <InputAdornment position="start">
+                                <Search />
+                            </InputAdornment>
+                        ),
+                    }}
+                    fullWidth
+                    onChange={ev => setSearchValue(ev.target.value)}
+                    placeholder={t("terms.search")}
+                    sx={{ m: 1 }}
+                    value={searchValue}
+                    variant="standard"
+                />
+
                 {showFilters ? (
                     <Stack
                         ref={filterAreaRef}
                         spacing={2}
                         sx={{ m: 1 }}
                     >
-                        <TextField
-                            InputProps={{
-                                startAdornment: (
-                                    <InputAdornment position="start">
-                                        <Search />
-                                    </InputAdornment>
-                                ),
-                            }}
-                            fullWidth
-                            onChange={ev => setSearchValue(ev.target.value)}
-                            placeholder={t("terms.search")}
-                            value={searchValue}
-                            variant="standard"
-                        />
-
                         {filterComponents ? filterComponents(itemType) : null}
                     </Stack>
                 ) : null}
@@ -318,7 +330,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                             onClick={() => setShowFilters(!showFilters)}
                             title={t("pages.build.toggle-filters")}
                         >
-                            {showFilters ? <FilterAltOff /> : <FilterAlt />}
+                            <Badge badgeContent={filterCount}>{showFilters ? <FilterAltOff /> : <FilterAlt />}</Badge>
                         </IconButton>
                     </>
                 ) : null}
