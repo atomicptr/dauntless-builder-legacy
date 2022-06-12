@@ -6,6 +6,7 @@ import { ItemType } from "@src/data/ItemType";
 import { Perk, PerkValue } from "@src/data/Perks";
 import { selectBuild } from "@src/features/build/build-slice";
 import { useAppSelector } from "@src/hooks/redux";
+import i18n from "@src/i18n";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -28,27 +29,7 @@ const PerkList: React.FC = () => {
                         spacing={1}
                     >
                         <Box sx={{ whiteSpace: "nowrap" }}>{`+ ${id}`}</Box>
-                        <Box>
-                            {Array.isArray(perk.effects[id].description)
-                                ? (perk.effects[id].description as (string | null)[])
-                                    .map((description, index) =>
-                                        description !== null
-                                            ? t(
-                                                itemTranslationIdentifier(
-                                                    ItemType.Perk,
-                                                    perk.name,
-                                                    "effects",
-                                                    id,
-                                                    "description",
-                                                    index.toString(),
-                                                ),
-                                            )
-                                            : null,
-                                    )
-                                    .filter(description => !!description)
-                                    .join(", ")
-                                : t(itemTranslationIdentifier(ItemType.Perk, perk.name, "effects", id, "description"))}
-                        </Box>
+                        <Box>{perkEffectDescriptionById(perk, id)}</Box>
                     </Stack>
                 </Box>
             ))}
@@ -76,7 +57,10 @@ const PerkList: React.FC = () => {
                     followCursor
                     title={renderToolTip(perk.data, perk.count)}
                 >
-                    <ListItem key={perk.name}>
+                    <ListItem
+                        key={perk.name}
+                        sx={{ pb: 0.5, pt: 0.5 }}
+                    >
                         <ListItemIcon sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
                             <img
                                 src={`/assets/icons/perks/${perk.data.type}.png`}
@@ -85,6 +69,7 @@ const PerkList: React.FC = () => {
                         </ListItemIcon>
                         <ListItemText
                             primary={`+${perk.count} ${t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))}`}
+                            secondary={perkEffectDescriptionById(perk.data, Math.min(perk.count, 6).toString())}
                         />
                         {perk.count > 6 ? <Warning /> : null}
                     </ListItem>
@@ -147,6 +132,30 @@ export const perkData = (build: BuildModel) => {
     return Object.keys(perkMap)
         .map(name => ({ count: perkMap[name].count, data: perkMap[name].data, name }))
         .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+};
+
+export const perkEffectDescriptionById = (perk: Perk, id: string): string => {
+    if (!Array.isArray(perk.effects[id].description)) {
+        return i18n.t(itemTranslationIdentifier(ItemType.Perk, perk.name, "effects", id, "description"));
+    }
+
+    return (perk.effects[id].description as (string | null)[])
+        .map((description, index) =>
+            description !== null
+                ? i18n.t(
+                    itemTranslationIdentifier(
+                        ItemType.Perk,
+                        perk.name,
+                        "effects",
+                        id,
+                        "description",
+                        index.toString(),
+                    ),
+                )
+                : null,
+        )
+        .filter(description => !!description)
+        .join(", ");
 };
 
 export default PerkList;

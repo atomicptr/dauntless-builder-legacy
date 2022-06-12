@@ -12,6 +12,7 @@ import {
     ListItemText,
     ListSubheader,
     Slide,
+    Stack,
     Toolbar,
     Typography,
 } from "@mui/material";
@@ -25,7 +26,7 @@ import { itemTranslationIdentifier } from "@src/utils/item-translation-identifie
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { perkData } from "./PerkList";
+import { perkData, perkEffectDescriptionById } from "./PerkList";
 
 const imageSize = itemPickerDefaultImageSize;
 
@@ -85,13 +86,19 @@ const PerkListMobile: React.FC = () => {
                             />
                         </Box>
                         <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", ml: 2 }}>
-                            <Typography
-                                component="div"
-                                sx={{ mb: 1 }}
-                                variant="h5"
-                            >
-                                {`+ ${perk.count} ${t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))}`}
-                            </Typography>
+                            <Stack direction="column">
+                                <Typography
+                                    component="div"
+                                    variant="h5"
+                                >
+                                    {`+ ${perk.count} ${t(
+                                        itemTranslationIdentifier(ItemType.Perk, perk.name, "name"),
+                                    )}`}
+                                </Typography>
+                                <Typography>
+                                    {perkEffectDescriptionById(perk.data, Math.min(perk.count, 6).toString())}
+                                </Typography>
+                            </Stack>
                             <Box sx={{ ml: 2 }}>{perk.count > 6 ? <Warning /> : null}</Box>
                         </Box>
                     </CardActionArea>
@@ -140,35 +147,7 @@ const PerkListMobile: React.FC = () => {
                                     sx={{ mr: 2 }}
                                 />
                                 <ListItemText
-                                    primary={
-                                        Array.isArray(dialogPerk.data.effects[id].description)
-                                            ? (dialogPerk.data.effects[id].description as (string | null)[])
-                                                .map((description, index) =>
-                                                    description !== null
-                                                        ? t(
-                                                            itemTranslationIdentifier(
-                                                                ItemType.Perk,
-                                                                dialogPerk.data.name,
-                                                                "effects",
-                                                                id,
-                                                                "description",
-                                                                index.toString(),
-                                                            ),
-                                                        )
-                                                        : null,
-                                                )
-                                                .filter(description => !!description)
-                                                .join(", ")
-                                            : t(
-                                                itemTranslationIdentifier(
-                                                    ItemType.Perk,
-                                                    dialogPerk.data.name,
-                                                    "effects",
-                                                    id,
-                                                    "description",
-                                                ),
-                                            )
-                                    }
+                                    primary={perkEffectDescriptionById(dialogPerk.data, id)}
                                     sx={{ width: "100%" }}
                                 />
                             </ListItem>
