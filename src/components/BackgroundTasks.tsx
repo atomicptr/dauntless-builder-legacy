@@ -11,7 +11,6 @@ const BackgroundTasks: React.FC = () => {
     useEffect(() => {
         // import favorites
         if ("__db_favorites" in localStorage) {
-            // TODO: import me, format {buildId: name}
             Object.entries(JSON.parse(localStorage.getItem("__db_favorites") ?? "{}")).forEach(([buildId, value]) => {
                 if (BuildModel.isValid(buildId) && !isBuildInFavorites(favorites, buildId)) {
                     const name = value as string;
