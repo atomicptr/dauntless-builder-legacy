@@ -20,11 +20,9 @@ perks:
 unique_effects:
   - name: SixthHitBonusDamagePercent
     description: The sixth hit in a row deals +100% part damage.
-    value: 100
     powerSurged: false
   - name: SixthHitBonusDamagePercent
     description: The sixth hit in a row deals +250% part damage.
-    value: 250
     powerSurged: true
 i18n:
   fr:

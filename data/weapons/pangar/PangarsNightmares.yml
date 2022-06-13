@@ -25,7 +25,6 @@ unique_effects:
 
       can destroy the brand, prematurely detonating it for 50% increased damage.
       Charges every 90 seconds.
-    value: 1000
     powerSurged: false
   - name: PangarBomb
     description: >
@@ -34,7 +33,6 @@ unique_effects:
 
       can destroy the brand, prematurely detonating it for 50% increased damage.
       Charges every 90 seconds.
-    value: 2500
     powerSurged: true
 i18n:
   fr:

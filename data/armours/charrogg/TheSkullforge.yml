@@ -24,7 +24,6 @@ unique_effects:
       1.5% of all damage dealt becomes a stamina shield (max 50) that depletes
       first when spending stamina. Depletes slowly after 5 seconds not dealing
       damage.
-    value: 0.015
 i18n:
   fr:
     name: Le Forgecrâne

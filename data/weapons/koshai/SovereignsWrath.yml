@@ -20,13 +20,11 @@ perks:
 unique_effects:
   - name: NoAttackDamage
     description: After not dealing damage for 4 seconds, your next attack deals +50% damage
-    value: 1.5
     powerSurged: false
   - name: NoAttackDamage
     description: >-
       After not dealing damage for 4 seconds, your next 2 attacks deal 50%
       damage
-    value: 1.5
     powerSurged: true
 i18n:
   fr:

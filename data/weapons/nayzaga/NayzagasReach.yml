@@ -20,11 +20,9 @@ perks:
 unique_effects:
   - name: WoundedPartsLifesteal
     description: When Behemoth part is broken, heal for 100
-    value: 100
     powerSurged: false
   - name: WoundedPartsLifesteal
     description: When Behemoth part is broken, heal for 200
-    value: 200
     powerSurged: true
 i18n:
   fr:

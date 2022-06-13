@@ -20,11 +20,9 @@ perks:
 unique_effects:
   - name: SeventhHitPartDamage
     description: The sixth hit in a row deals +100% part damage
-    value: 2
     powerSurged: false
   - name: SeventhHitPartDamage
     description: The sixth hit in a row deals +250% part damage
-    value: 3.5
     powerSurged: true
 i18n:
   fr:

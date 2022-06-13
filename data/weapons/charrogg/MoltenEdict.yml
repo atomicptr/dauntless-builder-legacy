@@ -27,7 +27,6 @@ unique_effects:
     description: >-
       Replaces all hammer blasts with unique fireball abilities that deal blaze
       damage.
-    value: 0
 i18n:
   fr:
     name: Jugement de Vulrrogg

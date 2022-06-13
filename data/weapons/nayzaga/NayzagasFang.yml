@@ -20,11 +20,9 @@ perks:
 unique_effects:
   - name: WoundedPartsLifesteal
     description: +3% lifesteal vs wounded parts
-    value: 1.03
     powerSurged: false
   - name: WoundedPartsLifesteal
     description: +5% lifesteal vs wounded parts
-    value: 1.05
     powerSurged: true
 i18n:
   fr:

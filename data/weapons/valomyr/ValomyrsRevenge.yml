@@ -22,13 +22,11 @@ unique_effects:
     description: >-
       Once charged, your next attack will deal 550 bonus radiant damage. Charge
       rate increases with current health.
-    value: 550
     powerSurged: false
   - name: ValomyrCharge
     description: >-
       Once charged, your next attack will deal 700 bonus radiant damage. Charge
       rate increases with current health.
-    value: 700
     powerSurged: true
 i18n:
   fr:

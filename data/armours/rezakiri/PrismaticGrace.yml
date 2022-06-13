@@ -24,19 +24,16 @@ unique_effects:
     description: >-
       After reviving another player, grant them a Radiant Prism that blocks
       incoming damage for 5 seconds.
-    value: 5
   - name: PrismaticGraceLethalDamagePrism
     icon: /assets/icons/abilities/PrismaticGraceBuff.png
     description: >-
       The first time you take lethal damage, gain a Radiant Prism that blocks
       incoming damage for 10 seconds.
-    value: 10
   - name: PrismaticGraceActivePrismRevive
     icon: /assets/icons/abilities/PrismaticGraceBuff.png
     description: >-
       While active, reviving another player fully restores both players but
       removes the Prism even at full danger.
-    value: 1
 i18n:
   fr:
     name: Grâce Prismatique

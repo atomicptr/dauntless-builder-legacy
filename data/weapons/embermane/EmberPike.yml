@@ -20,11 +20,9 @@ perks:
 unique_effects:
   - name: SeventhHitWoundDamage
     description: The sixth hit in a row deals +100 wound damage
-    value: 100
     powerSurged: false
   - name: SeventhHitWoundDamage
     description: The sixth hit in a row deals +300 wound damage
-    value: 300
     powerSurged: true
 i18n:
   fr:

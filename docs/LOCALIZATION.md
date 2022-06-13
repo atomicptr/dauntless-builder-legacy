@@ -30,7 +30,7 @@ i18n:
         description: New description that has been overwritten!
         unique_effects:
             - description: SCHMETTERLING!
-    jp:
+    ja:
         name: 新しいアイテム
 ```
 
@@ -65,15 +65,13 @@ unique_effects:
       value: 100
       powerSurged: false
       values:
-          description:
-              stamina: 150
-              blazeDamage: 100
+          stamina: 150
+          blazeDamage: 100
     - name: CharrogSpentStaminaFireDamage
       description: *charrogUeDescription
       value: 200
       powerSurged: true
       values:
-          description:
-              stamina: 150
-              blazeDamage: 200
+          stamina: 150
+          blazeDamage: 200
 ```

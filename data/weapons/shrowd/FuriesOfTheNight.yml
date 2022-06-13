@@ -20,7 +20,6 @@ perks:
 unique_effects:
   - name: LowHpDamage
     description: When under 20% health, deal +50% damage
-    value: 1.5
 i18n:
   fr:
     name: Furies de la nuit

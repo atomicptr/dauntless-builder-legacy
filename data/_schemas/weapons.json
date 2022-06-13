@@ -151,21 +151,10 @@
                     "title": {
                         "type": "string"
                     },
-                    "value": {
-                        "type": [
-                            "number",
-                            "array"
-                        ]
-                    },
                     "values": {
                         "patternProperties": {
                             "^.*$": {
-                                "patternProperties": {
-                                    "^.*$": {
-                                        "type": "number"
-                                    }
-                                },
-                                "type": "object"
+                                "type": "number"
                             }
                         },
                         "type": [

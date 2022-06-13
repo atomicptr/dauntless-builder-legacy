@@ -22,13 +22,11 @@ unique_effects:
     description: >-
       After not dealing damage for 4 seconds, your next 5 attacks deal +50%
       damage
-    value: 1.5
     powerSurged: false
   - name: NoAttackDamage
     description: >-
       After not dealing damage for 4 seconds, your next 6 attacks deal +50%
       damage
-    value: 1.5
     powerSurged: true
 i18n:
   fr:

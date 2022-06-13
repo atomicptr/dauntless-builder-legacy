@@ -20,11 +20,9 @@ perks:
 unique_effects:
   - name: BlazeDamageOnNthHit
     description: The fifteenth hit in a row deals +150 damage and major blaze damage
-    value: 150
     powerSurged: false
   - name: BlazeDamageOnNthHit
     description: The fifteenth hit in a row deals +200 damage and major blaze damage
-    value: 200
     powerSurged: true
 i18n:
   fr:

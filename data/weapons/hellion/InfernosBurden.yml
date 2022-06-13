@@ -20,11 +20,9 @@ perks:
 unique_effects:
   - name: BlazeDamageOnNthHit
     description: The fifth hit in a row deals +150 damage and major blaze damage
-    value: 150
     powerSurged: false
   - name: BlazeDamageOnNthHit
     description: The fifth hit in a row deals +225 damage and major blaze damage
-    value: 225
     powerSurged: true
 i18n:
   fr:

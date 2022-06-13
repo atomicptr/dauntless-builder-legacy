@@ -22,13 +22,11 @@ unique_effects:
     description: >
       Periodically enter a rage, dealing +5% damage and gaining immunity to
       stagger. Taking damage causes you to enrage more quickly.
-    value: 0.05
     powerSurged: false
   - name: GnasherRage
     description: >
       Periodically enter a rage, dealing +15% damage and gaining immunity to
       stagger. Taking damage causes you to enrage more quickly.
-    value: 0.15
     powerSurged: true
 i18n:
   fr:

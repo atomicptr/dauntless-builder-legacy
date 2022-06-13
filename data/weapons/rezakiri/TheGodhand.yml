@@ -27,7 +27,6 @@ unique_effects:
     description: >-
       Channel a beam that deals increasing damage, up to 200%, while it
       continues to hit a target.
-    value: 3
 i18n:
   fr:
     name: Main divine

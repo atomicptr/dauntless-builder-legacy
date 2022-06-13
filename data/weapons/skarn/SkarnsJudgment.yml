@@ -22,13 +22,13 @@ unique_effects:
     description: >-
       After using your lantern ability, grant a stackable 175 health shield that
       lasts for 25 seconds (max 600 shields).
-    value: 175
+    
     powerSurged: false
   - name: DamageChanceStackShield
     description: >-
       After using your lantern ability, grant a stackable 250 health shield that
       lasts for 25 seconds (max 600 shields).
-    value: 250
+
     powerSurged: true
 i18n:
   fr:

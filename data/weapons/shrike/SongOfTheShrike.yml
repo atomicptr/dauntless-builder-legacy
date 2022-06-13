@@ -20,11 +20,9 @@ perks:
 unique_effects:
   - name: DodgePartDamage
     description: After dodging, your next attack deals +50 bonus damage and part damage
-    value: 50
     powerSurged: false
   - name: DodgePartDamage
     description: After dodging, your next attack deals +100 bonus damage and part damage
-    value: 100
     powerSurged: true
 i18n:
   fr:

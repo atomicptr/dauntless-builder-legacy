@@ -20,11 +20,9 @@ perks:
 unique_effects:
   - name: StaggerHeal
     description: After a Behemoth is staggered, heal for 100
-    value: 100
     powerSurged: false
   - name: StaggerHeal
     description: After a Behemoth is staggered, heal for 300
-    value: 300
     powerSurged: true
 i18n:
   fr:

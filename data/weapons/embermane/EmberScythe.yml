@@ -20,11 +20,9 @@ perks:
 unique_effects:
   - name: FourthHitBonusDamage
     description: The third hit in quick succession deals +100 bonus part damage.
-    value: 100
     powerSurged: false
   - name: FourthHitBonusDamage
     description: The third hit in quick succession deals +250 bonus part damage.
-    value: 250
     powerSurged: true
 i18n:
   fr:

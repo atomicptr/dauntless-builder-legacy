@@ -22,13 +22,11 @@ unique_effects:
     description: >-
       After each charge attack level, generate two Frost Sprites that grant your
       next attack +30 damage and minor frost damage (Max 4 Sprites)
-    value: 30
     powerSurged: false
   - name: BoreusFrostSprite
     description: >-
       After each charge attack level, generate two Frost Sprites that grant your
       next attack +60 damage and minor frost damage (Max 4 Sprites)
-    value: 60
     powerSurged: true
 i18n:
   fr:

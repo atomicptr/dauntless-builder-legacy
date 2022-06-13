@@ -5,8 +5,6 @@ export interface UniqueEffect {
     description: string,
     powerSurged?: boolean,
     values: {
-        description: {
-            [key: string]: string;
-        }
+        [key: string]: string;
     }
 }

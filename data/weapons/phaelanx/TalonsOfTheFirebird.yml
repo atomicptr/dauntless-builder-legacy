@@ -28,7 +28,6 @@ unique_effects:
 
       Dodging fires all loaded missiles on the locked-on part. 45 second
       cooldown.
-    value: 100
     powerSurged: false
   - name: PhaelanxLegendaryAbility
     description: >
@@ -40,7 +39,6 @@ unique_effects:
 
       Dodging fires all loaded missiles on the locked-on part. 45 second
       cooldown.
-    value: 175
     powerSurged: true
 i18n:
   fr:

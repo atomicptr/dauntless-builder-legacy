@@ -76,6 +76,85 @@ effects:
             percentage: 150
 ```
 
+## Removal of unique_effect value
+
+Similar to above, this is now redundant.
+
+Before:
+
+```yaml
+name: Brawlers of Boreus
+description: A Slayer's aether strikers forged with Boreus trophies.
+icon: /assets/icons/weapons/boreus/BrawlersOfBoreus.png
+type: Aether Strikers
+damage: Blunt
+elemental: Frost
+cells:
+  - Brutality
+  - Fortitude
+power:
+  base: 20
+  powerSurged: 120
+perks:
+  - name: Conditioning
+    value: 1
+    powerSurged: false
+  - name: Conditioning
+    value: 3
+    powerSurged: true
+unique_effects:
+  - name: BoreusFrostSprite
+    description: >-
+      After Surging, continually generate Frost Sprites for 6 seconds that grant
+      your next attack +30 damage and minor frost damage (Max 4 Sprites)
+    value: 30
+    powerSurged: false
+  - name: BoreusFrostSprite
+    description: >-
+      After Surging, continually generate Frost Sprites for 6 seconds that grant
+      your next attack +60 damage and minor frost damage (Max 4 Sprites)
+    value: 60
+    powerSurged: true
+```
+
+After:
+```yaml
+name: Brawlers of Boreus
+description: A Slayer's aether strikers forged with Boreus trophies.
+icon: /assets/icons/weapons/boreus/BrawlersOfBoreus.png
+type: Aether Strikers
+damage: Blunt
+elemental: Frost
+cells:
+  - Brutality
+  - Fortitude
+power:
+  base: 20
+  powerSurged: 120
+perks:
+  - name: Conditioning
+    value: 1
+    powerSurged: false
+  - name: Conditioning
+    value: 3
+    powerSurged: true
+unique_effects:
+  - name: BoreusFrostSprite
+    description: >-
+      After Surging, continually generate Frost Sprites for 6 seconds that grant
+      your next attack +{{frostSpriteDamage}} damage and minor frost damage (Max 4 Sprites)
+    values:
+      frostSpriteDamage: 30
+    powerSurged: false
+  - name: BoreusFrostSprite
+    description: >-
+      After Surging, continually generate Frost Sprites for 6 seconds that grant
+      your next attack +{{frostSpriteDamage}} damage and minor frost damage (Max 4 Sprites)
+    values:
+      frostSpriteDamage: 60
+    powerSurged: true
+```
+
 # 2022-05-31
 
 ## Level scaling values

@@ -20,11 +20,9 @@ perks:
 unique_effects:
   - name: HitTwice
     description: 8% chance for attacks to hit twice.
-    value: 0.08
     powerSurged: false
   - name: HitTwice
     description: 12% chance for attacks to hit twice.
-    value: 0.12
     powerSurged: true
 i18n:
   fr:

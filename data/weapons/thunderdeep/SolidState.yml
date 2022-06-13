@@ -20,11 +20,9 @@ perks:
 unique_effects:
   - name: HeadDamage
     description: 20% damage vs Behemoth Heads
-    value: 1.2
     powerSurged: false
   - name: HeadDamage
     description: 30% damage vs Behemoth Heads
-    value: 1.3
     powerSurged: true
 i18n:
   fr:

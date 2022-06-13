@@ -20,11 +20,9 @@ perks:
 unique_effects:
   - name: DodgeExtendMantra
     description: After dodging though an attack, extend Mantra timeout by 2 seconds
-    value: 2
     powerSurged: false
   - name: DodgeExtendMantra
     description: After dodging though an attack, extend Mantra timeout by 3 seconds
-    value: 3
     powerSurged: true
 i18n:
   fr:

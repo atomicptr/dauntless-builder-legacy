@@ -20,11 +20,9 @@ perks:
 unique_effects:
   - name: TailDamage
     description: 20% damage vs Behemoth Tails
-    value: 1.2
     powerSurged: false
   - name: TailDamage
     description: 30% damage vs Behemoth Tails
-    value: 1.3
     powerSurged: true
 i18n:
   fr:

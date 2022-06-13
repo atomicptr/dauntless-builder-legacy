@@ -21,20 +21,16 @@ unique_effects:
   - name: CharrogSpentStaminaFireDamage
     description: &charrogUeDescription >-
       After spending {{stamina}} stamina, next attack emits a cone of flame that deals +{{blazeDamage}} blaze damage to each unique target within the cone
-    value: 100
     powerSurged: false
     values:
-      description:
-        stamina: 150
-        blazeDamage: 100
+      stamina: 150
+      blazeDamage: 100
   - name: CharrogSpentStaminaFireDamage
     description: *charrogUeDescription
-    value: 200
     powerSurged: true
     values:
-      description:
-        stamina: 150
-        blazeDamage: 200
+      stamina: 150
+      blazeDamage: 200
 i18n:
   fr:
     name: Lames charrbonisées

@@ -21,14 +21,16 @@ unique_effects:
   - name: BoreusFrostSprite
     description: >-
       After Surging, continually generate Frost Sprites for 6 seconds that grant
-      your next attack +30 damage and minor frost damage (Max 4 Sprites)
-    value: 30
+      your next attack +{{frostSpriteDamage}} damage and minor frost damage (Max 4 Sprites)
+    values:
+      frostSpriteDamage: 30
     powerSurged: false
   - name: BoreusFrostSprite
     description: >-
       After Surging, continually generate Frost Sprites for 6 seconds that grant
-      your next attack +60 damage and minor frost damage (Max 4 Sprites)
-    value: 60
+      your next attack +{{frostSpriteDamage}} damage and minor frost damage (Max 4 Sprites)
+    values:
+      frostSpriteDamage: 60
     powerSurged: true
 i18n:
   fr:
@@ -37,9 +39,9 @@ i18n:
     unique_effects:
       - description: >-
           Après un afflux, génère des farfroidets pendant 6 secondes qui
-          ajoutent 30 de dégâts à votre prochaine attaque et de légers dégâts de
+          ajoutent {{frostSpriteDamage}} de dégâts à votre prochaine attaque et de légers dégâts de
           givre (4 farfroidets maximum)
       - description: >-
           Après un afflux, génère des farfroidets pendant 6 secondes qui
-          ajoutent 60 de dégâts à votre prochaine attaque et de légers dégâts de
+          ajoutent {{frostSpriteDamage}} de dégâts à votre prochaine attaque et de légers dégâts de
           givre (4 farfroidets maximum)

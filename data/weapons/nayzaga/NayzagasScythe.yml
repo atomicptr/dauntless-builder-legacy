@@ -20,11 +20,9 @@ perks:
 unique_effects:
   - name: VerticalAttackHeal
     description: After landing perfectly charged attacks, heal for 50
-    value: 50
     powerSurged: false
   - name: VerticalAttackHeal
     description: After landing perfectly charged attacks, heal for 100
-    value: 100
     powerSurged: true
 i18n:
   fr:

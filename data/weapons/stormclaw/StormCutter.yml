@@ -22,13 +22,11 @@ unique_effects:
     description: >-
       After dodging through an attack, your attacks gain 100% bonus meter for +4
       seconds
-    value: 100
     powerSurged: false
   - name: DodgeMeterGain
     description: >-
       After dodging through an attack, your attacks gain 100% bonus meter for +5
       seconds
-    value: 100
     powerSurged: true
 i18n:
   fr:

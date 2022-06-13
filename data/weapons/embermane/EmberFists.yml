@@ -20,11 +20,9 @@ perks:
 unique_effects:
   - name: FifthHitStaggerDamage
     description: The fourth hit in a row deals +50% stagger damage
-    value: 1.5
     powerSurged: false
   - name: FifthHitStaggerDamage
     description: The fourth hit in a row deals +150% stagger damage
-    value: 2.5
     powerSurged: true
 i18n:
   fr:
