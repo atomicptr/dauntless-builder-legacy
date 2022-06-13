@@ -3,44 +3,37 @@ description: >-
   When you take damage, it gets delayed and instead dealt over time. While
   taking delayed damage, gain lifesteal.
 type: Fortitude
-key: Parasitic
 effects:
   '1':
     description: >
       When you take damage, 10% of it is delayed and instead dealt over 10
       seconds. While you take delayed damage, gain 5% lifesteal. Does not apply
       to damage under 10% of your max HP.
-    value: 0.1
   '2':
     description: >
       When you take damage, 15% of it is delayed and instead dealt over 10
       seconds. While you take delayed damage, gain 5% lifesteal. Does not apply
       to damage under 10% of your max HP.
-    value: 0.15
   '3':
     description: >
       When you take damage, 20% of it is delayed and instead dealt over 10
       seconds. While you take delayed damage, gain 5% lifesteal. Does not apply
       to damage under 10% of your max HP.
-    value: 0.2
   '4':
     description: >
       When you take damage, 25% of it is delayed and instead dealt over 10
       seconds. While you take delayed damage, gain 5% lifesteal. Does not apply
       to damage under 10% of your max HP.
-    value: 0.25
   '5':
     description: >
       When you take damage, 30% of it is delayed and instead dealt over 10
       seconds. While you take delayed damage, gain 5% lifesteal. Does not apply
       to damage under 10% of your max HP.
-    value: 0.3
   '6':
     description: >
       When you take damage, 35% of it is delayed and instead dealt over 10
       seconds. While you take delayed damage, gain 5% lifesteal. Does not apply
       to damage under 10% of your max HP.
-    value: 0.35
 i18n:
   fr:
     name: Parasite

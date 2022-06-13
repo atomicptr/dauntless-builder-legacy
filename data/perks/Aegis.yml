@@ -3,30 +3,18 @@ description: >-
   Increases amount of shields received. At later ranks, after gaining 1000
   shields, ignore the next incoming hit within 15 seconds.
 type: Fortitude
-key:
-  - IncreaseShieldsReceived
-  - ShieldThresholdIgnoreHit
 effects:
   '1':
     description:
       - Increases all shields received by 5%
       - null
-    value:
-      - 0.05
-      - null
   '2':
     description:
       - Increases all shields received by 8%
       - null
-    value:
-      - 0.08
-      - null
   '3':
     description:
       - Increases all shields received by 11%
-      - null
-    value:
-      - 0.11
       - null
   '4':
     description:
@@ -34,27 +22,19 @@ effects:
       - >-
         After gaining 1000 shield from any source, ignore the next incoming hit
         within the next 15 seconds.
-    value:
-      - 0.14
-      - 1000
   '5':
     description:
       - Increases all shields received by 17%
       - >-
         After gaining 1000 shield from any source, ignore the next incoming hit
         within the next 15 seconds.
-    value:
-      - 0.17
-      - 1000
   '6':
     description:
       - Increases all shields received by 20%
       - >-
         After gaining 1000 shield from any source, ignore the next incoming hit
         within the next 15 seconds.
-    value:
-      - 0.2
-      - 1000
+    
 i18n:
   fr:
     name: Égide

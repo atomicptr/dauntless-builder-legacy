@@ -1,26 +1,19 @@
 name: Evasive Fury
 description: Temporarily increases attack speed when dodging through a Behemoth's attack.
 type: Alacrity
-key: dodge_attack_speed
 effects:
   '1':
     description: +4% Attack Speed for 20 seconds after dodging through an attack
-    value: 0.04
   '2':
     description: +6% Attack Speed for 20 seconds after dodging through an attack
-    value: 0.06
   '3':
     description: +8% Attack Speed for 20 seconds after dodging through an attack
-    value: 0.08
   '4':
     description: +10% Attack Speed for 20 seconds after dodging through an attack
-    value: 0.1
   '5':
     description: +12.5% Attack Speed for 20 seconds after dodging through an attack
-    value: 0.125
   '6':
     description: +15% Attack Speed for 20 seconds after dodging through an attack
-    value: 0.15
 i18n:
   fr:
     name: Furie évasive

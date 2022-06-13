@@ -1,28 +1,21 @@
 name: Swift
 description: Increases Movement Speed when your weapon is sheathed.
 type: Alacrity
-key: sheathed_weapon_movement_speed
 effects:
   '1':
     description: While sheathed, increases Movement Speed by 5%
-    value: 1.05
   '2':
     description: While sheathed, increases Movement Speed by 10%
-    value: 1.1
   '3':
     description: While sheathed, increases Movement Speed by 15%
-    value: 1.15
   '4':
     description: While sheathed, increases Movement Speed by 20%
-    value: 1.2
   '5':
     description: While sheathed, increases Movement Speed by 25%
-    value: 1.25
   '6':
     description: >-
       While sheathed, increases Movement Speed by 30%, also affects other nearby
       Slayers.
-    value: 1.3
 i18n:
   fr:
     name: Sprint

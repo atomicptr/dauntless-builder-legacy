@@ -20,3 +20,9 @@ i18n:
       - Acide +1
       - Acide +2
       - Acide +3
+  ja:
+    name: アシッド
+    variants:
+      - アシッド+1
+      - アシッド+2
+      - アシッド+3

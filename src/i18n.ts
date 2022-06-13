@@ -11,13 +11,14 @@ import en from "./translations/en.json";
 import fr from "./translations/fr.json";
 import enItems from "./translations/items/items.en.json";
 import frItems from "./translations/items/items.fr.json";
+import jaItems from "./translations/items/items.ja.json";
 import ja from "./translations/ja.json";
 
 const resources = {
     de: { translation: de },
     en: { translation: { ...en, ...enItems } },
     fr: { translation: { ...fr, ...frItems } },
-    ja: { translation: ja },
+    ja: { translation: { ...ja, ...jaItems } },
 };
 
 export enum Language {

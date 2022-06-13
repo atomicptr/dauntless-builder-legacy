@@ -1,40 +1,47 @@
 name: Engineer
 description: Increases range of pylons.
 type: Insight
-key: IncreasedPylonRange
 effects:
   '1':
-    description: +35% increase Pylon range
-    value: 0.35
+    description: +{{percentage}}% increase Pylon range
+    values:
+      percentage: 35
   '2':
-    description: +50% increase Pylon range
-    value: 0.5
+    description: +{{percentage}}% increase Pylon range
+    values:
+      percentage: 50
   '3':
-    description: +65% increase Pylon range
-    value: 0.65
+    description: +{{percentage}}% increase Pylon range
+    values:
+      percentage: 65
   '4':
-    description: +80% increase Pylon range
-    value: 0.8
+    description: +{{percentage}}% increase Pylon range
+    values:
+      percentage: 80
   '5':
-    description: +115% increase Pylon range
-    value: 1.15
+    description: +{{percentage}}% increase Pylon range
+    values:
+      percentage: 115
   '6':
-    description: +150% increase Pylon range
-    value: 1.5
+    description: +{{percentage}}% increase Pylon range
+    values:
+      percentage: 150
 i18n:
   fr:
     name: Ingénieur
     description: Augmente la portée des pylônes
     effects:
       '1':
-        description: +35% de portée des pylônes.
+        description: +{{percentage}}% de portée des pylônes.
       '2':
-        description: +50% de portée des pylônes.
+        description: +{{percentage}}% de portée des pylônes.
       '3':
-        description: +65% de portée des pylônes.
+        description: +{{percentage}}% de portée des pylônes.
       '4':
-        description: +80% de portée des pylônes.
+        description: +{{percentage}}% de portée des pylônes.
       '5':
-        description: +115% de portée des pylônes.
+        description: +{{percentage}}% de portée des pylônes.
       '6':
-        description: +150% de portée des pylônes.
+        description: +{{percentage}}% de portée des pylônes.
+  ja:
+    name: エンジニア

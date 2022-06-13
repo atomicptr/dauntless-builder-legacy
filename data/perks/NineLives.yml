@@ -1,54 +1,34 @@
 name: Nine Lives
 description: Grants a chance to reduce damage, and later the ability to cheat death.
 type: Fortitude
-key:
-  - half_damage
-  - death_heal
 effects:
   '1':
     description:
       - +5% chance to halve incoming damage
       - null
-    value:
-      - 0.05
-      - null
   '2':
     description:
       - +8% chance to halve incoming damage
-      - null
-    value:
-      - 0.08
       - null
   '3':
     description:
       - +12% chance to halve incoming damage
       - null
-    value:
-      - 0.12
-      - null
   '4':
     description:
       - +12% chance to halve incoming damage
       - The first time you would be knocked out stay up and heal for 400
-    value:
-      - 0.12
-      - 400
   '5':
     description:
       - +16% chance to halve incoming damage
       - The first time you would be knocked out stay up and heal for 400
-    value:
-      - 0.16
-      - 400
   '6':
     description:
       - +20% chance to halve incoming damage
       - >-
         The first time you would be knocked out stay up and heal for 400 and
         become empowered for 10 seconds
-    value:
-      - 0.2
-      - 400
+    
 i18n:
   fr:
     name: Lernéen

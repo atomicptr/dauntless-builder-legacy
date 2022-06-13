@@ -3,52 +3,32 @@ description: >-
   Grants increased critical strike chance based on the amount of shield stacks
   you have, and at higher ranks it also grants increased critical strike damage
 type: Finesse
-key:
-  - stagger_damage
-  - dodge_stagger_damage
 effects:
   '1':
     description:
       - For every 150 shields, gain +1% bonus critical strike chance.
       - null
-    value:
-      - 150
-      - 1.05
   '2':
     description:
       - For every 125 shields, gain +1% bonus critical strike chance.
       - null
-    value:
-      - 125
-      - 1.05
   '3':
     description:
       - For every 100 shields, gain +1% bonus critical strike chance.
       - null
-    value:
-      - 100
-      - 1.05
   '4':
     description:
       - For every 85 shields, gain +1% bonus critical strike chance.
       - +5% critical strike damage.
-    value:
-      - 85
-      - 1.05
   '5':
     description:
       - For every 70 shields, gain +1% bonus critical strike chance.
       - +10% critical strike damage.
-    value:
-      - 70
-      - 1.1
   '6':
     description:
       - For every 50 shields, gain +1% bonus critical strike chance.
       - +15% critical strike damage.
-    value:
-      - 50
-      - 1.15
+    
 i18n:
   fr:
     name: Galvanisé

@@ -1,38 +1,31 @@
 name: Rage
 description: When you take damage, increases your damage.
 type: Brutality
-key: Rage
 effects:
   '1':
     description: >-
       Once every 50 seconds, when you take damage, deal +20% increased damage
       for 15 seconds.
-    value: 50
   '2':
     description: >-
       Once every 40 seconds, when you take damage, deal +20% increased damage
       for 15 seconds.
-    value: 40
   '3':
     description: >-
       Once every 30 seconds, when you take damage, deal +20% increased damage
       for 15 seconds.
-    value: 30
   '4':
     description: >-
       Once every 25 seconds, when you take damage, deal +20% increased damage
       for 15 seconds.
-    value: 25
   '5':
     description: >-
       Once every 20 seconds, when you take damage, deal +20% increased damage
       for 15 seconds.
-    value: 20
   '6':
     description: >-
       Once every 15 seconds, when you take damage, deal +20% increased damage
       for 15 seconds.
-    value: 15
 i18n:
   fr:
     name: Rage

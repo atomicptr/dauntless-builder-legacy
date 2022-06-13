@@ -1,26 +1,19 @@
 name: Fleet Footed
 description: Temporarily increases Movement Speed after a dodge.
 type: Alacrity
-key: dodge_movement_speed
 effects:
   '1':
     description: After dodging, gain +10% movement speed for 10 seconds
-    value: 1.1
   '2':
     description: After dodging, gain +15% moviment speed for 10 seconds
-    value: 1.15
   '3':
     description: After dodging, gain +20% moviment speed for 10 seconds
-    value: 1.2
   '4':
     description: After dodging, gain +25% moviment speed for 10 seconds
-    value: 1.25
   '5':
     description: After dodging, gain +30% moviment speed for 10 seconds
-    value: 1.3
   '6':
     description: After dodging, gain +35% moviment speed for 10 seconds
-    value: 1.35
 i18n:
   fr:
     name: Sprint évasif

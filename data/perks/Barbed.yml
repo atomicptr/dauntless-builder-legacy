@@ -1,55 +1,35 @@
 name: Barbed
 description: Adds a flat amount of Wound damage on hit.
 type: Finesse
-key:
-  - wound_damage
-  - dodge_expose_damage
 effects:
   '1':
     description:
       - +10 wound damage
       - null
-    value:
-      - 10
-      - null
   '2':
     description:
       - +20 wound damage
       - null
-    value:
-      - 20
-      - null
   '3':
     description:
       - +30 wound damage
-      - null
-    value:
-      - 30
       - null
   '4':
     description:
       - +40 wound damage
       - After dodging through an attack
       - your next attack deals +250 wound damage
-    value:
-      - 40
-      - 250
   '5':
     description:
       - +50 wound damage
       - After dodging through an attack
       - your next attack deals +360 wound damage
-    value:
-      - 50
-      - 360
   '6':
     description:
       - +60 wound damage
       - After dodging through an attack
       - your next attack deals +500 wound damage
-    value:
-      - 60
-      - 500
+    
 i18n:
   fr:
     name: Barbelé

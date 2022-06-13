@@ -1,26 +1,19 @@
 name: Sprinter
 description: Increases movespeed and reduces sprint cost.
 type: Alacrity
-key: Sprinter
 effects:
   '1':
     description: +5% movement speed and -5% reduced sprint cost
-    value: 1.05
   '2':
     description: +7.5% movement speed and -7.5% reduced sprint cost
-    value: 1.075
   '3':
     description: +10% movement speed and -10% reduced sprint cost
-    value: 1.1
   '4':
     description: +12.5% movement speed and -12.5% reduced sprint cost
-    value: 1.125
   '5':
     description: +15% movement speed and -15% reduced sprint cost
-    value: 1.15
   '6':
     description: +17.5% movement speed and -17.5% reduced sprint cost
-    value: 1.175
 i18n:
   fr:
     name: Coureur

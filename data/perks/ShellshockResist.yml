@@ -1,26 +1,19 @@
 name: Shellshock Resist
 description: Protects against the explosion damage and status effect of Shellshock.
 type: Fortitude
-key: shellshock_immunity
 effects:
   '1':
     description: Reduces Shell Shocked explosion damage and status effect duration by 10%
-    value: -0.1
   '2':
     description: Reduces Shell Shocked explosion damage and status effect duration by 20%
-    value: -0.2
   '3':
     description: Reduces Shell Shocked explosion damage and status effect duration by 40%
-    value: -0.4
   '4':
     description: Reduces Shell Shocked explosion damage and status effect duration by 60%
-    value: -0.6
   '5':
     description: Reduces Shell Shocked explosion damage and status effect duration by 80%
-    value: -0.8
   '6':
     description: Immune to Shell Shocked explosion damage and status effect
-    value: -1
 i18n:
   fr:
     name: Résilience

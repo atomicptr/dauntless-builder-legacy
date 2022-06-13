@@ -1,26 +1,19 @@
 name: Sturdy
 description: Prevents being staggered on a cooldown.
 type: Fortitude
-key: stagger_prevention
 effects:
   '1':
     description: Prevents you from being staggered (30 second cooldown)
-    value: 120
   '2':
     description: Prevents you from being staggered (25 second cooldown)
-    value: 100
   '3':
     description: Prevents you from being staggered (20 second cooldown)
-    value: 80
   '4':
     description: Prevents you from being staggered (15 second cooldown)
-    value: 60
   '5':
     description: Prevents you from being staggered (10 second cooldown)
-    value: 40
   '6':
     description: Prevents you from being staggered (5 second cooldown)
-    value: 15
 i18n:
   fr:
     name: Stabilité

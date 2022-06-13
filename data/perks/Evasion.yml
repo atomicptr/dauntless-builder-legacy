@@ -1,26 +1,19 @@
 name: Evasion
 description: Increases the time you are invincible when dodging.
 type: Alacrity
-key: iframe_increase
 effects:
   '1':
     description: Increases Dodge invulnerability windows by 7%
-    value: 0.07
   '2':
     description: Increases Dodge invulnerability windows by 14%
-    value: 0.14
   '3':
     description: Increases Dodge invulnerability windows by 21%
-    value: 0.21
   '4':
     description: Increases Dodge invulnerability windows by 28%
-    value: 0.28
   '5':
     description: Increases Dodge invulnerability windows by 35%
-    value: 0.35
   '6':
     description: Increases Dodge invulnerability windows by 42%
-    value: 0.42
 i18n:
   fr:
     name: Évasion

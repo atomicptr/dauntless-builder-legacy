@@ -1,7 +1,6 @@
 name: Lucent
 description: Flask heals over time and generates lantern charge.
 type: Insight
-key: Lucent
 effects:
   '1':
     description: >
@@ -9,42 +8,36 @@ effects:
       heal is active, increase the recharge
 
       rate of your Lantern ability by 15%.
-    value: 15
   '2':
     description: >
       Your Flask heals over 20 seconds, but for 20% more healing - while this
       heal is active, increase the recharge
 
       rate of your Lantern ability by 25%.
-    value: 25
   '3':
     description: >
       Your Flask heals over 20 seconds, but for 20% more healing - while this
       heal is active, increase the recharge
 
       rate of your Lantern ability by 35%.
-    value: 35
   '4':
     description: >
       Your Flask heals over 20 seconds, but for 20% more healing - while this
       heal is active, increase the recharge
 
       rate of your Lantern ability by 40%.
-    value: 40
   '5':
     description: >
       Your Flask heals over 20 seconds, but for 20% more healing - while this
       heal is active, increase the recharge
 
       rate of your Lantern ability by 40%.
-    value: 45
   '6':
     description: >
       Your Flask heals over 20 seconds, but for 20% more healing - while this
       heal is active, increase the recharge
 
       rate of your Lantern ability by 50%.
-    value: 50
 i18n:
   fr:
     name: Luminescente

@@ -1,26 +1,19 @@
 name: Cunning
 description: Grants a chance to deal double damage.
 type: Finesse
-key: CriticalStrike
 effects:
   '1':
     description: 2% critical strike chance
-    value: 0.02
   '2':
     description: 3% critical strike chance
-    value: 0.03
   '3':
     description: 4% critical strike chance
-    value: 0.04
   '4':
     description: 5% critical strike chance, +10% critical strike damage.
-    value: 0.05
   '5':
     description: 7.5% critical strike chance, +20% critical strike damage.
-    value: 0.075
   '6':
     description: 10% critical strike chance, +30% critical strike damage.
-    value: 0.1
 i18n:
   fr:
     name: Frappe critique

@@ -11,11 +11,12 @@ export interface Perk {
     name: string;
     description: string;
     type: CellType,
-    key: string|string[];
     effects: {
         [index: string]: {
             description: string|string[];
-            value: unknown|unknown[];
+            values?: {
+                [key: string]: string;
+            }
         }
     }
 

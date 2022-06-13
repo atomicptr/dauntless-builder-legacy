@@ -1,52 +1,32 @@
 name: Bladestorm
 description: Adds a flat amount of Part damage on hit.
 type: Brutality
-key:
-  - flat_part_damage
-  - dodge_part_damage
 effects:
   '1':
     description:
       - +5 Part Damage on Hit
       - null
-    value:
-      - 5
-      - null
   '2':
     description:
       - +10 Part Damage on Hit
-      - null
-    value:
-      - 10
       - null
   '3':
     description:
       - +15 Part Damage on Hit
       - null
-    value:
-      - 15
-      - null
   '4':
     description:
       - +20 Part Damage on Hit
       - +200 Part Damage after dodging through an attack
-    value:
-      - 20
-      - 200
   '5':
     description:
       - +30 Part Damage on Hit
       - +200 Part Damage after dodging through an attack
-    value:
-      - 30
-      - 200
   '6':
     description:
       - +40 Part Damage on Hit
       - +400 Part Damage after dodging through an attack
-    value:
-      - 40
-      - 400
+    
 i18n:
   fr:
     name: Tempête de lames

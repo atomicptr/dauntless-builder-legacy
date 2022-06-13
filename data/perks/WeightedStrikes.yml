@@ -3,18 +3,10 @@ description: >-
   Adds a flat amount of Stagger damage on hit. At later ranks, allows more
   weapon attacks to interrupt.
 type: Brutality
-key:
-  - stagger_damage
-  - dpdge_stagger_damage
-  - revive_shield
 effects:
   '1':
     description:
       - +5 Stagger Damage on Hit
-      - null
-      - null
-    value:
-      - 5
       - null
       - null
   '2':
@@ -22,17 +14,9 @@ effects:
       - +10 Stagger Damage on Hit
       - null
       - null
-    value:
-      - 10
-      - null
-      - null
   '3':
     description:
       - +15 Stagger Damage on Hit
-      - null
-      - null
-    value:
-      - 15
       - null
       - null
   '4':
@@ -40,28 +24,16 @@ effects:
       - +20 Stagger Damage on Hit
       - +200 Stagger after dodging through an attack
       - null
-    value:
-      - 20
-      - 200
-      - null
   '5':
     description:
       - +30 Stagger Damage on Hit
       - +200 Stagger after dodging through an attack
-      - null
-    value:
-      - 30
-      - 200
       - null
   '6':
     description:
       - +40 Stagger Damage on Hit
       - +400 Stagger after dodging through an attack
       - Ranged swings and missiles interrupt unstable Behemoth attacks
-    value:
-      - 40
-      - 400
-      - null
 i18n:
   fr:
     name: Frappes Lourdes

@@ -1,26 +1,19 @@
 name: Tenacious
 description: Gain bonus damage based on current HP.
 type: Brutality
-key: TenaciousDamageBonus
 effects:
   '1':
     description: For every 100 current HP, gain 0.33% bonus damage
-    value: 1.0033
   '2':
     description: For every 100 current HP, gain 0.66% bonus damage
-    value: 0.0066
   '3':
     description: For every 100 current HP, gain 1% bonus damage
-    value: 0.01
   '4':
     description: For every 100 current HP, gain 1.33% bonus damage
-    value: 0.0133
   '5':
     description: For every 100 current HP, gain 1.66% bonus damage
-    value: 0.0166
   '6':
     description: For every 100 current HP, gain 2% bonus damage
-    value: 0.02
 i18n:
   fr:
     name: Tenace

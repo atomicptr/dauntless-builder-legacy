@@ -3,52 +3,32 @@ description: >-
   Guarantees a critical hit after a number of hits. At higher ranks, also
   increases critical damage.
 type: Finesse
-key:
-  - CriticalGuaranteedAfterHits
-  - CritialDamageIncrease
 effects:
   '1':
     description:
       - Every 10th hit with your weapon is a critical hit.
       - null
-    value:
-      - 10
-      - null
   '2':
     description:
       - Every 9th hit with your weapon is a critical hit.
-      - null
-    value:
-      - 9
       - null
   '3':
     description:
       - Every 8th hit with your weapon is a critical hit.
       - null
-    value:
-      - 8
-      - null
   '4':
     description:
       - Every 7th hit with your weapon is a critical hit.
       - +5% critical strike damage
-    value:
-      - 7
-      - 1.05
   '5':
     description:
       - Every 6th hit with your weapon is a critical hit.
       - +10% critical strike damage
-    value:
-      - 6
-      - 1.1
   '6':
     description:
       - Every 5th hit with your weapon is a critical hit.
       - +15% critical strike damage
-    value:
-      - 5
-      - 1.15
+    
 i18n:
   fr:
     name: Pulsation

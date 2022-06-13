@@ -1,26 +1,19 @@
 name: Assassin's Vigour
 description: Grants Health after breaking a Behemoth part.
 type: Fortitude
-key: part_break_heal
 effects:
   '1':
     description: Heal 50 when you break a part
-    value: 50
   '2':
     description: Heal 100 when you break a part
-    value: 100
   '3':
     description: Heal 150 when you break a part
-    value: 150
   '4':
     description: Heal 200 when you break a part
-    value: 200
   '5':
     description: Heal 250 when you break a part
-    value: 250
   '6':
     description: Heal 300 when you break a part
-    value: 300
 i18n:
   fr:
     name: Vigueur d'assassin

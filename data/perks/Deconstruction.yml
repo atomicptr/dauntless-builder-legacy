@@ -1,26 +1,19 @@
 name: Deconstruction
 description: Bonus damage against objects created by Behemoths.
 type: Brutality
-key: damage_object
 effects:
   '1':
     description: Deal 110% damage to objects created by Behemoths
-    value: 1.1
   '2':
     description: Deal 120% damage to objects created by Behemoths
-    value: 1.2
   '3':
     description: Deal 130% damage to objects created by Behemoths
-    value: 1.3
   '4':
     description: Deal 150% damage to objects created by Behemoths
-    value: 1.5
   '5':
     description: Deal 170% damage to objects created by Behemoths
-    value: 1.7
   '6':
     description: Deal 200% damage to objects created by Behemoths
-    value: 2
 i18n:
   fr:
     name: Démolition

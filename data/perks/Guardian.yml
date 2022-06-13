@@ -1,36 +1,29 @@
 name: Guardian
 description: Grant a portion of any shield applied to your nearest ally.
 type: Fortitude
-key: shield_share
 effects:
   '1':
     description: +5% of shield applied to you is also applied to your nearest ally for 15s.
-    value: 5
   '2':
     description: >-
       +10% of shield applied to you is also applied to your nearest ally for
       15s.
-    value: 10
   '3':
     description: >-
       +15% of shield applied to you is also applied to your nearest ally for
       15s.
-    value: 15
   '4':
     description: >-
       +20% of shield applied to you is also applied to your nearest ally for
       15s.
-    value: 20
   '5':
     description: >-
       +25% of shield applied to you is also applied to your nearest ally for
       15s.
-    value: 25
   '6':
     description: >-
       +30% of shield applied to you is also applied to your nearest ally for
       15s.
-    value: 30
 i18n:
   fr:
     name: Gardien

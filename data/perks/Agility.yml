@@ -1,26 +1,19 @@
 name: Agility
 description: Reduces the stamina cost of dodging.
 type: Alacrity
-key: dodge_cost_reduction
 effects:
   '1':
     description: '-10% Dodge Roll Stamina Cost'
-    value: -0.1
   '2':
     description: '-20% Dodge Roll Stamina Cost'
-    value: -0.2
   '3':
     description: '-30% Dodge Roll Stamina Cost'
-    value: -0.3
   '4':
     description: '-40% Dodge Roll Stamina Cost'
-    value: -0.4
   '5':
     description: '-55% Dodge Roll Stamina Cost'
-    value: -0.55
   '6':
     description: '-70% Dodge Roll Stamina Cost'
-    value: -0.7
 i18n:
   fr:
     name: Agilité

@@ -16,17 +16,15 @@
                                 "array"
                             ]
                         },
-                        "value": {
+                        "values": {
                             "type": [
-                                "number",
-                                "array",
+                                "object",
                                 "null"
                             ]
                         }
                     },
                     "required": [
-                        "description",
-                        "value"
+                        "description"
                     ],
                     "type": "object"
                 }
@@ -79,12 +77,6 @@
             "type": [
                 "object",
                 "null"
-            ]
-        },
-        "key": {
-            "type": [
-                "string",
-                "array"
             ]
         },
         "name": {

@@ -1,26 +1,19 @@
 name: Vampiric
 description: Restores some health whenever a Behemoth part is Wounded.
 type: Fortitude
-key: wounded_heal
 effects:
   '1':
     description: Heal for 50 whenever a Behemoth is Wounded
-    value: 50
   '2':
     description: Heal for 75 whenever a Behemoth is Wounded
-    value: 75
   '3':
     description: Heal for 100 whenever a Behemoth is Wounded
-    value: 100
   '4':
     description: Heal for 125 whenever a Behemoth is Wounded
-    value: 125
   '5':
     description: Heal for 150 whenever a Behemoth is Wounded
-    value: 150
   '6':
     description: Heal for 200 whenever a Behemoth is Wounded
-    value: 200
 i18n:
   fr:
     name: Vampirique

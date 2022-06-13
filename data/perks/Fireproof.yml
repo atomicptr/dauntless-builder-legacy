@@ -1,26 +1,19 @@
 name: Fireproof
 description: Protects against being set on fire.
 type: Fortitude
-key: fire_immunity
 effects:
   '1':
     description: Reduces duration of On Fire status by 10%
-    value: -0.1
   '2':
     description: Reduces duration of On Fire status by 20%
-    value: -0.2
   '3':
     description: Reduces duration of On Fire status by 40%
-    value: -0.4
   '4':
     description: Reduces duration of On Fire status by 60%
-    value: -0.6
   '5':
     description: Reduces duration of On Fire status by 80%
-    value: -0.8
   '6':
     description: Immune to being set on fire.
-    value: -1
 i18n:
   fr:
     name: Ignifuge

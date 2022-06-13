@@ -1,52 +1,32 @@
 name: Tough
 description: Increases Max Health.
 type: Fortitude
-key:
-  - max_hp
-  - increased_healing
 effects:
   '1':
     description:
       - Increases Max Health by 50
       - Increased healing from all sources by 5%
-    value:
-      - 50
-      - 0.05
   '2':
     description:
       - Increases Max Health by 100
       - Increased healing from all sources by 10%
-    value:
-      - 100
-      - 0.1
   '3':
     description:
       - Increases Max Health by 150
       - Increased healing from all sources by 15%
-    value:
-      - 150
-      - 0.15
   '4':
     description:
       - Increases Max Health by 250
       - Increased healing from all sources by 25%
-    value:
-      - 250
-      - 0.25
   '5':
     description:
       - Increases Max Health by 300
       - Increased healing from all sources by 35%
-    value:
-      - 300
-      - 0.35
   '6':
     description:
       - Increases Max Health by 500
       - Increased healing from all sources by 50%
-    value:
-      - 500
-      - 0.5
+    
 i18n:
   fr:
     name: Robustesse

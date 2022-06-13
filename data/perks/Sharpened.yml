@@ -1,30 +1,18 @@
 name: Sharpened
 description: Percent increase to Part damage.
 type: Brutality
-key:
-  - percent_part_damage
-  - dodge_percent_part_damage
 effects:
   '1':
     description:
       - +5% Part Damage
       - null
-    value:
-      - 1.05
-      - null
   '2':
     description:
       - +10% Part Damage
       - null
-    value:
-      - 1.1
-      - null
   '3':
     description:
       - +15% Part Damage
-      - null
-    value:
-      - 1.15
       - null
   '4':
     description:
@@ -32,27 +20,19 @@ effects:
       - >-
         After dodging through an attack the next weapon attack's Part Break
         Damage is increased by 50%
-    value:
-      - 1.2
-      - 1.5
   '5':
     description:
       - +25% Part Damage
       - >-
         After dodging through an attack the next weapon attack's Part Break
         Damage is increased by 50%
-    value:
-      - 1.25
-      - 1.5
   '6':
     description:
       - +30% Part Damage
       - >-
         After dodging through an attack the next weapon attack's Part Break
         Damage is increased by 100%
-    value:
-      - 1.3
-      - 2
+    
 i18n:
   fr:
     name: Aiguisé

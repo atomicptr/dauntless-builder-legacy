@@ -136,7 +136,10 @@ export const perkData = (build: BuildModel) => {
 
 export const perkEffectDescriptionById = (perk: Perk, id: string): string => {
     if (!Array.isArray(perk.effects[id].description)) {
-        return i18n.t(itemTranslationIdentifier(ItemType.Perk, perk.name, "effects", id, "description"));
+        return i18n.t(
+            itemTranslationIdentifier(ItemType.Perk, perk.name, "effects", id, "description"),
+            perk.effects[id].values,
+        );
     }
 
     return (perk.effects[id].description as (string | null)[])
@@ -151,6 +154,7 @@ export const perkEffectDescriptionById = (perk: Perk, id: string): string => {
                         "description",
                         index.toString(),
                     ),
+                    perk.effects[id].values,
                 )
                 : null,
         )

@@ -1,26 +1,19 @@
 name: Conditioning
 description: Increases Stamina Regen.
 type: Alacrity
-key: stamina_regen
 effects:
   '1':
     description: +5 Stamina Regeneration
-    value: 5
   '2':
     description: +10 Stamina Regeneration
-    value: 10
   '3':
     description: +15 Stamina Regeneration
-    value: 15
   '4':
     description: +20 Stamina Regeneration
-    value: 20
   '5':
     description: +25 Stamina Regeneration
-    value: 25
   '6':
     description: +30 Stamina Regeneration
-    value: 30
 i18n:
   fr:
     name: Constitution

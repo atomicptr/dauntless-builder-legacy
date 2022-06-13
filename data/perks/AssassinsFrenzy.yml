@@ -3,38 +3,31 @@ description: >-
   Each time you break or assist in breaking a part, gain +15% attack speed for x
   seconds.
 type: Alacrity
-key: low_hp_attack_speed
 effects:
   '1':
     description: >-
       Each time you break or assist in breaking a part, gain +15% attack speed
       for 10 seconds.
-    value: 1.1
   '2':
     description: >-
       Each time you break or assist in breaking a part, gain +15% attack speed
       for 15 seconds.
-    value: 1.15
   '3':
     description: >-
       Each time you break or assist in breaking a part, gain +15% attack speed
       for 20 seconds.
-    value: 1.2
   '4':
     description: >-
       Each time you break or assist in breaking a part, gain +15% attack speed
       for 30 seconds.
-    value: 1.3
   '5':
     description: >-
       Each time you break or assist in breaking a part, gain +15% attack speed
       for 35 seconds.
-    value: 1.35
   '6':
     description: >-
       Each time you break or assist in breaking a part, gain +15% attack speed
       for 40 seconds.
-    value: 1.4
 i18n:
   fr:
     name: Frénésie d'assassin

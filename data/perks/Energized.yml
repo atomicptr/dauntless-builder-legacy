@@ -1,26 +1,19 @@
 name: Energized
 description: Increase weapon meter gain rate.
 type: Insight
-key: weapon_charge_rate
 effects:
   '1':
     description: +10% Weapon Charge rate
-    value: 0.1
   '2':
     description: +15% Weapon Charge rate
-    value: 0.15
   '3':
     description: +20% Weapon Charge rate
-    value: 0.2
   '4':
     description: +25% Weapon Charge rate
-    value: 0.25
   '5':
     description: +30% Weapon Charge rate
-    value: 0.3
   '6':
     description: +40% Weapon Charge rate
-    value: 0.4
 i18n:
   fr:
     name: Charge
