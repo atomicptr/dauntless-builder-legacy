@@ -55,12 +55,12 @@
             "special": "スペシャル"
         },
         "passive": "パッシブ",
-        "perk": "パーク",
         "perks": "パーク",
         "power": "攻撃力",
         "resistance": "防御力",
         "torso-armour": "胴防具",
         "weapon": "武器",
+        "weapon-type": "武器の種類",
         "weapon-types": {
             "AetherStrikers": "エーテルストライカー",
             "Axe": "アックス",

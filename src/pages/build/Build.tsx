@@ -279,6 +279,24 @@ const Build: React.FC = () => {
                                         />
                                     ))}
 
+                                {(item as Weapon).bond
+                                    ? build.data.bondWeapon?.unique_effects
+                                        ?.filter(ue =>
+                                            ue.powerSurged !== undefined
+                                                ? ue.powerSurged === build.weaponSurged
+                                                : true,
+                                        )
+                                        .map((ue, index) => (
+                                            <UniqueEffectCard
+                                                key={index}
+                                                index={index}
+                                                item={build.data.bondWeapon as Weapon}
+                                                itemType={type}
+                                                uniqueEffect={ue}
+                                            />
+                                        ))
+                                    : null}
+
                                 <BondWeaponPicker
                                     bondWeapon={build.data.bondWeapon}
                                     onClick={onBondWeaponClicked}
@@ -455,7 +473,6 @@ const Build: React.FC = () => {
             <ItemSelectDialog
                 disableComponentsInside
                 disablePowerSurgeSelection
-                disableUniqueEffectDisplay
                 handleClose={() => setBondDialogOpen(false)}
                 itemType={ItemType.Weapon}
                 onItemSelected={onBondWeaponSelected}
