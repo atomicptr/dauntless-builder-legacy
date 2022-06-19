@@ -41,6 +41,15 @@
         "linebreak-style": "warn",
         "no-console": "off",
         "no-new": "error",
+        "no-restricted-imports": [
+            "error",
+            {
+                "patterns": [
+                    "@mui/*/*/*",
+                    "!@mui/material/test-utils/*"
+                ]
+            }
+        ],
         "prefer-const": "error",
         "quotes": [
             "error",

@@ -94,7 +94,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
                     <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", mr: 2 }}>
                         <img
-                            alt="Dauntless Builder"
+                            alt={t("app-name")}
                             src="/assets/icon.png"
                             style={{
                                 height: 36,
@@ -189,7 +189,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                                 component="a"
                                 href={githubUrl}
                                 target="_blank"
-                                title="Github Repository"
+                                title={t("misc.github-repository")}
                             >
                                 <FaGithub />
                             </IconButton>
@@ -197,7 +197,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                                 component="a"
                                 href={matrixChannelUrl}
                                 target="_blank"
-                                title="Dauntless Builder Matrix Server"
+                                title={t("misc.matrix-channel")}
                             >
                                 <SiMatrix />
                             </IconButton>
@@ -205,7 +205,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                                 component="a"
                                 href={discordServerUrl}
                                 target="_blank"
-                                title="Dauntless Builder Discord Server"
+                                title={t("misc.discord-server")}
                             >
                                 <FaDiscord />
                             </IconButton>

@@ -17,7 +17,7 @@ import Layout from "./components/Layout";
 import theme from "./components/theme";
 import NotFound from "./pages/404/NotFound";
 import Build from "./pages/build/Build";
-import BuildSearch from "./pages/build/BuildSearch";
+import BuildFinder from "./pages/build/BuildFinder";
 import MetaBuilds from "./pages/build/MetaBuilds";
 import NewBuild from "./pages/build/NewBuild";
 import Home from "./pages/home/Home";
@@ -59,8 +59,8 @@ const DauntlessBuilderApp = () => {
                                             path="new"
                                         />
                                         <Route
-                                            element={<BuildSearch />}
-                                            path="search"
+                                            element={<BuildFinder />}
+                                            path="finder"
                                         />
                                         <Route
                                             element={<MetaBuilds />}
