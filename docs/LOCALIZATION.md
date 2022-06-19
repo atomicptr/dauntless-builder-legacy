@@ -254,3 +254,28 @@ export const muiLocaleComponent = () =>
 
 And is all you need to do. Now you should be able to select Sindarin in the settings and the title should be
 replaced with "Dauntless tamo".
+
+## What translations are missing!?
+
+You don't want to go through the list (understandable) to find that one or two missing keys? There is a script for that!
+
+```bash
+$ yarn check:missing-translations
+de: "alert.alpha-version" missing
+de: "alert.translation-warning" missing
+de: "app-name" missing
+de: "appbar.dev-menu.translation-check" missing
+de: "components.build-menu.added-build-to-favorites" missing
+de: "components.build-menu.copied-to-clipboard" missing
+de: "components.build-menu.copy-to-clipboard" missing
+de: "components.build-menu.favorite-build" missing
+de: "components.build-menu.open-last-edited-build" missing
+de: "components.build-menu.remove-build-from-favorites" missing
+de: "components.build-menu.unfavorite-build" missing
+de: "components.build-warning.invalid-build" missing
+de: "components.build-warning.upgraded-build" missing
+de: "components.item-picker.lantern-hold-line" missing
+...
+```
+
+if something for English shows up you probably used an invalid key somewhere.
