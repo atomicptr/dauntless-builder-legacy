@@ -31,6 +31,7 @@ import {
 import BuildMenu from "@src/components/BuildMenu";
 import DevMenu from "@src/components/DevMenu";
 import { drawerWidth } from "@src/components/theme";
+import { discordServerUrl, githubUrl, issuesUrl, matrixChannelUrl, translationDocumentationUrl } from "@src/constants";
 import dauntlessBuilderData from "@src/data/Data";
 import { selectFavorites } from "@src/features/favorites/favorites-slice";
 import useIsMobile from "@src/hooks/is-mobile";
@@ -186,7 +187,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         >
                             <IconButton
                                 component="a"
-                                href="https://github.com/atomicptr/dauntless-builder"
+                                href={githubUrl}
                                 target="_blank"
                                 title="Github Repository"
                             >
@@ -194,7 +195,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                             </IconButton>
                             <IconButton
                                 component="a"
-                                href="https://matrix.to/#/#dauntlessbuilder:matrix.org"
+                                href={matrixChannelUrl}
                                 target="_blank"
                                 title="Dauntless Builder Matrix Server"
                             >
@@ -202,7 +203,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                             </IconButton>
                             <IconButton
                                 component="a"
-                                href="https://discord.gg/hkMvhsfPjH"
+                                href={discordServerUrl}
                                 target="_blank"
                                 title="Dauntless Builder Discord Server"
                             >
@@ -221,7 +222,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 >
                     <div
                         dangerouslySetInnerHTML={{
-                            __html: t("alert.alpha-version"),
+                            __html: t("alert.alpha-version", {
+                                discordServerUrl,
+                                issuesUrl,
+                                matrixChannelUrl,
+                            }),
                         }}
                     />
                 </Alert>
@@ -235,6 +240,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                             dangerouslySetInnerHTML={{
                                 __html: t("alert.translation-warning", {
                                     languageName: getNativeLanguageName(currentLanguage() as Language),
+                                    translationDocumentationUrl,
                                 }),
                             }}
                         />

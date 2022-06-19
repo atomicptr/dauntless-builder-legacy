@@ -1,7 +1,7 @@
 {
     "alert": {
-        "alpha-version": "Dauntless Builder v2 is currently in alpha, if you encounter problems or have feedback please submit them to our <a style=\"color: #fff;\" href=\"https://github.com/atomicptr/dauntless-builder/issues\" target=\"_blank\">Github Issues</a>, <a style=\"color: #fff;\" href=\"https://matrix.to/#/#dauntlessbuilder:matrix.org\" target=\"_blank\">Matrix Channel</a> or <a style=\"color: #fff;\" href=\"https://discord.gg/hkMvhsfPjH\" target=\"_blank\">Discord Server</a>.",
-        "translation-warning": "You're currently viewing this page with your language set to <b>{{languageName}}</b>, translations are currently in beta and are very spotty. If you speak this language, please consider <a style=\"color: #fff;\" target=\"_blank\" href=\"https://github.com/atomicptr/dauntless-builder/blob/master/docs/contributing/TRANSLATION.md\">contributing to the translation efforts</a>."
+        "alpha-version": "Dauntless Builder v2 is currently in alpha, if you encounter problems or have feedback please submit them to our <a style=\"color: #fff;\" href=\"{{issuesUrl}}\" target=\"_blank\">Github Issues</a>, <a style=\"color: #fff;\" href=\"{{matrixChannelUrl}}\" target=\"_blank\">Matrix Channel</a> or <a style=\"color: #fff;\" href=\"{{discordServerUrl}}\" target=\"_blank\">Discord Server</a>.",
+        "translation-warning": "You're currently viewing this page with your language set to <b>{{languageName}}</b>, translations are currently in beta and are very spotty. If you speak this language, please consider <a style=\"color: #fff;\" target=\"_blank\" href=\"{{translationDocumentationUrl}}\">contributing to the translation efforts</a>."
     },
     "app-name": "Dauntless Builder",
     "appbar": {
@@ -53,7 +53,7 @@
             "assets-text": "All Dauntless related assets are the intellectual property of Phoenix Labs.",
             "contributors": "Contributors",
             "dependencies": "Dependencies ({{number}})",
-            "main-text": "Dauntless Builder is free and open source software licensed under the terms of the <a style=\"color: #fff;\" href=\"https://github.com/atomicptr/dauntless-builder/blob/master/LICENSE\" target=\"_blank\">AGPLv3</a> license.",
+            "main-text": "Dauntless Builder is free and open source software licensed under the terms of the <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> license.",
             "privacy": "Privacy",
             "privacy-text": "We are not collecting any data.",
             "source-code": "Source Code",

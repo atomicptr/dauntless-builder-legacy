@@ -1,6 +1,7 @@
 import { GitHub } from "@mui/icons-material";
 import { Avatar, Box, Button, Card, CardActionArea, CardContent, Grid, Stack, Typography } from "@mui/material";
 import PageTitle from "@src/components/PageTitle";
+import { githubUrl, licenseUrl } from "@src/constants";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -101,7 +102,7 @@ const About: React.FC = () => {
             <Typography>
                 <span
                     dangerouslySetInnerHTML={{
-                        __html: t("pages.about.main-text"),
+                        __html: t("pages.about.main-text", { licenseUrl }),
                     }}
                 />
             </Typography>
@@ -112,7 +113,7 @@ const About: React.FC = () => {
             >
                 <Button
                     component="a"
-                    href="https://github.com/atomicptr/dauntless-builder"
+                    href={githubUrl}
                     startIcon={<GitHub />}
                     target="_blank"
                 >
