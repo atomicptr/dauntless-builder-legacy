@@ -4,7 +4,7 @@ import ElementalIcon from "@src/components/ElementalIcon";
 import PerksText from "@src/components/PerksText";
 import { itemPickerDefaultImageSize } from "@src/components/theme";
 import { Armour } from "@src/data/Armour";
-import { isArmourType, ItemType } from "@src/data/ItemType";
+import { ArmourItemType, isArmourType, ItemType } from "@src/data/ItemType";
 import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
 import { Weapon } from "@src/data/Weapon";
@@ -52,6 +52,11 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
             .with(ItemType.Lantern, () => t("terms.lantern"))
             .with(ItemType.Omnicell, () => t("terms.omnicell"))
             .otherwise(() => "???");
+
+    const canBePowerSurged = match(type)
+        .with(ItemType.Weapon, () => (item as Weapon).power.powerSurged !== undefined)
+        .with(ArmourItemType, () => (item as Armour).resistance.powerSurged !== undefined)
+        .otherwise(() => false);
 
     const onItemSelected = () => {
         onClick(type);
@@ -146,7 +151,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                         variant="h5"
                                     >
                                         {t(itemTranslationIdentifier(type, item.name, "name"))}
-                                        {isPowerSurged ? <Star sx={{ ml: 1 }} /> : null}
+                                        {isPowerSurged && canBePowerSurged ? <Star sx={{ ml: 1 }} /> : null}
                                     </Typography>
                                 </Box>
 
@@ -161,7 +166,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                             >
                                                 <b>{t("terms.power")}</b>
                                                 {": "}
-                                                {isPowerSurged
+                                                {isPowerSurged && canBePowerSurged
                                                     ? (item as Weapon).power.powerSurged
                                                     : (item as Weapon).power.base}
                                             </Typography>
@@ -177,7 +182,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                                 variant="subtitle1"
                                             >
                                                 <PerksText
-                                                    itemSurged={isPowerSurged}
+                                                    itemSurged={isPowerSurged && canBePowerSurged}
                                                     perks={(item as Weapon)?.perks ?? []}
                                                 />
                                             </Typography>
@@ -196,7 +201,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                             >
                                                 <b>{t("terms.resistance")}</b>
                                                 {": "}
-                                                {isPowerSurged
+                                                {isPowerSurged && canBePowerSurged
                                                     ? (item as Armour).resistance.powerSurged
                                                     : (item as Armour).resistance.base}
                                             </Typography>
@@ -212,7 +217,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                                 variant="subtitle1"
                                             >
                                                 <PerksText
-                                                    itemSurged={isPowerSurged}
+                                                    itemSurged={isPowerSurged && canBePowerSurged}
                                                     perks={(item as Armour)?.perks ?? []}
                                                 />
                                             </Typography>

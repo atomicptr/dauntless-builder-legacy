@@ -137,6 +137,11 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
         setSearchValue("");
     }, [open]);
 
+    const getCells = (item: ItemPickerItem) =>
+        Array.isArray((item as Weapon | Armour | Lantern | null)?.cells)
+            ? ((item as Weapon | Armour | Lantern | null)?.cells as CellType[]) ?? []
+            : [(item as Weapon | Armour | Lantern | null)?.cells];
+
     return (
         <Dialog
             TransitionComponent={DialogTransition}
@@ -272,6 +277,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                                         }
                                         componentsInside={() =>
                                             (itemType === ItemType.Weapon || isArmourType(itemType)) &&
+                                            getCells(item).filter(cell => !!cell).length > 0 &&
                                             !disableComponentsInside ? (
                                                     <Typography
                                                         color="text.secondary"
@@ -285,13 +291,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                                                             <Box>
                                                                 <b>{`${t("terms.cells")}:`}</b>
                                                             </Box>
-                                                            {(Array.isArray(
-                                                                (item as Weapon | Armour | Lantern | null)?.cells,
-                                                            )
-                                                                ? ((item as Weapon | Armour | Lantern | null)
-                                                                    ?.cells as CellType[]) ?? []
-                                                                : [(item as Weapon | Armour | Lantern | null)?.cells]
-                                                            ).map((cellType, index) =>
+                                                            {getCells(item).map((cellType, index) =>
                                                                 cellType ? (
                                                                     <Box
                                                                         key={index}
