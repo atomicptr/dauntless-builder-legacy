@@ -36,6 +36,8 @@ import {
 } from "@src/features/item-select-filter/item-select-filter-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppSelector } from "@src/hooks/redux";
+import i18n from "@src/i18n";
+import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -384,13 +386,16 @@ export const filterBySearchQuery =
                 return false;
             }
 
-            if (item.name.toLowerCase().indexOf(query.toLowerCase()) > -1) {
+            const { t } = i18n;
+            query = query.toLowerCase();
+
+            if (t(itemTranslationIdentifier(itemType, item.name, "name")).toLowerCase().indexOf(query) > -1) {
                 return true;
             }
 
             if (itemType === ItemType.Weapon || isArmourType(itemType) || itemType === ItemType.Lantern) {
-                const description = (item as Weapon | Armour | Lantern).description?.toLowerCase();
-                return description ? description.toLowerCase().indexOf(query.toLowerCase()) > -1 : false;
+                const description = t(itemTranslationIdentifier(itemType, item.name, "description"));
+                return description ? description.toLowerCase().indexOf(query) > -1 : false;
             }
 
             return false;

@@ -53,10 +53,13 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
             .with(ItemType.Omnicell, () => t("terms.omnicell"))
             .otherwise(() => "???");
 
-    const canBePowerSurged = match(type)
-        .with(ItemType.Weapon, () => (item as Weapon).power.powerSurged !== undefined)
-        .with(ArmourItemType, () => (item as Armour).resistance.powerSurged !== undefined)
-        .otherwise(() => false);
+    const canBePowerSurged =
+        item !== null
+            ? match(type)
+                .with(ItemType.Weapon, () => (item as Weapon).power.powerSurged !== undefined)
+                .with(ArmourItemType, () => (item as Armour).resistance.powerSurged !== undefined)
+                .otherwise(() => false)
+            : false;
 
     const onItemSelected = () => {
         onClick(type);
