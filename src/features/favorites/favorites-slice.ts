@@ -58,11 +58,6 @@ const arrayMove = <T>(array: T[], fromIndex: number, toIndex: number) => {
 export const { addFavorite, updateFavorite, removeFavoriteByBuildId, moveUpByBuildId, moveDownByBuildId } =
     favoritesSlice.actions;
 
-export const selectConfiguration = (state: RootState) => ({
-    ...state.configuration,
-    devMode: DB_DEVMODE || state.configuration.devMode,
-});
-
 export const selectFavorites = (state: RootState) => state.favorites.favorites;
 
 export const isBuildInFavorites = (favorites: Favorite[], buildId: string): boolean =>

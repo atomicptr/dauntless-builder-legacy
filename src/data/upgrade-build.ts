@@ -113,8 +113,6 @@ export const convertVersion4To5 = (version4BuildId: string): string => {
     // replace old modular Repeater with Recruits Repeater
     const modularRepeaterWeaponId = 27;
     if (data.weapon_name === modularRepeaterWeaponId) {
-        // keep version number because we want to display an "this is an old build" text
-        data.__version = 4;
         data.weapon_name = 169; // Recruits Repeater
         data.weapon_level = 0;
         data.weapon_cell0 = 0;

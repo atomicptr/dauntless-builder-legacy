@@ -80,6 +80,7 @@
             "title": "My Builds"
         },
         "home": {
+            "test-builds": "Test Builds",
             "title": "Home"
         },
         "newbuild": {
