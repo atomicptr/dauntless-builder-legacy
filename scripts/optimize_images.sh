@@ -38,6 +38,10 @@ function optimize_path () {
 echo "Optimizing images..."
 optimize_path ./public/assets/icons/armours
 optimize_path ./public/assets/icons/weapons
+optimize_path ./public/assets/icons/lanterns
 optimize_path ./public/assets/icons/parts
+optimize_path ./public/assets/icons/perks
 optimize_path ./public/assets/icons/generic
+optimize_path ./public/assets/icons/omnicells
+optimize_path ./public/assets/icons/abilities
 echo "...done"
