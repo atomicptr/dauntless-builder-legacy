@@ -46,8 +46,6 @@ const BuildMenu: React.FC = () => {
         <>
             {isUserEditedBuild ? null : (
                 <IconButton
-                    aria-controls="menu-appbar"
-                    aria-haspopup="true"
                     color="inherit"
                     component={NavLink}
                     size="large"
@@ -58,8 +56,6 @@ const BuildMenu: React.FC = () => {
                 </IconButton>
             )}
             <IconButton
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
                 color="inherit"
                 onClick={() => {
                     if (isFavorite) {
@@ -103,8 +99,6 @@ const BuildMenu: React.FC = () => {
                     </Fab>
                 ) : (
                     <IconButton
-                        aria-controls="menu-appbar"
-                        aria-haspopup="true"
                         color="inherit"
                         onClick={handleCopyToClipboardClicked}
                         size="large"
