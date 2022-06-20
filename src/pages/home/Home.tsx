@@ -69,7 +69,7 @@ const Home: React.FC = () => {
                         <Stack spacing={1}>
                             {favorites.slice(0, numberOfBuilds).map((fav, index) => (
                                 <Card
-                                    kex={index}
+                                    key={index}
                                     sx={{ flexGrow: 10 }}
                                 >
                                     <CardActionArea
@@ -115,9 +115,7 @@ const Home: React.FC = () => {
                                             to={`/b/${buildId}`}
                                         >
                                             <CardContent>
-                                                {`Test Build #${index + 1}: ${build.omnicell} / ${
-                                                    build.weaponName
-                                                }`}
+                                                {`Test Build #${index + 1}: ${build.omnicell} / ${build.weaponName}`}
                                             </CardContent>
                                         </CardActionArea>
                                     </Card>

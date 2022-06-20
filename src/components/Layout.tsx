@@ -1,6 +1,7 @@
 import {
     AddCircle,
     Bookmarks,
+    Build,
     ChevronLeft,
     ChevronRight,
     Home,
@@ -14,6 +15,7 @@ import {
     Alert,
     Box,
     Button,
+    Chip,
     Container,
     CssBaseline,
     Divider,
@@ -33,6 +35,7 @@ import DevMenu from "@src/components/DevMenu";
 import { drawerWidth } from "@src/components/theme";
 import { discordServerUrl, githubUrl, issuesUrl, matrixChannelUrl, translationDocumentationUrl } from "@src/constants";
 import dauntlessBuilderData from "@src/data/Data";
+import { selectConfiguration } from "@src/features/configuration/configuration-slice";
 import { selectFavorites } from "@src/features/favorites/favorites-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppSelector } from "@src/hooks/redux";
@@ -55,6 +58,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     const isMobile = useIsMobile();
     const [open, setOpen] = useState(false);
     const { t } = useTranslation();
+    const configuration = useAppSelector(selectConfiguration);
 
     const handleDrawerOpen = () => setOpen(true);
     const handleDrawerClose = () => setOpen(false);
@@ -112,6 +116,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     >
                         {t("app-name")}
                     </Typography>
+
+                    {configuration.devMode ? (
+                        <Chip
+                            color="error"
+                            icon={<Build />}
+                            label="Dev Mode"
+                            size="small"
+                            sx={{ ml: 1 }}
+                            variant="outlined"
+                        />
+                    ) : null}
 
                     <Box sx={{ flexGrow: 1 }}>{/* Spacer */}</Box>
 
