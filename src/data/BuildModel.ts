@@ -7,7 +7,7 @@ import {Omnicell} from "./Omnicell";
 import {Armour} from "./Armour";
 import {Lantern} from "./Lantern";
 import {Perk} from "./Perks";
-import {Cell} from "./Cell";
+import {Cell, CellType} from "./Cell";
 import {match} from "ts-pattern";
 import {Part, PartType} from "./Part";
 import {ArmourItemType, ItemType} from "@src/data/ItemType";
@@ -419,3 +419,52 @@ export const partTypeByWeaponType = (weaponType: WeaponType): NamesMapType =>
         .with(WeaponType.Repeater, () => NamesMapType.RepeaterPart)
         .with(WeaponType.WarPike, () => NamesMapType.WarpikePart)
         .exhaustive();
+
+export const doesCellFitIntoSlot = (cellSlot: CellType|null, variantName: string|null): boolean => {
+    if (cellSlot === null) {
+        return variantName === null;
+    }
+
+    if (cellSlot === CellType.Prismatic) {
+        return true; // in prismatic slots everything fits
+    }
+
+    if (variantName === null) {
+        return true; // nothing slotted -> always valid
+    }
+
+    const cell = findCellByVariantName(variantName);
+    return cell?.slot === cellSlot;
+}
+
+export const switchAroundWeaponCellsIfNecessary = (build: BuildModel): BuildModel => {
+    const weaponCells = Array.isArray(build.data.weapon?.cells) ?
+        build.data.weapon?.cells ?? [] :
+        [build.data.weapon?.cells ?? null];
+
+    if (build.weaponCell1 !== null && !doesCellFitIntoSlot(weaponCells[0], build.weaponCell1)) {
+        if (doesCellFitIntoSlot(weaponCells[1], build.weaponCell1)) {
+            if (build.weaponCell2 === null || !doesCellFitIntoSlot(weaponCells[1], build.weaponCell2)) {
+                const temp = build.weaponCell2;
+                build.weaponCell2 = build.weaponCell1;
+                build.weaponCell1 = doesCellFitIntoSlot(weaponCells[0], temp) ? temp : null;
+            }
+        } else {
+            build.weaponCell1 = null;
+        }
+    }
+
+    if (build.weaponCell2 !== null && !doesCellFitIntoSlot(weaponCells[1], build.weaponCell2)) {
+        if (doesCellFitIntoSlot(weaponCells[0], build.weaponCell2)) {
+            if (build.weaponCell1 === null || !doesCellFitIntoSlot(weaponCells[0], build.weaponCell1)) {
+                const temp = build.weaponCell1;
+                build.weaponCell1 = build.weaponCell2;
+                build.weaponCell2 = doesCellFitIntoSlot(weaponCells[1], temp) ? temp : null;
+            }
+        } else {
+            build.weaponCell2 = null;
+        }
+    }
+
+    return build;
+}

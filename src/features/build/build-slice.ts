@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { BuildModel, CURRENT_BUILD_ID } from "@src/data/BuildModel";
+import { BuildModel, CURRENT_BUILD_ID, switchAroundWeaponCellsIfNecessary } from "@src/data/BuildModel";
 import { validateBuild } from "@src/data/validate-build";
 import { RootState } from "@src/store";
 import { match } from "ts-pattern";
@@ -65,6 +65,7 @@ export const buildSlice = createSlice({
                         .run();
                 }
             }
+            build = switchAroundWeaponCellsIfNecessary(build);
             build = validateBuild(build);
             console.log("updated build:", build);
             state.build = build.serialize();
