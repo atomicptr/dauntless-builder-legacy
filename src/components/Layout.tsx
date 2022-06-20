@@ -123,7 +123,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                             icon={<Build />}
                             label="Dev Mode"
                             size="small"
-                            sx={{ ml: 1 }}
+                            sx={{ ml: 1, userSelect: "none" }}
                             variant="outlined"
                         />
                     ) : null}
