@@ -23,11 +23,15 @@ export const store = configureStore({
 
 // persist redux state in localStorage
 store.subscribe(() => {
-    const state = Object.fromEntries(
+    persistState(exportState());
+});
+
+export const exportState = () =>
+    Object.fromEntries(
         Object.entries(store.getState()).filter(([key]) => reducersNotToBePersisted.indexOf(key) === -1),
     );
-    localStorage.setItem(stateIdentifier, JSON.stringify(state));
-});
+
+export const persistState = (state: object) => localStorage.setItem(stateIdentifier, JSON.stringify(state));
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

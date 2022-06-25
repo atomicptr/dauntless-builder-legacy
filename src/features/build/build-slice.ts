@@ -68,7 +68,7 @@ export const buildSlice = createSlice({
             }
             build = switchAroundWeaponCellsIfNecessary(build);
             build = validateBuild(build);
-            log.debug("Updated Build", build);
+            log.debug("Updated Build", { build, changePayload: action.payload });
             state.build = build.serialize();
             state.lastEditedBuild = state.build;
         },

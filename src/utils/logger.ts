@@ -9,7 +9,7 @@ export enum LogLevel {
 const MAX_LOCAL_STORAGE_LOGS = 500;
 const LOCAL_STORAGE_KEY = "logs";
 
-class Logger {
+export class Logger {
     private logLevel: LogLevel = LogLevel.Info;
 
     private print(level: LogLevel, message: string, data: object = {}) {
@@ -90,7 +90,7 @@ class Logger {
     }
 
     private static storeLog(level: LogLevel, message: string, data: object) {
-        const logs = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) ?? "[]");
+        const logs = Logger.data();
 
         while (logs.length >= MAX_LOCAL_STORAGE_LOGS) {
             logs.shift();
@@ -106,6 +106,10 @@ class Logger {
         });
 
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(logs));
+    }
+
+    public static data() {
+        return JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) ?? "[]");
     }
 }
 

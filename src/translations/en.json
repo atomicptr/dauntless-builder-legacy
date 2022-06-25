@@ -87,7 +87,12 @@
             "title": "Create a new build"
         },
         "settings": {
+            "data": "Application Data",
+            "data-export": "Export",
+            "data-import": "Import",
+            "data-text": "Dauntless Builder is currently storing all data inside your browser, which means switching devices or browsers will not retain any of your favorite builds and/or other data. In the future we plan to allow some sort of cloud data syncing but until then, you can use Import/Export to backup your data and/or move it between devices.",
             "dev-mode-toggle": "Toggle Developer Mode",
+            "export-logs": "Export logs",
             "general": "General",
             "language": "Language",
             "misc": "Misc",
