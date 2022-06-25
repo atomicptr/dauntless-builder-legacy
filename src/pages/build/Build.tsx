@@ -85,8 +85,6 @@ const Build: React.FC = () => {
     }
 
     const onItemPickerClicked = (itemType: ItemType) => {
-        console.log("clicked", itemType);
-
         const filters = match(itemType)
             .with(ItemType.Weapon, () => [])
             .with(ItemType.Head, () => [filterByArmourType(ArmourType.Head)])

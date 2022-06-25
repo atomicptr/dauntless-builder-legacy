@@ -39,7 +39,7 @@
             }
         ],
         "linebreak-style": "warn",
-        "no-console": "off",
+        "no-console": "error",
         "no-new": "error",
         "no-restricted-imports": [
             "error",

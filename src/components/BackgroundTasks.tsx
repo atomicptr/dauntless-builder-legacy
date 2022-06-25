@@ -1,17 +1,21 @@
 import { BuildModel } from "@src/data/BuildModel";
-import { setDevMode } from "@src/features/configuration/configuration-slice";
+import { selectConfiguration, setDevMode } from "@src/features/configuration/configuration-slice";
 import { addFavorite, isBuildInFavorites, selectFavorites } from "@src/features/favorites/favorites-slice";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
+import log, { LogLevel } from "@src/utils/logger";
 import React, { useEffect } from "react";
 
 const BackgroundTasks: React.FC = () => {
     const dispatch = useAppDispatch();
     const favorites = useAppSelector(selectFavorites);
+    const configuration = useAppSelector(selectConfiguration);
 
     useEffect(() => {
-        // import favorites
+        // import old favorites
         if ("__db_favorites" in localStorage) {
-            Object.entries(JSON.parse(localStorage.getItem("__db_favorites") ?? "{}")).forEach(([buildId, value]) => {
+            const favoritesData = JSON.parse(localStorage.getItem("__db_favorites") ?? "{}");
+            log.debug("Found old Dauntless Builder favorites, will try to import them", { favorites });
+            Object.entries(favoritesData).forEach(([buildId, value]) => {
                 if (BuildModel.isValid(buildId) && !isBuildInFavorites(favorites, buildId)) {
                     const name = value as string;
                     dispatch(addFavorite({ buildId, name }));
@@ -35,6 +39,10 @@ const BackgroundTasks: React.FC = () => {
             },
         );
     });
+
+    useEffect(() => {
+        log.setLogLevel(configuration.devMode ? LogLevel.Debug : LogLevel.Info);
+    }, [configuration.devMode]);
 
     return null;
 };
