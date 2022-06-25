@@ -1,17 +1,6 @@
 import { Delete, Edit, KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
-import {
-    Box,
-    Button,
-    Card,
-    CardActionArea,
-    CardContent,
-    Dialog,
-    DialogActions,
-    DialogContent,
-    DialogTitle,
-    Stack,
-    TextField,
-} from "@mui/material";
+import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, Stack, TextField } from "@mui/material";
+import BuildCard from "@src/components/BuildCard";
 import PageTitle from "@src/components/PageTitle";
 import {
     Favorite,
@@ -24,7 +13,6 @@ import {
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
 
 const Favorites: React.FC = () => {
     const dispatch = useAppDispatch();
@@ -67,6 +55,7 @@ const Favorites: React.FC = () => {
                     <Stack
                         direction="column"
                         spacing={1}
+                        sx={{ justifyContent: "center" }}
                     >
                         <Button
                             disabled={index === 0}
@@ -81,18 +70,14 @@ const Favorites: React.FC = () => {
                             <KeyboardArrowDown />
                         </Button>
                     </Stack>
-                    <Card sx={{ flexGrow: 10 }}>
-                        <CardActionArea
-                            component={NavLink}
-                            sx={{ height: "100%" }}
-                            to={`/b/${fav.buildId}`}
-                        >
-                            <CardContent>{fav.name}</CardContent>
-                        </CardActionArea>
-                    </Card>
+                    <BuildCard
+                        buildId={fav.buildId}
+                        title={fav.name}
+                    />
                     <Stack
                         direction="column"
                         spacing={1}
+                        sx={{ justifyContent: "center" }}
                     >
                         <Button onClick={() => openDialog(fav)}>
                             <Edit />

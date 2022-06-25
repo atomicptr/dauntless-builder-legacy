@@ -1,12 +1,11 @@
-import { Box, Card, CardActionArea, CardContent, Grid, Stack, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
+import BuildCard from "@src/components/BuildCard";
 import PageTitle from "@src/components/PageTitle";
-import { BuildModel } from "@src/data/BuildModel";
 import { selectConfiguration } from "@src/features/configuration/configuration-slice";
 import { selectFavorites } from "@src/features/favorites/favorites-slice";
 import { useAppSelector } from "@src/hooks/redux";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
 
 const numberOfBuilds = 5;
 
@@ -68,18 +67,12 @@ const Home: React.FC = () => {
 
                         <Stack spacing={1}>
                             {favorites.slice(0, numberOfBuilds).map((fav, index) => (
-                                <Card
+                                <BuildCard
                                     key={index}
-                                    sx={{ flexGrow: 10 }}
-                                >
-                                    <CardActionArea
-                                        component={NavLink}
-                                        sx={{ height: "100%" }}
-                                        to={`/b/${fav.buildId}`}
-                                    >
-                                        <CardContent>{fav.name}</CardContent>
-                                    </CardActionArea>
-                                </Card>
+                                    buildId={fav.buildId}
+                                    miniMode
+                                    title={fav.name}
+                                />
                             ))}
                         </Stack>
                     </>
@@ -102,25 +95,14 @@ const Home: React.FC = () => {
                             spacing={1}
                             sx={{ mt: "0 !important" }}
                         >
-                            {testBuilds.map((buildId, index) => {
-                                const build = BuildModel.deserialize(buildId);
-                                return (
-                                    <Card
-                                        key={index}
-                                        sx={{ flexGrow: 10 }}
-                                    >
-                                        <CardActionArea
-                                            component={NavLink}
-                                            sx={{ height: "100%" }}
-                                            to={`/b/${buildId}`}
-                                        >
-                                            <CardContent>
-                                                {`Test Build #${index + 1}: ${build.omnicell} / ${build.weaponName}`}
-                                            </CardContent>
-                                        </CardActionArea>
-                                    </Card>
-                                );
-                            })}
+                            {testBuilds.map((buildId, index) => (
+                                <BuildCard
+                                    key={index}
+                                    buildId={buildId}
+                                    miniMode
+                                    title={`Test Build #${index + 1}: {{omnicellName}} / {{weaponName}}`}
+                                />
+                            ))}
                         </Stack>
                     </Stack>
                 ) : null}
