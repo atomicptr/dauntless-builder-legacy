@@ -38,7 +38,7 @@ const BackgroundTasks: React.FC = () => {
                 }
             },
         );
-    });
+    }, [dispatch, favorites]);
 
     useEffect(() => {
         log.setLogLevel(configuration.devMode ? LogLevel.Debug : LogLevel.Info);

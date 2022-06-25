@@ -33,6 +33,7 @@ const About: React.FC = () => {
 
     const renderContributor = (contributor: Contributor) => (
         <Grid
+            key={contributor.login}
             item
             md={4}
             xs={12}
@@ -64,6 +65,7 @@ const About: React.FC = () => {
 
     const renderDependency = (dependency: Dependency) => (
         <Grid
+            key={dependency.name}
             item
             md={6}
             xs={12}
