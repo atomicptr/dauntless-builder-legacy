@@ -18,7 +18,7 @@ import OmnicellCard from "@src/components/OmnicellCard";
 import PageTitle from "@src/components/PageTitle";
 import PartPicker from "@src/components/PartPicker";
 import PerkFilter from "@src/components/PerkFilter";
-import PerkList from "@src/components/PerkList";
+import PerkList, { perkData } from "@src/components/PerkList";
 import PerkListMobile from "@src/components/PerkListMobile";
 import UniqueEffectCard from "@src/components/UniqueEffectCard";
 import WeaponTypeFilter from "@src/components/WeaponTypeFilter";
@@ -38,6 +38,7 @@ import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import { defaultBuildName } from "@src/utils/default-build-name";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
 import { match } from "ts-pattern";
@@ -239,6 +240,51 @@ const Build: React.FC = () => {
                 hidden
                 title={buildName}
             />
+
+            <Helmet>
+                <meta
+                    content="Dauntless Builder"
+                    property="og:site_name"
+                />
+                <meta
+                    content={defaultBuildName(build, true)}
+                    property="og:title"
+                />
+                <meta
+                    content={(() => {
+                        const result =
+                            "⚔️ " +
+                            [
+                                build.data.head?.name,
+                                build.data.torso?.name,
+                                build.data.arms?.name,
+                                build.data.legs?.name,
+                                ...perkData(build)
+                                    .filter(perk => perk.count >= 4)
+                                    .map(perk => `+${perk.count} ${perk.name}`),
+                            ]
+                                .filter(p => !!p)
+                                .join(", ");
+
+                        if (result.length < 10) {
+                            return "Create and share Dauntless builds with your friends!";
+                        }
+
+                        if (result.length > 140) {
+                            return result.substring(0, 137) + "...";
+                        }
+
+                        return result;
+                    })()}
+                    property="og:description"
+                />
+                <meta
+                    content={`https://www.dauntless-builder.com${
+                        build.data.weapon?.icon ?? build.data.omnicell?.icon ?? "/assets/icon.png"
+                    }`}
+                    property="og:image"
+                />
+            </Helmet>
 
             <BuildWarning />
 
