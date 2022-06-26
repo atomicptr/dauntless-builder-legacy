@@ -32,6 +32,7 @@ import { Omnicell } from "@src/data/Omnicell";
 import { Part, partBuildIdentifier, PartType, partTypeData } from "@src/data/Part";
 import { Weapon, weaponBuildIdentifier, WeaponType } from "@src/data/Weapon";
 import { selectBuild, setBuildId, updateBuild } from "@src/features/build/build-slice";
+import { selectConfiguration } from "@src/features/configuration/configuration-slice";
 import { resetFilter, setWeaponTypeFilter } from "@src/features/item-select-filter/item-select-filter-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
@@ -64,6 +65,7 @@ const Build: React.FC = () => {
 
     const dispatch = useAppDispatch();
     const build = useAppSelector(selectBuild);
+    const configuration = useAppSelector(selectConfiguration);
 
     const [itemDialogOpen, setItemDialogOpen] = useState<boolean>(false);
     const [cellDialogOpen, setCellDialogOpen] = useState<boolean>(false);
@@ -439,6 +441,12 @@ const Build: React.FC = () => {
                     sx={{ width: isMobile ? "100%" : undefined }}
                 >
                     {isMobile ? <PerkListMobile /> : <PerkList />}
+
+                    {configuration.devMode ? (
+                        <pre>
+                            <code>{JSON.stringify(build, null, "    ")}</code>
+                        </pre>
+                    ) : null}
                 </Grid>
             </Grid>
 
