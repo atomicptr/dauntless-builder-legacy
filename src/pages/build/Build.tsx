@@ -96,6 +96,10 @@ const Build: React.FC = () => {
             .with(ItemType.Legs, () => [filterByArmourType(ArmourType.Legs)])
             .otherwise(() => []);
 
+        if (itemType === ItemType.Weapon && build.data.weapon !== null) {
+            dispatch(setWeaponTypeFilter([build.data.weapon.type]));
+        }
+
         setPickerSelection({ filters, itemType });
         setItemDialogOpen(true);
     };
