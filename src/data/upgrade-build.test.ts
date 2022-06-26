@@ -1,7 +1,6 @@
-import {convertVersion3To4, upgradeBuild} from "@src/data/upgrade-build";
+import { BuildModel, CURRENT_BUILD_ID, HASHIDS_SALT } from "@src/data/BuildModel";
+import { convertVersion3To4, upgradeBuild } from "@src/data/upgrade-build";
 import Hashids from "hashids";
-import {BuildModel, CURRENT_BUILD_ID, HASHIDS_SALT} from "@src/data/BuildModel";
-
 
 describe("upgrading builds", () => {
     // TODO: get builds for the missing versions and some edge cases
@@ -21,5 +20,5 @@ describe("upgrading builds", () => {
 
         const data = hashids.decode(upgradedBuildId);
         expect(data[0]).toBe(CURRENT_BUILD_ID);
-    })
-})
+    });
+});

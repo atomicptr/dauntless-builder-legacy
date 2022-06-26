@@ -1,7 +1,6 @@
-import {BuildModel, findArmourByName, findLanternByName, findWeaponByName} from "@src/data/BuildModel";
-import {markBuildInvalid} from "@src/data/validate-build";
+import { BuildModel } from "@src/data/BuildModel";
 
-export const validateSubslotsEmpty = (build: BuildModel, _markBuildInvalidOnFailure: boolean = false): BuildModel => {
+export const validateSubslotsEmpty = (build: BuildModel, _markBuildInvalidOnFailure = false): BuildModel => {
     if (build.weaponName === null) {
         build.weaponSurged = false;
         build.weaponCell1 = null;

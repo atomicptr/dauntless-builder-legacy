@@ -1,5 +1,6 @@
-import {Language} from "@src/i18n";
-import {CellType} from "./Cell";
+import { Language } from "@src/i18n";
+
+import { CellType } from "./Cell";
 
 export interface PerkValue {
     name: string;
@@ -10,15 +11,15 @@ export interface PerkValue {
 export interface Perk {
     name: string;
     description: string;
-    type: CellType,
+    type: CellType;
     effects: {
         [index: string]: {
-            description: string|string[];
+            description: string | string[];
             values?: {
                 [key: string]: string;
-            }
-        }
-    }
+            };
+        };
+    };
 
     i18n?: {
         [language in Language]: {
@@ -26,10 +27,9 @@ export interface Perk {
             description?: string;
             effects: {
                 [index: string]: {
-                    description?: string|string[];
-                }
-            }
-        }
-    }
+                    description?: string | string[];
+                };
+            };
+        };
+    };
 }
-

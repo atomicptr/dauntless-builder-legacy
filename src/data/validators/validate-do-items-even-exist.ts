@@ -1,12 +1,12 @@
 import {
     BuildModel,
-    findArmourByName, findCellByVariantName,
+    findArmourByName,
+    findCellByVariantName,
     findLanternByName,
-    findOmnicellByName, findPartByName,
-    findWeaponByName
+    findOmnicellByName,
+    findWeaponByName,
 } from "@src/data/BuildModel";
-import {markBuildInvalid} from "@src/data/validate-build";
-import {Weapon} from "@src/data/Weapon";
+import { markBuildInvalid } from "@src/data/validate-build";
 
 export const validateDoItemsEvenExist = (build: BuildModel, markBuildInvalidOnFailure: boolean): BuildModel => {
     if (build.weaponName !== null) {
@@ -147,4 +147,4 @@ export const validateDoItemsEvenExist = (build: BuildModel, markBuildInvalidOnFa
     }
 
     return build;
-}
+};

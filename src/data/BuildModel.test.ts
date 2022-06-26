@@ -9,11 +9,11 @@ import {
     findPerkByName,
     findWeaponByName,
     mapIdByName,
-    partTypeByWeaponType
+    partTypeByWeaponType,
 } from "@src/data/BuildModel";
-import {WeaponType} from "@src/data/Weapon";
-import {PartType} from "@src/data/Part";
-import {NamesMapType} from "@src/data/NamesMap";
+import { NamesMapType } from "@src/data/NamesMap";
+import { PartType } from "@src/data/Part";
+import { WeaponType } from "@src/data/Weapon";
 
 describe("parse build (v6): YwfzTb6sgCRwU8NsZTmTKTzUPrcJC43ta5C0CQBh8eU0CvAI3whxCxXswFMvFX", () => {
     const buildId = "YwfzTb6sgCRwU8NsZTmTKTzUPrcJC43ta5C0CQBh8eU0CvAI3whxCxXswFMvFX";
@@ -133,11 +133,11 @@ describe("parse build without weapon (v6): nNfqTxTzTXTVTnTzTjTOTV6HxC3pUMefPCnEH
 
         expect(build.weaponName).toBeNull();
         expect(build.headName).not.toBeNull();
-    })
+    });
 
     it("build.part should return null", () => {
         const buildId = "NBf2T5TpTyTqTWTYT4TnTJ8ImCA5FgqHBCKnHrsWCk1uK3HgC5efZF8As5";
-        const build = BuildModel.tryDeserialize("NBf2T5TpTyTqTWTYT4TnTJ8ImCA5FgqHBCKnHrsWCk1uK3HgC5efZF8As5");
+        const build = BuildModel.tryDeserialize(buildId);
         expect(build.data.parts).toBeNull();
     });
 });
@@ -147,15 +147,15 @@ describe("parse invalid build", () => {
 
     it("should not be valid", () => {
         expect(BuildModel.isValid(buildId)).toBeFalsy();
-    })
+    });
 
     it("should not deserialize", () => {
         expect(BuildModel.tryDeserialize(buildId).serialize()).toBe(BuildModel.empty().serialize());
-    })
+    });
 
     it("build.part should return null with an invalid weapon set", () => {
         const buildId = "NBf2T5TpTyTqTWTYT4TnTJ8ImCA5FgqHBCKnHrsWCk1uK3HgC5efZF8As5";
-        const build = BuildModel.tryDeserialize("NBf2T5TpTyTqTWTYT4TnTJ8ImCA5FgqHBCKnHrsWCk1uK3HgC5efZF8As5");
+        const build = BuildModel.tryDeserialize(buildId);
         build.weaponName = "Shrike Legs";
         expect(build.data.parts).toBeNull();
     });
@@ -171,7 +171,7 @@ describe("find* functions", () => {
         it("should return null on invalid name", () => {
             expect(findWeaponByName("Shrike Legs")).toBeNull();
         });
-    })
+    });
 
     describe("find omnicell by name", () => {
         it("should return an omnicell object", () => {
@@ -182,7 +182,7 @@ describe("find* functions", () => {
         it("should return null on invalid name", () => {
             expect(findOmnicellByName("Shrike Cell")).toBeNull();
         });
-    })
+    });
 
     describe("find armour by name", () => {
         it("should return an armour object", () => {
@@ -193,7 +193,7 @@ describe("find* functions", () => {
         it("should return null on invalid name", () => {
             expect(findArmourByName("Shrike Cell")).toBeNull();
         });
-    })
+    });
 
     describe("find lantern by name", () => {
         it("should return an lantern object", () => {
@@ -204,7 +204,7 @@ describe("find* functions", () => {
         it("should return null on invalid name", () => {
             expect(findLanternByName("Shrike Cell")).toBeNull();
         });
-    })
+    });
 
     describe("find perk by name", () => {
         it("should return an perk object", () => {
@@ -215,7 +215,7 @@ describe("find* functions", () => {
         it("should return null on invalid name", () => {
             expect(findPerkByName("Shrike Cell")).toBeNull();
         });
-    })
+    });
 
     describe("find part by name", () => {
         it("should return an part object", () => {
@@ -226,7 +226,7 @@ describe("find* functions", () => {
         it("should return null on invalid combination", () => {
             expect(findPartByName(WeaponType.Repeater, PartType.Special, "Ardent Cyclone")).toBeNull();
         });
-    })
+    });
 
     describe("find part in build", () => {
         it("should return a warpike mod", () => {
@@ -239,12 +239,12 @@ describe("find* functions", () => {
             const build = BuildModel.tryDeserialize("yKfETegfBCdyCEXsoSYhpIv8u7UbCXMUeyH7CWvUZUJCVECjbhwC6OuQFgRSB");
             const part = findPartInBuild(WeaponType.Repeater, PartType.Chamber, build);
             expect(part?.name).toBe("Marksman Chamber");
-        })
+        });
 
         it("should not return an axe grip", () => {
             const build = BuildModel.tryDeserialize("MRfWT56hXCYJUn4CycWt8TZIrF5CKKUq7czC11Ur3cKCjKHJnT6C68ujF7PHj");
             expect(findPartInBuild(WeaponType.Axe, PartType.Grip, build)).toBeNull();
-        })
+        });
     });
 
     describe("find cell by variant name", () => {
@@ -268,5 +268,5 @@ describe("map id by name", () => {
 describe("determine map part type by weapon type", () => {
     it("should map WeaponType.ChainBlades to NamesMapType.ChainbladesPart", () => {
         expect(partTypeByWeaponType(WeaponType.ChainBlades)).toBe(NamesMapType.ChainbladesPart);
-    })
-})
+    });
+});

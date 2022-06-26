@@ -1,5 +1,5 @@
-import {match, P} from "ts-pattern";
 import dauntlessBuilderData from "@src/data/Data";
+import { match, P } from "ts-pattern";
 
 export enum ItemType {
     Weapon,

@@ -1,10 +1,11 @@
-import {Language} from "@src/i18n";
-import {CellType} from "./Cell";
-import {ElementalType} from "./ElementalType";
-import {PerkValue} from "./Perks";
-import {UniqueEffect} from "./UniqueEffect";
-import {match} from "ts-pattern";
-import {ItemRarity} from "./ItemRarity";
+import { Language } from "@src/i18n";
+import { match } from "ts-pattern";
+
+import { CellType } from "./Cell";
+import { ElementalType } from "./ElementalType";
+import { ItemRarity } from "./ItemRarity";
+import { PerkValue } from "./Perks";
+import { UniqueEffect } from "./UniqueEffect";
 
 export enum WeaponType {
     AetherStrikers = "Aether Strikers",
@@ -22,8 +23,8 @@ export enum DamageType {
 }
 
 export interface PowerLevel {
-    base: number,
-    powerSurged?: number,
+    base: number;
+    powerSurged?: number;
 }
 
 export interface Weapon {
@@ -32,8 +33,8 @@ export interface Weapon {
     icon: string;
     type: WeaponType;
     damage: DamageType;
-    elemental: ElementalType|null;
-    cells: CellType|CellType[]|null;
+    elemental: ElementalType | null;
+    cells: CellType | CellType[] | null;
     power: PowerLevel;
     bond?: {
         elemental: ElementalType;
@@ -47,14 +48,14 @@ export interface Weapon {
             name?: string;
             description?: string;
             unique_effects: {
-                name?: string,
-                description?: string
-            }[]
-        }
-    }
+                name?: string;
+                description?: string;
+            }[];
+        };
+    };
 }
 
-export type WeaponName = "aetherstrikers"|"axe"|"chainblades"|"hammer"|"repeater"|"sword"|"warpike";
+export type WeaponName = "aetherstrikers" | "axe" | "chainblades" | "hammer" | "repeater" | "sword" | "warpike";
 
 export const weaponBuildIdentifier = (weaponType: WeaponType): WeaponName =>
     match<WeaponType, WeaponName>(weaponType)

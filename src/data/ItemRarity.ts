@@ -1,5 +1,5 @@
-import {Weapon} from "./Weapon";
-import {Armour} from "./Armour";
+import { Armour } from "./Armour";
+import { Weapon } from "./Weapon";
 
 export enum ItemRarity {
     Uncommon = "uncommon",
@@ -8,5 +8,4 @@ export enum ItemRarity {
     Exotic = "exotic",
 }
 
-export const isExotic = (item: Weapon|Armour): boolean =>
-    item.rarity === ItemRarity.Exotic;
+export const isExotic = (item: Weapon | Armour): boolean => item.rarity === ItemRarity.Exotic;

@@ -1,12 +1,13 @@
+import { BuildFlags, BuildModel, CURRENT_BUILD_ID, HASHIDS_SALT } from "@src/data/BuildModel";
 import Hashids from "hashids";
-import {BuildFlags, BuildModel, CURRENT_BUILD_ID, HASHIDS_SALT} from "@src/data/BuildModel";
-import {validateBuild} from "@src/data/validate-build";
 
 export const convertVersion2To3 = (version2BuildId: string): string => {
     const hashids = new Hashids(HASHIDS_SALT);
 
     const numbers = hashids.decode(version2BuildId);
 
+    /* eslint-disable sort-keys */
+    /* eslint-disable sort-keys-fix/sort-keys-fix */
     const data = {
         __version: 3,
         weapon_name: numbers[1],
@@ -32,16 +33,20 @@ export const convertVersion2To3 = (version2BuildId: string): string => {
         legs_level: numbers[27],
         legs_cell: numbers[28],
         lantern_name: numbers[29],
-        lantern_cell: numbers[30]
+        lantern_cell: numbers[30],
     };
+    /* eslint-enable sort-keys */
+    /* eslint-enable sort-keys-fix/sort-keys-fix */
     return hashids.encode(Object.values(data));
-}
+};
 
 export const convertVersion3To4 = (version3BuildId: string): string => {
     const hashids = new Hashids(HASHIDS_SALT);
 
     const numbers = hashids.decode(version3BuildId);
 
+    /* eslint-disable sort-keys */
+    /* eslint-disable sort-keys-fix/sort-keys-fix */
     const data = {
         __version: 4,
         weapon_name: numbers[1],
@@ -70,8 +75,10 @@ export const convertVersion3To4 = (version3BuildId: string): string => {
         lantern_cell: numbers[24],
         omnicell: 0,
     };
+    /* eslint-enable sort-keys */
+    /* eslint-enable sort-keys-fix/sort-keys-fix */
     return hashids.encode(Object.values(data));
-}
+};
 
 export const convertVersion4To5 = (version4BuildId: string): string => {
     const hashids = new Hashids(HASHIDS_SALT);
@@ -83,6 +90,8 @@ export const convertVersion4To5 = (version4BuildId: string): string => {
         return version4BuildId;
     }
 
+    /* eslint-disable sort-keys */
+    /* eslint-disable sort-keys-fix/sort-keys-fix */
     const data = {
         __version: 5,
         weapon_name: numbers[1],
@@ -109,6 +118,8 @@ export const convertVersion4To5 = (version4BuildId: string): string => {
         lantern_cell: numbers[24],
         omnicell: numbers[25],
     };
+    /* eslint-enable sort-keys */
+    /* eslint-enable sort-keys-fix/sort-keys-fix */
 
     // replace old modular Repeater with Recruits Repeater
     const modularRepeaterWeaponId = 27;
@@ -123,13 +134,15 @@ export const convertVersion4To5 = (version4BuildId: string): string => {
     }
 
     return hashids.encode(Object.values(data));
-}
+};
 
 export const convertVersion5To6 = (version6BuildId: string): string => {
     const hashids = new Hashids(HASHIDS_SALT);
 
     const numbers = hashids.decode(version6BuildId);
 
+    /* eslint-disable sort-keys */
+    /* eslint-disable sort-keys-fix/sort-keys-fix */
     const data = {
         __version: 6,
         __flags: 0,
@@ -157,9 +170,11 @@ export const convertVersion5To6 = (version6BuildId: string): string => {
         lantern_cell: numbers[22],
         omnicell: numbers[23],
     };
+    /* eslint-enable sort-keys */
+    /* eslint-enable sort-keys-fix/sort-keys-fix */
 
     return hashids.encode(Object.values(data));
-}
+};
 
 export const upgradeBuild = (buildId: string): string => {
     const hashids = new Hashids(HASHIDS_SALT);

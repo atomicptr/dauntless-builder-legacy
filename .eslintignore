@@ -1,6 +1,6 @@
-node_modules
-data
-dist
-public
-test
-scripts
+/node_modules
+/data
+/dist
+/public
+/test
+/scripts

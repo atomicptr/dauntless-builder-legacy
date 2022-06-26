@@ -4,6 +4,5 @@ export enum ElementalType {
     Blaze = "Blaze",
     Frost = "Frost",
     Radiant = "Radiant",
-    Umbral = "Umbral"
+    Umbral = "Umbral",
 }
-

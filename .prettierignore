@@ -1,5 +1,5 @@
-node_modules
-data
-dist
-public
-vite.config.ts
+/node_modules
+/data
+/dist
+/public
+/vite.config.ts

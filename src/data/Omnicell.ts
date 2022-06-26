@@ -1,4 +1,4 @@
-import {Language} from "@src/i18n";
+import { Language } from "@src/i18n";
 
 export interface Omnicell {
     name: string;
@@ -12,6 +12,6 @@ export interface Omnicell {
             name?: string;
             passive?: string;
             active?: string;
-        }
-    }
+        };
+    };
 }

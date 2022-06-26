@@ -1,5 +1,5 @@
-import {Language} from "@src/i18n";
-import {ItemRarity} from "@src/data/ItemRarity";
+import { ItemRarity } from "@src/data/ItemRarity";
+import { Language } from "@src/i18n";
 
 export enum CellType {
     Prismatic = "Prismatic",
@@ -7,7 +7,7 @@ export enum CellType {
     Brutality = "Brutality",
     Finesse = "Finesse",
     Fortitude = "Fortitude",
-    Insight = "Insight"
+    Insight = "Insight",
 }
 
 export interface Cell {
@@ -18,14 +18,14 @@ export interface Cell {
             rarity: ItemRarity;
             perks: {
                 [perkName: string]: number;
-            }
-        }
-    }
+            };
+        };
+    };
 
     i18n?: {
         [language in Language]: {
             name?: string;
             variants?: string[];
-        }
-    }
+        };
+    };
 }

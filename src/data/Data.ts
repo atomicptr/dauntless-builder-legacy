@@ -1,21 +1,22 @@
 import dataJson from "@src/data/data.json";
-import {Armour} from "./Armour";
-import {Cell} from "./Cell";
-import {Lantern} from "./Lantern";
-import {Omnicell} from "./Omnicell";
-import {Part} from "./Part";
-import {Perk} from "./Perks";
-import {Weapon} from "./Weapon";
+
+import { Armour } from "./Armour";
+import { Cell } from "./Cell";
+import { Lantern } from "./Lantern";
+import { Omnicell } from "./Omnicell";
+import { Part } from "./Part";
+import { Perk } from "./Perks";
+import { Weapon } from "./Weapon";
 
 export type DauntlessBuilderDataIndex =
-    "armours" |
-    "cells" |
-    "lanterns" |
-    "perks" |
-    "weapons" |
-    "parts" |
-    "omnicells" |
-    "misc";
+    | "armours"
+    | "cells"
+    | "lanterns"
+    | "perks"
+    | "weapons"
+    | "parts"
+    | "omnicells"
+    | "misc";
 
 export interface RegularWeaponParts {
     mods: {
@@ -40,10 +41,10 @@ export interface RepeaterParts {
 
 interface DauntlessBuilderData {
     armours: {
-        [name: string]: Armour,
+        [name: string]: Armour;
     };
     cells: {
-        [name: string]: Cell,
+        [name: string]: Cell;
     };
     lanterns: {
         [name: string]: Lantern;
@@ -62,14 +63,14 @@ interface DauntlessBuilderData {
         sword: RegularWeaponParts;
         repeater: RepeaterParts;
         warpike: RegularWeaponParts;
-    },
+    };
     omnicells: {
         [name: string]: Omnicell;
-    }
+    };
     misc: {
         dauntless_version: string;
         patchnotes_version_string: string;
-    }
+    };
 }
 
 const dauntlessBuilderData: DauntlessBuilderData = dataJson as unknown as DauntlessBuilderData;

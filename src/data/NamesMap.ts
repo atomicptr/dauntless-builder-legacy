@@ -24,4 +24,3 @@ import namesJson from "@map/names.json";
 const dauntlessBuilderNamesMap: NamesMap = namesJson;
 
 export default dauntlessBuilderNamesMap;
-

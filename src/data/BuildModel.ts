@@ -1,18 +1,18 @@
+import { ArmourItemType, ItemType } from "@src/data/ItemType";
+import { upgradeBuild } from "@src/data/upgrade-build";
+import { validateBuild } from "@src/data/validate-build";
 import Hashids from "hashids";
+import { match } from "ts-pattern";
 
+import { Armour } from "./Armour";
+import { Cell, CellType } from "./Cell";
 import dauntlessBuilderData from "./Data";
-import dauntlessBuilderNamesMap, {NamesMapType} from "./NamesMap";
-import {Weapon, WeaponType} from "./Weapon";
-import {Omnicell} from "./Omnicell";
-import {Armour} from "./Armour";
-import {Lantern} from "./Lantern";
-import {Perk} from "./Perks";
-import {Cell, CellType} from "./Cell";
-import {match} from "ts-pattern";
-import {Part, PartType} from "./Part";
-import {ArmourItemType, ItemType} from "@src/data/ItemType";
-import {upgradeBuild} from "@src/data/upgrade-build";
-import {validateBuild} from "@src/data/validate-build";
+import { Lantern } from "./Lantern";
+import dauntlessBuilderNamesMap, { NamesMapType } from "./NamesMap";
+import { Omnicell } from "./Omnicell";
+import { Part, PartType } from "./Part";
+import { Perk } from "./Perks";
+import { Weapon, WeaponType } from "./Weapon";
 
 export const HASHIDS_SALT = "spicy";
 export const CURRENT_BUILD_ID = 6;
@@ -55,41 +55,41 @@ enum BuildFields {
 export class BuildModel {
     public version: number = CURRENT_BUILD_ID;
     public flags = 0;
-    public weaponName: string|null = null;
-    public weaponSurged: boolean = true;
-    public weaponPart1: string|null = null;
-    public weaponPart2: string|null = null;
-    public weaponPart3: string|null = null;
-    public bondWeapon: string|null = null;
-    public weaponCell1: string|null = null;
-    public weaponCell2: string|null = null;
-    public torsoName: string|null = null;
-    public torsoSurged: boolean = true;
-    public torsoCell: string|null = null;
-    public armsName: string|null = null;
-    public armsSurged: boolean = true;
-    public armsCell: string|null = null;
-    public legsName: string|null = null;
-    public legsSurged: boolean = true;
-    public legsCell: string|null = null;
-    public headName: string|null = null;
-    public headSurged: boolean = true;
-    public headCell: string|null = null;
-    public lantern: string|null = null;
-    public lanternCell: string|null = null;
-    public omnicell: string|null = null;
+    public weaponName: string | null = null;
+    public weaponSurged = true;
+    public weaponPart1: string | null = null;
+    public weaponPart2: string | null = null;
+    public weaponPart3: string | null = null;
+    public bondWeapon: string | null = null;
+    public weaponCell1: string | null = null;
+    public weaponCell2: string | null = null;
+    public torsoName: string | null = null;
+    public torsoSurged = true;
+    public torsoCell: string | null = null;
+    public armsName: string | null = null;
+    public armsSurged = true;
+    public armsCell: string | null = null;
+    public legsName: string | null = null;
+    public legsSurged = true;
+    public legsCell: string | null = null;
+    public headName: string | null = null;
+    public headSurged = true;
+    public headCell: string | null = null;
+    public lantern: string | null = null;
+    public lanternCell: string | null = null;
+    public omnicell: string | null = null;
 
     get data() {
         return {
-            omnicell: this.omnicell !== null ? findOmnicellByName(this.omnicell) : null,
-            weapon: this.weaponName !== null ? findWeaponByName(this.weaponName) : null,
-            head: this.headName !== null ? findArmourByName(this.headName) : null,
-            torso: this.torsoName !== null ? findArmourByName(this.torsoName) : null,
             arms: this.armsName !== null ? findArmourByName(this.armsName) : null,
-            legs: this.legsName !== null ? findArmourByName(this.legsName) : null,
-            lantern: this.lantern !== null ? findLanternByName(this.lantern) : null,
-            parts: this.partData,
             bondWeapon: this.bondWeapon !== null ? findWeaponByName(this.bondWeapon) : null,
+            head: this.headName !== null ? findArmourByName(this.headName) : null,
+            lantern: this.lantern !== null ? findLanternByName(this.lantern) : null,
+            legs: this.legsName !== null ? findArmourByName(this.legsName) : null,
+            omnicell: this.omnicell !== null ? findOmnicellByName(this.omnicell) : null,
+            parts: this.partData,
+            torso: this.torsoName !== null ? findArmourByName(this.torsoName) : null,
+            weapon: this.weaponName !== null ? findWeaponByName(this.weaponName) : null,
         };
     }
 
@@ -106,9 +106,9 @@ export class BuildModel {
 
         if (weapon.type === WeaponType.Repeater) {
             return {
-                mod: findPartInBuild(weapon.type, PartType.Mod, this),
-                grip: findPartInBuild(weapon.type, PartType.Grip, this),
                 chamber: findPartInBuild(weapon.type, PartType.Chamber, this),
+                grip: findPartInBuild(weapon.type, PartType.Grip, this),
+                mod: findPartInBuild(weapon.type, PartType.Mod, this),
             };
         }
 
@@ -171,7 +171,7 @@ export class BuildModel {
     public static deserialize(buildId: string): BuildModel {
         const data = hashids.decode(buildId) as number[];
 
-        const nameById = (type: NamesMapType, id: number): string|null => {
+        const nameById = (type: NamesMapType, id: number): string | null => {
             if (id === 0) {
                 return null;
             }
@@ -222,13 +222,13 @@ export class BuildModel {
         return build;
     }
 
-    public static tryDeserialize(buildId: string|null): BuildModel {
+    public static tryDeserialize(buildId: string | null): BuildModel {
         if (buildId === null || !BuildModel.isValid(buildId)) {
             return BuildModel.empty();
         }
 
         buildId = upgradeBuild(buildId);
-        let build = BuildModel.deserialize(buildId);
+        const build = BuildModel.deserialize(buildId);
 
         return validateBuild(build, true);
     }
@@ -251,7 +251,7 @@ export class BuildModel {
     }
 }
 
-export const findItem = (itemType: ItemType, name: string): Weapon|Omnicell|Armour|Lantern|Perk|Cell|null =>
+export const findItem = (itemType: ItemType, name: string): Weapon | Omnicell | Armour | Lantern | Perk | Cell | null =>
     match(itemType)
         .with(ItemType.Weapon, () => findWeaponByName(name))
         .with(ArmourItemType, () => findArmourByName(name))
@@ -260,25 +260,25 @@ export const findItem = (itemType: ItemType, name: string): Weapon|Omnicell|Armo
         .with(ItemType.Cell, () => findCellByName(name))
         .run();
 
-export const findWeaponByName = (name: string): Weapon|null =>
+export const findWeaponByName = (name: string): Weapon | null =>
     name in dauntlessBuilderData.weapons ? dauntlessBuilderData.weapons[name] : null;
 
-export const findOmnicellByName = (name: string): Omnicell|null =>
+export const findOmnicellByName = (name: string): Omnicell | null =>
     name in dauntlessBuilderData.omnicells ? dauntlessBuilderData.omnicells[name] : null;
 
-export const findArmourByName = (name: string): Armour|null =>
+export const findArmourByName = (name: string): Armour | null =>
     name in dauntlessBuilderData.armours ? dauntlessBuilderData.armours[name] : null;
 
-export const findLanternByName = (name: string): Lantern|null =>
+export const findLanternByName = (name: string): Lantern | null =>
     name in dauntlessBuilderData.lanterns ? dauntlessBuilderData.lanterns[name] : null;
 
-export const findPerkByName = (name: string): Perk|null =>
+export const findPerkByName = (name: string): Perk | null =>
     name in dauntlessBuilderData.perks ? dauntlessBuilderData.perks[name] : null;
 
-export const findCellByName = (name: string): Cell|null =>
+export const findCellByName = (name: string): Cell | null =>
     name in dauntlessBuilderData.cells ? dauntlessBuilderData.cells[name] : null;
 
-export const findPartByName = (weaponType: WeaponType, partType: PartType, name: string): Part|null => {
+export const findPartByName = (weaponType: WeaponType, partType: PartType, name: string): Part | null => {
     // there is probably a better way to do this while making the typescript compiler happy
     return match(weaponType)
         .with(WeaponType.AetherStrikers, () => {
@@ -363,26 +363,29 @@ export const findPartByName = (weaponType: WeaponType, partType: PartType, name:
             return null;
         })
         .run();
-}
+};
 
-export const findPartSlotName = (weaponType: WeaponType, partType: PartType): "weaponPart1"|"weaponPart2"|"weaponPart3"|null => {
+export const findPartSlotName = (
+    weaponType: WeaponType,
+    partType: PartType,
+): "weaponPart1" | "weaponPart2" | "weaponPart3" | null => {
     const isRepeater = weaponType === WeaponType.Repeater;
     return match(partType)
-        .with(PartType.Mod, () => isRepeater ? "weaponPart3" : "weaponPart2")
-        .with(PartType.Special, () => isRepeater ? null : "weaponPart1")
-        .with(PartType.Chamber, () => isRepeater ? "weaponPart1" : null )
-        .with(PartType.Grip, () => isRepeater ? "weaponPart2" : null )
+        .with(PartType.Mod, () => (isRepeater ? "weaponPart3" : "weaponPart2"))
+        .with(PartType.Special, () => (isRepeater ? null : "weaponPart1"))
+        .with(PartType.Chamber, () => (isRepeater ? "weaponPart1" : null))
+        .with(PartType.Grip, () => (isRepeater ? "weaponPart2" : null))
         .run();
-}
+};
 
-export const findPartInBuild = (weaponType: WeaponType, partType: PartType, build: BuildModel): Part|null => {
+export const findPartInBuild = (weaponType: WeaponType, partType: PartType, build: BuildModel): Part | null => {
     const isRepeater = weaponType === WeaponType.Repeater;
 
     const partName = match(partType)
-        .with(PartType.Mod, () => isRepeater ? build.weaponPart3 : build.weaponPart2)
-        .with(PartType.Special, () => isRepeater ? null : build.weaponPart1)
-        .with(PartType.Chamber, () => isRepeater ? build.weaponPart1 : null )
-        .with(PartType.Grip, () => isRepeater ? build.weaponPart2 : null )
+        .with(PartType.Mod, () => (isRepeater ? build.weaponPart3 : build.weaponPart2))
+        .with(PartType.Special, () => (isRepeater ? null : build.weaponPart1))
+        .with(PartType.Chamber, () => (isRepeater ? build.weaponPart1 : null))
+        .with(PartType.Grip, () => (isRepeater ? build.weaponPart2 : null))
         .run();
 
     if (partName === null) {
@@ -390,15 +393,17 @@ export const findPartInBuild = (weaponType: WeaponType, partType: PartType, buil
     }
 
     return findPartByName(weaponType, partType, partName);
-}
+};
 
-export const findCellByVariantName = (name: string): Cell|null => {
-    const cellName = Object.keys(dauntlessBuilderData.cells).find(cellName => name in dauntlessBuilderData.cells[cellName].variants);
+export const findCellByVariantName = (name: string): Cell | null => {
+    const cellName = Object.keys(dauntlessBuilderData.cells).find(
+        cellName => name in dauntlessBuilderData.cells[cellName].variants,
+    );
     if (!cellName || !(cellName in dauntlessBuilderData.cells)) {
         return null;
     }
     return dauntlessBuilderData.cells[cellName];
-}
+};
 
 export const mapIdByName = (type: NamesMapType, name: string): number => {
     if (!(type in dauntlessBuilderNamesMap)) {
@@ -420,7 +425,7 @@ export const partTypeByWeaponType = (weaponType: WeaponType): NamesMapType =>
         .with(WeaponType.WarPike, () => NamesMapType.WarpikePart)
         .exhaustive();
 
-export const doesCellFitIntoSlot = (cellSlot: CellType|null, variantName: string|null): boolean => {
+export const doesCellFitIntoSlot = (cellSlot: CellType | null, variantName: string | null): boolean => {
     if (cellSlot === null) {
         return variantName === null;
     }
@@ -435,12 +440,12 @@ export const doesCellFitIntoSlot = (cellSlot: CellType|null, variantName: string
 
     const cell = findCellByVariantName(variantName);
     return cell?.slot === cellSlot;
-}
+};
 
 export const switchAroundWeaponCellsIfNecessary = (build: BuildModel): BuildModel => {
-    const weaponCells = Array.isArray(build.data.weapon?.cells) ?
-        build.data.weapon?.cells ?? [] :
-        [build.data.weapon?.cells ?? null];
+    const weaponCells = Array.isArray(build.data.weapon?.cells)
+        ? build.data.weapon?.cells ?? []
+        : [build.data.weapon?.cells ?? null];
 
     if (build.weaponCell1 !== null && !doesCellFitIntoSlot(weaponCells[0], build.weaponCell1)) {
         if (doesCellFitIntoSlot(weaponCells[1], build.weaponCell1)) {
@@ -467,4 +472,4 @@ export const switchAroundWeaponCellsIfNecessary = (build: BuildModel): BuildMode
     }
 
     return build;
-}
+};
