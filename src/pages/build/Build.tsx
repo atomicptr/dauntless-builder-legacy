@@ -234,6 +234,32 @@ const Build: React.FC = () => {
 
     const buildName = defaultBuildName(build);
 
+    const metaDescription = (() => {
+        const result =
+            "⚔️ " +
+            [
+                build.data.head?.name,
+                build.data.torso?.name,
+                build.data.arms?.name,
+                build.data.legs?.name,
+                ...perkData(build)
+                    .filter(perk => perk.count >= 4)
+                    .map(perk => `+${perk.count} ${perk.name}`),
+            ]
+                .filter(p => !!p)
+                .join(", ");
+
+        if (result.length < 10) {
+            return "Create and share Dauntless builds with your friends!";
+        }
+
+        if (result.length > 140) {
+            return result.substring(0, 137) + "...";
+        }
+
+        return result;
+    })();
+
     return (
         <>
             <PageTitle
@@ -251,31 +277,11 @@ const Build: React.FC = () => {
                     property="og:title"
                 />
                 <meta
-                    content={(() => {
-                        const result =
-                            "⚔️ " +
-                            [
-                                build.data.head?.name,
-                                build.data.torso?.name,
-                                build.data.arms?.name,
-                                build.data.legs?.name,
-                                ...perkData(build)
-                                    .filter(perk => perk.count >= 4)
-                                    .map(perk => `+${perk.count} ${perk.name}`),
-                            ]
-                                .filter(p => !!p)
-                                .join(", ");
-
-                        if (result.length < 10) {
-                            return "Create and share Dauntless builds with your friends!";
-                        }
-
-                        if (result.length > 140) {
-                            return result.substring(0, 137) + "...";
-                        }
-
-                        return result;
-                    })()}
+                    content={metaDescription}
+                    name="description"
+                />
+                <meta
+                    content={metaDescription}
                     property="og:description"
                 />
                 <meta
