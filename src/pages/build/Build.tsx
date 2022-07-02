@@ -79,8 +79,8 @@ const Build: React.FC = () => {
     }, [buildId, dispatch]);
 
     useEffect(() => {
-        navigate(`/b/${build.serialize()}`);
-    }, [build, navigate]);
+        history.replaceState({}, "", `/b/${build.serialize()}`);
+    }, [build]);
 
     if (!buildId || !BuildModel.isValid(buildId)) {
         navigate("/b/new");
