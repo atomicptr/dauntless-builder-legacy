@@ -1,9 +1,15 @@
+// Script to build JSON files for the about page
+//
+// This is a script we allow use of console here
+/* eslint-disable no-console */
+
 import axios from "axios";
+import { spawn } from "child_process";
+import * as fs from "fs";
 import * as path from "path";
 import { fileURLToPath } from "url";
-import * as fs from "fs";
+
 import { Contributor } from "../src/pages/about/About";
-import { spawn } from "child_process";
 
 // list of excluded contributors, use their Github name e.g. "ds902022"
 const excludeContributors: string[] = [];
@@ -31,11 +37,11 @@ const buildContributorsFile = async (filepath: string): Promise<void> => {
     return new Promise(resolve => {
         const filtered = contributors
             .map(({ login, avatar_url, html_url, type, contributions }) => ({
-                login,
                 avatar_url,
-                html_url,
-                type,
                 contributions,
+                html_url,
+                login,
+                type,
             }))
             .sort((a, b) => b.contributions - a.contributions)
             .filter(contributor => contributor.type !== "Bot")
@@ -62,8 +68,8 @@ const buildDependenciesFile = async (filepath: string): Promise<void> => {
 
             const filtered = Object.keys(json)
                 .map(name => ({
-                    name,
                     license: json[name].licenses,
+                    name,
                     repository: json[name].repository,
                 }))
                 .sort((a, b) => a.name.localeCompare(b.name))

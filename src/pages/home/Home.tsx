@@ -70,7 +70,7 @@ const Home: React.FC = () => {
                     </Typography>
 
                     <Typography>
-                        <div dangerouslySetInnerHTML={{__html: t("pages.home.contributing-text", {githubUrl})}}></div>
+                        <div dangerouslySetInnerHTML={{ __html: t("pages.home.contributing-text", { githubUrl }) }} />
                     </Typography>
 
                     <Typography
@@ -85,26 +85,26 @@ const Home: React.FC = () => {
                         spacing={2}
                     >
                         <Button
-                            target="_blank"
                             component="a"
                             href={githubUrl}
                             startIcon={<GitHub />}
+                            target="_blank"
                         >
                             {t("pages.home.links.github")}
                         </Button>
                         <Button
-                            target="_blank"
                             component="a"
                             href={matrixChannelUrl}
                             startIcon={<SiMatrix />}
+                            target="_blank"
                         >
                             {t("pages.home.links.matrix")}
                         </Button>
                         <Button
-                            target="_blank"
                             component="a"
                             href={discordServerUrl}
                             startIcon={<FaDiscord />}
+                            target="_blank"
                         >
                             {t("pages.home.links.discord")}
                         </Button>

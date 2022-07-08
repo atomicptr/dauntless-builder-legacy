@@ -4,6 +4,7 @@ import buildReducer from "./features/build/build-slice";
 import configurationReducer from "./features/configuration/configuration-slice";
 import favoritesReducer from "./features/favorites/favorites-slice";
 import itemSelectFilterReducer from "./features/item-select-filter/item-select-filter-slice";
+import metaBuildsSelectionReducer from "./features/meta-builds-selection/meta-builds-selection-slice";
 
 const stateIdentifier = "state";
 const reducersNotToBePersisted = ["itemSelectFilter"];
@@ -18,6 +19,7 @@ export const store = configureStore({
         configuration: configurationReducer,
         favorites: favoritesReducer,
         itemSelectFilter: itemSelectFilterReducer,
+        metaBuildsSelection: metaBuildsSelectionReducer,
     },
 });
 
