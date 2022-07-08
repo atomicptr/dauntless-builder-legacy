@@ -1,11 +1,15 @@
-import { Box, Grid, Stack, Typography } from "@mui/material";
+import { GitHub } from "@mui/icons-material";
+import { Button, Grid, Stack, Typography } from "@mui/material";
 import BuildCard from "@src/components/BuildCard";
 import PageTitle from "@src/components/PageTitle";
+import { discordServerUrl, githubUrl, matrixChannelUrl } from "@src/constants";
 import { selectConfiguration } from "@src/features/configuration/configuration-slice";
 import { selectFavorites } from "@src/features/favorites/favorites-slice";
 import { useAppSelector } from "@src/hooks/redux";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { SiMatrix } from "react-icons/all";
+import { FaDiscord } from "react-icons/fa";
 
 const numberOfBuilds = 5;
 
@@ -31,24 +35,81 @@ const Home: React.FC = () => {
                 md={8}
                 xs={12}
             >
-                <PageTitle title={t("pages.home.title")} />
-                <Box sx={{ mt: 1 }}>
-                    {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque maximus congue. Duis
-                    et lorem vel odio egestas porta. Vestibulum eu fermentum libero. Etiam vehicula erat leo, eu
-                    fringilla arcu porttitor vitae. Maecenas id laoreet neque, et tristique orci. Morbi eu sollicitudin
-                    nunc. In feugiat ligula eget risus rutrum, eget ornare lorem interdum. Fusce eget euismod augue.
-                    Vestibulum porta congue nisi a finibus. Cras suscipit mauris lorem, auctor egestas nisi mattis nec.
-                    Integer elementum justo et massa vehicula hendrerit. Integer tellus odio, vehicula id ex cursus,
-                    bibendum laoreet dolor. In auctor purus a libero posuere, vel elementum tortor elementum. Aenean
-                    rhoncus posuere neque, at malesuada ante vehicula non. Nullam id lacus in magna faucibus vulputate.
-                    Etiam ac scelerisque ipsum. Nunc interdum arcu ac commodo dignissim. Pellentesque sit amet viverra
-                    turpis. Donec at sollicitudin turpis. Proin arcu sapien, porta eu ligula id, pulvinar semper massa.
-                    Sed felis dolor, mollis non libero at, vestibulum fermentum neque. Integer tellus mauris, auctor et
-                    faucibus at, pharetra eget ante. Vestibulum at justo aliquam nisl tincidunt vulputate. Etiam
-                    fermentum sodales turpis ut semper. Sed mollis est sit amet quam dictum porttitor. Sed placerat ut
-                    libero nec tristique. Vestibulum pellentesque augue at sapien ultricies, non imperdiet nisl feugiat.
-                    Fusce facilisis efficitur massa eu tempus.`}
-                </Box>
+                <PageTitle
+                    hidden
+                    title={t("pages.home.title")}
+                />
+                <Stack
+                    direction="column"
+                    spacing={2}
+                    sx={{ mt: 1, pr: 2 }}
+                >
+                    <Typography
+                        component="h1"
+                        sx={{ mb: 1 }}
+                        variant="h5"
+                    >
+                        {t("pages.home.welcome-title")}
+                    </Typography>
+                    <Typography>{t("pages.home.welcome-text")}</Typography>
+
+                    <Typography
+                        sx={{ mb: 1 }}
+                        variant="h6"
+                    >
+                        {t("pages.home.localization-title")}
+                    </Typography>
+
+                    <Typography>{t("pages.home.localization-text")}</Typography>
+
+                    <Typography
+                        sx={{ mb: 1 }}
+                        variant="h6"
+                    >
+                        {t("pages.home.contributing-title")}
+                    </Typography>
+
+                    <Typography>
+                        <div dangerouslySetInnerHTML={{__html: t("pages.home.contributing-text", {githubUrl})}}></div>
+                    </Typography>
+
+                    <Typography
+                        sx={{ mb: 1 }}
+                        variant="h6"
+                    >
+                        {t("pages.home.links-title")}
+                    </Typography>
+
+                    <Stack
+                        direction="row"
+                        spacing={2}
+                    >
+                        <Button
+                            target="_blank"
+                            component="a"
+                            href={githubUrl}
+                            startIcon={<GitHub />}
+                        >
+                            {t("pages.home.links.github")}
+                        </Button>
+                        <Button
+                            target="_blank"
+                            component="a"
+                            href={matrixChannelUrl}
+                            startIcon={<SiMatrix />}
+                        >
+                            {t("pages.home.links.matrix")}
+                        </Button>
+                        <Button
+                            target="_blank"
+                            component="a"
+                            href={discordServerUrl}
+                            startIcon={<FaDiscord />}
+                        >
+                            {t("pages.home.links.discord")}
+                        </Button>
+                    </Stack>
+                </Stack>
             </Grid>
 
             <Grid

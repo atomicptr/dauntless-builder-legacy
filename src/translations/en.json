@@ -35,7 +35,7 @@
         "about": "$t(pages.about.title)",
         "build-finder": "Build Finder",
         "home": "Home",
-        "meta-builds": "Meta Builds",
+        "meta-builds": "$t(pages.metabuilds.title)",
         "my-builds": "$t(pages.favorites.title)",
         "new-build": "New Build",
         "settings": "$t(pages.settings.title)"
@@ -80,8 +80,23 @@
             "title": "My Builds"
         },
         "home": {
+            "contributing-text": "If you're interested in contributing code or especially localizations please head over to our <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a>!",
+            "contributing-title": "Contributing",
+            "links": {
+                "discord": "Discord",
+                "github": "Github",
+                "matrix": "Matrix"
+            },
+            "links-title": "Links",
+            "localization-text": "Dauntless Builder now supports localizations, please head over to the Settings page and select your preferred language if it wasn't already picked up automatically! If that language is currently unsupported and you'd be interested in helping, please read the \"Contributing\" section below.",
+            "localization-title": "Localization",
             "test-builds": "Test Builds",
-            "title": "Home"
+            "title": "Home",
+            "welcome-text": "a free and open source web application for creating and sharing builds for the popular free to play monster hunting game Dauntless.",
+            "welcome-title": "Welcome to Dauntless Builder,"
+        },
+        "metabuilds": {
+            "title": "Meta Builds"
         },
         "newbuild": {
             "title": "Create a new build"
