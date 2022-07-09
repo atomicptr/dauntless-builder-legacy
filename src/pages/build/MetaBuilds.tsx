@@ -11,8 +11,9 @@ import {
     setBuildCategoryIndex,
     setWeaponType,
 } from "@src/features/meta-builds-selection/meta-builds-selection-slice";
+import useCache from "@src/hooks/cache";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
-import React, { ReactNode, useCallback, useEffect, useMemo } from "react";
+import React, { ReactNode, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 
@@ -46,7 +47,7 @@ interface BuildCategory {
 
 interface BuildCategoryBuild {
     title: string;
-    build: BuildModel;
+    buildId: string;
     subcategory: string | null;
     vsElement: ElementalType | null;
 }
@@ -57,7 +58,7 @@ const MetaBuilds: React.FC = () => {
 
     const { weaponType, buildCategoryIndex, showNote } = useAppSelector(selectMetaBuildsSelection);
 
-    const builds = useMemo(() => {
+    const builds = useCache("metabuilds-builds", () => {
         type WeaponBuilds = {
             [categoryName: string]: BuildCategory;
         };
@@ -94,7 +95,7 @@ const MetaBuilds: React.FC = () => {
                 }
 
                 builds[weaponType][category.name].builds.push({
-                    build,
+                    buildId: build.serialize(),
                     subcategory: buildData.subcategory ?? null,
                     title: buildData.title,
                     vsElement: buildData.vsElement as ElementalType | null,
@@ -103,7 +104,7 @@ const MetaBuilds: React.FC = () => {
         }
 
         return builds;
-    }, []);
+    });
 
     const hasBuilds = useCallback(
         (category: string): boolean =>
@@ -145,7 +146,7 @@ const MetaBuilds: React.FC = () => {
         }
     }, [buildCategoryIndex, weaponType, hasBuilds, dispatch]);
 
-    const renderBuild = (index: number, build: BuildModel, title: string) => (
+    const renderBuild = (index: number, buildId: string, title: string) => (
         <Box key={index}>
             <LazyLoadComponent
                 placeholder={
@@ -156,10 +157,12 @@ const MetaBuilds: React.FC = () => {
                     />
                 }
             >
-                <BuildCard
-                    build={build}
-                    title={t(`pages.metabuilds.generated.buildTitles.${title}`)}
-                />
+                <Box>
+                    <BuildCard
+                        buildId={buildId}
+                        title={t(`pages.metabuilds.generated.buildTitles.${title}`)}
+                    />
+                </Box>
             </LazyLoadComponent>
         </Box>
     );
@@ -191,7 +194,7 @@ const MetaBuilds: React.FC = () => {
                             sx={{ mt: 2 }}
                         >
                             {buildsByElement[ElementalType.Blaze].map((build, index) =>
-                                renderBuild(index, build.build, build.title),
+                                renderBuild(index, build.buildId, build.title),
                             )}
                         </Stack>
                     </>
@@ -206,7 +209,7 @@ const MetaBuilds: React.FC = () => {
                             sx={{ mt: 2 }}
                         >
                             {buildsByElement[ElementalType.Frost].map((build, index) =>
-                                renderBuild(index, build.build, build.title),
+                                renderBuild(index, build.buildId, build.title),
                             )}
                         </Stack>
                     </>
@@ -221,7 +224,7 @@ const MetaBuilds: React.FC = () => {
                             sx={{ mt: 2 }}
                         >
                             {buildsByElement[ElementalType.Terra].map((build, index) =>
-                                renderBuild(index, build.build, build.title),
+                                renderBuild(index, build.buildId, build.title),
                             )}
                         </Stack>
                     </>
@@ -236,7 +239,7 @@ const MetaBuilds: React.FC = () => {
                             sx={{ mt: 2 }}
                         >
                             {buildsByElement[ElementalType.Shock].map((build, index) =>
-                                renderBuild(index, build.build, build.title),
+                                renderBuild(index, build.buildId, build.title),
                             )}
                         </Stack>
                     </>
@@ -251,7 +254,7 @@ const MetaBuilds: React.FC = () => {
                             sx={{ mt: 2 }}
                         >
                             {buildsByElement[ElementalType.Radiant].map((build, index) =>
-                                renderBuild(index, build.build, build.title),
+                                renderBuild(index, build.buildId, build.title),
                             )}
                         </Stack>
                     </>
@@ -266,7 +269,7 @@ const MetaBuilds: React.FC = () => {
                             sx={{ mt: 2 }}
                         >
                             {buildsByElement[ElementalType.Umbral].map((build, index) =>
-                                renderBuild(index, build.build, build.title),
+                                renderBuild(index, build.buildId, build.title),
                             )}
                         </Stack>
                     </>
@@ -277,7 +280,7 @@ const MetaBuilds: React.FC = () => {
                         spacing={2}
                         sx={{ mt: 2 }}
                     >
-                        {buildsByElement["None"].map((build, index) => renderBuild(index, build.build, build.title))}
+                        {buildsByElement["None"].map((build, index) => renderBuild(index, build.buildId, build.title))}
                     </Stack>
                 )}
             </>
@@ -328,14 +331,13 @@ const MetaBuilds: React.FC = () => {
     );
 
     return (
-        <>
+        <Stack spacing={2}>
             <PageTitle title={t("pages.metabuilds.title")} />
 
             {showNote && (
                 <Alert
                     onClose={() => dispatch(removeNote())}
                     severity="info"
-                    sx={{ my: 2 }}
                 >
                     <div
                         dangerouslySetInnerHTML={{
@@ -348,21 +350,19 @@ const MetaBuilds: React.FC = () => {
                 </Alert>
             )}
 
-            <Box sx={{ mt: 2 }}>
-                <WeaponTypeSelector
-                    onChange={weaponType => dispatch(setWeaponType(weaponType))}
-                    value={weaponType}
-                />
-            </Box>
+            <WeaponTypeSelector
+                onChange={weaponType => dispatch(setWeaponType(weaponType))}
+                value={weaponType}
+            />
 
             {weaponType === null && (
-                <Box sx={{ mt: 2 }}>
+                <Box>
                     <Typography>{t("pages.metabuilds.select-weapon-first")}</Typography>
                 </Box>
             )}
 
             {weaponType !== null && (
-                <Box sx={{ mt: 2 }}>
+                <Box>
                     <Box>
                         <Tabs
                             onChange={(_ev, category) => dispatch(setBuildCategoryIndex(category))}
@@ -401,7 +401,7 @@ const MetaBuilds: React.FC = () => {
                     ))}
                 </Box>
             )}
-        </>
+        </Stack>
     );
 };
 
