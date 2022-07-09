@@ -63,4 +63,4 @@ const OmnicellCard: React.FC<OmnicellCardProps> = ({ item }) => {
     );
 };
 
-export default OmnicellCard;
+export default React.memo(OmnicellCard);

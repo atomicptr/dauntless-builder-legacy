@@ -76,4 +76,4 @@ const CellPicker: React.FC<CellPickerProps> = ({ variant, index, itemType, cellT
     );
 };
 
-export default CellPicker;
+export default React.memo(CellPicker);

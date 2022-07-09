@@ -95,4 +95,4 @@ const PerkFilter: React.FC<PerkFilterProps> = ({ itemType }) => {
     );
 };
 
-export default PerkFilter;
+export default React.memo(PerkFilter);

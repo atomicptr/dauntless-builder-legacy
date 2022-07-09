@@ -103,4 +103,4 @@ const UniqueEffectCard: React.FC<UniqueEffectCardProps> = ({ index, uniqueEffect
     );
 };
 
-export default UniqueEffectCard;
+export default React.memo(UniqueEffectCard);

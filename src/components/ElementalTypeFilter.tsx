@@ -75,4 +75,4 @@ const ElementalTypeFilter: React.FC<ElementalTypeFilterProps> = ({ itemType }) =
     );
 };
 
-export default ElementalTypeFilter;
+export default React.memo(ElementalTypeFilter);

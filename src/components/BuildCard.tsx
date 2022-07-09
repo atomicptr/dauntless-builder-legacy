@@ -234,4 +234,4 @@ const BuildCard: React.FC<BuildCardProps> = ({ build, buildId, title, miniMode }
     );
 };
 
-export default BuildCard;
+export default React.memo(BuildCard);

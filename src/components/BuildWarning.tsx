@@ -3,6 +3,7 @@ import { Alert } from "@mui/material";
 import { BuildFlags } from "@src/data/BuildModel";
 import { selectBuild } from "@src/features/build/build-slice";
 import { useAppSelector } from "@src/hooks/redux";
+import React from "react";
 import { useTranslation } from "react-i18next";
 
 const BuildWarning = () => {
@@ -34,4 +35,4 @@ const BuildWarning = () => {
     return null;
 };
 
-export default BuildWarning;
+export default React.memo(BuildWarning);

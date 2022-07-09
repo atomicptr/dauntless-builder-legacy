@@ -61,4 +61,4 @@ const PerksText: React.FC<PerksTextProps> = ({ perks, itemSurged }) => {
     );
 };
 
-export default PerksText;
+export default React.memo(PerksText);

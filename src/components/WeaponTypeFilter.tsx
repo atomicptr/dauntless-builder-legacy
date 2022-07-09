@@ -69,4 +69,4 @@ const WeaponTypeFilter: React.FC = () => {
     );
 };
 
-export default WeaponTypeFilter;
+export default React.memo(WeaponTypeFilter);

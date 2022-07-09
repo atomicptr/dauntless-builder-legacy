@@ -129,4 +129,4 @@ const BondWeaponPicker: React.FC<BondWeaponPickerProps> = ({
     );
 };
 
-export default BondWeaponPicker;
+export default React.memo(BondWeaponPicker);

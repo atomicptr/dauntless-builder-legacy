@@ -55,4 +55,4 @@ const WeaponTypeSelector: React.FC<WeaponTypeSelectorProps> = ({ value, onChange
     );
 };
 
-export default WeaponTypeSelector;
+export default React.memo(WeaponTypeSelector);

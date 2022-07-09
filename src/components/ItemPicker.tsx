@@ -287,4 +287,4 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
     );
 };
 
-export default ItemPicker;
+export default React.memo(ItemPicker);

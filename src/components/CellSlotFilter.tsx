@@ -77,4 +77,4 @@ const CellSlotFilter: React.FC<CellSlotFilterProps> = ({ itemType }) => {
     );
 };
 
-export default CellSlotFilter;
+export default React.memo(CellSlotFilter);

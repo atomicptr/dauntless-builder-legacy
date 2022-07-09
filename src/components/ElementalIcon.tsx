@@ -71,4 +71,4 @@ const ElementalBox: React.FC<ElementalBoxProps> = ({ elemental, isStrength }) =>
     </Box>
 );
 
-export default ElementalIcon;
+export default React.memo(ElementalIcon);

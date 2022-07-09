@@ -134,4 +134,4 @@ const PartPicker: React.FC<PartPickerProps> = ({ type, item, weaponType, onClick
     );
 };
 
-export default PartPicker;
+export default React.memo(PartPicker);

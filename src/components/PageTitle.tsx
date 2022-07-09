@@ -52,4 +52,4 @@ const PageTitle: React.FC<PageTitleProps> = ({ title, hidden }) => {
     );
 };
 
-export default PageTitle;
+export default React.memo(PageTitle);
