@@ -365,8 +365,11 @@ const MetaBuilds: React.FC = () => {
                 <Box>
                     <Box>
                         <Tabs
+                            allowScrollButtonsMobile
                             onChange={(_ev, category) => dispatch(setBuildCategoryIndex(category))}
+                            scrollButtons
                             value={buildCategoryIndex}
+                            variant="scrollable"
                         >
                             {metaBuildsJson.categories.map((category, index) => (
                                 <Tab

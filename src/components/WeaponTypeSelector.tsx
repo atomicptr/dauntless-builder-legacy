@@ -1,5 +1,6 @@
 import { Box, Card, CardActionArea, CardContent, CardMedia, Grid } from "@mui/material";
 import { WeaponType } from "@src/data/Weapon";
+import useIsMobile from "@src/hooks/is-mobile";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -12,20 +13,25 @@ const imageSize = 32;
 
 const WeaponTypeSelector: React.FC<WeaponTypeSelectorProps> = ({ value, onChange }) => {
     const { t } = useTranslation();
+    const isMobile = useIsMobile();
 
     const isSelected = (weaponType: WeaponType) => value === weaponType;
 
     return (
         <Grid
             container
-            spacing={1}
+            spacing={isMobile ? 0 : 1}
         >
             {Object.keys(WeaponType).map(weaponType => (
                 <Grid
                     key={weaponType}
                     item
+                    xs={isMobile ? 12 : undefined}
                 >
-                    <Card elevation={isSelected(WeaponType[weaponType as keyof typeof WeaponType]) ? 5 : 1}>
+                    <Card
+                        elevation={isSelected(WeaponType[weaponType as keyof typeof WeaponType]) ? 5 : 1}
+                        sx={{ my: isMobile ? 0.5 : undefined }}
+                    >
                         <CardActionArea
                             disabled={isSelected(WeaponType[weaponType as keyof typeof WeaponType])}
                             onClick={() =>

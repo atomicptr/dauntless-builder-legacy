@@ -33,7 +33,9 @@ const BuildMenu: React.FC = () => {
     const isFavorite = isBuildInFavorites(favorites, buildId);
     const isCopyToClipboardEnabled = navigator.clipboard !== undefined;
 
-    if (!location.pathname.startsWith("/b/")) {
+    const buildRegex = /\/b\/[A-Za-z0-9]{50,}/;
+
+    if (buildRegex.exec(location.pathname) === null) {
         return null;
     }
 
