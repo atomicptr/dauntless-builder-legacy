@@ -18,7 +18,7 @@ import {
 } from "@src/features/build-finder-selection/build-finder-selection-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
-import React, { useCallback, useMemo } from "react";
+import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 
@@ -89,30 +89,25 @@ const BuildFinder: React.FC = () => {
         return cellTypeByPerk;
     }, []);
 
-    const filterPerksAndCells = useCallback(
-        (mode: (a: boolean, b: boolean) => boolean = orMode) =>
-            (item: Weapon | Armour) =>
-                mode(
+    const itemData = useMemo(() => {
+        const filterPerksAndCells =
+            (mode: (a: boolean, b: boolean) => boolean = orMode) =>
+                (item: Weapon | Armour) =>
+                    mode(
                     (item.perks && item.perks[0].name in selectedPerks) as boolean,
                     ((item.cells &&
                         (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
                             cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
                         )) ||
                         (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
-                ),
-        [selectedPerks, perkCellMap],
-    );
+                    );
 
-    const findMatchingArmourPiecesByType = useCallback(
-        (type: ArmourType) =>
+        const findMatchingArmourPiecesByType = (type: ArmourType) =>
             Object.values(dauntlessBuilderData.armours)
                 .filter(armourPiece => armourPiece.type === type)
-                .filter(filterPerksAndCells(Object.keys(selectedPerks).length <= 3 ? orMode : andMode)),
-        [filterPerksAndCells, selectedPerks],
-    );
+                .filter(filterPerksAndCells(Object.keys(selectedPerks).length <= 3 ? orMode : andMode));
 
-    const itemData = useMemo(
-        () => ({
+        return {
             arms: findMatchingArmourPiecesByType(ArmourType.Arms),
             head: findMatchingArmourPiecesByType(ArmourType.Head),
             lantern: findLanternByName(lanternName) as Lantern,
@@ -122,26 +117,25 @@ const BuildFinder: React.FC = () => {
                 .filter(weapon => weapon.type === weaponType)
                 .filter(weapon => weapon.bond === undefined) // remove legendaries for now...
                 .filter(filterPerksAndCells()),
-        }),
-        [weaponType, filterPerksAndCells, findMatchingArmourPiecesByType],
-    );
+        };
+    }, [weaponType]);
 
-    const determineBasePerks = (build: IntermediateBuild): AssignedPerkValue => {
-        const perkStrings = Object.values(build)
-            .map(type => type.perks)
-            .flat(10);
-        const perks: AssignedPerkValue = {};
-        for (const perk of perkStrings) {
-            if (!(perk in perks)) {
-                perks[perk] = 0;
+    const builds = useMemo(() => {
+        const determineBasePerks = (build: IntermediateBuild): AssignedPerkValue => {
+            const perkStrings = Object.values(build)
+                .map(type => type.perks)
+                .flat(10);
+            const perks: AssignedPerkValue = {};
+            for (const perk of perkStrings) {
+                if (!(perk in perks)) {
+                    perks[perk] = 0;
+                }
+                perks[perk] += 3;
             }
-            perks[perk] += 3;
-        }
-        return perks;
-    };
+            return perks;
+        };
 
-    const evaluateBuild = useCallback(
-        (build: IntermediateBuild) => {
+        const evaluateBuild = (build: IntermediateBuild) => {
             const perks = determineBasePerks(build);
             const cellsSlotted: CellsSlottedMap = {
                 arms: build.arms.cellSlots.map(() => null),
@@ -207,11 +201,8 @@ const BuildFinder: React.FC = () => {
             };
 
             return { cellsSlotted, fulfillsCriteria: fulfillsCriteria(), perks };
-        },
-        [selectedPerks, perkCellMap],
-    );
+        };
 
-    const builds = useMemo(() => {
         const intermediateMap: IntermediateMap = {};
 
         const createIntermediateFormat = (item: Weapon | Armour | Lantern): IntermediateItem => {
@@ -276,9 +267,10 @@ const BuildFinder: React.FC = () => {
             return matchingBuilds;
         };
 
+        console.time("build builds");
         const matchingBuilds = findMatchingBuilds();
 
-        return matchingBuilds.map(intermediateBuild => {
+        const builds = matchingBuilds.map(intermediateBuild => {
             const build = new BuildModel();
             build.weaponName = intermediateBuild.build.weapon.name;
             build.weaponSurged = true;
@@ -300,7 +292,11 @@ const BuildFinder: React.FC = () => {
             build.lanternCell = intermediateBuild.cellsSlotted.lantern[0];
             return build;
         });
-    }, [itemData, evaluateBuild]);
+
+        console.timeEnd("build builds");
+
+        return builds;
+    }, [itemData, selectedPerks, perkCellMap]);
 
     console.log(builds, selectedPerks);
 
@@ -340,9 +336,7 @@ const BuildFinder: React.FC = () => {
                 <Typography>{`Number of Perks selected: ${Object.keys(selectedPerks).length}`}</Typography>
                 <Typography>{`Number of Builds: ${builds.length}`}</Typography>
                 <pre>
-                    <code>
-                        {JSON.stringify(selectedPerks, null, "    ")}
-                    </code>
+                    <code>{JSON.stringify(selectedPerks, null, "    ")}</code>
                 </pre>
             </Box>
 
