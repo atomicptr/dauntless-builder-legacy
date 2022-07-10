@@ -1,14 +1,15 @@
-import {Box, Button, Card, CardActionArea, CardContent, Grid, Skeleton, Stack, Typography} from "@mui/material";
+import { Box, Button, Card, CardActionArea, CardContent, Grid, Skeleton, Stack, Typography } from "@mui/material";
 import BuildCard from "@src/components/BuildCard";
 import PageTitle from "@src/components/PageTitle";
 import WeaponTypeSelector from "@src/components/WeaponTypeSelector";
-import {Armour, ArmourType} from "@src/data/Armour";
-import {BuildModel, findCellVariantByPerk, findLanternByName} from "@src/data/BuildModel";
-import {CellType} from "@src/data/Cell";
+import { Armour, ArmourType } from "@src/data/Armour";
+import { BuildModel, findCellVariantByPerk, findLanternByName } from "@src/data/BuildModel";
+import { CellType } from "@src/data/Cell";
 import dauntlessBuilderData from "@src/data/Data";
-import {Lantern} from "@src/data/Lantern";
-import {Perk} from "@src/data/Perks";
-import {Weapon} from "@src/data/Weapon";
+import { ItemRarity } from "@src/data/ItemRarity";
+import { Lantern } from "@src/data/Lantern";
+import { Perk } from "@src/data/Perks";
+import { Weapon } from "@src/data/Weapon";
 import {
     AssignedPerkValue,
     clearPerks,
@@ -17,11 +18,13 @@ import {
     setWeaponType,
 } from "@src/features/build-finder-selection/build-finder-selection-slice";
 import useIsMobile from "@src/hooks/is-mobile";
-import {useAppDispatch, useAppSelector} from "@src/hooks/redux";
-import React, {useMemo} from "react";
-import {useTranslation} from "react-i18next";
-import {LazyLoadComponent} from "react-lazy-load-image-component";
-import {ItemRarity} from "@src/data/ItemRarity";
+import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
+import createPermutation from "@src/utils/create-permutation";
+import sortObjectByKeys from "@src/utils/sort-object-by-keys";
+import md5 from "md5";
+import React, { useCallback, useMemo } from "react";
+import { useTranslation } from "react-i18next";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 interface IntermediateBuild {
     weapon: IntermediateItem;
@@ -51,7 +54,7 @@ interface CellsSlottedMap {
     lantern: (string | null)[];
 }
 
-const buildLimit = 200;
+const buildLimit = 50;
 
 const lanternName = "Shrike's Zeal";
 
@@ -90,6 +93,14 @@ const BuildFinder: React.FC = () => {
         return cellTypeByPerk;
     }, []);
 
+    const findArmourPiecesByType = useCallback(
+        (type: ArmourType) =>
+            Object.values(dauntlessBuilderData.armours)
+                .filter(armourPiece => armourPiece.type === type)
+                .filter(armourPiece => armourPiece.rarity !== ItemRarity.Exotic), // remove exotics for now...
+        [],
+    );
+
     const itemData = useMemo(() => {
         const filterPerksAndCells =
             (mode: (a: boolean, b: boolean) => boolean = orMode) =>
@@ -104,10 +115,9 @@ const BuildFinder: React.FC = () => {
                     );
 
         const findMatchingArmourPiecesByType = (type: ArmourType) =>
-            Object.values(dauntlessBuilderData.armours)
-                .filter(armourPiece => armourPiece.type === type)
-                .filter(armourPiece => armourPiece.rarity !== ItemRarity.Exotic) // remove exotics for now...
-                .filter(filterPerksAndCells(Object.keys(selectedPerks).length <= 3 ? orMode : andMode));
+            findArmourPiecesByType(type).filter(
+                filterPerksAndCells(Object.keys(selectedPerks).length <= 3 ? orMode : andMode),
+            );
 
         return {
             arms: findMatchingArmourPiecesByType(ArmourType.Arms),
@@ -121,7 +131,7 @@ const BuildFinder: React.FC = () => {
                 .filter(weapon => weapon.rarity !== ItemRarity.Exotic) // remove exotics for now...
                 .filter(filterPerksAndCells()),
         };
-    }, [weaponType, selectedPerks, perkCellMap]);
+    }, [weaponType, selectedPerks, perkCellMap, findArmourPiecesByType]);
 
     const builds = useMemo(() => {
         const determineBasePerks = (build: IntermediateBuild): AssignedPerkValue => {
@@ -231,38 +241,68 @@ const BuildFinder: React.FC = () => {
 
         const findMatchingBuilds = () => {
             const matchingBuilds: {
+                ident: string;
                 build: IntermediateBuild;
                 perks: AssignedPerkValue;
                 cellsSlotted: CellsSlottedMap;
             }[] = [];
 
-            for (const weapon of itemData.weapons) {
-                for (const head of itemData.head) {
-                    for (const torso of itemData.torso) {
-                        for (const arms of itemData.arms) {
-                            for (const legs of itemData.legs) {
-                                if (matchingBuilds.length >= buildLimit) {
-                                    return matchingBuilds;
-                                }
+            const createIntermediateBuild = (
+                weapon: Weapon,
+                head: Armour,
+                torso: Armour,
+                arms: Armour,
+                legs: Armour,
+            ): IntermediateBuild => ({
+                arms: createIntermediateFormat(arms),
+                head: createIntermediateFormat(head),
+                lantern: createIntermediateFormat(itemData.lantern),
+                legs: createIntermediateFormat(legs),
+                torso: createIntermediateFormat(torso),
+                weapon: createIntermediateFormat(weapon),
+            });
 
-                                const build = {
-                                    arms: createIntermediateFormat(arms),
-                                    head: createIntermediateFormat(head),
-                                    lantern: createIntermediateFormat(itemData.lantern),
-                                    legs: createIntermediateFormat(legs),
-                                    torso: createIntermediateFormat(torso),
-                                    weapon: createIntermediateFormat(weapon),
-                                };
+            const createBuildIdentifier = (build: IntermediateBuild, cellsSlotted: CellsSlottedMap): string =>
+                md5(
+                    "build::" +
+                        Object.keys(sortObjectByKeys(build))
+                            .map(key => build[key as keyof IntermediateBuild].name)
+                            .join("::") +
+                        Object.keys(sortObjectByKeys(cellsSlotted))
+                            .map(key => cellsSlotted[key as keyof CellsSlottedMap] ?? "Null")
+                            .join("::"),
+                );
 
-                                const { fulfillsCriteria, perks, cellsSlotted } = evaluateBuild(build);
-
-                                if (!fulfillsCriteria) {
-                                    continue;
-                                }
-
-                                matchingBuilds.push({ build, cellsSlotted, perks });
-                            }
+            for (let i = 0; i < 5; i++) {
+                for (const weapon of itemData.weapons) {
+                    // first permutation will just be limited data set, which is super fast
+                    // if that doesn't work we'll try to expand the pool even further by first adding
+                    // all heads, with limited rest, then all torso with limited rest etc.
+                    for (const [head, torso, arms, legs] of createPermutation([
+                        i === 1 ? findArmourPiecesByType(ArmourType.Head) : itemData.head,
+                        i === 2 ? findArmourPiecesByType(ArmourType.Torso) : itemData.torso,
+                        i === 3 ? findArmourPiecesByType(ArmourType.Arms) : itemData.arms,
+                        i === 4 ? findArmourPiecesByType(ArmourType.Legs) : itemData.legs,
+                    ])) {
+                        if (matchingBuilds.length >= buildLimit) {
+                            return matchingBuilds;
                         }
+
+                        const build = createIntermediateBuild(weapon, head, torso, arms, legs);
+
+                        const { fulfillsCriteria, perks, cellsSlotted } = evaluateBuild(build);
+
+                        if (!fulfillsCriteria) {
+                            continue;
+                        }
+
+                        const ident = createBuildIdentifier(build, cellsSlotted);
+                        const doesBuildAlreadyExist = matchingBuilds.find(build => build.ident === ident) !== undefined;
+                        if (doesBuildAlreadyExist) {
+                            continue;
+                        }
+
+                        matchingBuilds.push({ build, cellsSlotted, ident, perks });
                     }
                 }
             }
