@@ -355,12 +355,6 @@ const MetaBuilds: React.FC = () => {
                 value={weaponType}
             />
 
-            {weaponType === null && (
-                <Box>
-                    <Typography>{t("pages.metabuilds.select-weapon-first")}</Typography>
-                </Box>
-            )}
-
             {weaponType !== null && (
                 <Box>
                     <Box>

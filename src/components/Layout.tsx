@@ -69,7 +69,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         { icon: <Home />, link: "/", text: t("drawer.home") },
         { icon: <AddCircle />, link: "/b/new", text: t("drawer.new-build") },
         { disabled: favorites.length === 0, icon: <Bookmarks />, link: "/favorites", text: t("drawer.my-builds") },
-        { disabled: true, icon: <ManageSearch />, link: "/b/search", text: t("drawer.build-finder") },
+        { icon: <ManageSearch />, link: "/b/finder", text: t("drawer.build-finder") },
         { icon: <Stars />, link: "/b/meta", text: t("drawer.meta-builds") },
         { icon: <Info />, link: "/about", text: t("drawer.about") },
         { icon: <Settings />, link: "/settings", text: t("drawer.settings") },

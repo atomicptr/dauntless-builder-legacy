@@ -33,7 +33,7 @@
     },
     "drawer": {
         "about": "$t(pages.about.title)",
-        "build-finder": "Build Finder",
+        "build-finder": "$t(pages.build-finder.title)",
         "home": "Home",
         "meta-builds": "$t(pages.metabuilds.title)",
         "my-builds": "$t(pages.favorites.title)",
@@ -73,6 +73,9 @@
             "title": "{{weaponName}} {{omnicell}} Build",
             "toggle-filters": "Toggle display of filters",
             "toggle-unique-effects": "Toggle display of unique effects"
+        },
+        "build-finder": {
+            "title": "Build Finder"
         },
         "favorites": {
             "build-name": "Build Name",
@@ -196,7 +199,6 @@
                 "title": "Dauntless Meta Builds - 1.10+"
             },
             "note": "The builds listed here are automatically extracted from the <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>Community Meta Builds Spreadsheet</a>, if you have feedback please pass it along to the people in the #meta-discussion channel on the <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>official Dauntless Discord server</a>!",
-            "select-weapon-first": "Please select a weapon type first!",
             "subcategories": {
                 "heroics": "Heroics",
                 "legendaries": "Legendaries",

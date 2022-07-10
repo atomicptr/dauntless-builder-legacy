@@ -130,7 +130,14 @@ const BuildCard: React.FC<BuildCardProps> = ({ build, buildId, title, miniMode }
                         spacing={1}
                     >
                         <BuildFlagIcon />
-                        <Typography>{title ?? `${omnicellName} / ${weaponName}`}</Typography>
+                        <Typography>
+                            {title ??
+                                (omnicellName === ""
+                                    ? weaponName
+                                    : weaponName === ""
+                                        ? omnicellName
+                                        : `${omnicellName} / ${weaponName}`)}
+                        </Typography>
                     </Stack>
 
                     <Grid
