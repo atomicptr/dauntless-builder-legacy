@@ -329,6 +329,7 @@ const BuildFinder: React.FC = () => {
                 value={weaponType}
             />
 
+            {/* TODO: remove this, this block is for debug purposes */}
             <Box>
                 <Button
                     onClick={() => dispatch(clearPerks())}
@@ -338,6 +339,11 @@ const BuildFinder: React.FC = () => {
                 </Button>
                 <Typography>{`Number of Perks selected: ${Object.keys(selectedPerks).length}`}</Typography>
                 <Typography>{`Number of Builds: ${builds.length}`}</Typography>
+                <pre>
+                    <code>
+                        {JSON.stringify(selectedPerks, null, "    ")}
+                    </code>
+                </pre>
             </Box>
 
             {weaponType !== null && (
