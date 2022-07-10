@@ -118,7 +118,7 @@ const BuildFinder: React.FC = () => {
                 .filter(weapon => weapon.bond === undefined) // remove legendaries for now...
                 .filter(filterPerksAndCells()),
         };
-    }, [weaponType]);
+    }, [weaponType, selectedPerks, perkCellMap]);
 
     const builds = useMemo(() => {
         const determineBasePerks = (build: IntermediateBuild): AssignedPerkValue => {
