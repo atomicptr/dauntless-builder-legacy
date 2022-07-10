@@ -405,6 +405,32 @@ export const findCellByVariantName = (name: string): Cell | null => {
     return dauntlessBuilderData.cells[cellName];
 };
 
+export const findCellVariantByPerk = (perkName: string|null, amount: number = 3): string|null => {
+    if (perkName === null) {
+        return null;
+    }
+
+    amount = Math.max(Math.min(amount, 3), 0);
+
+    const cellName = `${perkName} Cell`;
+
+    const cell = dauntlessBuilderData.cells[cellName];
+
+    if (!cell) {
+        return null;
+    }
+
+    for (const [variantName, variant] of Object.entries(cell.variants)) {
+        for (const [perk, value] of Object.entries(variant.perks)) {
+            if (perk === perkName && value === amount) {
+                return variantName;
+            }
+        }
+    }
+
+    return null;
+}
+
 export const mapIdByName = (type: NamesMapType, name: string): number => {
     if (!(type in dauntlessBuilderNamesMap)) {
         return 0;

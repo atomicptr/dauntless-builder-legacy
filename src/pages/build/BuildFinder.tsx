@@ -1,14 +1,14 @@
-import { Box, Button, Card, CardActionArea, CardContent, Grid, Skeleton, Stack, Typography } from "@mui/material";
+import {Box, Button, Card, CardActionArea, CardContent, Grid, Skeleton, Stack, Typography} from "@mui/material";
 import BuildCard from "@src/components/BuildCard";
 import PageTitle from "@src/components/PageTitle";
 import WeaponTypeSelector from "@src/components/WeaponTypeSelector";
-import { Armour, ArmourType } from "@src/data/Armour";
-import { BuildModel, findLanternByName } from "@src/data/BuildModel";
-import { CellType } from "@src/data/Cell";
+import {Armour, ArmourType} from "@src/data/Armour";
+import {BuildModel, findCellVariantByPerk, findLanternByName} from "@src/data/BuildModel";
+import {CellType} from "@src/data/Cell";
 import dauntlessBuilderData from "@src/data/Data";
-import { Lantern } from "@src/data/Lantern";
-import { Perk } from "@src/data/Perks";
-import { Weapon } from "@src/data/Weapon";
+import {Lantern} from "@src/data/Lantern";
+import {Perk} from "@src/data/Perks";
+import {Weapon} from "@src/data/Weapon";
 import {
     AssignedPerkValue,
     clearPerks,
@@ -17,10 +17,11 @@ import {
     setWeaponType,
 } from "@src/features/build-finder-selection/build-finder-selection-slice";
 import useIsMobile from "@src/hooks/is-mobile";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
-import React, { useMemo } from "react";
-import { useTranslation } from "react-i18next";
-import { LazyLoadComponent } from "react-lazy-load-image-component";
+import {useAppDispatch, useAppSelector} from "@src/hooks/redux";
+import React, {useMemo} from "react";
+import {useTranslation} from "react-i18next";
+import {LazyLoadComponent} from "react-lazy-load-image-component";
+import {ItemRarity} from "@src/data/ItemRarity";
 
 interface IntermediateBuild {
     weapon: IntermediateItem;
@@ -50,7 +51,7 @@ interface CellsSlottedMap {
     lantern: (string | null)[];
 }
 
-const buildLimit = 100;
+const buildLimit = 200;
 
 const lanternName = "Shrike's Zeal";
 
@@ -105,6 +106,7 @@ const BuildFinder: React.FC = () => {
         const findMatchingArmourPiecesByType = (type: ArmourType) =>
             Object.values(dauntlessBuilderData.armours)
                 .filter(armourPiece => armourPiece.type === type)
+                .filter(armourPiece => armourPiece.rarity !== ItemRarity.Exotic) // remove exotics for now...
                 .filter(filterPerksAndCells(Object.keys(selectedPerks).length <= 3 ? orMode : andMode));
 
         return {
@@ -116,6 +118,7 @@ const BuildFinder: React.FC = () => {
             weapons: Object.values(dauntlessBuilderData.weapons)
                 .filter(weapon => weapon.type === weaponType)
                 .filter(weapon => weapon.bond === undefined) // remove legendaries for now...
+                .filter(weapon => weapon.rarity !== ItemRarity.Exotic) // remove exotics for now...
                 .filter(filterPerksAndCells()),
         };
     }, [weaponType, selectedPerks, perkCellMap]);
@@ -274,22 +277,22 @@ const BuildFinder: React.FC = () => {
             const build = new BuildModel();
             build.weaponName = intermediateBuild.build.weapon.name;
             build.weaponSurged = true;
-            build.weaponCell1 = intermediateBuild.cellsSlotted.weapon[0];
-            build.weaponCell2 = intermediateBuild.cellsSlotted.weapon[1];
+            build.weaponCell1 = findCellVariantByPerk(intermediateBuild.cellsSlotted.weapon[0]);
+            build.weaponCell2 = findCellVariantByPerk(intermediateBuild.cellsSlotted.weapon[1]);
             build.headName = intermediateBuild.build.head.name;
             build.headSurged = true;
-            build.headCell = intermediateBuild.cellsSlotted.head[0];
+            build.headCell = findCellVariantByPerk(intermediateBuild.cellsSlotted.head[0]);
             build.torsoName = intermediateBuild.build.torso.name;
             build.torsoSurged = true;
-            build.torsoCell = intermediateBuild.cellsSlotted.torso[0];
+            build.torsoCell = findCellVariantByPerk(intermediateBuild.cellsSlotted.torso[0]);
             build.armsName = intermediateBuild.build.arms.name;
             build.armsSurged = true;
-            build.armsCell = intermediateBuild.cellsSlotted.arms[0];
+            build.armsCell = findCellVariantByPerk(intermediateBuild.cellsSlotted.arms[0]);
             build.legsName = intermediateBuild.build.legs.name;
             build.legsSurged = true;
-            build.legsCell = intermediateBuild.cellsSlotted.legs[0];
+            build.legsCell = findCellVariantByPerk(intermediateBuild.cellsSlotted.legs[0]);
             build.lantern = intermediateBuild.build.lantern.name;
-            build.lanternCell = intermediateBuild.cellsSlotted.lantern[0];
+            build.lanternCell = findCellVariantByPerk(intermediateBuild.cellsSlotted.lantern[0]);
             return build;
         });
 

@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { WeaponType } from "@src/data/Weapon";
 import { RootState } from "@src/store";
+import sortObjectByKeys from "@src/utils/sort-object-by-keys";
 
 export interface AssignedPerkValue {
     [perkName: string]: number;
@@ -34,6 +35,8 @@ export const buildFinderSelectionSlice = createSlice({
             if (action.payload.value === 0) {
                 delete state.selectedPerks[action.payload.perkName];
             }
+
+            state.selectedPerks = sortObjectByKeys(state.selectedPerks);
         },
         setWeaponType: (state, action: PayloadAction<WeaponType>) => {
             state.weaponType = action.payload;
