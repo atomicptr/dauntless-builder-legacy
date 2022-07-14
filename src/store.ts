@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import buildReducer from "./features/build/build-slice";
-import buildFinderSelectionReducer from "./features/build-finder-selection/build-finder-selection-slice";
+import buildFinderSelectionReducer from "./features/build-finder/build-finder-selection-slice";
 import configurationReducer from "./features/configuration/configuration-slice";
 import favoritesReducer from "./features/favorites/favorites-slice";
 import itemSelectFilterReducer from "./features/item-select-filter/item-select-filter-slice";

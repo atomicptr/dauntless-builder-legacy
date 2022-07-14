@@ -1,13 +1,12 @@
-import { Clear } from "@mui/icons-material";
+import { Clear, Error } from "@mui/icons-material";
 import {
+    Alert,
     Box,
     Button,
     Card,
     CardActionArea,
-    CardActions,
     CardContent,
     Grid,
-    IconButton,
     Skeleton,
     Stack,
     Typography,
@@ -16,7 +15,7 @@ import BuildCard from "@src/components/BuildCard";
 import PageTitle from "@src/components/PageTitle";
 import WeaponTypeSelector from "@src/components/WeaponTypeSelector";
 import { Armour, ArmourType } from "@src/data/Armour";
-import { BuildModel, findCellVariantByPerk, findLanternByName } from "@src/data/BuildModel";
+import { BuildModel, findLanternByName } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
 import dauntlessBuilderData from "@src/data/Data";
 import { ItemRarity } from "@src/data/ItemRarity";
@@ -29,90 +28,63 @@ import {
     selectBuildFinderSelection,
     setPerkValue,
     setWeaponType,
-} from "@src/features/build-finder-selection/build-finder-selection-slice";
+} from "@src/features/build-finder/build-finder-selection-slice";
+import {
+    convertFindBuildResultsToBuildModel,
+    findArmourPiecesByType,
+    FinderItemData,
+    perkCellMap,
+    perks,
+} from "@src/features/build-finder/find-builds";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
-import createPermutation from "@src/utils/create-permutation";
-import sortObjectByKeys from "@src/utils/sort-object-by-keys";
-import md5 from "md5";
-import React, { useCallback, useMemo } from "react";
+import log from "@src/utils/logger";
+import BuildFinderWorker from "@src/worker/build-finder?worker";
+import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 
-interface IntermediateBuild {
-    weapon: IntermediateItem;
-    head: IntermediateItem;
-    torso: IntermediateItem;
-    arms: IntermediateItem;
-    legs: IntermediateItem;
-    lantern: IntermediateItem;
-}
-
-interface IntermediateItem {
-    name: string;
-    perks: string[];
-    cellSlots: CellType[];
-}
-
-interface IntermediateMap {
-    [itemName: string]: IntermediateItem;
-}
-
-interface CellsSlottedMap {
-    weapon: (string | null)[];
-    head: (string | null)[];
-    torso: (string | null)[];
-    arms: (string | null)[];
-    legs: (string | null)[];
-    lantern: (string | null)[];
-}
-
 const buildLimit = 50;
-
+// Since the lantern itself does not matter I decided to pre-pick Shrike's Zeal as the Shrike is DB mascot :).
 const lanternName = "Shrike's Zeal";
+// This feature is super slow (but worthwhile having in code RN)
+const enableSuperPerksFinder = false;
+// Currently import statements within web workers seem to only work in Chrome, this is not an issue when
+// this gets compiled, therefore we only disable this when DB_DEVMODE is set and we're not using Chrome.
+const webworkerDisabled = DB_DEVMODE && navigator.userAgent.search("Chrome") === -1;
+
+const findBuilds = async (
+    itemData: FinderItemData,
+    requestedPerks: AssignedPerkValue,
+    maxBuilds: number,
+): Promise<BuildModel[]> => {
+    const buildFinder = webworkerDisabled ? null : new BuildFinderWorker();
+
+    if (buildFinder === null) {
+        log.warn("Web Worker based build finder is currently disabled due to not using Chrome!");
+        return Promise.resolve([]);
+    }
+
+    return new Promise(resolve => {
+        buildFinder.postMessage({ itemData, maxBuilds, requestedPerks });
+
+        buildFinder.addEventListener("message", message => {
+            const builds = message.data;
+            resolve(convertFindBuildResultsToBuildModel(builds));
+        });
+    });
+};
 
 const BuildFinder: React.FC = () => {
     const { t } = useTranslation();
     const { weaponType, selectedPerks } = useAppSelector(selectBuildFinderSelection);
     const isMobile = useIsMobile();
 
+    const [builds, setBuilds] = useState<BuildModel[]>([]);
+    const [canPerkBeAdded, setCanPerkBeAdded] = useState<{ [perkName: string]: boolean }>({});
+    const [searching, setSearching] = useState(false);
+
     const dispatch = useAppDispatch();
-
-    const perks = useMemo(() => {
-        const perkByType = {
-            [CellType.Alacrity]: [] as Perk[],
-            [CellType.Brutality]: [] as Perk[],
-            [CellType.Finesse]: [] as Perk[],
-            [CellType.Fortitude]: [] as Perk[],
-            [CellType.Insight]: [] as Perk[],
-        };
-
-        Object.values(dauntlessBuilderData.perks).map(perk => {
-            perkByType[perk.type as keyof typeof perkByType].push(perk);
-        });
-
-        return perkByType;
-    }, []);
-
-    const perkCellMap = useMemo(() => {
-        const cellTypeByPerk: {
-            [perkName: string]: CellType;
-        } = {};
-
-        Object.values(dauntlessBuilderData.perks).map(perk => {
-            cellTypeByPerk[perk.name as keyof typeof cellTypeByPerk] = perk.type;
-        });
-
-        return cellTypeByPerk;
-    }, []);
-
-    const findArmourPiecesByType = useCallback(
-        (type: ArmourType) =>
-            Object.values(dauntlessBuilderData.armours)
-                .filter(armourPiece => armourPiece.type === type)
-                .filter(armourPiece => armourPiece.rarity !== ItemRarity.Exotic), // remove exotics for now...
-        [],
-    );
 
     const itemData = useMemo(() => {
         const filterPerksAndCells =
@@ -146,216 +118,66 @@ const BuildFinder: React.FC = () => {
         };
     }, [weaponType, selectedPerks, perkCellMap, findArmourPiecesByType]);
 
-    const findBuilds = useCallback(
-        (requestedPerks: AssignedPerkValue, maxBuilds: number) => {
-            const determineBasePerks = (build: IntermediateBuild): AssignedPerkValue => {
-                const perkStrings = Object.values(build)
-                    .map(type => type.perks)
-                    .flat(10);
-                const perks: AssignedPerkValue = {};
-                for (const perk of perkStrings) {
-                    if (!(perk in perks)) {
-                        perks[perk] = 0;
-                    }
-                    perks[perk] += 3;
-                }
-                return perks;
-            };
+    useEffect(() => {
+        findBuilds(itemData, selectedPerks, buildLimit).then(builds => {
+            setBuilds(builds);
+        });
+    }, [itemData, selectedPerks]);
 
-            const evaluateBuild = (build: IntermediateBuild) => {
-                const perks = determineBasePerks(build);
-                const cellsSlotted: CellsSlottedMap = {
-                    arms: build.arms.cellSlots.map(() => null),
-                    head: build.head.cellSlots.map(() => null),
-                    lantern: build.lantern.cellSlots.map(() => null),
-                    legs: build.legs.cellSlots.map(() => null),
-                    torso: build.torso.cellSlots.map(() => null),
-                    weapon: build.weapon.cellSlots.map(() => null),
-                };
+    useEffect(() => {
+        const canBeAdded = async (builds: BuildModel[], perk: Perk): Promise<{ [perkName: string]: boolean }> => {
+            if (Object.values(selectedPerks).reduce((prev, cur) => prev + cur, 0) + 3 > 36) {
+                return Promise.resolve({ [perk.name]: false });
+            }
 
-                for (const perkName in requestedPerks) {
-                    const desiredValue = requestedPerks[perkName];
+            if (perk.name in selectedPerks && selectedPerks[perk.name] >= 6) {
+                return Promise.resolve({ [perk.name]: false });
+            }
 
-                    // do we already have the desired amount? If yes, skip
-                    if (perks[perkName] >= desiredValue) {
-                        continue;
-                    }
+            /*
+            TODO: this doesn't work properly
+            const fitsInOneBuild = builds.some(build => _perkFitsInEmptyCellSlot(build, perk));
 
-                    const perkCellType = perkCellMap[perkName];
+            if (!fitsInOneBuild) {
+                return Promise.resolve({[perk.name]: false});
+            }
+            */
 
-                    for (const itemType in build) {
-                        const item = build[itemType as keyof IntermediateBuild];
+            if (!enableSuperPerksFinder) {
+                return Promise.resolve({ [perk.name]: true });
+            }
 
-                        item.cellSlots.forEach((cellSlot, index) => {
-                            // we've reached the desired state, stop
-                            if (perks[perkName] >= desiredValue) {
-                                return;
-                            }
+            const requestedPerkValue = perk.name in selectedPerks ? selectedPerks[perk.name] + 3 : 3;
+            const requestedPerks = { ...selectedPerks, [perk.name]: requestedPerkValue };
 
-                            // cell slot is not empty anymore, skip
-                            if (cellsSlotted[itemType as keyof typeof cellsSlotted][index] !== null) {
-                                return;
-                            }
+            const results = await findBuilds(itemData, requestedPerks, 1);
+            return { [perk.name]: results.length > 0 };
+        };
 
-                            // doesn't fit, skip
-                            if (cellSlot !== CellType.Prismatic && cellSlot !== perkCellType) {
-                                return;
-                            }
+        const runWorker = async () => {
+            console.time("canBeAdded");
+            const result = await Promise.all(
+                Object.values(perks)
+                    .flat()
+                    .map(perk => canBeAdded(builds, perk)),
+            );
 
-                            cellsSlotted[itemType as keyof typeof cellsSlotted][index] = perkName;
+            let newCanBeAddedMap = {};
 
-                            if (!(perkName in perks)) {
-                                perks[perkName] = 0;
-                            }
-                            perks[perkName] += 3;
-                        });
-                    }
-                }
-
-                const fulfillsCriteria = () => {
-                    for (const perk in requestedPerks) {
-                        const desiredValue = requestedPerks[perk];
-
-                        if (!(perk in perks)) {
-                            return false;
-                        }
-
-                        if (perks[perk] < desiredValue) {
-                            return false;
-                        }
-                    }
-                    return true;
-                };
-
-                return { cellsSlotted, fulfillsCriteria: fulfillsCriteria(), perks };
-            };
-
-            const intermediateMap: IntermediateMap = {};
-
-            const createIntermediateFormat = (item: Weapon | Armour | Lantern): IntermediateItem => {
-                if (item.name in intermediateMap) {
-                    return intermediateMap[item.name];
-                }
-
-                const format: IntermediateItem = {
-                    cellSlots: (Array.isArray(item.cells) ? item.cells : item.cells === null ? [] : [item.cells]) ?? [],
-                    name: item.name,
-                    perks:
-                        "perks" in item
-                            ? (item.perks ?? [])
-                                .map(perk => perk.name)
-                                .filter((perk, index, self) => self.indexOf(perk) === index)
-                            : [],
-                };
-
-                intermediateMap[item.name] = format;
-
-                return format;
-            };
-
-            const findMatchingBuilds = () => {
-                const matchingBuilds: {
-                    ident: string;
-                    build: IntermediateBuild;
-                    perks: AssignedPerkValue;
-                    cellsSlotted: CellsSlottedMap;
-                }[] = [];
-
-                const createIntermediateBuild = (
-                    weapon: Weapon,
-                    head: Armour,
-                    torso: Armour,
-                    arms: Armour,
-                    legs: Armour,
-                ): IntermediateBuild => ({
-                    arms: createIntermediateFormat(arms),
-                    head: createIntermediateFormat(head),
-                    lantern: createIntermediateFormat(itemData.lantern),
-                    legs: createIntermediateFormat(legs),
-                    torso: createIntermediateFormat(torso),
-                    weapon: createIntermediateFormat(weapon),
-                });
-
-                const createBuildIdentifier = (build: IntermediateBuild, cellsSlotted: CellsSlottedMap): string =>
-                    md5(
-                        "build::" +
-                            Object.keys(sortObjectByKeys(build))
-                                .map(key => build[key as keyof IntermediateBuild].name)
-                                .join("::") +
-                            Object.keys(sortObjectByKeys(cellsSlotted))
-                                .map(key => cellsSlotted[key as keyof CellsSlottedMap] ?? "Null")
-                                .join("::"),
-                    );
-
-                for (let i = 0; i < 5; i++) {
-                    for (const weapon of itemData.weapons) {
-                        // first permutation will just be limited data set, which is super fast
-                        // if that doesn't work we'll try to expand the pool even further by first adding
-                        // all heads, with limited rest, then all torso with limited rest etc.
-                        for (const [head, torso, arms, legs] of createPermutation([
-                            i === 1 ? findArmourPiecesByType(ArmourType.Head) : itemData.head,
-                            i === 2 ? findArmourPiecesByType(ArmourType.Torso) : itemData.torso,
-                            i === 3 ? findArmourPiecesByType(ArmourType.Arms) : itemData.arms,
-                            i === 4 ? findArmourPiecesByType(ArmourType.Legs) : itemData.legs,
-                        ])) {
-                            if (matchingBuilds.length >= maxBuilds) {
-                                return matchingBuilds;
-                            }
-
-                            const build = createIntermediateBuild(weapon, head, torso, arms, legs);
-
-                            const { fulfillsCriteria, perks, cellsSlotted } = evaluateBuild(build);
-
-                            if (!fulfillsCriteria) {
-                                continue;
-                            }
-
-                            const ident = createBuildIdentifier(build, cellsSlotted);
-                            const doesBuildAlreadyExist =
-                                matchingBuilds.find(build => build.ident === ident) !== undefined;
-                            if (doesBuildAlreadyExist) {
-                                continue;
-                            }
-
-                            matchingBuilds.push({ build, cellsSlotted, ident, perks });
-                        }
-                    }
-                }
-
-                return matchingBuilds;
-            };
-
-            const matchingBuilds = findMatchingBuilds();
-
-            return matchingBuilds.map(intermediateBuild => {
-                const build = new BuildModel();
-                build.weaponName = intermediateBuild.build.weapon.name;
-                build.weaponSurged = true;
-                build.weaponCell1 = findCellVariantByPerk(intermediateBuild.cellsSlotted.weapon[0]);
-                build.weaponCell2 = findCellVariantByPerk(intermediateBuild.cellsSlotted.weapon[1]);
-                build.headName = intermediateBuild.build.head.name;
-                build.headSurged = true;
-                build.headCell = findCellVariantByPerk(intermediateBuild.cellsSlotted.head[0]);
-                build.torsoName = intermediateBuild.build.torso.name;
-                build.torsoSurged = true;
-                build.torsoCell = findCellVariantByPerk(intermediateBuild.cellsSlotted.torso[0]);
-                build.armsName = intermediateBuild.build.arms.name;
-                build.armsSurged = true;
-                build.armsCell = findCellVariantByPerk(intermediateBuild.cellsSlotted.arms[0]);
-                build.legsName = intermediateBuild.build.legs.name;
-                build.legsSurged = true;
-                build.legsCell = findCellVariantByPerk(intermediateBuild.cellsSlotted.legs[0]);
-                build.lantern = intermediateBuild.build.lantern.name;
-                build.lanternCell = findCellVariantByPerk(intermediateBuild.cellsSlotted.lantern[0]);
-                return build;
+            result.forEach(resultMap => {
+                newCanBeAddedMap = { ...newCanBeAddedMap, ...resultMap };
             });
-        },
-        [itemData, perkCellMap, findArmourPiecesByType],
-    );
 
-    const builds = useMemo(() => findBuilds(selectedPerks, buildLimit), [findBuilds, selectedPerks]);
+            setCanPerkBeAdded(newCanBeAddedMap);
+            console.timeEnd("canBeAdded");
+            setSearching(false);
+        };
 
-    console.log(builds, selectedPerks);
+        setSearching(true);
+        runWorker();
+    }, [selectedPerks]);
+
+    console.log(builds, selectedPerks, canPerkBeAdded);
 
     const _perkFitsInEmptyCellSlot = (build: BuildModel, perk: Perk): boolean => {
         const makeCellArray = (cells: CellType | CellType[] | null | undefined): CellType[] => {
@@ -393,37 +215,7 @@ const BuildFinder: React.FC = () => {
         return false;
     };
 
-    const _testIfPerkCanBeAdded = useCallback(
-        (perk: Perk): boolean => {
-            if (builds.some(build => _perkFitsInEmptyCellSlot(build, perk))) {
-                return true;
-            }
-
-            // if it can't find even buildLimit builds, there is no point in searching
-            if (builds.length < buildLimit) {
-                return false;
-            }
-
-            return false;
-
-            // TODO: add webworkers?
-            const perkValue = perk.name in selectedPerks ? selectedPerks[perk.name] : 0;
-
-            const requestedPerks = { ...selectedPerks, [perk.name]: perkValue + 3 };
-
-            console.log("I want: ", perk.name, perkValue + 3, requestedPerks);
-
-            return findBuilds(requestedPerks, 1).length > 0;
-        },
-        [selectedPerks, builds, findBuilds],
-    );
-
-    const canAddPerk = useCallback(
-        (perk: Perk): boolean =>
-            Object.values(selectedPerks).reduce((prev, cur) => prev + cur, 0) + 3 <= 36 &&
-            (perk.name in selectedPerks ? selectedPerks[perk.name] < 6 : true), // TODO: readd the functions above
-        [selectedPerks],
-    );
+    const canAddPerk = (perk: Perk): boolean => !searching && perk.name in canPerkBeAdded && canPerkBeAdded[perk.name];
 
     const onPerkClicked = (perk: Perk) => {
         const value = perk.name in selectedPerks ? selectedPerks[perk.name] + 3 : 3;
@@ -436,6 +228,17 @@ const BuildFinder: React.FC = () => {
         }
         return `+${selectedPerks[perk.name]}`;
     };
+
+    if (webworkerDisabled) {
+        return (
+            <Alert
+                color="error"
+                icon={<Error />}
+            >
+                This feature is currently disabled for this web browser.
+            </Alert>
+        );
+    }
 
     return (
         <Stack spacing={2}>
@@ -487,34 +290,48 @@ const BuildFinder: React.FC = () => {
                                     </Stack>
 
                                     {perks[cellType as keyof typeof perks].map((perk: Perk) => (
-                                        <Card
+                                        <Stack
                                             key={perk.name}
-                                            elevation={canAddPerk(perk) ? 1 : 0}
+                                            direction="row"
+                                            spacing={1}
                                         >
-                                            <CardActionArea
-                                                disabled={!canAddPerk(perk)}
-                                                onClick={() => onPerkClicked(perk)}
+                                            <Card
+                                                elevation={canAddPerk(perk) ? 1 : 0}
+                                                sx={{ flexGrow: 2 }}
                                             >
-                                                <CardContent>
-                                                    {perk.name} 
-                                                    {" "}
-                                                    {renderPerkLevel(perk)}
-                                                </CardContent>
-                                            </CardActionArea>
+                                                <CardActionArea
+                                                    disabled={!canAddPerk(perk)}
+                                                    onClick={() => onPerkClicked(perk)}
+                                                >
+                                                    <CardContent>
+                                                        {perk.name} 
+                                                        {" "}
+                                                        {renderPerkLevel(perk)}
+                                                    </CardContent>
+                                                </CardActionArea>
+                                            </Card>
+
                                             {perk.name in selectedPerks && (
-                                                <CardActions>
-                                                    <IconButton>
-                                                        <Clear
-                                                            onClick={() =>
-                                                                dispatch(
-                                                                    setPerkValue({ perkName: perk.name, value: 0 }),
-                                                                )
-                                                            }
-                                                        />
-                                                    </IconButton>
-                                                </CardActions>
+                                                <Card sx={{ flexGrow: 1 }}>
+                                                    <CardActionArea
+                                                        onClick={() =>
+                                                            dispatch(setPerkValue({ perkName: perk.name, value: 0 }))
+                                                        }
+                                                        sx={{
+                                                            alignItems: "center",
+                                                            display: "flex",
+                                                            height: "100%",
+                                                            justifyContent: "center",
+                                                            width: "100%",
+                                                        }}
+                                                    >
+                                                        <Box>
+                                                            <Clear />
+                                                        </Box>
+                                                    </CardActionArea>
+                                                </Card>
                                             )}
-                                        </Card>
+                                        </Stack>
                                     ))}
                                 </Stack>
                             </Grid>

@@ -9,7 +9,8 @@
         "lib": [
             "DOM",
             "DOM.Iterable",
-            "ESNext"
+            "ESNext",
+            "webworker"
         ],
         "module": "ESNext",
         "moduleResolution": "Node",
