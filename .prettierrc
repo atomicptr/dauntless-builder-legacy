@@ -11,5 +11,6 @@
     "requirePragma": false,
     "insertPragma": false,
     "proseWrap": "preserve",
-    "singleAttributePerLine": true
+    "singleAttributePerLine": true,
+    "endOfLine": "lf"
 }
