@@ -224,6 +224,10 @@ const BuildFinder: React.FC = () => {
                 continue;
             }
 
+            if (cell === CellType.Prismatic) {
+                return true;
+            }
+
             if (perk.type === cell) {
                 return true;
             }
