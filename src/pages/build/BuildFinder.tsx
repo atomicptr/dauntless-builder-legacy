@@ -109,16 +109,16 @@ const BuildFinder: React.FC = () => {
 
     useEffect(() => {
         const canBeAdded = async (builds: BuildModel[], perk: Perk): Promise<{ [perkName: string]: boolean }> => {
-            if (Object.values(selectedPerks).length <= 3) {
-                return Promise.resolve({ [perk.name]: true });
-            }
-
             if (Object.values(selectedPerks).reduce((prev, cur) => prev + cur, 0) >= 36) {
                 return Promise.resolve({ [perk.name]: false });
             }
 
             if (perk.name in selectedPerks && selectedPerks[perk.name] >= 6) {
                 return Promise.resolve({ [perk.name]: false });
+            }
+
+            if (Object.values(selectedPerks).length <= 3) {
+                return Promise.resolve({ [perk.name]: true });
             }
 
             const perkAvailableInGeneratedBuilds = builds.some(build => {
