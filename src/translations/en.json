@@ -77,7 +77,10 @@
         },
         "build-finder": {
             "builds-title": "Builds ({{num}})",
+            "filter-title": "Filter",
             "perks-title": "$t(terms.perks)",
+            "remove-exotics": "Remove Exotic Items",
+            "remove-legendary": "Remove Legendary Weapons",
             "title": "Build Finder"
         },
         "favorites": {

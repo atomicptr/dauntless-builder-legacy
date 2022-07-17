@@ -6,7 +6,10 @@ import {
     Card,
     CardActionArea,
     CardContent,
+    Checkbox,
     CircularProgress,
+    FormControlLabel,
+    FormGroup,
     Grid,
     LinearProgress,
     Skeleton,
@@ -25,6 +28,8 @@ import {
     clearPerks,
     selectBuildFinderSelection,
     setPerkValue,
+    setRemoveExotics,
+    setRemoveLegendary,
     setWeaponType,
 } from "@src/features/build-finder/build-finder-selection-slice";
 import {
@@ -262,6 +267,28 @@ const BuildFinder: React.FC = () => {
                 onChange={weaponType => dispatch(setWeaponType(weaponType))}
                 value={weaponType}
             />
+            <Typography variant="h5">{t("pages.build-finder.filter-title")}</Typography>
+
+            <FormGroup>
+                <FormControlLabel
+                    control={
+                        <Checkbox
+                            checked={removeExotics}
+                            onChange={e => dispatch(setRemoveExotics(e.target.checked))}
+                        />
+                    }
+                    label={t("pages.build-finder.remove-exotics")}
+                />
+                <FormControlLabel
+                    control={
+                        <Checkbox
+                            checked={removeLegendary}
+                            onChange={e => dispatch(setRemoveLegendary(e.target.checked))}
+                        />
+                    }
+                    label={t("pages.build-finder.remove-legendary")}
+                />
+            </FormGroup>
 
             {configuration.devMode && (
                 <Card>

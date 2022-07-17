@@ -93,6 +93,8 @@ const defaultFinderItemDataOptions: FinderItemDataOptions = {
     removeLegendary: true,
 };
 
+const bondWrapperSeparator = "//";
+
 export const findArmourPiecesByType = (type: ArmourType, options: FinderItemDataOptions = {}) => {
     const finderOptions = Object.assign({}, defaultFinderItemDataOptions, options);
     return Object.values(dauntlessBuilderData.armours)
@@ -125,6 +127,34 @@ export const createItemData = (
             filterPerksAndCells(Object.keys(requestedPerks).length <= 3 ? orMode : andMode),
         );
 
+    const createLegendaryWeaponBondWrapper = (weapon: Weapon): Weapon => {
+        // legendaries disable so we don't need wrappers
+        if (options.removeLegendary) {
+            return weapon;
+        }
+
+        // can't bond exotics
+        if (weapon.rarity === ItemRarity.Exotic) {
+            return weapon;
+        }
+
+        // TODO: should there ever be multiple legendaries for an element this will not work correctly anymore
+        const legendaryWeapon = Object.values(dauntlessBuilderData.weapons).find(
+            w => w.type === weaponType && w.bond?.elemental === weapon.elemental,
+        );
+
+        if (!legendaryWeapon) {
+            return weapon;
+        }
+
+        const wrapperWeapon = Object.assign({}, legendaryWeapon);
+
+        wrapperWeapon.name += bondWrapperSeparator + weapon.name;
+        wrapperWeapon.perks = weapon.perks;
+
+        return wrapperWeapon;
+    };
+
     return {
         arms: findMatchingArmourPiecesByType(ArmourType.Arms),
         head: findMatchingArmourPiecesByType(ArmourType.Head),
@@ -133,8 +163,9 @@ export const createItemData = (
         torso: findMatchingArmourPiecesByType(ArmourType.Torso),
         weapons: Object.values(dauntlessBuilderData.weapons)
             .filter(weapon => weapon.type === weaponType)
-            .filter(weapon => (finderOptions.removeLegendary ? weapon.bond === undefined : true))
+            .filter(weapon => weapon.bond === undefined)
             .filter(weapon => (finderOptions.removeExotics ? weapon.rarity !== ItemRarity.Exotic : true))
+            .map(createLegendaryWeaponBondWrapper)
             .filter(filterPerksAndCells()),
     };
 };
@@ -324,10 +355,21 @@ export const findBuilds = (
 export const convertFindBuildResultsToBuildModel = (matchingBuilds: MatchingBuild[]) => {
     return matchingBuilds.map(intermediateBuild => {
         const build = new BuildModel();
-        build.weaponName = intermediateBuild.build.weapon.name;
+
+        let weaponName = intermediateBuild.build.weapon.name;
+        let bondWeapon = null;
+
+        if (weaponName.indexOf(bondWrapperSeparator) > -1) {
+            const parts = weaponName.split(bondWrapperSeparator);
+            weaponName = parts[0];
+            bondWeapon = parts[1];
+        }
+
+        build.weaponName = weaponName;
         build.weaponSurged = true;
         build.weaponCell1 = findCellVariantByPerk(intermediateBuild.cellsSlotted.weapon[0]);
         build.weaponCell2 = findCellVariantByPerk(intermediateBuild.cellsSlotted.weapon[1]);
+        build.bondWeapon = bondWeapon;
         build.headName = intermediateBuild.build.head.name;
         build.headSurged = true;
         build.headCell = findCellVariantByPerk(intermediateBuild.cellsSlotted.head[0]);
