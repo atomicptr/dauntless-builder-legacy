@@ -6,6 +6,7 @@ import {
     Card,
     CardActionArea,
     CardContent,
+    CircularProgress,
     Grid,
     LinearProgress,
     Skeleton,
@@ -51,6 +52,7 @@ const lanternName = "Shrike's Zeal";
 
 // Currently import statements within web workers seem to only work in Chrome, this is not an issue when
 // this gets compiled, therefore we only disable this when DB_DEVMODE is set and we're not using Chrome.
+// Firefox related issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1247687
 const webworkerDisabled = DB_DEVMODE && navigator.userAgent.search("Chrome") === -1;
 
 const findBuilds = async (
@@ -84,7 +86,8 @@ const BuildFinder: React.FC = () => {
 
     const [builds, setBuilds] = useState<BuildModel[]>([]);
     const [canPerkBeAdded, setCanPerkBeAdded] = useState<{ [perkName: string]: boolean }>({});
-    const [searching, setSearching] = useState(false);
+    const [isSearchingBuilds, setIsSearchingBuilds] = useState(false);
+    const [isDeterminingSelectablePerks, setIsDeterminingSelectablePerks] = useState(false);
 
     const dispatch = useAppDispatch();
 
@@ -102,8 +105,10 @@ const BuildFinder: React.FC = () => {
     );
 
     useEffect(() => {
+        setIsSearchingBuilds(true);
         findBuilds(itemData, selectedPerks, buildLimit, finderOptions).then(builds => {
             setBuilds(builds);
+            setIsSearchingBuilds(false);
         });
     }, [itemData, selectedPerks, finderOptions]);
 
@@ -174,10 +179,10 @@ const BuildFinder: React.FC = () => {
 
             setCanPerkBeAdded(newCanBeAddedMap);
             log.timeEnd("determineAvailablePerks");
-            setSearching(false);
+            setIsDeterminingSelectablePerks(false);
         };
 
-        setSearching(true);
+        setIsDeterminingSelectablePerks(true);
         runWorkers();
     }, [selectedPerks, itemData, builds, finderOptions]);
 
@@ -217,7 +222,8 @@ const BuildFinder: React.FC = () => {
         return false;
     };
 
-    const canAddPerk = (perk: Perk): boolean => perk.name in canPerkBeAdded && canPerkBeAdded[perk.name];
+    const canAddPerk = (perk: Perk): boolean =>
+        !isDeterminingSelectablePerks && !isSearchingBuilds && perk.name in canPerkBeAdded && canPerkBeAdded[perk.name];
 
     const onPerkClicked = (perk: Perk) => {
         const value = perk.name in selectedPerks ? selectedPerks[perk.name] + 3 : 3;
@@ -243,7 +249,10 @@ const BuildFinder: React.FC = () => {
     }
 
     return (
-        <Stack spacing={2}>
+        <Stack
+            spacing={2}
+            sx={{ pb: 2 }}
+        >
             <PageTitle title={t("pages.build-finder.title")} />
 
             <WeaponTypeSelector
@@ -278,9 +287,9 @@ const BuildFinder: React.FC = () => {
 
             {weaponType !== null && (
                 <>
-                    {searching ? <LinearProgress /> : null}
-
                     <Typography variant="h5">{t("pages.build-finder.perks-title")}</Typography>
+
+                    {isDeterminingSelectablePerks ? <LinearProgress /> : null}
 
                     <Grid
                         container
@@ -312,11 +321,11 @@ const BuildFinder: React.FC = () => {
                                             spacing={1}
                                         >
                                             <Card
-                                                elevation={!searching && canAddPerk(perk) ? 1 : 0}
+                                                elevation={canAddPerk(perk) ? 1 : 0}
                                                 sx={{ flexGrow: 2 }}
                                             >
                                                 <CardActionArea
-                                                    disabled={searching || !canAddPerk(perk)}
+                                                    disabled={!canAddPerk(perk)}
                                                     onClick={() => onPerkClicked(perk)}
                                                 >
                                                     <CardContent>
@@ -330,9 +339,14 @@ const BuildFinder: React.FC = () => {
                                             {perk.name in selectedPerks && (
                                                 <Card sx={{ width: "50px" }}>
                                                     <CardActionArea
-                                                        disabled={searching}
+                                                        disabled={isDeterminingSelectablePerks}
                                                         onClick={() =>
-                                                            dispatch(setPerkValue({ perkName: perk.name, value: Math.max(0, selectedPerks[perk.name] - 3) }))
+                                                            dispatch(
+                                                                setPerkValue({
+                                                                    perkName: perk.name,
+                                                                    value: Math.max(0, selectedPerks[perk.name] - 3),
+                                                                }),
+                                                            )
                                                         }
                                                         sx={{
                                                             alignItems: "center",
@@ -355,10 +369,21 @@ const BuildFinder: React.FC = () => {
                         ))}
                     </Grid>
 
-                    {Object.keys(selectedPerks).length > 0 && (
+                    {(isDeterminingSelectablePerks || isSearchingBuilds) && (
+                        <Box
+                            display="flex"
+                            justifyContent="center"
+                        >
+                            <CircularProgress />
+                        </Box>
+                    )}
+
+                    {!isDeterminingSelectablePerks && !isSearchingBuilds && Object.keys(selectedPerks).length > 0 && (
                         <>
                             <Typography variant="h5">
-                                {t("pages.build-finder.builds-title", { num: Math.min(builds.length, buildDisplayLimit) })}
+                                {t("pages.build-finder.builds-title", {
+                                    num: Math.min(builds.length, buildDisplayLimit),
+                                })}
                             </Typography>
                             {builds.slice(0, buildDisplayLimit).map((build, index) => (
                                 <Box key={index}>
