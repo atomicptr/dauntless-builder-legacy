@@ -214,14 +214,7 @@ export const findBuilds = (
             const perkCellType = perkCellMap[perkName];
 
             // this array exists to enforce the order in which cells are slotted
-            const itemTypes = [
-                "head",
-                "torso",
-                "arms",
-                "legs",
-                "weapon",
-                "lantern",
-            ]
+            const itemTypes = ["head", "torso", "arms", "legs", "weapon", "lantern"];
 
             for (const itemType of itemTypes) {
                 const item = build[itemType as keyof IntermediateBuild];

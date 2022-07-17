@@ -22,6 +22,7 @@ import { perkData } from "@src/components/PerkList";
 import WeaponTypeSelector from "@src/components/WeaponTypeSelector";
 import { BuildModel } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
+import { ItemType } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
 import {
     AssignedPerkValue,
@@ -42,6 +43,7 @@ import {
 import { selectConfiguration } from "@src/features/configuration/configuration-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
+import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import log from "@src/utils/logger";
 import BuildFinderWorker from "@src/worker/build-finder?worker";
 import React, { useEffect, useMemo, useState } from "react";
@@ -341,7 +343,7 @@ const BuildFinder: React.FC = () => {
                                             src={`/assets/icons/perks/${cellType}.png`}
                                             style={{ height: "64px", width: "64px" }}
                                         />
-                                        <Typography>{cellType}</Typography>
+                                        <Typography>{t(`terms.cell-type.${cellType}`)}</Typography>
                                     </Stack>
 
                                     {perks[cellType as keyof typeof perks].map((perk: Perk) => (
@@ -359,7 +361,7 @@ const BuildFinder: React.FC = () => {
                                                     onClick={() => onPerkClicked(perk)}
                                                 >
                                                     <CardContent>
-                                                        {perk.name} 
+                                                        {t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))}
                                                         {" "}
                                                         {renderPerkLevel(perk)}
                                                     </CardContent>
