@@ -127,6 +127,28 @@ export const createItemData = (
             filterPerksAndCells(Object.keys(requestedPerks).length <= 3 ? orMode : andMode),
         );
 
+    const findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered = (type: ArmourType) => {
+        let matching = findMatchingArmourPiecesByType(type);
+        for (const perk in requestedPerks) {
+            const hasMatchingCellSlot =
+                Object.values(matching)
+                    .map(armourPiece => (Array.isArray(armourPiece.cells) ? armourPiece.cells : [armourPiece.cells]))
+                    .filter(cells => cells.indexOf(perkCellMap[perk]) > -1).length > 0;
+            if (!hasMatchingCellSlot) {
+                matching = matching.concat(findArmourPieceByCell(type, perk, options));
+            }
+        }
+        return matching;
+    };
+
+    const findArmourPieceByCell = (type: ArmourType, perkName: string, options: FinderItemDataOptions = {}) => {
+        const hasMatchingCellSlot = (cells: CellType | CellType[] | null, slot: CellType) =>
+            (Array.isArray(cells) ? cells : [cells]).indexOf(slot) > -1;
+        return findArmourPiecesByType(type, options).filter(armourPiece =>
+            hasMatchingCellSlot(armourPiece.cells, perkCellMap[perkName]),
+        )[0];
+    };
+
     const createLegendaryWeaponBondWrapper = (weapon: Weapon): Weapon => {
         // legendaries disable so we don't need wrappers
         if (options.removeLegendary) {
@@ -156,11 +178,11 @@ export const createItemData = (
     };
 
     return {
-        arms: findMatchingArmourPiecesByType(ArmourType.Arms),
-        head: findMatchingArmourPiecesByType(ArmourType.Head),
+        arms: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Arms),
+        head: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Head),
         lantern: findLanternByName(lanternName) as Lantern,
-        legs: findMatchingArmourPiecesByType(ArmourType.Legs),
-        torso: findMatchingArmourPiecesByType(ArmourType.Torso),
+        legs: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Legs),
+        torso: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Torso),
         weapons: Object.values(dauntlessBuilderData.weapons)
             .filter(weapon => weapon.type === weaponType)
             .filter(weapon => weapon.bond === undefined)
@@ -170,14 +192,7 @@ export const createItemData = (
     };
 };
 
-export const findBuilds = (
-    itemData: FinderItemData,
-    requestedPerks: AssignedPerkValue,
-    maxBuilds: number,
-    options: FinderItemDataOptions = {},
-) => {
-    const finderOptions = Object.assign({}, defaultFinderItemDataOptions, options);
-
+export const findBuilds = (itemData: FinderItemData, requestedPerks: AssignedPerkValue, maxBuilds: number) => {
     const determineBasePerks = (build: IntermediateBuild): AssignedPerkValue => {
         const perkStrings = Object.values(build)
             .map(type => type.perks)
@@ -315,37 +330,32 @@ export const findBuilds = (
                         .join("::"),
             );
 
-        for (let i = 0; i < 5; i++) {
-            for (const weapon of itemData.weapons) {
-                // first permutation will just be limited data set, which is super fast
-                // if that doesn't work we'll try to expand the pool even further by first adding
-                // all heads, with limited rest, then all torso with limited rest etc.
-                for (const [head, torso, arms, legs] of createPermutation([
-                    i === 1 ? findArmourPiecesByType(ArmourType.Head, finderOptions) : itemData.head,
-                    i === 2 ? findArmourPiecesByType(ArmourType.Torso, finderOptions) : itemData.torso,
-                    i === 3 ? findArmourPiecesByType(ArmourType.Arms, finderOptions) : itemData.arms,
-                    i === 4 ? findArmourPiecesByType(ArmourType.Legs, finderOptions) : itemData.legs,
-                ])) {
-                    if (matchingBuilds.length >= maxBuilds) {
-                        return matchingBuilds;
-                    }
-
-                    const build = createIntermediateBuild(weapon, head, torso, arms, legs);
-
-                    const { fulfillsCriteria, perks, cellsSlotted } = evaluateBuild(build);
-
-                    if (!fulfillsCriteria) {
-                        continue;
-                    }
-
-                    const ident = createBuildIdentifier(build, cellsSlotted);
-                    const doesBuildAlreadyExist = matchingBuilds.find(build => build.ident === ident) !== undefined;
-                    if (doesBuildAlreadyExist) {
-                        continue;
-                    }
-
-                    matchingBuilds.push({ build, cellsSlotted, ident, perks });
+        for (const weapon of itemData.weapons) {
+            for (const [head, torso, arms, legs] of createPermutation([
+                itemData.head,
+                itemData.torso,
+                itemData.arms,
+                itemData.legs,
+            ])) {
+                if (matchingBuilds.length >= maxBuilds) {
+                    return matchingBuilds;
                 }
+
+                const build = createIntermediateBuild(weapon, head, torso, arms, legs);
+
+                const { fulfillsCriteria, perks, cellsSlotted } = evaluateBuild(build);
+
+                if (!fulfillsCriteria) {
+                    continue;
+                }
+
+                const ident = createBuildIdentifier(build, cellsSlotted);
+                const doesBuildAlreadyExist = matchingBuilds.find(build => build.ident === ident) !== undefined;
+                if (doesBuildAlreadyExist) {
+                    continue;
+                }
+
+                matchingBuilds.push({ build, cellsSlotted, ident, perks });
             }
         }
 
