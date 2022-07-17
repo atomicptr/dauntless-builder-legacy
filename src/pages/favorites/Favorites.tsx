@@ -1,6 +1,7 @@
 import { Delete, Edit, KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
-import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, Stack, TextField } from "@mui/material";
+import { Box, Button, Stack } from "@mui/material";
 import BuildCard from "@src/components/BuildCard";
+import InputDialog from "@src/components/InputDialog";
 import PageTitle from "@src/components/PageTitle";
 import {
     Favorite,
@@ -33,11 +34,11 @@ const Favorites: React.FC = () => {
         setOpen(false);
     };
 
-    const saveAndCloseDialog = () => {
+    const saveAndCloseDialog = (name: string) => {
         if (currentFavorite === null) {
             return;
         }
-        dispatch(updateFavorite(currentFavorite));
+        dispatch(updateFavorite({ ...currentFavorite, name }));
         setCurrentFavorite(null);
         setOpen(false);
     };
@@ -89,29 +90,16 @@ const Favorites: React.FC = () => {
                 </Stack>
             ))}
 
-            {currentFavorite !== null ? (
-                <Dialog
+            {currentFavorite !== null && (
+                <InputDialog
+                    defaultInput={currentFavorite.name}
+                    label={t("pages.favorites.build-name")}
                     onClose={closeDialog}
+                    onConfirm={saveAndCloseDialog}
                     open={open}
-                >
-                    <DialogTitle>{t("pages.favorites.edit-name", { name: currentFavorite.name })}</DialogTitle>
-                    <DialogContent>
-                        <TextField
-                            autoFocus
-                            fullWidth
-                            label={t("pages.favorites.build-name")}
-                            margin="dense"
-                            onChange={ev => setCurrentFavorite({ ...currentFavorite, name: ev.target.value })}
-                            value={currentFavorite.name}
-                            variant="standard"
-                        />
-                    </DialogContent>
-                    <DialogActions>
-                        <Button onClick={closeDialog}>{t("terms.cancel")}</Button>
-                        <Button onClick={saveAndCloseDialog}>{t("terms.save")}</Button>
-                    </DialogActions>
-                </Dialog>
-            ) : null}
+                    title={t("pages.favorites.edit-name")}
+                />
+            )}
         </Box>
     );
 };

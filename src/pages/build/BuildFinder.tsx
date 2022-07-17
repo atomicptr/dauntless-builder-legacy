@@ -17,6 +17,7 @@ import {
     Typography,
 } from "@mui/material";
 import BuildCard from "@src/components/BuildCard";
+import InputDialog from "@src/components/InputDialog";
 import PageTitle from "@src/components/PageTitle";
 import { perkData } from "@src/components/PerkList";
 import WeaponTypeSelector from "@src/components/WeaponTypeSelector";
@@ -94,6 +95,7 @@ const BuildFinder: React.FC = () => {
     const [canPerkBeAdded, setCanPerkBeAdded] = useState<{ [perkName: string]: boolean }>({});
     const [isSearchingBuilds, setIsSearchingBuilds] = useState(false);
     const [isDeterminingSelectablePerks, setIsDeterminingSelectablePerks] = useState(false);
+    const [inputDialogOpen, setInputDialogOpen] = useState(false);
 
     const dispatch = useAppDispatch();
 
@@ -306,28 +308,59 @@ const BuildFinder: React.FC = () => {
             </FormGroup>
 
             {configuration.devMode && (
-                <Card>
-                    <CardContent>
-                        <Stack spacing={1}>
-                            <Typography variant="h5">{"Development Options"}</Typography>
-                            <Button
-                                onClick={() => dispatch(clearPerks())}
-                                variant="outlined"
-                            >
-                                {"Clear All Perks"}
-                            </Button>
-                            <Box>
-                                <Typography>
-                                    {`Number of Perks selected: ${Object.keys(selectedPerks).length}`}
-                                </Typography>
-                                <Typography>{`Number of Builds: ${builds.length}`}</Typography>
-                            </Box>
-                            <pre>
-                                <code>{JSON.stringify(selectedPerks, null, "    ")}</code>
-                            </pre>
-                        </Stack>
-                    </CardContent>
-                </Card>
+                <>
+                    <Card>
+                        <CardContent>
+                            <Stack spacing={1}>
+                                <Typography variant="h5">{"Development Options"}</Typography>
+                                <Stack
+                                    direction="row"
+                                    spacing={2}
+                                >
+                                    <Button
+                                        onClick={() => dispatch(clearPerks())}
+                                        variant="outlined"
+                                    >
+                                        {"Clear All Perks"}
+                                    </Button>
+                                    <Button
+                                        onClick={() => setInputDialogOpen(true)}
+                                        variant="outlined"
+                                    >
+                                        {t("pages.build-finder.dev-set-perks")}
+                                    </Button>
+                                </Stack>
+                                <Box>
+                                    <Typography>
+                                        {`Number of Perks selected: ${Object.keys(selectedPerks).length}`}
+                                    </Typography>
+                                    <Typography>{`Number of Builds: ${builds.length}`}</Typography>
+                                </Box>
+                                <pre>
+                                    <code>{JSON.stringify(selectedPerks, null, "    ")}</code>
+                                </pre>
+                            </Stack>
+                        </CardContent>
+                    </Card>
+                    <InputDialog
+                        multiline
+                        onClose={() => setInputDialogOpen(false)}
+                        onConfirm={input => {
+                            dispatch(clearPerks());
+
+                            try {
+                                const json = JSON.parse(input) as AssignedPerkValue;
+                                for (const [perkName, value] of Object.entries(json)) {
+                                    dispatch(setPerkValue({ perkName, value }));
+                                }
+                            } catch (e) {
+                                log.error("Could not set perk values", { e });
+                            }
+                        }}
+                        open={inputDialogOpen}
+                        title={t("pages.build-finder.dev-set-perks")}
+                    />
+                </>
             )}
 
             {weaponType !== null && (

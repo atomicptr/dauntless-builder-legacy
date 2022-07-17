@@ -77,6 +77,7 @@
         },
         "build-finder": {
             "builds-title": "Builds ({{num}})",
+            "dev-set-perks": "Set Perks",
             "filter-title": "Filter",
             "perks-title": "$t(terms.perks)",
             "remove-exotics": "Remove Exotic Items",
@@ -85,7 +86,7 @@
         },
         "favorites": {
             "build-name": "Build Name",
-            "edit-name": "Edit {{name}}",
+            "edit-name": "Edit Favorite",
             "title": "My Builds"
         },
         "home": {
