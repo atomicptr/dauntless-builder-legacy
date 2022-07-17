@@ -11,6 +11,9 @@ import createPermutation from "@src/utils/create-permutation";
 import sortObjectByKeys from "@src/utils/sort-object-by-keys";
 import md5 from "md5";
 
+// Since the lantern itself does not matter I decided to pre-pick Shrike's Zeal as the Shrike is DB mascot :).
+const lanternName = "Shrike's Zeal";
+
 interface IntermediateBuild {
     weapon: IntermediateItem;
     head: IntermediateItem;
@@ -102,7 +105,7 @@ export const findArmourPiecesByType = (type: ArmourType, options: FinderItemData
         .filter(armourPiece => (finderOptions.removeExotics ? armourPiece.rarity !== ItemRarity.Exotic : true));
 };
 
-export const createItemData = (
+const createItemData = (
     weaponType: WeaponType | null,
     lanternName: string,
     requestedPerks: AssignedPerkValue,
@@ -192,7 +195,9 @@ export const createItemData = (
     };
 };
 
-export const findBuilds = (itemData: FinderItemData, requestedPerks: AssignedPerkValue, maxBuilds: number) => {
+export const findBuilds = (weaponType: WeaponType | null, requestedPerks: AssignedPerkValue, maxBuilds: number) => {
+    const itemData = createItemData(weaponType, lanternName, requestedPerks);
+
     const determineBasePerks = (build: IntermediateBuild): AssignedPerkValue => {
         const perkStrings = Object.values(build)
             .map(type => type.perks)

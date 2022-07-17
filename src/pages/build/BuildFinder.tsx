@@ -25,6 +25,7 @@ import { BuildModel } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
 import { ItemType } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
+import { WeaponType } from "@src/data/Weapon";
 import {
     AssignedPerkValue,
     clearPerks,
@@ -36,8 +37,6 @@ import {
 } from "@src/features/build-finder/build-finder-selection-slice";
 import {
     convertFindBuildResultsToBuildModel,
-    createItemData,
-    FinderItemData,
     FinderItemDataOptions,
     perks,
 } from "@src/features/build-finder/find-builds";
@@ -55,16 +54,13 @@ import { LazyLoadComponent } from "react-lazy-load-image-component";
 const buildLimit = 200;
 const buildDisplayLimit = 50;
 
-// Since the lantern itself does not matter I decided to pre-pick Shrike's Zeal as the Shrike is DB mascot :).
-const lanternName = "Shrike's Zeal";
-
 // Currently import statements within web workers seem to only work in Chrome, this is not an issue when
 // this gets compiled, therefore we only disable this when DB_DEVMODE is set and we're not using Chrome.
 // Firefox related issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1247687
 const webworkerDisabled = DB_DEVMODE && navigator.userAgent.search("Chrome") === -1;
 
 const findBuilds = async (
-    itemData: FinderItemData,
+    weaponType: WeaponType | null,
     requestedPerks: AssignedPerkValue,
     maxBuilds: number,
 ): Promise<BuildModel[]> => {
@@ -76,7 +72,7 @@ const findBuilds = async (
     }
 
     return new Promise(resolve => {
-        buildFinder.postMessage({ itemData, maxBuilds, requestedPerks });
+        buildFinder.postMessage({ maxBuilds, requestedPerks, weaponType });
 
         buildFinder.addEventListener("message", message => {
             const builds = message.data;
@@ -107,21 +103,16 @@ const BuildFinder: React.FC = () => {
         [removeExotics, removeLegendary],
     );
 
-    const itemData = useMemo(
-        () => createItemData(weaponType, lanternName, selectedPerks, finderOptions),
-        [weaponType, selectedPerks, finderOptions],
-    );
-
     useEffect(() => {
         log.timer("findBuilds");
         setIsSearchingBuilds(true);
-        findBuilds(itemData, selectedPerks, buildLimit).then(builds => {
+        findBuilds(weaponType, selectedPerks, buildLimit).then(builds => {
             setBuilds(builds);
             setIsSearchingBuilds(false);
             log.timerEnd("findBuilds");
             log.debug(`Found ${builds.length} builds for given criteria`, { selectedPerks });
         });
-    }, [itemData, selectedPerks, finderOptions]);
+    }, [weaponType, selectedPerks, finderOptions]);
 
     useEffect(() => {
         const canBeAdded = async (builds: BuildModel[], perk: Perk): Promise<{ [perkName: string]: boolean }> => {
@@ -164,17 +155,12 @@ const BuildFinder: React.FC = () => {
                 return { [perk.name]: true };
             }
 
-            // if we can't even find this many builds than there is no point in doing a deep search
-            if (builds.length < buildLimit) {
-                return { [perk.name]: false };
-            }
-
             log.debug(`Have to do deep search for ${perk.name}`, { selectedPerks });
 
             const requestedPerkValue = perk.name in selectedPerks ? selectedPerks[perk.name] + 3 : 3;
             const requestedPerks = { ...selectedPerks, [perk.name]: requestedPerkValue };
 
-            const results = await findBuilds(itemData, requestedPerks, 1);
+            const results = await findBuilds(weaponType, requestedPerks, 1);
             return { [perk.name]: results.length > 0 };
         };
 
@@ -199,7 +185,7 @@ const BuildFinder: React.FC = () => {
 
         setIsDeterminingSelectablePerks(true);
         runWorkers();
-    }, [selectedPerks, itemData, builds, finderOptions]);
+    }, [selectedPerks, weaponType, builds, finderOptions]);
 
     const perkFitsInEmptyCellSlot = (build: BuildModel, perk: Perk): boolean => {
         const makeCellArray = (cells: CellType | CellType[] | null | undefined): CellType[] => {
@@ -347,7 +333,6 @@ const BuildFinder: React.FC = () => {
                         onClose={() => setInputDialogOpen(false)}
                         onConfirm={input => {
                             dispatch(clearPerks());
-
                             try {
                                 const json = JSON.parse(input) as AssignedPerkValue;
                                 for (const [perkName, value] of Object.entries(json)) {
@@ -356,6 +341,7 @@ const BuildFinder: React.FC = () => {
                             } catch (e) {
                                 log.error("Could not set perk values", { e });
                             }
+                            setInputDialogOpen(false);
                         }}
                         open={inputDialogOpen}
                         title={t("pages.build-finder.dev-set-perks")}

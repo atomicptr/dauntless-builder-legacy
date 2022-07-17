@@ -1,15 +1,16 @@
+import { WeaponType } from "@src/data/Weapon";
 import { AssignedPerkValue } from "@src/features/build-finder/build-finder-selection-slice";
-import { findBuilds, FinderItemData } from "@src/features/build-finder/find-builds";
+import { findBuilds } from "@src/features/build-finder/find-builds";
 
 interface Data {
-    itemData: FinderItemData;
+    weaponType: WeaponType | null;
     requestedPerks: AssignedPerkValue;
     maxBuilds: number;
 }
 
 const onMessage = (e: MessageEvent) => {
-    const { itemData, requestedPerks, maxBuilds } = e.data as Data;
-    const builds = findBuilds(itemData, requestedPerks, maxBuilds);
+    const { weaponType, requestedPerks, maxBuilds } = e.data as Data;
+    const builds = findBuilds(weaponType, requestedPerks, maxBuilds);
     self.postMessage(builds);
     self.close();
 };
