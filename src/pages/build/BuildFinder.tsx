@@ -115,15 +115,15 @@ const BuildFinder: React.FC = () => {
     useEffect(() => {
         const canBeAdded = async (builds: BuildModel[], perk: Perk): Promise<{ [perkName: string]: boolean }> => {
             if (Object.values(selectedPerks).reduce((prev, cur) => prev + cur, 0) >= 36) {
-                return Promise.resolve({ [perk.name]: false });
+                return { [perk.name]: false };
             }
 
             if (perk.name in selectedPerks && selectedPerks[perk.name] >= 6) {
-                return Promise.resolve({ [perk.name]: false });
+                return { [perk.name]: false };
             }
 
             if (Object.values(selectedPerks).length <= 3) {
-                return Promise.resolve({ [perk.name]: true });
+                return { [perk.name]: true };
             }
 
             const perkAvailableInGeneratedBuilds = builds.some(build => {
@@ -142,18 +142,18 @@ const BuildFinder: React.FC = () => {
             });
 
             if (perkAvailableInGeneratedBuilds) {
-                return Promise.resolve({ [perk.name]: true });
+                return { [perk.name]: true };
             }
 
             const fitsInOneBuild = builds.some(build => perkFitsInEmptyCellSlot(build, perk));
 
             if (fitsInOneBuild) {
-                return Promise.resolve({ [perk.name]: true });
+                return { [perk.name]: true };
             }
 
             // if we can't even find this many builds than there is no point in doing a deep search
             if (builds.length < buildLimit) {
-                return Promise.resolve({ [perk.name]: false });
+                return { [perk.name]: false };
             }
 
             const requestedPerkValue = perk.name in selectedPerks ? selectedPerks[perk.name] + 3 : 3;
@@ -251,7 +251,7 @@ const BuildFinder: React.FC = () => {
     return (
         <Stack
             spacing={2}
-            sx={{ pb: 2 }}
+            sx={{ pb: 4 }}
         >
             <PageTitle title={t("pages.build-finder.title")} />
 
