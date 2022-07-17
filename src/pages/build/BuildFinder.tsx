@@ -332,7 +332,7 @@ const BuildFinder: React.FC = () => {
                                                     <CardActionArea
                                                         disabled={searching}
                                                         onClick={() =>
-                                                            dispatch(setPerkValue({ perkName: perk.name, value: 0 }))
+                                                            dispatch(setPerkValue({ perkName: perk.name, value: Math.max(0, selectedPerks[perk.name] - 3) }))
                                                         }
                                                         sx={{
                                                             alignItems: "center",
