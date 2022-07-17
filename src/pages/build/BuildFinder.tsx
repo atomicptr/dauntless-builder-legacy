@@ -46,7 +46,7 @@ import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import log from "@src/utils/logger";
 import BuildFinderWorker from "@src/worker/build-finder?worker";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { BiMinus } from "react-icons/all";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
@@ -124,7 +124,9 @@ const BuildFinder: React.FC = () => {
 
     useEffect(() => {
         const canBeAdded = async (builds: BuildModel[], perk: Perk): Promise<{ [perkName: string]: boolean }> => {
-            if (Object.values(selectedPerks).reduce((prev, cur) => prev + cur, 0) >= 36) {
+            const totalPerkValue = Object.values(selectedPerks).reduce((prev, cur) => prev + cur, 0);
+
+            if (totalPerkValue >= 36) {
                 return { [perk.name]: false };
             }
 
@@ -132,7 +134,7 @@ const BuildFinder: React.FC = () => {
                 return { [perk.name]: false };
             }
 
-            if (Object.values(selectedPerks).length <= 3) {
+            if (Object.values(selectedPerks).reduce((prev, cur) => prev + cur, 0) <= 15) {
                 return { [perk.name]: true };
             }
 
@@ -165,6 +167,8 @@ const BuildFinder: React.FC = () => {
             if (builds.length < buildLimit) {
                 return { [perk.name]: false };
             }
+
+            log.debug(`Have to do deep search for ${perk.name}`, { selectedPerks });
 
             const requestedPerkValue = perk.name in selectedPerks ? selectedPerks[perk.name] + 3 : 3;
             const requestedPerks = { ...selectedPerks, [perk.name]: requestedPerkValue };
@@ -236,8 +240,14 @@ const BuildFinder: React.FC = () => {
         return false;
     };
 
-    const canAddPerk = (perk: Perk): boolean =>
-        !isDeterminingSelectablePerks && !isSearchingBuilds && perk.name in canPerkBeAdded && canPerkBeAdded[perk.name];
+    const canAddPerk = useCallback(
+        (perk: Perk): boolean =>
+            !isDeterminingSelectablePerks &&
+            !isSearchingBuilds &&
+            perk.name in canPerkBeAdded &&
+            canPerkBeAdded[perk.name],
+        [isDeterminingSelectablePerks, isSearchingBuilds, canPerkBeAdded],
+    );
 
     const onPerkClicked = (perk: Perk) => {
         const value = perk.name in selectedPerks ? selectedPerks[perk.name] + 3 : 3;

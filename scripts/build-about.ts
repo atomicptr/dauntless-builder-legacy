@@ -55,7 +55,7 @@ const buildContributorsFile = async (filepath: string): Promise<void> => {
 
 const buildDependenciesFile = async (filepath: string): Promise<void> => {
     return new Promise(resolve => {
-        const child = spawn("npx", ["license-checker", "--production", "--json"], {shell: true});
+        const child = spawn("npx", ["license-checker", "--production", "--json"], { shell: true });
 
         let data = "";
 
