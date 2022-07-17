@@ -76,6 +76,8 @@
             "toggle-unique-effects": "Toggle display of unique effects"
         },
         "build-finder": {
+            "builds-title": "Builds ({{num}})",
+            "perks-title": "$t(terms.perks)",
             "title": "Build Finder"
         },
         "favorites": {

@@ -264,9 +264,7 @@ const BuildFinder: React.FC = () => {
                             </Button>
                             <Box>
                                 <Typography>
-                                    {`Number of Perks selected: ${
-                                        Object.keys(selectedPerks).length
-                                    }`}
+                                    {`Number of Perks selected: ${Object.keys(selectedPerks).length}`}
                                 </Typography>
                                 <Typography>{`Number of Builds: ${builds.length}`}</Typography>
                             </Box>
@@ -281,6 +279,8 @@ const BuildFinder: React.FC = () => {
             {weaponType !== null && (
                 <>
                     {searching ? <LinearProgress /> : null}
+
+                    <Typography variant="h5">{t("pages.build-finder.perks-title")}</Typography>
 
                     <Grid
                         container
@@ -355,24 +355,30 @@ const BuildFinder: React.FC = () => {
                         ))}
                     </Grid>
 
-                    {Object.keys(selectedPerks).length > 0 &&
-                        builds.slice(0, buildDisplayLimit).map((build, index) => (
-                            <Box key={index}>
-                                <LazyLoadComponent
-                                    placeholder={
-                                        <Skeleton
-                                            height={300}
-                                            variant={"rectangular"}
-                                            width="100%"
-                                        />
-                                    }
-                                >
-                                    <Box>
-                                        <BuildCard build={build} />
-                                    </Box>
-                                </LazyLoadComponent>
-                            </Box>
-                        ))}
+                    {Object.keys(selectedPerks).length > 0 && (
+                        <>
+                            <Typography variant="h5">
+                                {t("pages.build-finder.builds-title", { num: Math.min(builds.length, buildDisplayLimit) })}
+                            </Typography>
+                            {builds.slice(0, buildDisplayLimit).map((build, index) => (
+                                <Box key={index}>
+                                    <LazyLoadComponent
+                                        placeholder={
+                                            <Skeleton
+                                                height={300}
+                                                variant={"rectangular"}
+                                                width="100%"
+                                            />
+                                        }
+                                    >
+                                        <Box>
+                                            <BuildCard build={build} />
+                                        </Box>
+                                    </LazyLoadComponent>
+                                </Box>
+                            ))}
+                        </>
+                    )}
                 </>
             )}
         </Stack>
