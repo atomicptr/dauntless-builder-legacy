@@ -51,7 +51,7 @@ export class Logger {
         this.print(LogLevel.Error, message, data);
     }
 
-    public time(label: string) {
+    public timer(label: string) {
         if (this.logLevel > LogLevel.Debug) {
             return;
         }
@@ -61,7 +61,7 @@ export class Logger {
         /*eslint-enable*/
     }
 
-    public timeEnd(label: string) {
+    public timerEnd(label: string) {
         if (this.logLevel > LogLevel.Debug) {
             return;
         }

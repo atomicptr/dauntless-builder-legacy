@@ -105,10 +105,13 @@ const BuildFinder: React.FC = () => {
     );
 
     useEffect(() => {
+        log.timer("findBuilds");
         setIsSearchingBuilds(true);
         findBuilds(itemData, selectedPerks, buildLimit, finderOptions).then(builds => {
             setBuilds(builds);
             setIsSearchingBuilds(false);
+            log.timerEnd("findBuilds");
+            log.debug(`Found ${builds.length} builds for given criteria`, { selectedPerks });
         });
     }, [itemData, selectedPerks, finderOptions]);
 
@@ -164,7 +167,7 @@ const BuildFinder: React.FC = () => {
         };
 
         const runWorkers = async () => {
-            log.time("determineAvailablePerks");
+            log.timer("determineAvailablePerks");
             const result = await Promise.all(
                 Object.values(perks)
                     .flat()
@@ -178,7 +181,7 @@ const BuildFinder: React.FC = () => {
             });
 
             setCanPerkBeAdded(newCanBeAddedMap);
-            log.timeEnd("determineAvailablePerks");
+            log.timerEnd("determineAvailablePerks");
             setIsDeterminingSelectablePerks(false);
         };
 
