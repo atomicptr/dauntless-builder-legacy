@@ -1,4 +1,4 @@
-import { Clear, Error } from "@mui/icons-material";
+import { Error } from "@mui/icons-material";
 import {
     Alert,
     Box,
@@ -7,21 +7,18 @@ import {
     CardActionArea,
     CardContent,
     Grid,
+    LinearProgress,
     Skeleton,
     Stack,
     Typography,
 } from "@mui/material";
 import BuildCard from "@src/components/BuildCard";
 import PageTitle from "@src/components/PageTitle";
+import { perkData } from "@src/components/PerkList";
 import WeaponTypeSelector from "@src/components/WeaponTypeSelector";
-import { Armour, ArmourType } from "@src/data/Armour";
-import { BuildModel, findLanternByName } from "@src/data/BuildModel";
+import { BuildModel } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
-import dauntlessBuilderData from "@src/data/Data";
-import { ItemRarity } from "@src/data/ItemRarity";
-import { Lantern } from "@src/data/Lantern";
 import { Perk } from "@src/data/Perks";
-import { Weapon } from "@src/data/Weapon";
 import {
     AssignedPerkValue,
     clearPerks,
@@ -31,24 +28,27 @@ import {
 } from "@src/features/build-finder/build-finder-selection-slice";
 import {
     convertFindBuildResultsToBuildModel,
-    findArmourPiecesByType,
+    createItemData,
     FinderItemData,
-    perkCellMap,
+    FinderItemDataOptions,
     perks,
 } from "@src/features/build-finder/find-builds";
+import { selectConfiguration } from "@src/features/configuration/configuration-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import log from "@src/utils/logger";
 import BuildFinderWorker from "@src/worker/build-finder?worker";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { BiMinus } from "react-icons/all";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 
-const buildLimit = 50;
+const buildLimit = 200;
+const buildDisplayLimit = 50;
+
 // Since the lantern itself does not matter I decided to pre-pick Shrike's Zeal as the Shrike is DB mascot :).
 const lanternName = "Shrike's Zeal";
-// This feature is super slow (but worthwhile having in code RN)
-const enableSuperPerksFinder = false;
+
 // Currently import statements within web workers seem to only work in Chrome, this is not an issue when
 // this gets compiled, therefore we only disable this when DB_DEVMODE is set and we're not using Chrome.
 const webworkerDisabled = DB_DEVMODE && navigator.userAgent.search("Chrome") === -1;
@@ -57,6 +57,7 @@ const findBuilds = async (
     itemData: FinderItemData,
     requestedPerks: AssignedPerkValue,
     maxBuilds: number,
+    options: FinderItemDataOptions = {},
 ): Promise<BuildModel[]> => {
     const buildFinder = webworkerDisabled ? null : new BuildFinderWorker();
 
@@ -66,7 +67,7 @@ const findBuilds = async (
     }
 
     return new Promise(resolve => {
-        buildFinder.postMessage({ itemData, maxBuilds, requestedPerks });
+        buildFinder.postMessage({ itemData, maxBuilds, options, requestedPerks });
 
         buildFinder.addEventListener("message", message => {
             const builds = message.data;
@@ -77,7 +78,8 @@ const findBuilds = async (
 
 const BuildFinder: React.FC = () => {
     const { t } = useTranslation();
-    const { weaponType, selectedPerks } = useAppSelector(selectBuildFinderSelection);
+    const { weaponType, selectedPerks, removeExotics, removeLegendary } = useAppSelector(selectBuildFinderSelection);
+    const configuration = useAppSelector(selectConfiguration);
     const isMobile = useIsMobile();
 
     const [builds, setBuilds] = useState<BuildModel[]>([]);
@@ -86,47 +88,32 @@ const BuildFinder: React.FC = () => {
 
     const dispatch = useAppDispatch();
 
-    const itemData = useMemo(() => {
-        const filterPerksAndCells =
-            (mode: (a: boolean, b: boolean) => boolean = orMode) =>
-                (item: Weapon | Armour) =>
-                    mode(
-                    (item.perks && item.perks[0].name in selectedPerks) as boolean,
-                    ((item.cells &&
-                        (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
-                            cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
-                        )) ||
-                        (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
-                    );
+    const finderOptions: FinderItemDataOptions = useMemo(
+        () => ({
+            removeExotics,
+            removeLegendary,
+        }),
+        [removeExotics, removeLegendary],
+    );
 
-        const findMatchingArmourPiecesByType = (type: ArmourType) =>
-            findArmourPiecesByType(type).filter(
-                filterPerksAndCells(Object.keys(selectedPerks).length <= 3 ? orMode : andMode),
-            );
-
-        return {
-            arms: findMatchingArmourPiecesByType(ArmourType.Arms),
-            head: findMatchingArmourPiecesByType(ArmourType.Head),
-            lantern: findLanternByName(lanternName) as Lantern,
-            legs: findMatchingArmourPiecesByType(ArmourType.Legs),
-            torso: findMatchingArmourPiecesByType(ArmourType.Torso),
-            weapons: Object.values(dauntlessBuilderData.weapons)
-                .filter(weapon => weapon.type === weaponType)
-                .filter(weapon => weapon.bond === undefined) // remove legendaries for now...
-                .filter(weapon => weapon.rarity !== ItemRarity.Exotic) // remove exotics for now...
-                .filter(filterPerksAndCells()),
-        };
-    }, [weaponType, selectedPerks, perkCellMap, findArmourPiecesByType]);
+    const itemData = useMemo(
+        () => createItemData(weaponType, lanternName, selectedPerks, finderOptions),
+        [weaponType, selectedPerks, finderOptions],
+    );
 
     useEffect(() => {
-        findBuilds(itemData, selectedPerks, buildLimit).then(builds => {
+        findBuilds(itemData, selectedPerks, buildLimit, finderOptions).then(builds => {
             setBuilds(builds);
         });
-    }, [itemData, selectedPerks]);
+    }, [itemData, selectedPerks, finderOptions]);
 
     useEffect(() => {
         const canBeAdded = async (builds: BuildModel[], perk: Perk): Promise<{ [perkName: string]: boolean }> => {
-            if (Object.values(selectedPerks).reduce((prev, cur) => prev + cur, 0) + 3 > 36) {
+            if (Object.values(selectedPerks).length <= 3) {
+                return Promise.resolve({ [perk.name]: true });
+            }
+
+            if (Object.values(selectedPerks).reduce((prev, cur) => prev + cur, 0) >= 36) {
                 return Promise.resolve({ [perk.name]: false });
             }
 
@@ -134,28 +121,45 @@ const BuildFinder: React.FC = () => {
                 return Promise.resolve({ [perk.name]: false });
             }
 
-            /*
-            TODO: this doesn't work properly
-            const fitsInOneBuild = builds.some(build => _perkFitsInEmptyCellSlot(build, perk));
+            const perkAvailableInGeneratedBuilds = builds.some(build => {
+                const buildPerks = perkData(build);
+                const buildPerk = buildPerks.find(p => p.name === perk.name);
 
-            if (!fitsInOneBuild) {
-                return Promise.resolve({[perk.name]: false});
-            }
-            */
+                if (!buildPerk) {
+                    return false;
+                }
 
-            if (!enableSuperPerksFinder) {
+                if (buildPerk.name in selectedPerks) {
+                    return buildPerk.count === selectedPerks[buildPerk.count] + 3;
+                }
+
+                return true;
+            });
+
+            if (perkAvailableInGeneratedBuilds) {
                 return Promise.resolve({ [perk.name]: true });
+            }
+
+            const fitsInOneBuild = builds.some(build => perkFitsInEmptyCellSlot(build, perk));
+
+            if (fitsInOneBuild) {
+                return Promise.resolve({ [perk.name]: true });
+            }
+
+            // if we can't even find this many builds than there is no point in doing a deep search
+            if (builds.length < buildLimit) {
+                return Promise.resolve({ [perk.name]: false });
             }
 
             const requestedPerkValue = perk.name in selectedPerks ? selectedPerks[perk.name] + 3 : 3;
             const requestedPerks = { ...selectedPerks, [perk.name]: requestedPerkValue };
 
-            const results = await findBuilds(itemData, requestedPerks, 1);
+            const results = await findBuilds(itemData, requestedPerks, 1, finderOptions);
             return { [perk.name]: results.length > 0 };
         };
 
-        const runWorker = async () => {
-            console.time("canBeAdded");
+        const runWorkers = async () => {
+            log.time("determineAvailablePerks");
             const result = await Promise.all(
                 Object.values(perks)
                     .flat()
@@ -169,17 +173,15 @@ const BuildFinder: React.FC = () => {
             });
 
             setCanPerkBeAdded(newCanBeAddedMap);
-            console.timeEnd("canBeAdded");
+            log.timeEnd("determineAvailablePerks");
             setSearching(false);
         };
 
         setSearching(true);
-        runWorker();
-    }, [selectedPerks]);
+        runWorkers();
+    }, [selectedPerks, itemData, builds, finderOptions]);
 
-    console.log(builds, selectedPerks, canPerkBeAdded);
-
-    const _perkFitsInEmptyCellSlot = (build: BuildModel, perk: Perk): boolean => {
+    const perkFitsInEmptyCellSlot = (build: BuildModel, perk: Perk): boolean => {
         const makeCellArray = (cells: CellType | CellType[] | null | undefined): CellType[] => {
             if (cells === null || cells === undefined) {
                 return [];
@@ -215,7 +217,7 @@ const BuildFinder: React.FC = () => {
         return false;
     };
 
-    const canAddPerk = (perk: Perk): boolean => !searching && perk.name in canPerkBeAdded && canPerkBeAdded[perk.name];
+    const canAddPerk = (perk: Perk): boolean => perk.name in canPerkBeAdded && canPerkBeAdded[perk.name];
 
     const onPerkClicked = (perk: Perk) => {
         const value = perk.name in selectedPerks ? selectedPerks[perk.name] + 3 : 3;
@@ -235,7 +237,7 @@ const BuildFinder: React.FC = () => {
                 color="error"
                 icon={<Error />}
             >
-                This feature is currently disabled for this web browser.
+                {t("feature-disabled-browser")}
             </Alert>
         );
     }
@@ -249,23 +251,37 @@ const BuildFinder: React.FC = () => {
                 value={weaponType}
             />
 
-            {/* TODO: remove this, this block is for debug purposes */}
-            <Box>
-                <Button
-                    onClick={() => dispatch(clearPerks())}
-                    variant="outlined"
-                >
-                    Clear Perks
-                </Button>
-                <Typography>{`Number of Perks selected: ${Object.keys(selectedPerks).length}`}</Typography>
-                <Typography>{`Number of Builds: ${builds.length}`}</Typography>
-                <pre>
-                    <code>{JSON.stringify(selectedPerks, null, "    ")}</code>
-                </pre>
-            </Box>
+            {configuration.devMode && (
+                <Card>
+                    <CardContent>
+                        <Stack spacing={1}>
+                            <Typography variant="h5">{"Development Options"}</Typography>
+                            <Button
+                                onClick={() => dispatch(clearPerks())}
+                                variant="outlined"
+                            >
+                                {"Clear All Perks"}
+                            </Button>
+                            <Box>
+                                <Typography>
+                                    {`Number of Perks selected: ${
+                                        Object.keys(selectedPerks).length
+                                    }`}
+                                </Typography>
+                                <Typography>{`Number of Builds: ${builds.length}`}</Typography>
+                            </Box>
+                            <pre>
+                                <code>{JSON.stringify(selectedPerks, null, "    ")}</code>
+                            </pre>
+                        </Stack>
+                    </CardContent>
+                </Card>
+            )}
 
             {weaponType !== null && (
                 <>
+                    {searching ? <LinearProgress /> : null}
+
                     <Grid
                         container
                         gap={1}
@@ -296,11 +312,11 @@ const BuildFinder: React.FC = () => {
                                             spacing={1}
                                         >
                                             <Card
-                                                elevation={canAddPerk(perk) ? 1 : 0}
+                                                elevation={!searching && canAddPerk(perk) ? 1 : 0}
                                                 sx={{ flexGrow: 2 }}
                                             >
                                                 <CardActionArea
-                                                    disabled={!canAddPerk(perk)}
+                                                    disabled={searching || !canAddPerk(perk)}
                                                     onClick={() => onPerkClicked(perk)}
                                                 >
                                                     <CardContent>
@@ -312,8 +328,9 @@ const BuildFinder: React.FC = () => {
                                             </Card>
 
                                             {perk.name in selectedPerks && (
-                                                <Card sx={{ flexGrow: 1 }}>
+                                                <Card sx={{ width: "50px" }}>
                                                     <CardActionArea
+                                                        disabled={searching}
                                                         onClick={() =>
                                                             dispatch(setPerkValue({ perkName: perk.name, value: 0 }))
                                                         }
@@ -326,7 +343,7 @@ const BuildFinder: React.FC = () => {
                                                         }}
                                                     >
                                                         <Box>
-                                                            <Clear />
+                                                            <BiMinus />
                                                         </Box>
                                                     </CardActionArea>
                                                 </Card>
@@ -339,7 +356,7 @@ const BuildFinder: React.FC = () => {
                     </Grid>
 
                     {Object.keys(selectedPerks).length > 0 &&
-                        builds.map((build, index) => (
+                        builds.slice(0, buildDisplayLimit).map((build, index) => (
                             <Box key={index}>
                                 <LazyLoadComponent
                                     placeholder={
@@ -361,8 +378,5 @@ const BuildFinder: React.FC = () => {
         </Stack>
     );
 };
-
-const orMode = (a: boolean, b: boolean) => a || b;
-const andMode = (a: boolean, b: boolean) => a && b;
 
 export default BuildFinder;

@@ -51,6 +51,26 @@ export class Logger {
         this.print(LogLevel.Error, message, data);
     }
 
+    public time(label: string) {
+        if (this.logLevel > LogLevel.Debug) {
+            return;
+        }
+
+        /*eslint-disable*/
+        console.time(label);
+        /*eslint-enable*/
+    }
+
+    public timeEnd(label: string) {
+        if (this.logLevel > LogLevel.Debug) {
+            return;
+        }
+
+        /*eslint-disable*/
+        console.timeEnd(label);
+        /*eslint-enable*/
+    }
+
     private static logFunctionByLevel(level: LogLevel): (...data: unknown[]) => void {
         /*eslint-disable*/
         // we do not allow usage of console commands in the project except for this function

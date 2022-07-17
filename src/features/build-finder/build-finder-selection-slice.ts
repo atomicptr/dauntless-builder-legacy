@@ -15,9 +15,13 @@ export interface AddPerkAction {
 interface BuildFinderSelectionState {
     weaponType: WeaponType | null;
     selectedPerks: AssignedPerkValue;
+    removeExotics: boolean;
+    removeLegendary: boolean;
 }
 
 const initialState: BuildFinderSelectionState = {
+    removeExotics: true,
+    removeLegendary: true,
     selectedPerks: {},
     weaponType: null,
 };

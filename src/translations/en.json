@@ -40,6 +40,7 @@
         "new-build": "New Build",
         "settings": "$t(pages.settings.title)"
     },
+    "feature-disabled-browser": "This feature is currently disabled for this web browser.",
     "misc": {
         "dauntless-version": "Dauntless v{{version}}",
         "discord-server": "Dauntless Builder Discord Server",

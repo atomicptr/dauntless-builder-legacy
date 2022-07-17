@@ -1,11 +1,11 @@
 import { Armour, ArmourType } from "@src/data/Armour";
-import { BuildModel, findCellVariantByPerk } from "@src/data/BuildModel";
+import { BuildModel, findCellVariantByPerk, findLanternByName } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
 import dauntlessBuilderData from "@src/data/Data";
 import { ItemRarity } from "@src/data/ItemRarity";
 import { Lantern } from "@src/data/Lantern";
 import { Perk } from "@src/data/Perks";
-import { Weapon } from "@src/data/Weapon";
+import { Weapon, WeaponType } from "@src/data/Weapon";
 import { AssignedPerkValue } from "@src/features/build-finder/build-finder-selection-slice";
 import createPermutation from "@src/utils/create-permutation";
 import sortObjectByKeys from "@src/utils/sort-object-by-keys";
@@ -83,12 +83,70 @@ export const perkCellMap = (() => {
     return cellTypeByPerk;
 })();
 
-export const findArmourPiecesByType = (type: ArmourType) =>
-    Object.values(dauntlessBuilderData.armours)
-        .filter(armourPiece => armourPiece.type === type)
-        .filter(armourPiece => armourPiece.rarity !== ItemRarity.Exotic); // remove exotics for now...
+export interface FinderItemDataOptions {
+    removeExotics?: boolean;
+    removeLegendary?: boolean;
+}
 
-export const findBuilds = (itemData: FinderItemData, requestedPerks: AssignedPerkValue, maxBuilds: number) => {
+const defaultFinderItemDataOptions: FinderItemDataOptions = {
+    removeExotics: true,
+    removeLegendary: true,
+};
+
+export const findArmourPiecesByType = (type: ArmourType, options: FinderItemDataOptions = {}) => {
+    const finderOptions = Object.assign({}, defaultFinderItemDataOptions, options);
+    return Object.values(dauntlessBuilderData.armours)
+        .filter(armourPiece => armourPiece.type === type)
+        .filter(armourPiece => (finderOptions.removeExotics ? armourPiece.rarity !== ItemRarity.Exotic : true));
+};
+
+export const createItemData = (
+    weaponType: WeaponType | null,
+    lanternName: string,
+    requestedPerks: AssignedPerkValue,
+    options: FinderItemDataOptions = {},
+): FinderItemData => {
+    const finderOptions = Object.assign({}, defaultFinderItemDataOptions, options);
+
+    const filterPerksAndCells =
+        (mode: (a: boolean, b: boolean) => boolean = orMode) =>
+            (item: Weapon | Armour) =>
+                mode(
+                (item.perks && item.perks[0].name in requestedPerks) as boolean,
+                ((item.cells &&
+                    (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
+                        cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
+                    )) ||
+                    (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
+                );
+
+    const findMatchingArmourPiecesByType = (type: ArmourType) =>
+        findArmourPiecesByType(type).filter(
+            filterPerksAndCells(Object.keys(requestedPerks).length <= 3 ? orMode : andMode),
+        );
+
+    return {
+        arms: findMatchingArmourPiecesByType(ArmourType.Arms),
+        head: findMatchingArmourPiecesByType(ArmourType.Head),
+        lantern: findLanternByName(lanternName) as Lantern,
+        legs: findMatchingArmourPiecesByType(ArmourType.Legs),
+        torso: findMatchingArmourPiecesByType(ArmourType.Torso),
+        weapons: Object.values(dauntlessBuilderData.weapons)
+            .filter(weapon => weapon.type === weaponType)
+            .filter(weapon => (finderOptions.removeLegendary ? weapon.bond === undefined : true))
+            .filter(weapon => (finderOptions.removeExotics ? weapon.rarity !== ItemRarity.Exotic : true))
+            .filter(filterPerksAndCells()),
+    };
+};
+
+export const findBuilds = (
+    itemData: FinderItemData,
+    requestedPerks: AssignedPerkValue,
+    maxBuilds: number,
+    options: FinderItemDataOptions = {},
+) => {
+    const finderOptions = Object.assign({}, defaultFinderItemDataOptions, options);
+
     const determineBasePerks = (build: IntermediateBuild): AssignedPerkValue => {
         const perkStrings = Object.values(build)
             .map(type => type.perks)
@@ -229,10 +287,10 @@ export const findBuilds = (itemData: FinderItemData, requestedPerks: AssignedPer
                 // if that doesn't work we'll try to expand the pool even further by first adding
                 // all heads, with limited rest, then all torso with limited rest etc.
                 for (const [head, torso, arms, legs] of createPermutation([
-                    i === 1 ? findArmourPiecesByType(ArmourType.Head) : itemData.head,
-                    i === 2 ? findArmourPiecesByType(ArmourType.Torso) : itemData.torso,
-                    i === 3 ? findArmourPiecesByType(ArmourType.Arms) : itemData.arms,
-                    i === 4 ? findArmourPiecesByType(ArmourType.Legs) : itemData.legs,
+                    i === 1 ? findArmourPiecesByType(ArmourType.Head, finderOptions) : itemData.head,
+                    i === 2 ? findArmourPiecesByType(ArmourType.Torso, finderOptions) : itemData.torso,
+                    i === 3 ? findArmourPiecesByType(ArmourType.Arms, finderOptions) : itemData.arms,
+                    i === 4 ? findArmourPiecesByType(ArmourType.Legs, finderOptions) : itemData.legs,
                 ])) {
                     if (matchingBuilds.length >= maxBuilds) {
                         return matchingBuilds;
@@ -287,3 +345,6 @@ export const convertFindBuildResultsToBuildModel = (matchingBuilds: MatchingBuil
         return build;
     });
 };
+
+const orMode = (a: boolean, b: boolean) => a || b;
+const andMode = (a: boolean, b: boolean) => a && b;
