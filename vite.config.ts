@@ -28,7 +28,7 @@ export default defineConfig(({ command, mode }) => {
                         appName: "Dauntless Builder",
                         appleStatusBarStyle: "black-translucent",
                         background: "#121212",
-                        theme_color: "#121212",
+                        theme_color: "#272727",
                     },
                     logo: "public/assets/icon.png",
                 })
