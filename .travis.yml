@@ -2,8 +2,7 @@ language: node_js
 node_js:
     - "16"
 script:
-    - yarn build:data
-    - yarn build:i18n
+    - yarn build:deps
     - yarn build:frontend
     - tsc
     - yarn test
