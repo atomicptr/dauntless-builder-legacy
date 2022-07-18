@@ -298,7 +298,7 @@ const BuildFinder: React.FC = () => {
                     <Card>
                         <CardContent>
                             <Stack spacing={1}>
-                                <Typography variant="h5">{"Development Options"}</Typography>
+                                <Typography variant="h5">{t("pages.build-finder.dev-options-title")}</Typography>
                                 <Stack
                                     direction="row"
                                     spacing={2}
@@ -307,7 +307,7 @@ const BuildFinder: React.FC = () => {
                                         onClick={() => dispatch(clearPerks())}
                                         variant="outlined"
                                     >
-                                        {"Clear All Perks"}
+                                        {t("pages.build-finder.dev-clear-perks")}
                                     </Button>
                                     <Button
                                         onClick={() => setInputDialogOpen(true)}
@@ -318,9 +318,13 @@ const BuildFinder: React.FC = () => {
                                 </Stack>
                                 <Box>
                                     <Typography>
-                                        {`Number of Perks selected: ${Object.keys(selectedPerks).length}`}
+                                        {t("pages.build-finder.dev-number-of-perks", {
+                                            num: Object.keys(selectedPerks).length,
+                                        })}
                                     </Typography>
-                                    <Typography>{`Number of Builds: ${builds.length}`}</Typography>
+                                    <Typography>
+                                        {t("pages.build-finder.dev-number-of-builds", { num: builds.length })}
+                                    </Typography>
                                 </Box>
                                 <pre>
                                     <code>{JSON.stringify(selectedPerks, null, "    ")}</code>
