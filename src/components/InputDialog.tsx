@@ -1,5 +1,5 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 interface InputDialogProps {
@@ -23,9 +23,11 @@ const InputDialog: React.FC<InputDialogProps> = ({
 }) => {
     const { t } = useTranslation();
 
-    defaultInput ??= "";
+    const [input, setInput] = useState<string>("");
 
-    const [input, setInput] = useState<string>(defaultInput);
+    useEffect(() => {
+        setInput(defaultInput ?? "");
+    }, [defaultInput]);
 
     return (
         <Dialog
