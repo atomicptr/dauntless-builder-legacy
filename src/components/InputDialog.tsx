@@ -29,6 +29,8 @@ const InputDialog: React.FC<InputDialogProps> = ({
 
     return (
         <Dialog
+            fullWidth
+            maxWidth="sm"
             onClose={onClose}
             open={open}
         >
@@ -47,7 +49,16 @@ const InputDialog: React.FC<InputDialogProps> = ({
             </DialogContent>
             <DialogActions>
                 <Button onClick={onClose}>{t("terms.cancel")}</Button>
-                <Button onClick={() => (onConfirm ? onConfirm(input) : undefined)}>{t("terms.save")}</Button>
+                <Button
+                    onClick={() => {
+                        if (onConfirm) {
+                            onConfirm(input);
+                        }
+                        setInput(defaultInput ?? "");
+                    }}
+                >
+                    {t("terms.save")}
+                </Button>
             </DialogActions>
         </Dialog>
     );
