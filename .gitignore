@@ -5,7 +5,6 @@
 /public/sitemap.xml
 /src/translations/items
 /src/data/*.json
-/src/pages/about/*.json
 
 # dev stuff
 /map

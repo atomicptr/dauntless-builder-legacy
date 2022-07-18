@@ -32,25 +32,31 @@ const fetchContributors = async (): Promise<Contributor[]> => {
 };
 
 const buildContributorsFile = async (filepath: string): Promise<void> => {
-    const contributors = await fetchContributors();
+    try {
+        const contributors = await fetchContributors();
 
-    return new Promise(resolve => {
-        const filtered = contributors
-            .map(({ login, avatar_url, html_url, type, contributions }) => ({
-                avatar_url,
-                contributions,
-                html_url,
-                login,
-                type,
-            }))
-            .sort((a, b) => b.contributions - a.contributions)
-            .filter(contributor => contributor.type !== "Bot")
-            .filter(contributor => excludeContributors.indexOf(contributor.login) === -1);
+        return new Promise(resolve => {
+            const filtered = contributors
+                .map(({ login, avatar_url, html_url, type, contributions }) => ({
+                    avatar_url,
+                    contributions,
+                    html_url,
+                    login,
+                    type,
+                }))
+                .sort((a, b) => b.contributions - a.contributions)
+                .filter(contributor => contributor.type !== "Bot")
+                .filter(contributor => excludeContributors.indexOf(contributor.login) === -1);
 
-        fs.writeFile(filepath, JSON.stringify(filtered, null, "    "), () => {
-            resolve();
+            fs.writeFile(filepath, JSON.stringify(filtered, null, "    "), () => {
+                resolve();
+            });
         });
-    });
+    } catch (err) {
+        console.error("Something went wrong", err);
+    }
+
+    return Promise.resolve();
 };
 
 const buildDependenciesFile = async (filepath: string): Promise<void> => {
