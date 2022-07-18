@@ -195,8 +195,13 @@ const createItemData = (
     };
 };
 
-export const findBuilds = (weaponType: WeaponType | null, requestedPerks: AssignedPerkValue, maxBuilds: number) => {
-    const itemData = createItemData(weaponType, lanternName, requestedPerks);
+export const findBuilds = (
+    weaponType: WeaponType | null,
+    requestedPerks: AssignedPerkValue,
+    maxBuilds: number,
+    options: FinderItemDataOptions = {},
+) => {
+    const itemData = createItemData(weaponType, lanternName, requestedPerks, options);
 
     const determineBasePerks = (build: IntermediateBuild): AssignedPerkValue => {
         const perkStrings = Object.values(build)

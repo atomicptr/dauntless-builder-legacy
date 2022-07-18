@@ -63,6 +63,7 @@ const findBuilds = async (
     weaponType: WeaponType | null,
     requestedPerks: AssignedPerkValue,
     maxBuilds: number,
+    options: FinderItemDataOptions = {},
 ): Promise<BuildModel[]> => {
     const buildFinder = webworkerDisabled ? null : new BuildFinderWorker();
 
@@ -72,7 +73,7 @@ const findBuilds = async (
     }
 
     return new Promise(resolve => {
-        buildFinder.postMessage({ maxBuilds, requestedPerks, weaponType });
+        buildFinder.postMessage({ maxBuilds, options, requestedPerks, weaponType });
 
         buildFinder.addEventListener("message", message => {
             const builds = message.data;
@@ -106,7 +107,7 @@ const BuildFinder: React.FC = () => {
     useEffect(() => {
         log.timer("findBuilds");
         setIsSearchingBuilds(true);
-        findBuilds(weaponType, selectedPerks, buildLimit).then(builds => {
+        findBuilds(weaponType, selectedPerks, buildLimit, finderOptions).then(builds => {
             setBuilds(builds);
             setIsSearchingBuilds(false);
             log.timerEnd("findBuilds");
@@ -160,7 +161,7 @@ const BuildFinder: React.FC = () => {
             const requestedPerkValue = perk.name in selectedPerks ? selectedPerks[perk.name] + 3 : 3;
             const requestedPerks = { ...selectedPerks, [perk.name]: requestedPerkValue };
 
-            const results = await findBuilds(weaponType, requestedPerks, 1);
+            const results = await findBuilds(weaponType, requestedPerks, 1, finderOptions);
             return { [perk.name]: results.length > 0 };
         };
 
