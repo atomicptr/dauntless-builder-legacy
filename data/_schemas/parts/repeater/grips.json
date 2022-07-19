@@ -40,6 +40,17 @@
                     }
                 }
             }
+        },
+        "values": {
+            "patternProperties": {
+                "^.*$": {
+                    "type": "number"
+                }
+            },
+            "type": [
+                "object",
+                "null"
+            ]
         }
     },
     "required": ["name"],

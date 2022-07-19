@@ -517,6 +517,7 @@ const Build: React.FC = () => {
                                                 "part_effect",
                                                 index.toString(),
                                             ),
+                                            { ...(item as Part).values },
                                         )}
                                     </Typography>
                                 ))}

@@ -14,6 +14,9 @@ export interface Part {
     name: string;
     icon: string;
     part_effect: string[];
+    values: {
+        [key: string]: string;
+    };
 
     i18n?: {
         [language in Language]: {

@@ -34,6 +34,17 @@
                     }
                 }
             }
+        },
+        "values": {
+            "patternProperties": {
+                "^.*$": {
+                    "type": "number"
+                }
+            },
+            "type": [
+                "object",
+                "null"
+            ]
         }
     },
     "required": ["name", "icon", "part_effect"],

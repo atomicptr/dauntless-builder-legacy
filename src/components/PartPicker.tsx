@@ -124,6 +124,7 @@ const PartPicker: React.FC<PartPickerProps> = ({ type, item, weaponType, onClick
                                         "part_effect",
                                         index.toString(),
                                     ),
+                                    { ...(item as Part).values },
                                 )}
                             </Typography>
                         ))}
