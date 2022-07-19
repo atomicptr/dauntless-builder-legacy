@@ -163,10 +163,15 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
                 </Box>
 
                 <VirtualizedList
-                    count={filteredItems.length}
+                    count={filteredItems.length + 1}
                     defaultRowHeight={165}
                     renderItems={(rowRef, index, style) => {
                         const cell = filteredItems[index];
+
+                        // TODO: Don't know why in some circumstances the list gets cut off, a simple fix is just adding an extra item i guess...
+                        if (!cell) {
+                            return null;
+                        }
 
                         return (
                             <ListItem

@@ -232,10 +232,15 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                 ) : null}
 
                 <VirtualizedList
-                    count={filteredItems.length}
+                    count={filteredItems.length + 1}
                     defaultRowHeight={300}
                     renderItems={(rowRef, index, style) => {
                         const item = filteredItems[index];
+
+                        // TODO: Don't know why in some circumstances the list gets cut off, a simple fix is just adding an extra item i guess...
+                        if (!item) {
+                            return null;
+                        }
 
                         return (
                             <ListItem
