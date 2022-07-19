@@ -33,6 +33,9 @@ export const buildFinderSelectionSlice = createSlice({
         clearPerks: state => {
             state.selectedPerks = {};
         },
+        setBuildFinderWeaponType: (state, action: PayloadAction<WeaponType>) => {
+            state.weaponType = action.payload;
+        },
         setPerkValue: (state, action: PayloadAction<AddPerkAction>) => {
             state.selectedPerks[action.payload.perkName] = Math.max(Math.min(action.payload.value, 6), 0);
 
@@ -48,13 +51,10 @@ export const buildFinderSelectionSlice = createSlice({
         setRemoveLegendary: (state, action: PayloadAction<boolean>) => {
             state.removeLegendary = action.payload;
         },
-        setWeaponType: (state, action: PayloadAction<WeaponType>) => {
-            state.weaponType = action.payload;
-        },
     },
 });
 
-export const { setWeaponType, setPerkValue, clearPerks, setRemoveExotics, setRemoveLegendary } =
+export const { setBuildFinderWeaponType, setPerkValue, clearPerks, setRemoveExotics, setRemoveLegendary } =
     buildFinderSelectionSlice.actions;
 
 export const selectBuildFinderSelection = (state: RootState) => state.buildFinderSelection;

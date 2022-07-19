@@ -30,10 +30,10 @@ import {
     AssignedPerkValue,
     clearPerks,
     selectBuildFinderSelection,
+    setBuildFinderWeaponType,
     setPerkValue,
     setRemoveExotics,
     setRemoveLegendary,
-    setWeaponType,
 } from "@src/features/build-finder/build-finder-selection-slice";
 import {
     convertFindBuildResultsToBuildModel,
@@ -268,7 +268,7 @@ const BuildFinder: React.FC = () => {
             <PageTitle title={t("pages.build-finder.title")} />
 
             <WeaponTypeSelector
-                onChange={weaponType => dispatch(setWeaponType(weaponType))}
+                onChange={weaponType => dispatch(setBuildFinderWeaponType(weaponType))}
                 value={weaponType}
             />
             <Typography variant="h5">{t("pages.build-finder.filter-title")}</Typography>

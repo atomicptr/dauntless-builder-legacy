@@ -24,13 +24,13 @@ export const metaBuildsSelectionSlice = createSlice({
         setBuildCategoryIndex: (state, action: PayloadAction<number>) => {
             state.buildCategoryIndex = action.payload;
         },
-        setWeaponType: (state, action: PayloadAction<WeaponType>) => {
+        setMetaBuildsWeaponType: (state, action: PayloadAction<WeaponType>) => {
             state.weaponType = action.payload;
         },
     },
 });
 
-export const { setWeaponType, setBuildCategoryIndex, removeNote } = metaBuildsSelectionSlice.actions;
+export const { setMetaBuildsWeaponType, setBuildCategoryIndex, removeNote } = metaBuildsSelectionSlice.actions;
 
 export const selectMetaBuildsSelection = (state: RootState) => state.metaBuildsSelection;
 

@@ -9,7 +9,7 @@ import {
     removeNote,
     selectMetaBuildsSelection,
     setBuildCategoryIndex,
-    setWeaponType,
+    setMetaBuildsWeaponType,
 } from "@src/features/meta-builds-selection/meta-builds-selection-slice";
 import useCache from "@src/hooks/cache";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
@@ -351,7 +351,7 @@ const MetaBuilds: React.FC = () => {
             )}
 
             <WeaponTypeSelector
-                onChange={weaponType => dispatch(setWeaponType(weaponType))}
+                onChange={weaponType => dispatch(setMetaBuildsWeaponType(weaponType))}
                 value={weaponType}
             />
 
