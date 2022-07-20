@@ -30,8 +30,10 @@ export const metaBuildsSelectionSlice = createSlice({
     },
 });
 
+const initState = (state: MetaBuildsSelectionState) => Object.assign({}, initialState, state);
+
 export const { setMetaBuildsWeaponType, setBuildCategoryIndex, removeNote } = metaBuildsSelectionSlice.actions;
 
-export const selectMetaBuildsSelection = (state: RootState) => state.metaBuildsSelection;
+export const selectMetaBuildsSelection = (state: RootState) => initState(state.metaBuildsSelection);
 
 export default metaBuildsSelectionSlice.reducer;

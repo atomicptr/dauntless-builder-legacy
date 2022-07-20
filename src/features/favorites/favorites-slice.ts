@@ -55,10 +55,12 @@ const arrayMove = <T>(array: T[], fromIndex: number, toIndex: number) => {
     array.splice(toIndex, 0, elem);
 };
 
+const initState = (state: FavoritesState) => Object.assign({}, initialState, state);
+
 export const { addFavorite, updateFavorite, removeFavoriteByBuildId, moveUpByBuildId, moveDownByBuildId } =
     favoritesSlice.actions;
 
-export const selectFavorites = (state: RootState) => state.favorites.favorites;
+export const selectFavorites = (state: RootState) => initState(state.favorites).favorites;
 
 export const isBuildInFavorites = (favorites: Favorite[], buildId: string): boolean =>
     favorites.findIndex(favorite => favorite.buildId === buildId) > -1;

@@ -75,11 +75,13 @@ export const buildSlice = createSlice({
     },
 });
 
+const initState = (state: BuildState) => Object.assign({}, initialState, state);
+
 export const { clearBuild, setBuildId, updateBuild } = buildSlice.actions;
 
-export const selectBuild = (state: RootState): BuildModel => BuildModel.deserialize(state.build.build);
+export const selectBuild = (state: RootState): BuildModel => BuildModel.deserialize(initState(state.build).build);
 
 export const selectLastEditedBuild = (state: RootState) =>
-    state.build.lastEditedBuild !== null ? BuildModel.deserialize(state.build.lastEditedBuild) : null;
+    state.build.lastEditedBuild !== null ? BuildModel.deserialize(initState(state.build).lastEditedBuild ?? "") : null;
 
 export default buildSlice.reducer;

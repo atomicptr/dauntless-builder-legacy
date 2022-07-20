@@ -54,9 +54,11 @@ export const buildFinderSelectionSlice = createSlice({
     },
 });
 
+const initState = (state: BuildFinderSelectionState) => Object.assign({}, initialState, state);
+
 export const { setBuildFinderWeaponType, setPerkValue, clearPerks, setRemoveExotics, setRemoveLegendary } =
     buildFinderSelectionSlice.actions;
 
-export const selectBuildFinderSelection = (state: RootState) => state.buildFinderSelection;
+export const selectBuildFinderSelection = (state: RootState) => initState(state.buildFinderSelection);
 
 export default buildFinderSelectionSlice.reducer;

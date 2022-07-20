@@ -87,15 +87,18 @@ export const buildSlice = createSlice({
     },
 });
 
+const initState = (state: ItemSelectFilterState) => Object.assign({}, initialState, state);
+
 export const { resetFilter, setWeaponTypeFilter, setPerkFilter, setCellSlotsFilter, setElementFilter } =
     buildSlice.actions;
 
-export const selectWeaponFilter = (state: RootState): WeaponFilter => state.itemSelectFilter[ItemType.Weapon];
+export const selectWeaponFilter = (state: RootState): WeaponFilter =>
+    initState(state.itemSelectFilter)[ItemType.Weapon];
 
-export const selectItemSelectFilter = (state: RootState): ItemSelectFilterState => state.itemSelectFilter;
+export const selectItemSelectFilter = (state: RootState): ItemSelectFilterState => initState(state.itemSelectFilter);
 
 export const selectFilterCount = (state: RootState): number =>
-    Object.values(state.itemSelectFilter)
+    Object.values(initState(state.itemSelectFilter))
         .map(itemTypeFilters =>
             Object.values(itemTypeFilters)
                 .map(filters => (Array.isArray(filters) ? filters.length : filters !== null ? 1 : 0))

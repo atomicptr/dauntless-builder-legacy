@@ -26,10 +26,12 @@ export const configurationSlice = createSlice({
     },
 });
 
+const initState = (state: ConfigurationState) => Object.assign({}, initialState, state);
+
 export const { setLanguage, setDevMode } = configurationSlice.actions;
 
 export const selectConfiguration = (state: RootState) => ({
-    ...state.configuration,
+    ...initState(state.configuration),
     devMode: DB_DEVMODE || state.configuration.devMode,
 });
 
