@@ -4,6 +4,7 @@ import "./i18n";
 import { store } from "./store";
 /* eslint-enable simple-import-sort/imports */
 
+import { registerSW } from "virtual:pwa-register";
 import { ThemeProvider } from "@mui/material";
 import { Slide } from "@mui/material";
 import About from "@src/pages/about/About";
@@ -25,6 +26,7 @@ import Settings from "./pages/settings/Settings";
 import BackgroundTasks from "@src/components/BackgroundTasks";
 import Favorites from "@src/pages/favorites/Favorites";
 import useIsMobile from "@src/hooks/is-mobile";
+import log from "@src/utils/logger";
 
 const DauntlessBuilderApp = () => {
     const isMobile = useIsMobile();
@@ -104,6 +106,26 @@ const DauntlessBuilderApp = () => {
 
 let container: HTMLElement | null = null;
 let root: Root | null = null;
+
+if ("serviceWorker" in navigator) {
+    const updateSW = registerSW({
+        onNeedRefresh() {
+            log.debug("Service Worker needs update...");
+            updateSW(true).then(() => {
+                log.debug("Service Worker updated!");
+            });
+        },
+        onRegistered(registration) {
+            if (!registration) {
+                return;
+            }
+            const interval = 1000 * 60 * 60; // 1h
+            setInterval(() => {
+                registration.update();
+            }, interval);
+        },
+    });
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     if (!container) {

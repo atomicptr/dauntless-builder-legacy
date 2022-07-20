@@ -20,7 +20,16 @@ export default defineConfig(({ command, mode }) => {
         },
         plugins: [
             react(),
-            VitePWA({}),
+            VitePWA({
+                includeAssets: [
+                    "assets/**/*.png",
+                ],
+                registerType: "autoUpdate",
+                workbox: {
+                    cleanupOutdatedCaches: true,
+                    sourcemap: isDevMode,
+                },
+            }),
             command === "build"
                 ? ViteFaviconsPlugin({
                     favicons: {

@@ -9,8 +9,7 @@
         "lib": [
             "DOM",
             "DOM.Iterable",
-            "ESNext",
-            "webworker"
+            "ESNext"
         ],
         "module": "ESNext",
         "moduleResolution": "Node",
@@ -29,6 +28,7 @@
         "target": "ESNext",
         "types": [
             "vite/client",
+            "vite-plugin-pwa/client",
             "node",
             "jest"
         ],

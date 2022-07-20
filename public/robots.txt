@@ -1,4 +1,5 @@
 User-Agent: *
+Allow: /
 Disallow: /favorites
 Disallow: /about
 Disallow: /settings
