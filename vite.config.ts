@@ -24,11 +24,46 @@ export default defineConfig(({ command, mode }) => {
                 includeAssets: [
                     "assets/**/*.png",
                 ],
+                manifest: {
+                    categories: [
+                        "games",
+                        "utilities"
+                    ],
+                    screenshots: [
+                        {
+                            label: "Screenshot of an build in Dauntless Builder",
+                            platform: "wide",
+                            sizes: "1920x1080",
+                            src: "https://raw.githubusercontent.com/atomicptr/dauntless-builder/master/docs/assets/app-screenshot.png",
+                            type: "image/png"
+                        }
+                    ],
+                    shortcuts: [
+                        {
+                            description: "Create a new build!",
+                            icons: [],
+                            name: "New Build",
+                            url: "/b/new",
+                        },
+                        {
+                            description: "Know what perks you want? Find a fitting build right here!",
+                            icons: [],
+                            name: "Build Finder",
+                            url: "/b/finder",
+                        },
+                        {
+                            description: "The best builds made by the community!",
+                            icons: [],
+                            name: "Meta Builds",
+                            url: "/b/meta",
+                        }
+                    ]
+                },
                 registerType: "autoUpdate",
                 workbox: {
                     cleanupOutdatedCaches: true,
                     sourcemap: isDevMode,
-                },
+                }
             }),
             command === "build"
                 ? ViteFaviconsPlugin({
