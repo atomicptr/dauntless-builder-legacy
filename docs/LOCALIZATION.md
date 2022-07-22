@@ -1,6 +1,6 @@
 # Localization Documentation
 
-If you're interested in helping out but you are not very well versed with whats written in the "Technical Localization Documentation" below, please join our [Discord]() or [Matrix]() servers, we'll help you with contributing translations.
+If you're interested in helping out but you are not very well versed with whats written in the "Technical Localization Documentation" below, please join our [Discord](https://discord.gg/hkMvhsfPjH) or [Matrix](https://matrix.to/#/#dauntlessbuilder:matrix.org) servers, we'll help you with contributing translations.
 
 [We are planning to potentially integrate Dauntless Builder with Crowdin](https://github.com/atomicptr/dauntless-builder/issues/227), which will hopefully make it a lot easier for most people to help out! :).
 
