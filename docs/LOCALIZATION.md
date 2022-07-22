@@ -1,5 +1,13 @@
 # Localization Documentation
 
+If you're interested in helping out but you are not very well versed with whats written in the "Technical Localization Documentation" below, please join our [Discord]() or [Matrix]() servers, we'll help you with contributing translations.
+
+[We are planning to potentially integrate Dauntless Builder with Crowdin](https://github.com/atomicptr/dauntless-builder/issues/227), which will hopefully make it a lot easier for most people to help out! :).
+
+You've been warned the next part is very technical:
+
+## Technical Localization Documentation
+
 Localization in Dauntless Builder is essentially split into two parts:
 
 -   App Localization - Strings on the website itself
@@ -10,7 +18,7 @@ and is powered by [i18next](https://www.i18next.com/).
 The English localization is the source of all truths and is used as a fallback if the current user localization
 does not contain an entry.
 
-## App Localization
+### App Localization
 
 These localization entries are handled by one big JSON file per language and can be found in `src/translations`.
 
@@ -169,7 +177,7 @@ unique_effects:
           blazeDamage: 200
 ```
 
-## Adding a new language
+### Adding a new language
 
 You read what is written above this and want to start contributing but notice your language is missing?
 
