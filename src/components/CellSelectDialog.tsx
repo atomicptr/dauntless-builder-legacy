@@ -94,7 +94,8 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
     }, [open]);
 
     const findPerkByCell = (cell: Cell): Perk | null => {
-        const variantName = Object.keys(cell.variants).at(-1) as string;
+        const variantNames = Object.keys(cell.variants);
+        const variantName = variantNames[variantNames.length - 1] as string;
         const variant = cell.variants[variantName] as { perks: { [perkName: string]: number } };
         const perkName = Object.keys(variant.perks)[0];
         return findPerkByName(perkName);
