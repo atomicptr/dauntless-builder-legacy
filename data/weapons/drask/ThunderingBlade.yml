@@ -4,28 +4,30 @@ icon: /assets/icons/weapons/drask/ThunderingBlade.png
 type: Sword
 damage: Slashing
 elemental: Shock
-cells: [Brutality, Insight]
+cells:
+  - Brutality
+  - Insight
 power:
-  0: 20
-  1: 120
+  base: 20
+  powerSurged: 120
 perks:
   - name: Aetheric Attunement
     value: 2
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Aetheric Attunement
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: TailDamage
     description: 20% damage vs Behemoth Tails
-    value: 1.2
-    from: 0
-    to: 0
+    powerSurged: false
   - name: TailDamage
     description: 30% damage vs Behemoth Tails
-    value: 1.3
-    from: 1
-    to: 1
-
+    powerSurged: true
+i18n:
+  fr:
+    name: Lame tonnante
+    description: Une épée forgée à partir de Drask.
+    unique_effects:
+      - description: 20% de dégâts contre la queue des Behemoths
+      - description: 30% de dégâts contre la queue des Behemoths

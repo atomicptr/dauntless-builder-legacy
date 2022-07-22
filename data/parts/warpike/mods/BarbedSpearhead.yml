@@ -2,3 +2,10 @@ name: Barbed Spearhead
 icon: /assets/icons/parts/warpike/mods/BarbedSpearhead.png
 part_effect:
   - After a dodge piercing attack, gain +50% wound damage for 8 seconds.
+i18n:
+  fr:
+    name: Pointe Barbelé
+    part_effect:
+      - >-
+        Après une attaque d'esquive perçante, augmente les dégâts mutilants de
+        50% pendant 8 secondes.

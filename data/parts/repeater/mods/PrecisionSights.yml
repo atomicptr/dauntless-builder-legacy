@@ -1,4 +1,13 @@
 name: Precision Sights
 icon: /assets/icons/parts/repeaters/mods/PrecisionSights.png
 part_effect:
-  - Deal 8 increased damage when attacking the same part multiple times. Stacks up to 5 times.
+  - >-
+    Deal 8 increased damage when attacking the same part multiple times. Stacks
+    up to 5 times.
+i18n:
+  fr:
+    name: Mires de précision
+    part_effect:
+      - >-
+        Dégâts accrus de 8 lors d'attaques successives sur la même partie. se
+        cumule jusqu'à 5 fois.

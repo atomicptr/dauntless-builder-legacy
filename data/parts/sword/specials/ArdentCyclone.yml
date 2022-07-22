@@ -2,5 +2,16 @@ name: Ardent Cyclone
 icon: /assets/icons/parts/sword/specials/ArdentCyclone.png
 part_effect:
   - >-
-    Activate at full meter to spin, dealing 70 damage constantly to nearby enemies. Grants 1 Valour every 4 seconds.
-    Reactivate to slash in a direction, dealing 500 + (10 x number of spin hits) to the first enemy hit.
+    Activate at full meter to spin, dealing 70 damage constantly to nearby
+    enemies. Grants 1 Valour every 4 seconds. Reactivate to slash in a
+    direction, dealing 500 + (10 x number of spin hits) to the first enemy hit.
+i18n:
+  fr:
+    name: Cyclone ardent
+    part_effect:
+      - >-
+        Activez à pleine jauge pour tourner, devenir insensible aux
+        étourdissements et infliger constamment 80 de dégâts au ennemis proches.
+        Confère 1 Vaillance toute les 4 secondes. Réactivez pour asséner un coup
+        dans une direction, infligeant 500 + (20 x nombre de coups de rotation)
+        aux premier ennemi touché.

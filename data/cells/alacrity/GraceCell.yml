@@ -1,15 +1,22 @@
 name: Grace Cell
 slot: Alacrity
 variants:
-  "+1 Grace Cell":
+  +1 Grace Cell:
     rarity: uncommon
     perks:
       Grace: 1
-  "+2 Grace Cell":
+  +2 Grace Cell:
     rarity: rare
     perks:
       Grace: 2
-  "+3 Grace Cell":
+  +3 Grace Cell:
     rarity: epic
     perks:
       Grace: 3
+i18n:
+  fr:
+    name: Grâce
+    variants:
+      - Grâce +1
+      - Grâce +2
+      - Grâce +3

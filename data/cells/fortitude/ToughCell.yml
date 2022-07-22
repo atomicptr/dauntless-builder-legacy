@@ -1,15 +1,22 @@
 name: Tough Cell
 slot: Fortitude
 variants:
-  "+1 Tough Cell":
+  +1 Tough Cell:
     rarity: uncommon
     perks:
       Tough: 1
-  "+2 Tough Cell":
+  +2 Tough Cell:
     rarity: rare
     perks:
       Tough: 2
-  "+3 Tough Cell":
+  +3 Tough Cell:
     rarity: epic
     perks:
       Tough: 3
+i18n:
+  fr:
+    name: Robustesse
+    variants:
+      - Robustesse +1
+      - Robustesse +2
+      - Robustesse +3

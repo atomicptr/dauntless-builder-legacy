@@ -1,15 +1,22 @@
 name: Knockout King Cell
 slot: Brutality
 variants:
-  "+1 Knockout King Cell":
+  +1 Knockout King Cell:
     rarity: uncommon
     perks:
       Knockout King: 1
-  "+2 Knockout King Cell":
+  +2 Knockout King Cell:
     rarity: rare
     perks:
       Knockout King: 2
-  "+3 Knockout King Cell":
+  +3 Knockout King Cell:
     rarity: epic
     perks:
       Knockout King: 3
+i18n:
+  fr:
+    name: Assommoir
+    variants:
+      - Assommoir +1
+      - Assommoir +2
+      - Assommoir +3

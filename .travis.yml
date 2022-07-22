@@ -1,7 +1,9 @@
 language: node_js
 node_js:
-- '14'
+    - "16"
 script:
-- yarn build-data
-- yarn build-frontend
-- yarn test
+    - yarn build:deps
+    - yarn build:frontend
+    - tsc
+    - yarn test
+    - yarn check:missing-translations || true

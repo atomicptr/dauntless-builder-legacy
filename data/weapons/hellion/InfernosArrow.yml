@@ -4,27 +4,34 @@ icon: /assets/icons/weapons/hellion/InfernosArrow.png
 type: War Pike
 damage: Piercing
 elemental: Blaze
-cells: [Brutality, Brutality]
+cells:
+  - Brutality
+  - Brutality
 power:
-  0: 80
-  1: 120
+  base: 80
+  powerSurged: 120
 perks:
   - name: Overpower
     value: 2
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Overpower
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: BlazeDamageOnNthHit
     description: The fifteenth hit in a row deals +150 damage and major blaze damage
-    value: 150
-    from: 0
-    to: 0
+    powerSurged: false
   - name: BlazeDamageOnNthHit
     description: The fifteenth hit in a row deals +200 damage and major blaze damage
-    value: 200
-    from: 1
-    to: 1
+    powerSurged: true
+i18n:
+  fr:
+    name: Pointe du Sixième Cercle
+    description: Une aetherolance forgée à partir de trophées d'Hellion.
+    unique_effects:
+      - description: >-
+          Le quinzième coup consécutif inflige +150 dégâts et de lourds dégâts
+          de braise
+      - description: >-
+          Le quinzième coup consécutif inflige +200 dégâts et de lourds dégâts
+          de braise

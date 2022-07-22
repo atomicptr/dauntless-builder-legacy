@@ -1,7 +1,6 @@
 ---
 name: Stat changes on item
 about: Specific item stats in the data is wrong.
-
 ---
 
 ### Item details

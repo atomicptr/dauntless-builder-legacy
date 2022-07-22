@@ -1,15 +1,22 @@
 name: Aetheric Evasion Cell
 slot: Insight
 variants:
-  "+1 Aetheric Evasion Cell":
+  +1 Aetheric Evasion Cell:
     rarity: uncommon
     perks:
       Aetheric Evasion: 1
-  "+2 Aetheric Evasion Cell":
+  +2 Aetheric Evasion Cell:
     rarity: rare
     perks:
       Aetheric Evasion: 2
-  "+3 Aetheric Evasion Cell":
+  +3 Aetheric Evasion Cell:
     rarity: epic
     perks:
       Aetheric Evasion: 3
+i18n:
+  fr:
+    name: Esquive aethérée
+    variants:
+      - Esquive aethérée +1
+      - Esquive aethérée +2
+      - Esquive aethérée +3

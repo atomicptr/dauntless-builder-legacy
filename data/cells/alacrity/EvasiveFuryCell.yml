@@ -1,15 +1,22 @@
 name: Evasive Fury Cell
 slot: Alacrity
 variants:
-  "+1 Evasive Fury Cell":
+  +1 Evasive Fury Cell:
     rarity: uncommon
     perks:
       Evasive Fury: 1
-  "+2 Evasive Fury Cell":
+  +2 Evasive Fury Cell:
     rarity: rare
     perks:
       Evasive Fury: 2
-  "+3 Evasive Fury Cell":
+  +3 Evasive Fury Cell:
     rarity: epic
     perks:
       Evasive Fury: 3
+i18n:
+  fr:
+    name: Furie évasive
+    variants:
+      - Furie évasive +1
+      - Furie évasive +2
+      - Furie évasive +3

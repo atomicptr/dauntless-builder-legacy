@@ -4,16 +4,20 @@ icon: /assets/icons/weapons/quillshot/QuillshotsRoar.png
 type: Hammer
 damage: Blunt
 elemental: null
-cells: [Brutality, Fortitude]
+cells:
+  - Brutality
+  - Fortitude
 power:
-  0: 20
-  1: 120
+  base: 20
+  powerSurged: 120
 perks:
   - name: Acidic
     value: 1
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Acidic
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
+i18n:
+  fr:
+    name: Rugissement de Quillshot
+    description: Un marteau forgé à partir de trophées de Quillshot.

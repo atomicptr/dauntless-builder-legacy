@@ -1,15 +1,22 @@
 name: Stunning Vigour Cell
 slot: Fortitude
 variants:
-  "+1 Stunning Vigour Cell":
+  +1 Stunning Vigour Cell:
     rarity: uncommon
     perks:
       Stunning Vigour: 1
-  "+2 Stunning Vigour Cell":
+  +2 Stunning Vigour Cell:
     rarity: rare
     perks:
       Stunning Vigour: 2
-  "+3 Stunning Vigour Cell":
+  +3 Stunning Vigour Cell:
     rarity: epic
     perks:
       Stunning Vigour: 3
+i18n:
+  fr:
+    name: Vigueur étourdissante
+    variants:
+      - Vigueur étourdissante +1
+      - Vigueur étourdissante +2
+      - Vigueur étourdissante +3

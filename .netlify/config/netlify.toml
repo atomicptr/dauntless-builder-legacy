@@ -1,0 +1,30 @@
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, s-max-age=43200"
+
+[[headers]]
+  for = "/b/*"
+  [headers.values]
+    Cache-Control = "public, s-max-age=43200"
+
+[[headers]]
+  for = "*.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, s-max-age=14400"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, s-max-age=43200"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800"

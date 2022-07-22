@@ -4,29 +4,40 @@ icon: /assets/icons/weapons/boreus/TurmoilOfBoreus.png
 type: Axe
 damage: Slashing
 elemental: Frost
-cells: [Brutality, Fortitude]
+cells:
+  - Brutality
+  - Fortitude
 power:
-  0: 20
-  1: 120
+  base: 20
+  powerSurged: 120
 perks:
   - name: Conditioning
     value: 1
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Conditioning
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: BoreusFrostSprite
     description: >-
-      After each charge attack level, generate two Frost Sprites that grant your next attack +30 damage and minor frost damage (Max 4 Sprites)
-    value: 30
-    from: 0
-    to: 0
+      After each charge attack level, generate two Frost Sprites that grant your
+      next attack +30 damage and minor frost damage (Max 4 Sprites)
+    powerSurged: false
   - name: BoreusFrostSprite
     description: >-
-      After each charge attack level, generate two Frost Sprites that grant your next attack +60 damage and minor frost damage (Max 4 Sprites)
-    value: 60
-    from: 1
-    to: 1
+      After each charge attack level, generate two Frost Sprites that grant your
+      next attack +60 damage and minor frost damage (Max 4 Sprites)
+    powerSurged: true
+i18n:
+  fr:
+    name: Tourment de Boreus
+    description: Une hache forgée à partir de Boreus.
+    unique_effects:
+      - description: >-
+          Après chaque niveau de charge d'attaque, génère 2 farfroidet qui
+          ajoute +30 de dégâts à votre prochaine attaque et de légers dégâts de
+          givre. Maximum 4 farfroidets.
+      - description: >-
+          Après chaque niveau de charge d'attaque, génère 2 farfroidet qui
+          ajoute +60 de dégâts à votre prochaine attaque et de légers dégâts de
+          givre. Maximum 4 farfroidets.

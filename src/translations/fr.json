@@ -1,0 +1,64 @@
+{
+    "drawer": {
+        "my-builds": "Mes builds",
+        "new-build": "Nouveau",
+        "settings": "$t(pages.settings.title)"
+    },
+    "misc": {
+        "patch-url": "https://playdauntless.com/fr/patch-notes/{{version}}"
+    },
+    "pages": {
+        "build": {
+            "click-here-to-select": "Cliquez pour ajouter.",
+            "no-perks": "Aucun effet disponible."
+        },
+        "newbuild": {
+            "title": "Creer un build"
+        },
+        "settings": {
+            "title": "Paramètres"
+        }
+    },
+    "terms": {
+        "active": "Actif",
+        "active-ability": "Capacité actif",
+        "arms-armour": "Gants",
+        "bond-weapon": "Lien",
+        "elemental-types": {
+            "Blaze": "Incandescant",
+            "Frost": "Givrant",
+            "Radiant": "Radiant",
+            "Shock": "Foudroyant",
+            "Terra": "Tellurique",
+            "Umbral": "Obscur"
+        },
+        "head-armour": "Casque",
+        "hold": "Maintenu",
+        "lantern": "Lanterne",
+        "legs-armour": "Grèves",
+        "omnicell": "Omnicellule",
+        "parts": {
+            "chamber": "Chambre",
+            "grip": "Poignée",
+            "mod": "Mod",
+            "special": "Spécial"
+        },
+        "passive": "Passif",
+        "perks": "Effet",
+        "power": "Puissance",
+        "resistance": "Resistance",
+        "search": "Chercher...",
+        "torso-armour": "Torse",
+        "unique-effect": "effet unique",
+        "weapon": "Arme",
+        "weapon-types": {
+            "AetherStrikers": "Cestes aethériques",
+            "Axe": "Hache",
+            "ChainBlades": "Chaînes-lames",
+            "Hammer": "Marteau",
+            "Repeater": "Répéteurs",
+            "Sword": "Épée",
+            "WarPike": "Aéthérolance"
+        }
+    }
+}

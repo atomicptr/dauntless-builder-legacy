@@ -1,0 +1,62 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "properties": {
+        "ability_icon": {
+            "type": "string"
+        },
+        "active": {
+            "type": "string"
+        },
+        "i18n": {
+            "patternProperties": {
+                "^[a-z]{2}$": {
+                    "properties": {
+                        "active": {
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        },
+                        "name": {
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        },
+                        "passive": {
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        }
+                    },
+                    "type": [
+                        "object",
+                        "null"
+                    ]
+                }
+            },
+            "type": [
+                "object",
+                "null"
+            ]
+        },
+        "icon": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "passive": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "name",
+        "passive",
+        "active"
+    ],
+    "title": "Dauntless-Builder Lantern Schema",
+    "type": "object"
+}

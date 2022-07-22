@@ -1,23 +1,33 @@
 name: Tenacious
 description: Gain bonus damage based on current HP.
 type: Brutality
-key: TenaciousDamageBonus
 effects:
-  1:
+  '1':
     description: For every 100 current HP, gain 0.33% bonus damage
-    value: 1.0033
-  2:
+  '2':
     description: For every 100 current HP, gain 0.66% bonus damage
-    value: 0.0066
-  3:
+  '3':
     description: For every 100 current HP, gain 1% bonus damage
-    value: 0.01
-  4:
+  '4':
     description: For every 100 current HP, gain 1.33% bonus damage
-    value: 0.0133
-  5:
+  '5':
     description: For every 100 current HP, gain 1.66% bonus damage
-    value: 0.0166
-  6:
+  '6':
     description: For every 100 current HP, gain 2% bonus damage
-    value: 0.02
+i18n:
+  fr:
+    name: Tenace
+    description: Gagnez des dégâts bonus en fonction de vos PV.
+    effects:
+      '1':
+        description: Pour chaque tranche de 100 PV, gagnez 0,33% de dégâts supplémentaires.
+      '2':
+        description: Pour chaque tranche de 100 PV, gagnez 0,66% de dégâts supplémentaires.
+      '3':
+        description: Pour chaque tranche de 100 PV, gagnez 1% de dégâts supplémentaires.
+      '4':
+        description: Pour chaque tranche de 100 PV, gagnez 1,33% de dégâts supplémentaires.
+      '5':
+        description: Pour chaque tranche de 100 PV, gagnez 1,66% de dégâts supplémentaires.
+      '6':
+        description: Pour chaque tranche de 100 PV, gagnez 2% de dégâts supplémentaires.

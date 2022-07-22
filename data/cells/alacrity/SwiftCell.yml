@@ -1,15 +1,22 @@
 name: Swift Cell
 slot: Alacrity
 variants:
-  "+1 Swift Cell":
+  +1 Swift Cell:
     rarity: uncommon
     perks:
       Swift: 1
-  "+2 Swift Cell":
+  +2 Swift Cell:
     rarity: rare
     perks:
       Swift: 2
-  "+3 Swift Cell":
+  +3 Swift Cell:
     rarity: epic
     perks:
       Swift: 3
+i18n:
+  fr:
+    name: Sprint
+    variants:
+      - Sprint +1
+      - Sprint +2
+      - Sprint +3

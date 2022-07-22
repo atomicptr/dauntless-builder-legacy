@@ -2,6 +2,18 @@ name: Cruel Riftstrike
 icon: /assets/icons/parts/chainblades/specials/CruelRiftstrike.png
 part_effect:
   - >-
-    Teleport forward with invulnerability and strike the nearest Behemoth part, dealing 75 damage and applying a mark
-    that deals 25 damage per second for 7 seconds. When a mark expires, it deals 200 damage for each other mark active
-    at the time. Mark duration increased to 10 seconds if an attack is avoided during the teleport.
+    Teleport forward with invulnerability and strike the nearest Behemoth part,
+    dealing 75 damage and applying a mark that deals 25 damage per second for 7
+    seconds. When a mark expires, it deals 200 damage for each other mark active
+    at the time. Mark duration increased to 10 seconds if an attack is avoided
+    during the teleport.
+i18n:
+  fr:
+    name: Frappe-faille cruelle
+    part_effect:
+      - >-
+        Vous téléporte en avant et frappe une partie du béhémoth le plus proche,
+        infligeant 75 de dégâts et appliquant une marque qui inflige 25 de
+        dégâts par seconde pendant 7 secondes. Lorsqu'une marque expire, elle
+        inflige 200 de dégâts pour chaque autre marque active. La marque est
+        portée à 10 secondes si une attaque est évitée avec la téléportation.

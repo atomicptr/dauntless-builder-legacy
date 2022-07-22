@@ -1,4 +1,14 @@
 name: Munitions Amplifier
 icon: /assets/icons/parts/warpike/mods/MunitionsAmplifier.png
 part_effect:
-  - Stored ammo quality increases slowly over time, up to max. Stored ammo quality is also increased by an additional 25%.
+  - >-
+    Stored ammo quality increases slowly over time, up to max. Stored ammo
+    quality is also increased by an additional 25%.
+i18n:
+  fr:
+    name: Amplificateur de munitions
+    part_effect:
+      - >-
+        La qualité des munitions stockées augmente lentement au fil du temps,
+        jusqu'au maximum. La qualité des munitions stockées est améliorée de 25%
+        supplémentaires.

@@ -1,4 +1,15 @@
 name: Flight of Ruin
 icon: /assets/icons/parts/axe/specials/FlightOfRuin.png
 part_effect:
-  - Throw the axe forward, damaging enemies while thrown. Reactivate to call the axe and perform a powerful overhand swing that can generate determination.
+  - >-
+    Throw the axe forward, damaging enemies while thrown. Reactivate to call the
+    axe and perform a powerful overhand swing that can generate determination.
+i18n:
+  fr:
+    name: Vol de ruine
+    part_effect:
+      - >-
+        Lancez la hache, infligeant en continu 60 de dégâts et gagnez 2 points
+        de jauge par coup. Réactivez pour la rappeler et effectuer une attaque
+        puissante qui inflige jusqu'à 500 de dégâts (augmentés par la
+        détermination) et gagnant 15 points de jauge.

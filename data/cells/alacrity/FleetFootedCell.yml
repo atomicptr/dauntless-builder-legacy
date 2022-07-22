@@ -1,15 +1,22 @@
 name: Fleet Footed Cell
 slot: Alacrity
 variants:
-  "+1 Fleet Footed Cell":
+  +1 Fleet Footed Cell:
     rarity: uncommon
     perks:
       Fleet Footed: 1
-  "+2 Fleet Footed Cell":
+  +2 Fleet Footed Cell:
     rarity: rare
     perks:
       Fleet Footed: 2
-  "+3 Fleet Footed Cell":
+  +3 Fleet Footed Cell:
     rarity: epic
     perks:
       Fleet Footed: 3
+i18n:
+  fr:
+    name: Sprint évasif
+    variants:
+      - Sprint évasif +1
+      - Sprint évasif +2
+      - Sprint évasif +3

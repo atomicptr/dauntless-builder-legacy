@@ -1,15 +1,22 @@
 name: Zeal Cell
 slot: Insight
 variants:
-  "+1 Zeal Cell":
+  +1 Zeal Cell:
     rarity: uncommon
     perks:
       Zeal: 1
-  "+2 Zeal Cell":
+  +2 Zeal Cell:
     rarity: rare
     perks:
       Zeal: 2
-  "+3 Zeal Cell":
+  +3 Zeal Cell:
     rarity: epic
     perks:
       Zeal: 3
+i18n:
+  fr:
+    name: Zèle
+    variants:
+      - Zèle +1
+      - Zèle +2
+      - Zèle +3

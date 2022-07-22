@@ -1,0 +1,149 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:react/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "simple-import-sort",
+        "unused-imports",
+        "sort-keys-fix",
+        "i18next",
+        "react-hooks"
+    ],
+    "root": true,
+    "rules": {
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/semi": [
+            "error"
+        ],
+        "curly": "error",
+        "i18next/no-literal-string": [
+            "error"
+        ],
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "linebreak-style": "warn",
+        "no-console": "error",
+        "no-new": "error",
+        "no-restricted-imports": [
+            "error",
+            {
+                "patterns": [
+                    "@mui/*/*/*",
+                    "!@mui/material/test-utils/*"
+                ]
+            }
+        ],
+        "prefer-const": "error",
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "react-hooks/exhaustive-deps": "error",
+        "react-hooks/rules-of-hooks": "error",
+        "react/display-name": [
+            "off"
+        ],
+        "react/jsx-closing-bracket-location": [
+            "error",
+            "line-aligned"
+        ],
+        "react/jsx-closing-tag-location": "error",
+        "react/jsx-curly-spacing": [
+            "error",
+            "never"
+        ],
+        "react/jsx-first-prop-new-line": [
+            "error",
+            "multiline"
+        ],
+        "react/jsx-max-props-per-line": [
+            "error",
+            {
+                "maximum": 1,
+                "when": "multiline"
+            }
+        ],
+        "react/jsx-no-useless-fragment": "error",
+        "react/jsx-one-expression-per-line": [
+            "error",
+            {
+                "allow": "single-child"
+            }
+        ],
+        "react/jsx-pascal-case": "error",
+        "react/jsx-props-no-multi-spaces": "error",
+        "react/jsx-sort-props": [
+            "error",
+            {
+                "reservedFirst": [
+                    "key"
+                ]
+            }
+        ],
+        "react/jsx-tag-spacing": [
+            "error",
+            {
+                "beforeSelfClosing": "always"
+            }
+        ],
+        "react/prefer-stateless-function": [
+            "error"
+        ],
+        "react/react-in-jsx-scope": "off",
+        "react/self-closing-comp": [
+            "error",
+            {
+                "component": true,
+                "html": true
+            }
+        ],
+        "semi": "off",
+        "simple-import-sort/imports": "error",
+        "sort-keys": [
+            "error",
+            "asc",
+            {
+                "caseSensitive": true,
+                "minKeys": 2,
+                "natural": true
+            }
+        ],
+        "sort-keys-fix/sort-keys-fix": "error",
+        "strict": [
+            "error",
+            "global"
+        ],
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+            "error",
+            {
+                "args": "after-used",
+                "argsIgnorePattern": "^_",
+                "vars": "all",
+                "varsIgnorePattern": "^_"
+            }
+        ]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}

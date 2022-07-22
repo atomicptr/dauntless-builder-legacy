@@ -6,14 +6,16 @@ strength: Shock
 weakness: Terra
 cells: Finesse
 resistance:
-  0: 15
-  1: 30
+  base: 15
+  powerSurged: 30
 perks:
   - name: Assassin's Frenzy
     value: 2
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Assassin's Frenzy
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
+i18n:
+  fr:
+    name: Bottes tranchantes
+    description: Protection pour les jambes forgée à partir Sahvyt.

@@ -1,15 +1,22 @@
 name: Bladestorm Cell
 slot: Brutality
 variants:
-  "+1 Bladestorm Cell":
+  +1 Bladestorm Cell:
     rarity: uncommon
     perks:
       Bladestorm: 1
-  "+2 Bladestorm Cell":
+  +2 Bladestorm Cell:
     rarity: rare
     perks:
       Bladestorm: 2
-  "+3 Bladestorm Cell":
+  +3 Bladestorm Cell:
     rarity: epic
     perks:
       Bladestorm: 3
+i18n:
+  fr:
+    name: Tempête de lames
+    variants:
+      - Tempête de lames +1
+      - Tempête de lames +2
+      - Tempête de lames +3

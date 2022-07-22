@@ -1,5 +1,7 @@
 name: Prismatic Grace
-description: Prismatic Grace is a piece of craftable Exotic armour in Dauntless. It is crafted from Rezakiri reagents.
+description: >-
+  Prismatic Grace is a piece of craftable Exotic armour in Dauntless. It is
+  crafted from Rezakiri reagents.
 icon: /assets/icons/armours/rezakiri/PrismaticGrace.png
 type: Head
 strength: Radiant
@@ -7,24 +9,43 @@ weakness: Umbral
 cells: Finesse
 rarity: exotic
 resistance:
-  0: 20
-  1: 30
+  base: 20
+  powerSurged: 30
 perks:
   - name: Medic
     value: 2
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Medic
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: PrismaticGraceRevivePrism
-    description: After reviving another player, grant them a Radiant Prism that blocks incoming damage for 5 seconds.
-    value: 5
+    icon: /assets/icons/abilities/PrismaticGraceBuff.png
+    description: >-
+      After reviving another player, grant them a Radiant Prism that blocks
+      incoming damage for 5 seconds.
   - name: PrismaticGraceLethalDamagePrism
-    description: The first time you take lethal damage, gain a Radiant Prism that blocks incoming damage for 10 seconds.
-    value: 10
+    icon: /assets/icons/abilities/PrismaticGraceBuff.png
+    description: >-
+      The first time you take lethal damage, gain a Radiant Prism that blocks
+      incoming damage for 10 seconds.
   - name: PrismaticGraceActivePrismRevive
-    description: While active, reviving another player fully restores both players but removes the Prism even at full danger.
-    value: 1
+    icon: /assets/icons/abilities/PrismaticGraceBuff.png
+    description: >-
+      While active, reviving another player fully restores both players but
+      removes the Prism even at full danger.
+i18n:
+  fr:
+    name: Grâce Prismatique
+    description: Une pièce d'armure forger à partir de Rezakiri.
+    unique_effects:
+      - description: >-
+          Après avoir réanimé un autre joueur, lui donne un prisme rayonnant qui
+          bloque les dégts reçu pendant 5 secondes.
+      - description: >-
+          La première fois que vous devriez être à terre, recevez un prisme
+          rayonnant qui bloque les dégâts pendant 10 secondes.
+      - description: >-
+          Lorsqu'il est actif, le prisme vous permet de réanimer un autre
+          joueur, même au niveau de danger maximum, et vous soigne tous les deux
+          entièrement mais disparait après utilisation.

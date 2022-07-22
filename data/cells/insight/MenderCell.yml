@@ -1,15 +1,22 @@
 name: Mender Cell
 slot: Insight
 variants:
-  "+1 Mender Cell":
+  +1 Mender Cell:
     rarity: uncommon
     perks:
       Mender: 1
-  "+2 Mender Cell":
+  +2 Mender Cell:
     rarity: rare
     perks:
       Mender: 2
-  "+3 Mender Cell":
+  +3 Mender Cell:
     rarity: epic
     perks:
       Mender: 3
+i18n:
+  fr:
+    name: Guérisseur
+    variants:
+      - Guérisseur +1
+      - Guérisseur +2
+      - Guérisseur +3

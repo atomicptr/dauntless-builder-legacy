@@ -1,15 +1,22 @@
 name: Evasion Cell
 slot: Alacrity
 variants:
-  "+1 Evasion Cell":
+  +1 Evasion Cell:
     rarity: uncommon
     perks:
       Evasion: 1
-  "+2 Evasion Cell":
+  +2 Evasion Cell:
     rarity: rare
     perks:
       Evasion: 2
-  "+3 Evasion Cell":
+  +3 Evasion Cell:
     rarity: epic
     perks:
       Evasion: 3
+i18n:
+  fr:
+    name: Évasion améliorée
+    variants:
+      - Évasion améliorée +1
+      - Évasion améliorée +2
+      - Évasion améliorée +3

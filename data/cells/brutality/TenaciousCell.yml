@@ -1,15 +1,22 @@
 name: Tenacious Cell
 slot: Brutality
 variants:
-  "+1 Tenacious Cell":
+  +1 Tenacious Cell:
     rarity: uncommon
     perks:
       Tenacious: 1
-  "+2 Tenacious Cell":
+  +2 Tenacious Cell:
     rarity: rare
     perks:
       Tenacious: 2
-  "+3 Tenacious Cell":
+  +3 Tenacious Cell:
     rarity: epic
     perks:
       Tenacious: 3
+i18n:
+  fr:
+    name: Tenace
+    variants:
+      - 'Tenace +1 '
+      - 'Tenace +2 '
+      - 'Tenace +3 '

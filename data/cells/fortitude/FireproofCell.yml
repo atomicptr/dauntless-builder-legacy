@@ -1,15 +1,22 @@
 name: Fireproof Cell
 slot: Fortitude
 variants:
-  "+1 Fireproof Cell":
+  +1 Fireproof Cell:
     rarity: uncommon
     perks:
       Fireproof: 1
-  "+2 Fireproof Cell":
+  +2 Fireproof Cell:
     rarity: rare
     perks:
       Fireproof: 2
-  "+3 Fireproof Cell":
+  +3 Fireproof Cell:
     rarity: epic
     perks:
       Fireproof: 3
+i18n:
+  fr:
+    name: Ignifuge
+    variants:
+      - Ignifuge +1
+      - Ignifuge +2
+      - Ignifuge +3

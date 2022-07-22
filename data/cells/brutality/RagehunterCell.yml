@@ -1,15 +1,22 @@
 name: Ragehunter Cell
 slot: Brutality
 variants:
-  "+1 Ragehunter Cell":
+  +1 Ragehunter Cell:
     rarity: uncommon
     perks:
       Ragehunter: 1
-  "+2 Ragehunter Cell":
+  +2 Ragehunter Cell:
     rarity: rare
     perks:
       Ragehunter: 2
-  "+3 Ragehunter Cell":
+  +3 Ragehunter Cell:
     rarity: epic
     perks:
       Ragehunter: 3
+i18n:
+  fr:
+    name: Chasse-rage
+    variants:
+      - Chasse-rage +1
+      - Chasse-rage +2
+      - Chasse-rage +3

@@ -1,15 +1,22 @@
 name: Sturdy Cell
 slot: Fortitude
 variants:
-  "+1 Sturdy Cell":
+  +1 Sturdy Cell:
     rarity: uncommon
     perks:
       Sturdy: 1
-  "+2 Sturdy Cell":
+  +2 Sturdy Cell:
     rarity: rare
     perks:
       Sturdy: 2
-  "+3 Sturdy Cell":
+  +3 Sturdy Cell:
     rarity: epic
     perks:
       Sturdy: 3
+i18n:
+  fr:
+    name: Stabilisante
+    variants:
+      - Stabilisante +1
+      - Stabilisante +2
+      - Stabilisante +3

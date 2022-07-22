@@ -4,27 +4,34 @@ icon: /assets/icons/weapons/hellion/InfernosDecree.png
 type: Axe
 damage: Cutting
 elemental: Blaze
-cells: [Brutality, Brutality]
+cells:
+  - Brutality
+  - Brutality
 power:
-  0: 80
-  1: 120
+  base: 80
+  powerSurged: 120
 perks:
   - name: Overpower
     value: 2
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Overpower
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: BlazeDamageOnNthHit
     description: The fifth hit in a row deals +150 damage and major blaze damage
-    value: 150
-    from: 0
-    to: 0
+    powerSurged: false
   - name: BlazeDamageOnNthHit
     description: The fifth hit in a row deals +225 damage and major blaze damage
-    value: 225
-    from: 1
-    to: 1
+    powerSurged: true
+i18n:
+  fr:
+    name: Tranchant du Sixième Cercle
+    description: Une hache forgée à partir de trophées d'Hellion.
+    unique_effects:
+      - description: >-
+          Le cinquième coup consécutif inflige +150 dégâts et de lourds dégâts
+          de braise
+      - description: >-
+          Le cinquième coup consécutif inflige +225 dégâts et de lourds dégâts
+          de braise

@@ -1,15 +1,22 @@
 name: Nimble Cell
 slot: Alacrity
 variants:
-  "+1 Nimble Cell":
+  +1 Nimble Cell:
     rarity: uncommon
     perks:
       Nimble: 1
-  "+2 Nimble Cell":
+  +2 Nimble Cell:
     rarity: rare
     perks:
       Nimble: 2
-  "+3 Nimble Cell":
+  +3 Nimble Cell:
     rarity: epic
     perks:
       Nimble: 3
+i18n:
+  fr:
+    name: Évasion légère
+    variants:
+      - Évasion légère +1
+      - Évasion légère +2
+      - Évasion légère +3

@@ -1,15 +1,22 @@
 name: Guardian Cell
 slot: Fortitude
 variants:
-  "+1 Guardian Cell":
+  +1 Guardian Cell:
     rarity: uncommon
     perks:
       Guardian: 1
-  "+2 Guardian Cell":
+  +2 Guardian Cell:
     rarity: rare
     perks:
       Guardian: 2
-  "+3 Guardian Cell":
+  +3 Guardian Cell:
     rarity: epic
     perks:
       Guardian: 3
+i18n:
+  fr:
+    name: Gardien
+    variants:
+      - Gardien +1
+      - Gardien +2
+      - Gardien +3

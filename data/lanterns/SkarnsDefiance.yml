@@ -4,4 +4,17 @@ description: null
 cells: Insight
 lantern_ability:
   instant: null
-  hold: Surrounds the slayer in swirling stone that deals 2500 Terra damage to nearby enemies for 10 seconds. Also generates 30 hit point shields per second that expire after 25 seconds. (Max 600 shields)
+  hold: >-
+    Surrounds the slayer in swirling stone that deals 2500 Terra damage to
+    nearby enemies for 10 seconds. Also generates 30 hit point shields per
+    second that expire after 25 seconds. (Max 600 shields)
+i18n:
+  fr:
+    name: Défiance du Skarn
+    lantern_ability:
+      instant: null
+      hold: >-
+        Vous entoure de rochers tourbillonnants infligeant un total de 2500 de
+        dégâts telluriques en 10 seconde aux ennemis proches. Génère également
+        des bouclier de 30 points de vie par seconde qui expirent au bour de 25
+        secondes.(maximum 600 bouclier)

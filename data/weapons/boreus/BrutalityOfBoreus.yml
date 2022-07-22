@@ -4,29 +4,40 @@ icon: /assets/icons/weapons/boreus/BrutalityOfBoreus.png
 type: Hammer
 damage: Blunt
 elemental: Frost
-cells: [Brutality, Fortitude]
+cells:
+  - Brutality
+  - Fortitude
 power:
-  0: 20
-  1: 120
+  base: 20
+  powerSurged: 120
 perks:
   - name: Conditioning
     value: 1
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Conditioning
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: BoreusFrostSprite
     description: >-
-      After spending ammo, generate generate two Frost Sprites that grant your next attack +30 damage and minor frost damage (Max 4 Sprites)
-    value: 30
-    from: 0
-    to: 0
+      After spending ammo, generate generate two Frost Sprites that grant your
+      next attack +30 damage and minor frost damage (Max 4 Sprites)
+    powerSurged: false
   - name: BoreusFrostSprite
     description: >-
-      After spending ammo, generate generate two Frost Sprites that grant your next attack +60 damage and minor frost damage (Max 4 Sprites)
-    value: 60
-    from: 1
-    to: 1
+      After spending ammo, generate generate two Frost Sprites that grant your
+      next attack +60 damage and minor frost damage (Max 4 Sprites)
+    powerSurged: true
+i18n:
+  fr:
+    name: Brutalité de Boreus
+    description: Un marteau forgé à partir de trophées de Boreus
+    unique_effects:
+      - description: >-
+          Après avoir dépensé une munition, génère 2 farfroidet qui ajoute 30
+          dégâts à votre prochaine attaque et de légers dégâts de givre (4
+          farfroidets maximum)
+      - description: >-
+          Après avoir dépensé une munition, génère 2 farfroidet qui ajoute 60
+          dégâts à votre prochaine attaque et de légers dégâts de givre (4
+          farfroidets maximum)

@@ -1,15 +1,22 @@
 name: Omnisurge Cell
 slot: Insight
 variants:
-  "+1 Omnisurge Cell":
+  +1 Omnisurge Cell:
     rarity: uncommon
     perks:
       Omnisurge: 1
-  "+2 Omnisurge Cell":
+  +2 Omnisurge Cell:
     rarity: rare
     perks:
       Omnisurge: 2
-  "+3 Omnisurge Cell":
+  +3 Omnisurge Cell:
     rarity: epic
     perks:
       Omnisurge: 3
+i18n:
+  fr:
+    name: Omniflux
+    variants:
+      - Omniflux +1
+      - Omniflux +2
+      - Omniflux +3

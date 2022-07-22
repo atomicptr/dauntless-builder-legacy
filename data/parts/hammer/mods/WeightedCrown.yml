@@ -2,3 +2,10 @@ name: Weighted Crown
 icon: /assets/icons/parts/hammer/mods/WeightedCrown.png
 part_effect:
   - Stagger damage is no longer halved when attacking Behemoth legs.
+i18n:
+  fr:
+    name: Couronne alourdie
+    part_effect:
+      - >-
+        Les dégâts d'étourdissement ne sont plus réduits de moitié quand vous
+        attaquez les jambes des Behemoths

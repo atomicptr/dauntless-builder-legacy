@@ -4,27 +4,38 @@ icon: /assets/icons/weapons/koshai/SovereignsDecrees.png
 type: Repeater
 damage: Slashing
 elemental: Terra
-cells: [Brutality, Insight]
+cells:
+  - Brutality
+  - Insight
 power:
-  0: 60
-  1: 120
+  base: 60
+  powerSurged: 120
 perks:
   - name: Sharpened
     value: 1
-    from: 0
-    to: 0
+    powerSurged: false
   - name: Sharpened
     value: 3
-    from: 1
-    to: 1
+    powerSurged: true
 unique_effects:
   - name: NoAttackDamage
-    description: After not dealing damage for 4 seconds, your next 4 attacks deal +50% damage
-    value: 1.5
-    from: 0
-    to: 0
+    description: >-
+      After not dealing damage for 4 seconds, your next 4 attacks deal +50%
+      damage
+    powerSurged: false
   - name: NoAttackDamage
-    description: After not dealing damage for 4 seconds, your next 5 attacks deal +50% damage
-    value: 1.5
-    from: 1
-    to: 1
+    description: >-
+      After not dealing damage for 4 seconds, your next 5 attacks deal +50%
+      damage
+    powerSurged: true
+i18n:
+  fr:
+    name: Décrets du Souverain
+    description: Un repeaters forgée à partir de Koshai.
+    unique_effects:
+      - description: >-
+          Après 4 secondes sans infliger de dégât, vos 4 prochaines attaques
+          infligent +50% de dégâts.
+      - description: >-
+          Après 4 secondes sans infliger de dégât, vos 5 prochaines attaques
+          infligent +50% de dégâts.

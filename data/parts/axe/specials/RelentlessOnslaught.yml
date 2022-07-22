@@ -1,4 +1,16 @@
 name: Relentless Onslaught
 icon: /assets/icons/parts/axe/specials/RelentlessOnslaught.png
 part_effect:
-  - Hurl the axe forward, damaging enemies in its path. Catch the axe to throw it again up to 2 more times in the next 5 seconds, dealing 500/600/1000 damage (further increased by determination). Does not build meter.
+  - >-
+    Hurl the axe forward, damaging enemies in its path. Catch the axe to throw
+    it again up to 2 more times in the next 5 seconds, dealing 500/600/1000
+    damage (further increased by determination). Does not build meter.
+i18n:
+  fr:
+    name: Assaul implacable
+    part_effect:
+      - >-
+        Lancez la hache vers l'avant, infligeant des des dégâts aux ennemis sur
+        sa trajectoire. Rattrapez la hache pour pouvoir la relancer jusqu'à 2
+        fois dans les 5 prochaines secondes, infligeant 500/600/1000 dégâts
+        (encore accrue par la détermination). Ne charge pas la jauge.

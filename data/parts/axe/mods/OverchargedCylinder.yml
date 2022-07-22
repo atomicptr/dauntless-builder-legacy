@@ -2,3 +2,8 @@ name: Overcharged Cylinder
 icon: /assets/icons/parts/axe/mods/OverchargedCylinder.png
 part_effect:
   - Determination can now stack up to 4 times.
+i18n:
+  fr:
+    name: Cylindre surchargé
+    part_effect:
+      - La détermination peut maintenant s'accumuler jusqu'à 4 fois.

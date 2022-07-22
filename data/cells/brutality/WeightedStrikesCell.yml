@@ -1,15 +1,22 @@
 name: Weighted Strikes Cell
 slot: Brutality
 variants:
-  "+1 Weighted Strikes Cell":
+  +1 Weighted Strikes Cell:
     rarity: uncommon
     perks:
       Weighted Strikes: 1
-  "+2 Weighted Strikes Cell":
+  +2 Weighted Strikes Cell:
     rarity: rare
     perks:
       Weighted Strikes: 2
-  "+3 Weighted Strikes Cell":
+  +3 Weighted Strikes Cell:
     rarity: epic
     perks:
       Weighted Strikes: 3
+i18n:
+  fr:
+    name: Frappes lourdes
+    variants:
+      - Frappes lourdes +1
+      - Frappes lourdes +2
+      - Frappes lourdes +3

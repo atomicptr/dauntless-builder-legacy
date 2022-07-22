@@ -1,15 +1,22 @@
 name: Deconstruction Cell
 slot: Brutality
 variants:
-  "+1 Deconstruction Cell":
+  +1 Deconstruction Cell:
     rarity: uncommon
     perks:
       Deconstruction: 1
-  "+2 Deconstruction Cell":
+  +2 Deconstruction Cell:
     rarity: rare
     perks:
       Deconstruction: 2
-  "+3 Deconstruction Cell":
+  +3 Deconstruction Cell:
     rarity: epic
     perks:
       Deconstruction: 3
+i18n:
+  fr:
+    name: Démolition
+    variants:
+      - Démolition +1
+      - Démolition +2
+      - Démolition +3

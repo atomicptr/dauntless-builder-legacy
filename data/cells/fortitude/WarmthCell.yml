@@ -1,15 +1,22 @@
 name: Warmth Cell
 slot: Fortitude
 variants:
-  "+1 Warmth Cell":
+  +1 Warmth Cell:
     rarity: uncommon
     perks:
       Warmth: 1
-  "+2 Warmth Cell":
+  +2 Warmth Cell:
     rarity: rare
     perks:
       Warmth: 2
-  "+3 Warmth Cell":
+  +3 Warmth Cell:
     rarity: epic
     perks:
       Warmth: 3
+i18n:
+  fr:
+    name: Chauffante
+    variants:
+      - Chauffante +1
+      - Chauffante +2
+      - Chauffante +3

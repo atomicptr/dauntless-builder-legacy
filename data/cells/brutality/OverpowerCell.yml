@@ -1,15 +1,22 @@
 name: Overpower Cell
 slot: Brutality
 variants:
-  "+1 Overpower Cell":
+  +1 Overpower Cell:
     rarity: uncommon
     perks:
       Overpower: 1
-  "+2 Overpower Cell":
+  +2 Overpower Cell:
     rarity: rare
     perks:
       Overpower: 2
-  "+3 Overpower Cell":
+  +3 Overpower Cell:
     rarity: epic
     perks:
       Overpower: 3
+i18n:
+  fr:
+    name: Domination
+    variants:
+      - Domination +1
+      - Domination +2
+      - Domination +3

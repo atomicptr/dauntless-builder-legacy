@@ -1,4 +1,13 @@
 name: Executioner's Spearhead
 icon: /assets/icons/parts/warpike/mods/ExecutionersSpearhead.png
 part_effect:
-  - Each time you wound or assist wounding a Behemoth, gain 8% damage for 45 seconds. Stacks up to 5.
+  - >-
+    Each time you wound or assist wounding a Behemoth, gain 8% damage for 45
+    seconds. Stacks up to 5.
+i18n:
+  fr:
+    name: Fer de lance du bourreau
+    part_effect:
+      - >-
+        Chaque fois que vous blessez ou aidez à blesser une partie de Behemoth,
+        gagnez 8% de dégâts pendant 45 seconds. Cumulable 5 fois.

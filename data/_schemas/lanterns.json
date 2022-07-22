@@ -1,0 +1,82 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false,
+    "properties": {
+        "cells": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "description": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "i18n": {
+            "patternProperties": {
+                "^[a-z]{2}$": {
+                    "properties": {
+                        "lantern_ability": {
+                            "properties": {
+                                "hold": {
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ]
+                                }
+                            },
+                            "type": [
+                                "object",
+                                "null"
+                            ]
+                        },
+                        "name": {
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        }
+                    },
+                    "type": [
+                        "object",
+                        "null"
+                    ]
+                }
+            },
+            "type": [
+                "object",
+                "null"
+            ]
+        },
+        "icon": {
+            "type": "string"
+        },
+        "lantern_ability": {
+            "additionalProperties": false,
+            "properties": {
+                "hold": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "instant": {
+                    "type": "null"
+                }
+            },
+            "type": "object"
+        },
+        "name": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "name",
+        "cells",
+        "lantern_ability"
+    ],
+    "title": "Dauntless-Builder Lantern Schema",
+    "type": "object"
+}

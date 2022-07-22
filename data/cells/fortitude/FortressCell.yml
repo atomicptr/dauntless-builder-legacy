@@ -1,15 +1,22 @@
 name: Fortress Cell
 slot: Fortitude
 variants:
-  "+1 Fortress Cell":
+  +1 Fortress Cell:
     rarity: uncommon
     perks:
       Fortress: 1
-  "+2 Fortress Cell":
+  +2 Fortress Cell:
     rarity: rare
     perks:
       Fortress: 2
-  "+3 Fortress Cell":
+  +3 Fortress Cell:
     rarity: epic
     perks:
       Fortress: 3
+i18n:
+  fr:
+    name: Forteresse +3
+    variants:
+      - Forteresse +1
+      - Forteresse +2
+      - Forteresse +3

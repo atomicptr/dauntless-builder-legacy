@@ -1,15 +1,22 @@
 name: Sharpened Cell
 slot: Brutality
 variants:
-  "+1 Sharpened Cell":
+  +1 Sharpened Cell:
     rarity: uncommon
     perks:
       Sharpened: 1
-  "+2 Sharpened Cell":
+  +2 Sharpened Cell:
     rarity: rare
     perks:
       Sharpened: 2
-  "+3 Sharpened Cell":
+  +3 Sharpened Cell:
     rarity: epic
     perks:
       Sharpened: 3
+i18n:
+  fr:
+    name: Aiguisée
+    variants:
+      - Aiguisée +1
+      - Aiguisée +2
+      - Aiguisée +3

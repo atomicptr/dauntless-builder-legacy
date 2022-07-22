@@ -1,15 +1,22 @@
 name: Cascade Cell
 slot: Insight
 variants:
-  "+1 Cascade Cell":
+  +1 Cascade Cell:
     rarity: uncommon
     perks:
       Cascade: 1
-  "+2 Cascade Cell":
+  +2 Cascade Cell:
     rarity: rare
     perks:
       Cascade: 2
-  "+3 Cascade Cell":
+  +3 Cascade Cell:
     rarity: epic
     perks:
       Cascade: 3
+i18n:
+  fr:
+    name: Cascade
+    variants:
+      - Cascade +1
+      - Cascade +2
+      - Cascade +3
