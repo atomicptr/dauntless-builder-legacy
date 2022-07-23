@@ -1,5 +1,8 @@
 # dauntless-builder
 
+[![Build Status](https://app.travis-ci.com/atomicptr/dauntless-builder.svg?branch=master)](https://app.travis-ci.com/atomicptr/dauntless-builder)
+[![Crowdin](https://badges.crowdin.net/dauntless-builder/localized.svg)](https://crowdin.com/project/dauntless-builder)
+
 Create and share Dauntless builds with your friends!
 
 ![Screenshot of Dauntless Builder](docs/assets/app-screenshot.png)
