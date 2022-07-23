@@ -24,10 +24,3 @@ unique_effects:
   - name: StaggerHeal
     description: After a Behemoth is staggered, heal for 300
     powerSurged: true
-i18n:
-  fr:
-    name: Charge de Nayzaga
-    description: Un marteau forgé à partir de trophées de Nayzaga.
-    unique_effects:
-      - description: Après l'étourdissement d'un Behemoth, vous vous soignez de 100
-      - description: Après l'étourdissement d'un Behemoth, vous vous soignez de 300

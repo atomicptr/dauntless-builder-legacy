@@ -14,34 +14,3 @@ effects:
     description: After dodging through an attack, grant 150 health shield to all slayers
   '6':
     description: After dodging through an attack, grant 175 health shield to all slayers
-i18n:
-  fr:
-    name: Stratège
-    description: >-
-      Esquiver les attaques de Behemoth octroit un bouclier de santé à tous les
-      Slayers.
-    effects:
-      '1':
-        description: >-
-          Après une esquive parfaite, accorde un bouclier de 50 points de santé
-          à tous les Slayers
-      '2':
-        description: >-
-          Après une esquive parfaite, accorde un bouclier de 75 points de santé
-          à tous les Slayers
-      '3':
-        description: >-
-          Après une esquive parfaite, accorde un bouclier de 100 points de santé
-          à tous les Slayers
-      '4':
-        description: >-
-          Après une esquive parfaite, accorde un bouclier de 125 points de santé
-          à tous les Slayers
-      '5':
-        description: >-
-          Après une esquive parfaite, accorde un bouclier de 150 points de santé
-          à tous les Slayers
-      '6':
-        description: >-
-          Après une esquive parfaite, accorde un bouclier de 175 points de santé
-          à tous les Slayers

@@ -20,13 +20,3 @@ unique_effects:
       +25% damage when the target is below
 
       50% health. Usable once, but resets on Behemoth kill.
-i18n:
-  fr:
-    name: Émissaire pyroclastique
-    description: Une aetherolance forgée à partir de Torgadoro
-    unique_effects:
-      - description: >-
-          Capacité légendaire : Entrer en rage, gagnant de nouvelles attaques
-          pour 15 secondes. Infligez +25% de dégats lorsque la cible est en
-          dessous de 50% de vie. Utilisable une fois, mais se réinitialise lors
-          de la mort d'un Behemoth.

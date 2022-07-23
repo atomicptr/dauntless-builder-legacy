@@ -24,11 +24,3 @@ unique_effects:
     description: >-
       Upon your first death, become a shadow clone that deals 100% increased
       damage for 15 seconds.
-i18n:
-  fr:
-    name: Écho tragique
-    description: Une pièce d'armure forger à partir de Shrowd.
-    unique_effects:
-      - description: >-
-          Lors de votre première mort, devenez un clone de l'ombre qui inflige
-          des dégâts accrus à 100 % pendant 15 secondes.

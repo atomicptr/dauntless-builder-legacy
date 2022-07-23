@@ -15,7 +15,3 @@ perks:
   - name: Cunning
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Sombre veille
-    description: Protection pour la tête forgée à partir de Shrowd.

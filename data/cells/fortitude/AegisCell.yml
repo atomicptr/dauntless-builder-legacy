@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Aegis: 3
-i18n:
-  fr:
-    name: Égide
-    variants:
-      - Égide +1
-      - Égide +2
-      - Égide +3

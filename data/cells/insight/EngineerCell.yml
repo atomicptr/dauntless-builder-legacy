@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Engineer: 3
-i18n:
-  fr:
-    name: Ingénieur
-    variants:
-      - Ingénieur +1
-      - Ingénieur +2
-      - Ingénieur +3

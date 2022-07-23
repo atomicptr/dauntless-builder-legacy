@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Pulse: 3
-i18n:
-  fr:
-    name: Pulsation
-    variants:
-      - Pulsation +1
-      - Pulsation +2
-      - Pulsation +3

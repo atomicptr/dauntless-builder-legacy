@@ -14,20 +14,3 @@ effects:
     description: Heal for 150 whenever a Behemoth is Staggered
   '6':
     description: Heal for 200 whenever a Behemoth is Staggered
-i18n:
-  fr:
-    name: Vigueur étourdissante
-    description: Restaure de la vie lorsqu'un Behemoth est étourdi.
-    effects:
-      '1':
-        description: Après l'étourdissement d'un Behemoth, vous soignez de 50
-      '2':
-        description: Après l'étourdissement d'un Behemoth, vous soignez de 75
-      '3':
-        description: Après l'étourdissement d'un Behemoth, vous soignez de 100
-      '4':
-        description: Après l'étourdissement d'un Behemoth, vous soignez de 125
-      '5':
-        description: Après l'étourdissement d'un Behemoth, vous soignez de 150
-      '6':
-        description: Après l'étourdissement d'un Behemoth, vous soignez de 200

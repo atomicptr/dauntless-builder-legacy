@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Conduit: 3
-i18n:
-  fr:
-    name: Conduction
-    variants:
-      - Conduction +1
-      - Conduction +2
-      - Conduction +3

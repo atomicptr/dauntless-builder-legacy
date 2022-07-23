@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Shellshock Resist: 3
-i18n:
-  fr:
-    name: Résiliente
-    variants:
-      - Résiliente +1
-      - Résiliente +2
-      - Résiliente +3

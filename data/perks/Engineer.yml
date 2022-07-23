@@ -26,22 +26,3 @@ effects:
     description: +{{percentage}}% increase Pylon range
     values:
       percentage: 150
-i18n:
-  fr:
-    name: Ingénieur
-    description: Augmente la portée des pylônes
-    effects:
-      '1':
-        description: +{{percentage}}% de portée des pylônes.
-      '2':
-        description: +{{percentage}}% de portée des pylônes.
-      '3':
-        description: +{{percentage}}% de portée des pylônes.
-      '4':
-        description: +{{percentage}}% de portée des pylônes.
-      '5':
-        description: +{{percentage}}% de portée des pylônes.
-      '6':
-        description: +{{percentage}}% de portée des pylônes.
-  ja:
-    name: エンジニア

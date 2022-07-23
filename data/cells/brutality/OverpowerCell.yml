@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Overpower: 3
-i18n:
-  fr:
-    name: Domination
-    variants:
-      - Domination +1
-      - Domination +2
-      - Domination +3

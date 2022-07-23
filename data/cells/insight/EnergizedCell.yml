@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Energized: 3
-i18n:
-  fr:
-    name: Charge
-    variants:
-      - Charge +1
-      - Charge +2
-      - Charge +3

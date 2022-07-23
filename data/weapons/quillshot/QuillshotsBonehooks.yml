@@ -17,7 +17,3 @@ perks:
   - name: Acidic
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Crochets osseux de Quillshot
-    description: Une paire de chaînes-lames forgée avec des trophées de Quillshot.

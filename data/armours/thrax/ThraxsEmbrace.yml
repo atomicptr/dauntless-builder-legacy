@@ -15,7 +15,3 @@ perks:
   - name: Nine Lives
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Éteinte de Thrax
-    description: Protection pour les bras forgée à partir de Thrax.

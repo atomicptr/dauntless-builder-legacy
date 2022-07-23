@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Weighted Strikes: 3
-i18n:
-  fr:
-    name: Frappes lourdes
-    variants:
-      - Frappes lourdes +1
-      - Frappes lourdes +2
-      - Frappes lourdes +3

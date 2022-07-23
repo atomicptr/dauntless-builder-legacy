@@ -9,12 +9,3 @@ values:
   damageIncreasePierceAndHarvest: 5
   damageIncreaseAfterFifthAttack: 25
   duration: 8
-i18n:
-  fr:
-    name: Pointe équilibré
-    part_effect:
-      - >-
-        Augmente les dégâts infligés de {{damageIncreasePierceAndHarvest}}% chaque fois que des attaques
-        perçantes et absorbantes sont alternées. Aprés la cinquième attaque
-        alternée, les dégats infligés augmentent de {{damageIncreaseAfterFifthAttack}}% pendant {{duration}} secondes.
-        Réinitialisé à la fin du combo.

@@ -24,10 +24,3 @@ unique_effects:
   - name: TailDamage
     description: 30% damage vs Behemoth Tails
     powerSurged: true
-i18n:
-  fr:
-    name: Le gouverneur
-    description: A Slayer's sword forged with Thunderdeep Drask trophies.
-    unique_effects:
-      - {}
-      - {}

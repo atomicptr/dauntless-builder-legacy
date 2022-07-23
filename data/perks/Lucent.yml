@@ -38,38 +38,3 @@ effects:
       heal is active, increase the recharge
 
       rate of your Lantern ability by 50%.
-i18n:
-  fr:
-    name: Luminescente
-    description: La flasque soigne au cours du temps et charge la lanterne.
-    effects:
-      '1':
-        description: >-
-          Votre flasque soigne sur 20 secondes, mais avec un soin accru de 20%.
-          Tant que le soin est actif accélère le rechargement de la capacité de
-          votre lanterne de 15%
-      '2':
-        description: >-
-          Votre flasque soigne sur 20 secondes, mais avec un soin accru de 20%.
-          Tant que le soin est actif accélère le rechargement de la capacité de
-          votre lanterne de 25%
-      '3':
-        description: >-
-          Votre flasque soigne sur 20 secondes, mais avec un soin accru de 20%.
-          Tant que le soin est actif accélère le rechargement de la capacité de
-          votre lanterne de 35%
-      '4':
-        description: >-
-          Votre flasque soigne sur 20 secondes, mais avec un soin accru de 20%.
-          Tant que le soin est actif accélère le rechargement de la capacité de
-          votre lanterne de 40%
-      '5':
-        description: >-
-          Votre flasque soigne sur 20 secondes, mais avec un soin accru de 20%.
-          Tant que le soin est actif accélère le rechargement de la capacité de
-          votre lanterne de 45%
-      '6':
-        description: >-
-          Votre flasque soigne sur 20 secondes, mais avec un soin accru de 20%.
-          Tant que le soin est actif accélère le rechargement de la capacité de
-          votre lanterne de 50%

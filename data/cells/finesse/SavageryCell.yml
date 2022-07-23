@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Savagery: 3
-i18n:
-  fr:
-    name: Sauvagerie
-    variants:
-      - Sauvagerie +1
-      - Sauvagerie +2
-      - Sauvagerie +3

@@ -32,18 +32,3 @@ unique_effects:
       granted a stackable 125 health shield that lasts for 25 seconds (max 600
       shields).
     powerSurged: true
-i18n:
-  fr:
-    name: Déchirement du Frostwülf
-    description: A Slayer's war pike forged with Frostwülf trophies.
-    unique_effects:
-      - description: >-
-          Après avoir utilisé la capacité de votre lanterne, créez un geyser qui
-          infige constamment 50 dégâts de givre. Tout Slayer traversant le
-          geyser pour la prmière fois obtient un bouclier de 125 points de santé
-          cumulable qui dure pendant 25 secondes (600 boucliers maximum).
-      - description: >-
-          Après avoir utilisé la capacité de votre lanterne, créez un geyser qui
-          infige constamment 70 dégâts de givre. Tout Slayer traversant le
-          geyser pour la prmière fois obtient un bouclier de 125 points de santé
-          cumulable qui dure pendant 25 secondes (600 boucliers maximum).

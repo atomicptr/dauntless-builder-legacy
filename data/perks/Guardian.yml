@@ -24,34 +24,3 @@ effects:
     description: >-
       +30% of shield applied to you is also applied to your nearest ally for
       15s.
-i18n:
-  fr:
-    name: Gardien
-    description: >-
-      Octroie une portion de n'importe quel bouclier qui vous est appliqué à
-      votre allié le plus proche.
-    effects:
-      '1':
-        description: >-
-          +5% des boucliers de santé qui vous sont appliqués sont également
-          appliqués à votre allié le plus proche pendant 15 secondes
-      '2':
-        description: >-
-          +10% des boucliers de santé qui vous sont appliqués sont également
-          appliqués à votre allié le plus proche pendant 15 secondes
-      '3':
-        description: >-
-          +15% des boucliers de santé qui vous sont appliqués sont également
-          appliqués à votre allié le plus proche pendant 15 secondes
-      '4':
-        description: >-
-          +20% des boucliers de santé qui vous sont appliqués sont également
-          appliqués à votre allié le plus proche pendant 15 secondes
-      '5':
-        description: >-
-          +25% des boucliers de santé qui vous sont appliqués sont également
-          appliqués à votre allié le plus proche pendant 15 secondes
-      '6':
-        description: >-
-          +30% des boucliers de santé qui vous sont appliqués sont également
-          appliqués à votre allié le plus proche pendant 15 secondes

@@ -15,7 +15,3 @@ perks:
   - name: Nine Lives
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Égide de Bravoure
-    description: Protection pour le torse forgée à partir de Valomyr.

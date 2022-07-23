@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Berserker: 3
-i18n:
-  fr:
-    name: Berserker
-    variants:
-      - Berserker +1
-      - Berserker +2
-      - Berserker +3

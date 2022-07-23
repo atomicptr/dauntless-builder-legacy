@@ -30,18 +30,3 @@ unique_effects:
       terra damage. Additional attacks speed up the blades, which explode at the
       end of the duration and deal damage based on blade speed.
     powerSurged: true
-i18n:
-  fr:
-    name: Lumières de Kharabak
-    description: Un repeaters forgée à partir de Kharabak.
-    unique_effects:
-      - description: >-
-          Une fois chargée, la prochaine attaque libère des lames
-          troubillonnantes qui infligent 25 de dégâts Tellurique. Des attaques
-          supplémentaires accélèrent les lames, qui explosent à la fin de leur
-          durée et infligent des dégâts en fonction de la vitesse des lames.
-      - description: >-
-          Une fois chargée, la prochaine attaque libère des lames
-          troubillonnantes qui infligent 75 de dégâts Tellurique. Des attaques
-          supplémentaires accélèrent les lames, qui explosent à la fin de leur
-          durée et infligent des dégâts en fonction de la vitesse des lames.

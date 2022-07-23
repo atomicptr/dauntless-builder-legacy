@@ -15,7 +15,3 @@ perks:
   - name: Galvanized
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Griffes de Wülf
-    description: Arms protection forged from Frostwülf trophies.

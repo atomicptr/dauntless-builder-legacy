@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Lucent: 3
-i18n:
-  fr:
-    name: Luminescente
-    variants:
-      - Luminescente +1
-      - Luminescente +2
-      - Luminescente +3

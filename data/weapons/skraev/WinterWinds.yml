@@ -28,14 +28,3 @@ unique_effects:
       After dodging, drop 3 Ice Mines around you on a 30 second cooldown that
       deal 300 damage.
     powerSurged: true
-i18n:
-  fr:
-    name: Vents hivernaux
-    description: Une paire de chaînes-lames forgée à partir de Skraev.
-    unique_effects:
-      - description: >-
-          Après une esquive, déposez 2 mines de glace autour de vous qui
-          infligent 300 dégâts. 30s de recharge
-      - description: >-
-          Après une esquive, déposez 3 mines de glace autour de vous qui
-          infligent 300 dégâts. 30s de recharge

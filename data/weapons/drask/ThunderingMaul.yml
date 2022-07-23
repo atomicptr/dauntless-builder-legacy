@@ -24,10 +24,3 @@ unique_effects:
   - name: HeadDamage
     description: 30% damage vs Behemoth Heads
     powerSurged: true
-i18n:
-  fr:
-    name: Mâchoire tonnante
-    description: Un marteau forgée à partir de Drask.
-    unique_effects:
-      - description: 20% de dégâts contre la tête des Behemoths
-      - description: 30% de dégâts contre la tête des Behemoths

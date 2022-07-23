@@ -16,34 +16,3 @@ effects:
     description: While below 50% of your maximum Stamina, gain +40% movement speed.
   '6':
     description: While below 50% of your maximum Stamina, gain +50% movement speed.
-i18n:
-  fr:
-    name: Vivifié
-    description: >-
-      En dessous de 50 % de votre Endurance maximale, vous gagnez
-      +10/15/20/30/40/50 % de vitesse de déplacement.
-    effects:
-      '1':
-        description: >-
-          En dessous de 50 % de votre Endurance maximale, vous gagnez +10% de
-          vitesse de déplacement.
-      '2':
-        description: >-
-          En dessous de 50 % de votre Endurance maximale, vous gagnez +15% de
-          vitesse de déplacement.
-      '3':
-        description: >-
-          En dessous de 50 % de votre Endurance maximale, vous gagnez +20% de
-          vitesse de déplacement.
-      '4':
-        description: >-
-          En dessous de 50 % de votre Endurance maximale, vous gagnez +30% de
-          vitesse de déplacement.
-      '5':
-        description: >-
-          En dessous de 50 % de votre Endurance maximale, vous gagnez +40% de
-          vitesse de déplacement.
-      '6':
-        description: >-
-          En dessous de 50 % de votre Endurance maximale, vous gagnez +50% de
-          vitesse de déplacement.

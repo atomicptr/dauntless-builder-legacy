@@ -14,20 +14,3 @@ effects:
     description: Prevents you from being staggered (10 second cooldown)
   '6':
     description: Prevents you from being staggered (5 second cooldown)
-i18n:
-  fr:
-    name: Stabilité
-    description: Permet d'éviter régulièrement les déstabilisations.
-    effects:
-      '1':
-        description: Empêche les déstabilisations (30 secondes de recharge)
-      '2':
-        description: Empêche les déstabilisations (25 secondes de recharge)
-      '3':
-        description: Empêche les déstabilisations (20 secondes de recharge)
-      '4':
-        description: Empêche les déstabilisations (15 secondes de recharge)
-      '5':
-        description: Empêche les déstabilisations (10 secondes de recharge)
-      '6':
-        description: Empêche les déstabilisations (5 secondes de recharge)

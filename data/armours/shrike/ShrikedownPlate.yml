@@ -15,7 +15,3 @@ perks:
   - name: Evasion
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Plastron de duvet Shrike
-    description: Protection pour le torse forgée à partir de Shrike.

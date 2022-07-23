@@ -14,20 +14,3 @@ effects:
     description: +50% Stagger vs Enraged Behemoths
   '6':
     description: +60% Stagger vs Enraged Behemoths
-i18n:
-  fr:
-    name: Pacificateur
-    description: Augmente les dégâts étourdissants contre les Behemoths enragés.
-    effects:
-      '1':
-        description: +10% de dégâts étourdissants contre les Behemoths enragés
-      '2':
-        description: +20% de dégâts étourdissants contre les Behemoths enragés
-      '3':
-        description: +30% de dégâts étourdissants contre les Behemoths enragés
-      '4':
-        description: +40% de dégâts étourdissants contre les Behemoths enragés
-      '5':
-        description: +50% de dégâts étourdissants contre les Behemoths enragés
-      '6':
-        description: +60% de dégâts étourdissants contre les Behemoths enragés

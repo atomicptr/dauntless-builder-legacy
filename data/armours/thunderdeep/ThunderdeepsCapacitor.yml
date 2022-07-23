@@ -15,7 +15,3 @@ perks:
   - name: Sharpened
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Condensateur de Sombre-orage
-    description: Head protection forged from Thunderdeep Drask trophies.

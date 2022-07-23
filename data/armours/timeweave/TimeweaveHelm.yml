@@ -15,7 +15,3 @@ perks:
   - name: Predator
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Casque de Tisseur du temps
-    description: Protection pour la tête forgée à partir de Tisseur du temps.

@@ -28,14 +28,3 @@ unique_effects:
       After dodging through an attack, your attacks gain 100% bonus meter for +3
       seconds
     powerSurged: true
-i18n:
-  fr:
-    name: Lames tempête
-    description: Une paire de chaînes-lames forgée à partir de Stormclaw.
-    unique_effects:
-      - description: >-
-          Après avoir esquivé une attaque, vos attaques génèrent 100% de jauge
-          de spécial supplémentaire pendant +3 secondes.
-      - description: >-
-          Après avoir esquivé une attaque, vos attaques génèrent 100% de jauge
-          de spécial supplémentaire pendant +4 secondes.

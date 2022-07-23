@@ -2,39 +2,6 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "additionalProperties": false,
     "properties": {
-        "i18n": {
-            "patternProperties": {
-                "^[a-z]{2}$": {
-                    "properties": {
-                        "name": {
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        "variants": {
-                            "items": [
-                                {
-                                    "type": "string"
-                                }
-                            ],
-                            "type": [
-                                "array",
-                                "null"
-                            ]
-                        }
-                    },
-                    "type": [
-                        "object",
-                        "null"
-                    ]
-                }
-            },
-            "type": [
-                "object",
-                "null"
-            ]
-        },
         "name": {
             "type": "string"
         },

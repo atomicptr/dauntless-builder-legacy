@@ -24,14 +24,3 @@ unique_effects:
   - name: BlazeDamageOnNthHit
     description: The fifth hit in a row deals +225 damage and major blaze damage
     powerSurged: true
-i18n:
-  fr:
-    name: Tranchant du Sixième Cercle
-    description: Une hache forgée à partir de trophées d'Hellion.
-    unique_effects:
-      - description: >-
-          Le cinquième coup consécutif inflige +150 dégâts et de lourds dégâts
-          de braise
-      - description: >-
-          Le cinquième coup consécutif inflige +225 dégâts et de lourds dégâts
-          de braise

@@ -15,7 +15,3 @@ perks:
   - name: Tactician
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Masque Tranchant
-    description: Protection pour la tête forgée à partir de Sahvyt.

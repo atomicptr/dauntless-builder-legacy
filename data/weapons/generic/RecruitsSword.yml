@@ -7,7 +7,3 @@ elemental: null
 cells: null
 power:
   base: 10
-i18n:
-  fr:
-    name: Épée de recrue
-    description: Une simple lame pour combattre des Behemoths.

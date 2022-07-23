@@ -24,10 +24,3 @@ unique_effects:
   - name: VerticalAttackHeal
     description: After landing perfectly charged attacks, heal for 100
     powerSurged: true
-i18n:
-  fr:
-    name: Faux de Nayzaga
-    description: Une hache forgée à partir de Nayzaga.
-    unique_effects:
-      - description: Vous soigne de 50 pv par attaques parfaite chargée
-      - description: Vous soigne de 100 pv par attaques parfaite chargée

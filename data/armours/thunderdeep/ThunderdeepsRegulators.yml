@@ -15,7 +15,3 @@ perks:
   - name: Zeal
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Régulateurs de Sombre-orage
-    description: Arms protection forged from Thunderdeep Drask trophies.

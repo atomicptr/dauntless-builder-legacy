@@ -7,7 +7,3 @@ weakness: null
 cells: null
 resistance:
   base: 20
-i18n:
-  fr:
-    name: Masque de recrue
-    description: Protection pour la tête de Slayer novice.

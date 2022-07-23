@@ -14,20 +14,3 @@ effects:
     description: +25 Stamina Regeneration
   '6':
     description: +30 Stamina Regeneration
-i18n:
-  fr:
-    name: Constitution
-    description: Augmente la régénération d'endurance.
-    effects:
-      '1':
-        description: +5 à la régénération d'Endurance
-      '2':
-        description: +10 à la régénération d'Endurance
-      '3':
-        description: +15 à la régénération d'Endurance
-      '4':
-        description: +20 à la régénération d'Endurance
-      '5':
-        description: +25 à la régénération d'Endurance
-      '6':
-        description: +30 à la régénération d'Endurance

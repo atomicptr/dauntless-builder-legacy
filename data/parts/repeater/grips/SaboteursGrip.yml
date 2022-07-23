@@ -6,13 +6,3 @@ part_effect:
     Launches an explosive mine that deals 400 damage. Mine charges after a short
     period, increasing damage to 700.
   - 'Empowered: Deals 900 damage when charged and can interrupt Behemoths.'
-i18n:
-  fr:
-    name: Poignée du saboteur
-    part_effect:
-      - >-
-        Lance une mine explosive qui inflige 400 de dégâts. La mine s'amorce
-        après une courte période, augmentant ses dégâts à 700.
-      - >-
-        Aethérochargé: Inflige 900 de dégâts une fois amorcée et peut
-        interrompre les Behemoths.

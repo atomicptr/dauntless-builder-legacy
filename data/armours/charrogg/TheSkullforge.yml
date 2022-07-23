@@ -24,12 +24,3 @@ unique_effects:
       1.5% of all damage dealt becomes a stamina shield (max 50) that depletes
       first when spending stamina. Depletes slowly after 5 seconds not dealing
       damage.
-i18n:
-  fr:
-    name: Le Forgecrâne
-    description: Une pièce d'armure forger à partir de Charrogg Marqueflamme.
-    unique_effects:
-      - description: >-
-          1,5% des dégâts infligés se convertissent en un bouclier d'endurance
-          (50 max) qui s'épuise lentement après n'avoir pas infligé de dégâts
-          pendant une courte période.

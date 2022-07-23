@@ -14,20 +14,3 @@ effects:
     description: Increases Dodge invulnerability windows by 35%
   '6':
     description: Increases Dodge invulnerability windows by 42%
-i18n:
-  fr:
-    name: Évasion
-    description: Augmente la durée d'invulnéribilité lors des esquives.
-    effects:
-      '1':
-        description: Augmente la durée d'invincibilité lors des esquives de 7%
-      '2':
-        description: Augmente la durée d'invincibilité lors des esquives de 14%
-      '3':
-        description: Augmente la durée d'invincibilité lors des esquives de 21%
-      '4':
-        description: Augmente la durée d'invincibilité lors des esquives de 28%
-      '5':
-        description: Augmente la durée d'invincibilité lors des esquives de 35%
-      '6':
-        description: Augmente la durée d'invincibilité lors des esquives de 42%

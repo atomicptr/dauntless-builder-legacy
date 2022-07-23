@@ -20,29 +20,3 @@ effects:
     description: >-
       Reduce the cooldown of your Omnicell ability by 20%. On Omnicell ability
       activation, reduce the cooldown of your Lantern ability by 40%.
-i18n:
-  fr:
-    name: Omniflux
-    description: Percent increase the recharge rate of your Lantern ability.
-    effects:
-      '1':
-        description: Réduit le temps de recharge des capacités de vos omnicellules 5%.
-      '2':
-        description: Réduit le temps de recharge des capacités de vos omnicellules 8%.
-      '3':
-        description: Réduit le temps de recharge des capacités de vos omnicellules 11%.
-      '4':
-        description: >-
-          Réduit le temps de recharge des capacités de vos omnicellules 14%.
-          Lorsque l’omnicellule s’active, le temps de recharge de votre capacité
-          de lanterne est également réduit 20%.
-      '5':
-        description: >-
-          Réduit le temps de recharge des capacités de vos omnicellules 17%.
-          Lorsque l’omnicellule s’active, le temps de recharge de votre capacité
-          de lanterne est également réduit 30%.
-      '6':
-        description: >-
-          Réduit le temps de recharge des capacités de vos omnicellules 20%.
-          Lorsque l’omnicellule s’active, le temps de recharge de votre capacité
-          de lanterne est également réduit 40%.

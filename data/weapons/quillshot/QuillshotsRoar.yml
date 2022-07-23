@@ -17,7 +17,3 @@ perks:
   - name: Acidic
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Rugissement de Quillshot
-    description: Un marteau forgé à partir de trophées de Quillshot.

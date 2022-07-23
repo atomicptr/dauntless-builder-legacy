@@ -15,7 +15,3 @@ perks:
   - name: Cunning
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Ombre de Thrax
-    description: Protection pour le torse forgée à partir de Thrax.

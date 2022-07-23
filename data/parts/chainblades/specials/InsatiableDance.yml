@@ -8,16 +8,3 @@ part_effect:
     to heal you and create a 150 healing orb for each momentum consumed. Targets
     at or healed to full health gain 5% damage for 10 seconds, stacking up to 4
     times. (Consume 1 momentum if no follow up is performed.)
-i18n:
-  fr:
-    name: Danse insatiable
-    part_effect:
-      - >-
-        Repoussez une cible proche avec invulnérabilité, puis utiliser des
-        attaques primaires ou secondaires pour enchaîner. Primaire: une attaque
-        de sprint vers la cible qui consomme 1 inertie. Secondaire : un choc
-        tourbillonnant qui consomme toute l'inertie pour vous soigner et crée un
-        orbe soignant 150 santé par inertie consommée. Les cibles à pleine
-        santé, avant ou après le soin, gagnent +5% de dégats pendant 10
-        secondes, qui se cumulent jusqu'à 4 fois (consomme 1 inertie si aucun
-        enchaînement n'est effectué.)

@@ -28,16 +28,3 @@ unique_effects:
       Using your special continually generates Frost Sprites that grant your
       next attack +60 damage and minor frost damage (Max 4 Sprites)
     powerSurged: true
-i18n:
-  fr:
-    name: Fardeau de Boreus
-    description: Une épée forgée à partir de Boreus.
-    unique_effects:
-      - description: >-
-          Utiliser votre spécial génère continuellement des farfroidets qui
-          ajoutent +30 dégâts chacun à votre prochaine attaque et de légers
-          dégâts de givre (4 farfroidets maximum)
-      - description: >-
-          Utiliser votre spécial génère continuellement des farfroidets qui
-          ajoutent +60 dégâts chacun à votre prochaine attaque et de légers
-          dégâts de givre (4 farfroidets maximum)

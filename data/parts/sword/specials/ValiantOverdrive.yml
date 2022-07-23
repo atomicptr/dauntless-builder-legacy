@@ -6,12 +6,3 @@ part_effect:
     causing attacks to deal +60-80 aoe damage. Grants 1 Valour immediately and
     then 1 Valour every 4 seconds. Reactivate to dash in a direction (Costs 1
     Valour).
-i18n:
-  fr:
-    name: Surcharge vaillante
-    part_effect:
-      - >-
-        Activez avec une jauge pleine pour entrer en mode Surcharge, gagnant
-        +20% de vitesse d'attaque et ajoutant +60-80 de dégâts de zone aux
-        attaques. Confère 1 Vaillance immédiatement puis 1 Vaillance toutes les
-        4 secondes. Réactivez pour ruer dans une direction (coûte 1 Vaillance).

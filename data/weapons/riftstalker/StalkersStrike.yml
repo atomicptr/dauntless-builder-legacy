@@ -32,16 +32,3 @@ unique_effects:
       are present, the bonus doubles.
     
     powerSurged: true
-i18n:
-  fr:
-    name: Frappe du rôdeur
-    description: Une épée forgée à partir de trophées du Riftstalker.
-    unique_effects:
-      - description: >-
-          Infliger des dégâts donne une chance de générer des orbes d'ombre qui
-          confèrent + 1.5% de dégâts pendant 5 secondes. Avec 5 orbes ou plus,
-          le bonus est doublé
-      - description: >-
-          Infliger des dégâts donne une chance de générer des orbes d'ombre qui
-          confèrent + 2.25% de dégâts pendant 5 secondes. Avec 5 orbes ou plus,
-          le bonus est doublé

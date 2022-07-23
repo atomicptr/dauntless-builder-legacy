@@ -15,7 +15,3 @@ perks:
   - name: Aegis
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Crinière de Wülf
-    description: Head protection forged from Frostwülf trophies.

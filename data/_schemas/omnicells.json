@@ -8,40 +8,6 @@
         "active": {
             "type": "string"
         },
-        "i18n": {
-            "patternProperties": {
-                "^[a-z]{2}$": {
-                    "properties": {
-                        "active": {
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        "name": {
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        },
-                        "passive": {
-                            "type": [
-                                "string",
-                                "null"
-                            ]
-                        }
-                    },
-                    "type": [
-                        "object",
-                        "null"
-                    ]
-                }
-            },
-            "type": [
-                "object",
-                "null"
-            ]
-        },
         "icon": {
             "type": "string"
         },

@@ -4,10 +4,3 @@ part_effect:
   - >-
     Bladed attacks have a chance to cause your next 4 lacerating attacks to deal
     +50% wound damage.
-i18n:
-  fr:
-    name: Lames dentelées
-    part_effect:
-      - >-
-        Les attaques tranchantes ont une chance de conférer à vos 4 prochaines
-        attaques lacérantes +50% de dégâts mutilants.

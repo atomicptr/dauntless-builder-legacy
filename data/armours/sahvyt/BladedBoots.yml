@@ -15,7 +15,3 @@ perks:
   - name: Assassin's Frenzy
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Bottes tranchantes
-    description: Protection pour les jambes forgée à partir Sahvyt.

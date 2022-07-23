@@ -15,7 +15,3 @@ perks:
   - name: Invigorated
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Capuchon sorceliée
-    description: Protection pour la tête forgée à partir de Alyra.

@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Tough: 3
-i18n:
-  fr:
-    name: Robustesse
-    variants:
-      - Robustesse +1
-      - Robustesse +2
-      - Robustesse +3

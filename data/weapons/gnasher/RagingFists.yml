@@ -28,16 +28,3 @@ unique_effects:
       Periodically enter a rage, dealing +15% damage and gaining immunity to
       stagger. Taking damage causes you to enrage more quickly.
     powerSurged: true
-i18n:
-  fr:
-    name: Poings enragés
-    description: Cestes aethériques forgée à partir de trophées de Gnasher.
-    unique_effects:
-      - description: >-
-          Entrez périodiquement en rage, infligeant +5% de dégâts et gagnez une
-          immunité aux étourdissements. Subir des dégâts vous permet de vous
-          enrager plus rapidement.
-      - description: >-
-          Entrez périodiquement en rage, infligeant +15% de dégâts et gagnez une
-          immunité aux étourdissements. Subir des dégâts vous permet de vous
-          enrager plus rapidement.

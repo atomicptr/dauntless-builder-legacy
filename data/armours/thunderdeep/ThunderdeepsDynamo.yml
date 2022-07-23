@@ -15,7 +15,3 @@ perks:
   - name: Aetheric Evasion
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Dynamo de Sombre-orage
-    description: Torso protection forged from Thunderdeep Drask trophies.

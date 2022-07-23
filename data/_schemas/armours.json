@@ -14,41 +14,6 @@
         "hidden": {
             "type": "boolean"
         },
-        "i18n": {
-            "patternProperties": {
-                "^[a-z]{2}$": {
-                    "properties": {
-                        "description": {
-                            "type": "string"
-                        },
-                        "name": {
-                            "type": "string"
-                        },
-                        "unique_effects": {
-                            "items": [
-                                {
-                                    "properties": {
-                                        "description": {
-                                            "type": "string"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            ],
-                            "type": "array"
-                        }
-                    },
-                    "type": [
-                        "object",
-                        "null"
-                    ]
-                }
-            },
-            "type": [
-                "object",
-                "null"
-            ]
-        },
         "icon": {
             "type": "string"
         },

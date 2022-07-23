@@ -14,32 +14,3 @@ effects:
     description: Using your Flask also heals all other Slayers for 225
   '6':
     description: Using your Flask also heals all other Slayers for 270
-i18n:
-  fr:
-    name: Guérisseur
-    description: L'utilisation de votre flasque restaure la santé des autres Slayers.
-    effects:
-      '1':
-        description: >-
-          L'utilisation de votre flasque soigne également tous les autres
-          Slayers de 45
-      '2':
-        description: >-
-          L'utilisation de votre flasque soigne également tous les autres
-          Slayers de 90
-      '3':
-        description: >-
-          L'utilisation de votre flasque soigne également tous les autres
-          Slayers de 135
-      '4':
-        description: >-
-          L'utilisation de votre flasque soigne également tous les autres
-          Slayers de 180
-      '5':
-        description: >-
-          L'utilisation de votre flasque soigne également tous les autres
-          Slayers de 225
-      '6':
-        description: >-
-          L'utilisation de votre flasque soigne également tous les autres
-          Slayers de 270

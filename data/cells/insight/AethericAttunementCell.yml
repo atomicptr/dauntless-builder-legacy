@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Aetheric Attunement: 3
-i18n:
-  fr:
-    name: Harmonisation aethérée
-    variants:
-      - Harmonisation aethérée +1
-      - Harmonisation aethérée +2
-      - Harmonisation aethérée +3

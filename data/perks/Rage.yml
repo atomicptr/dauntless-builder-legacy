@@ -26,32 +26,3 @@ effects:
     description: >-
       Once every 15 seconds, when you take damage, deal +20% increased damage
       for 15 seconds.
-i18n:
-  fr:
-    name: Rage
-    description: Lorsque vous subissez des dégâts, infligez +20 % de dégâts en plus
-    effects:
-      '1':
-        description: >-
-          Toutes les 50 secondes, lorsque vous subissez des dégâts, infligez +20
-          % de dégâts en plus pendant 15 secondes.
-      '2':
-        description: >-
-          Toutes les 40 secondes, lorsque vous subissez des dégâts, infligez +20
-          % de dégâts en plus pendant 15 secondes.
-      '3':
-        description: >-
-          Toutes les 30 secondes, lorsque vous subissez des dégâts, infligez +20
-          % de dégâts en plus pendant 15 secondes.
-      '4':
-        description: >-
-          Toutes les 25 secondes, lorsque vous subissez des dégâts, infligez +20
-          % de dégâts en plus pendant 15 secondes.
-      '5':
-        description: >-
-          Toutes les 20 secondes, lorsque vous subissez des dégâts, infligez +20
-          % de dégâts en plus pendant 15 secondes.
-      '6':
-        description: >-
-          Toutes les 15 secondes, lorsque vous subissez des dégâts, infligez +20
-          % de dégâts en plus pendant 15 secondes.

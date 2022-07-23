@@ -24,14 +24,3 @@ unique_effects:
   - name: BlazeDamageOnNthHit
     description: The eighth hit in a row deals +225 damage and major blaze damage
     powerSurged: true
-i18n:
-  fr:
-    name: Griffes du Sixième Cercle
-    description: Une épée forgée à partir de trophées d'Hellion.
-    unique_effects:
-      - description: >-
-          Le huitième coup consécutif inflige +150 dégâts et de lourds dégâts de
-          braise
-      - description: >-
-          Le huitième coup consécutif inflige +225 dégâts et de lourds dégâts de
-          braise

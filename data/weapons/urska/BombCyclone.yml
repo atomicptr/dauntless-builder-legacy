@@ -20,13 +20,3 @@ unique_effects:
       for 6 seconds. Damages and chills
 
       Behemoths that contact it (can interrupt).
-i18n:
-  fr:
-    name: Cyclone explosif
-    description: Un marteau forgé à partir de trophées de Urska
-    unique_effects:
-      - description: >-
-          Capacité légendaire : Créer un bouclier de givre qui bloque les
-          projectiles hostile pendant 6 secondes. Blesse et gèle les Behemoths
-          qui le touchent (peut interrompre). Se réinitialise à la mort du
-          Behemoth ou au bout de 3,5 minutes.

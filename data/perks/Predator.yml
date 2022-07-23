@@ -26,34 +26,3 @@ effects:
     description: >-
       Deal 35% increased damage after not getting hit for 15 seconds. Bonus
       removed when hit.
-i18n:
-  fr:
-    name: Prédateur
-    description: >-
-      Augmente les dégâts infligés après ne pas avoir été touché pendant une
-      courte période.
-    effects:
-      '1':
-        description: >-
-          Infligez 4% de dégâts supplémentaires après ne pas avoir été touché
-          pendant 15 secondes. Ce bonus est perdu après avoir été touché.
-      '2':
-        description: >-
-          Infligez 8% de dégâts supplémentaires après ne pas avoir été touché
-          pendant 15 secondes. Ce bonus est perdu après avoir été touché.
-      '3':
-        description: >-
-          Infligez 14% de dégâts supplémentaires après ne pas avoir été touché
-          pendant 15 secondes. Ce bonus est perdu après avoir été touché.
-      '4':
-        description: >-
-          Infligez 20% de dégâts supplémentaires après ne pas avoir été touché
-          pendant 15 secondes. Ce bonus est perdu après avoir été touché.
-      '5':
-        description: >-
-          Infligez 27% de dégâts supplémentaires après ne pas avoir été touché
-          pendant 15 secondes. Ce bonus est perdu après avoir été touché.
-      '6':
-        description: >-
-          Infligez 35% de dégâts supplémentaires après ne pas avoir été touché
-          pendant 15 secondes. Ce bonus est perdu après avoir été touché.

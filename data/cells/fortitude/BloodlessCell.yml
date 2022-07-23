@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Bloodless: 3
-i18n:
-  fr:
-    name: Coagulante
-    variants:
-      - Coagulante +1
-      - Coagulante +2
-      - Coagulante +3

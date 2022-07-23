@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Fortress: 3
-i18n:
-  fr:
-    name: Forteresse +3
-    variants:
-      - Forteresse +1
-      - Forteresse +2
-      - Forteresse +3

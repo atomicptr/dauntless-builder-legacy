@@ -2,10 +2,3 @@ name: Lucky Magazine
 icon: /assets/icons/parts/repeaters/mods/LuckyMagazine.png
 part_effect:
   - Grants 2% critical strike chance for each round missing from the magazine.
-i18n:
-  fr:
-    name: Chargeur chanceux
-    part_effect:
-      - >-
-        Donne 2% de chance de coup critique pour chaque munition manquante dans
-        le chargeur.

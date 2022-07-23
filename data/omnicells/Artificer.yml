@@ -13,21 +13,3 @@ active: >
   Aura for 15s (once every 90s).{{NL}} <b>Artificer Aura:</b> Restore 10
   health/second. At full health, grants 10 Shields/second that last for 25s
   (maximum 400 Shields){{NL}} <b>Cooldown:</b> 20s
-i18n:
-  fr:
-    name: Artificer
-    passive: >
-      Les soins et les boucliers que vous donnez sont augmentés de 1 par tranche
-      de 150 points de santé que vous donnez.
-    active: >
-      <b>Commande:</b> Votre drone agit en fonction de la cible.{{NL}}{{NL}}
-      <b>1. Slayer:</b> Supprime les effets d'état négatifs et accorde l'Aura de
-      l'Artificier pendant 15s.{{NL}}{{NL}} <b>2. Sol:</b> Créez un mur qui
-      bloque les projectiles hostiles et accorde l'Aura de l'Artificier aux
-      Slayers proches pendant 15s.{{NL}}{{NL}} <b>3. Behemoth:</b> Marquez le
-      membre d’un Behemoth qui subira alors +15 % de dégâts pendant 15
-      secondes.{{NL}}{{NL}} <b>4. Slayer à terre:</b> Ranimez un Slayer et
-      conférez-lui l’aura Artificier pendant 15 secondes (une fois tous les
-      90).{{NL}}{{NL}} <b>Aura Artificier:</b> Redonne 10 points de vie par
-      seconde. A pleine santé, accorde 10 boucliers/seconde qui durent 25s
-      (maximum 400 boucliers).{{NL}}{{NL}} <b>Cooldown:</b> 20s

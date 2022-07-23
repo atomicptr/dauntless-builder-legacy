@@ -5,9 +5,3 @@ cells: null
 lantern_ability:
   instant: null
   hold: Grants a 300 hit point shield that lasts 15 seconds.
-i18n:
-  fr:
-    name: Lanterne de recrue
-    lantern_ability:
-      instant: null
-      hold: Accorde un bouclier de 300 points de vie qui dure 15 secondes.

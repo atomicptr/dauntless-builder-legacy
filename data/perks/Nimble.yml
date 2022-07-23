@@ -14,20 +14,3 @@ effects:
     description: Gain 30 Stamina after dodging through an attack
   '6':
     description: Gain 35 Stamina after dodging through an attack
-i18n:
-  fr:
-    name: Évasion légère
-    description: Restaure de l'endurance après une esquive parfaite.
-    effects:
-      '1':
-        description: Après avoir esquivé une attaque, gagnez +10 endurance
-      '2':
-        description: Après avoir esquivé une attaque, gagnez +15 endurance
-      '3':
-        description: Après avoir esquivé une attaque, gagnez +20 endurance
-      '4':
-        description: Après avoir esquivé une attaque, gagnez +25 endurance
-      '5':
-        description: Après avoir esquivé une attaque, gagnez +30 endurance
-      '6':
-        description: Après avoir esquivé une attaque, gagnez +35 endurance

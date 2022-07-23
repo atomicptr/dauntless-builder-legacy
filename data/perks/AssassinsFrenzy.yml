@@ -28,34 +28,3 @@ effects:
     description: >-
       Each time you break or assist in breaking a part, gain +15% attack speed
       for 40 seconds.
-i18n:
-  fr:
-    name: Frénésie d'assassin
-    description: >-
-      Chaque fois que vous cassez ou aidez à casser une pièce, gagnez +15% de
-      vitesse d'attaque pendant x secondes.
-    effects:
-      '1':
-        description: >-
-          Chaque fois que vous cassez ou aidez à casser une pièce, gagnez +15%
-          de vitesse d'attaque pendant 10 secondes.
-      '2':
-        description: >-
-          Chaque fois que vous cassez ou aidez à casser une pièce, gagnez +15%
-          de vitesse d'attaque pendant 15 secondes.
-      '3':
-        description: >-
-          Chaque fois que vous cassez ou aidez à casser une pièce, gagnez +15%
-          de vitesse d'attaque pendant 20 secondes.
-      '4':
-        description: >-
-          Chaque fois que vous cassez ou aidez à casser une pièce, gagnez +15%
-          de vitesse d'attaque pendant 30 secondes.
-      '5':
-        description: >-
-          Chaque fois que vous cassez ou aidez à casser une pièce, gagnez +15%
-          de vitesse d'attaque pendant 35 secondes.
-      '6':
-        description: >-
-          Chaque fois que vous cassez ou aidez à casser une pièce, gagnez +15%
-          de vitesse d'attaque pendant 40 secondes.

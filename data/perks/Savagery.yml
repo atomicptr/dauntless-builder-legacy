@@ -14,20 +14,3 @@ effects:
     description: +80% Damage vs Wounded Parts
   '6':
     description: +100% Damage vs Wounded Parts
-i18n:
-  fr:
-    name: Sauvagerie
-    description: Augmente les dégâts contre les membres mutilés.
-    effects:
-      '1':
-        description: +20% de dégâts contre les membres mutilés
-      '2':
-        description: +30% de dégâts contre les membres mutilés
-      '3':
-        description: +40% de dégâts contre les membres mutilés
-      '4':
-        description: +60% de dégâts contre les membres mutilés
-      '5':
-        description: +80% de dégâts contre les membres mutilés
-      '6':
-        description: +100% de dégâts contre les membres mutilés

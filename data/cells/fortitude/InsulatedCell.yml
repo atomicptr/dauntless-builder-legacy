@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Insulated: 3
-i18n:
-  fr:
-    name: Isolante
-    variants:
-      - Isolante +1
-      - Isolante +2
-      - Isolante +3

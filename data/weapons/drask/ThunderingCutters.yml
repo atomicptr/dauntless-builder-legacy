@@ -24,10 +24,3 @@ unique_effects:
   - name: TailDamage
     description: 30% damage vs Behemoth Tails
     powerSurged: true
-i18n:
-  fr:
-    name: Trancheurs tonnants
-    description: Une paire de chaînes-lames forgée à partir de Drask.
-    unique_effects:
-      - description: 20% de dégâts contre la queue des Behemoths
-      - description: 30% de dégâts contre la queue des Behemoths

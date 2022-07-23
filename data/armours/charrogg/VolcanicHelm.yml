@@ -15,7 +15,3 @@ perks:
   - name: Sturdy
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Galea volcanique
-    description: Protection pour la tête forgée à partir de Charrogg.

@@ -24,10 +24,3 @@ unique_effects:
   - name: HitTwice
     description: 12% chance for attacks to hit twice.
     powerSurged: true
-i18n:
-  fr:
-    name: Tranch'aube
-    description: Une hache forgée à partir de Rezakiri.
-    unique_effects:
-      - description: +8% de chance de frapper deux fois.
-      - description: 12% de chance de frapper deux fois.

@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Aetheric Evasion: 3
-i18n:
-  fr:
-    name: Esquive aethérée
-    variants:
-      - Esquive aethérée +1
-      - Esquive aethérée +2
-      - Esquive aethérée +3

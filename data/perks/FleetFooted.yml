@@ -14,32 +14,3 @@ effects:
     description: After dodging, gain +30% moviment speed for 10 seconds
   '6':
     description: After dodging, gain +35% moviment speed for 10 seconds
-i18n:
-  fr:
-    name: Sprint évasif
-    description: Augmente temporairement la vitesse de déplacement après une esquive.
-    effects:
-      '1':
-        description: >-
-          Après avoir esquivé, gagnez +10% de vitesse de déplacement pendant 10
-          secondes
-      '2':
-        description: >-
-          Après avoir esquivé, gagnez +15% de vitesse de déplacement pendant 10
-          secondes
-      '3':
-        description: >-
-          Après avoir esquivé, gagnez +20% de vitesse de déplacement pendant 10
-          secondes
-      '4':
-        description: >-
-          Après avoir esquivé, gagnez +25% de vitesse de déplacement pendant 10
-          secondes
-      '5':
-        description: >-
-          Après avoir esquivé, gagnez +30% de vitesse de déplacement pendant 10
-          secondes
-      '6':
-        description: >-
-          Après avoir esquivé, gagnez +35% de vitesse de déplacement pendant 10
-          secondes

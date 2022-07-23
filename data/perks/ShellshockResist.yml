@@ -14,20 +14,3 @@ effects:
     description: Reduces Shell Shocked explosion damage and status effect duration by 80%
   '6':
     description: Immune to Shell Shocked explosion damage and status effect
-i18n:
-  fr:
-    name: Résilience
-    description: Protège contre les explosions et l'effet de statut « Concussion ».
-    effects:
-      '1':
-        description: Réduit les dégâts des concussions et leur durée de 10%
-      '2':
-        description: Réduit les dégâts des concussions et leur durée de 20%
-      '3':
-        description: Réduit les dégâts des concussions et leur durée de 40%
-      '4':
-        description: Réduit les dégâts des concussions et leur durée de 60%
-      '5':
-        description: Réduit les dégâts des concussions et leur durée de 80%
-      '6':
-        description: Immunité aux dégâts d'explosion et à l'effet de statut « Concussion »

@@ -14,20 +14,3 @@ effects:
     description: '-55% Dodge Roll Stamina Cost'
   '6':
     description: '-70% Dodge Roll Stamina Cost'
-i18n:
-  fr:
-    name: Agilité
-    description: Réduit le coût en endurance des esquives.
-    effects:
-      '1':
-        description: '-10% au coût d''endurance des esquives'
-      '2':
-        description: '-20% au coût d''endurance des esquives'
-      '3':
-        description: '-30% au coût d''endurance des esquives'
-      '4':
-        description: '-40% au coût d''endurance des esquives'
-      '5':
-        description: '-55% au coût d''endurance des esquives'
-      '6':
-        description: '-70% au coût d''endurance des esquives'

@@ -15,7 +15,3 @@ perks:
   - name: Medic
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Oeil électrifié
-    description: Protection pour la tête forgée à partir de Nayzaga.

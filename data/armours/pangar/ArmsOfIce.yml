@@ -15,7 +15,3 @@ perks:
   - name: Knockout King
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Étreinte gelée
-    description: Protection pour les bras forgée à partir de Pangar.

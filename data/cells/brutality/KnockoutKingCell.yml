@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Knockout King: 3
-i18n:
-  fr:
-    name: Assommoir
-    variants:
-      - Assommoir +1
-      - Assommoir +2
-      - Assommoir +3

@@ -24,14 +24,3 @@ unique_effects:
   - name: DodgePartDamage
     description: After dodging, your next attack deals +100 bonus damage and part damage
     powerSurged: true
-i18n:
-  fr:
-    name: Chute du Shrike
-    description: Un marteau forgé à partir de trophées de Shrike.
-    unique_effects:
-      - description: >-
-          Après avoir esquivé, votre prochaine attaque inflige +50 dégâts de
-          bases et dégâts aux membres
-      - description: >-
-          Après avoir esquivé, votre prochaine attaque inflige +100 dégâts de
-          bases et dégâts aux membres

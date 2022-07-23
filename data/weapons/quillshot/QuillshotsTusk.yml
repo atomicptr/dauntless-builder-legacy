@@ -17,7 +17,3 @@ perks:
   - name: Acidic
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Défense de Quillshot
-    description: Une épée forgée à partir de Quillshot.

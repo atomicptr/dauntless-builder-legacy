@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Bladestorm: 3
-i18n:
-  fr:
-    name: Tempête de lames
-    variants:
-      - Tempête de lames +1
-      - Tempête de lames +2
-      - Tempête de lames +3

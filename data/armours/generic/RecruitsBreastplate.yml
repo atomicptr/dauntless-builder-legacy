@@ -7,7 +7,3 @@ weakness: null
 cells: null
 resistance:
   base: 20
-i18n:
-  fr:
-    name: Plastron de recrue
-    description: Protection pour le torse de Slayer novice.

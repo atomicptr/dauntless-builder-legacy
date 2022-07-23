@@ -28,16 +28,3 @@ unique_effects:
       After not dealing damage for 4 seconds, your next 6 attacks deal +50%
       damage
     powerSurged: true
-i18n:
-  fr:
-    name: Fouet du souverain
-    description: >-
-      Après 6 secondes sans infliger de dégât, les 5 prochaines attaques
-      infligeront + 25% de dégâts.
-    unique_effects:
-      - description: >-
-          Après 4 secondes sans infliger de dégât, vos 5 prochaines attaques
-          infligent +50% de dégâts.
-      - description: >-
-          Après 4 secondes sans infliger de dégât, vos 6 prochaines attaques
-          infligent +50% de dégâts.

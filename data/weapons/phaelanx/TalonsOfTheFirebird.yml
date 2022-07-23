@@ -40,22 +40,3 @@ unique_effects:
       Dodging fires all loaded missiles on the locked-on part. 45 second
       cooldown.
     powerSurged: true
-i18n:
-  fr:
-    name: Les serres de l'oiseau de feu
-    description: A Slayer's chain blades forged with Phaelanx trophies.
-    unique_effects:
-      - description: >-
-          Attaquez une partie du Béhémoth verrouille et charger un missile à
-          tête chercheuse. Le missile inflige 100 de dégâts et augmente les
-          dégâts de tous les autres missiles de la volée de 100, infliger des
-          dégâts pour charger jusqu'à un maximum de 3 missiles supplémentaires.
-          L'esquive tire tous les missiles chargés sur la partie verrouillée.
-          Temps de recharge de 45 secondes.
-      - description: >-
-          Attaquez une partie du Béhémoth verrouille et charger un missile à
-          tête chercheuse. Le missile inflige 175 de dégâts et augmente les
-          dégâts de tous les autres missiles de la volée de 175, infliger des
-          dégâts pour charger jusqu'à un maximum de 3 missiles supplémentaires.
-          L'esquive tire tous les missiles chargés sur la partie verrouillée.
-          Temps de recharge de 45 secondes.

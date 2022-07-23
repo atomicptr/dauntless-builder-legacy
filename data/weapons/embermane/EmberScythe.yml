@@ -24,10 +24,3 @@ unique_effects:
   - name: FourthHitBonusDamage
     description: The third hit in quick succession deals +250 bonus part damage.
     powerSurged: true
-i18n:
-  fr:
-    name: Faux Embermane
-    description: Une hache forgée à partir de trophées d'Embermane.
-    unique_effects:
-      - description: Le troisièle coup consécutif inflige +100 dégâts aux membres.
-      - description: Le troisièle coup consécutif inflige +250 dégâts aux membres.

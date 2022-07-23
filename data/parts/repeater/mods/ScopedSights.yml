@@ -2,8 +2,3 @@ name: Scoped Sights
 icon: /assets/icons/parts/repeaters/mods/ScopedSights.png
 part_effect:
   - Increases damage falloff range by 25%
-i18n:
-  fr:
-    name: Visées à longue portée
-    part_effect:
-      - Augmente la portée optimale de 25%.

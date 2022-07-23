@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Catalyst: 3
-i18n:
-  fr:
-    name: Catalyse
-    variants:
-      - Catalyse +1
-      - Catalyse +2
-      - Catalyse +3

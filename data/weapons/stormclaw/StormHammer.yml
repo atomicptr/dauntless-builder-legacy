@@ -24,10 +24,3 @@ unique_effects:
   - name: DodgeReload
     description: After dodging through an attack, reload 3 aethercharged ammo
     powerSurged: true
-i18n:
-  fr:
-    name: Marteau tempête
-    description: Un marteau forgé à partir de trophées de Stormclaw.
-    unique_effects:
-      - description: Après avoir esquivé une attaque, rechargez 2 munition aethérochargée
-      - description: Après avoir esquivé une attaque, rechargez 3 munitions aethérochargées

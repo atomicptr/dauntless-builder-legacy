@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Vampiric: 3
-i18n:
-  fr:
-    name: Vampirique
-    variants:
-      - Vampirique +1
-      - Vampirique +2
-      - Vampirique +3

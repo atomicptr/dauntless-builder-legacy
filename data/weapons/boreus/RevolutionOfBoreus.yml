@@ -30,16 +30,3 @@ unique_effects:
       that grant your next attack +60 damage and minor frost damage (Max 4
       Sprites)
     powerSurged: true
-i18n:
-  fr:
-    name: Révolte de Boreus
-    description: Une aetherolance forgée à partir de Boreus.
-    unique_effects:
-      - description: >-
-          Emmagasiner ou utiliser des munitions génère continuellement des
-          farfroidets pendant 6 secondes qui ajoutent +30 dégâts chacun à votre
-          prochaine attaque et de légers dégâts de givre (4 farfroidets maximum)
-      - description: >-
-          Emmagasiner ou utiliser des munitions génère continuellement des
-          farfroidets pendant 6 secondes qui ajoutent +60 dégâts chacun à votre
-          prochaine attaque et de légers dégâts de givre (4 farfroidets maximum)

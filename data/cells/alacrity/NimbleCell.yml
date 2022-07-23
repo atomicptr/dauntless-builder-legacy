@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Nimble: 3
-i18n:
-  fr:
-    name: Évasion légère
-    variants:
-      - Évasion légère +1
-      - Évasion légère +2
-      - Évasion légère +3

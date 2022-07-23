@@ -20,11 +20,3 @@ perks:
 unique_effects:
   - name: LowHpDamage
     description: When under 20% health, deal +50% damage
-i18n:
-  fr:
-    name: Orée nocturne
-    description: Une épée forgée à partir de Shrowd.
-    unique_effects:
-      - description: >-
-          Infligez 50% de dégâts supplémentaires lorsque vous avez moins de 20%
-          de vie

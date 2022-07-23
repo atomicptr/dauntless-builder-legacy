@@ -15,7 +15,3 @@ perks:
   - name: Evasive Fury
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Plastron ardent
-    description: Protection pour le torse forgée à partir de d'Embermane.

@@ -6,11 +6,3 @@ part_effect:
     Launches a collectible buff a short distance, granting 15% increased attack
     speed for 15 seconds when collected.
   - 'Empowered: Grants the same buff to all Slayers.'
-i18n:
-  fr:
-    name: Poignée du capitaine
-    part_effect:
-      - >-
-        Lance à courte distance un bonus ramassable qui, une fois récupéré,
-        octroie 20% de vitesse d'attaque supplémentaires durant 15 secondes.
-      - 'Aethérochargé: Donne le même bonus à tous les Slayers.'

@@ -16,30 +16,3 @@ effects:
     description: >-
       While sheathed, increases Movement Speed by 30%, also affects other nearby
       Slayers.
-i18n:
-  fr:
-    name: Sprint
-    description: Augmente votre vitesse de déplacement lorsque votre arme est rengainée.
-    effects:
-      '1':
-        description: Tant que votre arme est rengainée, donne +5% de vitesse de déplacement
-      '2':
-        description: >-
-          Tant que votre arme est rengainée, donne +10% de vitesse de
-          déplacement
-      '3':
-        description: >-
-          Tant que votre arme est rengainée, donne +15% de vitesse de
-          déplacement
-      '4':
-        description: >-
-          Tant que votre arme est rengainée, donne +20% de vitesse de
-          déplacement
-      '5':
-        description: >-
-          Tant que votre arme est rengainée, donne +25% de vitesse de
-          déplacement
-      '6':
-        description: >-
-          Tant que votre arme est rengainée, donne +30% de vitesse de
-          déplacement à tous les Slayers proches

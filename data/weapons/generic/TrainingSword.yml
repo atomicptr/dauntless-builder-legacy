@@ -7,7 +7,3 @@ elemental: null
 cells: null
 power:
   base: 10
-i18n:
-  fr:
-    name: Épée d'entraînement
-    description: Une lame d'entraînement, ternie et abimée.

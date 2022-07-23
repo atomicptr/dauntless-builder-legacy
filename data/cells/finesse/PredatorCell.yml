@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Predator: 3
-i18n:
-  fr:
-    name: Prédateur
-    variants:
-      - Prédateur +1
-      - Prédateur +2
-      - Prédateur +3

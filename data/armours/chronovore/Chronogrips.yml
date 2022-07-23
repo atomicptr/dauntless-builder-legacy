@@ -15,7 +15,3 @@ perks:
   - name: Pulse
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Chronomanchettes
-    description: Protection pour les bras forgée à partir de Chronovore.

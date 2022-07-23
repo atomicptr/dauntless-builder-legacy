@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Endurance: 3
-i18n:
-  fr:
-    name: Endurance
-    variants:
-      - Endurance +1
-      - Endurance +2
-      - Endurance +3

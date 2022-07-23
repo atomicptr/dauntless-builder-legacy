@@ -15,7 +15,3 @@ perks:
   - name: Catalyst
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Jambières de Tisseur du temps
-    description: Protection pour les jambes forgée à partir de Tisseur du temps.

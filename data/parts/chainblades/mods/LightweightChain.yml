@@ -4,10 +4,3 @@ part_effect:
   - >-
     Increase the length of your chains by +25%. Your Chain Pull deals +25%
     damage and generates an additional 20 meter.
-i18n:
-  fr:
-    name: Chaîne légère
-    part_effect:
-      - >-
-        La longueur de vos chaînes augmente de +25%. Votre attraction inflige
-        +25% de dégâts et génère 20 mètres supplémentaires.

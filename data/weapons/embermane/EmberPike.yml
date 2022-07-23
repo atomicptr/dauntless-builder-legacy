@@ -24,14 +24,3 @@ unique_effects:
   - name: SeventhHitWoundDamage
     description: The sixth hit in a row deals +300 wound damage
     powerSurged: true
-i18n:
-  fr:
-    name: Glaive Embermane
-    description: Une aetherolance forgée à partir de trophées d'Embermane
-    unique_effects:
-      - description: >-
-          Le septième coup consécutif inflige +100 de dégâts mutilants
-          supplémentaires
-      - description: >-
-          Le septième coup consécutif inflige +300 de dégâts mutilants
-          supplémentaires

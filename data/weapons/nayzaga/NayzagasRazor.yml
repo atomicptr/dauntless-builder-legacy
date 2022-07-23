@@ -24,10 +24,3 @@ unique_effects:
   - name: WoundedPartsLifesteal
     description: When Behemoth part is broken, heal for 200
     powerSurged: true
-i18n:
-  fr:
-    name: Rasoir de Nayzaga
-    description: Une épée forgée à partir de Nayzaga.
-    unique_effects:
-      - description: Après l'étourdissement d'un Behemoth, vous vous soignez de 100
-      - description: Après l'étourdissement d'un Behemoth, vous vous soignez de 200

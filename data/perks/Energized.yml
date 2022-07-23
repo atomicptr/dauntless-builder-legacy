@@ -14,20 +14,3 @@ effects:
     description: +30% Weapon Charge rate
   '6':
     description: +40% Weapon Charge rate
-i18n:
-  fr:
-    name: Charge
-    description: Augmente la vitesse de charge de la jauge de l'arme.
-    effects:
-      '1':
-        description: +10% de vitesse de charge de la jauge de l'arme.
-      '2':
-        description: +15% de vitesse de charge de la jauge de l'arme.
-      '3':
-        description: +20% de vitesse de charge de la jauge de l'arme.
-      '4':
-        description: +25% de vitesse de charge de la jauge de l'arme.
-      '5':
-        description: +30% de vitesse de charge de la jauge de l'arme.
-      '6':
-        description: +40% de vitesse de charge de la jauge de l'arme.

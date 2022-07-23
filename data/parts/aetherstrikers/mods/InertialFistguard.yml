@@ -4,10 +4,3 @@ part_effect:
   - >-
     Surge deals +25% damage. After surging, gain +5% movespeed for 8 seconds.
     Stacks up to 3 times.
-i18n:
-  fr:
-    name: Garde inertielle
-    part_effect:
-      - >-
-        Afflux inflige +25% de dégâts. Après un afflux, gagnez +5% de vitesse de
-        déplacement pendant 8 secondes. Se cumule jusqu'à 3 fois.

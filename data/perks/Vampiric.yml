@@ -14,20 +14,3 @@ effects:
     description: Heal for 150 whenever a Behemoth is Wounded
   '6':
     description: Heal for 200 whenever a Behemoth is Wounded
-i18n:
-  fr:
-    name: Vampirique
-    description: Restaure de la vie lorsqu'une partie de Behemoth est mutilée.
-    effects:
-      '1':
-        description: Après avoir blessé un Behemoth, vous vous soignez de 50
-      '2':
-        description: Après avoir blessé un Behemoth, vous vous soignez de 75
-      '3':
-        description: Après avoir blessé un Behemoth, vous vous soignez de 100
-      '4':
-        description: Après avoir blessé un Behemoth, vous vous soignez de 125
-      '5':
-        description: Après avoir blessé un Behemoth, vous vous soignez de 150
-      '6':
-        description: Après avoir blessé un Behemoth, vous vous soignez de 200

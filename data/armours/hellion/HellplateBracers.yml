@@ -15,7 +15,3 @@ perks:
   - name: Molten
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Brassards infernaux
-    description: Protection pour les bras forgée à partir de d'Hellion.

@@ -28,14 +28,3 @@ unique_effects:
       After spending 50 stamina, next attack emits a cone of flame that deals
       +200 blaze damage to each unique target within the cone
     powerSurged: true
-i18n:
-  fr:
-    name: Pistolets charrbonisés
-    description: Un repeaters forgée à partir de Charrogg.
-    unique_effects:
-      - description: >-
-          Après avoir dépensé 50 d'endurance, la prochaine attaque émet un cône
-          de flammes qui inflige +100 de dégâts à chaque cible dans le cône.
-      - description: >-
-          Après avoir dépensé 50 d'endurance, la prochaine attaque émet un cône
-          de flammes qui inflige +200 de dégâts à chaque cible dans le cône.

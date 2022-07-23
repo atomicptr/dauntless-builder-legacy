@@ -15,7 +15,3 @@ perks:
   - name: Conditioning
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Épiphanie boréale
-    description: Protection pour la tête forgée à partir de Boreus.

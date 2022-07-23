@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Evasion: 3
-i18n:
-  fr:
-    name: Évasion améliorée
-    variants:
-      - Évasion améliorée +1
-      - Évasion améliorée +2
-      - Évasion améliorée +3

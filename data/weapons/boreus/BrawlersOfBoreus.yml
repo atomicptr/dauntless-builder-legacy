@@ -32,16 +32,3 @@ unique_effects:
     values:
       frostSpriteDamage: 60
     powerSurged: true
-i18n:
-  fr:
-    name: Castagneurs du Boreus
-    description: Cestes aethériques forgée à partir de trophés de Boreus.
-    unique_effects:
-      - description: >-
-          Après un afflux, génère des farfroidets pendant 6 secondes qui
-          ajoutent {{frostSpriteDamage}} de dégâts à votre prochaine attaque et de légers dégâts de
-          givre (4 farfroidets maximum)
-      - description: >-
-          Après un afflux, génère des farfroidets pendant 6 secondes qui
-          ajoutent {{frostSpriteDamage}} de dégâts à votre prochaine attaque et de légers dégâts de
-          givre (4 farfroidets maximum)

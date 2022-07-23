@@ -7,12 +7,3 @@ lantern_ability:
   hold: >-
     Dash in a direction, deal 2250 Terra damage to nearby enemies upon arrival,
     and gain 15% lifesteal for 10 seconds.
-i18n:
-  fr:
-    name: Floraison du Koshai
-    lantern_ability:
-      instant: null
-      hold: >-
-        Vous projette dans une direction infligeant 2250 de dégâts telluriques
-        aux ennemis proches du point d'arrivée et couférant 15% de vol de vie
-        pendant 10 secondes.
