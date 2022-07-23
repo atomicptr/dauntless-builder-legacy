@@ -1,5 +1,5 @@
 name: Cunning
-description: Grants a chance to deal double damage.
+description: Grants a chance to critically strike, increasing damage dealt.
 type: Finesse
 effects:
   '1':
