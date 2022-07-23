@@ -1,0 +1,8 @@
+{
+    "item.cells.acidic-cell.name": "アシッド",
+    "item.cells.acidic-cell.variants.0": "アシッド+1",
+    "item.cells.acidic-cell.variants.1": "アシッド+2",
+    "item.cells.acidic-cell.variants.2": "アシッド+3",
+    "item.perks.acidic.name": "アシッド",
+    "item.perks.engineer.name": "エンジニア"
+}
