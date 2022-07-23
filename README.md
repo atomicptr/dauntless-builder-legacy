@@ -10,6 +10,10 @@ Create and share Dauntless builds with your friends!
 -   [Data Deprecations](docs/DEPRECATIONS.md) - Things that have been or will be removed from the public facing data "api"
 -   [Localization Documentation](docs/LOCALIZATION.md) - How the translation system works, how to contribute translations etc.
 
+## Localization
+
+We're using Crowdin for managing localizations: https://crowdin.com/project/dauntless-builder
+
 ## Development Setup
 
 Requirements:
