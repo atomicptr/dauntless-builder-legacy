@@ -6,4 +6,3 @@ script:
     - yarn build:frontend
     - tsc
     - yarn test
-    - yarn check:missing-translations || true

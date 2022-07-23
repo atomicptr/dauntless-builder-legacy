@@ -15,12 +15,12 @@
         "build:metabuilds": "node scripts/build-meta-builds.js",
         "build:sitemap": "ts-node scripts/build-sitemap.ts",
         "build:frontend": "vite build",
+        "crowdin": "ts-node scripts/crowdin.ts",
         "dev": "vite dev",
         "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
         "deploy": "yarn build && ./scripts/deploy.sh",
         "lint": "jsonsort -i 4 -c src/translations/*.json .eslintrc tsconfig.json data/_schemas/**.json && eslint .",
-        "lint:fix": "prettier . --write && jsonsort -i 4 src/translations/*.json .eslintrc tsconfig.json data/_schemas/**.json && eslint . --fix",
-        "check:missing-translations": "node ./scripts/check-missing-translations.js"
+        "lint:fix": "prettier . --write && jsonsort -i 4 src/translations/*.json .eslintrc tsconfig.json data/_schemas/**.json && eslint . --fix"
     },
     "engines": {
         "node": ">=16.0.0",
@@ -52,6 +52,7 @@
         "ts-pattern": "^4.0.4"
     },
     "devDependencies": {
+        "@crowdin/crowdin-api-client": "^1.19.0",
         "@types/jest": "^28.1.4",
         "@types/md5": "^2.3.2",
         "@types/node": "^18.0.3",
@@ -62,6 +63,7 @@
         "@types/react-redux": "^7.1.24",
         "@types/react-virtualized-auto-sizer": "^1.0.1",
         "@types/react-window": "^1.8.5",
+        "@types/yauzl": "^2.10.0",
         "@typescript-eslint/eslint-plugin": "^5.30.5",
         "@typescript-eslint/parser": "^5.30.5",
         "@vitejs/plugin-react": "^1.3.2",
@@ -85,6 +87,7 @@
         "typescript": "^4.7.4",
         "vite": "^2.9.13",
         "vite-plugin-favicon2": "^1.1.4",
-        "vite-plugin-pwa": "^0.12.2"
+        "vite-plugin-pwa": "^0.12.2",
+        "yauzl": "^2.10.0"
     }
 }
