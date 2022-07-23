@@ -18,23 +18,6 @@
                 "type": "string"
             }
         },
-        "i18n": {
-            "type": ["object", "null"],
-            "patternProperties": {
-                "^[a-z]{2}$": {
-                    "type": ["object", "null"],
-                    "properties": {
-                        "name": {
-                            "type": "string"
-                        },
-                        "part_effect": {
-                            "type": "array",
-                            "items": {"type": ["string", "null"]}
-                        }
-                    }
-                }
-            }
-        },
         "values": {
             "patternProperties": {
                 "^.*$": {

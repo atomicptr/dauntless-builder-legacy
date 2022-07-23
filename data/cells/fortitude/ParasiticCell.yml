@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Parasitic: 3
-i18n:
-  fr:
-    name: Parasite
-    variants:
-      - Parasite +1
-      - Parasite +2
-      - Parasite +3

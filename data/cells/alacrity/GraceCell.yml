@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Grace: 3
-i18n:
-  fr:
-    name: Grâce
-    variants:
-      - Grâce +1
-      - Grâce +2
-      - Grâce +3

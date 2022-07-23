@@ -26,38 +26,3 @@ effects:
     description: >-
       Dealing damage generates three Molten Hearts on a 16 second cooldown,
       granting immunity to burning and increased attack and movement speed.
-i18n:
-  fr:
-    name: Fondue
-    description: Génère des coeurs fondue avec temps de recharge.
-    effects:
-      '1':
-        description: >-
-          Infliger des dégâts génère un cœur fondue avec un temps de recharge de
-          26 secondes qui octroient une immunité au feu et une vitesse d'attaque
-          et de déplacement accrues
-      '2':
-        description: >-
-          Infliger des dégâts génère un cœur fondue avec un temps de recharge de
-          23 secondes qui octroient une immunité au feu et une vitesse d'attaque
-          et de déplacement accrues
-      '3':
-        description: >-
-          Infliger des dégâts génère deux cœurs fondue avec un temps de recharge
-          de 23 secondes qui octroient une immunité au feu et une vitesse
-          d'attaque et de déplacement accrues
-      '4':
-        description: >-
-          Infliger des dégâts génère deux cœurs fondue avec un temps de recharge
-          de 20 secondes qui octroient une immunité au feu et une vitesse
-          d'attaque et de déplacement accrues
-      '5':
-        description: >-
-          Infliger des dégâts génère trois cœurs fondue avec un temps de
-          recharge de 20 secondes qui octroient une immunité au feu et une
-          vitesse d'attaque et de déplacement accrues
-      '6':
-        description: >-
-          Infliger des dégâts génère trois cœurs fondue avec un temps de
-          recharge de 16 secondes qui octroient une immunité au feu et une
-          vitesse d'attaque et de déplacement accrues

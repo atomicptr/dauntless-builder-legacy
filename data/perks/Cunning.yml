@@ -14,20 +14,3 @@ effects:
     description: 7.5% critical strike chance, +20% critical strike damage.
   '6':
     description: 10% critical strike chance, +30% critical strike damage.
-i18n:
-  fr:
-    name: Frappe critique
-    description: Donne une chance de doubler les dégâts infligés.
-    effects:
-      '1':
-        description: +2% de chance de coup critique
-      '2':
-        description: +3% de chance de coup critique
-      '3':
-        description: +4% de chance de coup critique
-      '4':
-        description: +5% de chance de coup critique, +10% de dégâts des coups critiques.
-      '5':
-        description: +7.5% de chance de coup critique, +20% de dégâts des coups critiques.
-      '6':
-        description: +10% de chance de coup critique, +30% de dégâts des coups critiques.

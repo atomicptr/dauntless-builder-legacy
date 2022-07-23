@@ -24,10 +24,3 @@ unique_effects:
   - name: WoundedPartsLifesteal
     description: +5% lifesteal vs wounded parts
     powerSurged: true
-i18n:
-  fr:
-    name: Croc de Nayzaga
-    description: Une aetherolance forgée à partir de Nayzaga.
-    unique_effects:
-      - description: +3% de vol de vie sur les membres mutilés
-      - description: +5% de vol de vie sur les membres mutilés

@@ -15,7 +15,3 @@ perks:
   - name: Overpower
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Versants gelés
-    description: Protection pour les jambes forgée à partir de Pangar.

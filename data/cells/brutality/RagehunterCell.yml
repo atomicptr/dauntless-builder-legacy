@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Ragehunter: 3
-i18n:
-  fr:
-    name: Chasse-rage
-    variants:
-      - Chasse-rage +1
-      - Chasse-rage +2
-      - Chasse-rage +3

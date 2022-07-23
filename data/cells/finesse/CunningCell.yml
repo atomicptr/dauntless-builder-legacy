@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Cunning: 3
-i18n:
-  fr:
-    name: Frappe critique
-    variants:
-      - Frappe critique +1
-      - Frappe critique +2
-      - Frappe critique +3

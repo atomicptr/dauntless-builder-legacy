@@ -1,5 +1,8 @@
 # dauntless-builder
 
+[![Build Status](https://app.travis-ci.com/atomicptr/dauntless-builder.svg?branch=master)](https://app.travis-ci.com/atomicptr/dauntless-builder)
+[![Crowdin](https://badges.crowdin.net/dauntless-builder/localized.svg)](https://crowdin.com/project/dauntless-builder)
+
 Create and share Dauntless builds with your friends!
 
 ![Screenshot of Dauntless Builder](docs/assets/app-screenshot.png)
@@ -9,6 +12,10 @@ Create and share Dauntless builds with your friends!
 -   [Data Documentation](docs/DATA.md) - How data is set up, how to contribute, how to use our data in your application.
 -   [Data Deprecations](docs/DEPRECATIONS.md) - Things that have been or will be removed from the public facing data "api"
 -   [Localization Documentation](docs/LOCALIZATION.md) - How the translation system works, how to contribute translations etc.
+
+## Localization
+
+We're using Crowdin for managing localizations: https://crowdin.com/project/dauntless-builder
 
 ## Development Setup
 

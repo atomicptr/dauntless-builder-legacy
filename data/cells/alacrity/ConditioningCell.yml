@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Conditioning: 3
-i18n:
-  fr:
-    name: Constitution
-    variants:
-      - Constitution +1
-      - Constitution +2
-      - Constitution +3

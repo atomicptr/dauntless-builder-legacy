@@ -9,15 +9,3 @@ active: >
   Leap forward and slam the ground consuming all shields in a blast of energy
   that deals damage to nearby targets equal to 175% the amount of shields
   consumed. 30 second cooldown.
-i18n:
-  fr:
-    name: Bastion
-    passive: >
-      Améliorez tous les boucliers reçus de 15%. Infliger des dégâts donne une
-      chance (basée sur le montant de dégâts) de recevoir un bouclier de santé
-      cumulable de 25 points pendant 25 secondes.(500 boucliers maximum)
-    active: >
-      Faites un saut en avant et frappez le sol. Tous les boucliers sont
-      consumés pour produire une explosion d'énergie qui inflige des dégâts aux
-      cibles proche équivalant à 175% du nombre de boucliers consumés. 30
-      secondes de rechargement.

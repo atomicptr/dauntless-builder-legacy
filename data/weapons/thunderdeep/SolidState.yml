@@ -24,10 +24,3 @@ unique_effects:
   - name: HeadDamage
     description: 30% damage vs Behemoth Heads
     powerSurged: true
-i18n:
-  fr:
-    name: Etat solide
-    description: A Slayer's hammer forged with Thunderdeep Drask trophies.
-    unique_effects:
-      - description: 20% dégats contre les têtes de béhémoth
-      - description: 30% dégats contre les têtes de béhémoth

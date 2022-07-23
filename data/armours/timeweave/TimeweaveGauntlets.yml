@@ -15,7 +15,3 @@ perks:
   - name: Overpower
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Gantelets de Tisseur du temps
-    description: Protection pour les bras forgée à partir de Tisseur du temps.

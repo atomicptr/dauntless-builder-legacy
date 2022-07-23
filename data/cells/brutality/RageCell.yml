@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Rage: 3
-i18n:
-  fr:
-    name: Rage
-    variants:
-      - Rage +1
-      - Rage +2
-      - Rage +3

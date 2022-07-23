@@ -7,7 +7,3 @@ elemental: null
 cells: null
 power:
   base: 10
-i18n:
-  fr:
-    name: Cestes de recrue
-    description: Une simple paire de cestes aetheriques pour abattre des Behemoths.

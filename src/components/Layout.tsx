@@ -33,7 +33,7 @@ import {
 import BuildMenu from "@src/components/BuildMenu";
 import DevMenu from "@src/components/DevMenu";
 import { drawerWidth } from "@src/components/theme";
-import { discordServerUrl, githubUrl, issuesUrl, matrixChannelUrl, translationDocumentationUrl } from "@src/constants";
+import { crowdinLink, discordServerUrl, githubUrl, issuesUrl, matrixChannelUrl } from "@src/constants";
 import dauntlessBuilderData from "@src/data/Data";
 import { selectConfiguration } from "@src/features/configuration/configuration-slice";
 import { selectFavorites } from "@src/features/favorites/favorites-slice";
@@ -254,8 +254,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         <div
                             dangerouslySetInnerHTML={{
                                 __html: t("alert.translation-warning", {
+                                    crowdinLink,
                                     languageName: getNativeLanguageName(currentLanguage() as Language),
-                                    translationDocumentationUrl,
                                 }),
                             }}
                         />

@@ -24,10 +24,3 @@ unique_effects:
   - name: SixthHitBonusDamagePercent
     description: The sixth hit in a row deals +250% part damage.
     powerSurged: true
-i18n:
-  fr:
-    name: Tirs ardents
-    description: Un repeaters forgée à partir de Embermane.
-    unique_effects:
-      - description: Le sixième coup consécutif inflige +100% de dégâts aux membres
-      - description: Le sixième coup consécutif inflige +250% de dégâts aux membres

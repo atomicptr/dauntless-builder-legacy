@@ -4,11 +4,3 @@ part_effect:
   - >-
     Deal +50% damage to minions, fauna and objects created by Behemoths. On
     killing a minion, fauna, or object, gain 1 momentum.
-i18n:
-  fr:
-    name: Lames de démolition
-    part_effect:
-      - >-
-        Infligez +50% de dégâts aux sbires, à la faune et aux objets créés par
-        les Behemoths. Lorsque vous tuez un sbire, une faune ou un objet, vous
-        gagnez 1 inertie.

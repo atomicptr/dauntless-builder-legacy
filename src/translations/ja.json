@@ -1,19 +1,243 @@
 {
+    "alert": {
+        "alpha-version": "Dauntless Builder v2 is currently in beta, if you encounter problems or have feedback please submit them to our <a style=\"color: #fff;\" href=\"{{issuesUrl}}\" target=\"_blank\">Github Issues</a>, <a style=\"color: #fff;\" href=\"{{matrixChannelUrl}}\" target=\"_blank\">Matrix Channel</a> or <a style=\"color: #fff;\" href=\"{{discordServerUrl}}\" target=\"_blank\">Discord Server</a>.",
+        "translation-warning": "You're currently viewing this page with your language set to <b>{{languageName}}</b>, translations are currently in beta and are very spotty. If you speak this language, please consider <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">contributing to the translation efforts</a>."
+    },
+    "app-name": "Dauntless Builder",
+    "appbar": {
+        "dev-menu": {
+            "translation-check": "Translation Check"
+        }
+    },
+    "components": {
+        "build-menu": {
+            "added-build-to-favorites": "Added build \"{{name}}\" to favorites.",
+            "build-name": "Build Name",
+            "copied-to-clipboard": "Copied to Clipboard",
+            "copy-to-clipboard": "Copy build to clipboard",
+            "favorite-build": "Add this build to your favorites",
+            "open-last-edited-build": "Open your last edited build",
+            "remove-build-from-favorites": "Removed build \"{{name}}\" from favorites.",
+            "set-build-name": "Set Build Name",
+            "unfavorite-build": "Remove this build from your favorites"
+        },
+        "build-warning": {
+            "invalid-build": "Due to changes in Dauntless this build is no longer compatible with the current version of Dauntless Builder, one or more parts have been removed in order to display it.",
+            "upgraded-build": "This build was made for an earlier version of Dauntless and might be outdated."
+        },
+        "item-picker": {
+            "lantern-hold-line": "<b>$t(terms.hold)</b>: {{hold}}",
+            "omnicell-passive-line": "<b>$t(terms.passive)</b>: {{passive}}"
+        },
+        "item-select-dialog": {
+            "select-text": "Select {{name}}"
+        }
+    },
     "drawer": {
+        "about": "$t(pages.about.title)",
+        "build-finder": "$t(pages.build-finder.title)",
         "home": "ホーム",
+        "meta-builds": "$t(pages.metabuilds.title)",
         "my-builds": "マイビルド",
         "new-build": "ビルドを作る",
         "settings": "$t(pages.settings.title)"
     },
+    "feature-disabled-browser": "This feature is currently disabled for this web browser.",
     "misc": {
         "dauntless-version": "ドーントレスパッチ{{version}}",
+        "discord-server": "Dauntless Builder Discord Server",
+        "github-repository": "Github Repository",
+        "matrix-channel": "Dauntless Builder Matrix Server",
         "patch-url": "https://playdauntless.com/ja/patch-notes/{{version}}"
     },
     "pages": {
+        "404": {
+            "not-found": "Page Not Found"
+        },
+        "about": {
+            "assets": "Assets",
+            "assets-text": "All Dauntless related assets are the intellectual property of Phoenix Labs.",
+            "contributors": "Contributors",
+            "dependencies": "Dependencies ({{number}})",
+            "main-text": "Dauntless Builder is free and open source software licensed under the terms of the <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> license.",
+            "privacy": "Privacy",
+            "privacy-text": "We are not collecting any data.",
+            "source-code": "Source Code",
+            "title": "About"
+        },
         "build": {
-            "power-surged-add": "パワー活性"
+            "click-here-to-select": "Click here to select one.",
+            "filter-by": "Filter by {{name}}",
+            "no-perks": "No perks available.",
+            "no-x-selected": "No <b>{{name}}</b> selected.",
+            "part-select-dialog-title": "Select weapon part",
+            "power-surged-add": "パワー活性",
+            "power-surged-remove": "Base Power",
+            "title": "{{weaponName}} {{omnicell}} Build",
+            "toggle-filters": "Toggle display of filters",
+            "toggle-unique-effects": "Toggle display of unique effects"
+        },
+        "build-finder": {
+            "builds-title": "Builds ({{num}})",
+            "dev-clear-perks": "Clear All Perks",
+            "dev-number-of-builds": "Number of Builds: {{num}}",
+            "dev-number-of-perks": "Number of Perks selected: {{num}}",
+            "dev-options-title": "Development Options",
+            "dev-set-perks": "Set Perks",
+            "filter-title": "Filter",
+            "perks-title": "$t(terms.perks)",
+            "remove-exotics": "Remove Exotic Items",
+            "remove-legendary": "Remove Legendary Weapons",
+            "title": "Build Finder"
+        },
+        "favorites": {
+            "build-name": "Build Name",
+            "edit-name": "Edit Favorite Name",
+            "title": "My Builds"
+        },
+        "home": {
+            "contributing-text": "If you're interested in contributing code or especially localizations please head over to our <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a>!",
+            "contributing-title": "Contributing",
+            "links": {
+                "discord": "Discord",
+                "github": "Github",
+                "matrix": "Matrix"
+            },
+            "links-title": "Links",
+            "localization-text": "Dauntless Builder now supports localizations, please head over to the Settings page and select your preferred language if it wasn't already picked up automatically! If that language is currently unsupported and you'd be interested in helping, please read the \"Contributing\" section below.",
+            "localization-title": "Localization",
+            "test-builds": "Test Builds",
+            "title": "Home",
+            "welcome-text": "a free and open source web application for creating and sharing builds for the popular free to play monster hunting game Dauntless.",
+            "welcome-title": "Welcome to Dauntless Builder,"
+        },
+        "metabuilds": {
+            "generated": {
+                "buildTitles": {
+                    "Agarus (K) Speed": "Agarus (K) Speed",
+                    "Agarus (K) Survival": "Agarus (K) Survival",
+                    "Agarus (Khara) Resolve": "Agarus (Khara) Resolve",
+                    "Agarus (Khara) Wound": "Agarus (Khara) Wound",
+                    "Agarus (Kharabak)": "Agarus (Kharabak)",
+                    "Charrogg": "Charrogg",
+                    "Chrono (R) Speed": "Chrono (R) Speed",
+                    "Chrono (Reza)": "Chrono (Reza)",
+                    "Chrono (Reza) Wound": "Chrono (Reza) Wound",
+                    "Chrono (V) Speed": "Chrono (V) Speed",
+                    "Chrono (V) Survival": "Chrono (V) Survival",
+                    "Chrono (Valo)": "Chrono (Valo)",
+                    "Chrono (Valo) Resolve": "Chrono (Valo) Resolve",
+                    "Chrono (Valo) Wound": "Chrono (Valo) Wound",
+                    "Disc Pred": "Disc Pred",
+                    "Disc Sav": "Disc Sav",
+                    "Hellion": "Hellion",
+                    "Kharabak": "Kharabak",
+                    "Malk (S) Speed": "Malk (S) Speed",
+                    "Malk (S) Survival": "Malk (S) Survival",
+                    "Malk (Sahvyt)": "Malk (Sahvyt)",
+                    "Malk (Sahvyt) Resolve": "Malk (Sahvyt) Resolve",
+                    "Malk (Sahvyt) Wound": "Malk (Sahvyt) Wound",
+                    "Pangar": "Pangar",
+                    "Prismedic": "Prismedic",
+                    "Rage Pred": "Rage Pred",
+                    "Rezakiri": "Rezakiri",
+                    "Riftstalker": "Riftstalker",
+                    "Sahvyt": "Sahvyt",
+                    "Thrax (Rift)": "Thrax (Rift)",
+                    "Thrax (Rift) Resolve": "Thrax (Rift) Resolve",
+                    "Thrax (Rift) Wound": "Thrax (Rift) Wound",
+                    "Torg (C) Speed": "Torg (C) Speed",
+                    "Torg (C) Survival": "Torg (C) Survival",
+                    "Torg (Charrogg)": "Torg (Charrogg)",
+                    "Torg (Charrogg) Resolve": "Torg (Charrogg) Resolve",
+                    "Torg (H) Speed": "Torg (H) Speed",
+                    "Torg (H) Survival": "Torg (H) Survival",
+                    "Torg (Hellion)": "Torg (Hellion)",
+                    "Torg (Hellion) Wound": "Torg (Hellion) Wound",
+                    "Urska (Boreus)": "Urska (Boreus)",
+                    "Urska (F)    Speed": "Urska (F)    Speed",
+                    "Urska (F)  Speed": "Urska (F)  Speed",
+                    "Urska (F) Speed": "Urska (F) Speed",
+                    "Urska (F) Survival": "Urska (F) Survival",
+                    "Urska (Frostwülf)": "Urska (Frostwülf)",
+                    "Urska (Pangar)": "Urska (Pangar)",
+                    "Urska (Pangar) Resolve": "Urska (Pangar) Resolve",
+                    "Urska (Pangar) Wound": "Urska (Pangar) Wound",
+                    "Urska (Wülf) Resolve": "Urska (Wülf) Resolve",
+                    "Valomyr": "Valomyr"
+                },
+                "categories": {
+                    "Artificer": {
+                        "description": "Artificer features a drone you can control that has multiple functions depending on what you are targeting: if targeting the ground, it creates a healing and shielding aura that blocks Behemoth's projectiles; if targeting a player it creates a healing and shield aura that follows them; if targeting a downed slayer it revives them and creates a healing and shielding aura that follows them; and, if targeting a Behemoth, it marks a part to take extra damage.",
+                        "name": "Artificer"
+                    },
+                    "Bastion": {
+                        "description": "Bastion features higher shield gain from perks and the passive ability to generate shields when damage is dealt. Its active ability consumes all the shield you currently have and deals damage based on how much shield was consumed. Neglecting the active ability significantly lowers your potential damage.",
+                        "name": "Bastion"
+                    },
+                    "Catalyst": {
+                        "description": "These are the best builds you can have for general hunting, maximizing damage and using Blitz tonics as your source of attack speed.\nRecommended tonics for maximum damage: Frenzy, Blitz, Aetherdrive.",
+                        "name": "Catalyst"
+                    },
+                    "Discipline": {
+                        "description": "Discipline is a high-risk high-reward Omnicell, featuring a high damage parry ability that grants you stacks of critical damage if timed correctly and, at max stacks, grants you a high amount of critical chance.",
+                        "name": "Discipline"
+                    },
+                    "Escalations": {
+                        "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear, and builds that have Escalation gear and are built around Granny Stega's Amp for lifesteal.",
+                        "name": "Escalations",
+                        "subcategoryDescription": {
+                            "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive. Bulwark for survivability.",
+                            "legendaries": "Builds for the various Escalations. Use Strega's talent for sustain on most Escalations, Aspect of the Mender on Frost Escalation.",
+                            "preEsca": "Builds for the various Escalations. Contains no Trials cells nor Escalation gear."
+                        }
+                    },
+                    "Exotics": {
+                        "description": "Builds that use the Exotic Weapons and Helmets. Off-meta and generally worse than using regular weapons, with the exception of Molten Edict.",
+                        "name": "Exotics"
+                    },
+                    "Iceborne": {
+                        "description": "Iceborne provides lifesteal and damage reduction the less health you have, with an active ability that grants hyperarmor and more lifesteal. The active deals more damage when used at maximum health.",
+                        "name": "Iceborne"
+                    },
+                    "Revenant": {
+                        "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 125 healing over 10 seconds — after Revenant expires.",
+                        "name": "Revenant"
+                    },
+                    "Tempest": {
+                        "description": "Tempest features 10% passive attack speed bonus and the ability to build up stacks of Velocity when dodging through attacks. You spend the stacks to dash and deal damage based on how much movespeed you currently have. The movespeed bonus damage only applies to unbroken parts.",
+                        "name": "Tempest"
+                    }
+                },
+                "title": "Dauntless Meta Builds - 1.10+"
+            },
+            "note": "The builds listed here are automatically extracted from the <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>Community Meta Builds Spreadsheet</a>, if you have feedback please pass it along to the people in the #meta-discussion channel on the <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>official Dauntless Discord server</a>!",
+            "subcategories": {
+                "The Hunger": "The Hunger",
+                "heroics": "Heroics",
+                "legendaries": "Legendaries",
+                "preEsca": "Pre-Escalation"
+            },
+            "title": "Meta Builds",
+            "vsElement": {
+                "Blaze": "vs. Blaze",
+                "Frost": "vs. Frost",
+                "Radiant": "vs. Radiant",
+                "Shock": "vs. Shock",
+                "Terra": "vs. Terra",
+                "Umbral": "vs. Umbral"
+            }
+        },
+        "newbuild": {
+            "title": "Create a new build"
         },
         "settings": {
+            "data": "Application Data",
+            "data-export": "Export",
+            "data-import": "Import",
+            "data-text": "Dauntless Builder is currently storing all data inside your browser, which means switching devices or browsers will not retain any of your favorite builds and/or other data. In the future we plan to allow some sort of cloud data syncing but until then, you can use Import/Export to backup your data and/or move it between devices.",
+            "dev-mode-toggle": "Toggle Developer Mode",
+            "export-logs": "Export logs",
             "general": "一般",
             "language": "言語",
             "misc": "雑多",
@@ -22,7 +246,10 @@
     },
     "terms": {
         "active": "アクティブ",
+        "active-ability": "Active Ability",
         "arms-armour": "ガントレット",
+        "bond-weapon": "Bond Weapon",
+        "cancel": "Cancel",
         "cell": "セル",
         "cell-slot": "セルスロット",
         "cell-type": {
@@ -34,6 +261,7 @@
             "Prismatic": "プリズムセル"
         },
         "cells": "セル",
+        "close": "Close",
         "elemental-type": "属性",
         "elemental-types": {
             "Blaze": "炎属性",
@@ -48,6 +276,7 @@
         "lantern": "ランタン",
         "legs-armour": "ブーツ",
         "omnicell": "オムニセル",
+        "part": "Part",
         "parts": {
             "chamber": "ちゃんばー",
             "grip": "グリップ",
@@ -58,7 +287,11 @@
         "perks": "パーク",
         "power": "攻撃力",
         "resistance": "防御力",
+        "save": "Save",
+        "search": "Search",
         "torso-armour": "胴防具",
+        "unique-effect": "Unique Effect",
+        "unselect": "Select Nothing",
         "weapon": "武器",
         "weapon-type": "武器の種類",
         "weapon-types": {

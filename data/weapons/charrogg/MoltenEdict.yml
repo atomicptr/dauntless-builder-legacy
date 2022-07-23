@@ -27,11 +27,3 @@ unique_effects:
     description: >-
       Replaces all hammer blasts with unique fireball abilities that deal blaze
       damage.
-i18n:
-  fr:
-    name: Jugement de Vulrrogg
-    description: Un marteau exotique forgée à partir de Charrogg.
-    unique_effects:
-      - description: >-
-          Remplace tous les tirs de marteau par des capacités uniques infligeant
-          des dégâts de braise.

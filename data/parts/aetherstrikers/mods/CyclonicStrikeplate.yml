@@ -4,11 +4,3 @@ part_effect:
   - >-
     Tempest Form duration increased by 10 seconds. When Tempest Form has less
     than 10 seconds remaining, deal +15% damage.
-i18n:
-  fr:
-    name: Plaque cyclonique
-    part_effect:
-      - >-
-        La durée de Forme tempétueuse est augmentée de 10 secondes. Lorsque
-        Forme tempétueuse a moins de 10 secondes restantes, infligez +15% de
-        dégâts.

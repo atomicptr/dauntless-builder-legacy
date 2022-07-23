@@ -15,7 +15,3 @@ perks:
   - name: Lucent
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Crête de Bravoure
-    description: Protection pour la tête forgée à partir de Valomyr.

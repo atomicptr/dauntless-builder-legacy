@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Tenacious: 3
-i18n:
-  fr:
-    name: Tenace
-    variants:
-      - 'Tenace +1 '
-      - 'Tenace +2 '
-      - 'Tenace +3 '

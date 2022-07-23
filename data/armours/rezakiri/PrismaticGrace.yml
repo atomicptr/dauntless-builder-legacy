@@ -34,18 +34,3 @@ unique_effects:
     description: >-
       While active, reviving another player fully restores both players but
       removes the Prism even at full danger.
-i18n:
-  fr:
-    name: Grâce Prismatique
-    description: Une pièce d'armure forger à partir de Rezakiri.
-    unique_effects:
-      - description: >-
-          Après avoir réanimé un autre joueur, lui donne un prisme rayonnant qui
-          bloque les dégts reçu pendant 5 secondes.
-      - description: >-
-          La première fois que vous devriez être à terre, recevez un prisme
-          rayonnant qui bloque les dégâts pendant 10 secondes.
-      - description: >-
-          Lorsqu'il est actif, le prisme vous permet de réanimer un autre
-          joueur, même au niveau de danger maximum, et vous soigne tous les deux
-          entièrement mais disparait après utilisation.

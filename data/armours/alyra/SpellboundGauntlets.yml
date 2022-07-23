@@ -15,7 +15,3 @@ perks:
   - name: Invigorated
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Gantelets sorceliée
-    description: Protection pour les bras forgée à partir de Alyra.

@@ -17,7 +17,3 @@ perks:
   - name: Acidic
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Furie de Quillshot
-    description: Une hache forgée à partir de Quillshot.

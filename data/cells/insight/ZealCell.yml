@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Zeal: 3
-i18n:
-  fr:
-    name: Zèle
-    variants:
-      - Zèle +1
-      - Zèle +2
-      - Zèle +3

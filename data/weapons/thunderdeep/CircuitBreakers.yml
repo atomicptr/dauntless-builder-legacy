@@ -24,10 +24,3 @@ unique_effects:
   - name: TailDamage
     description: 30% damage vs Behemoth Tails
     powerSurged: true
-i18n:
-  fr:
-    name: Court-circuiteurs
-    description: A Slayer's chain blades forged with Thunderdeep Drask trophies.
-    unique_effects:
-      - description: 20% dégats contre les queues de béhémoth
-      - description: 30% dégats contre les queues de béhémoth

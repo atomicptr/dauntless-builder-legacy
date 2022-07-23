@@ -15,7 +15,3 @@ perks:
   - name: Omnisurge
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Armes à feu de Phaelanx
-    description: Protection pour les bras forgées à partir de Phaelanx.

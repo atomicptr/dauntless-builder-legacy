@@ -14,20 +14,3 @@ effects:
     description: For every 100 current HP, gain 1.66% bonus damage
   '6':
     description: For every 100 current HP, gain 2% bonus damage
-i18n:
-  fr:
-    name: Tenace
-    description: Gagnez des dégâts bonus en fonction de vos PV.
-    effects:
-      '1':
-        description: Pour chaque tranche de 100 PV, gagnez 0,33% de dégâts supplémentaires.
-      '2':
-        description: Pour chaque tranche de 100 PV, gagnez 0,66% de dégâts supplémentaires.
-      '3':
-        description: Pour chaque tranche de 100 PV, gagnez 1% de dégâts supplémentaires.
-      '4':
-        description: Pour chaque tranche de 100 PV, gagnez 1,33% de dégâts supplémentaires.
-      '5':
-        description: Pour chaque tranche de 100 PV, gagnez 1,66% de dégâts supplémentaires.
-      '6':
-        description: Pour chaque tranche de 100 PV, gagnez 2% de dégâts supplémentaires.

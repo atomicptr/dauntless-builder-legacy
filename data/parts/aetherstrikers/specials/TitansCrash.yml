@@ -5,11 +5,3 @@ part_effect:
     Unleash energy forward in a pressure wave, dealing 500 damage to the closest
     target and 166 damage to nearby target. Deals up to +100% damage when
     Tempest Form and Karma Breaker's effects are active.
-i18n:
-  fr:
-    name: Crash du Titan
-    part_effect:
-      - >-
-        Déchaîne de l'energie dans une explosion concentrée, infligeant 900
-        dégâts au premier ennemi touché. Inflige jusqu'à +100% de dégâts quand
-        les effets de Forme tempétueuse et Briseur de Karma sont actifs.

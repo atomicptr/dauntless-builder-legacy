@@ -28,16 +28,3 @@ unique_effects:
       Once charged, your next attack will deal 700 bonus radiant damage. Charge
       rate increases with current health.
     powerSurged: true
-i18n:
-  fr:
-    name: Décret de Valomyr
-    description: Une hache forgée à partir de Valomyr.
-    unique_effects:
-      - description: >-
-          Une fois chargée, votre prochaine attaque infligera +550 dégâts
-          rayonnants. La vitesse de charge augmente en fonction de la santé
-          actuelle
-      - description: >-
-          Une fois chargée, votre prochaine attaque infligera +700 dégâts
-          rayonnants. La vitesse de charge augmente en fonction de la santé
-          actuelle

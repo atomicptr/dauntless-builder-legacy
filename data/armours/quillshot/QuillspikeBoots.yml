@@ -15,7 +15,3 @@ perks:
   - name: Barbed
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Bottes du quillperceur
-    description: Protection pour les jambes forgée à partir de Quillshot.

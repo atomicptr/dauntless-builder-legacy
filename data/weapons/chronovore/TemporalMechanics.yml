@@ -23,17 +23,3 @@ unique_effects:
       move speed for 6 seconds. Usable
 
       while downed. Resets on Behemoth kill or after 90 seconds.
-i18n:
-  fr:
-    name: Mécaniques temporelles
-    description: Un repeaters forgée à partir de Chronovore.
-    unique_effects:
-      - description: >
-          Capacité légendaire: Revenez à votre position 3 secondes avant
-          l'activation. Restaure la santé et l'endurance
-
-          perdues pendant ce temps, supprime les débuffs. Devenez invulnérable
-          et gagnez un bonus de vitesse de déplacement durant 6 secondes.
-
-          Utilisable lorsque vous êtes à terre. Se réinitialise lorsque le
-          Béhémoth est tué ou après 90 secondes.

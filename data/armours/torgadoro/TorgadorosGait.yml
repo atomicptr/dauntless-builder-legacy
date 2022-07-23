@@ -15,7 +15,3 @@ perks:
   - name: Knockout King
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Allure du Torgadoro
-    description: Protection pour les jambes forgée à partir de Torgadoro.

@@ -26,34 +26,3 @@ effects:
     description: >-
       On dodging through an attack, reduce the cooldown of your lantern ability
       by 35%.
-i18n:
-  fr:
-    name: Esquive aethérée
-    description: >-
-      Esquivez une attaque, réduisez le temps de recharge de votre capacité de
-      lanterne
-    effects:
-      '1':
-        description: >-
-          Esquivez une attaque, réduisez le temps de recharge de votre capacité
-          de lanterne de 5%
-      '2':
-        description: >-
-          Esquivez une attaque, réduisez le temps de recharge de votre capacité
-          de lanterne de 10%
-      '3':
-        description: >-
-          Esquivez une attaque, réduisez le temps de recharge de votre capacité
-          de lanterne de 15%
-      '4':
-        description: >-
-          Esquivez une attaque, réduisez le temps de recharge de votre capacité
-          de lanterne de 25%
-      '5':
-        description: >-
-          Esquivez une attaque, réduisez le temps de recharge de votre capacité
-          de lanterne de 30%
-      '6':
-        description: >-
-          Esquivez une attaque, réduisez le temps de recharge de votre capacité
-          de lanterne de 35%

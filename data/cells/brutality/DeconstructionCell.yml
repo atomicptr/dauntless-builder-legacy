@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Deconstruction: 3
-i18n:
-  fr:
-    name: Démolition
-    variants:
-      - Démolition +1
-      - Démolition +2
-      - Démolition +3

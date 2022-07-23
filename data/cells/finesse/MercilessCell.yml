@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Merciless: 3
-i18n:
-  fr:
-    name: Impitoyable
-    variants:
-      - Impitoyable +1
-      - Impitoyable +2
-      - Impitoyable +3

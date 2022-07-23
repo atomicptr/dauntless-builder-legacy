@@ -27,11 +27,3 @@ unique_effects:
     description: >-
       Channel a beam that deals increasing damage, up to 200%, while it
       continues to hit a target.
-i18n:
-  fr:
-    name: Main divine
-    description: Une aetherolance exotique forgée à partir de Rezakiri.
-    unique_effects:
-      - description: >-
-          Canalise un rayon infligeant des dégâts croissants suivant la durée de
-          canalisation, jusqu'à 200%

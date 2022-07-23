@@ -2,10 +2,3 @@ name: Lightweight Shaft
 icon: /assets/icons/parts/warpike/mods/LightweightShaft.png
 part_effect:
   - Pike charge attack no longer costs stamina and always critically strikes.
-i18n:
-  fr:
-    name: Manche léger
-    part_effect:
-      - >-
-        L'attaque de charge à la lance ne coûte plus d'Endurance et est toujours
-        critique.

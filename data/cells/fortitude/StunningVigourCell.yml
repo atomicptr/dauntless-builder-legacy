@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Stunning Vigour: 3
-i18n:
-  fr:
-    name: Vigueur étourdissante
-    variants:
-      - Vigueur étourdissante +1
-      - Vigueur étourdissante +2
-      - Vigueur étourdissante +3

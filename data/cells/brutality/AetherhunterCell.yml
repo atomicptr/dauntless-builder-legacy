@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Aetherhunter: 3
-i18n:
-  fr:
-    name: Chasse-aether
-    variants:
-      - Chasse-aether +1
-      - Chasse-aether +2
-      - Chasse-aether +3

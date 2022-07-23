@@ -5,12 +5,3 @@ part_effect:
     Press to convert meter into ammo. Hold to spend ammo and perform a flying
     lunge attack that deals up to 1500 damage based on distance and ammo
     quality.
-i18n:
-  fr:
-    name: Charge Téméraire
-    part_effect:
-      - >-
-        Appuyez pour convertir la jauge d'arme en munition. Maintenez pour
-        dépenser des munitions et effectuer une charge aérienne qui inflige
-        jusqu'à 1500 de dégâts suivant la distance parcourue et la qualité des
-        munitions.

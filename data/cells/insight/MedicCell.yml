@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Medic: 3
-i18n:
-  fr:
-    name: Médecin
-    variants:
-      - Médecin +1
-      - Médecin +2
-      - Médecin +3

@@ -28,13 +28,3 @@ unique_effects:
       Activate to enter Feast, taking damage over time but gaining significant
       lifesteal, attack speed, and creating aetheric waves with each attack that
       deal area damage.
-i18n:
-  fr:
-    name: Famine
-    description: Une épée exotique forgée à partir de Shrowd.
-    unique_effects:
-      - description: >-
-          Activez avec une jauge pleine pour entrer en mode Festin, gagnant les
-          effets de Surcharge vaillante ainsi que +25% de dégâts et +12% de vol
-          vie. Votre vie se draine continuellement. La ruée accorde aussi une
-          invulnérabilié temporaire.

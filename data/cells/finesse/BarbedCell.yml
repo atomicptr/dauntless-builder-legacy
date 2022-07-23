@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Barbed: 3
-i18n:
-  fr:
-    name: Barbelée
-    variants:
-      - Barbelée +1
-      - Barbelée +2
-      - Barbelée +3

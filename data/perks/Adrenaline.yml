@@ -14,20 +14,3 @@ effects:
     description: Grants +2.5% increased damage for every 10 stamina missing.
   '6':
     description: Grants +3.0% increased damage for every 10 stamina missing.
-i18n:
-  fr:
-    name: Adrénaline
-    description: Augmente les dégâts infligés en fonction de l'endurance dépensée.
-    effects:
-      '1':
-        description: Donne +0.5% de dégâts par tranche de 10 Endurance manquante.
-      '2':
-        description: Donne +1.0% de dégâts par tranche de 10 Endurance manquante.
-      '3':
-        description: Donne +1.5% de dégâts par tranche de 10 Endurance manquante.
-      '4':
-        description: Donne +2.0% de dégâts par tranche de 10 Endurance manquante.
-      '5':
-        description: Donne +2.5% de dégâts par tranche de 10 Endurance manquante.
-      '6':
-        description: Donne +3.0% de dégâts par tranche de 10 Endurance manquante.

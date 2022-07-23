@@ -15,7 +15,3 @@ perks:
   - name: Conditioning
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Danse de l'essaim
-    description: Protection pour les jambes forgée à partir de Kharabak.

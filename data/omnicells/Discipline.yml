@@ -10,17 +10,3 @@ active: >
   Perform a quick parrying punch that deals 200 blaze damage. Parrying an attack
   does +300% damage and grants a stack of Flaming Fist, giving +4% critical
   strike damage. This can stack 4 times. 17 second cooldown.
-i18n:
-  fr:
-    name: Discipline
-    passive: >
-      Chances de coup critique et dégâts accrus de 8%. Soins réduit de 50%.
-      Lorsque vous avez atteint le nombre maximal de charges de Poing enflammé,
-      vous devenez Discipliné, ce qui augmente vos chances de coup critique de
-      50% pendant 40 secondes, mais les dégâts subis de 100%. Lorsque Discipliné
-      prend fin, les charges disparaissent.
-    active: >
-      Effectuez un rapide coup de poing de parades qui inflige 200 de dégâts
-      incandescents. Parer une attaque inflige 300% de dégâts et confère une
-      charges de Poing enflammé qui donne +4% de dégâts critique. Cet effet est
-      cumulable 4 fois. 17 secondes de rechargement.

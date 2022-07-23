@@ -28,34 +28,3 @@ effects:
     description: >-
       Using your lantern hold ability grants 15% attack speed to all Slayers for
       10 seconds.
-i18n:
-  fr:
-    name: Conduction
-    description: >-
-      La capacité de la lanterne octroie temporairement de la vitesse d'attaque
-      à tous les Slayers.
-    effects:
-      '1':
-        description: >-
-          Utiliser votre capacité de lanterne octroie +4% de vitesse d'attaque à
-          tous les Slayers pendant 10 secondes.
-      '2':
-        description: >-
-          Utiliser votre capacité de lanterne octroie +6% de vitesse d'attaque à
-          tous les Slayers pendant 10 secondes.
-      '3':
-        description: >-
-          Utiliser votre capacité de lanterne octroie +8% de vitesse d'attaque à
-          tous les Slayers pendant 10 secondes.
-      '4':
-        description: >-
-          Utiliser votre capacité de lanterne octroie +10% de vitesse d'attaque
-          à tous les Slayers pendant 10 secondes.
-      '5':
-        description: >-
-          Utiliser votre capacité de lanterne octroie +12.5% de vitesse
-          d'attaque à tous les Slayers pendant 10 secondes.
-      '6':
-        description: >-
-          Utiliser votre capacité de lanterne octroie +15% de vitesse d'attaque
-          à tous les Slayers pendant 10 secondes.

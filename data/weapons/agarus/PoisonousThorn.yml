@@ -18,12 +18,3 @@ unique_effects:
     description: >
       Legendary Ability: Revive all Slayers in a large radius, granting them
       healing over time and immunity to stagger. Usable while downed.
-i18n:
-  fr:
-    name: Épine vénéneuse
-    description: Une épée forgée à partir de Agarus.
-    unique_effects:
-      - description: >-
-          Capacité légendaire : Réanimer tous les Slayer dans un large rayon,
-          leur octroyant du soin dans le temps et une immunité aux
-          étourdissements. Utilisable à terre.

@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Sharpened: 3
-i18n:
-  fr:
-    name: Aiguisée
-    variants:
-      - Aiguisée +1
-      - Aiguisée +2
-      - Aiguisée +3

@@ -33,38 +33,3 @@ effects:
         After dodging through an attack the next weapon attack's Part Break
         Damage is increased by 100%
     
-i18n:
-  fr:
-    name: Aiguisé
-    description: Augmentation en pourcentage des dégâts aux membres.
-    effects:
-      '1':
-        description:
-          - +5% de dégâts aux membres
-          - null
-      '2':
-        description:
-          - +10% de dégâts aux membres
-          - null
-      '3':
-        description:
-          - +15% de dégâts aux membres
-          - null
-      '4':
-        description:
-          - +20% de dégâts aux membres
-          - >-
-            Après une esquive parfaite les dégâts aux membres de la prochaine
-            attaque sont augmentés de 50%
-      '5':
-        description:
-          - +25% de dégâts aux membres
-          - >-
-            Après une esquive parfaite les dégâts aux membres de la prochaine
-            attaque sont augmentés de 50%
-      '6':
-        description:
-          - +30% de dégâts aux membres
-          - >-
-            Après une esquive parfaite les dégâts aux membres de la prochaine
-            attaque sont augmentés de 100%

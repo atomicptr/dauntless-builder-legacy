@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Warmth: 3
-i18n:
-  fr:
-    name: Chauffante
-    variants:
-      - Chauffante +1
-      - Chauffante +2
-      - Chauffante +3

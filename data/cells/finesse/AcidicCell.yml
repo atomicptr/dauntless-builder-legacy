@@ -13,16 +13,3 @@ variants:
     rarity: epic
     perks:
       Acidic: 3
-i18n:
-  fr:
-    name: Acide
-    variants:
-      - Acide +1
-      - Acide +2
-      - Acide +3
-  ja:
-    name: アシッド
-    variants:
-      - アシッド+1
-      - アシッド+2
-      - アシッド+3

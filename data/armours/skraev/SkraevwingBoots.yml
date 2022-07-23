@@ -15,7 +15,3 @@ perks:
   - name: Adrenaline
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Solerets ailes de Skraev
-    description: Protection pour les jambes forgée à partir de Skraev.

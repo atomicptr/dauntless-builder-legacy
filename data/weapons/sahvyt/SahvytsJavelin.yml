@@ -30,18 +30,3 @@ unique_effects:
       that frequently deals 325 shock damage to any target hit. Dodging through
       an attack reduces charge cooldown.
     powerSurged: true
-i18n:
-  fr:
-    name: Javelot de Sahvyt
-    description: Aéthérolance forgé à partir du Sahvyt.
-    unique_effects:
-      - description: >-
-          Une fois chargé, votre prochain coup libère un projectile boomerang
-          qui inflige fréquemment 250 de dégâts d'électrochocs à toute cible
-          touchée. Esquiver une attaque réduit le temps de recharge de la
-          charge.
-      - description: >-
-          Une fois chargé, votre prochain coup libère un projectile boomerang
-          qui inflige fréquemment 325 de dégâts d'électrochocs à toute cible
-          touchée. Esquiver une attaque réduit le temps de recharge de la
-          charge.

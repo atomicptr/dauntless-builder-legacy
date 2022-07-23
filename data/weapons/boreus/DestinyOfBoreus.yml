@@ -28,16 +28,3 @@ unique_effects:
       After using your Special, generate 3 Frost Sprites that grant your next
       attack +60 damage and minor frost damage (Max 4 Sprites)
     powerSurged: true
-i18n:
-  fr:
-    name: Le destin de Boreus
-    description: Une paire de chaînes-lames forgée à partir de Boreus.
-    unique_effects:
-      - description: >-
-          Utiliser votre spécial génère 3 farfroidets qui ajoutent +30 dégâts
-          chacun à votre prochaine attaque et de légers dégâts de givre (4
-          farfroidets maximum)
-      - description: >-
-          Utiliser votre spécial génère 3 farfroidets qui ajoutent +60 dégâts
-          chacun à votre prochaine attaque et de légers dégâts de givre (4
-          farfroidets maximum)

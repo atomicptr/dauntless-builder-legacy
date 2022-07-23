@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Swift: 3
-i18n:
-  fr:
-    name: Sprint
-    variants:
-      - Sprint +1
-      - Sprint +2
-      - Sprint +3

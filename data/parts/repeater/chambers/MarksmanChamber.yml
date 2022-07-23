@@ -6,14 +6,3 @@ part_effect:
     Fires a shot in a line, dealing 350 damage to the first Behemoth hit. If a
     part is struck, that part takes 25% more damage from Shots for 10 seconds.
   - 'Empowered: Damage bonus increased to 60%, and 25% to all allies.'
-i18n:
-  fr:
-    name: Chambre de tireur d'élite
-    part_effect:
-      - >-
-        Effectue un tir en ligne droite qui inflige 350 de dégâts au premier
-        Behemoth qu'il touche. Si un membre est touché, il reçoit 25% de dégâts
-        en plus des tirs pendant 10 secondes
-      - >-
-        Aethérochargé : Le bonus de dégâts augmente jusqu'à 60% et un bonus de
-        25% est octroye à tous les alliés.

@@ -3,7 +3,6 @@
 /public/*.json
 /public/map
 /public/sitemap.xml
-/src/translations/items
 /src/data/*.json
 
 # dev stuff

@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Molten: 3
-i18n:
-  fr:
-    name: Fondue
-    variants:
-      - Fondue +1
-      - Fondue +2
-      - Fondue +3

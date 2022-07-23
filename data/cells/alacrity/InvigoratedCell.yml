@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Invigorated: 3
-i18n:
-  fr:
-    name: Vivifié
-    variants:
-      - Vivifié +1
-      - Vivifié +2
-      - Vivifié +3

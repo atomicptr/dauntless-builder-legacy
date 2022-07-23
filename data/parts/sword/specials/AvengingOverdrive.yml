@@ -6,13 +6,3 @@ part_effect:
     causing attacks to deal +60-80 aoe damage. Reactivate to parry and riposte a
     Behemoth attack, dealing 800 damage and granting 1 Valour when successful (2
     second cooldown)
-i18n:
-  fr:
-    name: Surcharge vengeresse
-    part_effect:
-      - >-
-        Activez avec une jauge pleine pour entrer en mode Surcharge, gagnant
-        +20% de vitesse d'attaque et ajoutant +60-80 de dégâts de zone aux
-        attaques. Réactivez pour parer une attaque de Béhemoth et riposter en
-        infligeant 800 de dégâts en cas de succès, donnant 1 Vaillance en cas de
-        succès (2 secondes de recharge).

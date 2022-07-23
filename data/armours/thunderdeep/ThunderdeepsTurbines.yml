@@ -15,7 +15,3 @@ perks:
   - name: Zeal
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Turbines de Sombre-orage
-    description: Leg and foot protection forged from Thunderdeep Drask trophies.

@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Nine Lives: 3
-i18n:
-  fr:
-    name: Lernéenne
-    variants:
-      - Lernéenne +1
-      - Lernéenne +2
-      - Lernéenne +3

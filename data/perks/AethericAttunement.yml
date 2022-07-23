@@ -14,20 +14,3 @@ effects:
     description: Increases the recharge rate of your lantern ability by 40%
   '6':
     description: Increases the recharge rate of your lantern ability by 50%
-i18n:
-  fr:
-    name: Harmonisation aethérée
-    description: Augmentation en pourcentage de la charge de lanterne à chaque attaque.
-    effects:
-      '1':
-        description: Augmente le taux de recharge de votre capacité de lanterne de +10%
-      '2':
-        description: Augmente le taux de recharge de votre capacité de lanterne de +15%
-      '3':
-        description: Augmente le taux de recharge de votre capacité de lanterne de +20%
-      '4':
-        description: Augmente le taux de recharge de votre capacité de lanterne de +30%
-      '5':
-        description: Augmente le taux de recharge de votre capacité de lanterne de +40%
-      '6':
-        description: Augmente le taux de recharge de votre capacité de lanterne de +50%

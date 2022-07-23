@@ -4,12 +4,3 @@ part_effect:
   - >-
     Loads ammo into the hammer before releasing, damage and interrupting
     behemoths.
-i18n:
-  fr:
-    name: Salve à concussion
-    part_effect:
-      - >-
-        Maintenez pour charger des munitions dans le marteau. Libérez pour
-        déclencher une explosion qui inflige jusqu'à 260 de dégâts en fonction
-        des munitions chargées et peut interrompre les Behemoths. La portée
-        augmente avec des munitions chargées.

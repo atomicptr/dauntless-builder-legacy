@@ -28,16 +28,3 @@ unique_effects:
       The last 4 shots in your magazine generates Frost Sprites that grant your
       next attack +60 damage and minor frost damage (Max 4 Sprites)
     powerSurged: true
-i18n:
-  fr:
-    name: Voix de Boreus
-    description: Un repeaters forgée à partir de Boreus.
-    unique_effects:
-      - description: >-
-          Les 4 dernier coups dans votre chargeur génèrent des farfroidets qui
-          ajoutent 30 dégâts à votre prochaine attaque et de légers dégâts
-          givrant (4 farfroidets maximum)
-      - description: >-
-          Les 4 dernier coups dans votre chargeur génèrent des farfroidets qui
-          ajoutent 60 dégâts à votre prochaine attaque et de légers dégâts
-          givrant (4 farfroidets maximum)

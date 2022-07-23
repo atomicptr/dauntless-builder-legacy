@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Evasive Fury: 3
-i18n:
-  fr:
-    name: Furie évasive
-    variants:
-      - Furie évasive +1
-      - Furie évasive +2
-      - Furie évasive +3

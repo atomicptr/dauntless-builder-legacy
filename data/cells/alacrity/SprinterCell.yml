@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Sprinter: 3
-i18n:
-  fr:
-    name: Coureur
-    variants:
-      - Coureur +1
-      - Coureur +2
-      - Coureur +3

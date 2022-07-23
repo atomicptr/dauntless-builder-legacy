@@ -30,14 +30,3 @@ unique_effects:
       lasts for 25 seconds (max 600 shields).
     
     powerSurged: true
-i18n:
-  fr:
-    name: Rancoeur de Skarn
-    description: Une épée forgée à partir de Skarn.
-    unique_effects:
-      - description: >-
-          Après utilisation de votre capacité de lanterne confère un bouclier de
-          175 points cumulable qui dure 25 secondes (maximum 600 boucliers).
-      - description: >-
-          Après utilisation de votre capacité de lanterne confère un bouclier de
-          250 points cumulable qui dure 25 secondes (maximum 600 boucliers).

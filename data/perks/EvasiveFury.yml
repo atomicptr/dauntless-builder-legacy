@@ -14,32 +14,3 @@ effects:
     description: +12.5% Attack Speed for 20 seconds after dodging through an attack
   '6':
     description: +15% Attack Speed for 20 seconds after dodging through an attack
-i18n:
-  fr:
-    name: Furie évasive
-    description: Augmente temporairement la vitesse d'attaque après une esquive parfaite.
-    effects:
-      '1':
-        description: >-
-          Après avoir esquivé une attaque, gagnez +4% de vitesse d'attaque
-          pendant 20 secondes
-      '2':
-        description: >-
-          Après avoir esquivé une attaque, gagnez +6% de vitesse d'attaque
-          pendant 20 secondes
-      '3':
-        description: >-
-          Après avoir esquivé une attaque, gagnez +8% de vitesse d'attaque
-          pendant 20 secondes
-      '4':
-        description: >-
-          Après avoir esquivé une attaque, gagnez +10% de vitesse d'attaque
-          pendant 20 secondes
-      '5':
-        description: >-
-          Après avoir esquivé une attaque, gagnez +12.5% de vitesse d'attaque
-          pendant 20 secondes
-      '6':
-        description: >-
-          Après avoir esquivé une attaque, gagnez +15% de vitesse d'attaque
-          pendant 20 secondes

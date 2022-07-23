@@ -4,10 +4,3 @@ part_effect:
   - >-
     After using any Valour combo, your next Valour combo within 5 seconds deals
     +30% damage.
-i18n:
-  fr:
-    name: Coeur de lame dynamique
-    part_effect:
-      - >-
-        Après avoir utilisé n'importe quel combo de Vaillance, votre prochain
-        combo de Vaillance dans les 5 secondes inflige +30% de dégâts.

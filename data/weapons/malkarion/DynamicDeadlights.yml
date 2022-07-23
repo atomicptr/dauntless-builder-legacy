@@ -18,12 +18,3 @@ unique_effects:
     description: >-
       Legendary Ability: Teleport to a Behemoth, dealing Shock damage. Usable
       once, but resets on Behemoth kill.
-i18n:
-  fr:
-    name: Lueurs mortes dynamiques
-    description: Un repeaters forgée à partir de Malkarion.
-    unique_effects:
-      - description: >-
-          Capacité légendaire : Téléporter vous à un Behemoth, infligeant des
-          dégâts foudroyants. Utilisable une fois, mais se réinitialise lors de
-          la mort d'un Behemoth.

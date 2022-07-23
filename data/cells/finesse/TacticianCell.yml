@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Tactician: 3
-i18n:
-  fr:
-    name: Tacticien
-    variants:
-      - Tacticien +1
-      - Tacticien +2
-      - Tacticien +3

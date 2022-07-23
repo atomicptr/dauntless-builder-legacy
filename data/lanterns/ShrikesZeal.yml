@@ -7,11 +7,3 @@ lantern_ability:
   hold: >-
     Creates an aura that grants nearby Slayers 15% increased move speed and
     attack speed for 10 seconds.
-i18n:
-  fr:
-    name: Fougue du Shrike
-    lantern_ability:
-      instant: null
-      hold: >-
-        Génère une aura qui augmente de 15% la vitess d'attaque et de
-        déplacement des Slayers proches pendant 10 secondes.

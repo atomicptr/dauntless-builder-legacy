@@ -24,14 +24,3 @@ unique_effects:
   - name: DodgePartDamage
     description: After dodging, your next attack deals +100 bonus damage and part damage
     powerSurged: true
-i18n:
-  fr:
-    name: Chant du Shrike
-    description: Une hache forgée à partir de Shrike
-    unique_effects:
-      - description: >-
-          Après avoir esquivé, votre prochaine attaque inflige +50 dégâts de
-          base et dégâts aux membres
-      - description: >-
-          Après avoir esquivé, votre prochaine attaque inflige +100 dégâts de
-          base et dégâts aux membres

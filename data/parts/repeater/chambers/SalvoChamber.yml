@@ -6,11 +6,3 @@ part_effect:
     Fires an explosive missile in a line, dealing 450 damage in an area upon
     impact.
   - 'Empowered: Fires 3 missiles in a spread.'
-i18n:
-  fr:
-    name: Chambre à salve
-    part_effect:
-      - >-
-        Tire un missile explosif en ligne droite qui, à l'impact, inflige 450 de
-        dégâts en zone.
-      - 'Aethérochargé: Tire 3 missiles en éventail qui inflige 500 de dégâts.'

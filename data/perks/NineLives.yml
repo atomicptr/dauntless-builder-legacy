@@ -29,39 +29,3 @@ effects:
         The first time you would be knocked out stay up and heal for 400 and
         become empowered for 10 seconds
     
-i18n:
-  fr:
-    name: Lernéen
-    description: >-
-      Donne une chance de réduire de moitié les dégâts reçus, les rangs
-      supérieurs permettent d'éviter d'être mis à terre.
-    effects:
-      '1':
-        description:
-          - +5% de chance de réduire de moitié les dégâts reçus
-          - null
-      '2':
-        description:
-          - +8% de chance de réduire de moitié les dégâts reçus
-          - null
-      '3':
-        description:
-          - +12% de chance de réduire de moitié les dégâts reçus
-          - null
-      '4':
-        description:
-          - +12% de chance de réduire de moitié les dégâts reçus
-          - La première fois que vous devriez être mis à terre
-          - vous restez debout et récupérez 400 points de vie
-      '5':
-        description:
-          - +16% de chance de réduire de moitié les dégâts reçus
-          - La première fois que vous devriez être mis à terre
-          - vous restez debout et récupérez 400 points de vie
-      '6':
-        description:
-          - +20% de chance de réduire de moitié les dégâts reçus
-          - La première fois que vous devriez être mis à terre
-          - >-
-            vous restez debout et récupérez 400 points de vie et gagnez en
-            Brutalité pendant 10 secondes

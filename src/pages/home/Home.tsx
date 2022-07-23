@@ -1,8 +1,8 @@
-import { GitHub } from "@mui/icons-material";
+import { GitHub, Translate } from "@mui/icons-material";
 import { Button, Grid, Stack, Typography } from "@mui/material";
 import BuildCard from "@src/components/BuildCard";
 import PageTitle from "@src/components/PageTitle";
-import { discordServerUrl, githubUrl, matrixChannelUrl } from "@src/constants";
+import { crowdinLink, discordServerUrl, githubUrl, matrixChannelUrl } from "@src/constants";
 import { selectConfiguration } from "@src/features/configuration/configuration-slice";
 import { selectFavorites } from "@src/features/favorites/favorites-slice";
 import { useAppSelector } from "@src/hooks/redux";
@@ -107,6 +107,14 @@ const Home: React.FC = () => {
                             target="_blank"
                         >
                             {t("pages.home.links.discord")}
+                        </Button>
+                        <Button
+                            component="a"
+                            href={crowdinLink}
+                            startIcon={<Translate />}
+                            target="_blank"
+                        >
+                            {t("pages.home.links.localize")}
                         </Button>
                     </Stack>
                 </Stack>

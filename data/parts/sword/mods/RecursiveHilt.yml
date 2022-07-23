@@ -4,10 +4,3 @@ part_effect:
   - >-
     Dealing damage with Bladerush restores 20 stamina and generates 3 Valour
     over 9 seconds. Does not stack.
-i18n:
-  fr:
-    name: Poignée récursive
-    part_effect:
-      - >-
-        Ingliger des dégâts avec «Ruée de lame» restaure 20 points d'endurance
-        et génère 3 Vaillances en 9 secondes. Ne se cumule pas.

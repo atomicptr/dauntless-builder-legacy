@@ -24,14 +24,3 @@ unique_effects:
   - name: DodgeExtendMantra
     description: After dodging though an attack, extend Mantra timeout by 3 seconds
     powerSurged: true
-i18n:
-  fr:
-    name: Briseurs de tempête
-    description: Cestes aethériques forgée à partir de trophées de Stormclaw.
-    unique_effects:
-      - description: >-
-          Après avoir esquivé une attaque, allonge le délai du mantra de 2
-          secondes.
-      - description: >-
-          Après avoir esquivé une attaque, allonge le délai du mantra de 3
-          secondes.

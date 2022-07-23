@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Omnisurge: 3
-i18n:
-  fr:
-    name: Omniflux
-    variants:
-      - Omniflux +1
-      - Omniflux +2
-      - Omniflux +3

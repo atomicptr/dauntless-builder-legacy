@@ -4,11 +4,3 @@ part_effect:
   - >-
     Loads ammo into the hammer before releasing, creating an aether vent that
     buffs players.
-i18n:
-  fr:
-    name: Scinde-terre majestueux
-    part_effect:
-      - >-
-        Maintenez pour charger des munitions dans le marteau. Libérez pour créer
-        un vent d'aether qui booste les joueurs qui passent dessus, leur
-        accordant jusqu'à +35% de dégâts en fonction de la qualité des munitions

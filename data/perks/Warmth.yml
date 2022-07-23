@@ -14,20 +14,3 @@ effects:
     description: Reduces duration of Chilled status by 80%
   '6':
     description: Immune to being Chilled
-i18n:
-  fr:
-    name: Chauffe
-    description: Protège contre l'effets «Ralenti».
-    effects:
-      '1':
-        description: Réduit la durée de l'effet de statut « Ralenti» de 10%
-      '2':
-        description: Réduit la durée de l'effet de statut « Ralenti» de 20%
-      '3':
-        description: Réduit la durée de l'effet de statut « Ralenti» de 40%
-      '4':
-        description: Réduit la durée de l'effet de statut « Ralenti» de 60%
-      '5':
-        description: Réduit la durée de l'effet de statut « Ralenti» de 80%
-      '6':
-        description: Immunité au ralentissement

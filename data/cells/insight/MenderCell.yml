@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Mender: 3
-i18n:
-  fr:
-    name: Guérisseur
-    variants:
-      - Guérisseur +1
-      - Guérisseur +2
-      - Guérisseur +3

@@ -34,18 +34,3 @@ unique_effects:
       can destroy the brand, prematurely detonating it for 50% increased damage.
       Charges every 90 seconds.
     powerSurged: true
-i18n:
-  fr:
-    name: Cauchemars de Pangar
-    description: Un repeaters forgée à partir de Pangar.
-    unique_effects:
-      - description: >-
-          Une fois chargée, votre prochaine attaque place une marque de givre
-          qui inflige 1000 de dégâts de givre après 30 secondes. Les Slayers
-          peuvent détruire la marque, la faisant exploser prématurément pour 50%
-          de dégâts supplémentaires. Se recharge toutes les 90 secondes.
-      - description: >-
-          Une fois chargée, votre prochaine attaque place une marque de givre
-          qui inflige 2500 de dégâts de givre après 30 secondes. Les Slayers
-          peuvent détruire la marque, la faisant exploser prématurément pour 50%
-          de dégâts supplémentaires. Se recharge toutes les 90 secondes.

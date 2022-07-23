@@ -15,7 +15,3 @@ perks:
   - name: Savagery
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Masque du quillperceur
-    description: Protection pour la tête forgée à partir de Quillshot.

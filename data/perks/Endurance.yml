@@ -14,20 +14,3 @@ effects:
     description: Increases Max Stamina by 80
   '6':
     description: Increases Max Stamina by 100
-i18n:
-  fr:
-    name: Endurance
-    description: Augmente l'endurance maximale.
-    effects:
-      '1':
-        description: Augmente l'endurance maximale de 10
-      '2':
-        description: Augmente l'endurance maximale de 20
-      '3':
-        description: Augmente l'endurance maximale de 40
-      '4':
-        description: Augmente l'endurance maximale de 60
-      '5':
-        description: Augmente l'endurance maximale de 80
-      '6':
-        description: Augmente l'endurance maximale de 100

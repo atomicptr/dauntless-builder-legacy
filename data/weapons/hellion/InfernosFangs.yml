@@ -24,14 +24,3 @@ unique_effects:
   - name: BlazeDamageOnNthHit
     description: The fifteenth hit in a row deals +225 damage and major blaze damage
     powerSurged: true
-i18n:
-  fr:
-    name: Crocs du Sixième Cercle
-    description: Une paire de chaînes-lames forgée avec des trophées d'Hellion.
-    unique_effects:
-      - description: >-
-          Le quinzième coup consécutif inflige +150 dégâts et de lourds dégâts
-          de braise
-      - description: >-
-          Le quinzième coup consécutif inflige +200 dégâts et de lourds dégâts
-          de braise

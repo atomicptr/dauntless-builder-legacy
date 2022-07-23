@@ -15,7 +15,3 @@ perks:
   - name: Savagery
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Gilet du quillperceur
-    description: Protection pour le torse forgée à partir de Quillshot.

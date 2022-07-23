@@ -5,12 +5,3 @@ part_effect:
     Hold to load ammo into the hammer. Release to create an aether vent that
     buffs players who step over it, granting them +40% damage reduction and up
     to 155 healing over 30 seconds when aethercharged.
-i18n:
-  fr:
-    name: Scinde-terre coeur de fer
-    part_effect:
-      - >-
-        Maintenez pour charger des munitions dans le marteau. Libérez pour créer
-        un puits d'aether qui booste les joueurs qui passent dessus, leur
-        accordant 40% de réduction de dégâts et les soignant de jusqu'à 155
-        points de vie en 30 secondes en aetherocharge

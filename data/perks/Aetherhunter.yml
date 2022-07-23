@@ -14,20 +14,3 @@ effects:
     description: +40% Damage vs Aether-charged Behemoths
   '6':
     description: +50% Damage vs Aether-charged Behemoths
-i18n:
-  fr:
-    name: Chasse-aether
-    description: Augmente les dégâts contre les Behemoths chargés d'aether.
-    effects:
-      '1':
-        description: +5% de dégâts contre les Behemoths chargés en aether
-      '2':
-        description: +10% de dégâts contre les Behemoths chargés en aether
-      '3':
-        description: +20% de dégâts contre les Behemoths chargés en aether
-      '4':
-        description: +30% de dégâts contre les Behemoths chargés en aether
-      '5':
-        description: +40% de dégâts contre les Behemoths chargés en aether
-      '6':
-        description: +50% de dégâts contre les Behemoths chargés en aether

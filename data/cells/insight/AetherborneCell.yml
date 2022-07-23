@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Aetherborne: 3
-i18n:
-  fr:
-    name: Jouvence aethérée
-    variants:
-      - Jouvence aethérée +1
-      - Jouvence aethérée +2
-      - Jouvence aethérée +3

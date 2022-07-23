@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Strategist: 3
-i18n:
-  fr:
-    name: Stratège
-    variants:
-      - Stratège +1
-      - Stratège +2
-      - Stratège +3

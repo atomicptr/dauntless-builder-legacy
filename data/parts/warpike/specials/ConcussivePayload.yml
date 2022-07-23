@@ -4,12 +4,3 @@ part_effect:
   - >-
     Press to convert meter into ammo. Hold to spend ammo to fire a missile that
     deals up to 1200 damage based on ammo quality and can interrupt Behemoths.
-i18n:
-  fr:
-    name: Charge à concussion
-    part_effect:
-      - >-
-        Appuyez pour convertir Ia jauge en munitions. Maintenez pour dépenser
-        des munitions et tirer un missile qui peut interrompre les Behemoths,
-        infligeantjusqu'a 1 200 points de dégats suivant la qualité des
-        munitions.

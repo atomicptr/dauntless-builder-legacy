@@ -15,7 +15,3 @@ perks:
   - name: Tenacious
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Puissance boréale
-    description: Protection pour les bras forgée à partir de Boreus.

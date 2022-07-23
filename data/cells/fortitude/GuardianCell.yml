@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Guardian: 3
-i18n:
-  fr:
-    name: Gardien
-    variants:
-      - Gardien +1
-      - Gardien +2
-      - Gardien +3

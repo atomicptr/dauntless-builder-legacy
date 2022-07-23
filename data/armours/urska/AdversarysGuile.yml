@@ -15,7 +15,3 @@ perks:
   - name: Cascade
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Malice de l'Adversaire
-    description: Protection pour la tête forgée à partir de Urska.

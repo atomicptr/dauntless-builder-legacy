@@ -24,10 +24,3 @@ unique_effects:
   - name: HeadDamage
     description: 30% damage vs Behemoth Heads
     powerSurged: true
-i18n:
-  fr:
-    name: Etincelles de lancer
-    description: Un repeaters forgée à partir de Drask.
-    unique_effects:
-      - description: 20% dégats contre les têtes de béhémoth
-      - description: 20% dégats contre les têtes de béhémoth

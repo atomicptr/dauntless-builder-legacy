@@ -43,26 +43,3 @@ unique_effects:
     description: >-
       After a critical strike, reduce the cooldown of Mag Bomb mode by 3
       seconds.
-i18n:
-  fr:
-    name: Soleils jumeaux
-    description: >-
-      Lance des magnétobombes explosives qui s'accrochent à la cible et
-      détonnent à la commande. Comme le dit l'ancien proverbe ostien, « Quand
-      les Soleils jumeaux se lèvent, votre journée est déjà finie. »
-    unique_effects:
-      - description: >-
-          Quand aetherochargé, gagne +40% de chances d'infliger un coup critique
-          au lieu d'infliger un bonus de dégâts.
-      - description: >-
-          Charge 8 magnétobombes dans votre chargeur. Elles s'accrochent aux
-          ennemis et détonnent lors du rechargement. La première magnétobombe
-          accrochée sur chaque partie de Behemoth inflige +300 de dégâts.
-      - description: >-
-          Ruez-vous dans une direction, devenant invulnérable pendant
-          l'animation. Après avoir esquivé à travers une attaque, lance 6
-          mini-tirs qui sont toujours critiques. En mode magnétobombe, lance 2
-          magnétobombes à la place.
-      - description: >-
-          Après un coup critique, réduit le temps de recharge du mode
-          Magnétobombe de 3 secondes.

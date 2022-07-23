@@ -9,16 +9,3 @@ active: >
   nearby target, prioritizing unbroken behemoth parts. For every 1% increase in
   movement speed, deal +5% damage to unbroken parts. Stacks are refreshed on
   use. 4 second cooldown.
-i18n:
-  fr:
-    name: Tempête
-    passive: >
-      Vitesse d’attaque +10 %.Esquiver une attaque confère une charge de
-      Vélocité. Chaque charge dure 45 secondes et augmente la vitesse de
-      déplacement de 3 %. 5 charges maximum.
-    active: >
-      Consomme une charge de Vélocité pour vous lancer en avant et infliger 450
-      dégâts foudroyants à une cible voisine, en visant en priorité les parties
-      de Behemoths non brisées. Pour chaque 1 % d’augmentation de vitesse de
-      déplacement, inflige +5 % de dégâts aux parties non brisées. Les charges
-      sont rafraîchies à l’utilisation.

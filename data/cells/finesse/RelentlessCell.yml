@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Relentless: 3
-i18n:
-  fr:
-    name: Implacable
-    variants:
-      - Implacable +1
-      - Implacable +2
-      - Implacable +3

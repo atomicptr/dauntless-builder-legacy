@@ -14,20 +14,3 @@ effects:
     description: +15% movement speed and -15% reduced sprint cost
   '6':
     description: +17.5% movement speed and -17.5% reduced sprint cost
-i18n:
-  fr:
-    name: Coureur
-    description: Augmente la vitesse de déplacement et réduit le coût du sprint.
-    effects:
-      '1':
-        description: +5% de vitesse de déplacement et -5% de coût de sprint
-      '2':
-        description: +7.5% de vitesse de déplacement et -7.5% de coût de sprint
-      '3':
-        description: +10% de vitesse de déplacement et -10% de coût de sprint
-      '4':
-        description: +12.5% de vitesse de déplacement et -12.5% de coût de sprint
-      '5':
-        description: +15% de vitesse de déplacement et -15% de coût de sprint
-      '6':
-        description: +17.5% de vitesse de déplacement et -17.5% de coût de sprint

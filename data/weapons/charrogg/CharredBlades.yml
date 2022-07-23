@@ -31,14 +31,3 @@ unique_effects:
     values:
       stamina: 150
       blazeDamage: 200
-i18n:
-  fr:
-    name: Lames charrbonisées
-    description: Une paire de chaînes-lames forgée à partir de Charrogg.
-    unique_effects:
-      - description: >-
-          Après avoir dépensé 150 d'endurance, la prochaine attaque émet un cône
-          de flammes qui inflige +100 de dégâts à chaque cible dans le cône.
-      - description: >-
-          Après avoir dépensé 150 d'endurance, la prochaine attaque émet un cône
-          de flammes qui inflige +200 de dégâts à chaque cible dans le cône.

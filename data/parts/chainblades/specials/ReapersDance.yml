@@ -7,14 +7,3 @@ part_effect:
     consumes 1 momentum. Secondary: A spinning slam that consumes all momentum
     and deals greatly increased damage per momentum consumed. (Consume 1
     momentum if no follow up is performed)
-i18n:
-  fr:
-    name: Danse de la Faucheuse
-    part_effect:
-      - >-
-        De loin : vous tire vers votre cible et vous donne un point de Danse
-        mortelle. Au corps à corps : Vous poussez de votre cible, puis utilisez
-        une attaque primaire ou secondaire pour enchainer. Enchainer vers une
-        attaque primaire donne un point de Danse mortelle. Enchainer vers une
-        attaque secondaire dépense des points et augmente les dégâts de
-        l'attaque de 40% par point dépensé

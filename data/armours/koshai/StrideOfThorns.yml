@@ -15,7 +15,3 @@ perks:
   - name: Predator
     value: 3
     powerSurged: true
-i18n:
-  fr:
-    name: Foulée de ronces
-    description: Une pièce d'armure forgée à partir de Souverain des Ronces.

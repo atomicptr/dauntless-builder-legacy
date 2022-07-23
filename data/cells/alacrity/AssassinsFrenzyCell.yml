@@ -13,10 +13,3 @@ variants:
     rarity: epic
     perks:
       Assassin's Frenzy: 3
-i18n:
-  fr:
-    name: Frénésie d'assassin
-    variants:
-      - Frénésie d'assassin +1
-      - Frénésie d'assassin +2
-      - Frénésie d'assassin +3
