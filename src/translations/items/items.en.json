@@ -738,7 +738,7 @@
     "item.perks.conduit.effects.5.description": "Using your lantern hold ability grants 12.5% attack speed to all Slayers for 10 seconds.",
     "item.perks.conduit.effects.6.description": "Using your lantern hold ability grants 15% attack speed to all Slayers for 10 seconds.",
     "item.perks.cunning.name": "Cunning",
-    "item.perks.cunning.description": "Grants a chance to deal double damage.",
+    "item.perks.cunning.description": "Grants a chance to critically strike, increasing damage dealt.",
     "item.perks.cunning.effects.1.description": "2% critical strike chance",
     "item.perks.cunning.effects.2.description": "3% critical strike chance",
     "item.perks.cunning.effects.3.description": "4% critical strike chance",
