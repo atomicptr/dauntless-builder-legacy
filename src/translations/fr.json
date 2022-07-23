@@ -93,7 +93,7 @@
         "favorites": {
             "build-name": "Build Name",
             "edit-name": "Edit Favorite Name",
-            "title": "My Builds"
+            "title": "Mes Builds"
         },
         "home": {
             "contributing-text": "If you're interested in contributing code or especially localizations please head over to our <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a>!",
@@ -109,7 +109,7 @@
             "test-builds": "Test Builds",
             "title": "Accueil",
             "welcome-text": "a free and open source web application for creating and sharing builds for the popular free to play monster hunting game Dauntless.",
-            "welcome-title": "Welcome to Dauntless Builder,"
+            "welcome-title": "Bienvenue sur Dauntless Builder,"
         },
         "metabuilds": {
             "generated": {
@@ -233,14 +233,14 @@
         },
         "settings": {
             "data": "Application Data",
-            "data-export": "Export",
-            "data-import": "Import",
-            "data-text": "Dauntless Builder is currently storing all data inside your browser, which means switching devices or browsers will not retain any of your favorite builds and/or other data. In the future we plan to allow some sort of cloud data syncing but until then, you can use Import/Export to backup your data and/or move it between devices.",
-            "dev-mode-toggle": "Toggle Developer Mode",
+            "data-export": "Exporter",
+            "data-import": "Importer",
+            "data-text": "Dauntless Builder enregistre vos préférence (build, favoris etc...) dans votre navigateur, en cas de changemant d'appareil ou de navigateur vous ne les conserverez pas. Une synchronisation dans le cloud est prévue, en attendant vous pouvez utiliser les boutons Importer/Exporter pour récupérer vos préférence sur un autre appareil.",
+            "dev-mode-toggle": "Mode développeur",
             "export-logs": "Export logs",
-            "general": "General",
-            "language": "Language",
-            "misc": "Misc",
+            "general": "Général",
+            "language": "Langue",
+            "misc": "Autres",
             "title": "Paramètres"
         }
     },
@@ -249,24 +249,24 @@
         "active-ability": "Capacité actif",
         "arms-armour": "Gants",
         "bond-weapon": "Lien",
-        "cancel": "Cancel",
-        "cell": "Cell",
-        "cell-slot": "Cell Slot",
+        "cancel": "Annuler",
+        "cell": "Cellule",
+        "cell-slot": "Cellule",
         "cell-type": {
-            "Alacrity": "Alacrity",
-            "Brutality": "Brutality",
+            "Alacrity": "Célérité",
+            "Brutality": "Brutalité",
             "Finesse": "Finesse",
-            "Fortitude": "Fortitude",
-            "Insight": "Insight",
+            "Fortitude": "Courage",
+            "Insight": "Acuité",
             "Prismatic": "Prismatic"
         },
-        "cells": "Cells",
-        "close": "Close",
-        "elemental-type": "Element",
+        "cells": "Cellules",
+        "close": "Fermer",
+        "elemental-type": "Élément",
         "elemental-types": {
             "Blaze": "Incandescant",
             "Frost": "Givrant",
-            "Radiant": "Radiant",
+            "Radiant": "Rayonnant",
             "Shock": "Foudroyant",
             "Terra": "Tellurique",
             "Umbral": "Obscur"
@@ -293,7 +293,7 @@
         "unique-effect": "effet unique",
         "unselect": "Select Nothing",
         "weapon": "Arme",
-        "weapon-type": "Weapon Type",
+        "weapon-type": "Type d'arme",
         "weapon-types": {
             "AetherStrikers": "Cestes aethériques",
             "Axe": "Hache",
