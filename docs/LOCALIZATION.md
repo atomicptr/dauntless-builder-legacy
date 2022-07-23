@@ -1,12 +1,7 @@
+**This is a technical documentation, if you are a normal user and want to help out with translations,
+please head over to our Crowdin page: https://crowdin.com/project/dauntless-builder**
+
 # Localization Documentation
-
-If you're interested in helping out but you are not very well versed with whats written in the "Technical Localization Documentation" below, please join our [Discord](https://discord.gg/hkMvhsfPjH) or [Matrix](https://matrix.to/#/#dauntlessbuilder:matrix.org) servers, we'll help you with contributing translations.
-
-[We are planning to potentially integrate Dauntless Builder with Crowdin](https://github.com/atomicptr/dauntless-builder/issues/227), which will hopefully make it a lot easier for most people to help out! :).
-
-You've been warned the next part is very technical:
-
-## Technical Localization Documentation
 
 Localization in Dauntless Builder is essentially split into two parts:
 
@@ -18,7 +13,9 @@ and is powered by [i18next](https://www.i18next.com/).
 The English localization is the source of all truths and is used as a fallback if the current user localization
 does not contain an entry.
 
-### App Localization
+**Please do not add translations manually, we are using Crowdin for this, see: https://crowdin.com/project/dauntless-builder**
+
+# App Localization
 
 These localization entries are handled by one big JSON file per language and can be found in `src/translations`.
 
@@ -48,98 +45,12 @@ instance French would be `src/translations/fr.json` copy over the identifier and
 
 The translation part can also contain variables which are referenced by surrounding them with two curly braces (see {{name}}).
 
-## Item Data Localization
+# Item Data Localization
 
-These localization entries are contained within the item data entries.
+Item data localization is derived from the JSON files in src/translations/items. The source language entries are automatically
+generated from the data yaml files.
 
-Lets translate an item!
-
-```yaml
-name: Agents of Decay
-description: A Slayer's aether strikers forged with Agarus trophies.
-icon: /assets/icons/weapons/agarus/AgentsOfDecay.png
-type: Aether Strikers
-damage: Blunt
-elemental: Terra
-cells: [Prismatic, Prismatic]
-power:
-    base: 100
-    powerSurged: 120
-bond:
-    elemental: Terra
-unique_effects:
-    - name: AgarusLegendaryAbility
-      icon: /assets/icons/abilities/AgarusLegendaryWeaponAbility.png
-      description: |
-          Legendary Ability: Revive all Slayers in a large radius, granting them healing over time and immunity to stagger. Usable while downed.
-```
-
-as you can (maybe) see this item does not feature any translations (yet) by the fact that the **i18n** item is missing.
-
-There are three values here that need to be translated **name**, **description** and the **unique_effect description**.
-Everything else is just data.
-
-Lets start by adding the i18n object with a name set for German:
-
-```yaml
-# ...
-i18n:
-    de:
-        name: German Name
-```
-
-The first level below **i18n** is reserved for language identifiers (see src/i18n.ts for more information) and right below
-that we have the identifier we want to overwrite for said language.
-
-Let's add the other entries:
-
-```yaml
-# ...
-i18n:
-    de:
-        name: German Name
-        description: German Description
-        unique_effect:
-            - description: German Unique Effect Description
-```
-
-similarly we can add as many language as we want, which would make the finished entry look like something like this:
-
-```yaml
-name: Agents of Decay
-description: A Slayer's aether strikers forged with Agarus trophies.
-icon: /assets/icons/weapons/agarus/AgentsOfDecay.png
-type: Aether Strikers
-damage: Blunt
-elemental: Terra
-cells: [Prismatic, Prismatic]
-power:
-    base: 100
-    powerSurged: 120
-bond:
-    elemental: Terra
-unique_effects:
-    - name: AgarusLegendaryAbility
-      icon: /assets/icons/abilities/AgarusLegendaryWeaponAbility.png
-      description: |
-          Legendary Ability: Revive all Slayers in a large radius, granting them healing over time and immunity to stagger. Usable while downed.
-i18n:
-    de:
-        name: German Name
-        description: German Description
-        unique_effect:
-            - description: German Unique Effect Description
-    ja:
-        name: Japanese Name
-        description: Japanese Description
-        unique_effect:
-            - description: Japanese Unique Effect Description
-```
-
-Keep in mind to see the changes in the frontend you need to generate translation files
-(which will be later located in src/translations/items) using the `yarn build:i18n` command.
-
-### Using variables in translation entries
+## Using variables in translation entries
 
 You might notice that this is kinda terrible if the entry contains data like for instance this example:
 
@@ -177,13 +88,15 @@ unique_effects:
           blazeDamage: 200
 ```
 
-### Adding a new language
+## Adding a new language
 
 You read what is written above this and want to start contributing but notice your language is missing?
 
 Adding a new language is fairly easy!
 
 Lets say we're adding support for Sindarin (for sake of the example we'll use **si** as the language code).
+
+**(Keep in mind we're only adding translations here manually as an example, this should generally be done via Crowdin)**
 
 First lets start by creating the file `src/translations/si.json`
 
@@ -263,27 +176,4 @@ export const muiLocaleComponent = () =>
 And is all you need to do. Now you should be able to select Sindarin in the settings and the title should be
 replaced with "Dauntless tamo".
 
-## What translations are missing!?
-
-You don't want to go through the list (understandable) to find that one or two missing keys? There is a script for that!
-
-```bash
-$ yarn check:missing-translations
-de: "alert.alpha-version" missing
-de: "alert.translation-warning" missing
-de: "app-name" missing
-de: "appbar.dev-menu.translation-check" missing
-de: "components.build-menu.added-build-to-favorites" missing
-de: "components.build-menu.copied-to-clipboard" missing
-de: "components.build-menu.copy-to-clipboard" missing
-de: "components.build-menu.favorite-build" missing
-de: "components.build-menu.open-last-edited-build" missing
-de: "components.build-menu.remove-build-from-favorites" missing
-de: "components.build-menu.unfavorite-build" missing
-de: "components.build-warning.invalid-build" missing
-de: "components.build-warning.upgraded-build" missing
-de: "components.item-picker.lantern-hold-line" missing
-...
-```
-
-if something for English shows up you probably used an invalid key somewhere.
+**Please open a pull request with the new language next, so that I can add it to Crowdin too :)**
