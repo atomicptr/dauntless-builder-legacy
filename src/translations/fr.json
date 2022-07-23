@@ -1,7 +1,7 @@
 {
     "alert": {
-        "alpha-version": "Dauntless Builder v2 est actuellement en version bêta, si vous rencontrez des problèmes ou suggestion d'amélioration, merci de nous les communiquer sur <a style=\"color: #fff;\" href=\"{{issuesUrl}}\" target=\"_blank\">Github</a>, <a style=\"color: #fff;\" href=\"{{matrixChannelUrl}}\" target=\"_blank\">Matrix Channel</a> ou <a style=\"color: #fff;\" href=\"{{discordServerUrl}}\" target=\"_blank\">Discord</a>.",
-        "translation-warning": "Vous consultez actuellement cette page en <b>{{languageName}}</b>, les traductions sont actuellement en bêta. Si vous parlez cette langue, pensez à <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">contribuer a la traduction</a>."
+        "alpha-version": "Dauntless Builder v2 est actuellement en version bêta, si vous rencontrez des problèmes, merci de nous les communiquer sur <a style=\"color: #fff;\" href=\"{{issuesUrl}}\" target=\"_blank\">Github</a>, <a style=\"color: #fff;\" href=\"{{matrixChannelUrl}}\" target=\"_blank\">Matrix Channel</a> ou <a style=\"color: #fff;\" href=\"{{discordServerUrl}}\" target=\"_blank\">Discord</a>.",
+        "translation-warning": "Vous consultez actuellement cette page en <b>{{languageName}}</b>, les traductions sont actuellement en bêta. Si vous parlez cette langue, pensez à <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">contribuer à la traduction</a>."
     },
     "app-name": "Dauntless Builder",
     "appbar": {
@@ -36,7 +36,7 @@
     "drawer": {
         "about": "$t(pages.about.title)",
         "build-finder": "$t(pages.build-finder.title)",
-        "home": "Accueil",
+        "home": "$t(pages.home.title)",
         "meta-builds": "$t(pages.metabuilds.title)",
         "my-builds": "Mes builds",
         "new-build": "Nouveau",
@@ -101,10 +101,11 @@
             "links": {
                 "discord": "Discord",
                 "github": "Github",
+                "localize": "Contribuer à la traduction",
                 "matrix": "Matrix"
             },
             "links-title": "Liens",
-            "localization-text": "Le constructeur Dauntless prend désormais en charge les localisations, rendez-vous sur la page des paramètres et sélectionnez votre langue préférée. Si elle n'était pas déjà sélectionnée automatiquement ! Si cette langue n'est pas prise en charge et que vous aimeriez l'aider, veuillez lire la section \"Contribution\" ci-dessous.",
+            "localization-text": "Dauntless Builder prend désormais en charge plusieurs langue. Rendez-vous dans \"Paramètres\" pour choisir une langue ! Certaines traductions sont actuellement complète, vous pouvais aider le projet via la section \"Contribuer à la traduction\" ci-dessous.",
             "localization-title": "Localisation",
             "test-builds": "Builds Tests",
             "title": "Accueil",

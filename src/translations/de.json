@@ -36,7 +36,7 @@
     "drawer": {
         "about": "$t(pages.about.title)",
         "build-finder": "$t(pages.build-finder.title)",
-        "home": "Startseite",
+        "home": "$t(pages.home.title)",
         "meta-builds": "$t(pages.metabuilds.title)",
         "my-builds": "$t(pages.favorites.title)",
         "new-build": "Neuer Build",
@@ -101,6 +101,7 @@
             "links": {
                 "discord": "Discord",
                 "github": "Github",
+                "localize": "Help with localization",
                 "matrix": "Matrix"
             },
             "links-title": "Links",
