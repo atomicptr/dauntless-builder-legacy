@@ -1,36 +1,36 @@
 {
     "alert": {
-        "alpha-version": "Dauntless Builder v2 ist gerade in Beta. Solltest du Probleme finden, bitte melde diese auf <a style=\"color: #fff;\" href=\"{{issuesUrl}}\" target=\"_blank\">Github</a>, unserem <a style=\"color: #fff;\" href=\"{{matrixChannelUrl}}\" target=\"_blank\">Matrix Kanal</a> oder unserem <a style=\"color: #fff;\" href=\"{{discordServerUrl}}\" target=\"_blank\">Discord Server</a>.",
+        "alpha-version": "Dauntless Builder v2 is currently in beta, if you encounter problems or have feedback please submit them to our <a style=\"color: #fff;\" href=\"{{issuesUrl}}\" target=\"_blank\">Github Issues</a>, <a style=\"color: #fff;\" href=\"{{matrixChannelUrl}}\" target=\"_blank\">Matrix Channel</a> or <a style=\"color: #fff;\" href=\"{{discordServerUrl}}\" target=\"_blank\">Discord Server</a>.",
         "translation-warning": "You're currently viewing this page with your language set to <b>{{languageName}}</b>, translations are currently in beta and are very spotty. If you speak this language, please consider <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">contributing to the translation efforts</a>."
     },
     "app-name": "Dauntless Builder",
     "appbar": {
         "dev-menu": {
-            "translation-check": "Übersetzungs-Prüfung"
+            "translation-check": "Translation Check"
         }
     },
     "components": {
         "build-menu": {
-            "added-build-to-favorites": "Build \"{{name}}\" wurde zu Meinen Builds hinzugefügt.",
+            "added-build-to-favorites": "Added build \"{{name}}\" to favorites.",
             "build-name": "Build Name",
-            "copied-to-clipboard": "In die Zwischenablage kopiert.",
-            "copy-to-clipboard": "In die Zwischenablage kopieren",
-            "favorite-build": "Füge diesen Build zu Meinen Builds hinzu",
-            "open-last-edited-build": "Öffne den Build den du zuletzt editiert hast",
-            "remove-build-from-favorites": "Build \"{{name}}\" wurde von Meinen Builds entfernt.",
+            "copied-to-clipboard": "Copied to Clipboard",
+            "copy-to-clipboard": "Copy build to clipboard",
+            "favorite-build": "Add this build to your favorites",
+            "open-last-edited-build": "Open your last edited build",
+            "remove-build-from-favorites": "Removed build \"{{name}}\" from favorites.",
             "set-build-name": "Set Build Name",
-            "unfavorite-build": "Entferne diesen Build von Meinen Builds"
+            "unfavorite-build": "Remove this build from your favorites"
         },
         "build-warning": {
-            "invalid-build": "Wegen Änderungen in Dauntless ist dieser Build nicht mehr kompatibel mit der aktuellen Version von Dauntless Builder. Eins oder mehr Teile wurden entfernt um diesen Build darzustellen.",
-            "upgraded-build": "Dieser Build wurde für eine ältere Version von Dauntless erstellt und ist möglicherweise nicht mehr aktuell."
+            "invalid-build": "Due to changes in Dauntless this build is no longer compatible with the current version of Dauntless Builder, one or more parts have been removed in order to display it.",
+            "upgraded-build": "This build was made for an earlier version of Dauntless and might be outdated."
         },
         "item-picker": {
             "lantern-hold-line": "<b>$t(terms.hold)</b>: {{hold}}",
             "omnicell-passive-line": "<b>$t(terms.passive)</b>: {{passive}}"
         },
         "item-select-dialog": {
-            "select-text": "{{name}} auswählen"
+            "select-text": "Select {{name}}"
         }
     },
     "drawer": {
@@ -39,65 +39,65 @@
         "home": "$t(pages.home.title)",
         "meta-builds": "$t(pages.metabuilds.title)",
         "my-builds": "$t(pages.favorites.title)",
-        "new-build": "Neuer Build",
+        "new-build": "New Build",
         "settings": "$t(pages.settings.title)"
     },
-    "feature-disabled-browser": "Diese Funktion ist für diesen Webbrowser aktuell deaktiviert.",
+    "feature-disabled-browser": "This feature is currently disabled for this web browser.",
     "misc": {
         "dauntless-version": "Dauntless v{{version}}",
         "discord-server": "Dauntless Builder Discord Server",
         "github-repository": "Github Repository",
         "matrix-channel": "Dauntless Builder Matrix Server",
-        "patch-url": "https://playdauntless.com/de/patch-notes/{{version}}"
+        "patch-url": "https://playdauntless.com/patch-notes/{{version}}"
     },
     "pages": {
         "404": {
-            "not-found": "Seite konnte nicht gefunden werden."
+            "not-found": "Page Not Found"
         },
         "about": {
             "assets": "Assets",
-            "assets-text": "Alle mit Dauntless zusammenhängenden Assets sind das geistige Eigentum von Phoenix Labs.",
-            "contributors": "Mitmacher",
-            "dependencies": "Abhängigkeiten ({{number}})",
-            "main-text": "Dauntless Builder ist freie und quelloffene Software lizensiert unter den Bedingungen der <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> Lizenz.",
-            "privacy": "Datenschutz",
-            "privacy-text": "Wir sammeln keine Daten.",
-            "source-code": "Quellcode",
-            "title": "Über"
+            "assets-text": "All Dauntless related assets are the intellectual property of Phoenix Labs.",
+            "contributors": "Contributors",
+            "dependencies": "Dependencies ({{number}})",
+            "main-text": "Dauntless Builder is free and open source software licensed under the terms of the <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> license.",
+            "privacy": "Privacy",
+            "privacy-text": "We are not collecting any data.",
+            "source-code": "Source Code",
+            "title": "About"
         },
         "build": {
-            "click-here-to-select": "Hier klicken um eins auszuwählen",
-            "filter-by": "Nach {{name}} filtern",
-            "no-perks": "Keine Skills verfügbar.",
-            "no-x-selected": "Kein <b>{{name}}</b> ausgewählt.",
-            "part-select-dialog-title": "Waffenteil auswählen",
-            "power-surged-add": "Verbessern",
-            "power-surged-remove": "Standard",
+            "click-here-to-select": "Click here to select one.",
+            "filter-by": "Filter by {{name}}",
+            "no-perks": "No perks available.",
+            "no-x-selected": "No <b>{{name}}</b> selected.",
+            "part-select-dialog-title": "Select weapon part",
+            "power-surged-add": "Power Surge",
+            "power-surged-remove": "Base Power",
             "title": "{{weaponName}} {{omnicell}} Build",
-            "toggle-filters": "Anzeige von Filtern umschalten",
-            "toggle-unique-effects": "Anzeige von Einzigartigen Effekten umschalten"
+            "toggle-filters": "Toggle display of filters",
+            "toggle-unique-effects": "Toggle display of unique effects"
         },
         "build-finder": {
             "builds-title": "Builds ({{num}})",
-            "dev-clear-perks": "Alle Skills entfernen",
-            "dev-number-of-builds": "Anzahl der Builds: {{num}}",
-            "dev-number-of-perks": "Anzahl der ausgewählten Fähigkeiten: {{num}}",
-            "dev-options-title": "Entwickler Einstellungen",
-            "dev-set-perks": "Skills direkt setzen",
+            "dev-clear-perks": "Clear All Perks",
+            "dev-number-of-builds": "Number of Builds: {{num}}",
+            "dev-number-of-perks": "Number of Perks selected: {{num}}",
+            "dev-options-title": "Development Options",
+            "dev-set-perks": "Set Perks",
             "filter-title": "Filter",
             "perks-title": "$t(terms.perks)",
-            "remove-exotics": "Exotische Items entfernen",
-            "remove-legendary": "Legendäre Waffen entfernen",
+            "remove-exotics": "Remove Exotic Items",
+            "remove-legendary": "Remove Legendary Weapons",
             "title": "Build Finder"
         },
         "favorites": {
             "build-name": "Build Name",
-            "edit-name": "Meinen Build editieren",
-            "title": "Meine Builds"
+            "edit-name": "Edit Favorite Name",
+            "title": "My Builds"
         },
         "home": {
-            "contributing-text": "Solltest du Interesse haben Quellcode oder Lokalisierungen beizutragen, bitte schau dir unsere <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a> Seite an!",
-            "contributing-title": "Mitmachen",
+            "contributing-text": "If you're interested in contributing code or especially localizations please head over to our <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a>!",
+            "contributing-title": "Contributing",
             "links": {
                 "discord": "Discord",
                 "github": "Github",
@@ -105,12 +105,12 @@
                 "matrix": "Matrix"
             },
             "links-title": "Links",
-            "localization-text": "Dauntless Builder unterstützt mehrere Sprachen, bitte schau dir die Einstellungsseite an und wähle deine Lieblingssprache aus wenn diese nicht schon automatisch ausgewählt worden ist! Sollte deine Sprache aktuell nicht unterstützt sein und du hast Interesse auszuhelfen, bitte lese dir die \"Mitmachen\" Sektion etwas weiter unten durch.",
-            "localization-title": "Lokalisierung",
+            "localization-text": "Dauntless Builder now supports localizations, please head over to the Settings page and select your preferred language if it wasn't already picked up automatically! If that language is currently unsupported and you'd be interested in helping, please read the \"Contributing\" section below.",
+            "localization-title": "Localization",
             "test-builds": "Test Builds",
-            "title": "Startseite",
-            "welcome-text": "eine freie und quelloffene Webanwendung zum erstellen und teilen von Builds für das beliebte Monsterjagdspiel Dauntless.",
-            "welcome-title": "Willkommen bei Dauntless Builder,"
+            "title": "Home",
+            "welcome-text": "a free and open source web application for creating and sharing builds for the popular free to play monster hunting game Dauntless.",
+            "welcome-title": "Welcome to Dauntless Builder,"
         },
         "metabuilds": {
             "generated": {
@@ -182,7 +182,7 @@
                     },
                     "Discipline": {
                         "description": "Discipline is a high-risk high-reward Omnicell, featuring a high damage parry ability that grants you stacks of critical damage if timed correctly and, at max stacks, grants you a high amount of critical chance.",
-                        "name": "Disziplin"
+                        "name": "Discipline"
                     },
                     "Escalations": {
                         "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear, and builds that have Escalation gear and are built around Granny Stega's Amp for lifesteal.",
@@ -199,20 +199,20 @@
                     },
                     "Iceborne": {
                         "description": "Iceborne provides lifesteal and damage reduction the less health you have, with an active ability that grants hyperarmor and more lifesteal. The active deals more damage when used at maximum health.",
-                        "name": "Eisgeboren"
+                        "name": "Iceborne"
                     },
                     "Revenant": {
                         "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 125 healing over 10 seconds — after Revenant expires.",
-                        "name": "Wiedergänger"
+                        "name": "Revenant"
                     },
                     "Tempest": {
                         "description": "Tempest features 10% passive attack speed bonus and the ability to build up stacks of Velocity when dodging through attacks. You spend the stacks to dash and deal damage based on how much movespeed you currently have. The movespeed bonus damage only applies to unbroken parts.",
-                        "name": "Sturm"
+                        "name": "Tempest"
                     }
                 },
                 "title": "Dauntless Meta Builds - 1.10+"
             },
-            "note": "Die Builds die hier aufgelistet sind wurden automatisch von der <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>Community Meta Builds Tabelle</a> extrahiert, solltest du Feedback haben bitte gib dies an die Leute im #meta-discussion Channel im <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>offiziellen Dauntless Discord Server</a>!",
+            "note": "The builds listed here are automatically extracted from the <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>Community Meta Builds Spreadsheet</a>, if you have feedback please pass it along to the people in the #meta-discussion channel on the <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>official Dauntless Discord server</a>!",
             "subcategories": {
                 "The Hunger": "The Hunger",
                 "heroics": "Heroics",
@@ -221,88 +221,88 @@
             },
             "title": "Meta Builds",
             "vsElement": {
-                "Blaze": "gegen. Brand",
-                "Frost": "gegen Frost",
-                "Radiant": "gegen Licht",
-                "Shock": "gegen Schock",
-                "Terra": "gegen Terra",
-                "Umbral": "gegen Schatten"
+                "Blaze": "vs. Blaze",
+                "Frost": "vs. Frost",
+                "Radiant": "vs. Radiant",
+                "Shock": "vs. Shock",
+                "Terra": "vs. Terra",
+                "Umbral": "vs. Umbral"
             }
         },
         "newbuild": {
-            "title": "Erstelle einen neuen Build"
+            "title": "Create a new build"
         },
         "settings": {
-            "data": "Anwendungsdaten",
-            "data-export": "Exportieren",
-            "data-import": "Importieren",
-            "data-text": "Dauntless Builder speichert aktuell alle Daten in deinem Webbrowser, was bedeutet das wenn du Geräte oder Browser wechselst diese Daten nicht mehr zur Verfügung stehen. In der Zukunft ist geplant eine Art Cloudsynchronisierung zu erlauben, bis dahin kannst du Importieren/Exportieren nutzen um deine Daten zu sichern und zwischen Geräten zu bewegen.",
-            "dev-mode-toggle": "Entwicklermodus umschalten",
-            "export-logs": "Logs exportieren",
-            "general": "Allgemein",
-            "language": "Sprache",
-            "misc": "Sonstiges",
-            "title": "Einstellungen"
+            "data": "Application Data",
+            "data-export": "Export",
+            "data-import": "Import",
+            "data-text": "Dauntless Builder is currently storing all data inside your browser, which means switching devices or browsers will not retain any of your favorite builds and/or other data. In the future we plan to allow some sort of cloud data syncing but until then, you can use Import/Export to backup your data and/or move it between devices.",
+            "dev-mode-toggle": "Toggle Developer Mode",
+            "export-logs": "Export logs",
+            "general": "General",
+            "language": "Language",
+            "misc": "Misc",
+            "title": "Settings"
         }
     },
     "terms": {
-        "active": "Aktiv",
-        "active-ability": "Aktive Fähigkeit",
-        "arms-armour": "Handschuhe",
-        "bond-weapon": "Bindung",
-        "cancel": "Abbrechen",
-        "cell": "Zelle",
-        "cell-slot": "Zellen Slot",
+        "active": "Active",
+        "active-ability": "Active Ability",
+        "arms-armour": "Arms Armour",
+        "bond-weapon": "Bond Weapon",
+        "cancel": "Cancel",
+        "cell": "Cell",
+        "cell-slot": "Cell Slot",
         "cell-type": {
-            "Alacrity": "Schnelligkeit",
-            "Brutality": "Brutalität",
+            "Alacrity": "Alacrity",
+            "Brutality": "Brutality",
             "Finesse": "Finesse",
-            "Fortitude": "Stärke",
-            "Insight": "Erkenntnis",
-            "Prismatic": "Prisma"
+            "Fortitude": "Fortitude",
+            "Insight": "Insight",
+            "Prismatic": "Prismatic"
         },
-        "cells": "Zellen",
-        "close": "Schließen",
+        "cells": "Cells",
+        "close": "Close",
         "elemental-type": "Element",
         "elemental-types": {
-            "Blaze": "Brand",
+            "Blaze": "Blaze",
             "Frost": "Frost",
-            "Radiant": "Licht",
-            "Shock": "Schock",
+            "Radiant": "Radiant",
+            "Shock": "Shock",
             "Terra": "Terra",
-            "Umbral": "Schatten"
+            "Umbral": "Umbral"
         },
-        "head-armour": "Helm",
-        "hold": "Halten",
-        "lantern": "Lanterne",
-        "legs-armour": "Stiefel",
-        "omnicell": "Omnizelle",
-        "part": "Waffenteil",
+        "head-armour": "Head Armour",
+        "hold": "Hold",
+        "lantern": "Lantern",
+        "legs-armour": "Legs Armour",
+        "omnicell": "Omnicell",
+        "part": "Part",
         "parts": {
-            "chamber": "Kammer",
-            "grip": "Griff",
+            "chamber": "Chamber",
+            "grip": "Grip",
             "mod": "Mod",
-            "special": "Spezial"
+            "special": "Special"
         },
-        "passive": "Passive Fähigkeit",
-        "perks": "Skills",
-        "power": "Kraftwert",
-        "resistance": "Widerstandswert",
-        "save": "Speichern",
-        "search": "Suchen",
-        "torso-armour": "Körperpanzerung",
-        "unique-effect": "Einzigartige Fähigkeit",
-        "unselect": "Nichts auswählen",
-        "weapon": "Waffe",
-        "weapon-type": "Waffenart",
+        "passive": "Passive",
+        "perks": "Perks",
+        "power": "Power",
+        "resistance": "Resistance",
+        "save": "Save",
+        "search": "Search",
+        "torso-armour": "Torso Armour",
+        "unique-effect": "Unique Effect",
+        "unselect": "Select Nothing",
+        "weapon": "Weapon",
+        "weapon-type": "Weapon Type",
         "weapon-types": {
-            "AetherStrikers": "Stürmer",
-            "Axe": "Axt",
-            "ChainBlades": "Kettenklingen",
+            "AetherStrikers": "Aether Strikers",
+            "Axe": "Axe",
+            "ChainBlades": "Chain Blades",
             "Hammer": "Hammer",
-            "Repeater": "Repetierpistolen",
-            "Sword": "Schwert",
-            "WarPike": "Speer"
+            "Repeater": "Repeater",
+            "Sword": "Sword",
+            "WarPike": "War Pike"
         }
     }
 }

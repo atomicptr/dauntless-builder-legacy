@@ -6,7 +6,7 @@
     "app-name": "Dauntless Builder",
     "appbar": {
         "dev-menu": {
-            "translation-check": "Vérification de la traduction"
+            "translation-check": "Vérifier les traductions"
         }
     },
     "components": {
@@ -16,9 +16,9 @@
             "copied-to-clipboard": "Copié dans le presse papier",
             "copy-to-clipboard": "Copie du build dans le presse papier",
             "favorite-build": "Ajouter aux favoris",
-            "open-last-edited-build": "Ouverture de votre dernier build modifié",
+            "open-last-edited-build": "Ouvrir votre dernier build modifié",
             "remove-build-from-favorites": "Supression du build \"{{name}}\" de vos favoris.",
-            "set-build-name": "Set Build Name",
+            "set-build-name": "Nom du build",
             "unfavorite-build": "Supprimer des favoris"
         },
         "build-warning": {
@@ -56,7 +56,7 @@
         },
         "about": {
             "assets": "Assets",
-            "assets-text": "All Dauntless related assets are the intellectual property of Phoenix Labs.",
+            "assets-text": "Tous les assets liés à Dauntless sont la propriété intellectuelle de Phoenix Labs.",
             "contributors": "Contributeurs",
             "dependencies": "Dépendances ({{number}})",
             "main-text": "Dauntless Builder est un logiciel libre et open source licencié selon les termes de la licence <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a>.",
@@ -74,8 +74,8 @@
             "power-surged-add": "Afflux de puissance",
             "power-surged-remove": "Puissance de base",
             "title": "{{weaponName}} {{omnicell}} Build",
-            "toggle-filters": "Toggle display of filters",
-            "toggle-unique-effects": "Toggle display of unique effects"
+            "toggle-filters": "Activer/Désactiver l'affichage des filtres",
+            "toggle-unique-effects": "Activer/Désactiver l'affichage des effets uniques"
         },
         "build-finder": {
             "builds-title": "Builds ({{num}})",
@@ -83,7 +83,7 @@
             "dev-number-of-builds": "Nombre de builds: {{num}}",
             "dev-number-of-perks": "Nombre d'effets sélectionnés: {{num}}",
             "dev-options-title": "Option de développement",
-            "dev-set-perks": "Set Perks",
+            "dev-set-perks": "Définir les effets",
             "filter-title": "Filtre",
             "perks-title": "$t(terms.perks)",
             "remove-exotics": "Enlever les équipements éxotiques",
@@ -92,11 +92,11 @@
         },
         "favorites": {
             "build-name": "Nom du build",
-            "edit-name": "Edit Favorite Name",
+            "edit-name": "Modifier le nom du favoris",
             "title": "Mes Builds"
         },
         "home": {
-            "contributing-text": "Si vous êtes intéressé par une contribution de code ou des localisations particulières, veuillez vous rendre sur notre <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a>!",
+            "contributing-text": "Si souhaitai apporter votre contribution au projet, rendez-vous sur notre <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a> ou sur Discord !",
             "contributing-title": "Contributeurs",
             "links": {
                 "discord": "Discord",
@@ -105,7 +105,7 @@
                 "matrix": "Matrix"
             },
             "links-title": "Liens",
-            "localization-text": "Dauntless Builder prend désormais en charge plusieurs langue. Rendez-vous dans \"Paramètres\" pour choisir une langue ! Certaines traductions sont actuellement complète, vous pouvais aider le projet via la section \"Contribuer à la traduction\" ci-dessous.",
+            "localization-text": "Dauntless Builder prend désormais en charge plusieurs langue. Rendez-vous dans \"Paramètres\" pour choisir une langue ! Certaines traductions sont actuellement incomplète, vous pouvais aider le projet via la section \"Contribuer à la traduction\" ci-dessous.",
             "localization-title": "Localisation",
             "test-builds": "Builds Tests",
             "title": "Accueil",
@@ -129,32 +129,32 @@
                     "Chrono (Valo)": "Chrono (Valo)",
                     "Chrono (Valo) Resolve": "Chrono (Valo) Resolve",
                     "Chrono (Valo) Wound": "Chrono (Valo) Wound",
-                    "Disc Pred": "Disc Pred",
+                    "Disc Pred": "Discipline Prédateur",
                     "Disc Sav": "Disc Sav",
                     "Hellion": "Hellion",
                     "Kharabak": "Kharabak",
-                    "Malk (S) Speed": "Malk (S) Speed",
-                    "Malk (S) Survival": "Malk (S) Survival",
-                    "Malk (Sahvyt)": "Malk (Sahvyt)",
+                    "Malk (S) Speed": "Malkarion (S) Vitesse",
+                    "Malk (S) Survival": "Malkarion (S) Survie",
+                    "Malk (Sahvyt)": "Malkarion (Sahvyt)",
                     "Malk (Sahvyt) Resolve": "Malk (Sahvyt) Resolve",
-                    "Malk (Sahvyt) Wound": "Malk (Sahvyt) Wound",
+                    "Malk (Sahvyt) Wound": "Malkarion (Sahvyt) Mutilation",
                     "Pangar": "Pangar",
-                    "Prismedic": "Prismedic",
-                    "Rage Pred": "Rage Pred",
+                    "Prismedic": "Grâce Prismatique médecin",
+                    "Rage Pred": "Rage Prédateur",
                     "Rezakiri": "Rezakiri",
                     "Riftstalker": "Riftstalker",
                     "Sahvyt": "Sahvyt",
                     "Thrax (Rift)": "Thrax (Rift)",
                     "Thrax (Rift) Resolve": "Thrax (Rift) Resolve",
-                    "Thrax (Rift) Wound": "Thrax (Rift) Wound",
-                    "Torg (C) Speed": "Torg (C) Speed",
-                    "Torg (C) Survival": "Torg (C) Survival",
-                    "Torg (Charrogg)": "Torg (Charrogg)",
+                    "Thrax (Rift) Wound": "Thrax (Rift) Mutilation",
+                    "Torg (C) Speed": "Torgadoro (C) Vitesse",
+                    "Torg (C) Survival": "Torgadoro (C) Survie",
+                    "Torg (Charrogg)": "Torgadoro (Charrogg)",
                     "Torg (Charrogg) Resolve": "Torg (Charrogg) Resolve",
-                    "Torg (H) Speed": "Torg (H) Speed",
-                    "Torg (H) Survival": "Torg (H) Survival",
-                    "Torg (Hellion)": "Torg (Hellion)",
-                    "Torg (Hellion) Wound": "Torg (Hellion) Wound",
+                    "Torg (H) Speed": "Torgadoro (H) Vitesse",
+                    "Torg (H) Survival": "Torgadoro (H) Survie",
+                    "Torg (Hellion)": "Torgadoro (Hellion)",
+                    "Torg (Hellion) Wound": "Torgadoro (Hellion) Mutilation",
                     "Urska (Boreus)": "Urska (Boreus)",
                     "Urska (F)    Speed": "Urska (F)    Speed",
                     "Urska (F)  Speed": "Urska (F)  Speed",
@@ -178,7 +178,7 @@
                     },
                     "Catalyst": {
                         "description": "These are the best builds you can have for general hunting, maximizing damage and using Blitz tonics as your source of attack speed.\nRecommended tonics for maximum damage: Frenzy, Blitz, Aetherdrive.",
-                        "name": "Catalyst"
+                        "name": "Catalyse"
                     },
                     "Discipline": {
                         "description": "Discipline is a high-risk high-reward Omnicell, featuring a high damage parry ability that grants you stacks of critical damage if timed correctly and, at max stacks, grants you a high amount of critical chance.",
@@ -186,40 +186,40 @@
                     },
                     "Escalations": {
                         "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear, and builds that have Escalation gear and are built around Granny Stega's Amp for lifesteal.",
-                        "name": "Escalations",
+                        "name": "Ascensions",
                         "subcategoryDescription": {
                             "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive. Bulwark for survivability.",
                             "legendaries": "Builds for the various Escalations. Use Strega's talent for sustain on most Escalations, Aspect of the Mender on Frost Escalation.",
-                            "preEsca": "Builds for the various Escalations. Contains no Trials cells nor Escalation gear."
+                            "preEsca": "Build pour les ascensions. Ils ne contiennent pas de cellule issues des épreuve ni d'équipement d'ascension."
                         }
                     },
                     "Exotics": {
-                        "description": "Builds that use the Exotic Weapons and Helmets. Off-meta and generally worse than using regular weapons, with the exception of Molten Edict.",
-                        "name": "Exotics"
+                        "description": "Ces builds utilisents des armes et armures exotiques. En dehors de la méta and généralement moins bon que les armes \"classiques\" à l'exeption du Jugement du Vullrogg.",
+                        "name": "Éxotiques"
                     },
                     "Iceborne": {
-                        "description": "Iceborne provides lifesteal and damage reduction the less health you have, with an active ability that grants hyperarmor and more lifesteal. The active deals more damage when used at maximum health.",
+                        "description": "Sang froid offre un vol de vie et une réduction des dégâts. Moins vous avez de santé plus les bonus cités précédement sont importants. Sa capacité active permet de projeter une lance de glace qui inflige des dégâts de givre. Ces dégâts sont doublés si votre santé est au maximum. Cela vous empêche égalment d'être étourdi et vous confère du vol de vie.",
                         "name": "Sang froid"
                     },
                     "Revenant": {
-                        "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 125 healing over 10 seconds — after Revenant expires.",
-                        "name": "Revenant"
+                        "description": "Drainez jusqu'à 500 points de santé pour passer en état de Spectre et générer un Orbe du vide. Tous les 100 points de santé drainés, invoquez une Vigne obscure qui inflige d'importants dégâts obscurs. Si une Vigne obscure touche une cible, elle génère un Orbe du vide supplémentaire à l’impact. Ramasser un Orbe du vide confère une charge d’Énergie du vide, ce qui confère +4 % de dégâts et prolonge l’état de Spectre de 1 seconde. L’état de Spectre dure 15 secondes et empêche toute guérison.\nLorsque l’état de Spectre prend fin, chaque charge d’Énergie du vide confère 115 points de santé par seconde pendant 10 secondes.",
+                        "name": "Spectre"
                     },
                     "Tempest": {
                         "description": "Tempest features 10% passive attack speed bonus and the ability to build up stacks of Velocity when dodging through attacks. You spend the stacks to dash and deal damage based on how much movespeed you currently have. The movespeed bonus damage only applies to unbroken parts.",
-                        "name": "Tempest"
+                        "name": "Tempête"
                     }
                 },
                 "title": "Builds Dauntless Méta - 1.10+"
             },
             "note": "Les builds méta sont automatiquement extraits du <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>Google sheet de la communauté</a>, si vous avez des retours à faire sur ces build méta, veuillez les trasmettre aux personne dans le canal #meta-discussion sur le <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>Serveur Discord officiel</a>!",
             "subcategories": {
-                "The Hunger": "The Hunger",
+                "The Hunger": "Famine",
                 "heroics": "Héroïque",
                 "legendaries": "Légendaires",
-                "preEsca": "Pre-Escalation"
+                "preEsca": "Pré-Ascensions"
             },
-            "title": "Meta Builds",
+            "title": "Build Méta",
             "vsElement": {
                 "Blaze": "Contre Incandescent",
                 "Frost": "Contre Givrant",
@@ -233,12 +233,12 @@
             "title": "Creer un build"
         },
         "settings": {
-            "data": "Application Data",
+            "data": "Données de l'application",
             "data-export": "Exporter",
             "data-import": "Importer",
-            "data-text": "Dauntless Builder enregistre vos préférence (build, favoris etc...) dans votre navigateur, en cas de changemant d'appareil ou de navigateur vous ne les conserverez pas. Une synchronisation dans le cloud est prévue, en attendant vous pouvez utiliser les boutons Importer/Exporter pour récupérer vos préférence sur un autre appareil.",
+            "data-text": "Dauntless Builder enregistre vos préférences (build, favoris, etc...) dans votre navigateur, en cas de changement d'appareil ou de navigateur, vous ne les conserverez pas. Une synchronisation dans le cloud est prévue, en attendant, vous pouvez utiliser les boutons Importer/Exporter pour récupérer vos préférences sur un autre appareil.",
             "dev-mode-toggle": "Mode développeur",
-            "export-logs": "Export logs",
+            "export-logs": "Exporter les logs",
             "general": "Général",
             "language": "Langue",
             "misc": "Autres",
@@ -288,11 +288,11 @@
         "perks": "Effet",
         "power": "Puissance",
         "resistance": "Resistance",
-        "save": "Save",
+        "save": "Enregistrer",
         "search": "Chercher...",
         "torso-armour": "Torse",
         "unique-effect": "effet unique",
-        "unselect": "Select Nothing",
+        "unselect": "Retirer cellule",
         "weapon": "Arme",
         "weapon-type": "Type d'arme",
         "weapon-types": {
