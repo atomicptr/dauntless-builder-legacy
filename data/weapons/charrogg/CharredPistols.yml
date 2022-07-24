@@ -19,12 +19,15 @@ perks:
     powerSurged: true
 unique_effects:
   - name: CharrogSpentStaminaFireDamage
-    description: >-
-      After spending 50 stamina, next attack emits a cone of flame that deals
-      +100 blaze damage to each unique target within the cone
+    description: &charrogUeDescription >-
+      After spending {{stamina}} stamina, next attack emits a cone of flame that deals +{{blazeDamage}} blaze damage to each unique target within the cone
     powerSurged: false
+    values:
+      stamina: 50
+      blazeDamage: 100
   - name: CharrogSpentStaminaFireDamage
-    description: >-
-      After spending 50 stamina, next attack emits a cone of flame that deals
-      +200 blaze damage to each unique target within the cone
+    description: *charrogUeDescription
     powerSurged: true
+    values:
+      stamina: 50
+      blazeDamage: 200
