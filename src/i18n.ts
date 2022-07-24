@@ -10,12 +10,13 @@ import de from "./translations/de.json";
 import en from "./translations/en.json";
 import fr from "./translations/fr.json";
 import enItems from "./translations/items/items.en.json";
+import deItems from "./translations/items/items.de.json";
 import frItems from "./translations/items/items.fr.json";
 import jaItems from "./translations/items/items.ja.json";
 import ja from "./translations/ja.json";
 
 const resources = {
-    de: { translation: de },
+    de: { translation: { ...de, ...deItems } },
     en: { translation: { ...en, ...enItems } },
     fr: { translation: { ...fr, ...frItems } },
     ja: { translation: { ...ja, ...jaItems } },
