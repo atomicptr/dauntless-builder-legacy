@@ -28,4 +28,4 @@ unique_effects:
     description: *draskUeDescription
     values:
       damage: 30
-    powerSurged: True
+    powerSurged: true

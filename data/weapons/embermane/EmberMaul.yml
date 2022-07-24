@@ -30,4 +30,4 @@ unique_effects:
     values:
       hitSuccession: 4
       bonusDamage: 150
-    powerSurged: True
+    powerSurged: true
