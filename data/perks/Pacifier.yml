@@ -3,14 +3,26 @@ description: Increases stagger damage against enraged Behemoths.
 type: Brutality
 effects:
   '1':
-    description: +10% Stagger vs Enraged Behemoths
+    description: +{{percentStaggerVsEnraged}}% Stagger vs Enraged Behemoths
+    values:
+      percentStaggerVsEnraged: 10
   '2':
-    description: +20% Stagger vs Enraged Behemoths
+    description: +{{percentStaggerVsEnraged}}% Stagger vs Enraged Behemoths
+    values:
+      percentStaggerVsEnraged: 20
   '3':
-    description: +30% Stagger vs Enraged Behemoths
+    description: +{{percentStaggerVsEnraged}}% Stagger vs Enraged Behemoths
+    values:
+      percentStaggerVsEnraged: 30
   '4':
-    description: +40% Stagger vs Enraged Behemoths
+    description: +{{percentStaggerVsEnraged}}% Stagger vs Enraged Behemoths
+    values:
+      percentStaggerVsEnraged: 40
   '5':
-    description: +50% Stagger vs Enraged Behemoths
+    description: +{{percentStaggerVsEnraged}}% Stagger vs Enraged Behemoths
+    values:
+      percentStaggerVsEnraged: 50
   '6':
-    description: +60% Stagger vs Enraged Behemoths
+    description: +{{percentStaggerVsEnraged}}% Stagger vs Enraged Behemoths
+    values:
+      percentStaggerVsEnraged: 60

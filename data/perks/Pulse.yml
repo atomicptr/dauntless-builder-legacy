@@ -6,26 +6,40 @@ type: Finesse
 effects:
   '1':
     description:
-      - Every 10th hit with your weapon is a critical hit.
+      - Every {{hits}}th hit with your weapon is a critical hit.
       - null
+    values:
+      hits: 10
   '2':
     description:
-      - Every 9th hit with your weapon is a critical hit.
+      - Every {{hits}}th hit with your weapon is a critical hit.
       - null
+    values:
+      hits: 9
   '3':
     description:
-      - Every 8th hit with your weapon is a critical hit.
+      - Every {{hits}}th hit with your weapon is a critical hit.
       - null
+    values:
+      hits: 8
   '4':
     description:
-      - Every 7th hit with your weapon is a critical hit.
-      - +5% critical strike damage
+      - Every {{hits}}th hit with your weapon is a critical hit.
+      - +{{percentCritDamage}}% critical strike damage
+    values:
+      hits: 7
+      percentCritDamage: 5
   '5':
     description:
-      - Every 6th hit with your weapon is a critical hit.
-      - +10% critical strike damage
+      - Every {{hits}}th hit with your weapon is a critical hit.
+      - +{{percentCritDamage}}% critical strike damage
+    values:
+      hits: 6
+      percentCritDamage: 10
   '6':
     description:
-      - Every 5th hit with your weapon is a critical hit.
-      - +15% critical strike damage
-    
+      - Every {{hits}}th hit with your weapon is a critical hit.
+      - +{{percentCritDamage}}% critical strike damage
+    values:
+      hits: 5
+      percentCritDamage: 15

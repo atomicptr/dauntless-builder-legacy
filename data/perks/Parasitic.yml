@@ -9,28 +9,58 @@ effects:
       When you take damage, 10% of it is delayed and instead dealt over 10
       seconds. While you take delayed damage, gain 5% lifesteal. Does not apply
       to damage under 10% of your max HP.
+    values:
+      percentDelayedDamage: 10
+      delayedDamageTime: 10
+      percentLifesteal: 5
+      minimumAppliedHealth: 10
   '2':
     description: >
       When you take damage, 15% of it is delayed and instead dealt over 10
       seconds. While you take delayed damage, gain 5% lifesteal. Does not apply
       to damage under 10% of your max HP.
+    values:
+      percentDelayedDamage: 15
+      delayedDamageTime: 10
+      percentLifesteal: 5
+      minimumAppliedHealth: 10
   '3':
     description: >
       When you take damage, 20% of it is delayed and instead dealt over 10
       seconds. While you take delayed damage, gain 5% lifesteal. Does not apply
       to damage under 10% of your max HP.
+    values:
+      percentDelayedDamage: 20
+      delayedDamageTime: 10
+      percentLifesteal: 5
+      minimumAppliedHealth: 10
   '4':
     description: >
       When you take damage, 25% of it is delayed and instead dealt over 10
       seconds. While you take delayed damage, gain 5% lifesteal. Does not apply
       to damage under 10% of your max HP.
+    values:
+      percentDelayedDamage: 25
+      delayedDamageTime: 10
+      percentLifesteal: 5
+      minimumAppliedHealth: 10
   '5':
     description: >
       When you take damage, 30% of it is delayed and instead dealt over 10
       seconds. While you take delayed damage, gain 5% lifesteal. Does not apply
       to damage under 10% of your max HP.
+    values:
+      percentDelayedDamage: 30
+      delayedDamageTime: 10
+      percentLifesteal: 5
+      minimumAppliedHealth: 10
   '6':
     description: >
       When you take damage, 35% of it is delayed and instead dealt over 10
       seconds. While you take delayed damage, gain 5% lifesteal. Does not apply
       to damage under 10% of your max HP.
+    values:
+      percentDelayedDamage: 35
+      delayedDamageTime: 10
+      percentLifesteal: 5
+      minimumAppliedHealth: 10
