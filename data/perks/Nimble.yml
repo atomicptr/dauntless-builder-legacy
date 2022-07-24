@@ -3,14 +3,26 @@ description: Restores Stamina when dodging through Behemoth attacks.
 type: Alacrity
 effects:
   '1':
-    description: Gain 10 Stamina after dodging through an attack
+    description: Gain {{dodgeStamina}} Stamina after dodging through an attack
+    values:
+      dodgeStamina: 10
   '2':
-    description: Gain 15 Stamina after dodging through an attack
+    description: Gain {{dodgeStamina}} Stamina after dodging through an attack
+    values:
+      dodgeStamina: 15
   '3':
-    description: Gain 20 Stamina after dodging through an attack
+    description: Gain {{dodgeStamina}} Stamina after dodging through an attack
+    values:
+      dodgeStamina: 20
   '4':
-    description: Gain 25 Stamina after dodging through an attack
+    description: Gain {{dodgeStamina}} Stamina after dodging through an attack
+    values:
+      dodgeStamina: 25
   '5':
-    description: Gain 30 Stamina after dodging through an attack
+    description: Gain {{dodgeStamina}} Stamina after dodging through an attack
+    values:
+      dodgeStamina: 30
   '6':
-    description: Gain 35 Stamina after dodging through an attack
+    description: Gain {{dodgeStamina}} Stamina after dodging through an attack
+    values:
+      dodgeStamina: 35

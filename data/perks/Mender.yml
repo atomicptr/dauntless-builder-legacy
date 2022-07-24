@@ -3,14 +3,26 @@ description: Using your flask restores other Slayers' health.
 type: Insight
 effects:
   '1':
-    description: Using your Flask also heals all other Slayers for 45
+    description: Using your Flask also heals all other Slayers for {{flaskAllyHeal}}
+    values:
+      flaskAllyHeal: 45
   '2':
-    description: Using your Flask also heals all other Slayers for 90
+    description: Using your Flask also heals all other Slayers for {{flaskAllyHeal}}
+    values:
+      flaskAllyHeal: 90
   '3':
-    description: Using your Flask also heals all other Slayers for 135
+    description: Using your Flask also heals all other Slayers for {{flaskAllyHeal}}
+    values:
+      flaskAllyHeal: 135
   '4':
-    description: Using your Flask also heals all other Slayers for 180
+    description: Using your Flask also heals all other Slayers for {{flaskAllyHeal}}
+    values:
+      flaskAllyHeal: 180
   '5':
-    description: Using your Flask also heals all other Slayers for 225
+    description: Using your Flask also heals all other Slayers for {{flaskAllyHeal}}
+    values:
+      flaskAllyHeal: 225
   '6':
-    description: Using your Flask also heals all other Slayers for 270
+    description: Using your Flask also heals all other Slayers for {{flaskAllyHeal}}
+    values:
+      flaskAllyHeal: 270

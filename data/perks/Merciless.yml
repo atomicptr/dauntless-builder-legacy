@@ -6,26 +6,40 @@ type: Finesse
 effects:
   '1':
     description:
-      - +40 wound damage vs staggered Behemoths
+      - +{{woundDamageVsStaggered}} wound damage vs staggered Behemoths
       - null
+    values:
+      woundDamageVsStaggered: 40
   '2':
     description:
-      - +60 wound damage vs staggered Behemoths
+      - +{{woundDamageVsStaggered}} wound damage vs staggered Behemoths
       - null
+    values:
+      woundDamageVsStaggered: 60
   '3':
     description:
-      - +80 wound damage vs staggered Behemoths
+      - +{{woundDamageVsStaggered}} wound damage vs staggered Behemoths
       - null
+    values:
+      woundDamageVsStaggered: 80
   '4':
     description:
-      - +100 wound damage vs staggered Behemoths
-      - Increases the duration a part stays wounded by 20%.
+      - +{{woundDamageVsStaggered}} wound damage vs staggered Behemoths
+      - Increases the duration a part stays wounded by {{percentWoundDuration}}%.
+    values:
+      woundDamageVsStaggered: 100
+      percentWoundDuration: 20
   '5':
     description:
-      - +115 wound damage vs staggered Behemoths
-      - Increases the duration a part stays wounded by 40%.
+      - +{{woundDamageVsStaggered}} wound damage vs staggered Behemoths
+      - Increases the duration a part stays wounded by {{percentWoundDuration}}%.
+    values:
+      woundDamageVsStaggered: 115
+      percentWoundDuration: 40
   '6':
     description:
-      - +130 wound damage vs staggered Behemoths
-      - Increases the duration a part stays wounded by 60%.
-    
+      - +{{woundDamageVsStaggered}} wound damage vs staggered Behemoths
+      - Increases the duration a part stays wounded by {{percentWoundDuration}}%.
+    values:
+      woundDamageVsStaggered: 130
+      percentWoundDuration: 60
