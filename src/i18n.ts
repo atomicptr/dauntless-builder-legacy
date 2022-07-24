@@ -41,7 +41,7 @@ const nativeLanguageNames = {
     [Language.Spanish]: "Español",
 };
 
-const betaLanguages = [Language.German, Language.Japanese, Language.French, Language.Spanish];
+const betaLanguages = [Language.German, Language.Japanese, Language.Spanish];
 
 export const currentLanguage = (): Language => i18n.languages[0] as Language;
 
