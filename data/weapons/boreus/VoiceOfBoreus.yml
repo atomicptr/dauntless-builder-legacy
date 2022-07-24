@@ -19,12 +19,18 @@ perks:
     powerSurged: true
 unique_effects:
   - name: BoreusFrostSprite
-    description: >-
-      The last 4 shots in your magazine generates Frost Sprites that grant your
-      next attack +30 damage and minor frost damage (Max 4 Sprites)
+    description: &boreusUeDescription >-
+      The last {{MagazinShots}} shots in your magazine generates Frost Sprites that grant your
+      next attack +{{SpriteDamage}} damage and minor frost damage (Max {{SpriteMaxSprites}} Sprites)
+    values:
+      MagazinShots: 4
+      SpriteDamage: 30
+      SpriteMaxSprites: 4
     powerSurged: false
   - name: BoreusFrostSprite
-    description: >-
-      The last 4 shots in your magazine generates Frost Sprites that grant your
-      next attack +60 damage and minor frost damage (Max 4 Sprites)
+    description: *boreusUeDescription
+    values:
+      MagazinShots: 4
+      SpriteDamage: 60
+      SpriteMaxSprites: 4
     powerSurged: true
