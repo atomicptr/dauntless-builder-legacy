@@ -4,26 +4,43 @@ type: Insight
 effects:
   '1':
     description:
-      - 25% chance not to consume an Aether Vent charge on use
-      - 25 additional Aether Vent healing
+      - '{{percentVentReduction}}% chance not to consume an Aether Vent charge on use'
+      - '{{ventAdditionalHeal}} additional Aether Vent healing'
+    values:
+      percentVentReduction: 25
+      ventAdditionalHeal: 25
   '2':
     description:
-      - 25% chance not to consume an Aether Vent charge on use
-      - 50 additional Aether Vent healing
+      - '{{percentVentReduction}}% chance not to consume an Aether Vent charge on use'
+      - '{{ventAdditionalHeal}} additional Aether Vent healing'
+    values:
+      percentVentReduction: 25
+      ventAdditionalHeal: 50
   '3':
     description:
-      - 25% chance not to consume an Aether Vent charge on use
-      - 75 additional Aether Vent healing
+      - '{{percentVentReduction}}% chance not to consume an Aether Vent charge on use'
+      - '{{ventAdditionalHeal}} additional Aether Vent healing'
+    values:
+      percentVentReduction: 25
+      ventAdditionalHeal: 75
   '4':
     description:
-      - 25% chance not to consume an Aether Vent charge on use
-      - 100 additional Aether Vent healing and will cause you enter aether rush.
+      - '{{percentVentReduction}}% chance not to consume an Aether Vent charge on use'
+      - '{{ventAdditionalHeal}} additional Aether Vent healing and will cause you enter aether rush.'
+    values:
+      percentVentReduction: 25
+      ventAdditionalHeal: 100
   '5':
     description:
-      - 25% chance not to consume an Aether Vent charge on use
-      - 150 additional Aether Vent healing and will cause you enter aether rush.
+      - '{{percentVentReduction}}% chance not to consume an Aether Vent charge on use'
+      - '{{ventAdditionalHeal}} additional Aether Vent healing and will cause you enter aether rush.'
+    values:
+      percentVentReduction: 25
+      ventAdditionalHeal: 150
   '6':
     description:
-      - 25% chance not to consume an Aether Vent charge on use
-      - 200 additional Aether Vent healing and will cause you enter aether rush.
-    
+      - '{{percentVentReduction}}% chance not to consume an Aether Vent charge on use'
+      - '{{ventAdditionalHeal}} additional Aether Vent healing and will cause you enter aether rush.'
+    values:
+      percentVentReduction: 25
+      ventAdditionalHeal: 200

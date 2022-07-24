@@ -4,26 +4,40 @@ type: Insight
 effects:
   '1':
     description:
-      - +10% Tonic Effectiveness
+      - +{{percentTonicEffect}}% Tonic Effectiveness
       - null
+    values:
+      percentTonicEffect: 10
   '2':
     description:
-      - +20% Tonic Effectiveness
+      - +{{percentTonicEffect}}% Tonic Effectiveness
       - null
+    values:
+      percentTonicEffect: 20
   '3':
     description:
-      - +30% Tonic Effectiveness
+      - +{{percentTonicEffect}}% Tonic Effectiveness
       - null
+    values:
+      percentTonicEffect: 30
   '4':
     description:
-      - +40% Tonic Effectiveness
-      - +20% Tonic Duration
+      - +{{percentTonicEffect}}% Tonic Effectiveness
+      - +{{percentTonicDuration}}% Tonic Duration
+    values:
+      percentTonicEffect: 40
+      percentTonicDuration: 20
   '5':
     description:
-      - +50% Tonic Effectiveness
-      - +40% Tonic Duration
+      - +{{percentTonicEffect}}% Tonic Effectiveness
+      - +{{percentTonicDuration}}% Tonic Duration
+    values:
+      percentTonicEffect: 50
+      percentTonicDuration: 40
   '6':
     description:
-      - +60% Tonic Effectiveness
-      - +60% Tonic Duration
-    
+      - +{{percentTonicEffect}}% Tonic Effectiveness
+      - +{{percentTonicDuration}}% Tonic Duration
+    values:
+      percentTonicEffect: 60
+      percentTonicDuration: 60

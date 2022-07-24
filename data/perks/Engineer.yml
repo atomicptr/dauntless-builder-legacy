@@ -3,26 +3,26 @@ description: Increases range of pylons.
 type: Insight
 effects:
   '1':
-    description: +{{percentage}}% increase Pylon range
+    description: +{{percentagePylonRange}}% increase Pylon range
     values:
-      percentage: 35
+      percentagePylonRange: 35
   '2':
-    description: +{{percentage}}% increase Pylon range
+    description: +{{percentagePylonRange}}% increase Pylon range
     values:
-      percentage: 50
+      percentagePylonRange: 50
   '3':
-    description: +{{percentage}}% increase Pylon range
+    description: +{{percentagePylonRange}}% increase Pylon range
     values:
-      percentage: 65
+      percentagePylonRange: 65
   '4':
-    description: +{{percentage}}% increase Pylon range
+    description: +{{percentagePylonRange}}% increase Pylon range
     values:
-      percentage: 80
+      percentagePylonRange: 80
   '5':
-    description: +{{percentage}}% increase Pylon range
+    description: +{{percentagePylonRange}}% increase Pylon range
     values:
-      percentage: 115
+      percentagePylonRange: 115
   '6':
-    description: +{{percentage}}% increase Pylon range
+    description: +{{percentagePylonRange}}% increase Pylon range
     values:
-      percentage: 150
+      percentagePylonRange: 150

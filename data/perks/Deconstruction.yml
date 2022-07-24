@@ -3,14 +3,26 @@ description: Bonus damage against objects created by Behemoths.
 type: Brutality
 effects:
   '1':
-    description: Deal 110% damage to objects created by Behemoths
+    description: Deal +{{percentDamageToObjects}}% damage to objects created by Behemoths
+    values:
+      percentDamageToObjects: 10
   '2':
-    description: Deal 120% damage to objects created by Behemoths
+    description: Deal +{{percentDamageToObjects}}% damage to objects created by Behemoths
+    values:
+      percentDamageToObjects: 20
   '3':
-    description: Deal 130% damage to objects created by Behemoths
+    description: Deal +{{percentDamageToObjects}}% damage to objects created by Behemoths
+    values:
+      percentDamageToObjects: 30
   '4':
-    description: Deal 150% damage to objects created by Behemoths
+    description: Deal +{{percentDamageToObjects}}% damage to objects created by Behemoths
+    values:
+      percentDamageToObjects: 50
   '5':
-    description: Deal 170% damage to objects created by Behemoths
+    description: Deal +{{percentDamageToObjects}}% damage to objects created by Behemoths
+    values:
+      percentDamageToObjects: 70
   '6':
-    description: Deal 200% damage to objects created by Behemoths
+    description: Deal +{{percentDamageToObjects}}% damage to objects created by Behemoths
+    values:
+      percentDamageToObjects: 100

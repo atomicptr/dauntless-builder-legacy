@@ -3,14 +3,26 @@ description: Increases damage against aether charged Behemoths.
 type: Brutality
 effects:
   '1':
-    description: +5% Damage vs Aether-charged Behemoths
+    description: +{{percentDamageVsAether}}% Damage vs Aether-charged Behemoths
+    values:
+      percentDamageVsAether: 5
   '2':
-    description: +10% Damage vs Aether-charged Behemoths
+    description: +{{percentDamageVsAether}}% Damage vs Aether-charged Behemoths
+    values:
+      percentDamageVsAether: 10
   '3':
-    description: +20% Damage vs Aether-charged Behemoths
+    description: +{{percentDamageVsAether}}% Damage vs Aether-charged Behemoths
+    values:
+      percentDamageVsAether: 20
   '4':
-    description: +30% Damage vs Aether-charged Behemoths
+    description: +{{percentDamageVsAether}}% Damage vs Aether-charged Behemoths
+    values:
+      percentDamageVsAether: 30
   '5':
-    description: +40% Damage vs Aether-charged Behemoths
+    description: +{{percentDamageVsAether}}% Damage vs Aether-charged Behemoths
+    values:
+      percentDamageVsAether: 40
   '6':
-    description: +50% Damage vs Aether-charged Behemoths
+    description: +{{percentDamageVsAether}}% Damage vs Aether-charged Behemoths
+    values:
+      percentDamageVsAether: 50
