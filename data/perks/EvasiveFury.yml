@@ -3,14 +3,32 @@ description: Temporarily increases attack speed when dodging through a Behemoth'
 type: Alacrity
 effects:
   '1':
-    description: +4% Attack Speed for 20 seconds after dodging through an attack
+    description: +{{attackSpeed}}% Attack Speed for {{time}} seconds after dodging through an attack
+    values:
+      attackSpeed: 4
+      time: 25
   '2':
-    description: +6% Attack Speed for 20 seconds after dodging through an attack
+    description: +{{attackSpeed}}% Attack Speed for {{time}} seconds after dodging through an attack
+    values:
+      attackSpeed: 6
+      time: 25
   '3':
-    description: +8% Attack Speed for 20 seconds after dodging through an attack
+    description: +{{attackSpeed}}% Attack Speed for {{time}} seconds after dodging through an attack
+    values:
+      attackSpeed: 8
+      time: 25
   '4':
-    description: +10% Attack Speed for 20 seconds after dodging through an attack
+    description: +10% Attack Speed for {{time}} seconds after dodging through an attack
+    values:
+      attackSpeed: 4
+      time: 25
   '5':
-    description: +12.5% Attack Speed for 20 seconds after dodging through an attack
+    description: +{{attackSpeed}}% Attack Speed for {{time}} seconds after dodging through an attack
+    values:
+      attackSpeed: 12.5
+      time: 25
   '6':
-    description: +15% Attack Speed for 20 seconds after dodging through an attack
+    description: +{{attackSpeed}}% Attack Speed for {{time}} seconds after dodging through an attack
+    values:
+      attackSpeed: 15
+      time: 25

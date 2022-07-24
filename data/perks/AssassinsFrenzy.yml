@@ -1,7 +1,5 @@
 name: Assassin's Frenzy
-description: >-
-  Each time you break or assist in breaking a part, gain +15% attack speed for x
-  seconds.
+description: Increases attack speed when a part is broken.
 type: Alacrity
 effects:
   '1':
