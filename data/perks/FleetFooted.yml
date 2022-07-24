@@ -5,12 +5,12 @@ effects:
   '1':
     description: After dodging, gain +10% movement speed for 10 seconds
   '2':
-    description: After dodging, gain +15% moviment speed for 10 seconds
+    description: After dodging, gain +15% movement speed for 10 seconds
   '3':
-    description: After dodging, gain +20% moviment speed for 10 seconds
+    description: After dodging, gain +20% movement speed for 10 seconds
   '4':
-    description: After dodging, gain +25% moviment speed for 10 seconds
+    description: After dodging, gain +25% movement speed for 10 seconds
   '5':
-    description: After dodging, gain +30% moviment speed for 10 seconds
+    description: After dodging, gain +30% movement speed for 10 seconds
   '6':
-    description: After dodging, gain +35% moviment speed for 10 seconds
+    description: After dodging, gain +35% movement speed for 10 seconds
