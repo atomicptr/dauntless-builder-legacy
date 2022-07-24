@@ -7,7 +7,7 @@ effects:
       Your Flask heals over {{flaskHealTime}} seconds, but for {{percentFlaskHeal}}% 
       more healing - while this heal is active, increase the recharge rate of your 
       Lantern ability by {{percentLanternRecharge}}%.
-    value:
+    values:
       flaskHealTime: 20
       percentFlaskHeal: 20
       percentLanternRecharge: 15
@@ -16,7 +16,7 @@ effects:
       Your Flask heals over {{flaskHealTime}} seconds, but for {{percentFlaskHeal}}% 
       more healing - while this heal is active, increase the recharge rate of your 
       Lantern ability by {{percentLanternRecharge}}%.
-    value:
+    values:
       flaskHealTime: 20
       percentFlaskHeal: 20
       percentLanternRecharge: 25
@@ -25,7 +25,7 @@ effects:
       Your Flask heals over {{flaskHealTime}} seconds, but for {{percentFlaskHeal}}% 
       more healing - while this heal is active, increase the recharge rate of your 
       Lantern ability by {{percentLanternRecharge}}%.
-    value:
+    values:
       flaskHealTime: 20
       percentFlaskHeal: 20
       percentLanternRecharge: 35
@@ -34,7 +34,7 @@ effects:
       Your Flask heals over {{flaskHealTime}} seconds, but for {{percentFlaskHeal}}% 
       more healing - while this heal is active, increase the recharge rate of your 
       Lantern ability by {{percentLanternRecharge}}%.
-    value:
+    values:
       flaskHealTime: 20
       percentFlaskHeal: 20
       percentLanternRecharge: 40
@@ -43,7 +43,7 @@ effects:
       Your Flask heals over {{flaskHealTime}} seconds, but for {{percentFlaskHeal}}% 
       more healing - while this heal is active, increase the recharge rate of your 
       Lantern ability by {{percentLanternRecharge}}%.
-    value:
+    values:
       flaskHealTime: 20
       percentFlaskHeal: 20
       percentLanternRecharge: 45
@@ -52,7 +52,7 @@ effects:
       Your Flask heals over {{flaskHealTime}} seconds, but for {{percentFlaskHeal}}% 
       more healing - while this heal is active, increase the recharge rate of your 
       Lantern ability by {{percentLanternRecharge}}%.
-    value:
+    values:
       flaskHealTime: 20
       percentFlaskHeal: 20
       percentLanternRecharge: 50
