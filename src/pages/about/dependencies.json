@@ -221,7 +221,7 @@
     },
     {
         "license": "MIT",
-        "name": "@mui/base@5.0.0-alpha.89",
+        "name": "@mui/base@5.0.0-alpha.90",
         "repository": "https://github.com/mui/material-ui"
     },
     {
@@ -231,12 +231,12 @@
     },
     {
         "license": "MIT",
-        "name": "@mui/material@5.9.0",
+        "name": "@mui/material@5.9.1",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/private-theming@5.9.0",
+        "name": "@mui/private-theming@5.9.1",
         "repository": "https://github.com/mui/material-ui"
     },
     {
@@ -246,7 +246,7 @@
     },
     {
         "license": "MIT",
-        "name": "@mui/system@5.9.0",
+        "name": "@mui/system@5.9.1",
         "repository": "https://github.com/mui/material-ui"
     },
     {
@@ -256,7 +256,7 @@
     },
     {
         "license": "MIT",
-        "name": "@mui/utils@5.9.0",
+        "name": "@mui/utils@5.9.1",
         "repository": "https://github.com/mui/material-ui"
     },
     {
@@ -646,7 +646,7 @@
     },
     {
         "license": "MIT",
-        "name": "react-lazy-load-image-component@1.5.4",
+        "name": "react-lazy-load-image-component@1.5.5",
         "repository": "https://github.com/Aljullu/react-lazy-load-image-component"
     },
     {
