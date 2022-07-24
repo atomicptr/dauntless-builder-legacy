@@ -18,9 +18,16 @@ perks:
     value: 3
     powerSurged: true
 unique_effects:
-  - name: FifthHitStaggerDamage
-    description: The fourth hit in a row deals +50% stagger damage
+  - name: HitStaggerDamage
+    description: &embermaneUeDescription >-
+      The {{hitSuccession}}th hit in a row deals +{{bonusDamage}}% stagger damage
+    values:
+      hitSuccession: 4
+      bonusDamage: 50
     powerSurged: false
-  - name: FifthHitStaggerDamage
-    description: The fourth hit in a row deals +150% stagger damage
+  - name: HitStaggerDamage
+    description: *embermaneUeDescription
+    values:
+      hitSuccession: 4
+      bonusDamage: 150
     powerSurged: true

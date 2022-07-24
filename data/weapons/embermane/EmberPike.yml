@@ -18,9 +18,16 @@ perks:
     value: 3
     powerSurged: true
 unique_effects:
-  - name: SeventhHitWoundDamage
-    description: The sixth hit in a row deals +100 wound damage
+  - name: HitWoundDamage
+    description: &embermaneUeDescription >-
+      The {{hitSuccession}}th hit in a row deals +{{bonusDamage}} wound damage
+    values:
+      hitSuccession: 7
+      bonusDamage: 100
     powerSurged: false
-  - name: SeventhHitWoundDamage
-    description: The sixth hit in a row deals +300 wound damage
+  - name: HitWoundDamage
+    description: *embermaneUeDescription
+    values:
+      hitSuccession: 7
+      bonusDamage: 300
     powerSurged: true

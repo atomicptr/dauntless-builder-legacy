@@ -18,9 +18,16 @@ perks:
     value: 3
     powerSurged: true
 unique_effects:
-  - name: SixthHitBonusDamagePercent
-    description: The sixth hit in a row deals +100% part damage.
+  - name: HitBonusDamagePercent
+    description: &embermaneUeDescription >-
+      The {{hitSuccession}}th hit in row deals +{{bonusDamage}} part damage.
+    values:
+      hitSuccession: 6
+      bonusDamage: 100
     powerSurged: false
-  - name: SixthHitBonusDamagePercent
-    description: The sixth hit in a row deals +250% part damage.
+  - name: HitBonusDamagePercent
+    description: *embermaneUeDescription
+    values:
+      hitSuccession: 6
+      bonusDamage: 250
     powerSurged: true

@@ -19,8 +19,13 @@ perks:
     powerSurged: true
 unique_effects:
   - name: TailDamage
-    description: 20% damage vs Behemoth Tails
+    description: &draskUeDescription >-
+      {{damage}}% damage vs Behemoth Tails
+    values:
+      damage: 20
     powerSurged: false
   - name: TailDamage
-    description: 30% damage vs Behemoth Tails
+    description: *draskUeDescription
+    values:
+      damage: 30
     powerSurged: true

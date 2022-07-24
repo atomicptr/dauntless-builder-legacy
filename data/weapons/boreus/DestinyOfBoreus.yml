@@ -19,12 +19,18 @@ perks:
     powerSurged: true
 unique_effects:
   - name: BoreusFrostSprite
-    description: >-
-      After using your Special, generate 3 Frost Sprites that grant your next
-      attack +30 damage and minor frost damage (Max 4 Sprites)
+    description: &boreusUeDescription >-
+      After spending ammo, generate generate {{spriteGenerate}} Frost Sprites that grant your
+      next attack +{{spriteDamage}} damage and minor frost damage (Max {{spriteMaxSprites}} Sprites)
+    values:
+      spriteGenerate: 3
+      spriteDamage: 30
+      spriteMaxSprites: 4
     powerSurged: false
   - name: BoreusFrostSprite
-    description: >-
-      After using your Special, generate 3 Frost Sprites that grant your next
-      attack +60 damage and minor frost damage (Max 4 Sprites)
+    description: *boreusUeDescription
+    values:
+      spriteGenerate: 3
+      spriteDamage: 60
+      spriteMaxSprites: 4
     powerSurged: true
