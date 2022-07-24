@@ -22,13 +22,13 @@ unique_effects:
     description: &alyraUeDescription >-
       On lantern use, spawn a glyph based on your active glyph type that charges
       after three seconds. Once charged, the glyph will activate when a Behemoth
-      makes contact.{{NL}} {{NL}} Red Glyph: Deals {{Damage}} radiant damage in a
-      radius.{{NL}} Blue Glyph: Grants {{Shields}} stacking shields that expire after
-      {{ShieldsTime}}s to slayers in a large radius (max {{ShieldsMax}} shields).{{NL}} Jump to change
-      the active glyph type. Glyphs expire after {{GlyphsTime}}s.
+      makes contact.{{NL}} {{NL}} Red Glyph: Deals {{damage}} radiant damage in a
+      radius.{{NL}} Blue Glyph: Grants {{shields}} stacking shields that expire after
+      {{shieldsTime}}s to slayers in a large radius (max {{shieldsMax}} shields).{{NL}} Jump to change
+      the active glyph type. Glyphs expire after {{glyphsTime}}s.
     values:
-      Damage: 1500
-      Shields: 150
-      ShieldsTime: 25
-      ShieldsMax: 600
-      GlyphsTime: 10
+      damage: 1500
+      shields: 150
+      shieldsTime: 25
+      shieldsMax: 600
+      glyphsTime: 10

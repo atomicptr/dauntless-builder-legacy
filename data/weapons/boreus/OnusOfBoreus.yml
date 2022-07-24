@@ -21,14 +21,14 @@ unique_effects:
   - name: BoreusFrostSprite
     description: &boreusUeDescription >-
       Using your special continually generates Frost Sprites that grant your
-      next attack +{{SpriteDamage}} damage and minor frost damage (Max {{SpriteMaxSprites}} Sprites)
+      next attack +{{spriteDamage}} damage and minor frost damage (Max {{spriteMaxSprites}} Sprites)
     values:
-      SpriteDamage: 30
-      SpriteMaxSprites: 4
+      spriteDamage: 30
+      spriteMaxSprites: 4
     powerSurged: false
   - name: BoreusFrostSprite
     description: *boreusUeDescription
     values:
-      SpriteDamage: 60
-      SpriteMaxSprites: 4
+      spriteDamage: 60
+      spriteMaxSprites: 4
     powerSurged: true
