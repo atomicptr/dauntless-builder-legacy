@@ -4,6 +4,8 @@ import { defineConfig } from "vite";
 import ViteFaviconsPlugin from "vite-plugin-favicon2";
 import { VitePWA } from "vite-plugin-pwa";
 
+const maximumFileSizeToCacheInBytes = 5 * 1024 * 1024; // 5 MB
+
 export default defineConfig(({ command, mode }) => {
     const isDevMode = mode === "development";
 
@@ -62,6 +64,7 @@ export default defineConfig(({ command, mode }) => {
                 registerType: "autoUpdate",
                 workbox: {
                     cleanupOutdatedCaches: true,
+                    maximumFileSizeToCacheInBytes,
                     sourcemap: isDevMode,
                 }
             }),
@@ -83,6 +86,9 @@ export default defineConfig(({ command, mode }) => {
                 "@map": fileURLToPath(new URL("./.map", import.meta.url)),
                 "@src": fileURLToPath(new URL("./src", import.meta.url)),
             },
+        },
+        server: {
+            port: 3000,
         },
     };
 });
