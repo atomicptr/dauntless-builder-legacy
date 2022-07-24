@@ -1,18 +1,34 @@
 name: Invigorated
-description: >-
-  While below 50% of your maximum Stamina, gain +10/15/20/30/40/50% movement
-  speed.
+description: Increases movement speed while stamina is low.
 type: Alacrity
 effects:
   '1':
-    description: While below 50% of your maximum Stamina, gain +10% movement speed.
+    description: While below {{percentMaxStamina}}% of your maximum Stamina, gain +{{percentMovementSpeed}}% movement speed.
+    values:
+      percentMaxStamina: 50
+      percentMovementSpeed: 10
   '2':
-    description: While below 50% of your maximum Stamina, gain +15% movement speed.
+    description: While below {{percentMaxStamina}}% of your maximum Stamina, gain +{{percentMovementSpeed}}% movement speed.
+    values:
+      percentMaxStamina: 50
+      percentMovementSpeed: 15
   '3':
-    description: While below 50% of your maximum Stamina, gain +20% movement speed.
+    description: While below {{percentMaxStamina}}% of your maximum Stamina, gain +{{percentMovementSpeed}}% movement speed.
+    values:
+      percentMaxStamina: 50
+      percentMovementSpeed: 20
   '4':
-    description: While below 50% of your maximum Stamina, gain +30% movement speed.
+    description: While below {{percentMaxStamina}}% of your maximum Stamina, gain +{{percentMovementSpeed}}% movement speed.
+    values:
+      percentMaxStamina: 50
+      percentMovementSpeed: 30
   '5':
-    description: While below 50% of your maximum Stamina, gain +40% movement speed.
+    description: While below {{percentMaxStamina}}% of your maximum Stamina, gain +{{percentMovementSpeed}}% movement speed.
+    values:
+      percentMaxStamina: 50
+      percentMovementSpeed: 40
   '6':
-    description: While below 50% of your maximum Stamina, gain +50% movement speed.
+    description: While below {{percentMaxStamina}}% of your maximum Stamina, gain +{{percentMovementSpeed}}% movement speed.
+    values:
+      percentMaxStamina: 50
+      percentMovementSpeed: 50
