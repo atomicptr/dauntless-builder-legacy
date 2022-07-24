@@ -22,12 +22,12 @@ unique_effects:
     description: &embermaneUeDescription >-
       The {{hitSuccession}}th hit in a row deals +{{bonusDamage}} wound damage
     values:
-      hitSuccession: 6
+      hitSuccession: 7
       bonusDamage: 100
     powerSurged: false
   - name: HitWoundDamage
     description: *embermaneUeDescription
     values:
-      hitSuccession: 6
+      hitSuccession: 7
       bonusDamage: 300
     powerSurged: true

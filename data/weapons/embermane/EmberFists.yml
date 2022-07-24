@@ -22,12 +22,12 @@ unique_effects:
     description: &embermaneUeDescription >-
       The {{hitSuccession}}th hit in a row deals +{{bonusDamage}}% stagger damage
     values:
-      hitSuccession: 6
+      hitSuccession: 4
       bonusDamage: 50
     powerSurged: false
   - name: HitStaggerDamage
     description: *embermaneUeDescription
     values:
-      hitSuccession: 6
+      hitSuccession: 4
       bonusDamage: 150
     powerSurged: true
