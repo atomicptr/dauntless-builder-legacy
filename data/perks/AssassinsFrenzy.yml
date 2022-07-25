@@ -8,28 +8,28 @@ effects:
       for {{attackSpeedTime}} seconds.
     values:
       percentAttackSpeed: 15
-      speedTime: 10
+      attackSpeedTime: 10
   '2':
     description: >-
       Each time you break or assist in breaking a part, gain +{{percentAttackSpeed}}% attack speed
       for {{attackSpeedTime}} seconds.
     values:
       percentAttackSpeed: 15
-      speedTime: 10
+      attackSpeedTime: 10
   '3':
     description: >-
       Each time you break or assist in breaking a part, gain +{{percentAttackSpeed}}% attack speed
       for {{attackSpeedTime}} seconds.
     values:
       percentAttackSpeed: 15
-      speedTime: 20
+      attackSpeedTime: 20
   '4':
     description: >-
       Each time you break or assist in breaking a part, gain +{{percentAttackSpeed}}% attack speed
       for {{attackSpeedTime}} seconds.
     values:
       percentAttackSpeed: 15
-      speedTime: 30
+      attackSpeedTime: 30
   '5':
     description: >-
       Each time you break or assist in breaking a part, gain +{{percentAttackSpeed}}% attack speed
