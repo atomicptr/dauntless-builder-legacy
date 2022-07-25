@@ -3,14 +3,26 @@ description: Increases Stamina Regen.
 type: Alacrity
 effects:
   '1':
-    description: +5 Stamina Regeneration
+    description: +{{staminaRegeneration}} stamina regeneration
+    values:
+      staminaRegeneration: 5
   '2':
-    description: +10 Stamina Regeneration
+    description: +{{staminaRegeneration}} stamina regeneration
+    values:
+      staminaRegeneration: 10
   '3':
-    description: +15 Stamina Regeneration
+    description: +{{staminaRegeneration}} stamina regeneration
+    values:
+      staminaRegeneration: 15
   '4':
-    description: +20 Stamina Regeneration
+    description: +{{staminaRegeneration}} stamina regeneration
+    values:
+      staminaRegeneration: 20
   '5':
-    description: +25 Stamina Regeneration
+    description: +{{staminaRegeneration}} stamina regeneration
+    values:
+      staminaRegeneration: 25
   '6':
-    description: +30 Stamina Regeneration
+    description: +{{staminaRegeneration}} stamina regeneration
+    values:
+      staminaRegeneration: 30

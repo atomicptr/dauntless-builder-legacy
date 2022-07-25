@@ -4,25 +4,43 @@ type: Finesse
 effects:
   '1':
     description: >-
-      Deal 4% increased damage after not getting hit for 15 seconds. Bonus
-      removed when hit.
+      After not taking hostile damage for {{damageTime}} seconds, deal +{{percentDamage}}%
+      damage - bonus lost when hit.
+    values:
+      percentDamage: 4
+      damageTime: 15
   '2':
     description: >-
-      Deal 8% increased damage after not getting hit for 15 seconds. Bonus
-      removed when hit.
+      After not taking hostile damage for {{damageTime}} seconds, deal +{{percentDamage}}%
+      damage - bonus lost when hit.
+    values:
+      percentDamage: 8
+      damageTime: 15
   '3':
     description: >-
-      Deal 14% increased damage after not getting hit for 15 seconds. Bonus
-      removed when hit.
+      After not taking hostile damage for {{damageTime}} seconds, deal +{{percentDamage}}%
+      damage - bonus lost when hit.
+    values:
+      percentDamage: 14
+      damageTime: 15
   '4':
     description: >-
-      Deal 20% increased damage after not getting hit for 15 seconds. Bonus
-      removed when hit.
+      After not taking hostile damage for {{damageTime}} seconds, deal +{{percentDamage}}%
+      damage - bonus lost when hit.
+    values:
+      percentDamage: 20
+      damageTime: 15
   '5':
     description: >-
-      Deal 27% increased damage after not getting hit for 15 seconds. Bonus
-      removed when hit.
+      After not taking hostile damage for {{damageTime}} seconds, deal +{{percentDamage}}%
+      damage - bonus lost when hit.
+    values:
+      percentDamage: 27
+      damageTime: 15
   '6':
     description: >-
-      Deal 35% increased damage after not getting hit for 15 seconds. Bonus
-      removed when hit.
+      After not taking hostile damage for {{damageTime}} seconds, deal +{{percentDamage}}%
+      damage - bonus lost when hit.
+    values:
+      percentDamage: 35
+      damageTime: 15

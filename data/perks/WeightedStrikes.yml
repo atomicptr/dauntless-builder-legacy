@@ -6,31 +6,49 @@ type: Brutality
 effects:
   '1':
     description:
-      - +5 Stagger Damage on Hit
+      - +{{staggerDamage}} Stagger Damage on Hit
       - null
       - null
+    values:
+      staggerDamage: 5
   '2':
     description:
-      - +10 Stagger Damage on Hit
+      - +{{staggerDamage}} Stagger Damage on Hit
       - null
       - null
+    values:
+      staggerDamage: 10
   '3':
     description:
-      - +15 Stagger Damage on Hit
+      - +{{staggerDamage}} Stagger Damage on Hit
       - null
       - null
+    values:
+      staggerDamage: 15
   '4':
     description:
-      - +20 Stagger Damage on Hit
-      - +200 Stagger after dodging through an attack
+      - +{{staggerDamage}} Stagger Damage on Hit
+      - After dodging through an attack, your next attack within {{nextAttackTime}} seconds deals +{{staggerDamageNextAttack}} stagger damage
       - null
+    values:
+      staggerDamage: 20
+      nextAttackTime: 5
+      staggerDamageNextAttack: 200
   '5':
     description:
-      - +30 Stagger Damage on Hit
-      - +200 Stagger after dodging through an attack
+      - +{{staggerDamage}} Stagger Damage on Hit
+      - After dodging through an attack, your next attack within {{nextAttackTime}} seconds deals +{{staggerDamageNextAttack}} stagger damage
       - null
+    values:
+      staggerDamage: 30
+      nextAttackTime: 5
+      staggerDamageNextAttack: 200
   '6':
     description:
-      - +40 Stagger Damage on Hit
-      - +400 Stagger after dodging through an attack
+      - +{{staggerDamage}} Stagger Damage on Hit
+      - After dodging through an attack, your next attack within {{nextAttackTime}} seconds deals +{{staggerDamageNextAttack}} stagger damage
       - Ranged swings and missiles interrupt unstable Behemoth attacks
+    values:
+      staggerDamage: 40
+      nextAttackTime: 5
+      staggerDamageNextAttack: 400

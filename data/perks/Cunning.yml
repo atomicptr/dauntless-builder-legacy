@@ -3,14 +3,41 @@ description: Grants a chance to critically strike, increasing damage dealt.
 type: Finesse
 effects:
   '1':
-    description: 2% critical strike chance
+    description:
+      - +{{percentCritChance}}% critical strike chance
+      - null
+    values:
+      percentCritChance: 2
   '2':
-    description: 3% critical strike chance
+    description:
+      - +{{percentCritChance}}% critical strike chance
+      - null
+    values:
+      percentCritChance: 3
   '3':
-    description: 4% critical strike chance
+    description:
+      - +{{percentCritChance}}% critical strike chance
+      - null
+    values:
+      percentCritChance: 4
   '4':
-    description: 5% critical strike chance, +10% critical strike damage.
+    description: 
+      - +{{percentCritChance}}% critical strike chance
+      - +{{percentCritDamage}}% critical strike damage
+    values:
+      percentCritChance: 5
+      percentCritDamage: 10
   '5':
-    description: 7.5% critical strike chance, +20% critical strike damage.
+    description:
+      - +{{percentCritChance}}% critical strike chance
+      - +{{percentCritDamage}}% critical strike damage
+    values:
+      percentCritChance: 7.5
+      percentCritDamage: 20
   '6':
-    description: 10% critical strike chance, +30% critical strike damage.
+    description:
+      - +{{percentCritChance}}% critical strike chance
+      - +{{percentCritDamage}}% critical strike damage
+    values:
+      percentCritChance: 10
+      percentCritDamage: 30

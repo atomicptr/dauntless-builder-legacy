@@ -1,40 +1,58 @@
 name: Lucent
-description: Flask heals over time and generates lantern charge.
+description: Flask heals over time and increases the recharge rate of your Lantern ability.
 type: Insight
 effects:
   '1':
     description: >
-      Your Flask heals over 20 seconds, but for 20% more healing - while this
-      heal is active, increase the recharge
-
-      rate of your Lantern ability by 15%.
+      Your Flask heals over {{flaskHealTime}} seconds, but for {{percentFlaskHeal}}% 
+      more healing - while this heal is active, increase the recharge rate of your 
+      Lantern ability by {{percentLanternRecharge}}%.
+    values:
+      flaskHealTime: 20
+      percentFlaskHeal: 20
+      percentLanternRecharge: 15
   '2':
     description: >
-      Your Flask heals over 20 seconds, but for 20% more healing - while this
-      heal is active, increase the recharge
-
-      rate of your Lantern ability by 25%.
+      Your Flask heals over {{flaskHealTime}} seconds, but for {{percentFlaskHeal}}% 
+      more healing - while this heal is active, increase the recharge rate of your 
+      Lantern ability by {{percentLanternRecharge}}%.
+    values:
+      flaskHealTime: 20
+      percentFlaskHeal: 20
+      percentLanternRecharge: 25
   '3':
     description: >
-      Your Flask heals over 20 seconds, but for 20% more healing - while this
-      heal is active, increase the recharge
-
-      rate of your Lantern ability by 35%.
+      Your Flask heals over {{flaskHealTime}} seconds, but for {{percentFlaskHeal}}% 
+      more healing - while this heal is active, increase the recharge rate of your 
+      Lantern ability by {{percentLanternRecharge}}%.
+    values:
+      flaskHealTime: 20
+      percentFlaskHeal: 20
+      percentLanternRecharge: 35
   '4':
     description: >
-      Your Flask heals over 20 seconds, but for 20% more healing - while this
-      heal is active, increase the recharge
-
-      rate of your Lantern ability by 40%.
+      Your Flask heals over {{flaskHealTime}} seconds, but for {{percentFlaskHeal}}% 
+      more healing - while this heal is active, increase the recharge rate of your 
+      Lantern ability by {{percentLanternRecharge}}%.
+    values:
+      flaskHealTime: 20
+      percentFlaskHeal: 20
+      percentLanternRecharge: 40
   '5':
     description: >
-      Your Flask heals over 20 seconds, but for 20% more healing - while this
-      heal is active, increase the recharge
-
-      rate of your Lantern ability by 40%.
+      Your Flask heals over {{flaskHealTime}} seconds, but for {{percentFlaskHeal}}% 
+      more healing - while this heal is active, increase the recharge rate of your 
+      Lantern ability by {{percentLanternRecharge}}%.
+    values:
+      flaskHealTime: 20
+      percentFlaskHeal: 20
+      percentLanternRecharge: 45
   '6':
     description: >
-      Your Flask heals over 20 seconds, but for 20% more healing - while this
-      heal is active, increase the recharge
-
-      rate of your Lantern ability by 50%.
+      Your Flask heals over {{flaskHealTime}} seconds, but for {{percentFlaskHeal}}% 
+      more healing - while this heal is active, increase the recharge rate of your 
+      Lantern ability by {{percentLanternRecharge}}%.
+    values:
+      flaskHealTime: 20
+      percentFlaskHeal: 20
+      percentLanternRecharge: 50

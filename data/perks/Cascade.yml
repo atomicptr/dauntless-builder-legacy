@@ -1,29 +1,59 @@
 name: Cascade
-description: On Lantern Hold, generate random effect.
+description: Spawn beneficial Boosts for your allies
 type: Insight
 effects:
   '1':
-    description: >-
-      On Lantern Hold, randomly generate 1 of the following Boosts: Healing,
-      Stamina, Brutality.
+    description: 
+      - >-
+        On Lantern Hold, randomly generate {{boostQuantity}} of the following Boosts: Healing,
+        Stamina, Power.
+      - null
+      - null
+    values:
+      boostQuantity: 1
   '2':
-    description: >-
-      On Lantern Hold, randomly generate 2 of the following Boosts: Healing,
-      Stamina, Brutality.
+    description:
+      - >-
+        On Lantern Hold, randomly generate {{boostQuantity}} of the following Boosts: Healing,
+        Stamina, Power.
+      - null
+      - null
+    values:
+      boostQuantity: 2
   '3':
-    description: >-
-      On Lantern Hold, randomly generate 3 of the following Boosts: Healing,
-      Stamina, Brutality.
+    description:
+      - >-
+        On Lantern Hold, randomly generate {{boostQuantity}} of the following Boosts: Healing,
+        Stamina, Power.
+      - null
+      - null
+    values:
+      boostQuantity: 3
   '4':
-    description: >-
-      On Lantern Hold, randomly generate 4 of the following Boosts: Healing,
-      Stamina, Brutality. Stamina Boost duration increased.
+    description:
+      - >-
+        On Lantern Hold, randomly generate {{boostQuantity}} of the following Boosts: Healing,
+        Stamina, Power. 
+      - Stamina Boost duration increased.
+      - null
+    values:
+      boostQuantity: 4
   '5':
-    description: >-
-      On Lantern Hold, randomly generate 4 of the following Boosts: Healing,
-      Stamina, Brutality. Healing Boost also grants shields.
+    description:
+      - >-
+        On Lantern Hold, randomly generate {{boostQuantity}} of the following Boosts: Healing,
+        Stamina, Power.
+      - Healing Boost also grants shields. (max {{maxShield}}).
+      - null
+    values:
+      boostQuantity: 4
+      maxShield: 600
   '6':
-    description: >-
-      On Lantern Hold, randomly generate 4 of the following Boosts: Healing,
-      Stamina, Brutality. Brutality Boost duration increased. Chance to generate
-      Invincibility Boost.
+    description:
+      - >-
+        On Lantern Hold, randomly generate {{boostQuantity}} of the following Boosts: Healing,
+        Stamina, Power.
+      - Power Boost duration increased.
+      - Chance to generate Invincibility Boost.
+    values:
+      boostQuantity: 4

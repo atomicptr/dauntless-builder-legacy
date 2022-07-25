@@ -3,14 +3,26 @@ description: Increases damage against Wounded parts.
 type: Finesse
 effects:
   '1':
-    description: +20% Damage vs Wounded Parts
+    description: +{{percentDamageVsWounded}}% damage vs wounded parts
+    values:
+      percentDamageVsWounded: 20
   '2':
-    description: +30% Damage vs Wounded Parts
+    description: +{{percentDamageVsWounded}}% damage vs wounded parts
+    values:
+      percentDamageVsWounded: 30
   '3':
-    description: +40% Damage vs Wounded Parts
+    description: +{{percentDamageVsWounded}}% damage vs wounded parts
+    values:
+      percentDamageVsWounded: 40
   '4':
-    description: +60% Damage vs Wounded Parts
+    description: +{{percentDamageVsWounded}}% damage vs wounded parts
+    values:
+      percentDamageVsWounded: 60
   '5':
-    description: +80% Damage vs Wounded Parts
+    description: +{{percentDamageVsWounded}}% damage vs wounded parts
+    values:
+      percentDamageVsWounded: 80
   '6':
-    description: +100% Damage vs Wounded Parts
+    description: +{{percentDamageVsWounded}}% damage vs wounded parts
+    values:
+      percentDamageVsWounded: 100

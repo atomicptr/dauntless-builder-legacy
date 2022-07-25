@@ -3,14 +3,26 @@ description: Increases the time you are invincible when dodging.
 type: Alacrity
 effects:
   '1':
-    description: Increases Dodge invulnerability windows by 7%
+    description: Increases dodge invulnerability windows by {{percentDodgeInvulnerability}}%
+    values:
+      percentDodgeInvulnerability: 7
   '2':
-    description: Increases Dodge invulnerability windows by 14%
+    description: Increases dodge invulnerability windows by {{percentDodgeInvulnerability}}%
+    values:
+      percentDodgeInvulnerability: 14
   '3':
-    description: Increases Dodge invulnerability windows by 21%
+    description: Increases dodge invulnerability windows by {{percentDodgeInvulnerability}}%
+    values:
+      percentDodgeInvulnerability: 21
   '4':
-    description: Increases Dodge invulnerability windows by 28%
+    description: Increases dodge invulnerability windows by {{percentDodgeInvulnerability}}%
+    values:
+      percentDodgeInvulnerability: 28
   '5':
-    description: Increases Dodge invulnerability windows by 35%
+    description: Increases dodge invulnerability windows by {{percentDodgeInvulnerability}}%
+    values:
+      percentDodgeInvulnerability: 35
   '6':
-    description: Increases Dodge invulnerability windows by 42%
+    description: Increases dodge invulnerability windows by {{percentDodgeInvulnerability}}%
+    values:
+      percentDodgeInvulnerability: 42

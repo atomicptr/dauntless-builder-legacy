@@ -1,31 +1,51 @@
 name: Nine Lives
-description: Grants a chance to reduce damage, and later the ability to cheat death.
+description: Grants a chance to halve damage, and at later ranks, the ability to cheat death.
 type: Fortitude
 effects:
   '1':
     description:
-      - +5% chance to halve incoming damage
+      - +{{halveDamageChance}}% chance to halve incoming damage
       - null
+    values:
+      halveDamageChance: 5
   '2':
     description:
-      - +8% chance to halve incoming damage
+      - +{{halveDamageChance}}% chance to halve incoming damage
       - null
+    values:
+      halveDamageChance: 8
   '3':
     description:
-      - +12% chance to halve incoming damage
+      - +{{halveDamageChance}}% chance to halve incoming damage
       - null
+    values:
+      halveDamageChance: 12
   '4':
     description:
-      - +12% chance to halve incoming damage
-      - The first time you would be knocked out stay up and heal for 400
+      - +{{halveDamageChance}}% chance to halve incoming damage
+      - If you would be knocked out, stay up and heal for {{knockedOutHeal}}. {{healCooldown}} minute cooldown
+    values:
+      halveDamageChance: 12
+      knockedOutHeal: 400
+      healCooldown: 5
   '5':
     description:
-      - +16% chance to halve incoming damage
-      - The first time you would be knocked out stay up and heal for 400
+      - +{{halveDamageChance}}% chance to halve incoming damage
+      - If you would be knocked out, stay up and heal for {{knockedOutHeal}}. {{healCooldown}} minute cooldown
+    values:
+      halveDamageChance: 16
+      knockedOutHeal: 400
+      healCooldown: 5
   '6':
     description:
-      - +20% chance to halve incoming damage
+      - +{{halveDamageChance}}% chance to halve incoming damage
       - >-
-        The first time you would be knocked out stay up and heal for 400 and
-        become empowered for 10 seconds
-    
+        If you would be knocked out, stay up and heal for {{knockedOutHeal}},
+        and gain +{{percentAttackSpeed}}% attack speed and movement speed for
+        {{empoweredTime}} seconds. {{healCooldown}} minute cooldown
+    values:
+      halveDamageChance: 20
+      knockedOutHeal: 400
+      percentAttackSpeed: 33
+      empoweredTime: 10
+      healCooldown: 5

@@ -4,31 +4,48 @@ type: Insight
 effects:
   '1':
     description:
-      - When reviving an ally they are healed an additional 5%
+      - When reviving an ally they are healed an additional {{percentAllyHeal}}%
       - null
       - null
+    values:
+      percentAllyHeal: 5
   '2':
     description:
-      - When reviving an ally they are healed an additional 10%
+      - When reviving an ally they are healed an additional {{percentAllyHeal}}%
       - null
       - null
+    values:
+      percentAllyHeal: 10
   '3':
     description:
-      - When reviving an ally they are healed an additional 20%
+      - When reviving an ally they are healed an additional {{percentAllyHeal}}%
       - null
       - null
+    values:
+      percentAllyHeal: 20
   '4':
     description:
-      - When reviving an ally they are healed an additional 20%
-      - Increases Revive Speed by 66%
+      - When reviving an ally they are healed an additional {{percentAllyHeal}}%
+      - Increases Revive Speed by {{reviveSpeed}}%
       - null
+    values:
+      percentAllyHeal: 20
+      reviveSpeed: 66
   '5':
     description:
-      - When reviving an ally they are healed an additional 30%
-      - Increases Revive Speed by 66%
+      - When reviving an ally they are healed an additional {{percentAllyHeal}}%
+      - Increases Revive Speed by {{reviveSpeed}}%
       - null
+    values:
+      percentAllyHeal: 30
+      reviveSpeed: 66
   '6':
     description:
-      - When reviving an ally they are healed an additional 40%
-      - Increases Revive Speed by 66%
-      - Grants a 300 health shield for 20 seconds after reviving an ally
+      - When reviving an ally they are healed an additional {{percentAllyHeal}}%
+      - Increases Revive Speed by {{reviveSpeed}}%
+      - After reviving an ally, gain a {{healthShield}} health shield for {{shieldTime}} seconds
+    values:
+      percentAllyHeal: 40
+      reviveSpeed: 66
+      healthShield: 300
+      shieldTime: 20

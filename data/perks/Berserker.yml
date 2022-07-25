@@ -6,26 +6,55 @@ type: Brutality
 effects:
   '1':
     description:
-      - '-50 max health'
-      - After dealing damage, gain +1% damage for 3 seconds. Stacks 10 times.
+      - '{{maxHealthReduction}} max health'
+      - After dealing damage, gain +{{percentDamage}}% damage for {{damageTime}} seconds. Stacks {{damageStacks}} times.
+    values:
+      maxHealthReduction: -50
+      percentDamage: 1
+      damageTime: 3
+      damageStacks: 10
   '2':
     description:
-      - '-100 max health'
-      - After dealing damage, gain +1.5% damage for 3 seconds. Stacks 10 times.
+      - '{{maxHealthReduction}} max health'
+      - After dealing damage, gain +{{percentDamage}}% damage for {{damageTime}} seconds. Stacks {{damageStacks}} times.
+    values:
+      maxHealthReduction: -100
+      percentDamage: 1.5
+      damageTime: 3
+      damageStacks: 10
   '3':
     description:
-      - '-150 max health'
-      - After dealing damage, gain +2% damage for 3 seconds. Stacks 10 times.
+      - '{{maxHealthReduction}} max health'
+      - After dealing damage, gain +{{percentDamage}}% damage for {{damageTime}} seconds. Stacks {{damageStacks}} times.
+    values:
+      maxHealthReduction: -150
+      percentDamage: 2
+      damageTime: 3
+      damageStacks: 10
   '4':
     description:
-      - '-200 max health'
-      - After dealing damage, gain +2.5% damage for 3 seconds. Stacks 10 times.
+      - '{{maxHealthReduction}} max health'
+      - After dealing damage, gain +{{percentDamage}}% damage for {{damageTime}} seconds. Stacks {{damageStacks}} times.
+    values:
+      maxHealthReduction: -200
+      percentDamage: 2.5
+      damageTime: 3
+      damageStacks: 10
   '5':
     description:
-      - '-250 max health'
-      - After dealing damage, gain +3% damage for 3 seconds. Stacks 10 times.
+      - '{{maxHealthReduction}} max health'
+      - After dealing damage, gain +{{percentDamage}}% damage for {{damageTime}} seconds. Stacks {{damageStacks}} times.
+    values:
+      maxHealthReduction: -250
+      percentDamage: 3
+      damageTime: 3
+      damageStacks: 10
   '6':
     description:
-      - '-300 max health'
-      - After dealing damage, gain +3.5% damage for 3 seconds. Stacks 10 times.
-    
+      - '{{maxHealthReduction}} max health'
+      - After dealing damage, gain +{{percentDamage}}% damage for {{damageTime}} seconds. Stacks {{damageStacks}} times.
+    values:
+      maxHealthReduction: -300
+      percentDamage: 3.5
+      damageTime: 3
+      damageStacks: 10

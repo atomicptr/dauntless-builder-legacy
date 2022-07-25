@@ -1,22 +1,51 @@
 name: Omnisurge
-description: Percent increase the recharge rate of your Lantern ability.
+description: >-
+  Reduce the cooldown of yout Omnicell ability. At later ranks,
+  activating your omnicell ability reduces Lantern ability cooldown.
 type: Insight
 effects:
   '1':
-    description: Reduce the cooldown of your Omnicell ability by 5%.
+    description:
+      - Reduce the cooldown of your Omnicell ability by {{omnicellCooldownReduction}}%.
+      - null
+    values:
+      omnicellCooldownReduction: 5
   '2':
-    description: Reduce the cooldown of your Omnicell ability by 8%.
+    description:
+      - Reduce the cooldown of your Omnicell ability by {{omnicellCooldownReduction}}%.
+      - null
+    values:
+      omnicellCooldownReduction: 8
   '3':
-    description: Reduce the cooldown of your Omnicell ability by 11%.
+    description:
+      - Reduce the cooldown of your Omnicell ability by {{omnicellCooldownReduction}}%.
+      - null
+    values:
+      omnicellCooldownReduction: 11
   '4':
-    description: >-
-      Reduce the cooldown of your Omnicell ability by 14%. On Omnicell ability
-      activation, reduce the cooldown of your Lantern ability by 20%.
+    description:
+      - Reduce the cooldown of your Omnicell ability by {{omnicellCooldownReduction}}%.
+      - >-
+        On Omnicell ability activation, reduce the cooldown of your Lantern ability
+        by {{lanternCooldownReduction}}%.
+    values:
+      omnicellCooldownReduction: 14
+      lanternCooldownReduction: 20
   '5':
-    description: >-
-      Reduce the cooldown of your Omnicell ability by 17%. On Omnicell ability
-      activation, reduce the cooldown of your Lantern ability by 30%.
+    description:
+      - Reduce the cooldown of your Omnicell ability by {{omnicellCooldownReduction}}%.
+      - >-
+        On Omnicell ability activation, reduce the cooldown of your Lantern ability
+        by {{lanternCooldownReduction}}%.
+    values:
+      omnicellCooldownReduction: 17
+      lanternCooldownReduction: 30
   '6':
-    description: >-
-      Reduce the cooldown of your Omnicell ability by 20%. On Omnicell ability
-      activation, reduce the cooldown of your Lantern ability by 40%.
+    description:
+      - Reduce the cooldown of your Omnicell ability by {{omnicellCooldownReduction}}%.
+      - >-
+        On Omnicell ability activation, reduce the cooldown of your Lantern ability
+        by {{lanternCooldownReduction}}%.
+    values:
+      omnicellCooldownReduction: 20
+      lanternCooldownReduction: 40

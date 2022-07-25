@@ -1,16 +1,34 @@
 name: Fleet Footed
-description: Temporarily increases Movement Speed after a dodge.
+description: Temporarily increases movement speed after a dodge.
 type: Alacrity
 effects:
   '1':
-    description: After dodging, gain +10% movement speed for 10 seconds
+    description: After dodging, gain +{{percentMoveSpeed}}% movement speed for {{moveSpeedTime}} seconds
+    values:
+      percentMoveSpeed: 10
+      moveSpeedTime: 10
   '2':
-    description: After dodging, gain +15% movement speed for 10 seconds
+    description: After dodging, gain +{{percentMoveSpeed}}% movement speed for {{moveSpeedTime}} seconds
+    values:
+      percentMoveSpeed: 15
+      moveSpeedTime: 10
   '3':
-    description: After dodging, gain +20% movement speed for 10 seconds
+    description: After dodging, gain +{{percentMoveSpeed}}% movement speed for {{moveSpeedTime}} seconds
+    values:
+      percentMoveSpeed: 20
+      moveSpeedTime: 10
   '4':
-    description: After dodging, gain +25% movement speed for 10 seconds
+    description: After dodging, gain +{{percentMoveSpeed}}% movement speed for {{moveSpeedTime}} seconds
+    values:
+      percentMoveSpeed: 25
+      moveSpeedTime: 10
   '5':
-    description: After dodging, gain +30% movement speed for 10 seconds
+    description: After dodging, gain +{{percentMoveSpeed}}% movement speed for {{moveSpeedTime}} seconds
+    values:
+      percentMoveSpeed: 30
+      moveSpeedTime: 10
   '6':
-    description: After dodging, gain +35% movement speed for 10 seconds
+    description: After dodging, gain +{{percentMoveSpeed}}% movement speed for {{moveSpeedTime}} seconds
+    values:
+      percentMoveSpeed: 35
+      moveSpeedTime: 10

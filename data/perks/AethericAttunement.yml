@@ -1,16 +1,28 @@
 name: Aetheric Attunement
-description: Reduces the cooldown of your lantern ability.
+description: Increases the recharge rate of your lantern ability.
 type: Insight
 effects:
   '1':
-    description: Increases the recharge rate of your lantern ability by 10%
+    description: Increases the recharge rate of your lantern ability by {{percentLanternRecharge}}%
+    values:
+      percentLanternRecharge: 10
   '2':
-    description: Increases the recharge rate of your lantern ability by 15%
+    description: Increases the recharge rate of your lantern ability by {{percentLanternRecharge}}%
+    values:
+      percentLanternRecharge: 15
   '3':
-    description: Increases the recharge rate of your lantern ability by 20%
+    description: Increases the recharge rate of your lantern ability by {{percentLanternRecharge}}%
+    values:
+      percentLanternRecharge: 20
   '4':
-    description: Increases the recharge rate of your lantern ability by 30%
+    description: Increases the recharge rate of your lantern ability by {{percentLanternRecharge}}%
+    values:
+      percentLanternRecharge: 30
   '5':
-    description: Increases the recharge rate of your lantern ability by 40%
+    description: Increases the recharge rate of your lantern ability by {{percentLanternRecharge}}%
+    values:
+      percentLanternRecharge: 40
   '6':
-    description: Increases the recharge rate of your lantern ability by 50%
+    description: Increases the recharge rate of your lantern ability by {{percentLanternRecharge}}%
+    values:
+      percentLanternRecharge: 50

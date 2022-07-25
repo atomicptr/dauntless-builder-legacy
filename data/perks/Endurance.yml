@@ -3,14 +3,26 @@ description: Increases Max Stamina.
 type: Alacrity
 effects:
   '1':
-    description: Increases Max Stamina by 10
+    description: +{{maxStamina}} max stamina
+    values:
+      maxStamina: 10
   '2':
-    description: Increases Max Stamina by 20
+    description: +{{maxStamina}} max stamina
+    values:
+      maxStamina: 20
   '3':
-    description: Increases Max Stamina by 40
+    description: +{{maxStamina}} max stamina
+    values:
+      maxStamina: 40
   '4':
-    description: Increases Max Stamina by 60
+    description: +{{maxStamina}} max stamina
+    values:
+      maxStamina: 60
   '5':
-    description: Increases Max Stamina by 80
+    description: +{{maxStamina}} max stamina
+    values:
+      maxStamina: 80
   '6':
-    description: Increases Max Stamina by 100
+    description: +{{maxStamina}} max stamina
+    values:
+      maxStamina: 100

@@ -4,29 +4,46 @@ type: Finesse
 effects:
   '1':
     description:
-      - +10 wound damage
+      - +{{woundDamage}} wound damage
       - null
+    values:
+      woundDamage: 10
   '2':
     description:
-      - +20 wound damage
+      - +{{woundDamage}} wound damage
       - null
+    values:
+      woundDamage: 20
   '3':
     description:
-      - +30 wound damage
+      - +{{woundDamage}} wound damage
       - null
+    values:
+      woundDamage: 30
   '4':
     description:
-      - +40 wound damage
-      - After dodging through an attack
-      - your next attack deals +250 wound damage
+      - +{{woundDamage}} wound damage
+      - >-
+        After dodging through an attack,
+        your next attack deals +{{woundDamageNextAttack}} wound damage
+    values:
+      woundDamage: 40
+      woundDamageNextAttack: 250
   '5':
     description:
-      - +50 wound damage
-      - After dodging through an attack
-      - your next attack deals +360 wound damage
+      - +{{woundDamage}} wound damage
+      - >-
+        After dodging through an attack,
+        your next attack deals +{{woundDamageNextAttack}} wound damage
+    values:
+      woundDamage: 50
+      woundDamageNextAttack: 350
   '6':
     description:
-      - +60 wound damage
-      - After dodging through an attack
-      - your next attack deals +500 wound damage
-    
+      - +{{woundDamage}} wound damage
+      - >-
+        After dodging through an attack,
+        your next attack deals +{{woundDamageNextAttack}} wound damage
+    values:
+      woundDamage: 60
+      woundDamageNextAttack: 500

@@ -1,16 +1,46 @@
 name: Nimble
-description: Restores Stamina when dodging through Behemoth attacks.
+description: Restores Stamina when dodging through Behemoth attacks. Excess becomes a stamina shield.
 type: Alacrity
 effects:
   '1':
-    description: Gain 10 Stamina after dodging through an attack
+    description: >-
+      After dodging through an attack, gain {{dodgeStamina}} stamina. Stamina gained above
+      Max Stamina becomes a stamina shield (max {{maxStaminaShield}}).
+    values:
+      dodgeStamina: 10
+      maxStaminaShield: 50
   '2':
-    description: Gain 15 Stamina after dodging through an attack
+    description: >-
+      After dodging through an attack, gain {{dodgeStamina}} stamina. Stamina gained above
+      Max Stamina becomes a stamina shield (max {{maxStaminaShield}}).
+    values:
+      dodgeStamina: 15
+      maxStaminaShield: 50
   '3':
-    description: Gain 20 Stamina after dodging through an attack
+    description: >-
+      After dodging through an attack, gain {{dodgeStamina}} stamina. Stamina gained above
+      Max Stamina becomes a stamina shield (max {{maxStaminaShield}}).
+    values:
+      dodgeStamina: 20
+      maxStaminaShield: 50
   '4':
-    description: Gain 25 Stamina after dodging through an attack
+    description: >-
+      After dodging through an attack, gain {{dodgeStamina}} stamina. Stamina gained above
+      Max Stamina becomes a stamina shield (max {{maxStaminaShield}}).
+    values:
+      dodgeStamina: 25
+      maxStaminaShield: 50
   '5':
-    description: Gain 30 Stamina after dodging through an attack
+    description: >-
+      After dodging through an attack, gain {{dodgeStamina}} stamina. Stamina gained above
+      Max Stamina becomes a stamina shield (max {{maxStaminaShield}}).
+    values:
+      dodgeStamina: 30
+      maxStaminaShield: 50
   '6':
-    description: Gain 35 Stamina after dodging through an attack
+    description: >-
+      After dodging through an attack, gain {{dodgeStamina}} stamina. Stamina gained above
+      Max Stamina becomes a stamina shield (max {{maxStaminaShield}}).
+    values:
+      dodgeStamina: 35
+      maxStaminaShield: 50

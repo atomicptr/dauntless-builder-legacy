@@ -1,31 +1,40 @@
 name: Insulated
 description: >-
-  Protects against Shocked status effect and allows you to attack electric
-  shields.
+  Protects against Shocked status effect. At later ranks, allows you to 
+  attack electric shields.
 type: Fortitude
 effects:
   '1':
     description:
-      - Reduces duration of Shocked status by 25%
+      - Reduces duration of shocked status by {{percentShockedReduction}}%
       - null
+    values:
+      percentShockedReduction: 25
   '2':
     description:
-      - Reduces duration of Shocked status by 50%
+      - Reduces duration of shocked status by {{percentShockedReduction}}%
       - null
+    values:
+      percentShockedReduction: 50
   '3':
     description:
-      - Reduces duration of Shocked status by 75%
+      - Reduces duration of shocked status by {{percentShockedReduction}}%
       - null
+    values:
+      percentShockedReduction: 75
   '4':
     description:
-      - Reduces duration of Shocked status by 75%
+      - Reduces duration of shocked status by {{percentShockedReduction}}%
       - Reduces knockback and damage of hitting electrified shields
+    values:
+      percentShockedReduction: 75
   '5':
     description:
-      - Reduces duration of Shocked status by 75%
-      - Prevents knockback and damage of hitting electrified shields
+      - Reduces duration of shocked status by {{percentShockedReduction}}%
+      - Prevents knockback and damage when hitting electrified shields
+    values:
+      percentShockedReduction: 75
   '6':
     description:
-      - Immune to Shocked status
-      - Prevents knockback and damage of hitting electrified shields
-    
+      - Immune to shocked status
+      - Prevents knockback and damage when hitting electrified shields

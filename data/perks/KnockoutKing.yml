@@ -4,32 +4,52 @@ type: Brutality
 effects:
   '1':
     description:
-      - 5% Stagger Damage
+      - +{{percentStaggerDamage}}% Stagger Damage
       - null
+    values:
+      percentStaggerDamage: 5
   '2':
     description:
-      - 10% Stagger Damage
+      - +{{percentStaggerDamage}}% Stagger Damage
       - null
+    values:
+      percentStaggerDamage: 10
   '3':
     description:
-      - 15% Stagger Damage
+      - +{{percentStaggerDamage}}% Stagger Damage
       - null
+    values:
+      percentStaggerDamage: 15
   '4':
     description:
-      - 20% Stagger Damage
+      - +{{percentStaggerDamage}}% Stagger Damage
       - >-
-        After dodging through an attack the next weapon attack's Stagger is
-        increased by 50%
+        After dodging through an attack, your next attack within 
+        {{nextAttackTime}} seconds deals 
+        +{{percentStaggerDamagenextAttack}}% stagger damage
+    values:
+      percentStaggerDamage: 20
+      nextAttackTime: 5
+      percentStaggerDamagenextAttack: 50
   '5':
     description:
-      - 25% Stagger Damage
+      - +{{percentStaggerDamage}}% Stagger Damage
       - >-
-        After dodging through an attack the next weapon attack's Stagger is
-        increased by 50%
+        After dodging through an attack, your next attack within 
+        {{nextAttackTime}} seconds deals 
+        +{{percentStaggerDamagenextAttack}}% stagger damage
+    values:
+      percentStaggerDamage: 25
+      nextAttackTime: 5
+      percentStaggerDamagenextAttack: 50
   '6':
     description:
-      - 30% Stagger Damage
+      - +{{percentStaggerDamage}}% Stagger Damage
       - >-
-        After dodging through an attack the next weapon attack's Stagger is
-        increased by 100%
-    
+        After dodging through an attack, your next attack within 
+        {{nextAttackTime}} seconds deals 
+        +{{percentStaggerDamagenextAttack}}% stagger damage
+    values:
+      percentStaggerDamage: 30
+      nextAttackTime: 5
+      percentStaggerDamagenextAttack: 100

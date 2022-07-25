@@ -4,26 +4,43 @@ type: Brutality
 effects:
   '1':
     description:
-      - +5 Part Damage on Hit
+      - +{{partDamage}} Part Damage
       - null
+    values:
+      partDamage: 5
   '2':
     description:
-      - +10 Part Damage on Hit
+      - +{{partDamage}} Part Damage
       - null
+    values:
+      partDamage: 10
   '3':
     description:
-      - +15 Part Damage on Hit
+      - +{{partDamage}} Part Damage
       - null
+    values:
+      partDamage: 15
   '4':
     description:
-      - +20 Part Damage on Hit
-      - +200 Part Damage after dodging through an attack
+      - +{{partDamage}} Part Damage
+      - After dodging through an attack, your next attack within {{nextAttackTime}} seconds deals +{{partDamageNextAttack}} part damage
+    values:
+      partDamage: 20
+      partDamageNextAttack: 200
+      nextAttackTime: 5
   '5':
     description:
-      - +30 Part Damage on Hit
-      - +200 Part Damage after dodging through an attack
+      - +{{partDamage}} Part Damage
+      - After dodging through an attack, your next attack within {{nextAttackTime}} seconds deals +{{partDamageNextAttack}} part damage
+    values:
+      partDamage: 30
+      partDamageNextAttack: 200
+      nextAttackTime: 5
   '6':
     description:
-      - +40 Part Damage on Hit
-      - +400 Part Damage after dodging through an attack
-    
+      - +{{partDamage}} Part Damage
+      - After dodging through an attack, your next attack within {{nextAttackTime}} seconds deals +{{partDamageNextAttack}} part damage
+    values:
+      partDamage: 40
+      partDamageNextAttack: 400
+      nextAttackTime: 5

@@ -4,25 +4,43 @@ type: Alacrity
 effects:
   '1':
     description: >-
-      Each time you break or assist in breaking a part, gain +15% attack speed
-      for 10 seconds.
+      Each time you break or assist in breaking a part, gain +{{percentAttackSpeed}}% attack speed
+      for {{attackSpeedTime}} seconds.
+    values:
+      percentAttackSpeed: 15
+      attackSpeedTime: 10
   '2':
     description: >-
-      Each time you break or assist in breaking a part, gain +15% attack speed
-      for 15 seconds.
+      Each time you break or assist in breaking a part, gain +{{percentAttackSpeed}}% attack speed
+      for {{attackSpeedTime}} seconds.
+    values:
+      percentAttackSpeed: 15
+      attackSpeedTime: 15
   '3':
     description: >-
-      Each time you break or assist in breaking a part, gain +15% attack speed
-      for 20 seconds.
+      Each time you break or assist in breaking a part, gain +{{percentAttackSpeed}}% attack speed
+      for {{attackSpeedTime}} seconds.
+    values:
+      percentAttackSpeed: 15
+      attackSpeedTime: 20
   '4':
     description: >-
-      Each time you break or assist in breaking a part, gain +15% attack speed
-      for 30 seconds.
+      Each time you break or assist in breaking a part, gain +{{percentAttackSpeed}}% attack speed
+      for {{attackSpeedTime}} seconds.
+    values:
+      percentAttackSpeed: 15
+      attackSpeedTime: 30
   '5':
     description: >-
-      Each time you break or assist in breaking a part, gain +15% attack speed
-      for 35 seconds.
+      Each time you break or assist in breaking a part, gain +{{percentAttackSpeed}}% attack speed
+      for {{attackSpeedTime}} seconds.
+    values:
+      percentAttackSpeed: 15
+      attackSpeedTime: 35
   '6':
     description: >-
-      Each time you break or assist in breaking a part, gain +15% attack speed
-      for 40 seconds.
+      Each time you break or assist in breaking a part, gain +{{percentAttackSpeed}}% attack speed
+      for {{attackSpeedTime}} seconds.
+    values:
+      percentAttackSpeed: 15
+      attackSpeedTime: 40

@@ -1,28 +1,40 @@
 name: Aetheric Evasion
-description: On dodging through an attack, reduce the cooldown of your Lantern ability.
+description: Reduces Lantern ability cooldown when dodging through Behemoth attacks.
 type: Insight
 effects:
   '1':
     description: >-
       On dodging through an attack, reduce the cooldown of your lantern ability
-      by 5%.
+      by {{percentLanternCooldown}}%.
+    values:
+      percentLanternCooldown: 5
   '2':
     description: >-
       On dodging through an attack, reduce the cooldown of your lantern ability
-      by 10%.
+      by {{percentLanternCooldown}}%.
+    values:
+      percentLanternCooldown: 10
   '3':
     description: >-
       On dodging through an attack, reduce the cooldown of your lantern ability
-      by 15%.
+      by {{percentLanternCooldown}}%.
+    values:
+      percentLanternCooldown: 15
   '4':
     description: >-
       On dodging through an attack, reduce the cooldown of your lantern ability
-      by 25%.
+      by {{percentLanternCooldown}}%.
+    values:
+      percentLanternCooldown: 25
   '5':
     description: >-
       On dodging through an attack, reduce the cooldown of your lantern ability
-      by 30%.
+      by {{percentLanternCooldown}}%.
+    values:
+      percentLanternCooldown: 30
   '6':
     description: >-
       On dodging through an attack, reduce the cooldown of your lantern ability
-      by 35%.
+      by {{percentLanternCooldown}}%.
+    values:
+      percentLanternCooldown: 35

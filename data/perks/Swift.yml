@@ -1,18 +1,39 @@
 name: Swift
-description: Increases Movement Speed when your weapon is sheathed.
+description: >-
+  Increases Movement Speed for all nearby Slayers when your weapon is sheathed.
+  At higher levels, temporarily retains some of that increase after unsheathing.
 type: Alacrity
 effects:
   '1':
-    description: While sheathed, increases Movement Speed by 5%
+    description: While sheathed, grants +{{percentMovementSpeed}}% movement speed to all nearby Slayers
+    values:
+      percentMovementSpeed: 5
   '2':
-    description: While sheathed, increases Movement Speed by 10%
+    description: While sheathed, grants +{{percentMovementSpeed}}% movement speed to all nearby Slayers
+    values:
+      percentMovementSpeed: 10
   '3':
-    description: While sheathed, increases Movement Speed by 15%
+    description: While sheathed, grants +{{percentMovementSpeed}}% movement speed to all nearby Slayers
+    values:
+      percentMovementSpeed: 15
   '4':
-    description: While sheathed, increases Movement Speed by 20%
+    description: >-
+      While sheathed, grants +{{percentMovementSpeed}}% movement speed to all nearby Slayers. Half of
+      this effect persists on you for {{persistTime}} seconds after unsheathing.
+    values:
+      percentMovementSpeed: 20
+      persistTime: 15
   '5':
-    description: While sheathed, increases Movement Speed by 25%
+    description: >-
+      While sheathed, grants +{{percentMovementSpeed}}% movement speed to all nearby Slayers. Half of
+      this effect persists on you for {{persistTime}} seconds after unsheathing.
+    values:
+      percentMovementSpeed: 25
+      persistTime: 15
   '6':
     description: >-
-      While sheathed, increases Movement Speed by 30%, also affects other nearby
-      Slayers.
+      While sheathed, grants +{{percentMovementSpeed}}% movement speed to all nearby Slayers. Half of
+      this effect persists on you for {{persistTime}} seconds after unsheathing.
+    values:
+      percentMovementSpeed: 30
+      persistTime: 15

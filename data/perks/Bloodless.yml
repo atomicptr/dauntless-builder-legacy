@@ -1,15 +1,19 @@
 name: Bloodless
-description: Protects against Wounded and Crippling Wounds statuses.
+description: Protects against Wounded and Crippling Wound statuses.
 type: Fortitude
 effects:
   '1':
     description:
-      - Reduces duration of Wounded status by 50%
+      - Reduces duration of Wounded status by {{percentWoundedReduction}}%
       - null
+    values:
+      percentWoundedReduction: 50
   '2':
     description:
-      - Reduces duration of Wounded status by 80%
+      - Reduces duration of Wounded status by {{percentWoundedReduction}}%
       - null
+    values:
+      percentWoundedReduction: 80
   '3':
     description:
       - Immune to Wounded status
@@ -17,13 +21,16 @@ effects:
   '4':
     description:
       - Immune to Wounded status
-      - Reduces effectiveness of Crippling Wounded status by 50%
+      - Reduces effectiveness of Crippling Wounded status by {{percentCripplingWoundedReduction}}%
+    values:
+      percentCripplingWoundedReduction: 50
   '5':
     description:
       - Immune to Wounded status
-      - Reduces effectiveness of Crippling Wounded status by 80%
+      - Reduces effectiveness of Crippling Wounded status by {{percentCripplingWoundedReduction}}%
+    values:
+      percentCripplingWoundedReduction: 80
   '6':
     description:
       - Immune to Wounded status
       - Immune to Crippling Wound status
-    

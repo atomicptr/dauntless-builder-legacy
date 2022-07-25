@@ -1,28 +1,40 @@
 name: Molten
-description: Generates Molten Hearts when dealing damage.
+description: Grants Molten Heart drops on cooldown.
 type: Insight
 effects:
   '1':
     description: >-
-      Dealing damage generates a Molten Heart on a 26 second cooldown, granting
+      Dealing damage generates a Molten Heart on a {{moltenCooldown}} second cooldown, granting
       immunity to burning and increased attack and movement speed.
+    values:
+      moltenCooldown: 26
   '2':
     description: >-
-      Dealing damage generates a Molten Heart on a 23 second cooldown, granting
+      Dealing damage generates a Molten Heart on a {{moltenCooldown}} second cooldown, granting
       immunity to burning and increased attack and movement speed.
+    values:
+      moltenCooldown: 23
   '3':
     description: >-
-      Dealing damage generates two Molten Hearts on a 23 second cooldown,
+      Dealing damage generates two Molten Hearts on a {{moltenCooldown}} second cooldown,
       granting immunity to burning and increased attack and movement speed.
+    values:
+      moltenCooldown: 23
   '4':
     description: >-
-      Dealing damage generates two Molten Hearts on a 20 second cooldown,
+      Dealing damage generates two Molten Hearts on a {{moltenCooldown}} second cooldown,
       granting immunity to burning and increased attack and movement speed.
+    values:
+      moltenCooldown: 20
   '5':
     description: >-
-      Dealing damage generates three Molten Hearts on a 20 second cooldown,
+      Dealing damage generates three Molten Hearts on a {{moltenCooldown}} second cooldown,
       granting immunity to burning and increased attack and movement speed.
+    values:
+      moltenCooldown: 20
   '6':
     description: >-
-      Dealing damage generates three Molten Hearts on a 16 second cooldown,
+      Dealing damage generates three Molten Hearts on a {{moltenCooldown}} second cooldown,
       granting immunity to burning and increased attack and movement speed.
+    values:
+      moltenCooldown: 16

@@ -1,31 +1,49 @@
 name: Galvanized
-description: >-
-  Grants increased critical strike chance based on the amount of shield stacks
-  you have, and at higher ranks it also grants increased critical strike damage
+description: Gain bonus critical strike chance based on current shield.
 type: Finesse
 effects:
   '1':
     description:
-      - For every 150 shields, gain +1% bonus critical strike chance.
+      - For every {{shield}} Shield, gain +{{critChance}}% bonus critical strike chance.
       - null
+    values:
+      shield: 150
+      critChance: 1
   '2':
     description:
-      - For every 125 shields, gain +1% bonus critical strike chance.
+      - For every {{shield}} Shield, gain +{{critChance}}% bonus critical strike chance.
       - null
+    values:
+      shield: 125
+      critChance: 1
   '3':
     description:
-      - For every 100 shields, gain +1% bonus critical strike chance.
+      - For every {{shield}} Shield, gain +{{critChance}}% bonus critical strike chance.
       - null
+    values:
+      shield: 100
+      critChance: 1
   '4':
     description:
-      - For every 85 shields, gain +1% bonus critical strike chance.
-      - +5% critical strike damage.
+      - For every {{shield}} Shield, gain +{{critChance}}% bonus critical strike chance.
+      - +{{critDamage}}% critical strike damage.
+    values:
+      shield: 85
+      critChance: 1
+      critDamage: 5
   '5':
     description:
-      - For every 70 shields, gain +1% bonus critical strike chance.
-      - +10% critical strike damage.
+      - For every {{shield}} Shield, gain +{{critChance}}% bonus critical strike chance.
+      - +{{critDamage}}% critical strike damage.
+    values:
+      shield: 70
+      critChance: 1
+      critDamage: 10
   '6':
     description:
-      - For every 50 shields, gain +1% bonus critical strike chance.
-      - +15% critical strike damage.
-    
+      - For every {{shield}} Shield, gain +{{critChance}}% bonus critical strike chance.
+      - +{{critDamage}}% critical strike damage.
+    values:
+      shield: 50
+      critChance: 1
+      critDamage: 15

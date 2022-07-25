@@ -4,25 +4,40 @@ type: Finesse
 effects:
   '1':
     description:
-      - Converts 30% of Part Damage to Wound Damage
+      - Converts {{percentPartToWoundDamage}}% of Part Damage to Wound Damage
       - null
+    values:
+      percentPartToWoundDamage: 30
   '2':
     description:
-      - Converts 40% of Part Damage to Wound Damage
+      - Converts {{percentPartToWoundDamage}}% of Part Damage to Wound Damage
       - null
+    values:
+      percentPartToWoundDamage: 40
   '3':
     description:
-      - Converts 50% of Part Damage to Wound Damage
+      - Converts {{percentPartToWoundDamage}}% of Part Damage to Wound Damage
       - null
+    values:
+      percentPartToWoundDamage: 50
   '4':
     description:
-      - Converts 50% of Part Damage to Wound Damage
-      - +10% Part damage
+      - Converts {{percentPartToWoundDamage}}% of Part Damage to Wound Damage
+      - +{{percentPartDamage}}% Part damage
+    values:
+      percentPartToWoundDamage: 50
+      percentPartDamage: 10
   '5':
     description:
-      - Converts 50% of Part Damage to Wound Damage
-      - +15% Part damage
+      - Converts {{percentPartToWoundDamage}}% of Part Damage to Wound Damage
+      - +{{percentPartDamage}}% Part damage
+    values:
+      percentPartToWoundDamage: 50
+      percentPartDamage: 15
   '6':
     description:
-      - Converts 50% of Part Damage to Wound Damage
-      - +20% Part damage
+      - Converts {{percentPartToWoundDamage}}% of Part Damage to Wound Damage
+      - +{{percentPartDamage}}% Part damage
+    values:
+      percentPartToWoundDamage: 50
+      percentPartDamage: 20

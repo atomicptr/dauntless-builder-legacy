@@ -1,16 +1,40 @@
 name: Fortress
-description: Grants a small shield after avoiding damage for a short time.
+description: Grants a small shield after avoiding hostile damage for a short time.
 type: Fortitude
 effects:
   '1':
-    description: Grants a 65 health shield after not getting hit for 10s. Stacks 3 times.
+    description: After not taking hostile damage for {{shieldProcTime}} seconds, gain a {{shield}} health shield. Stacks {{shieldStacks}} times.
+    values:
+      shield: 65
+      shieldProcTime: 10
+      shieldStacks: 3
   '2':
-    description: Grants a 75 health shield after not getting hit for 10s. Stacks 3 times.
+    description: After not taking hostile damage for {{shieldProcTime}} seconds, gain a {{shield}} health shield. Stacks {{shieldStacks}} times.
+    values:
+      shield: 75
+      shieldProcTime: 10
+      shieldStacks: 3
   '3':
-    description: Grants a 90 health shield after not getting hit for 10s. Stacks 3 times.
+    description: After not taking hostile damage for {{shieldProcTime}} seconds, gain a {{shield}} health shield. Stacks {{shieldStacks}} times.
+    values:
+      shield: 90
+      shieldProcTime: 10
+      shieldStacks: 3
   '4':
-    description: Grants a 105 health shield after not getting hit for 10s. Stacks 3 times.
+    description: After not taking hostile damage for {{shieldProcTime}} seconds, gain a {{shield}} health shield. Stacks {{shieldStacks}} times.
+    values:
+      shield: 105
+      shieldProcTime: 10
+      shieldStacks: 3
   '5':
-    description: Grants a 120 health shield after not getting hit for 10s. Stacks 3 times.
+    description: After not taking hostile damage for {{shieldProcTime}} seconds, gain a {{shield}} health shield. Stacks {{shieldStacks}} times.
+    values:
+      shield: 120
+      shieldProcTime: 10
+      shieldStacks: 3
   '6':
-    description: Grants a 135 health shield after not getting hit for 10s. Stacks 3 times.
+    description: After not taking hostile damage for {{shieldProcTime}} seconds, gain a {{shield}} health shield. Stacks {{shieldStacks}} times.
+    values:
+      shield: 135
+      shieldProcTime: 10
+      shieldStacks: 3

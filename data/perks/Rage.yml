@@ -1,28 +1,52 @@
 name: Rage
-description: When you take damage, increases your damage.
+description: Deal increased damage after taking damage.
 type: Brutality
 effects:
   '1':
     description: >-
-      Once every 50 seconds, when you take damage, deal +20% increased damage
-      for 15 seconds.
+      Once every {{damageCooldown}} seconds, when you take damage, deal +{{percentDamage}}% increased damage
+      for {{damageTime}} seconds.
+    values:
+      damageCooldown: 50
+      percentDamage: 20
+      damageTime: 15
   '2':
     description: >-
-      Once every 40 seconds, when you take damage, deal +20% increased damage
-      for 15 seconds.
+      Once every {{damageCooldown}} seconds, when you take damage, deal +{{percentDamage}}% increased damage
+      for {{damageTime}} seconds.
+    values:
+      damageCooldown: 40
+      percentDamage: 20
+      damageTime: 15
   '3':
     description: >-
-      Once every 30 seconds, when you take damage, deal +20% increased damage
-      for 15 seconds.
+      Once every {{damageCooldown}} seconds, when you take damage, deal +{{percentDamage}}% increased damage
+      for {{damageTime}} seconds.
+    values:
+      damageCooldown: 30
+      percentDamage: 20
+      damageTime: 15
   '4':
     description: >-
-      Once every 25 seconds, when you take damage, deal +20% increased damage
-      for 15 seconds.
+      Once every {{damageCooldown}} seconds, when you take damage, deal +{{percentDamage}}% increased damage
+      for {{damageTime}} seconds.
+    values:
+      damageCooldown: 25
+      percentDamage: 20
+      damageTime: 15
   '5':
     description: >-
-      Once every 20 seconds, when you take damage, deal +20% increased damage
-      for 15 seconds.
+      Once every {{damageCooldown}} seconds, when you take damage, deal +{{percentDamage}}% increased damage
+      for {{damageTime}} seconds.
+    values:
+      damageCooldown: 20
+      percentDamage: 20
+      damageTime: 15
   '6':
     description: >-
-      Once every 15 seconds, when you take damage, deal +20% increased damage
-      for 15 seconds.
+      Once every {{damageCooldown}} seconds, when you take damage, deal +{{percentDamage}}% increased damage
+      for {{damageTime}} seconds.
+    values:
+      damageCooldown: 15
+      percentDamage: 20
+      damageTime: 15

@@ -3,32 +3,32 @@ description: Temporarily increases attack speed when dodging through a Behemoth'
 type: Alacrity
 effects:
   '1':
-    description: +{{attackSpeed}}% Attack Speed for {{time}} seconds after dodging through an attack
+    description: After dodging through an attack, gain +{{percentAttackSpeed}}% attack speed for {{attackSpeedTime}} seconds
     values:
-      attackSpeed: 4
-      time: 25
+      percentAttackSpeed: 4
+      attackSpeedTime: 25
   '2':
-    description: +{{attackSpeed}}% Attack Speed for {{time}} seconds after dodging through an attack
+    description: After dodging through an attack, gain +{{percentAttackSpeed}}% attack speed for {{attackSpeedTime}} seconds
     values:
-      attackSpeed: 6
-      time: 25
+      percentAttackSpeed: 6
+      attackSpeedTime: 25
   '3':
-    description: +{{attackSpeed}}% Attack Speed for {{time}} seconds after dodging through an attack
+    description: After dodging through an attack, gain +{{percentAttackSpeed}}% attack speed for {{attackSpeedTime}} seconds
     values:
-      attackSpeed: 8
-      time: 25
+      percentAttackSpeed: 8
+      attackSpeedTime: 25
   '4':
-    description: +10% Attack Speed for {{time}} seconds after dodging through an attack
+    description: After dodging through an attack, gain +{{percentAttackSpeed}}% attack speed for {{attackSpeedTime}} seconds
     values:
-      attackSpeed: 4
-      time: 25
+      percentAttackSpeed: 4
+      attackSpeedTime: 25
   '5':
-    description: +{{attackSpeed}}% Attack Speed for {{time}} seconds after dodging through an attack
+    description: After dodging through an attack, gain +{{percentAttackSpeed}}% attack speed for {{attackSpeedTime}} seconds
     values:
-      attackSpeed: 12.5
-      time: 25
+      percentAttackSpeed: 12.5
+      attackSpeedTime: 25
   '6':
-    description: +{{attackSpeed}}% Attack Speed for {{time}} seconds after dodging through an attack
+    description: After dodging through an attack, gain +{{percentAttackSpeed}}% attack speed for {{attackSpeedTime}} seconds
     values:
-      attackSpeed: 15
-      time: 25
+      percentAttackSpeed: 15
+      attackSpeedTime: 25

@@ -3,14 +3,26 @@ description: Grants Health after breaking a Behemoth part.
 type: Fortitude
 effects:
   '1':
-    description: Heal 50 when you break a part
+    description: After you break a Behemoth part, heal for {{partBreakHeal}}
+    values:
+      partBreakHeal: 50
   '2':
-    description: Heal 100 when you break a part
+    description: After you break a Behemoth part, heal for {{partBreakHeal}}
+    values:
+      partBreakHeal: 100
   '3':
-    description: Heal 150 when you break a part
+    description: After you break a Behemoth part, heal for {{partBreakHeal}}
+    values:
+      partBreakHeal: 150
   '4':
-    description: Heal 200 when you break a part
+    description: After you break a Behemoth part, heal for {{partBreakHeal}}
+    values:
+      partBreakHeal: 200
   '5':
-    description: Heal 250 when you break a part
+    description: After you break a Behemoth part, heal for {{partBreakHeal}}
+    values:
+      partBreakHeal: 250
   '6':
-    description: Heal 300 when you break a part
+    description: After you break a Behemoth part, heal for {{partBreakHeal}}
+    values:
+      partBreakHeal: 300

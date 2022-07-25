@@ -3,14 +3,24 @@ description: Protects against being set on fire.
 type: Fortitude
 effects:
   '1':
-    description: Reduces duration of On Fire status by 10%
+    description: Reduces duration of on fire status by {{percentFireReduction}}%
+    values:
+      percentFireReduction: 10
   '2':
-    description: Reduces duration of On Fire status by 20%
+    description: Reduces duration of on fire status by {{percentFireReduction}}%
+    values:
+      percentFireReduction: 20
   '3':
-    description: Reduces duration of On Fire status by 40%
+    description: Reduces duration of on fire status by {{percentFireReduction}}%
+    values:
+      percentFireReduction: 40
   '4':
-    description: Reduces duration of On Fire status by 60%
+    description: Reduces duration of on fire status by {{percentFireReduction}}%
+    values:
+      percentFireReduction: 60
   '5':
-    description: Reduces duration of On Fire status by 80%
+    description: Reduces duration of on fire status by {{percentFireReduction}}%
+    values:
+      percentFireReduction: 80
   '6':
     description: Immune to being set on fire.

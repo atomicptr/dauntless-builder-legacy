@@ -1,30 +1,47 @@
 name: Conduit
 description: >-
-  Using a Lantern's hold ability increases all Slayers' attack speed
-  temporarily.
+  Lantern hold ability grants all Slayers' attack speed temporarily.
 type: Insight
 effects:
   '1':
     description: >-
-      Using your lantern hold ability grants 4% attack speed to all Slayers for
-      10 seconds.
+      After using your lantern's hold ability, grant +{{percentAttackSpeed}}% attack speed 
+      to all Slayers for {{attackSpeedTime}} seconds
+    values:
+      percentAttackSpeed: 4
+      attackSpeedTime: 10
   '2':
     description: >-
-      Using your lantern hold ability grants 6% attack speed to all Slayers for
-      10 seconds.
+      After using your lantern's hold ability, grant +{{percentAttackSpeed}}% attack speed 
+      to all Slayers for {{attackSpeedTime}} seconds
+    values:
+      percentAttackSpeed: 6
+      attackSpeedTime: 10
   '3':
     description: >-
-      Using your lantern hold ability grants 8% attack speed to all Slayers for
-      10 seconds.
+      After using your lantern's hold ability, grant +{{percentAttackSpeed}}% attack speed 
+      to all Slayers for {{attackSpeedTime}} seconds
+    values:
+      percentAttackSpeed: 8
+      attackSpeedTime: 10
   '4':
     description: >-
-      Using your lantern hold ability grants 10% attack speed to all Slayers for
-      10 seconds.
+      After using your lantern's hold ability, grant +{{percentAttackSpeed}}% attack speed 
+      to all Slayers for {{attackSpeedTime}} seconds
+    values:
+      percentAttackSpeed: 10
+      attackSpeedTime: 10
   '5':
     description: >-
-      Using your lantern hold ability grants 12.5% attack speed to all Slayers
-      for 10 seconds.
+      After using your lantern's hold ability, grant +{{percentAttackSpeed}}% attack speed 
+      to all Slayers for {{attackSpeedTime}} seconds
+    values:
+      percentAttackSpeed: 12.5
+      attackSpeedTime: 10
   '6':
     description: >-
-      Using your lantern hold ability grants 15% attack speed to all Slayers for
-      10 seconds.
+      After using your lantern's hold ability, grant +{{percentAttackSpeed}}% attack speed 
+      to all Slayers for {{attackSpeedTime}} seconds
+    values:
+      percentAttackSpeed: 15
+      attackSpeedTime: 10

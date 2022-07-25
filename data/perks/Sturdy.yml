@@ -3,14 +3,26 @@ description: Prevents being staggered on a cooldown.
 type: Fortitude
 effects:
   '1':
-    description: Prevents you from being staggered (30 second cooldown)
+    description: Prevents you from being staggered on a ({{staggeredCooldown}} second cooldown)
+    values:
+      staggeredCooldown: 30
   '2':
-    description: Prevents you from being staggered (25 second cooldown)
+    description: Prevents you from being staggered on a ({{staggeredCooldown}} second cooldown)
+    values:
+      staggeredCooldown: 25
   '3':
-    description: Prevents you from being staggered (20 second cooldown)
+    description: Prevents you from being staggered on a ({{staggeredCooldown}} second cooldown)
+    values:
+      staggeredCooldown: 20
   '4':
-    description: Prevents you from being staggered (15 second cooldown)
+    description: Prevents you from being staggered on a ({{staggeredCooldown}} second cooldown)
+    values:
+      staggeredCooldown: 15
   '5':
-    description: Prevents you from being staggered (10 second cooldown)
+    description: Prevents you from being staggered on a ({{staggeredCooldown}} second cooldown)
+    values:
+      staggeredCooldown: 10
   '6':
-    description: Prevents you from being staggered (5 second cooldown)
+    description: Prevents you from being staggered on a ({{staggeredCooldown}} second cooldown)
+    values:
+      staggeredCooldown: 5

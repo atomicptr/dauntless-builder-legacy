@@ -4,26 +4,43 @@ type: Fortitude
 effects:
   '1':
     description:
-      - Increases Max Health by 50
-      - Increased healing from all sources by 5%
+      - +{{maxHealth}} max health
+      - +{{percentHealing}}% increased healing from all sources
+    values:
+      maxHealth: 50
+      percentHealing: 5
   '2':
     description:
-      - Increases Max Health by 100
-      - Increased healing from all sources by 10%
+      - +{{maxHealth}} max health
+      - +{{percentHealing}}% increased healing from all sources
+    values:
+      maxHealth: 100
+      percentHealing: 10
   '3':
     description:
-      - Increases Max Health by 150
-      - Increased healing from all sources by 15%
+      - +{{maxHealth}} max health
+      - +{{percentHealing}}% increased healing from all sources
+    values:
+      maxHealth: 150
+      percentHealing: 15
   '4':
     description:
-      - Increases Max Health by 250
-      - Increased healing from all sources by 25%
+      - +{{maxHealth}} max health
+      - +{{percentHealing}}% increased healing from all sources
+    values:
+      maxHealth: 250
+      percentHealing: 25
   '5':
     description:
-      - Increases Max Health by 300
-      - Increased healing from all sources by 35%
+      - +{{maxHealth}} max health
+      - +{{percentHealing}}% increased healing from all sources
+    values:
+      maxHealth: 300
+      percentHealing: 35
   '6':
     description:
-      - Increases Max Health by 500
-      - Increased healing from all sources by 50%
-    
+      - +{{maxHealth}} max health
+      - +{{percentHealing}}% increased healing from all sources
+    values:
+      maxHealth: 500
+      percentHealing: 50

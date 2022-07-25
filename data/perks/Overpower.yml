@@ -3,14 +3,26 @@ description: Increases damage against staggered Behemoths.
 type: Brutality
 effects:
   '1':
-    description: +10% Damage vs Staggered Behemoths
+    description: +{{percentDamageVsStaggered}}% Damage vs Staggered Behemoths
+    values:
+      percentDamageVsStaggered: 10
   '2':
-    description: +15% Damage vs Staggered Behemoths
+    description: +{{percentDamageVsStaggered}}% Damage vs Staggered Behemoths
+    values:
+      percentDamageVsStaggered: 15
   '3':
-    description: +20% Damage vs Staggered Behemoths
+    description: +{{percentDamageVsStaggered}}% Damage vs Staggered Behemoths
+    values:
+      percentDamageVsStaggered: 20
   '4':
-    description: +30% Damage vs Staggered Behemoths
+    description: +{{percentDamageVsStaggered}}% Damage vs Staggered Behemoths
+    values:
+      percentDamageVsStaggered: 30
   '5':
-    description: +35% Damage vs Staggered Behemoths
+    description: +{{percentDamageVsStaggered}}% Damage vs Staggered Behemoths
+    values:
+      percentDamageVsStaggered: 35
   '6':
-    description: +40% Damage vs Staggered Behemoths
+    description: +{{percentDamageVsStaggered}}% Damage vs Staggered Behemoths
+    values:
+      percentDamageVsStaggered: 40

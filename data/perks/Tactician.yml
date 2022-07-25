@@ -4,25 +4,49 @@ type: Finesse
 effects:
   '1':
     description: >-
-      After dodging through an attack 3 times, grant all nearby slayers +15%
-      wound damage based on their core damage for 15 seconds.
+      After dodging through an attack {{dodgeCount}} times, grant all nearby slayers +{{percentWoundDamage}}%
+      wound damage based on their core damage for {{woundDamageTime}} seconds.
+    values:
+      dodgeCount: 3
+      percentWoundDamage: 15
+      woundDamageTime: 15
   '2':
     description: >-
-      After dodging through an attack 3 times, grant all nearby slayers +20%
-      wound damage based on their core damage for 15 seconds.
+      After dodging through an attack {{dodgeCount}} times, grant all nearby slayers +{{percentWoundDamage}}%
+      wound damage based on their core damage for {{woundDamageTime}} seconds.
+    values:
+      dodgeCount: 3
+      percentWoundDamage: 20
+      woundDamageTime: 15
   '3':
     description: >-
-      After dodging through an attack 3 times, grant all nearby slayers +25%
-      wound damage based on their core damage for 15 seconds.
+      After dodging through an attack {{dodgeCount}} times, grant all nearby slayers +{{percentWoundDamage}}%
+      wound damage based on their core damage for {{woundDamageTime}} seconds.
+    values:
+      dodgeCount: 3
+      percentWoundDamage: 25
+      woundDamageTime: 15
   '4':
     description: >-
-      After dodging through an attack 3 times, grant all nearby slayers +30%
-      wound damage based on their core damage for 15 seconds.
+      After dodging through an attack {{dodgeCount}} times, grant all nearby slayers +{{percentWoundDamage}}%
+      wound damage based on their core damage for {{woundDamageTime}} seconds.
+    values:
+      dodgeCount: 3
+      percentWoundDamage: 30
+      woundDamageTime: 15
   '5':
     description: >-
-      After dodging through an attack 3 times, grant all nearby slayers +35%
-      wound damage based on their core damage for 15 seconds.
+      After dodging through an attack {{dodgeCount}} times, grant all nearby slayers +{{percentWoundDamage}}%
+      wound damage based on their core damage for {{woundDamageTime}} seconds.
+    values:
+      dodgeCount: 3
+      percentWoundDamage: 35
+      woundDamageTime: 15
   '6':
     description: >-
-      After dodging through an attack 3 times, grant all nearby slayers +40%
-      wound damage based on their core damage for 15 seconds.
+      After dodging through an attack {{dodgeCount}} times, grant all nearby slayers +{{percentWoundDamage}}%
+      wound damage based on their core damage for {{woundDamageTime}} seconds.
+    values:
+      dodgeCount: 3
+      percentWoundDamage: 40
+      woundDamageTime: 15

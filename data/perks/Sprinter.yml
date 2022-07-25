@@ -3,14 +3,32 @@ description: Increases movespeed and reduces sprint cost.
 type: Alacrity
 effects:
   '1':
-    description: +5% movement speed and -5% reduced sprint cost
+    description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}}% reduced sprint cost
+    values:
+      percentMoveSpeed: 5
+      percentSprintCost: -5
   '2':
-    description: +7.5% movement speed and -7.5% reduced sprint cost
+    description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}}% reduced sprint cost
+    values:
+      percentMoveSpeed: 7.5
+      percentSprintCost: -7.5
   '3':
-    description: +10% movement speed and -10% reduced sprint cost
+    description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}}% reduced sprint cost
+    values:
+      percentMoveSpeed: 10
+      percentSprintCost: -10
   '4':
-    description: +12.5% movement speed and -12.5% reduced sprint cost
+    description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}}% reduced sprint cost
+    values:
+      percentMoveSpeed: 12.5
+      percentSprintCost: -12.5
   '5':
-    description: +15% movement speed and -15% reduced sprint cost
+    description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}}% reduced sprint cost
+    values:
+      percentMoveSpeed: 15
+      percentSprintCost: -15
   '6':
-    description: +17.5% movement speed and -17.5% reduced sprint cost
+    description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}} reduced sprint cost
+    values:
+      percentMoveSpeed: 17.5
+      percentSprintCost: -17.5

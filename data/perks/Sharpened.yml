@@ -4,32 +4,49 @@ type: Brutality
 effects:
   '1':
     description:
-      - +5% Part Damage
+      - +{{percentPartDamage}}% part damage
       - null
+    values:
+      percentPartDamage: 5
   '2':
     description:
-      - +10% Part Damage
+      - +{{percentPartDamage}}% part damage
       - null
+    values:
+      percentPartDamage: 10
   '3':
     description:
-      - +15% Part Damage
+      - +{{percentPartDamage}}% part damage
       - null
+    values:
+      percentPartDamage: 15
   '4':
     description:
-      - +20% Part Damage
+      - +{{percentPartDamage}}% part damage
       - >-
-        After dodging through an attack the next weapon attack's Part Break
-        Damage is increased by 50%
+        After dodging through an attack, your next attack within 
+        {{nextAttackTime}} seconds deals +{{percentPartDamageNextAttack}}% part damage
+    values:
+      percentPartDamage: 20
+      nextAttackTime: 5
+      percentPartDamageNextAttack: 50
   '5':
     description:
-      - +25% Part Damage
+      - +{{percentPartDamage}}% part damage
       - >-
-        After dodging through an attack the next weapon attack's Part Break
-        Damage is increased by 50%
+        After dodging through an attack, your next attack within 
+        {{nextAttackTime}} seconds deals +{{percentPartDamageNextAttack}}% part damage
+    values:
+      percentPartDamage: 25
+      nextAttackTime: 5
+      percentPartDamageNextAttack: 50
   '6':
     description:
-      - +30% Part Damage
+      - +{{percentPartDamage}}% part damage
       - >-
-        After dodging through an attack the next weapon attack's Part Break
-        Damage is increased by 100%
-    
+        After dodging through an attack, your next attack within 
+        {{nextAttackTime}} seconds deals +{{percentPartDamageNextAttack}}% part damage
+    values:
+      percentPartDamage: 30
+      nextAttackTime: 5
+      percentPartDamageNextAttack: 100

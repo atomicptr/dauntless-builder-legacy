@@ -6,32 +6,49 @@ type: Fortitude
 effects:
   '1':
     description:
-      - Increases all shields received by 5%
+      - Increases all shields received by {{percentShields}}%
       - null
+    values:
+      percentShields: 5
   '2':
     description:
-      - Increases all shields received by 8%
+      - Increases all shields received by {{percentShields}}%
       - null
+    values:
+      percentShields: 8
   '3':
     description:
-      - Increases all shields received by 11%
+      - Increases all shields received by {{percentShields}}%
       - null
+    values:
+      percentShields: 11
   '4':
     description:
-      - Increases all shields received by 14%
+      - Increases all shields received by {{percentShields}}%
       - >-
-        After gaining 1000 shield from any source, ignore the next incoming hit
-        within the next 15 seconds.
+        After gaining {{shieldGained}} shield from any source, ignore the next incoming hit
+        within the next {{ignoreTime}} seconds.
+    values:
+      percentShields: 14
+      shieldGained: 1000
+      ignoreTime: 15
   '5':
     description:
-      - Increases all shields received by 17%
+      - Increases all shields received by {{percentShields}}%
       - >-
-        After gaining 1000 shield from any source, ignore the next incoming hit
-        within the next 15 seconds.
+        After gaining {{shieldGained}} shield from any source, ignore the next incoming hit
+        within the next {{ignoreTime}} seconds.
+    values:
+      percentShields: 17
+      shieldGained: 1000
+      ignoreTime: 15
   '6':
     description:
-      - Increases all shields received by 20%
+      - Increases all shields received by {{percentShields}}%
       - >-
-        After gaining 1000 shield from any source, ignore the next incoming hit
-        within the next 15 seconds.
-    
+        After gaining {{shieldGained}} shield from any source, ignore the next incoming hit
+        within the next {{ignoreTime}} seconds.
+    values:
+      percentShields: 20
+      shieldGained: 1000
+      ignoreTime: 15

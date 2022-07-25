@@ -3,14 +3,24 @@ description: Protects against the explosion damage and status effect of Shellsho
 type: Fortitude
 effects:
   '1':
-    description: Reduces Shell Shocked explosion damage and status effect duration by 10%
+    description: Reduces shellshocked explosion damage and status effect duration by {{percentShockedReduction}}%
+    values:
+      percentShockedReduction: 10
   '2':
-    description: Reduces Shell Shocked explosion damage and status effect duration by 20%
+    description: Reduces shellshocked explosion damage and status effect duration by {{percentShockedReduction}}%
+    values:
+      percentShockedReduction: 20
   '3':
-    description: Reduces Shell Shocked explosion damage and status effect duration by 40%
+    description: Reduces shellshocked explosion damage and status effect duration by {{percentShockedReduction}}%
+    values:
+      percentShockedReduction: 40
   '4':
-    description: Reduces Shell Shocked explosion damage and status effect duration by 60%
+    description: Reduces shellshocked explosion damage and status effect duration by {{percentShockedReduction}}%
+    values:
+      percentShockedReduction: 60
   '5':
-    description: Reduces Shell Shocked explosion damage and status effect duration by 80%
+    description: Reduces shellshocked explosion damage and status effect duration by {{percentShockedReduction}}%
+    values:
+      percentShockedReduction: 80
   '6':
-    description: Immune to Shell Shocked explosion damage and status effect
+    description: Immune to shellshocked explosion damage and status effect
