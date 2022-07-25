@@ -4,49 +4,52 @@ type: Brutality
 effects:
   '1':
     description:
-      - '{{percentStaggerDamage}}% Stagger Damage'
+      - +{{percentStaggerDamage}}% Stagger Damage
       - null
     values:
       percentStaggerDamage: 5
   '2':
     description:
-      - '{{percentStaggerDamage}}% Stagger Damage'
+      - +{{percentStaggerDamage}}% Stagger Damage
       - null
     values:
       percentStaggerDamage: 10
   '3':
     description:
-      - '{{percentStaggerDamage}}% Stagger Damage'
+      - +{{percentStaggerDamage}}% Stagger Damage
       - null
     values:
       percentStaggerDamage: 15
   '4':
     description:
-      - '{{percentStaggerDamage}}% Stagger Damage'
+      - +{{percentStaggerDamage}}% Stagger Damage
       - >-
         After dodging through an attack, your next attack within 
-        {{percentStaggerDamage}} seconds deals 
+        {{nextAttackTime}} seconds deals 
         +{{percentStaggerDamagenextAttack}}% stagger damage
     values:
       percentStaggerDamage: 20
+      nextAttackTime: 5
       percentStaggerDamagenextAttack: 50
   '5':
     description:
-      - '{{percentStaggerDamage}}% Stagger Damage'
+      - +{{percentStaggerDamage}}% Stagger Damage
       - >-
         After dodging through an attack, your next attack within 
-        {{percentStaggerDamage}} seconds deals 
+        {{nextAttackTime}} seconds deals 
         +{{percentStaggerDamagenextAttack}}% stagger damage
     values:
       percentStaggerDamage: 25
+      nextAttackTime: 5
       percentStaggerDamagenextAttack: 50
   '6':
     description:
-      - '{{percentStaggerDamage}}% Stagger Damage'
+      - +{{percentStaggerDamage}}% Stagger Damage
       - >-
         After dodging through an attack, your next attack within 
-        {{percentStaggerDamage}} seconds deals 
+        {{nextAttackTime}} seconds deals 
         +{{percentStaggerDamagenextAttack}}% stagger damage
     values:
       percentStaggerDamage: 30
+      nextAttackTime: 5
       percentStaggerDamagenextAttack: 100
