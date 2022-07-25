@@ -24,7 +24,8 @@ effects:
     description:
       - '{{percentStaggerDamage}}% Stagger Damage'
       - >-
-        After dodging through an attack, your next attack deals 
+        After dodging through an attack, your next attack within 
+        {{percentStaggerDamage}} seconds deals 
         +{{percentStaggerDamagenextAttack}}% stagger damage
     values:
       percentStaggerDamage: 20
@@ -33,7 +34,8 @@ effects:
     description:
       - '{{percentStaggerDamage}}% Stagger Damage'
       - >-
-        After dodging through an attack, your next attack deals 
+        After dodging through an attack, your next attack within 
+        {{percentStaggerDamage}} seconds deals 
         +{{percentStaggerDamagenextAttack}}% stagger damage
     values:
       percentStaggerDamage: 25
@@ -42,7 +44,8 @@ effects:
     description:
       - '{{percentStaggerDamage}}% Stagger Damage'
       - >-
-        After dodging through an attack, your next attack deals 
+        After dodging through an attack, your next attack within 
+        {{percentStaggerDamage}} seconds deals 
         +{{percentStaggerDamagenextAttack}}% stagger damage
     values:
       percentStaggerDamage: 30

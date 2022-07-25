@@ -1,5 +1,5 @@
 name: Bloodless
-description: Protects against Wounded and Crippling Wounds statuses.
+description: Protects against Wounded and Crippling Wound statuses.
 type: Fortitude
 effects:
   '1':

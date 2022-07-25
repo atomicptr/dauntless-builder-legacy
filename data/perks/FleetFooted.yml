@@ -1,5 +1,5 @@
 name: Fleet Footed
-description: Temporarily increases Movement Speed after a dodge.
+description: Temporarily increases movement speed after a dodge.
 type: Alacrity
 effects:
   '1':

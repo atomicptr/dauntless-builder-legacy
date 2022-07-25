@@ -1,5 +1,5 @@
 name: Molten
-description: Generates Molten Hearts when dealing damage.
+description: Grants Molten Heart drops on cooldown.
 type: Insight
 effects:
   '1':

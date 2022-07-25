@@ -1,5 +1,7 @@
 name: Relentless
-description: Increases the duration of your aether rush
+description: >-
+  Increases the duration of your aether rush. At higher ranks,
+  also increases the effects of aether rush.
 type: Finesse
 effects:
   '1':

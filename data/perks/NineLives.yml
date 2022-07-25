@@ -1,5 +1,5 @@
 name: Nine Lives
-description: Grants a chance to reduce damage, and later the ability to cheat death.
+description: Grants a chance to halve damage, and at later ranks, the ability to cheat death.
 type: Fortitude
 effects:
   '1':
@@ -23,24 +23,29 @@ effects:
   '4':
     description:
       - +{{halveDamageChance}}% chance to halve incoming damage
-      - The first time you would be knocked out stay up and heal for {{knockedOutHeal}}
+      - If you would be knocked out, stay up and heal for {{knockedOutHeal}}. {{healCooldown}} minute cooldown
     values:
       halveDamageChance: 12
       knockedOutHeal: 400
+      healCooldown: 5
   '5':
     description:
       - +{{halveDamageChance}}% chance to halve incoming damage
-      - The first time you would be knocked out stay up and heal for {{knockedOutHeal}}
+      - If you would be knocked out, stay up and heal for {{knockedOutHeal}}. {{healCooldown}} minute cooldown
     values:
       halveDamageChance: 16
       knockedOutHeal: 400
+      healCooldown: 5
   '6':
     description:
       - +{{halveDamageChance}}% chance to halve incoming damage
       - >-
-        The first time you would be knocked out stay up and heal for {{knockedOutHeal}} and
-        become empowered for {{empoweredTime}} seconds
+        If you would be knocked out, stay up and heal for {{knockedOutHeal}},
+        and gain +{{percentAttackSpeed}}% attack speed and movement speed for
+        {{empoweredTime}} seconds. {{healCooldown}} minute cooldown
     values:
       halveDamageChance: 20
       knockedOutHeal: 400
+      percentAttackSpeed: 33
       empoweredTime: 10
+      healCooldown: 5

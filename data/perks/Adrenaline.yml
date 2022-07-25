@@ -3,27 +3,27 @@ description: Increases damage dealt based on stamina spent.
 type: Alacrity
 effects:
   '1':
-    description: Grants +{{percentDamage}}% increased damage for every {{missingStamina}} stamina missing.
+    description: Grants +{{percentDamage}}% damage for every {{missingStamina}} stamina missing.
     values:
       percentDamage: 0.5
       missingStamina: 10
   '2':
-    description: Grants +{{percentDamage}}% increased damage for every {{missingStamina}} stamina missing.
+    description: Grants +{{percentDamage}}% damage for every {{missingStamina}} stamina missing.
     values:
       percentDamage: 1.0
       missingStamina: 10
   '3':
-    description: Grants +{{percentDamage}}% increased damage for every {{missingStamina}} stamina missing.
+    description: Grants +{{percentDamage}}% damage for every {{missingStamina}} stamina missing.
     values:
       percentDamage: 1.5
       missingStamina: 10
   '4':
-    description: Grants +{{percentDamage}}% increased damage for every {{missingStamina}} stamina missing.
+    description: Grants +{{percentDamage}}% damage for every {{missingStamina}} stamina missing.
     values:
       percentDamage: 2.0
       missingStamina: 10
   '5':
-    description: Grants +{{percentDamage}}% increased damage for every {{missingStamina}} stamina missing.
+    description: Grants +{{percentDamage}}% damage for every {{missingStamina}} stamina missing.
     values:
       percentDamage: 2.5
       missingStamina: 10

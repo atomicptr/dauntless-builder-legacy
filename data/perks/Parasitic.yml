@@ -1,7 +1,7 @@
 name: Parasitic
 description: >-
-  When you take damage, it gets delayed and instead dealt over time. While
-  taking delayed damage, gain lifesteal.
+  Mitigate a small portion of damage taken and is instead dealt over 10 seconds.
+  Gain lifesteal while taking delayed damage.
 type: Fortitude
 effects:
   '1':

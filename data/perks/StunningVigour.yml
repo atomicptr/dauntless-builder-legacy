@@ -3,26 +3,26 @@ description: Restores some health whenever a Behemoth is staggered.
 type: Fortitude
 effects:
   '1':
-    description: Heal for {{staggerHeal}} whenever a Behemoth is Staggered
+    description: After a Behemoth is staggered, heal for {{staggerHeal}}
     values:
       staggerHeal: 50
   '2':
-    description: Heal for {{staggerHeal}} whenever a Behemoth is Staggered
+    description: After a Behemoth is staggered, heal for {{staggerHeal}}
     values:
       staggerHeal: 75
   '3':
-    description: Heal for {{staggerHeal}} whenever a Behemoth is Staggered
+    description: After a Behemoth is staggered, heal for {{staggerHeal}}
     values:
       staggerHeal: 100
   '4':
-    description: Heal for {{staggerHeal}} whenever a Behemoth is Staggered
+    description: After a Behemoth is staggered, heal for {{staggerHeal}}
     values:
       staggerHeal: 125
   '5':
-    description: Heal for {{staggerHeal}} whenever a Behemoth is Staggered
+    description: After a Behemoth is staggered, heal for {{staggerHeal}}
     values:
       staggerHeal: 150
   '6':
-    description: Heal for {{staggerHeal}} whenever a Behemoth is Staggered
+    description: After a Behemoth is staggered, heal for {{staggerHeal}}
     values:
       staggerHeal: 200

@@ -3,26 +3,26 @@ description: Restores some health whenever a Behemoth part is Wounded.
 type: Fortitude
 effects:
   '1':
-    description: Heal for {{woundedHeal}} whenever a Behemoth is Wounded
+    description: After a Behemoth is wounded, heal for {{woundedHeal}}
     values:
       woundedHeal: 50
   '2':
-    description: Heal for {{woundedHeal}} whenever a Behemoth is Wounded
+    description: After a Behemoth is wounded, heal for {{woundedHeal}}
     values:
       woundedHeal: 75
   '3':
-    description: Heal for {{woundedHeal}} whenever a Behemoth is Wounded
+    description: After a Behemoth is wounded, heal for {{woundedHeal}}
     values:
       woundedHeal: 100
   '4':
-    description: Heal for {{woundedHeal}} whenever a Behemoth is Wounded
+    description: After a Behemoth is wounded, heal for {{woundedHeal}}
     values:
       woundedHeal: 125
   '5':
-    description: Heal for {{woundedHeal}} whenever a Behemoth is Wounded
+    description: After a Behemoth is wounded, heal for {{woundedHeal}}
     values:
       woundedHeal: 150
   '6':
-    description: Heal for {{woundedHeal}} whenever a Behemoth is Wounded
+    description: After a Behemoth is wounded, heal for {{woundedHeal}}
     values:
       woundedHeal: 200

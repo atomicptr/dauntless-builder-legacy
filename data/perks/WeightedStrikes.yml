@@ -28,7 +28,7 @@ effects:
   '4':
     description:
       - +{{staggerDamage}} Stagger Damage on Hit
-      - After dodging through an attack, your next attack withint 5 seconds deals +{{staggerDamageNextAttack}} stagger damage
+      - After dodging through an attack, your next attack within 5 seconds deals +{{staggerDamageNextAttack}} stagger damage
       - null
     values:
       staggerDamage: 20
@@ -36,7 +36,7 @@ effects:
   '5':
     description:
       - +{{staggerDamage}} Stagger Damage on Hit
-      - After dodging through an attack, your next attack withint 5 seconds deals +{{staggerDamageNextAttack}} stagger damage
+      - After dodging through an attack, your next attack within 5 seconds deals +{{staggerDamageNextAttack}} stagger damage
       - null
     values:
       staggerDamage: 30
@@ -44,7 +44,7 @@ effects:
   '6':
     description:
       - +{{staggerDamage}} Stagger Damage on Hit
-      - After dodging through an attack, your next attack withint 5 seconds deals +{{staggerDamageNextAttack}} stagger damage
+      - After dodging through an attack, your next attack within 5 seconds deals +{{staggerDamageNextAttack}} stagger damage
       - Ranged swings and missiles interrupt unstable Behemoth attacks
     values:
       staggerDamage: 40

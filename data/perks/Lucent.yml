@@ -1,5 +1,5 @@
 name: Lucent
-description: Flask heals over time and generates lantern charge.
+description: Flask heals over time and increases the recharge rate of your Lantern ability.
 type: Insight
 effects:
   '1':

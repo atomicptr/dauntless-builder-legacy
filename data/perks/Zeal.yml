@@ -1,5 +1,5 @@
 name: Zeal
-description: Increases Lantern ability effectiveness.
+description: Increases the effectiveness of Lantern abilities.
 type: Insight
 effects:
   '1':

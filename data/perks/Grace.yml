@@ -6,46 +6,46 @@ type: Alacrity
 effects:
   '1':
     description:
-      - While sprinting gain movespeed up to {{percentSprintSpeed}}%
+      - While sprinting, gain movespeed up to {{percentSprintSpeed}}%
       - null
     values:
       percentSprintSpeed: 5
   '2':
     description:
-      - While sprinting gain movespeed up to {{percentSprintSpeed}}%
+      - While sprinting, gain movespeed up to {{percentSprintSpeed}}%
       - null
     values:
       percentSprintSpeed: 8
   '3':
     description:
-      - While sprinting gain movespeed up to {{percentSprintSpeed}}%
+      - While sprinting, gain movespeed up to {{percentSprintSpeed}}%
       - null
     values:
       percentSprintSpeed: 11
   '4':
     description:
-      - While sprinting gain movespeed up to {{percentSprintSpeed}}%
+      - While sprinting, gain movespeed up to {{percentSprintSpeed}}%
       - >-
-        Grant attack speed equal to half the move speed increase, for {{attackSpeedTime}}
-        seconds.
+        After sprinting, gain attack speed equal to half of Grace's bonus
+        movement speed for {{attackSpeedTime}} seconds
     values:
       percentSprintSpeed: 14
       attackSpeedTime: 40
   '5':
     description:
-      - While sprinting gain movespeed up to {{percentSprintSpeed}}%
+      - While sprinting, gain movespeed up to {{percentSprintSpeed}}%
       - >-
-        Grant attack speed equal to half the move speed increase, for {{attackSpeedTime}}
-        seconds.
+        After sprinting, gain attack speed equal to half of Grace's bonus
+        movement speed for {{attackSpeedTime}} seconds
     values:
       percentSprintSpeed: 17
       attackSpeedTime: 40
   '6':
     description:
-      - While sprinting gain movespeed up to {{percentSprintSpeed}}%
+      - While sprinting, gain movespeed up to {{percentSprintSpeed}}%
       - >-
-        Grant attack speed equal to half the move speed increase, for {{attackSpeedTime}}
-        seconds.
+        After sprinting, gain attack speed equal to half of Grace's bonus
+        movement speed for {{attackSpeedTime}} seconds
     values:
       percentSprintSpeed: 20
       attackSpeedTime: 40

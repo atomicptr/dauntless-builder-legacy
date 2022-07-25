@@ -3,32 +3,32 @@ description: Temporarily increases attack speed when dodging through a Behemoth'
 type: Alacrity
 effects:
   '1':
-    description: +{{percentAttackSpeed}}% Attack Speed for {{attackSpeedTime}} seconds after dodging through an attack
+    description: After dodging through an attack, gain +{{percentAttackSpeed}}% attack speed for {{attackSpeedTime}} seconds
     values:
       percentAttackSpeed: 4
       attackSpeedTime: 25
   '2':
-    description: +{{percentAttackSpeed}}% Attack Speed for {{attackSpeedTime}} seconds after dodging through an attack
+    description: After dodging through an attack, gain +{{percentAttackSpeed}}% attack speed for {{attackSpeedTime}} seconds
     values:
       percentAttackSpeed: 6
       attackSpeedTime: 25
   '3':
-    description: +{{percentAttackSpeed}}% Attack Speed for {{attackSpeedTime}} seconds after dodging through an attack
+    description: After dodging through an attack, gain +{{percentAttackSpeed}}% attack speed for {{attackSpeedTime}} seconds
     values:
       percentAttackSpeed: 8
       attackSpeedTime: 25
   '4':
-    description: +{{percentAttackSpeed}}% Attack Speed for {{attackSpeedTime}} seconds after dodging through an attack
+    description: After dodging through an attack, gain +{{percentAttackSpeed}}% attack speed for {{attackSpeedTime}} seconds
     values:
       percentAttackSpeed: 4
       attackSpeedTime: 25
   '5':
-    description: +{{percentAttackSpeed}}% Attack Speed for {{attackSpeedTime}} seconds after dodging through an attack
+    description: After dodging through an attack, gain +{{percentAttackSpeed}}% attack speed for {{attackSpeedTime}} seconds
     values:
       percentAttackSpeed: 12.5
       attackSpeedTime: 25
   '6':
-    description: +{{percentAttackSpeed}}% Attack Speed for {{attackSpeedTime}} seconds after dodging through an attack
+    description: After dodging through an attack, gain +{{percentAttackSpeed}}% attack speed for {{attackSpeedTime}} seconds
     values:
       percentAttackSpeed: 15
       attackSpeedTime: 25

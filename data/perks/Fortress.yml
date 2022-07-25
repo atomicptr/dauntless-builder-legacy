@@ -1,5 +1,5 @@
 name: Fortress
-description: Grants a small shield after avoiding damage for a short time.
+description: Grants a small shield after avoiding hostile damage for a short time.
 type: Fortitude
 effects:
   '1':

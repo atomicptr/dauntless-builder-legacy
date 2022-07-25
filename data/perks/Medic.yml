@@ -43,7 +43,7 @@ effects:
     description:
       - When reviving an ally they are healed an additional {{percentAllyHeal}}%
       - Increases Revive Speed by {{reviveSpeed}}%
-      - Grants a {{healthShield}} health shield for {{shieldTime}} seconds after reviving an ally
+      - After reviving an ally, gain a {{healthShield}} health shield for {{shieldTime}} seconds
     values:
       percentAllyHeal: 40
       reviveSpeed: 66

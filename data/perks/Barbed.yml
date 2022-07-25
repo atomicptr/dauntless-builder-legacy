@@ -23,24 +23,27 @@ effects:
   '4':
     description:
       - +{{woundDamage}} wound damage
-      - After dodging through an attack
-      - your next attack deals +{{woundDamageNextAttack}} wound damage
+      - >-
+        After dodging through an attack,
+        your next attack deals +{{woundDamageNextAttack}} wound damage
     values:
       woundDamage: 40
       woundDamageNextAttack: 250
   '5':
     description:
       - +{{woundDamage}} wound damage
-      - After dodging through an attack
-      - your next attack deals +{{woundDamageNextAttack}} wound damage
+      - >-
+        After dodging through an attack,
+        your next attack deals +{{woundDamageNextAttack}} wound damage
     values:
       woundDamage: 50
       woundDamageNextAttack: 350
   '6':
     description:
       - +{{woundDamage}} wound damage
-      - After dodging through an attack
-      - your next attack deals +{{woundDamageNextAttack}} wound damage
+      - >-
+        After dodging through an attack,
+        your next attack deals +{{woundDamageNextAttack}} wound damage
     values:
       woundDamage: 60
       woundDamageNextAttack: 500

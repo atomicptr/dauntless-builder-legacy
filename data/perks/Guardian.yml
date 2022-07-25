@@ -5,7 +5,7 @@ effects:
   '1':
     description: >- 
       +{{percentShieldShare}}% of health shields applied to you are also applied 
-      to your nearest ally for {{shieldShareTime}} secconds (max {{maxShields}} shields).
+      to your nearest ally for {{shieldShareTime}} seconds (max {{maxShields}} shields).
     values:
       percentShieldShare: 5
       shieldShareTime: 15
@@ -13,7 +13,7 @@ effects:
   '2':
     description: >-
       +{{percentShieldShare}}% of health shields applied to you are also applied 
-      to your nearest ally for {{shieldShareTime}} secconds (max {{maxShields}} shields).
+      to your nearest ally for {{shieldShareTime}} seconds (max {{maxShields}} shields).
     values:
       percentShieldShare: 10
       shieldShareTime: 15
@@ -21,7 +21,7 @@ effects:
   '3':
     description: >-
       +{{percentShieldShare}}% of health shields applied to you are also applied 
-      to your nearest ally for {{shieldShareTime}} secconds (max {{maxShields}} shields).
+      to your nearest ally for {{shieldShareTime}} seconds (max {{maxShields}} shields).
     values:
       percentShieldShare: 15
       shieldShareTime: 15
@@ -29,7 +29,7 @@ effects:
   '4':
     description: >-
       +{{percentShieldShare}}% of health shields applied to you are also applied 
-      to your nearest ally for {{shieldShareTime}} secconds (max {{maxShields}} shields).
+      to your nearest ally for {{shieldShareTime}} seconds (max {{maxShields}} shields).
     values:
       percentShieldShare: 20
       shieldShareTime: 15
@@ -37,7 +37,7 @@ effects:
   '5':
     description: >-
       +{{percentShieldShare}}% of health shields applied to you are also applied 
-      to your nearest ally for {{shieldShareTime}} secconds (max {{maxShields}} shields).
+      to your nearest ally for {{shieldShareTime}} seconds (max {{maxShields}} shields).
     values:
       percentShieldShare: 25
       shieldShareTime: 15
@@ -45,7 +45,7 @@ effects:
   '6':
     description: >-
       +{{percentShieldShare}}% of health shields applied to you are also applied 
-      to your nearest ally for {{shieldShareTime}} secconds (max {{maxShields}} shields).
+      to your nearest ally for {{shieldShareTime}} seconds (max {{maxShields}} shields).
     values:
       percentShieldShare: 30
       shieldShareTime: 15

@@ -3,26 +3,26 @@ description: Reduces the stamina cost of dodging.
 type: Alacrity
 effects:
   '1':
-    description: '-{{dodgeStaminaReduction}}% Dodge Roll Stamina Cost'
+    description: '-{{dodgeStaminaReduction}}% dodge stamina cost'
     values:
       dodgeStaminaReduction: 10
   '2':
-    description: '-{{dodgeStaminaReduction}}% Dodge Roll Stamina Cost'
+    description: '-{{dodgeStaminaReduction}}% dodge stamina cost'
     values:
       dodgeStaminaReduction: 20
   '3':
-    description: '-{{dodgeStaminaReduction}}% Dodge Roll Stamina Cost'
+    description: '-{{dodgeStaminaReduction}}% dodge stamina cost'
     values:
       dodgeStaminaReduction: 30
   '4':
-    description: '-{{dodgeStaminaReduction}}% Dodge Roll Stamina Cost'
+    description: '-{{dodgeStaminaReduction}}% dodge stamina cost'
     values:
       dodgeStaminaReduction: 40
   '5':
-    description: '-{{dodgeStaminaReduction}}% Dodge Roll Stamina Cost'
+    description: '-{{dodgeStaminaReduction}}% dodge stamina cost'
     values:
       dodgeStaminaReduction: 55
   '6':
-    description: '-{{dodgeStaminaReduction}}% Dodge Roll Stamina Cost'
+    description: '-{{dodgeStaminaReduction}}% dodge stamina cost'
     values:
       dodgeStaminaReduction: 70

@@ -1,5 +1,5 @@
 name: Rage
-description: When you take damage, increases your damage.
+description: Deal increased damage after taking damage.
 type: Brutality
 effects:
   '1':
