@@ -3,9 +3,12 @@ description: Spawn beneficial Boosts for your allies
 type: Insight
 effects:
   '1':
-    description: >-
-      On Lantern Hold, randomly generate {{boostQuantity}} of the following Boosts: Healing,
-      Stamina, Power.
+    description: 
+      - >-
+        On Lantern Hold, randomly generate {{boostQuantity}} of the following Boosts: Healing,
+        Stamina, Power.
+      - null
+      - null
     values:
       boostQuantity: 1
   '2':
@@ -13,6 +16,7 @@ effects:
       - >-
         On Lantern Hold, randomly generate {{boostQuantity}} of the following Boosts: Healing,
         Stamina, Power.
+      - null
       - null
     values:
       boostQuantity: 2
@@ -22,6 +26,7 @@ effects:
         On Lantern Hold, randomly generate {{boostQuantity}} of the following Boosts: Healing,
         Stamina, Power.
       - null
+      - null
     values:
       boostQuantity: 3
   '4':
@@ -30,6 +35,7 @@ effects:
         On Lantern Hold, randomly generate {{boostQuantity}} of the following Boosts: Healing,
         Stamina, Power. 
       - Stamina Boost duration increased.
+      - null
     values:
       boostQuantity: 4
   '5':
@@ -38,6 +44,7 @@ effects:
         On Lantern Hold, randomly generate {{boostQuantity}} of the following Boosts: Healing,
         Stamina, Power.
       - Healing Boost also grants shields. (max {{maxShield}}).
+      - null
     values:
       boostQuantity: 4
       maxShield: 600
@@ -45,7 +52,8 @@ effects:
     description:
       - >-
         On Lantern Hold, randomly generate {{boostQuantity}} of the following Boosts: Healing,
-        Stamina, Power. Power Boost duration increased. Chance to generate
-      - Invincibility Boost.
+        Stamina, Power.
+      - Power Boost duration increased.
+      - Chance to generate Invincibility Boost.
     values:
       boostQuantity: 4
