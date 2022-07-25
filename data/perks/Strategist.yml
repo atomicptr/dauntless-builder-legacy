@@ -3,14 +3,26 @@ description: Dodging through Behemoth attacks grants health shields to all Slaye
 type: Fortitude
 effects:
   '1':
-    description: After dodging through an attack, grant 50 health shield to all slayers
+    description: After dodging through an attack, grant {{dodgeShield}} health shield to all slayers
+    values:
+      dodgeShield: 50
   '2':
-    description: After dodging through an attack, grant 75 health shield to all slayers
+    description: After dodging through an attack, grant {{dodgeShield}} health shield to all slayers
+    values:
+      dodgeShield: 75
   '3':
-    description: After dodging through an attack, grant 100 health shield to all slayers
+    description: After dodging through an attack, grant {{dodgeShield}} health shield to all slayers
+    values:
+      dodgeShield: 100
   '4':
-    description: After dodging through an attack, grant 125 health shield to all slayers
+    description: After dodging through an attack, grant {{dodgeShield}} health shield to all slayers
+    values:
+      dodgeShield: 125
   '5':
-    description: After dodging through an attack, grant 150 health shield to all slayers
+    description: After dodging through an attack, grant {{dodgeShield}} health shield to all slayers
+    values:
+      dodgeShield: 150
   '6':
-    description: After dodging through an attack, grant 175 health shield to all slayers
+    description: After dodging through an attack, grant {{dodgeShield}} health shield to all slayers
+    values:
+      dodgeShield: 175

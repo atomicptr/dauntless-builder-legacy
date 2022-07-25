@@ -3,16 +3,28 @@ description: Increases Movement Speed when your weapon is sheathed.
 type: Alacrity
 effects:
   '1':
-    description: While sheathed, increases Movement Speed by 5%
+    description: While sheathed, increases Movement Speed by {{percentMovementSpeed}}%
+    values:
+      percentMovementSpeed: 5
   '2':
-    description: While sheathed, increases Movement Speed by 10%
+    description: While sheathed, increases Movement Speed by {{percentMovementSpeed}}%
+    values:
+      percentMovementSpeed: 10
   '3':
-    description: While sheathed, increases Movement Speed by 15%
+    description: While sheathed, increases Movement Speed by {{percentMovementSpeed}}%
+    values:
+      percentMovementSpeed: 15
   '4':
-    description: While sheathed, increases Movement Speed by 20%
+    description: While sheathed, increases Movement Speed by {{percentMovementSpeed}}%
+    values:
+      percentMovementSpeed: 20
   '5':
-    description: While sheathed, increases Movement Speed by 25%
+    description: While sheathed, increases Movement Speed by {{percentMovementSpeed}}%
+    values:
+      percentMovementSpeed: 25
   '6':
     description: >-
-      While sheathed, increases Movement Speed by 30%, also affects other nearby
+      While sheathed, increases Movement Speed by {{percentMovementSpeed}}%, also affects other nearby
       Slayers.
+    values:
+      percentMovementSpeed: 30

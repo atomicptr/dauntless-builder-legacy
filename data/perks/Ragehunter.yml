@@ -3,14 +3,26 @@ description: Increases damage against enraged Behemoths.
 type: Brutality
 effects:
   '1':
-    description: +5% Damage vs Enraged Behemoths
+    description: +{{percentDamageVsEnraged}}% Damage vs Enraged Behemoths
+    values:
+      percentDamageVsEnraged: 5
   '2':
-    description: +10% Damage vs Enraged Behemoths
+    description: +{{percentDamageVsEnraged}}% Damage vs Enraged Behemoths
+    values:
+      percentDamageVsEnraged: 10
   '3':
-    description: +15% Damage vs Enraged Behemoths
+    description: +{{percentDamageVsEnraged}}% Damage vs Enraged Behemoths
+    values:
+      percentDamageVsEnraged: 15
   '4':
-    description: +20% Damage vs Enraged Behemoths
+    description: +{{percentDamageVsEnraged}}% Damage vs Enraged Behemoths
+    values:
+      percentDamageVsEnraged: 20
   '5':
-    description: +30% Damage vs Enraged Behemoths
+    description: +{{percentDamageVsEnraged}}% Damage vs Enraged Behemoths
+    values:
+      percentDamageVsEnraged: 30
   '6':
-    description: +40% Damage vs Enraged Behemoths
+    description: +{{percentDamageVsEnraged}}% Damage vs Enraged Behemoths
+    values:
+      percentDamageVsEnraged: 40
