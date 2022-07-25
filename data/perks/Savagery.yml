@@ -21,7 +21,7 @@ effects:
   '5':
     description: +{{percentDamageVsWounded}}% damage vs wounded parts
     values:
-      percentDamageVsWounded: 90
+      percentDamageVsWounded: 80
   '6':
     description: +{{percentDamageVsWounded}}% damage vs wounded parts
     values:
