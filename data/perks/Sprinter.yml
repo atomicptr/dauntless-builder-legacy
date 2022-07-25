@@ -3,32 +3,32 @@ description: Increases movespeed and reduces sprint cost.
 type: Alacrity
 effects:
   '1':
-    description: +{{percentMoveSpeed}}% movement speed and -{{percentSprintCost}}% reduced sprint cost
+    description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}}% reduced sprint cost
     values:
       percentMoveSpeed: 5
-      percentSprintCost: 5
+      percentSprintCost: -5
   '2':
-    description: +{{percentMoveSpeed}}% movement speed and -{{percentSprintCost}}% reduced sprint cost
+    description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}}% reduced sprint cost
     values:
       percentMoveSpeed: 7.5
-      percentSprintCost: 7.5
+      percentSprintCost: -7.5
   '3':
-    description: +{{percentMoveSpeed}}% movement speed and -{{percentSprintCost}}% reduced sprint cost
+    description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}}% reduced sprint cost
     values:
       percentMoveSpeed: 10
-      percentSprintCost: 10
+      percentSprintCost: -10
   '4':
-    description: +{{percentMoveSpeed}}% movement speed and -{{percentSprintCost}}% reduced sprint cost
+    description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}}% reduced sprint cost
     values:
       percentMoveSpeed: 12.5
-      percentSprintCost: 12.5
+      percentSprintCost: -12.5
   '5':
-    description: +{{percentMoveSpeed}}% movement speed and -{{percentSprintCost}}% reduced sprint cost
+    description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}}% reduced sprint cost
     values:
       percentMoveSpeed: 15
-      percentSprintCost: 15
+      percentSprintCost: -15
   '6':
-    description: +{{percentMoveSpeed}}% movement speed and -{{percentSprintCost}} reduced sprint cost
+    description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}} reduced sprint cost
     values:
       percentMoveSpeed: 17.5
-      percentSprintCost: 17.5
+      percentSprintCost: -17.5

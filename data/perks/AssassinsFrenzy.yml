@@ -15,7 +15,7 @@ effects:
       for {{attackSpeedTime}} seconds.
     values:
       percentAttackSpeed: 15
-      attackSpeedTime: 10
+      attackSpeedTime: 15
   '3':
     description: >-
       Each time you break or assist in breaking a part, gain +{{percentAttackSpeed}}% attack speed
