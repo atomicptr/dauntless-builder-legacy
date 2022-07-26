@@ -2,6 +2,7 @@
  * @jest-environment node
  */
 import namesJson from "@map/names.json";
+import { GenericItem } from "@src/components/GenericItemSelectDialog";
 import dauntlessBuilderData, { DauntlessBuilderDataIndex } from "@src/data/Data";
 import { NamesMap, NamesMapType } from "@src/data/NamesMap";
 import SchemaValidator from "ajv";
@@ -16,7 +17,7 @@ import { Cell, CellType } from "../../src/data/Cell";
 import { ElementalType } from "../../src/data/ElementalType";
 import { ItemType, itemTypeData } from "../../src/data/ItemType";
 import { Lantern } from "../../src/data/Lantern";
-import { PerkValue } from "../../src/data/Perks";
+import { Perk, PerkValue } from "../../src/data/Perks";
 import { Weapon } from "../../src/data/Weapon";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -409,4 +410,104 @@ describe("data.json integrity", () => {
         "Repeater Mods format should have a valid schema",
         checkIfHasValidSchema("parts.repeater.mods", "parts.generic.mods"),
     );
+
+    // validate if variables are unused
+    const checkIfAllVariablesAreUsed = (field: string) => {
+        const extractVars = (text: string) => {
+            const vars = /{{([a-zA-Z0-9]+)}}/gm;
+            const res = [...text.matchAll(vars)];
+            return res.length > 0 ? res : null;
+        };
+
+        const checkForVariables = (item: GenericItem, text: string | string[], values: object) => {
+            text = Array.isArray(text) ? text.join(" ") : text;
+
+            const varsInText = extractVars(text);
+            const hasValues = Object.keys(values).length > 0;
+
+            if (varsInText === null && !hasValues) {
+                return;
+            }
+
+            for (const variableKey of Object.keys(values)) {
+                if (variableKey === "NL") {
+                    continue;
+                }
+
+                const isDefined = varsInText?.find(v => v[1] === variableKey) !== undefined;
+                if (!isDefined) {
+                    fail(`${item.name} contains undefined variable: ${variableKey}`);
+                }
+            }
+
+            for (const varMatch of varsInText ?? []) {
+                const varName = varMatch[1];
+
+                if (varName === "NL") {
+                    continue;
+                }
+
+                const isDefined = Object.keys(values).find(valName => valName === varName);
+                if (!isDefined) {
+                    fail(`${item.name} contains undefined variable: ${varName}`);
+                }
+            }
+        };
+
+        return () => {
+            const dataWrapper = mineDataFromField(data, field);
+
+            for (const itemName in dataWrapper) {
+                const item = dataWrapper[itemName];
+
+                // weapon / armor
+                if ("unique_effects" in item && Array.isArray(item.unique_effects)) {
+                    for (const ue of item.unique_effects) {
+                        checkForVariables(item, ue.description, ue.values ?? {});
+                    }
+                }
+
+                // perks
+                if ("effects" in item) {
+                    for (const effect of Object.values((item as Perk).effects)) {
+                        checkForVariables(item, effect.description, effect.values ?? {});
+                    }
+                }
+
+                // parts
+                if ("part_effect" in item) {
+                    checkForVariables(item, item.part_effect, item.values ?? {});
+                }
+            }
+        };
+    };
+
+    it("Weapons should not have unused variables", checkIfAllVariablesAreUsed("weapons"));
+    it("Armour should not have unused variables", checkIfAllVariablesAreUsed("armours"));
+    it("Perks should not have unused variables", checkIfAllVariablesAreUsed("perks"));
+
+    it("Axe Mods should not have unused variables", checkIfAllVariablesAreUsed("parts.axe.mods"));
+    it("Axe Specials should not have unused variables", checkIfAllVariablesAreUsed("parts.axe.specials"));
+    it("Chain Blades Mods should not have unused variables", checkIfAllVariablesAreUsed("parts.chainblades.mods"));
+    it(
+        "Chain Blades Specials should not have unused variables",
+        checkIfAllVariablesAreUsed("parts.chainblades.specials"),
+    );
+    it("Hammer Mods should not have unused variables", checkIfAllVariablesAreUsed("parts.hammer.mods"));
+    it("Hammer Specials should not have unused variables", checkIfAllVariablesAreUsed("parts.hammer.specials"));
+    it("Swords Mods should not have unused variables", checkIfAllVariablesAreUsed("parts.sword.mods"));
+    it("Swords Specials should not have unused variables", checkIfAllVariablesAreUsed("parts.sword.specials"));
+    it("War Pike Mods should not have unused variables", checkIfAllVariablesAreUsed("parts.warpike.mods"));
+    it("War Pike Specials should not have unused variables", checkIfAllVariablesAreUsed("parts.warpike.specials"));
+    it("Aether Striker Mods should not have unused variables", checkIfAllVariablesAreUsed("parts.aetherstrikers.mods"));
+    it(
+        "Aether Striker Specials should not have unused variables",
+        checkIfAllVariablesAreUsed("parts.aetherstrikers.specials"),
+    );
+    it("Repeater Mods should not have unused variables", checkIfAllVariablesAreUsed("parts.repeater.mods"));
+    it("Repeater Grips should not have unused variables", checkIfAllVariablesAreUsed("parts.repeater.grips"));
+    it("Repeater Chambers should not have unused variables", checkIfAllVariablesAreUsed("parts.repeater.chambers"));
+
+    // TODO: add omnicells
+    // TODO: add lanterns
 });
