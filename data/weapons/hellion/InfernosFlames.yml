@@ -19,8 +19,15 @@ perks:
     powerSurged: true
 unique_effects:
   - name: BlazeDamageOnNthHit
-    description: The eighth hit in a row deals +150 damage and major blaze damage
+    description: &hellionUeDescription >-
+      The {{hitCount}}th hit in a row deals +{{damage}} damage and major blaze damage
+    values:
+      hitCount: 8
+      damage: 150
     powerSurged: false
   - name: BlazeDamageOnNthHit
-    description: The eighth hit in a row deals +225 damage and major blaze damage
+    description: *hellionUeDescription
+    values:
+      hitCount: 8
+      damage: 225
     powerSurged: true
