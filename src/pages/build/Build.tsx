@@ -231,6 +231,7 @@ const Build: React.FC = () => {
             .map((ue, index) => (
                 <UniqueEffectCard
                     key={index}
+                    index={index}
                     item={item as Armour}
                     itemType={type}
                     uniqueEffect={ue}
@@ -327,6 +328,7 @@ const Build: React.FC = () => {
                                     .map((ue, index) => (
                                         <UniqueEffectCard
                                             key={index}
+                                            index={index}
                                             item={item as Weapon}
                                             itemType={type}
                                             uniqueEffect={ue}
@@ -343,6 +345,7 @@ const Build: React.FC = () => {
                                         .map((ue, index) => (
                                             <UniqueEffectCard
                                                 key={index}
+                                                index={index}
                                                 item={build.data.bondWeapon as Weapon}
                                                 itemType={type}
                                                 uniqueEffect={ue}
