@@ -32,7 +32,7 @@ const UniqueEffectCard: React.FC<UniqueEffectCardProps> = ({ uniqueEffect, item,
     );
 
     // if it can't find it, its invalid just render nothing
-    if (!index) {
+    if (index === undefined) {
         log.error(`UE could not be found inside item ${item.name}`, { uniqueEffect });
         return null;
     }
