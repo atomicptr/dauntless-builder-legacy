@@ -19,8 +19,13 @@ perks:
     powerSurged: true
 unique_effects:
   - name: DodgeExtendMantra
-    description: After dodging though an attack, extend Mantra timeout by 2 seconds
+    description: &stormclawUeDescription >-
+      After dodging though an attack, extend Mantra timeout by {{bonusTime}} seconds
+    values:
+      bonusTime: 2
     powerSurged: false
   - name: DodgeExtendMantra
-    description: After dodging though an attack, extend Mantra timeout by 3 seconds
+    description: *stormclawUeDescription
+    values:
+      bonusTime: 3
     powerSurged: true

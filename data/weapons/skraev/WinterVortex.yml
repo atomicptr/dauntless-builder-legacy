@@ -19,12 +19,19 @@ perks:
     powerSurged: true
 unique_effects:
   - name: IceMines
-    description: >-
-      After dodging, drop 2 Ice Mines around you on a 30 second cooldown that
-      deal 300 damage.
+    description: &skraevUeDescription >-
+      After dodging, drop {{mines}} Ice Mines around you on a {{cooldown}} second cooldown that
+      deal {{damage}} damage.
+    values:
+      mines: 2
+      cooldown: 30
+      damage: 300
     powerSurged: false
   - name: IceMines
-    description: >-
-      After dodging, drop 3 Ice Mines around you on a 30 second cooldown that
-      deal 300 damage.
+    description: *skraevUeDescription
+    values:
+      mines: 3
+      cooldown: 30
+      damage: 300
     powerSurged: true
+

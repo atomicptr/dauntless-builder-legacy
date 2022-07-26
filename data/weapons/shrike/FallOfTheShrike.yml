@@ -19,8 +19,13 @@ perks:
     powerSurged: true
 unique_effects:
   - name: DodgePartDamage
-    description: After dodging, your next attack deals +50 bonus damage and part damage
+    description: &shrikeUeDescription >-
+      After dodging, your next attack deals +{{damage}} bonus damage and part damage
+    values:
+      damage: 50
     powerSurged: false
   - name: DodgePartDamage
-    description: After dodging, your next attack deals +100 bonus damage and part damage
+    description: *shrikeUeDescription
+    values:
+      damage: 100
     powerSurged: true
