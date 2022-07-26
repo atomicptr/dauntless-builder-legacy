@@ -19,4 +19,8 @@ perks:
     powerSurged: true
 unique_effects:
   - name: LowHpDamage
-    description: When under 20% health, deal +50% damage
+    description: &shrowdUeDescription >-
+      When under {{life}}% health, deal +{{damage}}% damage
+    values:
+      life: 20
+      damage: 50
