@@ -20,17 +20,17 @@ perks:
 unique_effects:
   - name: NoAttackDamage
     description: &koshaiUeDescription >-
-      After not dealing damage for {{couldownTime}} seconds, your next {{hits}} attacks deal +{{damage}}%
+      After not dealing damage for {{cooldownTime}} seconds, your next {{hits}} attacks deal +{{damage}}%
       damage
     values:
-      couldownTime: 4
+      cooldownTime: 4
       hits: 3
       damage: 50
     powerSurged: false
   - name: NoAttackDamage
     description: *koshaiUeDescription
     values:
-      couldownTime: 4
+      cooldownTime: 4
       hits: 4
       damage: 50
     powerSurged: true
