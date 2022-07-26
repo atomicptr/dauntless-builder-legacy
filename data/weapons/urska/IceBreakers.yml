@@ -15,8 +15,10 @@ bond:
 unique_effects:
   - name: UrskaLegendaryAbility
     icon: /assets/icons/abilities/UrskaLegendaryWeaponAbility.png
-    description: >
+    description: &urskaUeDescription >-
       Legendary Ability: Create a Frost Shield that blocks hostile projectiles
-      for 6 seconds. Damages and chills
+      for {{shieldTime}} seconds. Damages and chills
 
       Behemoths that contact it (can interrupt).
+    values:
+      shieldTime: 6
