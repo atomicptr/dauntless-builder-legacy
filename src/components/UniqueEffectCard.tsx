@@ -7,12 +7,12 @@ import { Weapon } from "@src/data/Weapon";
 import { ttry } from "@src/i18n";
 import { renderItemText } from "@src/utils/item-text-renderer";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
-import log from "@src/utils/logger";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 interface UniqueEffectCardProps {
+    index: number;
     uniqueEffect: UniqueEffect;
     item: Weapon | Armour;
     itemType: ItemType;
@@ -20,22 +20,8 @@ interface UniqueEffectCardProps {
 
 const imageSize = itemPickerDefaultImageSize;
 
-const UniqueEffectCard: React.FC<UniqueEffectCardProps> = ({ uniqueEffect, item, itemType }) => {
+const UniqueEffectCard: React.FC<UniqueEffectCardProps> = ({ index, uniqueEffect, item, itemType }) => {
     const { t } = useTranslation();
-
-    // find the UE among the items UEs
-    const index = item.unique_effects?.findIndex(
-        ue =>
-            ue.name === uniqueEffect.name &&
-            ue.powerSurged === uniqueEffect.powerSurged &&
-            ue.description === uniqueEffect.description,
-    );
-
-    // if it can't find it, its invalid just render nothing
-    if (!index) {
-        log.error(`UE could not be found inside item ${item.name}`, { uniqueEffect });
-        return null;
-    }
 
     return (
         <Box sx={{ alignItems: "center", display: "flex", mb: 1, userSelect: "none" }}>
