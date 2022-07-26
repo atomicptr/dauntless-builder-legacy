@@ -268,7 +268,6 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                                                             .map((ue, index) => (
                                                                 <UniqueEffectCard
                                                                     key={index}
-                                                                    index={index}
                                                                     item={item}
                                                                     itemType={itemType}
                                                                     uniqueEffect={ue}
