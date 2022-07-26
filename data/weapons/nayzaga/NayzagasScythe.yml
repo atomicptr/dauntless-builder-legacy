@@ -19,8 +19,13 @@ perks:
     powerSurged: true
 unique_effects:
   - name: VerticalAttackHeal
-    description: After landing perfectly charged attacks, heal for 50
+    description: &nayzagaUeDescription >-
+      After landing perfectly charged attacks, heal for {{heal}}
+    values:
+      heal: 50
     powerSurged: false
   - name: VerticalAttackHeal
-    description: After landing perfectly charged attacks, heal for 100
+    description: *nayzagaUeDescription
+    values:
+      heal: 100
     powerSurged: true

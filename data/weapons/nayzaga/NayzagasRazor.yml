@@ -19,8 +19,13 @@ perks:
     powerSurged: true
 unique_effects:
   - name: WoundedPartsLifesteal
-    description: When Behemoth part is broken, heal for 100
+    description: &nayzagaUeDescription >-
+      When Behemoth part is broken, heal for {{heal}}
+    values:
+      heal: 100
     powerSurged: false
   - name: WoundedPartsLifesteal
-    description: When Behemoth part is broken, heal for 200
+    description: *nayzagaUeDescription
+    values:
+      heal: 200
     powerSurged: true

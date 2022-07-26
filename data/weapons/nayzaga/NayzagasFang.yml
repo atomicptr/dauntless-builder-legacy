@@ -19,8 +19,13 @@ perks:
     powerSurged: true
 unique_effects:
   - name: WoundedPartsLifesteal
-    description: +3% lifesteal vs wounded parts
+    description: &nayzagaUeDescription >-
+      +{{heal}}% lifesteal vs wounded parts
+    values:
+      heal: 3
     powerSurged: false
   - name: WoundedPartsLifesteal
-    description: +5% lifesteal vs wounded parts
+    description: *nayzagaUeDescription
+    values:
+      heal: 5
     powerSurged: true
