@@ -19,8 +19,13 @@ perks:
     powerSurged: true
 unique_effects:
   - name: DodgeReload
-    description: After dodging through an attack, reload 2 aethercharged ammo
+    description: &stormclawUeDescription >-
+      After dodging through an attack, reload {{ammo}} aethercharged ammo
+    values:
+      ammo: 2
     powerSurged: false
   - name: DodgeReload
-    description: After dodging through an attack, reload 3 aethercharged ammo
+    description: *stormclawUeDescription
+    values:
+      ammo: 3
     powerSurged: true
