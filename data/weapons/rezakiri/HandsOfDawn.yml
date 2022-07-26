@@ -19,8 +19,13 @@ perks:
     powerSurged: true
 unique_effects:
   - name: HitTwice
-    description: 8% chance for attacks to hit twice.
+    description: &rezakiriUeDescription >-
+      {{chanceTwiceHit}}% chance for attacks to hit twice.
+    values:
+      chanceTwiceHit: 8
     powerSurged: false
   - name: HitTwice
-    description: 12% chance for attacks to hit twice.
+    description: *rezakiriUeDescription
+    values:
+      chanceTwiceHit: 12
     powerSurged: true

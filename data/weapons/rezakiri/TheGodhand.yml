@@ -24,6 +24,8 @@ perks:
 unique_effects:
   - name: BeamChannelDamage
     icon: /assets/icons/parts/warpike/specials/TheGodhand.png
-    description: >-
-      Channel a beam that deals increasing damage, up to 200%, while it
+    description: &rezakiriUeDescription >-
+      Channel a beam that deals increasing damage, up to {{damage}}%, while it
       continues to hit a target.
+    values: 
+      damage: 200
