@@ -19,24 +19,26 @@ perks:
     powerSurged: true
 unique_effects:
   - name: PhaelanxLegendaryAbility
-    description: >
+    description: &phaelanxUeDescription >-
       Attack a Behemoth part to lock onto it and load a homing missile. Missile
-      deals 100 damage and increases the
+      deals {{damageMissile}} damage and increases the
 
-      damage of every other missile in the volley by 100. Deal damage to load up
-      to a maximum of 3 additional missiles.
+      damage of every other missile in the volley by {{damageMissileVolley}}. Deal damage to load up
+      to a maximum of {{maxMissiles}} additional missiles.
 
-      Dodging fires all loaded missiles on the locked-on part. 45 second
+      Dodging fires all loaded missiles on the locked-on part. {{cooldown}} second
       cooldown.
+    values:
+      damageMissile: 100
+      damageMissileVolley: 100
+      maxMissiles: 3
+      cooldown: 45
     powerSurged: false
   - name: PhaelanxLegendaryAbility
-    description: >
-      Attack a Behemoth part to lock onto it and load a homing missile. Missile
-      deals 175 damage and increases the
-
-      damage of every other missile in the volley by 175. Deal damage to load up
-      to a maximum of 3 additional missiles.
-
-      Dodging fires all loaded missiles on the locked-on part. 45 second
-      cooldown.
+    description: *phaelanxUeDescription
+    values:
+      damageMissile: 175
+      damageMissileVolley: 175
+      maxMissiles: 3
+      cooldown: 45
     powerSurged: true
