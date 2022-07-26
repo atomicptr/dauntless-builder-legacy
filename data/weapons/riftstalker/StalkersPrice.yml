@@ -19,16 +19,20 @@ perks:
     powerSurged: true
 unique_effects:
   - name: DamageShadowOrbs
-    description: >-
+    description: &riftstalkerUeDescription >-
       Dealing damage has a chance (based on damage dealt) to generate a shadow
-      orb that increases damage dealt by 1.5% for 5 seconds. If 5 or more orbs
+      orb that increases damage dealt by {{damage}}% for {{damageTime}} seconds. If {{orbsMinCount}} or more orbs
       are present, the bonus doubles.
-    
+    values:
+      damage: 1.5
+      damageTime: 5
+      orbsMinCount: 5
     powerSurged: false
   - name: DamageShadowOrbs
-    description: >-
-      Dealing damage has a chance (based on damage dealt) to generate a shadow
-      orb that increases damage dealt by 2.25% for 5 seconds. If 5 or more orbs
-      are present, the bonus doubles.
-    
+    description: *riftstalkerUeDescription
+    values:
+      damage: 2.25
+      damageTime: 5
+      orbsMinCount: 5
     powerSurged: true
+
