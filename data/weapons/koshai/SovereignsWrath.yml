@@ -19,10 +19,17 @@ perks:
     powerSurged: true
 unique_effects:
   - name: NoAttackDamage
-    description: After not dealing damage for 4 seconds, your next attack deals +50% damage
+    description: >-
+      After not dealing damage for {{cooldownTime}} seconds, your next attack deals +{{damage}}% damage.
+    values:
+      cooldownTime: 4
+      damage: 50
     powerSurged: false
   - name: NoAttackDamage
     description: >-
-      After not dealing damage for 4 seconds, your next 2 attacks deal 50%
-      damage
+      After not dealing damage for {{cooldownTime}} seconds, your next {{hits}} attacks deal +{{damage}}% damage.
+    values:
+      cooldownTime: 4
+      hits: 2
+      damage: 50
     powerSurged: true

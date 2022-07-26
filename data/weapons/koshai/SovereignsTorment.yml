@@ -19,12 +19,18 @@ perks:
     powerSurged: true
 unique_effects:
   - name: NoAttackDamage
-    description: >-
-      After not dealing damage for 4 seconds, your next 3 attacks deal +50%
+    description: &koshaiUeDescription >-
+      After not dealing damage for {{cooldownTime}} seconds, your next {{hits}} attacks deal +{{damage}}%
       damage
+    values:
+      cooldownTime: 4
+      hits: 3
+      damage: 50
     powerSurged: false
   - name: NoAttackDamage
-    description: >-
-      After not dealing damage for 4 seconds, your next 4 attacks deal +50%
-      damage
+    description: *koshaiUeDescription
+    values:
+      cooldownTime: 4
+      hits: 4
+      damage: 50
     powerSurged: true

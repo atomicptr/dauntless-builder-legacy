@@ -19,16 +19,22 @@ perks:
     powerSurged: true
 unique_effects:
   - name: LanternsMakeGeyser
-    description: >-
-      After using your Lantern ability, create a geyser that frequently deals 50
+    description: &frostwulfUeDescription >-
+      After using your Lantern ability, create a geyser that frequently deals {{frostDamage}}
       frost damage. Any Slayer moving through the geyser for the first time is
-      granted a stackable 125 health shield that lasts for 25 seconds (max 600
+      granted a stackable {{health}} health shield that lasts for {{shieldTime}} seconds (max {{shieldMax}}
       shields).
+    values:
+      frostDamage: 50
+      health: 125
+      shieldTime: 25
+      shieldMax: 600
     powerSurged: false
   - name: LanternsMakeGeyser
-    description: >-
-      After using your Lantern ability, create a geyser that frequently deals 70
-      frost damage. Any Slayer moving through the geyser for the first time is
-      granted a stackable 125 health shield that lasts for 25 seconds (max 600
-      shields).
+    description: *frostwulfUeDescription
+    values:
+      frostDamage: 70
+      health: 125
+      shieldTime: 25
+      shieldMax: 600
     powerSurged: true

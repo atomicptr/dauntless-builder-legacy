@@ -19,18 +19,23 @@ perks:
     powerSurged: true
 unique_effects:
   - name: PangarBomb
-    description: >
-      Once charged, your next attack places a frost brand that deals 1,000 frost
-      damage after 30 seconds. Slayers
+    description: &pangarUeDescription >-
+      Once charged, your next attack places a frost brand that deals {{damage}} frost
+      damage after {{time}} seconds. Slayers
 
-      can destroy the brand, prematurely detonating it for 50% increased damage.
-      Charges every 90 seconds.
+      can destroy the brand, prematurely detonating it for {{damagePrematurely}}% increased damage.
+      Charges every {{cooldown}} seconds.
+    values:
+      damage: 1000
+      time: 30
+      damagePrematurely: 50
+      cooldown: 90
     powerSurged: false
   - name: PangarBomb
-    description: >
-      Once charged, your next attack places a frost brand that deals 2,500 frost
-      damage after 30 seconds. Slayers
-
-      can destroy the brand, prematurely detonating it for 50% increased damage.
-      Charges every 90 seconds.
+    description: *pangarUeDescription
+    values:
+      damage: 2500
+      time: 30
+      damagePrematurely: 50
+      cooldown: 90
     powerSurged: true

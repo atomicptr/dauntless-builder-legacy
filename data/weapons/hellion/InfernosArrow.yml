@@ -19,8 +19,15 @@ perks:
     powerSurged: true
 unique_effects:
   - name: BlazeDamageOnNthHit
-    description: The fifteenth hit in a row deals +150 damage and major blaze damage
+    description: &hellionUeDescription >-
+      The {{hitCount}}th hit in a row deals +{{damage}} damage and major blaze damage
+    values:
+      hitCount: 15
+      damage: 150
     powerSurged: false
   - name: BlazeDamageOnNthHit
-    description: The fifteenth hit in a row deals +200 damage and major blaze damage
+    description: *hellionUeDescription
+    values:
+      hitCount: 15
+      damage: 200
     powerSurged: true

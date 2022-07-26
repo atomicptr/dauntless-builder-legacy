@@ -19,8 +19,13 @@ perks:
     powerSurged: true
 unique_effects:
   - name: StaggerHeal
-    description: When you fire the last shot in your magazine, heal for 15.
+    description: &nayzagaUeDescription >-
+      When you fire the last shot in your magazine, heal for {{heal}}
+    values:
+      heal: 15
     powerSurged: false
   - name: StaggerHeal
-    description: When you fire the last shot in your magazine, heal for 25.
+    description: *nayzagaUeDescription
+    values:
+      heal: 25
     powerSurged: true

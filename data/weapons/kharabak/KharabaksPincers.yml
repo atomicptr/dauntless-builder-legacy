@@ -19,14 +19,15 @@ perks:
     powerSurged: true
 unique_effects:
   - name: KharabacBlades
-    description: >
-      Once charged, your next attack unleashes whirling blades that deal 25
+    description: &kharabakUeDescription >-
+      Once charged, your next attack unleashes whirling blades that deal {{damage}}
       terra damage. Additional attacks speed up the blades, which explode at the
       end of the duration and deal damage based on blade speed.
+    values:
+      damage: 25
     powerSurged: false
   - name: KharabacBlades
-    description: >
-      Once charged, your next attack unleashes whirling blades that deal 75
-      terra damage. Additional attacks speed up the blades, which explode at the
-      end of the duration and deal damage based on blade speed.
+    description: *kharabakUeDescription
+    values:
+      damage: 75
     powerSurged: true
