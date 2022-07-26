@@ -19,14 +19,18 @@ perks:
     powerSurged: true
 unique_effects:
   - name: DamageChanceStackShield
-    description: >-
-      After using your lantern ability, grant a stackable 175 health shield that
-      lasts for 25 seconds (max 600 shields).
-    
+    description: &skarnUeDescription >-
+      After using your lantern ability, grant a stackable {{shield}} health shield that
+      lasts for {{shieldTime}} seconds (max {{shieldMax}} shields).
+    values:
+        shield: 175
+        shieldTime: 25
+        shieldMax: 600
     powerSurged: false
   - name: DamageChanceStackShield
-    description: >-
-      After using your lantern ability, grant a stackable 250 health shield that
-      lasts for 25 seconds (max 600 shields).
-    
+    description: *skarnUeDescription
+    values:
+        shield: 250
+        shieldTime: 25
+        shieldMax: 600
     powerSurged: true
