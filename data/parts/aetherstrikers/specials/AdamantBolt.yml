@@ -2,6 +2,9 @@ name: Adamant Bolt
 icon: /assets/icons/parts/aetherstrikers/specials/AdamantBolt.png
 part_effect:
   - >-
-    Unleash energy in a focused blast, dealing 900 damage to the first enemy
-    hit. Deals up to +100% damage when Tempest Form and Karma Breaker's effects
+    Unleash energy in a focused blast, dealing {{damageBlast}} damage to the first enemy
+    hit. Deals up to +{{damage}}% damage when Tempest Form and Karma Breaker's effects
     are active.
+values:
+  damageBlast: 900
+  damage: 100

@@ -2,5 +2,7 @@ name: Furious Axecore
 icon: /assets/icons/parts/axe/mods/FuriousAxecore.png
 part_effect:
   - >-
-    Perfectly charged attacks grants +15 meter on hit, but no longer grant
+    Perfectly charged attacks grants +{{meter}} meter on hit, but no longer grant
     resolve.
+values:
+  meter: 15

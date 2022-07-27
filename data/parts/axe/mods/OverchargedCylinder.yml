@@ -1,4 +1,6 @@
 name: Overcharged Cylinder
 icon: /assets/icons/parts/axe/mods/OverchargedCylinder.png
 part_effect:
-  - Determination can now stack up to 4 times.
+  - Determination can now stack up to {{times}} times.
+values:
+  times: 4

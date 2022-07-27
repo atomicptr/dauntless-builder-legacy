@@ -2,5 +2,8 @@ name: Serrated Blades
 icon: /assets/icons/parts/chainblades/mods/SerratedBlades.png
 part_effect:
   - >-
-    Bladed attacks have a chance to cause your next 4 lacerating attacks to deal
-    +50% wound damage.
+    Bladed attacks have a chance to cause your next {{attacks}} lacerating attacks to deal
+    +{{damage}}% wound damage.
+values: 
+  attacks: 4
+  damage: 50
