@@ -5,5 +5,8 @@ cells: Insight
 lantern_ability:
   instant: null
   hold: >-
-    Create a fire ball in front of you that explodes after 4 seconds, dealing
-    3250 Blaze damage to all nearby enemies.
+    Create a fire ball in front of you that explodes after {{fireBallTime}} seconds, dealing
+    {{blazeDamage}} Blaze damage to all nearby enemies.
+values:
+  fireBallTime: 4
+  blazeDamage: 3250

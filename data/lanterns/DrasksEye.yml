@@ -5,5 +5,7 @@ cells: Insight
 lantern_ability:
   instant: null
   hold: >-
-    Fires a lightning bolt in a direction that deals 400 Shock damage multiple
+    Fires a lightning bolt in a direction that deals {{shockDamage}} Shock damage multiple
     times as it passes through enemies.
+values:
+  shockDamage: 400

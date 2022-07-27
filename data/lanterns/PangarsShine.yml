@@ -5,5 +5,8 @@ cells: Insight
 lantern_ability:
   instant: null
   hold: >-
-    Create a frost pillar in front of you that deals 2500 Frost damage to nearby
-    enemies over 10 seconds.
+    Create a frost pillar in front of you that deals {{frostDamage}} Frost damage to nearby
+    enemies over {{damageTime}} seconds.
+values:
+  frostDamage: 2500
+  damageTime: 10
