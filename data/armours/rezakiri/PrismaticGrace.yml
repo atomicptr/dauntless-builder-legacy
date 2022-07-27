@@ -21,16 +21,20 @@ perks:
 unique_effects:
   - name: PrismaticGraceRevivePrism
     icon: /assets/icons/abilities/PrismaticGraceBuff.png
-    description: >-
+    description: &rezakiriRevivePrismUeDescription >-
       After reviving another player, grant them a Radiant Prism that blocks
-      incoming damage for 5 seconds.
+      incoming damage for {{prismTime}} seconds.
+    values:
+      prismTime: 5
   - name: PrismaticGraceLethalDamagePrism
     icon: /assets/icons/abilities/PrismaticGraceBuff.png
-    description: >-
+    description: &rezakiriLethalPrismUeDescription >-
       The first time you take lethal damage, gain a Radiant Prism that blocks
-      incoming damage for 10 seconds.
+      incoming damage for {{prismTime}} seconds.
+    values:
+      prismTime: 10
   - name: PrismaticGraceActivePrismRevive
     icon: /assets/icons/abilities/PrismaticGraceBuff.png
-    description: >-
+    description: &rezakiriActivePrismUeDescription >-
       While active, reviving another player fully restores both players but
       removes the Prism even at full danger.
