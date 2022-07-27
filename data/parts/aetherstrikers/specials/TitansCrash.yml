@@ -3,7 +3,9 @@ icon: /assets/icons/parts/aetherstrikers/specials/TitansCrash.png
 part_effect:
   - >-
     Unleash energy forward in a pressure wave, dealing {{damageWave}} damage to the closest
-    target and 166 damage to nearby target. Deals up to +100% damage when
+    target and {{damageNerbyTarget}} damage to nearby target. Deals up to +{{damage}}% damage when
     Tempest Form and Karma Breaker's effects are active.
 values:
   damageWave: 500
+  damageNerbyTarget: 166
+  damage: 100
