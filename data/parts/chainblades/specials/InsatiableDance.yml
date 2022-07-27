@@ -4,7 +4,14 @@ part_effect:
   - >-
     Push off a nearby target with invulnerability, then use primary or secondary
     attacks to perform a followup. Primary: A dash attack to the target that
-    consumes 1 momentum. Secondary: A spinning slam that consumes all momentum
-    to heal you and create a 150 healing orb for each momentum consumed. Targets
-    at or healed to full health gain 5% damage for 10 seconds, stacking up to 4
-    times. (Consume 1 momentum if no follow up is performed.)
+    consumes {{momentum}} momentum. Secondary: A spinning slam that consumes all momentum
+    to heal you and create a {{heal}} healing orb for each momentum consumed. Targets
+    at or healed to full health gain {{damage}}% damage for {{damageTime}} seconds, stacking up to {{damageStack}}
+    times. (Consume {{momentumIfNoFollow}} momentum if no follow up is performed.)
+values:
+  momentum: 1
+  heal: 150
+  damage: 5
+  damageTime: 10
+  damageStack: 4
+  momentumIfNoFollow: 1

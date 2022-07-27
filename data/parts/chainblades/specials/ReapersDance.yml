@@ -4,6 +4,9 @@ part_effect:
   - >-
     Push off a nearby target with invulnerability, then use primary or secondary
     attacks to perform a follow up. Primary: A dash attack to the target that
-    consumes 1 momentum. Secondary: A spinning slam that consumes all momentum
-    and deals greatly increased damage per momentum consumed. (Consume 1
+    consumes {{momentum}} momentum. Secondary: A spinning slam that consumes all momentum
+    and deals greatly increased damage per momentum consumed. (Consume {{momentumIfNoFollow}}
     momentum if no follow up is performed)
+values:
+  momentum: 1
+  momentumIfNoFollow: 1
