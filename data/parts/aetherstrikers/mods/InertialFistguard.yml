@@ -2,5 +2,10 @@ name: Inertial Fistguard
 icon: /assets/icons/parts/aetherstrikers/mods/InertialFistguard.png
 part_effect:
   - >-
-    Surge deals +25% damage. After surging, gain +5% movespeed for 8 seconds.
-    Stacks up to 3 times.
+    Surge deals +{{damage}}% damage. After surging, gain +{{speed}}% movespeed for {{speedTime}} seconds.
+    Stacks up to {{speedStack}} times.
+values:
+  damage: 25
+  speed: 5
+  speedTime: 8
+  speedStack: 3
