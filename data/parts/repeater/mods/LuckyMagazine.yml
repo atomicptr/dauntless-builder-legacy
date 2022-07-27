@@ -1,4 +1,6 @@
 name: Lucky Magazine
 icon: /assets/icons/parts/repeaters/mods/LuckyMagazine.png
 part_effect:
-  - Grants 2% critical strike chance for each round missing from the magazine.
+  - Grants {{percentCritChance}}% critical strike chance for each round missing from the magazine.
+values:
+  percentCritChance: 2

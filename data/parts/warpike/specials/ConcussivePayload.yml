@@ -3,4 +3,6 @@ icon: /assets/icons/parts/warpike/specials/ConcussivePayload.png
 part_effect:
   - >-
     Press to convert meter into ammo. Hold to spend ammo to fire a missile that
-    deals up to 1200 damage based on ammo quality and can interrupt Behemoths.
+    deals up to {{damage}} damage based on ammo quality and can interrupt Behemoths.
+values:
+  damage: 1200

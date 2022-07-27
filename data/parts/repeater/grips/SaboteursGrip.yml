@@ -3,6 +3,10 @@ description: The Saboteur's Grip is part of a craftable weapon in Dauntless.
 icon: /assets/icons/parts/repeaters/grips/SaboteursGrip.png
 part_effect:
   - >-
-    Launches an explosive mine that deals 400 damage. Mine charges after a short
-    period, increasing damage to 700.
-  - 'Empowered: Deals 900 damage when charged and can interrupt Behemoths.'
+    Launches an explosive mine that deals {{damage}} damage. Mine charges after a short
+    period, increasing damage to {{increasedDamage}}.
+  - 'Empowered: Deals {{empoweredDamage}} damage when charged and can interrupt Behemoths.'
+values:
+  damage: 400
+  increasedDamage: 700
+  empoweredDamage: 900

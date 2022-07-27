@@ -1,4 +1,6 @@
 name: Capacitive Magazine
 icon: /assets/icons/parts/repeaters/mods/CapacitiveMagazine.png
 part_effect:
-  - Using an ability returns 8 standard ammo to the magazine.
+  - Using an ability returns {{ammo}} standard ammo to the magazine.
+values:
+  ammo: 8

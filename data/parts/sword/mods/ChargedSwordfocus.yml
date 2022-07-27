@@ -3,4 +3,6 @@ icon: /assets/icons/parts/sword/mods/ChargedSwordfocus.png
 part_effect:
   - >-
     Instead of dealing damage over time, Resounding Echo deals damage once after
-    it expires and deals +35% total damage.
+    it expires and deals +{{percentDamage}}% total damage.
+values:
+  percentDamage: 35

@@ -1,4 +1,6 @@
 name: Scoped Sights
 icon: /assets/icons/parts/repeaters/mods/ScopedSights.png
 part_effect:
-  - Increases damage falloff range by 25%
+  - Increases damage falloff range by {{damageFalloff}}%
+values:
+  damageFalloff: 25
