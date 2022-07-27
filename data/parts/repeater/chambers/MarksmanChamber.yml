@@ -10,5 +10,5 @@ values:
   damage: 350
   percentDamage: 25
   damageTime: 10
-  empoweredpercentDamage: 60
+  empoweredPercentDamage: 60
   empoweredPercentAllyDamage: 25

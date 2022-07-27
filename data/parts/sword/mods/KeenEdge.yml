@@ -7,4 +7,4 @@ part_effect:
 values:
   percentMovespeed: 25
   movespeedTime: 10
-  percentdamage: 100
+  percentDamage: 100
