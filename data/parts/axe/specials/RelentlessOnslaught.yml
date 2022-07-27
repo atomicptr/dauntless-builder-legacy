@@ -3,5 +3,11 @@ icon: /assets/icons/parts/axe/specials/RelentlessOnslaught.png
 part_effect:
   - >-
     Hurl the axe forward, damaging enemies in its path. Catch the axe to throw
-    it again up to 2 more times in the next 5 seconds, dealing 500/600/1000
+    it again up to {{axeThrow}} more times in the next {{axeThrowTime}} seconds, dealing {{axeDamage1}}/{{axeDamage2}}/{{axeDamage3}}
     damage (further increased by determination). Does not build meter.
+values:
+  axeThrow: 2
+  axeThrowTime: 5
+  axeDamage1: 500
+  axeDamage2: 600
+  axeDamage3: 1000
