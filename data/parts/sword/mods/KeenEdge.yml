@@ -2,5 +2,9 @@ name: Keen Edge
 icon: /assets/icons/parts/sword/mods/KeenEdge.png
 part_effect:
   - >-
-    After dealing damage with the Bladesurge projectile, increase your movement speed by 25% for 10 seconds.
-    Additionally, after the Bladesurge projectile travels a short distance, the damage is increased by 100%.
+    After dealing damage with the Bladesurge projectile, increase your movement speed by {{percentMovespeed}}% for {{movespeedTime}} seconds.
+    Additionally, after the Bladesurge projectile travels a short distance, the damage is increased by {{percentDamage}}%.
+values:
+  percentMovespeed: 25
+  movespeedTime: 10
+  percentDamage: 100

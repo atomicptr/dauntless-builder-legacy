@@ -1,4 +1,6 @@
 name: Extended Clip
 icon: /assets/icons/parts/hammer/mods/ExtendedClip.png
 part_effect:
-  - Ammo increased to 6.
+  - Ammo increased to {{ammoIncrease}}.
+values:
+  ammoIncrease: 6

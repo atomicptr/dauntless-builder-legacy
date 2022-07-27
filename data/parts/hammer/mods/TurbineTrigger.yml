@@ -1,4 +1,6 @@
 name: Turbine Trigger
 icon: /assets/icons/parts/hammer/mods/TurbineTrigger.png
 part_effect:
-  - Priming attacks increases attack speed by 10% until the combo ends. Stacks.
+  - Priming attacks increases attack speed by {{percentAttackSpeed}}% until the combo ends. Stacks.
+values:
+  percentAttackSpeed: 10

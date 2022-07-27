@@ -2,5 +2,9 @@ name: Recursive Hilt
 icon: /assets/icons/parts/sword/mods/RecursiveHilt.png
 part_effect:
   - >-
-    Dealing damage with Bladerush restores 20 stamina and generates 3 Valour
-    over 9 seconds. Does not stack.
+    Dealing damage with Bladerush restores {{stamina}} stamina and generates {{valour}} Valour
+    over {{valourTime}} seconds. Does not stack.
+values:
+  stamina: 20
+  valour: 3
+  valourTime: 9

@@ -2,5 +2,8 @@ name: Dynamic Bladecore
 icon: /assets/icons/parts/sword/mods/DynamicBladecore.png
 part_effect:
   - >-
-    After using any Valour combo, your next Valour combo within 5 seconds deals
-    +30% damage.
+    After using any Valour combo, your next Valour combo within {{damageTime}} seconds deals
+    +{{percentDamage}}% damage.
+values:
+  damageTime: 5
+  percentDamage: 30

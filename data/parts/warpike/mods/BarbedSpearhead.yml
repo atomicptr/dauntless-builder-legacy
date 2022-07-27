@@ -1,4 +1,7 @@
 name: Barbed Spearhead
 icon: /assets/icons/parts/warpike/mods/BarbedSpearhead.png
 part_effect:
-  - After a dodge piercing attack, gain +50% wound damage for 8 seconds.
+  - After a dodge piercing attack, gain +{{percentWoundDamage}}% wound damage for {{woundDamageTime}} seconds.
+values:
+  percentWoundDamage: 50
+  woundDamageTime: 8

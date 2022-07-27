@@ -1,4 +1,6 @@
 name: Demolition Sights
 icon: /assets/icons/parts/repeaters/mods/DemolitionSights.png
 part_effect:
-  - While empowered, deal +100% damage to objects created by Behemoths.
+  - While empowered, deal +{{percentObjectDamage}}% damage to objects created by Behemoths.
+values:
+  percentObjectDamage: 100

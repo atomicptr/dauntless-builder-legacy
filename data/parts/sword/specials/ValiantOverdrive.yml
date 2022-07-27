@@ -2,7 +2,15 @@ name: Valiant Overdrive
 icon: /assets/icons/parts/sword/specials/ValiantOverdrive.png
 part_effect:
   - >-
-    Activate at full meter to enter Overdrive, gaining +20% attack speed and
-    causing attacks to deal +60-80 aoe damage. Grants 1 Valour immediately and
-    then 1 Valour every 4 seconds. Reactivate to dash in a direction (Costs 1
+    Activate at full meter to enter Overdrive, gaining +{{percentAttackSpeed}}% attack speed and
+    causing attacks to deal +{{aoeDamageMin}}-{{aoeDamageMax}} aoe damage. Grants {{valour}} Valour immediately and
+    then {{valourRegen}} Valour every {{valourTime}} seconds. Reactivate to dash in a direction (Costs {{valourCost}}
     Valour).
+values:
+  percentAttackSpeed: 20
+  aoeDamageMin: 60
+  aoeDamageMax: 80
+  valour: 1
+  valourRegen: 1
+  valourTime: 4
+  valourCost: 1

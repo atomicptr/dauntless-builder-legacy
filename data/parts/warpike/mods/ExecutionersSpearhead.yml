@@ -2,5 +2,9 @@ name: Executioner's Spearhead
 icon: /assets/icons/parts/warpike/mods/ExecutionersSpearhead.png
 part_effect:
   - >-
-    Each time you wound or assist wounding a Behemoth, gain 8% damage for 45
-    seconds. Stacks up to 5.
+    Each time you wound or assist wounding a Behemoth, gain {{percentDamage}}% damage for {{damageTime}}
+    seconds. Stacks up to {{stacks}}.
+values:
+  percentDamage: 8
+  damageTime: 45
+  stacks: 5

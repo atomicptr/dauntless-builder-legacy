@@ -3,4 +3,6 @@ icon: /assets/icons/parts/warpike/mods/MunitionsAmplifier.png
 part_effect:
   - >-
     Stored ammo quality increases slowly over time, up to max. Stored ammo
-    quality is also increased by an additional 25%.
+    quality is also increased by an additional {{ammoQuality}}%.
+values:
+  ammoQuality: 25

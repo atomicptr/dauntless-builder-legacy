@@ -2,5 +2,8 @@ name: Precision Sights
 icon: /assets/icons/parts/repeaters/mods/PrecisionSights.png
 part_effect:
   - >-
-    Deal 8 increased damage when attacking the same part multiple times. Stacks
-    up to 5 times.
+    Deal {{damage}} increased damage when attacking the same part multiple times. Stacks
+    up to {{stacks}} times.
+values:
+  damage: 8
+  stacks: 5

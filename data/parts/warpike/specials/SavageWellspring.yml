@@ -3,5 +3,8 @@ icon: /assets/icons/parts/warpike/specials/SavageWellspring.png
 part_effect:
   - >-
     Press to convert meter into ammo. Hold to spend ammo to create an aura that
-    buffs nearby allies with up to +30% critical strike chance based on ammo
-    quality for 10 seconds.
+    buffs nearby allies with up to +{{percentCritChance}}% critical strike chance based on ammo
+    quality for {{critChanceTime}} seconds.
+values:
+  percentCritChance: 30
+  critChanceTime: 10

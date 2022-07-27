@@ -1,4 +1,7 @@
 name: Antique Clip
 icon: /assets/icons/parts/hammer/mods/AntiqueClip.png
 part_effect:
-  - Ammo decreased to 2, but bonus from aethercharged ammo is increased by 300%.
+  - Ammo decreased to {{ammoDecrease}}, but bonus from aethercharged ammo is increased by {{percentDamage}}%.
+values:
+  ammoDecrease: 2
+  percentDamage: 300
