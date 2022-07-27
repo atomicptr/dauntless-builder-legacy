@@ -1,4 +1,3 @@
-import { Language } from "@src/i18n";
 
 import { CellType } from "./Cell";
 
@@ -17,18 +16,6 @@ export interface Perk {
             description: string | string[];
             values?: {
                 [key: string]: string;
-            };
-        };
-    };
-
-    i18n?: {
-        [language in Language]: {
-            name?: string;
-            description?: string;
-            effects: {
-                [index: string]: {
-                    description?: string | string[];
-                };
             };
         };
     };

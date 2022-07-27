@@ -1,4 +1,3 @@
-import { Language } from "@src/i18n";
 import { match } from "ts-pattern";
 
 import { CellType } from "./Cell";
@@ -42,17 +41,6 @@ export interface Weapon {
     perks?: PerkValue[];
     unique_effects?: UniqueEffect[];
     rarity?: ItemRarity;
-
-    i18n?: {
-        [language in Language]: {
-            name?: string;
-            description?: string;
-            unique_effects: {
-                name?: string;
-                description?: string;
-            }[];
-        };
-    };
 }
 
 export type WeaponName = "aetherstrikers" | "axe" | "chainblades" | "hammer" | "repeater" | "sword" | "warpike";

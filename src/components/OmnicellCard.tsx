@@ -55,7 +55,9 @@ const OmnicellCard: React.FC<OmnicellCardProps> = ({ item }) => {
                     >
                         <b>{t("terms.active")}</b>
                         {": "}
-                        {renderItemText(t(itemTranslationIdentifier(ItemType.Omnicell, item.name, "active")))}
+                        {renderItemText(
+                            t(itemTranslationIdentifier(ItemType.Omnicell, item.name, "active"), item.active_values),
+                        )}
                     </Typography>
                 </CardContent>
             </Box>

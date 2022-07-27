@@ -539,7 +539,7 @@
     "item.lanterns.recruits-lantern.name": "Recruit's Lantern",
     "item.lanterns.recruits-lantern.lantern_ability.hold": "Grants a 300 hit point shield that lasts 15 seconds.",
     "item.lanterns.shrikes-zeal.name": "Shrike's Zeal",
-    "item.lanterns.shrikes-zeal.lantern_ability.hold": "Creates an aura that grants nearby Slayers 15% increased move speed and attack speed for 10 seconds.",
+    "item.lanterns.shrikes-zeal.lantern_ability.hold": "Creates an aura that grants nearby Slayers {{percentIncreasedMovementAndAttackSpeed}}% increased move speed and attack speed for {{attackSpeedTime}} seconds.",
     "item.lanterns.skarns-defiance.name": "Skarn's Defiance",
     "item.lanterns.skarns-defiance.lantern_ability.hold": "Surrounds the slayer in swirling stone that deals 2500 Terra damage to nearby enemies for 10 seconds. Also generates 30 hit point shields per second that expire after 25 seconds. (Max 600 shields)",
     "item.perks.acidic.name": "Acidic",
@@ -2029,7 +2029,7 @@
     "item.parts.aetherstrikers.specials.adamant-bolt.name": "Adamant Bolt",
     "item.parts.aetherstrikers.specials.adamant-bolt.part_effect.0": "Unleash energy in a focused blast, dealing {{damageBlast}} damage to the first enemy hit. Deals up to +{{damage}}% damage when Tempest Form and Karma Breaker's effects are active.",
     "item.parts.aetherstrikers.specials.titans-crash.name": "Titan's Crash",
-    "item.parts.aetherstrikers.specials.titans-crash.part_effect.0": "Unleash energy forward in a pressure wave, dealing {{damageWave}} damage to the closest target and 166 damage to nearby target. Deals up to +100% damage when Tempest Form and Karma Breaker's effects are active.",
+    "item.parts.aetherstrikers.specials.titans-crash.part_effect.0": "Unleash energy forward in a pressure wave, dealing {{damageWave}} damage to the closest target and {{damageNearbyTarget}} damage to nearby target. Deals up to +{{damage}}% damage when Tempest Form and Karma Breaker's effects are active.",
     "item.parts.axe.mods.furious-axecore.name": "Furious Axecore",
     "item.parts.axe.mods.furious-axecore.part_effect.0": "Perfectly charged attacks grants +{{meter}} meter on hit, but no longer grant resolve.",
     "item.parts.axe.mods.lightweight-haft.name": "Lightweight Haft",
@@ -2157,6 +2157,6 @@
     "item.omnicells.revenant.active": "Drain up to 500 health to enter Revenant state and spawn a Void Orb. For every 100 health drained, summon an Umbral Tendril that deals 700 umbral damage. If an Umbral Tendril hits a target, it spawns an additional Void Orb upon impact. Picking up a Void Orb grants a stack of Void Energy, which gives +4% damage and extends Revenant state by 1 second. Revenant state lasts for 15 seconds and prevents all healing.\n",
     "item.omnicells.revenant.passive": "Lifesteal +2%. When Revenant state ends, each stack of Void Energy grants 115 health per second for 10 seconds.\n",
     "item.omnicells.tempest.name": "Tempest",
-    "item.omnicells.tempest.active": "Consume a stack of Velocity to dash ahead and deal 450 shock damage to a nearby target, prioritizing unbroken behemoth parts. For every 1% increase in movement speed, deal +5% damage to unbroken parts. Stacks are refreshed on use. 4 second cooldown.\n",
-    "item.omnicells.tempest.passive": "Attack speed +10%. Dodging through an attack grants a stack of Velocity. Each stack lasts 45 seconds and increases movement speed by 3%\n"
+    "item.omnicells.tempest.active": "Consume a stack of Velocity to dash ahead and deal {{shockDamage}} shock damage to a nearby target, prioritizing unbroken behemoth parts. For every {{percentMovementIncreaseThreshold}}% increase in movement speed, deal +{{percentDamageToUnbrokenPart}}% damage to unbroken parts. Stacks are refreshed on use. {{cooldown}} second cooldown.\n",
+    "item.omnicells.tempest.passive": "Attack speed +{{percentAttackSpeed}}%. Dodging through an attack grants a stack of Velocity. Each stack lasts {{stackTime}} seconds and increases movement speed by 3%\n"
 }

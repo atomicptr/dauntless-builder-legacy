@@ -1,4 +1,3 @@
-import { Language } from "@src/i18n";
 
 export interface Omnicell {
     name: string;
@@ -6,12 +5,10 @@ export interface Omnicell {
     ability_icon: string;
     passive: string;
     active: string;
-
-    i18n?: {
-        [language in Language]: {
-            name?: string;
-            passive?: string;
-            active?: string;
-        };
+    passive_values: {
+        [key: string]: number;
+    };
+    active_values: {
+        [key: string]: number;
     };
 }

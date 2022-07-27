@@ -1,5 +1,4 @@
 import { ItemRarity } from "@src/data/ItemRarity";
-import { Language } from "@src/i18n";
 
 export enum CellType {
     Prismatic = "Prismatic",
@@ -19,13 +18,6 @@ export interface Cell {
             perks: {
                 [perkName: string]: number;
             };
-        };
-    };
-
-    i18n?: {
-        [language in Language]: {
-            name?: string;
-            variants?: string[];
         };
     };
 }

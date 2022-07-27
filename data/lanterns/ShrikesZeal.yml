@@ -5,5 +5,8 @@ cells: Insight
 lantern_ability:
   instant: null
   hold: >-
-    Creates an aura that grants nearby Slayers 15% increased move speed and
-    attack speed for 10 seconds.
+    Creates an aura that grants nearby Slayers {{percentIncreasedMovementAndAttackSpeed}}% increased move speed and
+    attack speed for {{attackSpeedTime}} seconds.
+values:
+  percentIncreasedMovementAndAttackSpeed: 15
+  attackSpeedTime: 10

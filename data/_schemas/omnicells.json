@@ -8,6 +8,17 @@
         "active": {
             "type": "string"
         },
+        "active_values": {
+            "patternProperties": {
+                "^.*$": {
+                    "type": "number"
+                }
+            },
+            "type": [
+                "object",
+                "null"
+            ]
+        },
         "icon": {
             "type": "string"
         },
@@ -16,6 +27,17 @@
         },
         "passive": {
             "type": "string"
+        },
+        "passive_values": {
+            "patternProperties": {
+                "^.*$": {
+                    "type": "number"
+                }
+            },
+            "type": [
+                "object",
+                "null"
+            ]
         }
     },
     "required": [

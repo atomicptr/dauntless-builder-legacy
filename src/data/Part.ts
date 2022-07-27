@@ -1,6 +1,5 @@
 import dauntlessBuilderData, { RegularWeaponParts, RepeaterParts } from "@src/data/Data";
 import { WeaponType } from "@src/data/Weapon";
-import { Language } from "@src/i18n";
 import { match } from "ts-pattern";
 
 export enum PartType {
@@ -16,13 +15,6 @@ export interface Part {
     part_effect: string[];
     values: {
         [key: string]: string;
-    };
-
-    i18n?: {
-        [language in Language]: {
-            name?: string;
-            part_effect?: string[];
-        };
     };
 }
 

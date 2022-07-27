@@ -1,4 +1,3 @@
-import { Language } from "@src/i18n";
 
 import { CellType } from "./Cell";
 import { ElementalType } from "./ElementalType";
@@ -30,15 +29,4 @@ export interface Armour {
     perks?: PerkValue[];
     unique_effects?: UniqueEffect[];
     rarity?: ItemRarity;
-
-    i18n?: {
-        [language in Language]: {
-            name?: string;
-            description?: string;
-            unique_effects?: {
-                name?: string;
-                description?: string;
-            }[];
-        };
-    };
 }

@@ -478,6 +478,17 @@ describe("data.json integrity", () => {
                 if ("part_effect" in item) {
                     checkForVariables(item, item.part_effect, item.values ?? {});
                 }
+
+                // omnicells
+                if ("active" in item && "passive" in item) {
+                    checkForVariables(item, item.active, item.active_values ?? {});
+                    checkForVariables(item, item.passive, item.passive_values ?? {});
+                }
+
+                // lantern
+                if ("lantern_ability" in item) {
+                    checkForVariables(item, item.lantern_ability?.hold ?? "", item.values ?? {});
+                }
             }
         };
     };
@@ -508,6 +519,6 @@ describe("data.json integrity", () => {
     it("Repeater Grips should not have unused variables", checkIfAllVariablesAreUsed("parts.repeater.grips"));
     it("Repeater Chambers should not have unused variables", checkIfAllVariablesAreUsed("parts.repeater.chambers"));
 
-    // TODO: add omnicells
-    // TODO: add lanterns
+    it("Omnicells should not have unused variables", checkIfAllVariablesAreUsed("omnicells"));
+    it("Lanterns should not have unused variables", checkIfAllVariablesAreUsed("lanterns"));
 });

@@ -244,6 +244,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                                             "lantern_ability",
                                                             "hold",
                                                         ),
+                                                        (item as Lantern).values,
                                                     ),
                                                 }),
                                             }}
@@ -266,6 +267,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                                             item.name,
                                                             "passive",
                                                         ),
+                                                        (item as Omnicell).passive_values,
                                                     ),
                                                 }),
                                             }}

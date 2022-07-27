@@ -1,4 +1,3 @@
-import { Language } from "@src/i18n";
 
 import { CellType } from "./Cell";
 
@@ -11,15 +10,7 @@ export interface Lantern {
         instant: string | null;
         hold: string;
     };
-
-    i18n?: {
-        [language in Language]: {
-            name?: string;
-            description?: string;
-            lantern_ability?: {
-                instant?: string;
-                hold?: string;
-            };
-        };
+    values: {
+        [key: string]: number;
     };
 }
