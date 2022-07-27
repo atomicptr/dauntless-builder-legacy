@@ -20,7 +20,11 @@ perks:
     powerSurged: true
 unique_effects:
   - name: DamageStaminaShield
-    description: >-
-      1.5% of all damage dealt becomes a stamina shield (max 50) that depletes
-      first when spending stamina. Depletes slowly after 5 seconds not dealing
+    description: &charroggUeDescription >-
+      {{damage}}% of all damage dealt becomes a stamina shield (max {{staminaShieldMax}}) that depletes
+      first when spending stamina. Depletes slowly after {{staminaShieldTime}} seconds not dealing
       damage.
+    values:
+      damage: 1.5
+      staminaShieldMax: 50
+      staminaShieldTime: 5

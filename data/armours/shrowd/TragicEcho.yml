@@ -21,6 +21,10 @@ perks:
 unique_effects:
   - name: TragicEchoDamageIncrease
     icon: /assets/icons/abilities/TragicEchoBuff.png
-    description: >-
-      Upon your first death, become a shadow clone that deals 100% increased
-      damage for 15 seconds.
+    description: &shrowdUeDescription >-
+      Upon your first death, become a shadow clone that deals {{damage}}% increased
+      damage for {{damageTime}} seconds.
+    values:
+      damage: 100
+      damageTime: 15
+
