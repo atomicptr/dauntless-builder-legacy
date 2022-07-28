@@ -5,10 +5,9 @@
 
 import {
     ProjectsGroups,
-    ResponseObject,
     SourceStrings,
-    StringTranslations, StringTranslationsModel,
-    Translations
+    StringTranslations,
+    Translations,
 } from "@crowdin/crowdin-api-client";
 import axios from "axios";
 import fs from "fs";
@@ -16,6 +15,7 @@ import * as os from "os";
 import path from "path";
 import { fileURLToPath } from "url";
 import yauzl from "yauzl";
+import Queue from "queue-promise";
 
 if (!process.env.CROWDIN_TOKEN) {
     console.error("[crowdin] Please provide your personal crowdin token via the env variable CROWDIN_TOKEN!");
@@ -132,7 +132,7 @@ const buildAndDownloadTranslations = async (forceRebuild: boolean) => {
             });
         });
     });
-}
+};
 
 const approveTranslationsWhichAreReferences = async () => {
     const projectGroupsApi = new ProjectsGroups(credentials);
@@ -141,64 +141,88 @@ const approveTranslationsWhichAreReferences = async () => {
 
     const project = await projectGroupsApi.getProject(projectId);
 
-    let offset = 0;
+    let page = 0;
     const limit = 500;
     let running = true;
 
+    const queue = new Queue({
+        concurrent: 50,
+        interval: 100,
+        start: false,
+    });
+
     while (running) {
+        // this can probably be optimized with CroQL
         const stringsRes = await sourceStringsApi.listProjectStrings(projectId, {
             filter: "$t(",
             limit,
-            offset,
+            offset: page * limit,
         });
 
+        console.log(`[crowdin] working on page ${page}, found ${stringsRes.data.length} items...`);
+
         const strings = stringsRes.data
-            .map(res => ({text: res.data.text.toString(), id: res.data.id}))
-            .filter(({text}) => /^\$t\(.+\)$/gm.exec(text) !== null);
+            .map(res => ({ id: res.data.id, text: res.data.text.toString() }))
+            .filter(({ text }) => /^\$t\(.+\)$/gm.exec(text) !== null);
+
+        const addTranslation = async (id: number, text: string, languageId: string) => {
+            const translations = await stringTranslationsApi.listStringTranslations(
+                projectId,
+                id,
+                languageId,
+            );
+
+            // if it has already a translation ignore
+            if (translations.data.length > 0) {
+                return;
+            }
+
+            console.log(`[crowdin] Adding translation for ${languageId}: ${text}`);
+
+            // add translation
+            const translationRes = await stringTranslationsApi.addTranslation(projectId, {
+                languageId,
+                stringId: id,
+                text: text,
+            });
+
+            console.log(`[crowdin] Approve translation for ${languageId}: ${translationRes.data.text}`);
+
+            // approve translation
+            await stringTranslationsApi.addApproval(projectId, {
+                translationId: translationRes.data.id,
+            });
+        }
+
+        for (const languageId of project.data.targetLanguageIds) {
+            for (const string of strings) {
+                queue.enqueue(() => addTranslation(string.id, string.text, languageId));
+            }
+        }
+
+        while (queue.shouldRun) {
+            console.log(`[crowdin] Tasks in queue remaining: ${queue.size}`);
+            await queue.dequeue();
+        }
 
         if (stringsRes.data.length < limit) {
             running = false;
         }
 
-        for (const languageId of project.data.targetLanguageIds) {
-            for (const string of strings) {
-
-                const translations = await stringTranslationsApi.listStringTranslations(projectId, string.id, languageId, 1);
-
-                // if it has already a translation ignore
-                if (translations.data.length > 0) {
-                    continue;
-                }
-
-                console.log(`[crowdin] Adding translation for ${languageId}: ${string.text}`);
-
-                // add translation
-                const translationRes = await stringTranslationsApi.addTranslation(projectId, {
-                    text: string.text,
-                    languageId,
-                    stringId: string.id,
-                });
-
-                console.log(`[crowdin] Approve translation for ${languageId}: ${translationRes.data.text}`);
-
-                // approve translation
-                await stringTranslationsApi.addApproval(projectId, {
-                    translationId: translationRes.data.id,
-                });
-            }
-        }
-
-        offset++;
+        page++;
     }
-}
+};
 
 const main = async () => {
+    const skipReferenceCheck = process.argv.some(arg => arg === "--skip-reference-check");
     const forceRebuild = process.argv.some(arg => arg === "--force-rebuild");
 
-    console.log(`[crowdin] Try to approve all translations which are references.`);
-    await approveTranslationsWhichAreReferences();
+    if (!skipReferenceCheck) {
+        console.log("[crowdin] Try to approve all translations which are references.");
+        await approveTranslationsWhichAreReferences();
+    }
 
-    console.log(`[crowdin] Build and download translations.`);
+    console.log("[crowdin] Build and download translations.");
     await buildAndDownloadTranslations(forceRebuild);
 };
 

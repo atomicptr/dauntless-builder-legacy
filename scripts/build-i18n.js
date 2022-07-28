@@ -48,12 +48,21 @@ for (let category of Object.keys(data)) {
                 const ue = item.unique_effects[index];
 
                 if (ue.description) {
-                    const firstIndex = Object.values(item.unique_effects).findIndex(uniqueEffect => uniqueEffect.description === ue.description);
+                    const firstIndex = Object.values(item.unique_effects).findIndex(
+                        uniqueEffect => uniqueEffect.description === ue.description,
+                    );
                     i18nValues.en[
                         createItemTranslationIdentifier(category, itemName, "unique_effects", index, "description")
-                    ] = firstIndex.toString() === index.toString()
-                        ? ue.description
-                        : `$t(${createItemTranslationIdentifier(category, itemName, "unique_effects", firstIndex, "description")})`;
+                    ] =
+                        firstIndex.toString() === index.toString()
+                            ? ue.description
+                            : `$t(${createItemTranslationIdentifier(
+                                  category,
+                                  itemName,
+                                  "unique_effects",
+                                  firstIndex,
+                                  "description",
+                              )})`;
                 }
 
                 if (ue.title) {
@@ -132,25 +141,42 @@ for (let category of Object.keys(data)) {
                     i18nValues.en[createItemTranslationIdentifier(category, itemName, "effects", key, "description")] =
                         firstKey.toString() === key.toString()
                             ? effect.description
-                            : `$t(${createItemTranslationIdentifier(category, itemName, "effects", firstKey, "description")})`
+                            : `$t(${createItemTranslationIdentifier(
+                                  category,
+                                  itemName,
+                                  "effects",
+                                  firstKey,
+                                  "description",
+                              )})`;
                     continue;
                 }
 
                 if (effect.description && Array.isArray(effect.description)) {
                     for (let index in effect.description) {
-                        const firstEffectIndex = Object.values(item.effects).findIndex(e => e.description.some(desc => desc === effect.description[index]));
+                        const firstEffectIndex = Object.values(item.effects).findIndex(e =>
+                            e.description.some(desc => desc === effect.description[index]),
+                        );
                         const firstEffectKey = Object.keys(item.effects)[firstEffectIndex];
-                        const firstIndex = item.effects[firstEffectKey].description.findIndex(desc => desc === effect.description[index]);
+                        const firstIndex = item.effects[firstEffectKey].description.findIndex(
+                            desc => desc === effect.description[index],
+                        );
 
                         i18nValues.en[
                             createItemTranslationIdentifier(category, itemName, "effects", key, "description", index)
-                        ] = effect.description[index] === null
-                            ? null
-                            : (
-                                firstEffectKey.toString() === key.toString() && firstIndex.toString() === index.toString()
-                                    ? effect.description[index]
-                                    : `$t(${createItemTranslationIdentifier(category, itemName, "effects", firstEffectKey, "description", firstIndex)})`
-                            )
+                        ] =
+                            effect.description[index] === null
+                                ? null
+                                : firstEffectKey.toString() === key.toString() &&
+                                  firstIndex.toString() === index.toString()
+                                ? effect.description[index]
+                                : `$t(${createItemTranslationIdentifier(
+                                      category,
+                                      itemName,
+                                      "effects",
+                                      firstEffectKey,
+                                      "description",
+                                      firstIndex,
+                                  )})`;
                     }
                 }
             }

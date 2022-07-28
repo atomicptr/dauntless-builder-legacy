@@ -4,11 +4,6 @@
         "translation-warning": "You're currently viewing this page with your language set to <b>{{languageName}}</b>, translations are currently in beta and are very spotty. If you speak this language, please consider <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">contributing to the translation efforts</a>."
     },
     "app-name": "Dauntless Builder",
-    "appbar": {
-        "dev-menu": {
-            "translation-check": "Translation Check"
-        }
-    },
     "components": {
         "build-menu": {
             "added-build-to-favorites": "Added build \"{{name}}\" to favorites.",
