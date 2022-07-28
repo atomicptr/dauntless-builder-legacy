@@ -26,7 +26,7 @@ const data = dauntlessBuilderData;
 
 const chromeUserAgent =
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36";
-const remoteMapUrl = "https://raw.githubusercontent.com/atomicptr/dauntless-builder/master/.map/names.json";
+const remoteMapUrl = "https://raw.githubusercontent.com/atomicptr/dauntless-builder/master/src/json/names.json";
 
 const fail = (message: string): never => {
     throw new Error(message);
