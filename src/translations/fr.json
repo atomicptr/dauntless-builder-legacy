@@ -16,7 +16,7 @@
             "copied-to-clipboard": "Copié dans le presse papier",
             "copy-to-clipboard": "Copie du build dans le presse papier",
             "favorite-build": "Ajouter aux favoris",
-            "open-last-edited-build": "Ouvrir votre dernier build modifié",
+            "open-last-edited-build": "Ouvrir le dernier build modifié",
             "remove-build-from-favorites": "Supression du build \"{{name}}\" de vos favoris.",
             "set-build-name": "Nom du build",
             "unfavorite-build": "Supprimer des favoris"
@@ -46,8 +46,8 @@
     "misc": {
         "dauntless-version": "Dauntless v{{version}}",
         "discord-server": "Serveur Discord de Dauntless Builder",
-        "github-repository": "Répertoire GitHub",
-        "matrix-channel": "Dauntless Builder Matrix Server",
+        "github-repository": "Dépôt Github",
+        "matrix-channel": "Serveur Matrix de Dauntless Builder",
         "patch-url": "https://playdauntless.com/fr/patch-notes/{{version}}"
     },
     "pages": {
@@ -73,12 +73,12 @@
             "part-select-dialog-title": "Sélectionner une arme",
             "power-surged-add": "Afflux de puissance",
             "power-surged-remove": "Puissance de base",
-            "title": "{{weaponName}} {{omnicell}} Build",
+            "title": "{{omnicell}} {{weaponName}}",
             "toggle-filters": "Activer/Désactiver l'affichage des filtres",
             "toggle-unique-effects": "Activer/Désactiver l'affichage des effets uniques"
         },
         "build-finder": {
-            "builds-title": "Builds ({{num}})",
+            "builds-title": "Nombre de Builds trouver ({{num}})",
             "dev-clear-perks": "Effacer tous les effets",
             "dev-number-of-builds": "Nombre de builds: {{num}}",
             "dev-number-of-perks": "Nombre d'effets sélectionnés: {{num}}",
