@@ -3,7 +3,13 @@
 // This is a script we allow use of console here
 /* eslint-disable no-console */
 
-import { Translations } from "@crowdin/crowdin-api-client";
+import {
+    ProjectsGroups,
+    ResponseObject,
+    SourceStrings,
+    StringTranslations, StringTranslationsModel,
+    Translations
+} from "@crowdin/crowdin-api-client";
 import axios from "axios";
 import fs from "fs";
 import * as os from "os";
@@ -27,9 +33,7 @@ const itemTranslationsDir = path.join(translationsDir, "items");
 
 const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-const main = async () => {
-    const forceRebuild = process.argv.some(arg => arg === "--force-rebuild");
-
+const buildAndDownloadTranslations = async (forceRebuild: boolean) => {
     const translationsApi = new Translations(credentials);
 
     const builds = await translationsApi.listProjectBuilds(projectId, {
@@ -128,6 +132,74 @@ const main = async () => {
             });
         });
     });
+}
+
+const approveTranslationsWhichAreReferences = async () => {
+    const projectGroupsApi = new ProjectsGroups(credentials);
+    const sourceStringsApi = new SourceStrings(credentials);
+    const stringTranslationsApi = new StringTranslations(credentials);
+
+    const project = await projectGroupsApi.getProject(projectId);
+
+    let offset = 0;
+    const limit = 500;
+    let running = true;
+
+    while (running) {
+        const stringsRes = await sourceStringsApi.listProjectStrings(projectId, {
+            filter: "$t(",
+            limit,
+            offset,
+        });
+
+        const strings = stringsRes.data
+            .map(res => ({text: res.data.text.toString(), id: res.data.id}))
+            .filter(({text}) => /^\$t\(.+\)$/gm.exec(text) !== null);
+
+        if (stringsRes.data.length < limit) {
+            running = false;
+        }
+
+        for (const languageId of project.data.targetLanguageIds) {
+            for (const string of strings) {
+
+                const translations = await stringTranslationsApi.listStringTranslations(projectId, string.id, languageId, 1);
+
+                // if it has already a translation ignore
+                if (translations.data.length > 0) {
+                    continue;
+                }
+
+                console.log(`[crowdin] Adding translation for ${languageId}: ${string.text}`);
+
+                // add translation
+                const translationRes = await stringTranslationsApi.addTranslation(projectId, {
+                    text: string.text,
+                    languageId,
+                    stringId: string.id,
+                });
+
+                console.log(`[crowdin] Approve translation for ${languageId}: ${translationRes.data.text}`);
+
+                // approve translation
+                await stringTranslationsApi.addApproval(projectId, {
+                    translationId: translationRes.data.id,
+                });
+            }
+        }
+
+        offset++;
+    }
+}
+
+const main = async () => {
+    const forceRebuild = process.argv.some(arg => arg === "--force-rebuild");
+
+    console.log(`[crowdin] Try to approve all translations which are references.`);
+    await approveTranslationsWhichAreReferences();
+
+    console.log(`[crowdin] Build and download translations.`);
+    await buildAndDownloadTranslations(forceRebuild);
 };
 
 main();
