@@ -28,3 +28,8 @@
   for = "*.png"
   [headers.values]
     Cache-Control = "public, s-max-age=604800"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
