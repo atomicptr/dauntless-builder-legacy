@@ -48,17 +48,20 @@ for (let category of Object.keys(data)) {
                 const ue = item.unique_effects[index];
 
                 if (ue.description) {
-                    const firstIndex = Object.values(item.unique_effects).findIndex(
+                    const firstItem = Object.values(items).find(item => item.unique_effects?.find(
+                        uniqueEffect => uniqueEffect.description === ue.description,
+                    )) ?? item;
+                    const firstIndex = Object.values(firstItem.unique_effects).findIndex(
                         uniqueEffect => uniqueEffect.description === ue.description,
                     );
                     i18nValues.en[
                         createItemTranslationIdentifier(category, itemName, "unique_effects", index, "description")
                     ] =
-                        firstIndex.toString() === index.toString()
+                        firstItem.name === item.name && firstIndex.toString() === index.toString()
                             ? ue.description
                             : `$t(${createItemTranslationIdentifier(
                                   category,
-                                  itemName,
+                                  firstItem.name,
                                   "unique_effects",
                                   firstIndex,
                                   "description",
