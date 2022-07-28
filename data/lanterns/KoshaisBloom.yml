@@ -5,5 +5,9 @@ cells: Insight
 lantern_ability:
   instant: null
   hold: >-
-    Dash in a direction, deal 2250 Terra damage to nearby enemies upon arrival,
-    and gain 15% lifesteal for 10 seconds.
+    Dash in a direction, deal {{terraDamage}} Terra damage to nearby enemies upon arrival,
+    and gain {{percentLifesteal}}% lifesteal for {{lifestealTime}} seconds.
+values:
+  terraDamage: 2250
+  percentLifesteal: 15
+  lifestealTime: 10

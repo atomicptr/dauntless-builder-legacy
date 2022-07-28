@@ -1,10 +1,10 @@
 name: Tempest
 icon: /assets/icons/omnicells/Tempest.png
 ability_icon: /assets/icons/omnicells/TempestAbility.png
-passive: >
+passive: >-
   Attack speed +{{percentAttackSpeed}}%. Dodging through an attack grants a stack of Velocity. Each
-  stack lasts {{stackTime}} seconds and increases movement speed by 3%
-active: >
+  stack lasts {{stackTime}} seconds and increases movement speed by {{percentMovespeed}}%
+active: >-
   Consume a stack of Velocity to dash ahead and deal {{shockDamage}} shock damage to a
   nearby target, prioritizing unbroken behemoth parts. For every {{percentMovementIncreaseThreshold}}% increase in
   movement speed, deal +{{percentDamageToUnbrokenPart}}% damage to unbroken parts. Stacks are refreshed on
@@ -12,6 +12,7 @@ active: >
 passive_values:
   percentAttackSpeed: 10
   stackTime: 45
+  percentMovespeed: 3
 active_values:
   shockDamage: 450
   percentMovementIncreaseThreshold: 1

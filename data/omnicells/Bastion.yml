@@ -1,11 +1,19 @@
 name: Bastion
 icon: /assets/icons/omnicells/Bastion.png
 ability_icon: /assets/icons/omnicells/BastionAbility.png
-passive: >
-  Increase all shields received by 15%. Dealing damage has a chance to grant a
-  stacking, refreshing 25 health shield that lasts for 25 seconds (max 500
+passive: >-
+  Increase all shields received by {{percentShieldIncrease}}%. Dealing damage has a chance to grant a
+  stacking, refreshing {{shield}} health shield that lasts for {{shieldTime}} seconds (max {{maxShields}}
   shields).
-active: >
+active: >-
   Leap forward and slam the ground consuming all shields in a blast of energy
-  that deals damage to nearby targets equal to 175% the amount of shields
-  consumed. 30 second cooldown.
+  that deals damage to nearby targets equal to {{percentShieldDamage}}% the amount of shields
+  consumed. {{damageCooldown}} second cooldown.
+passive_values:
+  percentShieldIncrease: 15
+  shield: 25
+  shieldTime: 25
+  maxShields: 500
+active_values:
+  percentShieldDamage: 175
+  damageCooldown: 30

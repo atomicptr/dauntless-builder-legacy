@@ -5,5 +5,8 @@ cells: Insight
 lantern_ability:
   instant: null
   hold: >-
-    Drop a bomb from above that explodes after 1 second. Deals 2750 damage and
-    can interrupt Behemoths.
+    Drop a bomb from above that explodes after {{bombTime}} second. 
+    Deals {{damage}} damage and can interrupt Behemoths.
+values:
+  bombTime: 1
+  damage: 2750
