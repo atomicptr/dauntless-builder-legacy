@@ -15,12 +15,12 @@
         "moduleResolution": "Node",
         "noEmit": true,
         "paths": {
-            "@src/*": [
-                "./src/*"
-            ],
             "@json/*": [
                 "./src/json/*"
             ],
+            "@src/*": [
+                "./src/*"
+            ]
         },
         "resolveJsonModule": true,
         "skipLibCheck": true,

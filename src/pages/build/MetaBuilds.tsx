@@ -1,3 +1,4 @@
+import metaBuildsJson from "@json/meta-builds.json";
 import { Alert, Box, ListSubheader, Skeleton, Stack, Tab, Tabs, Typography } from "@mui/material";
 import BuildCard from "@src/components/BuildCard";
 import PageTitle from "@src/components/PageTitle";
@@ -16,8 +17,6 @@ import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import React, { ReactNode, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
-
-import metaBuildsJson from "@json/meta-builds.json";
 
 interface TabPanelProps {
     children?: ReactNode;

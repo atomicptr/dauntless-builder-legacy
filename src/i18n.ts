@@ -1,29 +1,11 @@
 import { deDE, enUS, esES, frFR, jaJP } from "@mui/material/locale";
 import { store } from "@src/store";
-import i18n from "i18next";
+import log from "@src/utils/logger";
+import i18n, { CallbackError } from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
+import resourcesToBackend from "i18next-resources-to-backend";
 import { initReactI18next } from "react-i18next";
-import { i18nextPlugin as translationCheckPlugin } from "translation-check";
 import { match } from "ts-pattern";
-
-import de from "./translations/de.json";
-import en from "./translations/en.json";
-import es from "./translations/es.json";
-import fr from "./translations/fr.json";
-import deItems from "./translations/items/items.de.json";
-import enItems from "./translations/items/items.en.json";
-import esItems from "./translations/items/items.es.json";
-import frItems from "./translations/items/items.fr.json";
-import jaItems from "./translations/items/items.ja.json";
-import ja from "./translations/ja.json";
-
-const resources = {
-    de: { translation: { ...de, ...deItems } },
-    en: { translation: { ...en, ...enItems } },
-    es: { translation: { ...es, ...esItems } },
-    fr: { translation: { ...fr, ...frItems } },
-    ja: { translation: { ...ja, ...jaItems } },
-};
 
 export enum Language {
     English = "en",
@@ -46,7 +28,7 @@ const betaLanguages = [Language.German, Language.Japanese, Language.French, Lang
 export const currentLanguage = (): Language => i18n.languages[0] as Language;
 
 export const muiLocaleComponent = () =>
-    match(i18n.languages[0])
+    match(i18n.language)
         .with(Language.English, () => enUS)
         .with(Language.German, () => deDE)
         .with(Language.Japanese, () => jaJP)
@@ -71,9 +53,23 @@ detector.addDetector({
     name: "reduxState",
 });
 
-i18n.use(initReactI18next)
+const dynamicallyImportLanguageFiles = resourcesToBackend(async (language, _namespace, callback) => {
+    try {
+        const [websiteData, itemData] = await Promise.all([
+            import(`@src/translations/${language}.json`),
+            import(`@src/translations/items/items.${language}.json`),
+        ]);
+
+        callback(null, { ...websiteData.default, ...itemData.default });
+    } catch (err) {
+        log.error("Error while loading translation files", { err });
+        callback(err as CallbackError, null);
+    }
+});
+
+i18n.use(dynamicallyImportLanguageFiles)
+    .use(initReactI18next)
     .use(detector)
-    .use(translationCheckPlugin)
     .init({
         debug: DB_DEVMODE,
         detection: {
@@ -85,7 +81,6 @@ i18n.use(initReactI18next)
             escapeValue: false,
         },
         load: "languageOnly",
-        resources,
     });
 
 export default i18n;

@@ -1,4 +1,3 @@
-
 import { CellType } from "./Cell";
 
 export interface Lantern {

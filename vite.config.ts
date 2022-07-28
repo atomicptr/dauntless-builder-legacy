@@ -83,8 +83,8 @@ export default defineConfig(({ command, mode }) => {
         ],
         resolve: {
             alias: {
-                "@src": fileURLToPath(new URL("./src", import.meta.url)),
                 "@json": fileURLToPath(new URL("./src/json", import.meta.url)),
+                "@src": fileURLToPath(new URL("./src", import.meta.url)),
             },
         },
         server: {

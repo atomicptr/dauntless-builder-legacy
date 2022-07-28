@@ -1,4 +1,3 @@
-
 import { CellType } from "./Cell";
 import { ElementalType } from "./ElementalType";
 import { ItemRarity } from "./ItemRarity";

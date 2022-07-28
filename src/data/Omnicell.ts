@@ -1,4 +1,3 @@
-
 export interface Omnicell {
     name: string;
     icon: string;

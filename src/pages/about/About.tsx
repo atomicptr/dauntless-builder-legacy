@@ -1,12 +1,11 @@
+import contributorsJson from "@json/contributors.json";
+import dependenciesJson from "@json/dependencies.json";
 import { GitHub } from "@mui/icons-material";
 import { Avatar, Box, Button, Card, CardActionArea, CardContent, Grid, Stack, Typography } from "@mui/material";
 import PageTitle from "@src/components/PageTitle";
 import { githubUrl, licenseUrl } from "@src/constants";
 import React from "react";
 import { useTranslation } from "react-i18next";
-
-import contributorsJson from "@json/contributors.json";
-import dependenciesJson from "@json/dependencies.json";
 
 export interface Contributor {
     login: string;
