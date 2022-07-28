@@ -8,10 +8,9 @@
     "private": true,
     "scripts": {
         "build": "yarn build:deps && yarn build:frontend",
-        "build:data": "node scripts/build-data.js",
-        "build:i18n": "node scripts/build-i18n.js",
+        "build:data": "node scripts/build-data.js && node scripts/build-i18n.js",
         "build:about": "ts-node scripts/build-about.ts",
-        "build:deps": "yarn build:data && yarn build:i18n && yarn build:about && yarn build:sitemap",
+        "build:deps": "yarn build:data && yarn build:about && yarn build:sitemap",
         "build:metabuilds": "node scripts/build-meta-builds.js",
         "build:sitemap": "ts-node scripts/build-sitemap.ts",
         "build:frontend": "vite build",
