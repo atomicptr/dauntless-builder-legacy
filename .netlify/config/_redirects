@@ -1,7 +1,5 @@
-/assets/*       /assets/:splat  200
-/robots.txt     /robots.txt     200
-/sitemap.xml    /sitemap.xml    200
-/data.json      /data.json      200
-/meta.json      /meta.json      200
-/map/names.json /map/names.json 200
-/*              /index.html     200
+/           /index.html     200
+/b/*        /index.html     200
+/favorites  /index.html     200
+/about      /index.html     200
+/settings   /index.html     200
