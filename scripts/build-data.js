@@ -6,8 +6,8 @@ import md5 from "md5";
 let stringMap = {};
 let stringCounter = {};
 
-if (fs.existsSync(`./.map/names.json`)) {
-    let data = fs.readFileSync(`./.map/names.json`);
+if (fs.existsSync(`./src/json/names.json`)) {
+    let data = fs.readFileSync(`./src/json/names.json`);
     stringMap = JSON.parse(data);
 }
 
@@ -148,14 +148,14 @@ Promise.all([
 
     const dataString = JSON.stringify(object);
     fs.writeFileSync("./public/data.json", dataString);
-    fs.writeFileSync(`./src/data/data.json`, JSON.stringify(object, null, "    ") + "\n");
+    fs.writeFileSync(`./src/json/data.json`, JSON.stringify(object, null, "    ") + "\n");
 
     console.log("Built data.json");
 
     stringMap = sortByKey(stringMap);
 
     // store a nicer version in the repository
-    fs.writeFileSync(`./.map/names.json`, JSON.stringify(stringMap, null, "    ") + "\n");
+    fs.writeFileSync(`./src/json/names.json`, JSON.stringify(stringMap, null, "    ") + "\n");
 
     if (!fs.existsSync("./public/map")) {
         fs.mkdirSync("./public/map");

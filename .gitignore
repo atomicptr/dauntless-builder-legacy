@@ -3,7 +3,7 @@
 /public/*.json
 /public/map
 /public/sitemap.xml
-/src/data/*.json
+/src/json/data.json
 
 # dev stuff
 /map

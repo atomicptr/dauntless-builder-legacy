@@ -14,7 +14,7 @@ if (!apiKey) {
 }
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const targetDir = path.join(__dirname, "..", "src", "pages", "build");
+const targetDir = path.join(__dirname, "..", "src", "json");
 const translationDir = path.join(__dirname, "..", "src", "translations");
 const translationBaseFilePath = path.join(translationDir, "en.json");
 

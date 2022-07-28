@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import namesJson from "@map/names.json";
+import namesJson from "@json/names.json";
 import { GenericItem } from "@src/components/GenericItemSelectDialog";
 import dauntlessBuilderData, { DauntlessBuilderDataIndex } from "@src/data/Data";
 import { NamesMap, NamesMapType } from "@src/data/NamesMap";
@@ -11,14 +11,14 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
-import { Armour } from "../../src/data/Armour";
-import { findItem } from "../../src/data/BuildModel";
-import { Cell, CellType } from "../../src/data/Cell";
-import { ElementalType } from "../../src/data/ElementalType";
-import { ItemType, itemTypeData } from "../../src/data/ItemType";
-import { Lantern } from "../../src/data/Lantern";
-import { Perk, PerkValue } from "../../src/data/Perks";
-import { Weapon } from "../../src/data/Weapon";
+import { Armour } from "@src/data/Armour";
+import { findItem } from "@src/data/BuildModel";
+import { Cell, CellType } from "@src/data/Cell";
+import { ElementalType } from "@src/data/ElementalType";
+import { ItemType, itemTypeData } from "@src/data/ItemType";
+import { Lantern } from "@src/data/Lantern";
+import { Perk, PerkValue } from "@src/data/Perks";
+import { Weapon } from "@src/data/Weapon";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 

@@ -1,16 +1,23 @@
 [
     {
         "avatar_url": "https://avatars.githubusercontent.com/u/674705?v=4",
-        "contributions": 619,
+        "contributions": 632,
         "html_url": "https://github.com/atomicptr",
         "login": "atomicptr",
         "type": "User"
     },
     {
         "avatar_url": "https://avatars.githubusercontent.com/u/33606227?v=4",
-        "contributions": 54,
+        "contributions": 59,
         "html_url": "https://github.com/ds-exe",
         "login": "ds-exe",
+        "type": "User"
+    },
+    {
+        "avatar_url": "https://avatars.githubusercontent.com/u/16074153?v=4",
+        "contributions": 12,
+        "html_url": "https://github.com/leghort",
+        "login": "leghort",
         "type": "User"
     },
     {
@@ -18,13 +25,6 @@
         "contributions": 7,
         "html_url": "https://github.com/NathalieWK",
         "login": "NathalieWK",
-        "type": "User"
-    },
-    {
-        "avatar_url": "https://avatars.githubusercontent.com/u/16074153?v=4",
-        "contributions": 7,
-        "html_url": "https://github.com/leghort",
-        "login": "leghort",
         "type": "User"
     },
     {

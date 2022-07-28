@@ -17,7 +17,7 @@ import React, { ReactNode, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 
-import metaBuildsJson from "./meta-builds.json";
+import metaBuildsJson from "@json/meta-builds.json";
 
 interface TabPanelProps {
     children?: ReactNode;

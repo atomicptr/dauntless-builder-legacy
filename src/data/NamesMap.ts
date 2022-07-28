@@ -19,7 +19,7 @@ export type NamesMap = {
     };
 };
 
-import namesJson from "@map/names.json";
+import namesJson from "@json/names.json";
 
 const dauntlessBuilderNamesMap: NamesMap = namesJson;
 

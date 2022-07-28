@@ -36,7 +36,7 @@ const staticPaths: SitemapEntry[] = [
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const targetDir = path.join(__dirname, "..", "public");
 const targetFile = path.join(targetDir, "sitemap.xml");
-const metaBuildsFile = path.join(__dirname, "..", "src", "pages", "build", "meta-builds.json");
+const metaBuildsFile = path.join(__dirname, "..", "src", "json", "meta-builds.json");
 
 const main = () => {
     const entries = [...staticPaths];

@@ -5,8 +5,8 @@ import { githubUrl, licenseUrl } from "@src/constants";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import contributorsJson from "./contributors.json";
-import dependenciesJson from "./dependencies.json";
+import contributorsJson from "@json/contributors.json";
+import dependenciesJson from "@json/dependencies.json";
 
 export interface Contributor {
     login: string;

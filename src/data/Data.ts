@@ -1,4 +1,4 @@
-import dataJson from "@src/data/data.json";
+import dataJson from "@json/data.json";
 
 import { Armour } from "./Armour";
 import { Cell } from "./Cell";

@@ -18,7 +18,7 @@ const excludeContributors: string[] = [];
 const excludeDependencies: string[] = [];
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const targetDir = path.join(__dirname, "..", "src", "pages", "about");
+const targetDir = path.join(__dirname, "..", "src", "json");
 
 const fetchContributors = async (): Promise<Contributor[]> => {
     const res = await axios.get<Contributor[]>("https://api.github.com/repos/atomicptr/dauntless-builder/contributors");
@@ -92,10 +92,10 @@ const buildDependenciesFile = async (filepath: string): Promise<void> => {
 };
 
 const main = async () => {
-    console.log("[build:about] Building @src/pages/about/contributors.json");
+    console.log("[build:about] Building @src/json/contributors.json");
     await buildContributorsFile(path.join(targetDir, "contributors.json"));
 
-    console.log("[build:about] Building @src/pages/about/dependencies.json");
+    console.log("[build:about] Building @src/json/dependencies.json");
     await buildDependenciesFile(path.join(targetDir, "dependencies.json"));
 
     console.log("[build:about] Done.");
