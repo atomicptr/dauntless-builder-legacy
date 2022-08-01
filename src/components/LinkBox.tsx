@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import useIsLightMode from "@src/hooks/light-mode";
+import React from "react";
 
 interface LinkBoxProps {
     text: string;

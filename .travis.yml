@@ -2,7 +2,7 @@ language: node_js
 node_js:
     - "16"
 script:
+    - yarn lint
     - yarn build:deps
-    - yarn build:frontend
     - tsc
     - yarn test
