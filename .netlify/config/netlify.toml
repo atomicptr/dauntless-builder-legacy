@@ -1,14 +1,4 @@
 [[headers]]
-  for = "/index.html"
-  [headers.values]
-    Cache-Control = "public, s-max-age=43200"
-
-[[headers]]
-  for = "/b/*"
-  [headers.values]
-    Cache-Control = "public, s-max-age=43200"
-
-[[headers]]
   for = "*.json"
   [headers.values]
     Access-Control-Allow-Origin = "*"
@@ -28,8 +18,3 @@
   for = "*.png"
   [headers.values]
     Cache-Control = "public, s-max-age=604800"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 404

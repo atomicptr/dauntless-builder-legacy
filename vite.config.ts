@@ -25,6 +25,13 @@ export default defineConfig(({ command, mode }) => {
             VitePWA({
                 includeAssets: [
                     "assets/**/*.png",
+
+                    // these are technically not necessary, but it's annoying that you can't access these with your
+                    // browser anymore without this. Maybe we should switch to a network first SW.
+                    "*.json",
+                    "map/*.json",
+                    "sitemap.xml",
+                    "robots.txt",
                 ],
                 manifest: {
                     categories: [
@@ -64,6 +71,7 @@ export default defineConfig(({ command, mode }) => {
                 registerType: "autoUpdate",
                 workbox: {
                     cleanupOutdatedCaches: true,
+                    clientsClaim: true,
                     maximumFileSizeToCacheInBytes,
                     sourcemap: isDevMode,
                 }
