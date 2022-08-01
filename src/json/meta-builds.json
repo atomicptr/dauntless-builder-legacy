@@ -8,14 +8,14 @@
             "tier": 1,
             "builds": [
                 {
-                    "title": "Urska (Pangar)",
-                    "buildId": "BzcKPUWCmrc1yfWU8tNTwghOMS0C0OSXwI7CKOtM6cBC8qCBjhjCYMsmF8BH2",
+                    "title": "Urska (Frostwulf)",
+                    "buildId": "8MfgTjycOCEQtMFoUytQTRLfe2IpCzBiOnceCg1CLVcYC6AUJgTMCaosjSgBSZ",
                     "subcategory": null,
                     "vsElement": "Blaze"
                 },
                 {
-                    "title": "Urska (Pangar)",
-                    "buildId": "JycbACPCx5Uz5C0cztQT4oTOFpCJdt5nFKCnEH5atRCWpFOWh3CdLsAFW1SL",
+                    "title": "Urska (Frostwulf)",
+                    "buildId": "7xfVTjvfKCw2UjFrcWtnTgNtbF8C3YunbHWCzVHmvTaCZPTBMuvCevs7SB7tk",
                     "subcategory": null,
                     "vsElement": "Blaze"
                 },
@@ -26,38 +26,32 @@
                     "vsElement": "Blaze"
                 },
                 {
-                    "title": "Urska (Pangar)",
-                    "buildId": "v3frT8ZSzCKzi2nSacnCQTV3HzkIrC1NcMbSyC4QH6Nc0CMwi0EsyCjZs4FBotV",
+                    "title": "Urska (Frostwulf)",
+                    "buildId": "pnfXTKQFwC3rhNXuocxCeTXmfONfMCdPs7nfLCK2S57CZCMJCe4TdC4FeS26Fq",
                     "subcategory": null,
                     "vsElement": "Blaze"
                 },
                 {
-                    "title": "Urska (Pangar) Wound",
-                    "buildId": "dJfvTaQigCRaImRc8cNCwT5zHq6IACkJijxfMCBytpJijCwmFjKhwCnesmtNLFj",
+                    "title": "Urska (Frostwulf)",
+                    "buildId": "ARfbTKncwCkFadCMcBCPTPLh7Mt2CQbCpVHYCZVTqeckCOZubeh2CLYsPSpqSX",
                     "subcategory": null,
                     "vsElement": "Blaze"
                 },
                 {
-                    "title": "Urska (Pangar)",
-                    "buildId": "dWcNmUyCg5HqZtBcxCyT8jC1FBCdpCkrIjCv3iBZu3C7mUkzh7C18IQFmxSN",
-                    "subcategory": null,
-                    "vsElement": "Blaze"
-                },
-                {
-                    "title": "Urska (Pangar)",
+                    "title": "Urska (Frostwulf)",
                     "buildId": "0VfrTmdTZCeRuEyUjcLuaTW5tv1IbCVpi0MfoCmpHA1HVCMLF4ku6CeOs7tL7fx",
                     "subcategory": null,
                     "vsElement": "Blaze"
                 },
                 {
-                    "title": "Urska (Pangar)",
-                    "buildId": "JycKLTPCxkHzycVSBh5I1dIoEIpCjRH5etKCKJuo5cRCdRtOWh3CdMiAFW1SL",
+                    "title": "Urska (Frostwulf)",
+                    "buildId": "0VfrT6bsZCyFv6c4SKhNILKHv1IbCVpiedHoC2eUAYuVCrvC4ku6CeOs0SL7fx",
                     "subcategory": null,
                     "vsElement": "Blaze"
                 },
                 {
-                    "title": "Urska (Boreus)",
-                    "buildId": "YwfzTb6sgCRwU8NsZTmTKTzUPrcJC43ta5C0CQBh8eU0CvAI3whxCxXswFMvFX",
+                    "title": "Urska (Frostwulf)",
+                    "buildId": "wKfQTgNS4CnxUaF3TATZTbJcjAIaC43tbQTvCyxIJEceCo6FqBh5CpysoSg7fz",
                     "subcategory": null,
                     "vsElement": "Blaze"
                 },
@@ -81,13 +75,7 @@
                 },
                 {
                     "title": "Torg (Hellion)",
-                    "buildId": "dJfvTawhgCqZtLYu8cNCwTNhq6IACkJi6wTMCMjtp3cjC5ocjKhwCQjTqFNLFj",
-                    "subcategory": null,
-                    "vsElement": "Frost"
-                },
-                {
-                    "title": "Torg (Hellion) Wound",
-                    "buildId": "qrfLTEwhvCZMc1PSecJCETKhqaIvC2rFy0fACzrHLYc3CorFBLu8CZ1sPFVRSY",
+                    "buildId": "pnfXTKEUwC3rhqjsocxCeTLhONfMCdPs7nfLCK2S57CZCMJCe4TdCPQCpF26Fq",
                     "subcategory": null,
                     "vsElement": "Frost"
                 },
@@ -135,13 +123,7 @@
                 },
                 {
                     "title": "Agarus (Kharabak)",
-                    "buildId": "Z0fETMxIkCn5U2WSBc4CKT3C1eupC6yTQ0UgCQphxNcYCwyizdhPCvZsWFaBSe",
-                    "subcategory": null,
-                    "vsElement": "Shock"
-                },
-                {
-                    "title": "Agarus (Khara) Wound",
-                    "buildId": "ARfbTK5HwCEvhgvIMcBCPTKC7Mt2CQbCoMfYCKLSqOikCEMhbeh2CLYsvtpqSX",
+                    "buildId": "v3frT8gtzC5bc2nSacnCQToCzkIrC1kSzBfyCrmHN3T0CkZs0yIyCrwh4FBotV",
                     "subcategory": null,
                     "vsElement": "Shock"
                 },
@@ -189,13 +171,7 @@
                 },
                 {
                     "title": "Malk (Sahvyt)",
-                    "buildId": "MRfWTX3iXC5nUPdtyc4C8TEWIx2I5CZzfxdHzCZKTr3cKCZyIJ0T6CRXsjF7PHQ",
-                    "subcategory": null,
-                    "vsElement": "Terra"
-                },
-                {
-                    "title": "Malk (Sahvyt) Wound",
-                    "buildId": "LWfOTymczCmgTwKUwcgCQTdetZkhMCB8tgLfdCgJHnjcMCwZi6Kf2CdYswFJ3ue",
+                    "buildId": "v3frT3RuzC5bcOeSacnCQTmNSzkIrC1kSzBfyCrmHN3T0CkZs0yIyCrwh4FBotV",
                     "subcategory": null,
                     "vsElement": "Terra"
                 },
@@ -243,13 +219,7 @@
                 },
                 {
                     "title": "Thrax (Rift)",
-                    "buildId": "kofgTv0SWCZmumvtvcmCLTVPFVOH5Cw5i3gcdCVQFAou7CzxS1YIoCA2iNFBktd",
-                    "subcategory": null,
-                    "vsElement": "Radiant"
-                },
-                {
-                    "title": "Thrax (Rift) Wound",
-                    "buildId": "v3frT8kIzCg2f2LFacnCQTVwFzkIrC1NczBfyCrmH6Nc0CMwi0EsyCjZs4FBotV",
+                    "buildId": "7xfVTjycKCbeUBEcrcYCnTnXFvwI8C3JcmAfWCdpHmvTaCZesBVuvCAETgFB7tk",
                     "subcategory": null,
                     "vsElement": "Radiant"
                 },
@@ -297,13 +267,7 @@
                 },
                 {
                     "title": "Chrono (Reza)",
-                    "buildId": "1af8T0wsECaJtm3tOczC3T80taQtKC3XU4KFACOJIndcmCogFgAhbCkWt7F0Pf2",
-                    "subcategory": null,
-                    "vsElement": "Umbral"
-                },
-                {
-                    "title": "Chrono (Valo) Wound",
-                    "buildId": "dJfvTaoSgCRaIqzh8cNCwTwqSq6IACkJijxfMCBytp3cjC5ocjKhwCnesqFNLFj",
+                    "buildId": "OWfwTe1UBCbYU3qSLcyCYTMjIX5IPCwnHdafMCr7H0bfnC7ZhJqHVCOPtBFqwSb",
                     "subcategory": null,
                     "vsElement": "Umbral"
                 },
@@ -1780,7 +1744,7 @@
         {
             "index": 7,
             "name": "Escalations",
-            "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear, and builds that have Escalation gear and are built around Granny Stega's Amp for lifesteal.",
+            "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear. ",
             "builds": [
                 {
                     "title": "Pangar",
@@ -2623,6 +2587,54 @@
                     "vsElement": "Terra"
                 },
                 {
+                    "title": "Thrax (R) Speed",
+                    "buildId": "PWfoT8YheC22U1jTOURtLTMns0nh1C6QtjkcAC7eUNCMCYWseLsLCwvSYu7zCK",
+                    "subcategory": "heroics",
+                    "vsElement": "Radiant"
+                },
+                {
+                    "title": "Thrax (R)Speed",
+                    "buildId": "YwfzTbnFgC33UbQtPUYtKT1JFPrcJC40Fypc0C6rFmC0CwesjuxCrEuwFM7CX",
+                    "subcategory": "heroics",
+                    "vsElement": "Radiant"
+                },
+                {
+                    "title": "Thrax (R) Speed",
+                    "buildId": "0VfrTmWCZCknUmqUjc0taTWXTv1IbCVpi0PioC25HBCVCMAS4Pu6CeOs4uxXTx",
+                    "subcategory": "heroics",
+                    "vsElement": "Radiant"
+                },
+                {
+                    "title": "Thrax (R) Speed",
+                    "buildId": "OWfwTeviBCbYU3BULcyCYTMoFX5IPCPYFd0cMCeQU0bfnC7ZhJMTVCOPtNuxXTb",
+                    "subcategory": "heroics",
+                    "vsElement": "Radiant"
+                },
+                {
+                    "title": "Thrax (R) Speed",
+                    "buildId": "VafqTrKsrCwJhVzTwcECpTZeCNeSzC7yHdEiBC2WHaohbCreskhMCqRHRuwzCY",
+                    "subcategory": "heroics",
+                    "vsElement": "Radiant"
+                },
+                {
+                    "title": "Thrax (R) Speed",
+                    "buildId": "XafXTJMIYCgesJ5HEcRU5T0KCW4s7C0QuzBcJC78UgyT3CBQs8VF4C67uBuReiY",
+                    "subcategory": "heroics",
+                    "vsElement": "Radiant"
+                },
+                {
+                    "title": "Thrax (R) Speed",
+                    "buildId": "4Nf5Tq3fQCRPT4gCxSohmCx5TmRIqCwbsO2crCkgI4AtkCNeTy0sVCYjhauWOcj",
+                    "subcategory": "heroics",
+                    "vsElement": "Radiant"
+                },
+                {
+                    "title": "Thrax (R) Speed",
+                    "buildId": "KBfkT0ot0CJJULOH7SbhYTYwU8wC5CbosE2cAC0WiyCBCKVU34sYCMNSJuO8H1",
+                    "subcategory": "heroics",
+                    "vsElement": "Radiant"
+                },
+                {
                     "title": "Chrono (V) Speed",
                     "buildId": "OWfwTe3sBCbWH11URU8tYT5Jtb6iPC4Ocd0cMCeQUPCnC70SJaTVCnMimUxXTb",
                     "subcategory": "heroics",
@@ -2709,7 +2721,7 @@
             ],
             "subcategoryDescription": {
                 "preEsca": "Builds for the various Escalations. Contains no Trials cells nor Escalation gear.",
-                "legendaries": "Builds for the various Escalations. Use Strega's talent for sustain on most Escalations, Aspect of the Mender on Frost Escalation.",
+                "legendaries": "Builds for the various Escalations.",
                 "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive. Bulwark for survivability."
             }
         },

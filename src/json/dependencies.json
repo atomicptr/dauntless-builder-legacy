@@ -126,63 +126,63 @@
     },
     {
         "license": "MIT",
-        "name": "@emotion/babel-plugin@11.9.5",
+        "name": "@emotion/babel-plugin@11.10.0",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/babel-plugin"
     },
     {
         "license": "MIT",
-        "name": "@emotion/cache@11.9.3",
+        "name": "@emotion/cache@11.10.0",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/cache"
     },
     {
         "license": "MIT",
-        "name": "@emotion/hash@0.8.0",
-        "repository": "https://github.com/emotion-js/emotion/tree/master/packages/hash"
+        "name": "@emotion/hash@0.9.0",
+        "repository": "https://github.com/emotion-js/emotion/tree/main/packages/hash"
     },
     {
         "license": "MIT",
-        "name": "@emotion/is-prop-valid@1.1.3",
+        "name": "@emotion/is-prop-valid@1.2.0",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/is-prop-valid"
     },
     {
         "license": "MIT",
-        "name": "@emotion/memoize@0.7.5",
-        "repository": "https://github.com/emotion-js/emotion/tree/master/packages/memoize"
+        "name": "@emotion/memoize@0.8.0",
+        "repository": "https://github.com/emotion-js/emotion/tree/main/packages/memoize"
     },
     {
         "license": "MIT",
-        "name": "@emotion/react@11.9.3",
+        "name": "@emotion/react@11.10.0",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/react"
     },
     {
         "license": "MIT",
-        "name": "@emotion/serialize@1.0.4",
+        "name": "@emotion/serialize@1.1.0",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/serialize"
     },
     {
         "license": "MIT",
-        "name": "@emotion/sheet@1.1.1",
+        "name": "@emotion/sheet@1.2.0",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/sheet"
     },
     {
         "license": "MIT",
-        "name": "@emotion/styled@11.9.3",
+        "name": "@emotion/styled@11.10.0",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/styled"
     },
     {
         "license": "MIT",
-        "name": "@emotion/unitless@0.7.5",
-        "repository": "https://github.com/emotion-js/emotion/tree/master/packages/unitless"
+        "name": "@emotion/unitless@0.8.0",
+        "repository": "https://github.com/emotion-js/emotion/tree/main/packages/unitless"
     },
     {
         "license": "MIT",
-        "name": "@emotion/utils@1.1.0",
+        "name": "@emotion/utils@1.2.0",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/utils"
     },
     {
         "license": "MIT",
-        "name": "@emotion/weak-memoize@0.2.5",
-        "repository": "https://github.com/emotion-js/emotion/tree/master/packages/weak-memoize"
+        "name": "@emotion/weak-memoize@0.3.0",
+        "repository": "https://github.com/emotion-js/emotion/tree/main/packages/weak-memoize"
     },
     {
         "license": "MIT",
@@ -401,7 +401,7 @@
     },
     {
         "license": "ISC",
-        "name": "electron-to-chromium@1.4.204",
+        "name": "electron-to-chromium@1.4.206",
         "repository": "https://github.com/kilian/electron-to-chromium"
     },
     {
@@ -485,7 +485,7 @@
     },
     {
         "license": "MIT",
-        "name": "i18next@21.8.14",
+        "name": "i18next@21.8.16",
         "repository": "https://github.com/i18next/i18next"
     },
     {
@@ -675,7 +675,7 @@
     },
     {
         "license": "BSD-3-Clause",
-        "name": "react-transition-group@4.4.2",
+        "name": "react-transition-group@4.4.5",
         "repository": "https://github.com/reactjs/react-transition-group"
     },
     {

@@ -3,19 +3,14 @@
 // This is a script we allow use of console here
 /* eslint-disable no-console */
 
-import {
-    ProjectsGroups,
-    SourceStrings,
-    StringTranslations,
-    Translations,
-} from "@crowdin/crowdin-api-client";
+import { ProjectsGroups, SourceStrings, StringTranslations, Translations } from "@crowdin/crowdin-api-client";
 import axios from "axios";
 import fs from "fs";
 import * as os from "os";
 import path from "path";
+import Queue from "queue-promise";
 import { fileURLToPath } from "url";
 import yauzl from "yauzl";
-import Queue from "queue-promise";
 
 if (!process.env.CROWDIN_TOKEN) {
     console.error("[crowdin] Please provide your personal crowdin token via the env variable CROWDIN_TOKEN!");
@@ -166,11 +161,7 @@ const approveTranslationsWhichAreReferences = async () => {
             .filter(({ text }) => /^\$t\(.+\)$/gm.exec(text) !== null);
 
         const addTranslation = async (id: number, text: string, languageId: string) => {
-            const translations = await stringTranslationsApi.listStringTranslations(
-                projectId,
-                id,
-                languageId,
-            );
+            const translations = await stringTranslationsApi.listStringTranslations(projectId, id, languageId);
 
             // if it has already a translation ignore
             if (translations.data.length > 0) {
@@ -192,7 +183,7 @@ const approveTranslationsWhichAreReferences = async () => {
             await stringTranslationsApi.addApproval(projectId, {
                 translationId: translationRes.data.id,
             });
-        }
+        };
 
         for (const languageId of project.data.targetLanguageIds) {
             for (const string of strings) {

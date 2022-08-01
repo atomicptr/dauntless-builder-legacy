@@ -5,11 +5,13 @@ import { RootState } from "@src/store";
 interface ConfigurationState {
     devMode: boolean;
     language?: Language;
+    lightModeEnabled: boolean;
 }
 
 const initialState: ConfigurationState = {
     devMode: DB_DEVMODE,
     language: undefined,
+    lightModeEnabled: false,
 };
 
 export const configurationSlice = createSlice({

@@ -48,9 +48,10 @@ for (let category of Object.keys(data)) {
                 const ue = item.unique_effects[index];
 
                 if (ue.description) {
-                    const firstItem = Object.values(items).find(item => item.unique_effects?.find(
-                        uniqueEffect => uniqueEffect.description === ue.description,
-                    )) ?? item;
+                    const firstItem =
+                        Object.values(items).find(item =>
+                            item.unique_effects?.find(uniqueEffect => uniqueEffect.description === ue.description),
+                        ) ?? item;
                     const firstIndex = Object.values(firstItem.unique_effects).findIndex(
                         uniqueEffect => uniqueEffect.description === ue.description,
                     );
