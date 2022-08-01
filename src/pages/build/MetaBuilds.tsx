@@ -1,6 +1,7 @@
 import metaBuildsJson from "@json/meta-builds.json";
 import { Alert, Box, ListSubheader, Skeleton, Stack, Tab, Tabs, Typography } from "@mui/material";
 import BuildCard from "@src/components/BuildCard";
+import LinkBox from "@src/components/LinkBox";
 import PageTitle from "@src/components/PageTitle";
 import WeaponTypeSelector from "@src/components/WeaponTypeSelector";
 import { BuildModel } from "@src/data/BuildModel";
@@ -338,13 +339,11 @@ const MetaBuilds: React.FC = () => {
                     onClose={() => dispatch(removeNote())}
                     severity="info"
                 >
-                    <div
-                        dangerouslySetInnerHTML={{
-                            __html: t("pages.metabuilds.note", {
-                                officialDiscordServer: "https://discord.com/invite/dauntless",
-                                spreadsheetLink: "https://bit.ly/DauntlessMeta",
-                            }),
-                        }}
+                    <LinkBox
+                        text={t("pages.metabuilds.note", {
+                            officialDiscordServer: "https://discord.com/invite/dauntless",
+                            spreadsheetLink: "https://bit.ly/DauntlessMeta",
+                        })}
                     />
                 </Alert>
             )}

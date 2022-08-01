@@ -42,6 +42,7 @@ import {
 } from "@src/features/build-finder/find-builds";
 import { selectConfiguration } from "@src/features/configuration/configuration-slice";
 import useIsMobile from "@src/hooks/is-mobile";
+import useIsLightMode from "@src/hooks/light-mode";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import log from "@src/utils/logger";
@@ -83,6 +84,8 @@ const findBuilds = async (
 };
 
 const BuildFinder: React.FC = () => {
+    const isLightMode = useIsLightMode();
+
     const { t } = useTranslation();
     const { weaponType, selectedPerks, removeExotics, removeLegendary } = useAppSelector(selectBuildFinderSelection);
     const configuration = useAppSelector(selectConfiguration);
@@ -378,7 +381,11 @@ const BuildFinder: React.FC = () => {
                                     >
                                         <img
                                             src={`/assets/icons/perks/${cellType}.png`}
-                                            style={{ height: "64px", width: "64px" }}
+                                            style={{
+                                                filter: isLightMode ? "invert(100%)" : undefined,
+                                                height: "64px",
+                                                width: "64px",
+                                            }}
                                         />
                                         <Typography>{t(`terms.cell-type.${cellType}`)}</Typography>
                                     </Stack>
