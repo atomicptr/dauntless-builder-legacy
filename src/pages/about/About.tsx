@@ -2,6 +2,7 @@ import contributorsJson from "@json/contributors.json";
 import dependenciesJson from "@json/dependencies.json";
 import { GitHub } from "@mui/icons-material";
 import { Avatar, Box, Button, Card, CardActionArea, CardContent, Grid, Stack, Typography } from "@mui/material";
+import LinkBox from "@src/components/LinkBox";
 import PageTitle from "@src/components/PageTitle";
 import { githubUrl, licenseUrl } from "@src/constants";
 import React from "react";
@@ -101,11 +102,7 @@ const About: React.FC = () => {
             <PageTitle title={t("pages.about.title")} />
 
             <Typography>
-                <span
-                    dangerouslySetInnerHTML={{
-                        __html: t("pages.about.main-text", { licenseUrl }),
-                    }}
-                />
+                <LinkBox text={t("pages.about.main-text", { licenseUrl })} />
             </Typography>
 
             <Stack

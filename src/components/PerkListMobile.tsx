@@ -125,7 +125,12 @@ const PerkListMobile: React.FC = () => {
                     onClose={handleClose}
                     open={dialogOpen}
                 >
-                    <AppBar sx={{ position: "relative" }}>
+                    <AppBar
+                        sx={{
+                            backgroundColor: isLightMode ? theme.palette.grey["900"] : undefined,
+                            position: "relative",
+                        }}
+                    >
                         <Toolbar>
                             <Typography
                                 component="div"

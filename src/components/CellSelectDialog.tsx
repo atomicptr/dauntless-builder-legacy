@@ -17,6 +17,7 @@ import {
     TextField,
     Toolbar,
     Typography,
+    useTheme,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { DialogTransition } from "@src/components/DialogTransition";
@@ -69,6 +70,7 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
     const { t } = useTranslation();
     const isMobile = useIsMobile();
     const isLightMode = useIsLightMode();
+    const theme = useTheme();
 
     const title = t("components.item-select-dialog.select-text", {
         name: t(itemTypeLocalizationIdentifier(ItemType.Cell)),
@@ -121,7 +123,9 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
             open={open}
         >
             {isMobile ? (
-                <AppBar sx={{ position: "relative" }}>
+                <AppBar
+                    sx={{ backgroundColor: isLightMode ? theme.palette.grey["900"] : undefined, position: "relative" }}
+                >
                     <Toolbar>
                         <Typography
                             component="div"

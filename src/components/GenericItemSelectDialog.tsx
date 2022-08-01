@@ -17,12 +17,14 @@ import {
     TextField,
     Toolbar,
     Typography,
+    useTheme,
 } from "@mui/material";
 import { DialogTransition } from "@src/components/DialogTransition";
 import { itemPickerDefaultImageSize } from "@src/components/theme";
 import VirtualizedList from "@src/components/VirtualizedList";
 import { ItemType } from "@src/data/ItemType";
 import useIsMobile from "@src/hooks/is-mobile";
+import useIsLightMode from "@src/hooks/light-mode";
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -55,6 +57,8 @@ const GenericItemSelectDialog: React.FC<GenericItemSelectDialogProps> = ({
 }) => {
     const { t } = useTranslation();
     const isMobile = useIsMobile();
+    const theme = useTheme();
+    const isLightMode = useIsLightMode();
 
     const searchFieldRef = useRef<HTMLElement>(null);
     const [searchValue, setSearchValue] = useState<string>("");
@@ -79,7 +83,9 @@ const GenericItemSelectDialog: React.FC<GenericItemSelectDialogProps> = ({
             open={open}
         >
             {isMobile ? (
-                <AppBar sx={{ position: "relative" }}>
+                <AppBar
+                    sx={{ backgroundColor: isLightMode ? theme.palette.grey["900"] : undefined, position: "relative" }}
+                >
                     <Toolbar>
                         <Typography
                             component="div"
