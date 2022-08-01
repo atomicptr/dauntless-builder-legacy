@@ -25,12 +25,15 @@ export const configurationSlice = createSlice({
             state.language = action.payload;
             i18n.changeLanguage(action.payload);
         },
+        setLightModeEnabled: (state, action: PayloadAction<boolean>) => {
+            state.lightModeEnabled = action.payload;
+        },
     },
 });
 
 const initState = (state: ConfigurationState) => Object.assign({}, initialState, state);
 
-export const { setLanguage, setDevMode } = configurationSlice.actions;
+export const { setLanguage, setDevMode, setLightModeEnabled } = configurationSlice.actions;
 
 export const selectConfiguration = (state: RootState) => ({
     ...initState(state.configuration),

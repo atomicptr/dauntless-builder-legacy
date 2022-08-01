@@ -18,10 +18,14 @@ export const rarityColor: { [key in ItemRarity]: PaletteColor } = {
     [ItemRarity.Uncommon]: baseTheme.palette.augmentColor({ color: { main: "#00CA3C" } }),
 };
 
-const makeTheme = () => {
-    return createTheme(baseTheme, muiLocaleComponent());
+export const makeTheme = (mode: "dark" | "light") => {
+    return createTheme(
+        baseTheme,
+        createTheme({
+            palette: {
+                mode,
+            },
+        }),
+        muiLocaleComponent(),
+    );
 };
-
-const theme = makeTheme();
-
-export default theme;

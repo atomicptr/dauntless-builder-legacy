@@ -31,12 +31,14 @@ import {
     useTheme,
 } from "@mui/material";
 import BuildMenu from "@src/components/BuildMenu";
+import LinkBox from "@src/components/LinkBox";
 import { drawerWidth } from "@src/components/theme";
 import { crowdinLink, discordServerUrl, githubUrl, issuesUrl, matrixChannelUrl } from "@src/constants";
 import dauntlessBuilderData from "@src/data/Data";
 import { selectConfiguration } from "@src/features/configuration/configuration-slice";
 import { selectFavorites } from "@src/features/favorites/favorites-slice";
 import useIsMobile from "@src/hooks/is-mobile";
+import useIsLightMode from "@src/hooks/light-mode";
 import { useAppSelector } from "@src/hooks/redux";
 import { currentLanguage, getNativeLanguageName, isBetaLanguage, Language } from "@src/i18n";
 import React, { ReactNode, useState } from "react";
@@ -54,6 +56,8 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
     const theme = useTheme();
+    const isLightMode = useIsLightMode();
+
     const isMobile = useIsMobile();
     const [open, setOpen] = useState(false);
     const { t } = useTranslation();
@@ -98,7 +102,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", mr: 2 }}>
                         <img
                             alt={t("app-name")}
-                            src="/assets/icon.png"
+                            src={`/assets/${isLightMode ? "icon_lm" : "icon"}.png`}
                             style={{
                                 height: 36,
                                 userSelect: "none",
@@ -233,14 +237,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     severity="warning"
                     sx={{ mb: 2 }}
                 >
-                    <div
-                        dangerouslySetInnerHTML={{
-                            __html: t("alert.alpha-version", {
-                                discordServerUrl,
-                                issuesUrl,
-                                matrixChannelUrl,
-                            }),
-                        }}
+                    <LinkBox
+                        text={t("alert.alpha-version", {
+                            discordServerUrl,
+                            issuesUrl,
+                            matrixChannelUrl,
+                        })}
                     />
                 </Alert>
 
@@ -249,13 +251,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         severity="warning"
                         sx={{ mb: 2 }}
                     >
-                        <div
-                            dangerouslySetInnerHTML={{
-                                __html: t("alert.translation-warning", {
-                                    crowdinLink,
-                                    languageName: getNativeLanguageName(currentLanguage() as Language),
-                                }),
-                            }}
+                        <LinkBox
+                            text={t("alert.translation-warning", {
+                                crowdinLink,
+                                languageName: getNativeLanguageName(currentLanguage() as Language),
+                            })}
                         />
                     </Alert>
                 ) : null}

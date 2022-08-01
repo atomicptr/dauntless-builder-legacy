@@ -10,6 +10,7 @@ interface AppBarProps extends MuiAppBarProps {
 export const AppBar = styled(MuiAppBar, {
     shouldForwardProp: prop => ["open", "isMobile"].indexOf(prop.toString()) === -1,
 })<AppBarProps>(({ theme, open, isMobile }) => ({
+    backgroundColor: theme.palette.grey["900"],
     transition: theme.transitions.create(["margin", "width"], {
         duration: theme.transitions.duration.leavingScreen,
         easing: theme.transitions.easing.sharp,

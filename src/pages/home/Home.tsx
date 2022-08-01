@@ -1,6 +1,7 @@
 import { GitHub, Translate } from "@mui/icons-material";
 import { Button, Grid, Stack, Typography } from "@mui/material";
 import BuildCard from "@src/components/BuildCard";
+import LinkBox from "@src/components/LinkBox";
 import PageTitle from "@src/components/PageTitle";
 import { crowdinLink, discordServerUrl, githubUrl, matrixChannelUrl } from "@src/constants";
 import { selectConfiguration } from "@src/features/configuration/configuration-slice";
@@ -70,7 +71,7 @@ const Home: React.FC = () => {
                     </Typography>
 
                     <Typography>
-                        <div dangerouslySetInnerHTML={{ __html: t("pages.home.contributing-text", { githubUrl }) }} />
+                        <LinkBox text={t("pages.home.contributing-text", { githubUrl })} />
                     </Typography>
 
                     <Typography

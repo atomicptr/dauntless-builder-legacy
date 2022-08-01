@@ -15,12 +15,14 @@ import {
     Stack,
     Toolbar,
     Typography,
+    useTheme,
 } from "@mui/material";
 import { TransitionProps } from "@mui/material/transitions";
-import theme, { itemPickerDefaultImageSize } from "@src/components/theme";
+import { itemPickerDefaultImageSize } from "@src/components/theme";
 import { ItemType } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
 import { selectBuild } from "@src/features/build/build-slice";
+import useIsLightMode from "@src/hooks/light-mode";
 import { useAppSelector } from "@src/hooks/redux";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
@@ -46,6 +48,9 @@ const Transition = React.forwardRef(function Transition(
 });
 
 const PerkListMobile: React.FC = () => {
+    const theme = useTheme();
+    const isLightMode = useIsLightMode();
+
     const build = useAppSelector(selectBuild);
     const { t } = useTranslation();
 
@@ -82,7 +87,11 @@ const PerkListMobile: React.FC = () => {
                             <CardMedia
                                 component="img"
                                 image={`/assets/icons/perks/${perk.data.type}.png`}
-                                sx={{ height: imageSize, width: imageSize }}
+                                sx={{
+                                    filter: isLightMode ? "invert(100%)" : undefined,
+                                    height: imageSize,
+                                    width: imageSize,
+                                }}
                             />
                         </Box>
                         <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", ml: 2 }}>
@@ -141,7 +150,11 @@ const PerkListMobile: React.FC = () => {
                                 key={id}
                                 sx={{
                                     color: theme.palette.grey[
-                                        id === Math.max(0, Math.min(6, dialogPerk.count)).toString() ? 50 : 400
+                                        id === Math.max(0, Math.min(6, dialogPerk.count)).toString()
+                                            ? isLightMode
+                                                ? 900
+                                                : 50
+                                            : 400
                                     ],
                                     userSelect: "none",
                                 }}

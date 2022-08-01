@@ -1,7 +1,6 @@
 import { Bookmark, BookmarkBorder, ContentCopy, Undo } from "@mui/icons-material";
-import { Fab, IconButton } from "@mui/material";
+import { Fab, IconButton, useTheme } from "@mui/material";
 import InputDialog from "@src/components/InputDialog";
-import theme from "@src/components/theme";
 import { selectBuild, selectLastEditedBuild } from "@src/features/build/build-slice";
 import {
     addFavorite,
@@ -23,6 +22,7 @@ const BuildMenu: React.FC = () => {
     const location = useLocation();
     const { enqueueSnackbar } = useSnackbar();
     const isMobile = useIsMobile();
+    const theme = useTheme();
 
     const build = useAppSelector(selectBuild);
     const lastEditedBuild = useAppSelector(selectLastEditedBuild);

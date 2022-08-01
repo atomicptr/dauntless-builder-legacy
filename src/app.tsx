@@ -15,7 +15,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 import Layout from "./components/Layout";
-import theme from "./components/theme";
+import { makeTheme } from "./components/theme";
 import NotFound from "./pages/404/NotFound";
 import Build from "./pages/build/Build";
 import BuildFinder from "./pages/build/BuildFinder";
@@ -27,78 +27,82 @@ import BackgroundTasks from "@src/components/BackgroundTasks";
 import Favorites from "@src/pages/favorites/Favorites";
 import useIsMobile from "@src/hooks/is-mobile";
 import log from "@src/utils/logger";
+import { useAppSelector } from "@src/hooks/redux";
+import { selectConfiguration } from "@src/features/configuration/configuration-slice";
 
 const DauntlessBuilderApp = () => {
     const isMobile = useIsMobile();
 
+    const configuration = useAppSelector(selectConfiguration);
+
+    const theme = makeTheme(configuration.lightModeEnabled ? "light" : "dark");
+
     return (
         <ThemeProvider theme={theme}>
             <BrowserRouter>
-                <Provider store={store}>
-                    <SnackbarProvider
-                        TransitionComponent={Slide}
-                        anchorOrigin={{
-                            horizontal: isMobile ? "center" : "right",
-                            vertical: "bottom",
-                        }}
-                        maxSnack={3}
-                    >
-                        <Layout>
-                            <Routes>
-                                <Route path="/">
+                <SnackbarProvider
+                    TransitionComponent={Slide}
+                    anchorOrigin={{
+                        horizontal: isMobile ? "center" : "right",
+                        vertical: "bottom",
+                    }}
+                    maxSnack={3}
+                >
+                    <Layout>
+                        <Routes>
+                            <Route path="/">
+                                <Route
+                                    element={<Home />}
+                                    index
+                                />
+
+                                <Route path="b">
                                     <Route
-                                        element={<Home />}
+                                        element={<Navigate to={"/b/new"} />}
                                         index
                                     />
-
-                                    <Route path="b">
-                                        <Route
-                                            element={<Navigate to={"/b/new"} />}
-                                            index
-                                        />
-                                        <Route
-                                            element={<NewBuild />}
-                                            path="new"
-                                        />
-                                        <Route
-                                            element={<BuildFinder />}
-                                            path="finder"
-                                        />
-                                        <Route
-                                            element={<MetaBuilds />}
-                                            path="meta"
-                                        />
-                                        <Route
-                                            element={<Build />}
-                                            path=":buildId"
-                                        />
-                                    </Route>
-
                                     <Route
-                                        element={<Favorites />}
-                                        path="/favorites"
+                                        element={<NewBuild />}
+                                        path="new"
                                     />
-
                                     <Route
-                                        element={<About />}
-                                        path="/about"
+                                        element={<BuildFinder />}
+                                        path="finder"
                                     />
-
                                     <Route
-                                        element={<Settings />}
-                                        path="/settings"
+                                        element={<MetaBuilds />}
+                                        path="meta"
                                     />
-
                                     <Route
-                                        element={<NotFound />}
-                                        path="*"
+                                        element={<Build />}
+                                        path=":buildId"
                                     />
                                 </Route>
-                            </Routes>
-                            <BackgroundTasks />
-                        </Layout>
-                    </SnackbarProvider>
-                </Provider>
+
+                                <Route
+                                    element={<Favorites />}
+                                    path="/favorites"
+                                />
+
+                                <Route
+                                    element={<About />}
+                                    path="/about"
+                                />
+
+                                <Route
+                                    element={<Settings />}
+                                    path="/settings"
+                                />
+
+                                <Route
+                                    element={<NotFound />}
+                                    path="*"
+                                />
+                            </Route>
+                        </Routes>
+                        <BackgroundTasks />
+                    </Layout>
+                </SnackbarProvider>
             </BrowserRouter>
         </ThemeProvider>
     );
@@ -140,7 +144,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     root?.render(
         <StrictMode>
-            <DauntlessBuilderApp />
+            <Provider store={store}>
+                <DauntlessBuilderApp />
+            </Provider>
         </StrictMode>,
     );
 });

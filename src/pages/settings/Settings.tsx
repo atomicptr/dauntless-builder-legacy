@@ -1,4 +1,4 @@
-import { Build, CloudDownload, CloudUpload, Download, TableRows, Translate } from "@mui/icons-material";
+import { Brightness7, Build, CloudDownload, CloudUpload, Download, TableRows, Translate } from "@mui/icons-material";
 import {
     Box,
     Button,
@@ -18,7 +18,12 @@ import {
     Switch,
 } from "@mui/material";
 import PageTitle from "@src/components/PageTitle";
-import { selectConfiguration, setDevMode, setLanguage } from "@src/features/configuration/configuration-slice";
+import {
+    selectConfiguration,
+    setDevMode,
+    setLanguage,
+    setLightModeEnabled,
+} from "@src/features/configuration/configuration-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import { currentLanguage, getNativeLanguageName, Language } from "@src/i18n";
@@ -117,6 +122,16 @@ const Settings: React.FC = () => {
                                     ))}
                                 </Select>
                             </FormControl>
+                        </ListItem>
+                        <ListItem>
+                            <ListItemIcon>
+                                <Brightness7 />
+                            </ListItemIcon>
+                            <ListItemText primary={t("pages.settings.enable-light-mode")} />
+                            <Switch
+                                checked={configuration.lightModeEnabled}
+                                onChange={ev => dispatch(setLightModeEnabled(ev.target.checked))}
+                            />
                         </ListItem>
                     </List>
                 </CardContent>

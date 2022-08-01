@@ -1,10 +1,20 @@
 import { Cake, Warning } from "@mui/icons-material";
-import { Box, List, ListItem, ListItemIcon, ListItemText, ListSubheader, Stack, Tooltip } from "@mui/material";
-import theme from "@src/components/theme";
+import {
+    Box,
+    List,
+    ListItem,
+    ListItemIcon,
+    ListItemText,
+    ListSubheader,
+    Stack,
+    Tooltip,
+    useTheme,
+} from "@mui/material";
 import { BuildModel, findCellByVariantName, findPerkByName } from "@src/data/BuildModel";
 import { ItemType } from "@src/data/ItemType";
 import { Perk, PerkValue } from "@src/data/Perks";
 import { selectBuild } from "@src/features/build/build-slice";
+import useIsLightMode from "@src/hooks/light-mode";
 import { useAppSelector } from "@src/hooks/redux";
 import i18n from "@src/i18n";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
@@ -14,6 +24,9 @@ import { useTranslation } from "react-i18next";
 const PerkList: React.FC = () => {
     const build = useAppSelector(selectBuild);
     const { t } = useTranslation();
+
+    const theme = useTheme();
+    const isLightMode = useIsLightMode();
 
     const sortedPerks = perkData(build);
 
@@ -64,7 +77,7 @@ const PerkList: React.FC = () => {
                         <ListItemIcon sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
                             <img
                                 src={`/assets/icons/perks/${perk.data.type}.png`}
-                                style={{ height: 32, width: 32 }}
+                                style={{ filter: isLightMode ? "invert(100%)" : undefined, height: 32, width: 32 }}
                             />
                         </ListItemIcon>
                         <ListItemText
