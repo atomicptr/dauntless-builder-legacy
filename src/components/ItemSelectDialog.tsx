@@ -35,6 +35,7 @@ import {
     selectItemSelectFilter,
 } from "@src/features/item-select-filter/item-select-filter-slice";
 import useIsMobile from "@src/hooks/is-mobile";
+import useIsLightMode from "@src/hooks/light-mode";
 import { useAppSelector } from "@src/hooks/redux";
 import i18n from "@src/i18n";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
@@ -70,6 +71,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
     const { t } = useTranslation();
     const isMobile = useIsMobile();
     const theme = useTheme();
+    const isLightMode = useIsLightMode();
 
     const title = t("components.item-select-dialog.select-text", { name: t(itemTypeLocalizationIdentifier(itemType)) });
 
@@ -143,6 +145,8 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
         Array.isArray((item as Weapon | Armour | Lantern | null)?.cells)
             ? ((item as Weapon | Armour | Lantern | null)?.cells as CellType[]) ?? []
             : [(item as Weapon | Armour | Lantern | null)?.cells];
+
+    const filter = isLightMode ? "invert(100%)" : undefined;
 
     return (
         <Dialog
@@ -305,7 +309,11 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                                                                     >
                                                                         <img
                                                                             src={`/assets/icons/perks/${cellType}.png`}
-                                                                            style={{ height: "16px", width: "16px" }}
+                                                                            style={{
+                                                                                filter,
+                                                                                height: "16px",
+                                                                                width: "16px",
+                                                                            }}
                                                                         />
                                                                     &nbsp;
                                                                         {t(`terms.cell-type.${cellType}`)}

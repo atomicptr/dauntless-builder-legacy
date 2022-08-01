@@ -5,6 +5,7 @@ import { CellType } from "@src/data/Cell";
 import { ItemRarity } from "@src/data/ItemRarity";
 import { ItemType } from "@src/data/ItemType";
 import useIsMobile from "@src/hooks/is-mobile";
+import useIsLightMode from "@src/hooks/light-mode";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -23,6 +24,7 @@ const CellPicker: React.FC<CellPickerProps> = ({ variant, index, itemType, cellT
     const theme = useTheme();
     const { t } = useTranslation();
     const isMobile = useIsMobile();
+    const isLightMode = useIsLightMode();
 
     const cell = variant !== null ? findCellByVariantName(variant) : null;
 
@@ -30,7 +32,7 @@ const CellPicker: React.FC<CellPickerProps> = ({ variant, index, itemType, cellT
 
     const cellStyle =
         variant === null
-            ? {}
+            ? { filter: isLightMode ? "invert(100%)" : undefined }
             : {
                 background: rarityColor[cell?.variants[variant]?.rarity ?? ItemRarity.Uncommon].main,
                 borderRadius: "200px",

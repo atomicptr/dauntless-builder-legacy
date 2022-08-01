@@ -8,6 +8,7 @@ import {
     selectItemSelectFilter,
     setPerkFilter,
 } from "@src/features/item-select-filter/item-select-filter-slice";
+import useIsLightMode from "@src/hooks/light-mode";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React, { useMemo } from "react";
@@ -21,6 +22,7 @@ const PerkFilter: React.FC<PerkFilterProps> = ({ itemType }) => {
     const dispatch = useAppDispatch();
     const itemSelectFilter = useAppSelector(selectItemSelectFilter);
     const { t } = useTranslation();
+    const isLightMode = useIsLightMode();
 
     const isPerkAvailableForItemType = (perk: Perk, itemType: ItemType) => {
         if (itemType !== ItemType.Weapon && !isArmourType(itemType)) {
@@ -37,6 +39,8 @@ const PerkFilter: React.FC<PerkFilterProps> = ({ itemType }) => {
                 .sort((a, b) => a.name.localeCompare(b.name)),
         [itemType],
     );
+
+    const filter = isLightMode ? "invert(100%)" : undefined;
 
     return (
         <FormControl fullWidth>
@@ -61,7 +65,7 @@ const PerkFilter: React.FC<PerkFilterProps> = ({ itemType }) => {
                                 >
                                     <img
                                         src={`/assets/icons/perks/${perk?.type}.png`}
-                                        style={{ height: "16px", width: "16px" }}
+                                        style={{ filter, height: "16px", width: "16px" }}
                                     />
                                     <Box component="span">
                                         {t(itemTranslationIdentifier(ItemType.Perk, perkName, "name"))}
@@ -83,7 +87,7 @@ const PerkFilter: React.FC<PerkFilterProps> = ({ itemType }) => {
                         <ListItemIcon>
                             <img
                                 src={`/assets/icons/perks/${perk.type}.png`}
-                                style={{ height: "16px", width: "16px" }}
+                                style={{ filter, height: "16px", width: "16px" }}
                             />
                         </ListItemIcon>
 

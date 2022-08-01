@@ -3,6 +3,7 @@ import { findPerkByName } from "@src/data/BuildModel";
 import { ItemType } from "@src/data/ItemType";
 import { PerkValue } from "@src/data/Perks";
 import useIsMobile from "@src/hooks/is-mobile";
+import useIsLightMode from "@src/hooks/light-mode";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -15,10 +16,13 @@ interface PerksTextProps {
 const PerksText: React.FC<PerksTextProps> = ({ perks, itemSurged }) => {
     const { t } = useTranslation();
     const isMobile = useIsMobile();
+    const isLightMode = useIsLightMode();
 
     if (perks.length === 0) {
         return null;
     }
+
+    const filter = isLightMode ? "invert(100%)" : undefined;
 
     const currentPerks = perks.filter(perk => perk.powerSurged === (itemSurged ?? false));
     const perkList = currentPerks.map((perk, index) => (
@@ -34,7 +38,7 @@ const PerksText: React.FC<PerksTextProps> = ({ perks, itemSurged }) => {
             <img
                 alt={findPerkByName(perk.name)?.type}
                 src={`/assets/icons/perks/${findPerkByName(perk.name)?.type}.png`}
-                style={{ height: "16px", width: "16px" }}
+                style={{ filter, height: "16px", width: "16px" }}
             />
 
             <Box component="span">

@@ -9,6 +9,7 @@ import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
 import { Weapon } from "@src/data/Weapon";
 import useIsMobile from "@src/hooks/is-mobile";
+import useIsLightMode from "@src/hooks/light-mode";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React, { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
@@ -41,6 +42,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
 }) => {
     const { t } = useTranslation();
     const isMobile = useIsMobile();
+    const isLightMode = useIsLightMode();
 
     const typeName = (type: ItemType): string =>
         match(type)
@@ -84,7 +86,11 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                 .with(ItemType.Lantern, () => "/assets/icons/generic/Lantern.png")
                                 .with(ItemType.Omnicell, () => "/assets/icons/generic/Omnicell.png")
                                 .otherwise(() => "/assets/noicon.png")}
-                            sx={{ height: imageSize, width: imageSize }}
+                            sx={{
+                                filter: isLightMode ? "invert(100%)" : undefined,
+                                height: imageSize,
+                                width: imageSize,
+                            }}
                         />
                     </Box>
                     <Box>

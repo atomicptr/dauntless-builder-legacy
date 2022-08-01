@@ -29,6 +29,7 @@ import { ItemRarity } from "@src/data/ItemRarity";
 import { ItemType, itemTypeLocalizationIdentifier } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
 import useIsMobile from "@src/hooks/is-mobile";
+import useIsLightMode from "@src/hooks/light-mode";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -67,6 +68,7 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
 }) => {
     const { t } = useTranslation();
     const isMobile = useIsMobile();
+    const isLightMode = useIsLightMode();
 
     const title = t("components.item-select-dialog.select-text", {
         name: t(itemTypeLocalizationIdentifier(ItemType.Cell)),
@@ -209,7 +211,11 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
                                                 <CardMedia
                                                     component="img"
                                                     image={`/assets/icons/perks/${cell.slot}.png`}
-                                                    sx={{ height: imageSize, width: imageSize }}
+                                                    sx={{
+                                                        filter: isLightMode ? "invert(100%)" : undefined,
+                                                        height: imageSize,
+                                                        width: imageSize,
+                                                    }}
                                                 />
                                             </Box>
                                             <CardContent>

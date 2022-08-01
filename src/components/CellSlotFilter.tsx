@@ -6,6 +6,7 @@ import {
     selectItemSelectFilter,
     setCellSlotsFilter,
 } from "@src/features/item-select-filter/item-select-filter-slice";
+import useIsLightMode from "@src/hooks/light-mode";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -18,6 +19,9 @@ const CellSlotFilter: React.FC<CellSlotFilterProps> = ({ itemType }) => {
     const dispatch = useAppDispatch();
     const itemSelectFilter = useAppSelector(selectItemSelectFilter);
     const { t } = useTranslation();
+    const isLightMode = useIsLightMode();
+
+    const filter = isLightMode ? "invert(100%)" : undefined;
 
     return (
         <FormControl fullWidth>
@@ -41,7 +45,7 @@ const CellSlotFilter: React.FC<CellSlotFilterProps> = ({ itemType }) => {
                                 >
                                     <img
                                         src={`/assets/icons/perks/${cellType}.png`}
-                                        style={{ height: "16px", width: "16px" }}
+                                        style={{ filter, height: "16px", width: "16px" }}
                                     />
                                     <Box component="span">
                                         {t(`terms.cell-type.${cellType}`)}
@@ -65,7 +69,7 @@ const CellSlotFilter: React.FC<CellSlotFilterProps> = ({ itemType }) => {
                             <ListItemIcon>
                                 <img
                                     src={`/assets/icons/perks/${cellType}.png`}
-                                    style={{ height: "16px", width: "16px" }}
+                                    style={{ filter, height: "16px", width: "16px" }}
                                 />
                             </ListItemIcon>
 
