@@ -6,6 +6,7 @@ import PageTitle from "@src/components/PageTitle";
 import { crowdinLink, discordServerUrl, githubUrl, matrixChannelUrl } from "@src/constants";
 import { selectConfiguration } from "@src/features/configuration/configuration-slice";
 import { selectFavorites } from "@src/features/favorites/favorites-slice";
+import useIsMobile from "@src/hooks/is-mobile";
 import { useAppSelector } from "@src/hooks/redux";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -25,6 +26,7 @@ const Home: React.FC = () => {
     const { t } = useTranslation();
     const configuration = useAppSelector(selectConfiguration);
     const favorites = useAppSelector(selectFavorites);
+    const isMobile = useIsMobile();
 
     return (
         <Grid
@@ -82,7 +84,7 @@ const Home: React.FC = () => {
                     </Typography>
 
                     <Stack
-                        direction="row"
+                        direction={isMobile ? "column" : "row"}
                         spacing={2}
                     >
                         <Button
@@ -90,6 +92,7 @@ const Home: React.FC = () => {
                             href={githubUrl}
                             startIcon={<GitHub />}
                             target="_blank"
+                            variant={isMobile ? "outlined" : "text"}
                         >
                             {t("pages.home.links.github")}
                         </Button>
@@ -98,6 +101,7 @@ const Home: React.FC = () => {
                             href={matrixChannelUrl}
                             startIcon={<SiMatrix />}
                             target="_blank"
+                            variant={isMobile ? "outlined" : "text"}
                         >
                             {t("pages.home.links.matrix")}
                         </Button>
@@ -106,6 +110,7 @@ const Home: React.FC = () => {
                             href={discordServerUrl}
                             startIcon={<FaDiscord />}
                             target="_blank"
+                            variant={isMobile ? "outlined" : "text"}
                         >
                             {t("pages.home.links.discord")}
                         </Button>
@@ -114,6 +119,7 @@ const Home: React.FC = () => {
                             href={crowdinLink}
                             startIcon={<Translate />}
                             target="_blank"
+                            variant={isMobile ? "outlined" : "text"}
                         >
                             {t("pages.home.links.localize")}
                         </Button>
