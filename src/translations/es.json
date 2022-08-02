@@ -139,6 +139,8 @@
                     "Rezakiri": "Rezakiri",
                     "Riftstalker": "Riftstalker",
                     "Sahvyt": "Sahvyt",
+                    "Thrax (R) Speed": "Thrax (R) Speed",
+                    "Thrax (R)Speed": "Thrax (R)Speed",
                     "Thrax (Rift)": "Thrax (Rift)",
                     "Thrax (Rift) Resolve": "Thrax (Rift) Resolve",
                     "Thrax (Rift) Wound": "Thrax (Rift) Wound",
@@ -155,6 +157,7 @@
                     "Urska (F)  Speed": "Urska (F)  Speed",
                     "Urska (F) Speed": "Urska (F) Speed",
                     "Urska (F) Survival": "Urska (F) Survival",
+                    "Urska (Frostwulf)": "Urska (Frostwulf)",
                     "Urska (Frostwülf)": "Urska (Frostwülf)",
                     "Urska (Pangar)": "Urska (Pangar)",
                     "Urska (Pangar) Resolve": "Urska (Pangar) Resolve",
@@ -180,11 +183,11 @@
                         "name": "Discipline"
                     },
                     "Escalations": {
-                        "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear, and builds that have Escalation gear and are built around Granny Stega's Amp for lifesteal.",
+                        "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear. ",
                         "name": "Escalations",
                         "subcategoryDescription": {
                             "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive. Bulwark for survivability.",
-                            "legendaries": "Builds for the various Escalations. Use Strega's talent for sustain on most Escalations, Aspect of the Mender on Frost Escalation.",
+                            "legendaries": "Builds for the various Escalations.",
                             "preEsca": "Builds for the various Escalations. Contains no Trials cells nor Escalation gear."
                         }
                     },
@@ -233,6 +236,7 @@
             "data-import": "Import",
             "data-text": "Dauntless Builder is currently storing all data inside your browser, which means switching devices or browsers will not retain any of your favorite builds and/or other data. In the future we plan to allow some sort of cloud data syncing but until then, you can use Import/Export to backup your data and/or move it between devices.",
             "dev-mode-toggle": "Toggle Developer Mode",
+            "enable-light-mode": "Enable Light Mode (Use this at your own risk!)",
             "export-logs": "Export logs",
             "general": "General",
             "language": "Language",
