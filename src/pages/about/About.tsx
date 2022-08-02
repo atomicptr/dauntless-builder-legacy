@@ -5,7 +5,7 @@ import { Avatar, Box, Button, Card, CardActionArea, CardContent, Grid, Stack, Ty
 import LinkBox from "@src/components/LinkBox";
 import PageTitle from "@src/components/PageTitle";
 import { githubUrl, licenseUrl } from "@src/constants";
-import React from "react";
+import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 export interface Contributor {
@@ -29,7 +29,7 @@ const dependencies: Dependency[] = dependenciesJson;
 const dependencyRegex = /(@?.*)@.*/g;
 
 const About: React.FC = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const renderContributor = (contributor: Contributor) => (
         <Grid
@@ -97,6 +97,15 @@ const About: React.FC = () => {
         </Grid>
     );
 
+    const buildString = useMemo(
+        () =>
+            new Date(DB_BUILD_TIME).toLocaleString(i18n.language, {
+                dateStyle: "full",
+                timeStyle: "long",
+            }),
+        [i18n.language],
+    );
+
     return (
         <Box sx={{ display: "flex", flexDirection: "column", gap: 4, mb: 2 }}>
             <PageTitle title={t("pages.about.title")} />
@@ -104,6 +113,8 @@ const About: React.FC = () => {
             <Typography>
                 <LinkBox text={t("pages.about.main-text", { licenseUrl })} />
             </Typography>
+
+            <Typography>{t("pages.about.build-info", { buildString })}</Typography>
 
             <Stack
                 direction="row"

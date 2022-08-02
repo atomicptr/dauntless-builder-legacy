@@ -18,6 +18,7 @@ export default defineConfig(({ command, mode }) => {
             sourcemap: isDevMode,
         },
         define: {
+            DB_BUILD_TIME: Date.now(),
             DB_DEVMODE: isDevMode,
         },
         plugins: [
