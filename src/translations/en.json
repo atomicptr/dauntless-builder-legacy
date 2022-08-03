@@ -110,104 +110,104 @@
         },
         "metabuilds": {
             "generated": {
-                "buildTitles": {
-                    "Agarus (K) Speed": "Agarus (K) Speed",
-                    "Agarus (K) Survival": "Agarus (K) Survival",
-                    "Agarus (Khara) Resolve": "Agarus (Khara) Resolve",
-                    "Agarus (Khara) Wound": "Agarus (Khara) Wound",
-                    "Agarus (Kharabak)": "Agarus (Kharabak)",
-                    "Charrogg": "Charrogg",
-                    "Chrono (R) Speed": "Chrono (R) Speed",
-                    "Chrono (Reza)": "Chrono (Reza)",
-                    "Chrono (Reza) Wound": "Chrono (Reza) Wound",
-                    "Chrono (V) Speed": "Chrono (V) Speed",
-                    "Chrono (V) Survival": "Chrono (V) Survival",
-                    "Chrono (Valo)": "Chrono (Valo)",
-                    "Chrono (Valo) Resolve": "Chrono (Valo) Resolve",
-                    "Chrono (Valo) Wound": "Chrono (Valo) Wound",
-                    "Disc Pred": "Disc Pred",
-                    "Disc Sav": "Disc Sav",
-                    "Hellion": "Hellion",
-                    "Kharabak": "Kharabak",
-                    "Malk (S) Speed": "Malk (S) Speed",
-                    "Malk (S) Survival": "Malk (S) Survival",
-                    "Malk (Sahvyt)": "Malk (Sahvyt)",
-                    "Malk (Sahvyt) Resolve": "Malk (Sahvyt) Resolve",
-                    "Malk (Sahvyt) Wound": "Malk (Sahvyt) Wound",
-                    "Pangar": "Pangar",
-                    "Prismedic": "Prismedic",
-                    "Rage Pred": "Rage Pred",
-                    "Rezakiri": "Rezakiri",
-                    "Riftstalker": "Riftstalker",
-                    "Sahvyt": "Sahvyt",
-                    "Thrax (R) Speed": "Thrax (R) Speed",
-                    "Thrax (R)Speed": "Thrax (R)Speed",
-                    "Thrax (Rift)": "Thrax (Rift)",
-                    "Thrax (Rift) Resolve": "Thrax (Rift) Resolve",
-                    "Thrax (Rift) Wound": "Thrax (Rift) Wound",
-                    "Torg (C) Speed": "Torg (C) Speed",
-                    "Torg (C) Survival": "Torg (C) Survival",
-                    "Torg (Charrogg)": "Torg (Charrogg)",
-                    "Torg (Charrogg) Resolve": "Torg (Charrogg) Resolve",
-                    "Torg (H) Speed": "Torg (H) Speed",
-                    "Torg (H) Survival": "Torg (H) Survival",
-                    "Torg (Hellion)": "Torg (Hellion)",
-                    "Torg (Hellion) Wound": "Torg (Hellion) Wound",
-                    "Urska (Boreus)": "Urska (Boreus)",
-                    "Urska (F)    Speed": "Urska (F)    Speed",
-                    "Urska (F)  Speed": "Urska (F)  Speed",
-                    "Urska (F) Speed": "Urska (F) Speed",
-                    "Urska (F) Survival": "Urska (F) Survival",
-                    "Urska (Frostwulf)": "Urska (Frostwulf)",
-                    "Urska (Frostwülf)": "Urska (Frostwülf)",
-                    "Urska (Pangar)": "Urska (Pangar)",
-                    "Urska (Pangar) Resolve": "Urska (Pangar) Resolve",
-                    "Urska (Pangar) Wound": "Urska (Pangar) Wound",
-                    "Urska (Wülf) Resolve": "Urska (Wülf) Resolve",
-                    "Valomyr": "Valomyr"
-                },
                 "categories": {
-                    "Artificer": {
-                        "description": "Artificer features a drone you can control that has multiple functions depending on what you are targeting: if targeting the ground, it creates a healing and shielding aura that blocks Behemoth's projectiles; if targeting a player it creates a healing and shield aura that follows them; if targeting a downed slayer it revives them and creates a healing and shielding aura that follows them; and, if targeting a Behemoth, it marks a part to take extra damage.",
-                        "name": "Artificer"
+                    "Discipline": {
+                        "name": "Discipline",
+                        "description": "Discipline is a high-risk high-reward Omnicell, featuring a high damage parry ability that grants you stacks of critical damage if timed correctly and, at max stacks, grants you a high amount of critical chance."
+                    },
+                    "Revenant": {
+                        "name": "Revenant",
+                        "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 125 healing over 10 seconds — after Revenant expires."
+                    },
+                    "Tempest": {
+                        "name": "Tempest",
+                        "description": "Tempest features 10% passive attack speed bonus and the ability to build up stacks of Velocity when dodging through attacks. You spend the stacks to dash and deal damage based on how much movespeed you currently have. The movespeed bonus damage only applies to unbroken parts."
                     },
                     "Bastion": {
-                        "description": "Bastion features higher shield gain from perks and the passive ability to generate shields when damage is dealt. Its active ability consumes all the shield you currently have and deals damage based on how much shield was consumed. Neglecting the active ability significantly lowers your potential damage.",
-                        "name": "Bastion"
+                        "name": "Bastion",
+                        "description": "Bastion features higher shield gain from perks and the passive ability to generate shields when damage is dealt. Its active ability consumes all the shield you currently have and deals damage based on how much shield was consumed. Neglecting the active ability significantly lowers your potential damage."
                     },
-                    "Catalyst": {
-                        "description": "These are the best builds you can have for general hunting, maximizing damage and using Blitz tonics as your source of attack speed.\nRecommended tonics for maximum damage: Frenzy, Blitz, Aetherdrive.",
-                        "name": "Catalyst"
+                    "Artificer": {
+                        "name": "Artificer",
+                        "description": "Artificer features a drone you can control that has multiple functions depending on what you are targeting: if targeting the ground, it creates a healing and shielding aura that blocks Behemoth's projectiles; if targeting a player it creates a healing and shield aura that follows them; if targeting a downed slayer it revives them and creates a healing and shielding aura that follows them; and, if targeting a Behemoth, it marks a part to take extra damage."
                     },
-                    "Discipline": {
-                        "description": "Discipline is a high-risk high-reward Omnicell, featuring a high damage parry ability that grants you stacks of critical damage if timed correctly and, at max stacks, grants you a high amount of critical chance.",
-                        "name": "Discipline"
+                    "Iceborne": {
+                        "name": "Iceborne",
+                        "description": "Iceborne provides lifesteal and damage reduction the less health you have, with an active ability that grants hyperarmor and more lifesteal. The active deals more damage when used at maximum health."
                     },
                     "Escalations": {
-                        "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear. ",
                         "name": "Escalations",
+                        "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear. ",
                         "subcategoryDescription": {
-                            "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive. Bulwark for survivability.",
+                            "preEsca": "Builds for the various Escalations. Contains no Trials cells nor Escalation gear.",
                             "legendaries": "Builds for the various Escalations.",
-                            "preEsca": "Builds for the various Escalations. Contains no Trials cells nor Escalation gear."
+                            "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive. Bulwark for survivability."
                         }
                     },
                     "Exotics": {
-                        "description": "Builds that use the Exotic Weapons and Helmets. Off-meta and generally worse than using regular weapons, with the exception of Molten Edict.",
-                        "name": "Exotics"
+                        "name": "Exotics",
+                        "description": "Builds that use the Exotic Weapons and Helmets. Off-meta and generally worse than using regular weapons, with the exception of Molten Edict."
                     },
-                    "Iceborne": {
-                        "description": "Iceborne provides lifesteal and damage reduction the less health you have, with an active ability that grants hyperarmor and more lifesteal. The active deals more damage when used at maximum health.",
-                        "name": "Iceborne"
-                    },
-                    "Revenant": {
-                        "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 125 healing over 10 seconds — after Revenant expires.",
-                        "name": "Revenant"
-                    },
-                    "Tempest": {
-                        "description": "Tempest features 10% passive attack speed bonus and the ability to build up stacks of Velocity when dodging through attacks. You spend the stacks to dash and deal damage based on how much movespeed you currently have. The movespeed bonus damage only applies to unbroken parts.",
-                        "name": "Tempest"
+                    "Catalyst": {
+                        "name": "Catalyst",
+                        "description": "These are the best builds you can have for general hunting, maximizing damage and using Blitz tonics as your source of attack speed.\nRecommended tonics for maximum damage: Frenzy, Blitz, Aetherdrive."
                     }
+                },
+                "buildTitles": {
+                    "Urska (Frostwulf)": "Urska (Frostwulf)",
+                    "Urska (Pangar) Resolve": "Urska (Pangar) Resolve",
+                    "Torg (Hellion)": "Torg (Hellion)",
+                    "Torg (Charrogg)": "Torg (Charrogg)",
+                    "Torg (Charrogg) Resolve": "Torg (Charrogg) Resolve",
+                    "Agarus (Kharabak)": "Agarus (Kharabak)",
+                    "Agarus (Khara) Resolve": "Agarus (Khara) Resolve",
+                    "Malk (Sahvyt)": "Malk (Sahvyt)",
+                    "Malk (Sahvyt) Resolve": "Malk (Sahvyt) Resolve",
+                    "Thrax (Rift)": "Thrax (Rift)",
+                    "Thrax (Rift) Resolve": "Thrax (Rift) Resolve",
+                    "Chrono (Valo)": "Chrono (Valo)",
+                    "Chrono (Valo) Resolve": "Chrono (Valo) Resolve",
+                    "Chrono (Reza)": "Chrono (Reza)",
+                    "Urska (Pangar)": "Urska (Pangar)",
+                    "Urska (Pangar) Wound": "Urska (Pangar) Wound",
+                    "Urska (Boreus)": "Urska (Boreus)",
+                    "Torg (Hellion) Wound": "Torg (Hellion) Wound",
+                    "Agarus (Khara) Wound": "Agarus (Khara) Wound",
+                    "Malk (Sahvyt) Wound": "Malk (Sahvyt) Wound",
+                    "Thrax (Rift) Wound": "Thrax (Rift) Wound",
+                    "Chrono (Reza) Wound": "Chrono (Reza) Wound",
+                    "Chrono (Valo) Wound": "Chrono (Valo) Wound",
+                    "Pangar": "Pangar",
+                    "Hellion": "Hellion",
+                    "Charrogg": "Charrogg",
+                    "Kharabak": "Kharabak",
+                    "Sahvyt": "Sahvyt",
+                    "Riftstalker": "Riftstalker",
+                    "Valomyr": "Valomyr",
+                    "Rezakiri": "Rezakiri",
+                    "Urska (F) Speed": "Urska (F) Speed",
+                    "Urska (F) Survival": "Urska (F) Survival",
+                    "Urska (F)    Speed": "Urska (F)    Speed",
+                    "Urska (F)  Speed": "Urska (F)  Speed",
+                    "Torg (H) Speed": "Torg (H) Speed",
+                    "Torg (H) Survival": "Torg (H) Survival",
+                    "Torg (C) Speed": "Torg (C) Speed",
+                    "Torg (C) Survival": "Torg (C) Survival",
+                    "Agarus (K) Speed": "Agarus (K) Speed",
+                    "Agarus (K) Survival": "Agarus (K) Survival",
+                    "Malk (S) Speed": "Malk (S) Speed",
+                    "Malk (S) Survival": "Malk (S) Survival",
+                    "Thrax (R) Speed": "Thrax (R) Speed",
+                    "Thrax (R)Speed": "Thrax (R)Speed",
+                    "Chrono (V) Speed": "Chrono (V) Speed",
+                    "Chrono (V) Survival": "Chrono (V) Survival",
+                    "Chrono (R) Speed": "Chrono (R) Speed",
+                    "Disc Pred": "Disc Pred",
+                    "Rage Pred": "Rage Pred",
+                    "Disc Sav": "Disc Sav",
+                    "Prismedic": "Prismedic",
+                    "Urska (Frostwülf)": "Urska (Frostwülf)",
+                    "Urska (Wülf) Resolve": "Urska (Wülf) Resolve"
                 },
                 "title": "Dauntless Meta Builds - 1.10+"
             },
