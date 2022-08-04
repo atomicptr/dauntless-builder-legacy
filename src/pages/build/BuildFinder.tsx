@@ -18,20 +18,29 @@ import {
 } from "@mui/material";
 import BuildCard from "@src/components/BuildCard";
 import InputDialog from "@src/components/InputDialog";
+import ItemSelectDialog, {
+    filterByArmourType,
+    FilterFunc,
+    filterRemoveExotics,
+    filterRemoveLegendaries,
+} from "@src/components/ItemSelectDialog";
+import MiniItemPicker from "@src/components/MiniItemPicker";
 import PageTitle from "@src/components/PageTitle";
 import { perkData } from "@src/components/PerkList";
 import WeaponTypeSelector from "@src/components/WeaponTypeSelector";
+import { Armour, ArmourType } from "@src/data/Armour";
 import { BuildModel } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
 import { ItemType } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
-import { WeaponType } from "@src/data/Weapon";
+import { Weapon, WeaponType } from "@src/data/Weapon";
 import {
     AssignedPerkValue,
     clearPerks,
     selectBuildFinderSelection,
     setBuildFinderWeaponType,
     setPerkValue,
+    setPicker,
     setRemoveExotics,
     setRemoveLegendary,
 } from "@src/features/build-finder/build-finder-selection-slice";
@@ -51,6 +60,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { BiMinus } from "react-icons/all";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
+import { match } from "ts-pattern";
 
 const buildLimit = 200;
 const buildDisplayLimit = 50;
@@ -87,7 +97,17 @@ const BuildFinder: React.FC = () => {
     const isLightMode = useIsLightMode();
 
     const { t } = useTranslation();
-    const { weaponType, selectedPerks, removeExotics, removeLegendary } = useAppSelector(selectBuildFinderSelection);
+    const {
+        weaponType,
+        selectedPerks,
+        removeExotics,
+        removeLegendary,
+        pickerWeapon,
+        pickerHead,
+        pickerTorso,
+        pickerArms,
+        pickerLegs,
+    } = useAppSelector(selectBuildFinderSelection);
     const configuration = useAppSelector(selectConfiguration);
     const isMobile = useIsMobile();
 
@@ -96,15 +116,23 @@ const BuildFinder: React.FC = () => {
     const [isSearchingBuilds, setIsSearchingBuilds] = useState(false);
     const [isDeterminingSelectablePerks, setIsDeterminingSelectablePerks] = useState(false);
     const [inputDialogOpen, setInputDialogOpen] = useState(false);
+    const [itemSelectDialogOpen, setItemSelectDialogOpen] = useState(false);
+    const [itemSelectDialogType, setItemSelectDialogType] = useState<ItemType>(ItemType.Weapon);
+    const [itemSelectFilters, setItemSelectFilters] = useState<FilterFunc[]>([]);
 
     const dispatch = useAppDispatch();
 
     const finderOptions: FinderItemDataOptions = useMemo(
         () => ({
+            pickerArms,
+            pickerHead,
+            pickerLegs,
+            pickerTorso,
+            pickerWeapon,
             removeExotics,
             removeLegendary,
         }),
-        [removeExotics, removeLegendary],
+        [removeExotics, removeLegendary, pickerWeapon, pickerHead, pickerTorso, pickerArms, pickerLegs],
     );
 
     useEffect(() => {
@@ -252,6 +280,22 @@ const BuildFinder: React.FC = () => {
         return `+${selectedPerks[perk.name]}`;
     };
 
+    const onPickerClicked = (itemType: ItemType) => {
+        const filters = match(itemType)
+            .with(ItemType.Weapon, () => [filterRemoveLegendaries()])
+            .with(ItemType.Head, () => [filterByArmourType(ArmourType.Head)])
+            .with(ItemType.Torso, () => [filterByArmourType(ArmourType.Torso)])
+            .with(ItemType.Arms, () => [filterByArmourType(ArmourType.Arms)])
+            .with(ItemType.Legs, () => [filterByArmourType(ArmourType.Legs)])
+            .otherwise(() => []);
+        if (removeExotics) {
+            filters.push(filterRemoveExotics());
+        }
+        setItemSelectFilters(filters);
+        setItemSelectDialogType(itemType);
+        setItemSelectDialogOpen(true);
+    };
+
     if (webworkerDisabled) {
         return (
             <Alert
@@ -296,6 +340,39 @@ const BuildFinder: React.FC = () => {
                     label={t("pages.build-finder.remove-legendary")}
                 />
             </FormGroup>
+
+            <Typography variant="h5">{t("pages.build-finder.preselect-title")}</Typography>
+
+            <Stack
+                direction={isMobile ? "column" : "row"}
+                spacing={1}
+            >
+                <MiniItemPicker
+                    itemType={ItemType.Weapon}
+                    onClick={onPickerClicked}
+                    value={pickerWeapon}
+                />
+                <MiniItemPicker
+                    itemType={ItemType.Head}
+                    onClick={onPickerClicked}
+                    value={pickerHead}
+                />
+                <MiniItemPicker
+                    itemType={ItemType.Torso}
+                    onClick={onPickerClicked}
+                    value={pickerTorso}
+                />
+                <MiniItemPicker
+                    itemType={ItemType.Arms}
+                    onClick={onPickerClicked}
+                    value={pickerArms}
+                />
+                <MiniItemPicker
+                    itemType={ItemType.Legs}
+                    onClick={onPickerClicked}
+                    value={pickerLegs}
+                />
+            </Stack>
 
             {configuration.devMode && (
                 <>
@@ -482,6 +559,18 @@ const BuildFinder: React.FC = () => {
                     )}
                 </>
             )}
+
+            <ItemSelectDialog
+                disablePowerSurgeSelection
+                handleClose={() => setItemSelectDialogOpen(false)}
+                itemType={itemSelectDialogType}
+                onItemSelected={(item, itemType, _isPowerSurged) => {
+                    dispatch(setPicker({ item: item as Weapon | Armour | null, itemType }));
+                    setItemSelectDialogOpen(false);
+                }}
+                open={itemSelectDialogOpen}
+                preDefinedFilters={itemSelectFilters}
+            />
         </Stack>
     );
 };

@@ -25,6 +25,7 @@ import VirtualizedList from "@src/components/VirtualizedList";
 import { Armour, ArmourType } from "@src/data/Armour";
 import { CellType } from "@src/data/Cell";
 import { ElementalType } from "@src/data/ElementalType";
+import { ItemRarity } from "@src/data/ItemRarity";
 import { isArmourType, ItemType, itemTypeData, itemTypeLocalizationIdentifier } from "@src/data/ItemType";
 import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
@@ -446,3 +447,11 @@ export const filterRemoveBondWeapons =
     () =>
         (item: ItemPickerItem, _itemType: ItemType): boolean =>
             !(item as Weapon).bond;
+
+export const filterRemoveExotics = () => (item: ItemPickerItem, itemType: ItemType) =>
+    itemType === ItemType.Weapon || isArmourType(itemType)
+        ? (item as Weapon | Armour).rarity !== ItemRarity.Exotic
+        : true;
+
+export const filterRemoveLegendaries = () => (item: ItemPickerItem, itemType: ItemType) =>
+    itemType === ItemType.Weapon ? (item as Weapon).bond === undefined || (item as Weapon) === null : true;

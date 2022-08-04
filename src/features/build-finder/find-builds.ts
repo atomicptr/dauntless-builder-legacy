@@ -10,6 +10,7 @@ import { AssignedPerkValue } from "@src/features/build-finder/build-finder-selec
 import createPermutation from "@src/utils/create-permutation";
 import sortObjectByKeys from "@src/utils/sort-object-by-keys";
 import md5 from "md5";
+import { match } from "ts-pattern";
 
 // Since the lantern itself does not matter I decided to pre-pick Shrike's Zeal as the Shrike is DB mascot :).
 const lanternName = "Shrike's Zeal";
@@ -89,9 +90,19 @@ export const perkCellMap = (() => {
 export interface FinderItemDataOptions {
     removeExotics?: boolean;
     removeLegendary?: boolean;
+    pickerWeapon?: Weapon | null;
+    pickerHead?: Armour | null;
+    pickerTorso?: Armour | null;
+    pickerArms?: Armour | null;
+    pickerLegs?: Armour | null;
 }
 
 const defaultFinderItemDataOptions: FinderItemDataOptions = {
+    pickerArms: null,
+    pickerHead: null,
+    pickerLegs: null,
+    pickerTorso: null,
+    pickerWeapon: null,
     removeExotics: true,
     removeLegendary: true,
 };
@@ -130,7 +141,18 @@ const createItemData = (
             filterPerksAndCells(Object.keys(requestedPerks).length <= 3 ? orMode : andMode),
         );
 
-    const findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered = (type: ArmourType) => {
+    const findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered = (type: ArmourType): Armour[] => {
+        const prepickedItem = match<ArmourType, Armour | undefined | null>(type)
+            .with(ArmourType.Head, () => finderOptions.pickerHead)
+            .with(ArmourType.Torso, () => finderOptions.pickerTorso)
+            .with(ArmourType.Arms, () => finderOptions.pickerArms)
+            .with(ArmourType.Legs, () => finderOptions.pickerLegs)
+            .otherwise(() => null);
+
+        if (prepickedItem) {
+            return [prepickedItem];
+        }
+
         let matching = findMatchingArmourPiecesByType(type);
         for (const perk in requestedPerks) {
             const hasMatchingCellSlot =
@@ -180,18 +202,24 @@ const createItemData = (
         return wrapperWeapon;
     };
 
+    const prepickedWeapon = finderOptions.pickerWeapon
+        ? [createLegendaryWeaponBondWrapper(finderOptions.pickerWeapon)]
+        : null;
+
     return {
         arms: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Arms),
         head: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Head),
         lantern: findLanternByName(lanternName) as Lantern,
         legs: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Legs),
         torso: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Torso),
-        weapons: Object.values(dauntlessBuilderData.weapons)
-            .filter(weapon => weapon.type === weaponType)
-            .filter(weapon => weapon.bond === undefined)
-            .filter(weapon => (finderOptions.removeExotics ? weapon.rarity !== ItemRarity.Exotic : true))
-            .map(createLegendaryWeaponBondWrapper)
-            .filter(filterPerksAndCells()),
+        weapons:
+            prepickedWeapon ??
+            Object.values(dauntlessBuilderData.weapons)
+                .filter(weapon => weapon.type === weaponType)
+                .filter(weapon => weapon.bond === undefined)
+                .filter(weapon => (finderOptions.removeExotics ? weapon.rarity !== ItemRarity.Exotic : true))
+                .map(createLegendaryWeaponBondWrapper)
+                .filter(filterPerksAndCells()),
     };
 };
 

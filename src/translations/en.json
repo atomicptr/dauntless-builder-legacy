@@ -82,6 +82,7 @@
             "dev-set-perks": "Set Perks",
             "filter-title": "Filter",
             "perks-title": "$t(terms.perks)",
+            "preselect-title": "Select Items",
             "remove-exotics": "Remove Exotic Items",
             "remove-legendary": "Remove Legendary Weapons",
             "title": "Build Finder"

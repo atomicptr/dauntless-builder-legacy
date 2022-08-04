@@ -1,7 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { WeaponType } from "@src/data/Weapon";
+import { Armour } from "@src/data/Armour";
+import { ItemType } from "@src/data/ItemType";
+import { Weapon, WeaponType } from "@src/data/Weapon";
 import { RootState } from "@src/store";
 import sortObjectByKeys from "@src/utils/sort-object-by-keys";
+import { match } from "ts-pattern";
 
 export interface AssignedPerkValue {
     [perkName: string]: number;
@@ -17,9 +20,19 @@ interface BuildFinderSelectionState {
     selectedPerks: AssignedPerkValue;
     removeExotics: boolean;
     removeLegendary: boolean;
+    pickerWeapon: Weapon | null;
+    pickerHead: Armour | null;
+    pickerTorso: Armour | null;
+    pickerArms: Armour | null;
+    pickerLegs: Armour | null;
 }
 
 const initialState: BuildFinderSelectionState = {
+    pickerArms: null,
+    pickerHead: null,
+    pickerLegs: null,
+    pickerTorso: null,
+    pickerWeapon: null,
     removeExotics: true,
     removeLegendary: true,
     selectedPerks: {},
@@ -45,6 +58,16 @@ export const buildFinderSelectionSlice = createSlice({
 
             state.selectedPerks = sortObjectByKeys(state.selectedPerks);
         },
+        setPicker: (state, action: PayloadAction<{ itemType: ItemType; item: Weapon | Armour | null }>) => {
+            const { itemType, item } = action.payload;
+            match(itemType)
+                .with(ItemType.Weapon, () => (state.pickerWeapon = item as Weapon))
+                .with(ItemType.Head, () => (state.pickerHead = item as Armour))
+                .with(ItemType.Torso, () => (state.pickerTorso = item as Armour))
+                .with(ItemType.Arms, () => (state.pickerArms = item as Armour))
+                .with(ItemType.Legs, () => (state.pickerLegs = item as Armour))
+                .run();
+        },
         setRemoveExotics: (state, action: PayloadAction<boolean>) => {
             state.removeExotics = action.payload;
         },
@@ -56,7 +79,7 @@ export const buildFinderSelectionSlice = createSlice({
 
 const initState = (state: BuildFinderSelectionState) => Object.assign({}, initialState, state);
 
-export const { setBuildFinderWeaponType, setPerkValue, clearPerks, setRemoveExotics, setRemoveLegendary } =
+export const { setBuildFinderWeaponType, setPerkValue, clearPerks, setRemoveExotics, setRemoveLegendary, setPicker } =
     buildFinderSelectionSlice.actions;
 
 export const selectBuildFinderSelection = (state: RootState) => initState(state.buildFinderSelection);
