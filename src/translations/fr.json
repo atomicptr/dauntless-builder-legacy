@@ -52,6 +52,7 @@
         "about": {
             "assets": "Assets",
             "assets-text": "Tous les assets liés à Dauntless sont la propriété intellectuelle de Phoenix Labs.",
+            "build-info": "Last update: {{buildString}}",
             "contributors": "Contributeurs",
             "dependencies": "Dépendances ({{number}})",
             "main-text": "Dauntless Builder est un logiciel libre et open source licencié selon les termes de la licence <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a>.",
@@ -109,104 +110,104 @@
         },
         "metabuilds": {
             "generated": {
-                "buildTitles": {
-                    "Agarus (K) Speed": "Agarus (K) Speed",
-                    "Agarus (K) Survival": "Agarus (K) Survival",
-                    "Agarus (Khara) Resolve": "Agarus (Khara) Resolve",
-                    "Agarus (Khara) Wound": "Agarus (Khara) Wound",
-                    "Agarus (Kharabak)": "Agarus (Kharabak)",
-                    "Charrogg": "Charrogg",
-                    "Chrono (R) Speed": "Chrono (R) Speed",
-                    "Chrono (Reza)": "Chrono (Reza)",
-                    "Chrono (Reza) Wound": "Chrono (Reza) Wound",
-                    "Chrono (V) Speed": "Chrono (V) Speed",
-                    "Chrono (V) Survival": "Chrono (V) Survival",
-                    "Chrono (Valo)": "Chrono (Valo)",
-                    "Chrono (Valo) Resolve": "Chrono (Valo) Resolve",
-                    "Chrono (Valo) Wound": "Chrono (Valo) Wound",
-                    "Disc Pred": "Discipline Prédateur",
-                    "Disc Sav": "Disc Sav",
-                    "Hellion": "Hellion",
-                    "Kharabak": "Kharabak",
-                    "Malk (S) Speed": "Malkarion (S) Vitesse",
-                    "Malk (S) Survival": "Malkarion (S) Survie",
-                    "Malk (Sahvyt)": "Malkarion (Sahvyt)",
-                    "Malk (Sahvyt) Resolve": "Malk (Sahvyt) Resolve",
-                    "Malk (Sahvyt) Wound": "Malkarion (Sahvyt) Mutilation",
-                    "Pangar": "Pangar",
-                    "Prismedic": "Grâce Prismatique médecin",
-                    "Rage Pred": "Rage Prédateur",
-                    "Rezakiri": "Rezakiri",
-                    "Riftstalker": "Riftstalker",
-                    "Sahvyt": "Sahvyt",
-                    "Thrax (R) Speed": "Thrax (R) Speed",
-                    "Thrax (R)Speed": "Thrax (R)Speed",
-                    "Thrax (Rift)": "Thrax (Rift)",
-                    "Thrax (Rift) Resolve": "Thrax (Rift) Resolve",
-                    "Thrax (Rift) Wound": "Thrax (Rift) Mutilation",
-                    "Torg (C) Speed": "Torgadoro (C) Vitesse",
-                    "Torg (C) Survival": "Torgadoro (C) Survie",
-                    "Torg (Charrogg)": "Torgadoro (Charrogg)",
-                    "Torg (Charrogg) Resolve": "Torg (Charrogg) Resolve",
-                    "Torg (H) Speed": "Torgadoro (H) Vitesse",
-                    "Torg (H) Survival": "Torgadoro (H) Survie",
-                    "Torg (Hellion)": "Torgadoro (Hellion)",
-                    "Torg (Hellion) Wound": "Torgadoro (Hellion) Mutilation",
-                    "Urska (Boreus)": "Urska (Boreus)",
-                    "Urska (F)    Speed": "Urska (F)    Speed",
-                    "Urska (F)  Speed": "Urska (F)  Speed",
-                    "Urska (F) Speed": "Urska (F) Speed",
-                    "Urska (F) Survival": "Urska (F) Survival",
-                    "Urska (Frostwulf)": "Urska (Frostwulf)",
-                    "Urska (Frostwülf)": "Urska (Frostwülf)",
-                    "Urska (Pangar)": "Urska (Pangar)",
-                    "Urska (Pangar) Resolve": "Urska (Pangar) Resolve",
-                    "Urska (Pangar) Wound": "Urska (Pangar) Wound",
-                    "Urska (Wülf) Resolve": "Urska (Wülf) Resolve",
-                    "Valomyr": "Valomyr"
-                },
                 "categories": {
-                    "Artificer": {
-                        "description": "Artificer possède un drone que vous pouvez contrôler qui a plusieurs fonctions en fonction de ce que vous visez :\nSi vous visez le sol, elle crée une aura de soin et de bouclier qui bloque les projectiles des Behemoths.\nSi vous ciblez un joueur, cela crée une aura de soin et de bouclier qui les suit.\nSi vous visez une Slayer à terre il la ressuscite et crée une aura de guérison et de bouclier qui les suit.\nSi vous ciblez un Behemoth, il marque un élément pour subir des dégâts supplémentaires.",
-                        "name": "Artificier"
+                    "Discipline": {
+                        "name": "Discipline",
+                        "description": "Discipline is a high-risk high-reward Omnicell, featuring a high damage parry ability that grants you stacks of critical damage if timed correctly and, at max stacks, grants you a high amount of critical chance."
+                    },
+                    "Revenant": {
+                        "name": "Spectre",
+                        "description": "Drainez jusqu'à 500 points de santé pour passer en état de Spectre et générer un Orbe du vide. Tous les 100 points de santé drainés, invoquez une Vigne obscure qui inflige d'importants dégâts obscurs. Si une Vigne obscure touche une cible, elle génère un Orbe du vide supplémentaire à l’impact. Ramasser un Orbe du vide confère une charge d’Énergie du vide, ce qui confère +4 % de dégâts et prolonge l’état de Spectre de 1 seconde. L’état de Spectre dure 15 secondes et empêche toute guérison.\nLorsque l’état de Spectre prend fin, chaque charge d’Énergie du vide confère 115 points de santé par seconde pendant 10 secondes."
+                    },
+                    "Tempest": {
+                        "name": "Tempête",
+                        "description": "Tempest features 10% passive attack speed bonus and the ability to build up stacks of Velocity when dodging through attacks. You spend the stacks to dash and deal damage based on how much movespeed you currently have. The movespeed bonus damage only applies to unbroken parts."
                     },
                     "Bastion": {
-                        "description": "Bastion permet d'augmenter la quantité de bouclier reçu et sa capacité passive permet de générer des boucliers basé sur un montant de dégâts.\nSa capacité active consomme tout le bouclier que vous avez actuellement et inflige des dégâts en fonction de la quantité de bouclier consommé. Abandonner la capacité active réduit considérablement vos dégâts potentiels.",
-                        "name": "Bastion"
+                        "name": "Bastion",
+                        "description": "Bastion permet d'augmenter la quantité de bouclier reçu et sa capacité passive permet de générer des boucliers basé sur un montant de dégâts.\nSa capacité active consomme tout le bouclier que vous avez actuellement et inflige des dégâts en fonction de la quantité de bouclier consommé. Abandonner la capacité active réduit considérablement vos dégâts potentiels."
                     },
-                    "Catalyst": {
-                        "description": "These are the best builds you can have for general hunting, maximizing damage and using Blitz tonics as your source of attack speed.\nRecommended tonics for maximum damage: Frenzy, Blitz, Aetherdrive.",
-                        "name": "Catalyse"
+                    "Artificer": {
+                        "name": "Artificier",
+                        "description": "Artificer possède un drone que vous pouvez contrôler qui a plusieurs fonctions en fonction de ce que vous visez :\nSi vous visez le sol, elle crée une aura de soin et de bouclier qui bloque les projectiles des Behemoths.\nSi vous ciblez un joueur, cela crée une aura de soin et de bouclier qui les suit.\nSi vous visez une Slayer à terre il la ressuscite et crée une aura de guérison et de bouclier qui les suit.\nSi vous ciblez un Behemoth, il marque un élément pour subir des dégâts supplémentaires."
                     },
-                    "Discipline": {
-                        "description": "Discipline is a high-risk high-reward Omnicell, featuring a high damage parry ability that grants you stacks of critical damage if timed correctly and, at max stacks, grants you a high amount of critical chance.",
-                        "name": "Discipline"
+                    "Iceborne": {
+                        "name": "Sang froid",
+                        "description": "Sang froid offre un vol de vie et une réduction des dégâts. Moins vous avez de santé plus les bonus cités précédement sont importants. Sa capacité active permet de projeter une lance de glace qui inflige des dégâts de givre. Ces dégâts sont doublés si votre santé est au maximum. Cela vous empêche égalment d'être étourdi et vous confère du vol de vie."
                     },
                     "Escalations": {
-                        "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear. ",
                         "name": "Ascensions",
+                        "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear. ",
                         "subcategoryDescription": {
-                            "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive. Bulwark for survivability.",
+                            "preEsca": "Build pour les ascensions. Ils ne contiennent pas de cellule issues des épreuve ni d'équipement d'ascension.",
                             "legendaries": "Builds for the various Escalations.",
-                            "preEsca": "Build pour les ascensions. Ils ne contiennent pas de cellule issues des épreuve ni d'équipement d'ascension."
+                            "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive. Bulwark for survivability."
                         }
                     },
                     "Exotics": {
-                        "description": "Ces builds utilisents des armes et armures exotiques. En dehors de la méta and généralement moins bon que les armes \"classiques\" à l'exeption du Jugement du Vullrogg.",
-                        "name": "Éxotiques"
+                        "name": "Éxotiques",
+                        "description": "Ces builds utilisents des armes et armures exotiques. En dehors de la méta and généralement moins bon que les armes \"classiques\" à l'exeption du Jugement du Vullrogg."
                     },
-                    "Iceborne": {
-                        "description": "Sang froid offre un vol de vie et une réduction des dégâts. Moins vous avez de santé plus les bonus cités précédement sont importants. Sa capacité active permet de projeter une lance de glace qui inflige des dégâts de givre. Ces dégâts sont doublés si votre santé est au maximum. Cela vous empêche égalment d'être étourdi et vous confère du vol de vie.",
-                        "name": "Sang froid"
-                    },
-                    "Revenant": {
-                        "description": "Drainez jusqu'à 500 points de santé pour passer en état de Spectre et générer un Orbe du vide. Tous les 100 points de santé drainés, invoquez une Vigne obscure qui inflige d'importants dégâts obscurs. Si une Vigne obscure touche une cible, elle génère un Orbe du vide supplémentaire à l’impact. Ramasser un Orbe du vide confère une charge d’Énergie du vide, ce qui confère +4 % de dégâts et prolonge l’état de Spectre de 1 seconde. L’état de Spectre dure 15 secondes et empêche toute guérison.\nLorsque l’état de Spectre prend fin, chaque charge d’Énergie du vide confère 115 points de santé par seconde pendant 10 secondes.",
-                        "name": "Spectre"
-                    },
-                    "Tempest": {
-                        "description": "Tempest features 10% passive attack speed bonus and the ability to build up stacks of Velocity when dodging through attacks. You spend the stacks to dash and deal damage based on how much movespeed you currently have. The movespeed bonus damage only applies to unbroken parts.",
-                        "name": "Tempête"
+                    "Catalyst": {
+                        "name": "Catalyse",
+                        "description": "These are the best builds you can have for general hunting, maximizing damage and using Blitz tonics as your source of attack speed.\nRecommended tonics for maximum damage: Frenzy, Blitz, Aetherdrive."
                     }
+                },
+                "buildTitles": {
+                    "Urska (Frostwulf)": "Urska (Frostwulf)",
+                    "Urska (Pangar) Resolve": "Urska (Pangar) Resolve",
+                    "Torg (Hellion)": "Torgadoro (Hellion)",
+                    "Torg (Charrogg)": "Torgadoro (Charrogg)",
+                    "Torg (Charrogg) Resolve": "Torg (Charrogg) Resolve",
+                    "Agarus (Kharabak)": "Agarus (Kharabak)",
+                    "Agarus (Khara) Resolve": "Agarus (Khara) Resolve",
+                    "Malk (Sahvyt)": "Malkarion (Sahvyt)",
+                    "Malk (Sahvyt) Resolve": "Malk (Sahvyt) Resolve",
+                    "Thrax (Rift)": "Thrax (Rift)",
+                    "Thrax (Rift) Resolve": "Thrax (Rift) Resolve",
+                    "Chrono (Valo)": "Chrono (Valo)",
+                    "Chrono (Valo) Resolve": "Chrono (Valo) Resolve",
+                    "Chrono (Reza)": "Chrono (Reza)",
+                    "Urska (Pangar)": "Urska (Pangar)",
+                    "Urska (Pangar) Wound": "Urska (Pangar) Wound",
+                    "Urska (Boreus)": "Urska (Boreus)",
+                    "Torg (Hellion) Wound": "Torgadoro (Hellion) Mutilation",
+                    "Agarus (Khara) Wound": "Agarus (Khara) Wound",
+                    "Malk (Sahvyt) Wound": "Malkarion (Sahvyt) Mutilation",
+                    "Thrax (Rift) Wound": "Thrax (Rift) Mutilation",
+                    "Chrono (Reza) Wound": "Chrono (Reza) Wound",
+                    "Chrono (Valo) Wound": "Chrono (Valo) Wound",
+                    "Pangar": "Pangar",
+                    "Hellion": "Hellion",
+                    "Charrogg": "Charrogg",
+                    "Kharabak": "Kharabak",
+                    "Sahvyt": "Sahvyt",
+                    "Riftstalker": "Riftstalker",
+                    "Valomyr": "Valomyr",
+                    "Rezakiri": "Rezakiri",
+                    "Urska (F) Speed": "Urska (F) Speed",
+                    "Urska (F) Survival": "Urska (F) Survival",
+                    "Urska (F)    Speed": "Urska (F)    Speed",
+                    "Urska (F)  Speed": "Urska (F)  Speed",
+                    "Torg (H) Speed": "Torgadoro (H) Vitesse",
+                    "Torg (H) Survival": "Torgadoro (H) Survie",
+                    "Torg (C) Speed": "Torgadoro (C) Vitesse",
+                    "Torg (C) Survival": "Torgadoro (C) Survie",
+                    "Agarus (K) Speed": "Agarus (K) Speed",
+                    "Agarus (K) Survival": "Agarus (K) Survival",
+                    "Malk (S) Speed": "Malkarion (S) Vitesse",
+                    "Malk (S) Survival": "Malkarion (S) Survie",
+                    "Thrax (R) Speed": "Thrax (R) Speed",
+                    "Thrax (R)Speed": "Thrax (R)Speed",
+                    "Chrono (V) Speed": "Chrono (V) Speed",
+                    "Chrono (V) Survival": "Chrono (V) Survival",
+                    "Chrono (R) Speed": "Chrono (R) Speed",
+                    "Disc Pred": "Discipline Prédateur",
+                    "Rage Pred": "Rage Prédateur",
+                    "Disc Sav": "Disc Sav",
+                    "Prismedic": "Grâce Prismatique médecin",
+                    "Urska (Frostwülf)": "Urska (Frostwülf)",
+                    "Urska (Wülf) Resolve": "Urska (Wülf) Resolve"
                 },
                 "title": "Builds Dauntless Méta - 1.10+"
             },
