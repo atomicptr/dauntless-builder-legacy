@@ -124,6 +124,8 @@ const createItemData = (
 ): FinderItemData => {
     const finderOptions = Object.assign({}, defaultFinderItemDataOptions, options);
 
+    const { pickerWeapon, pickerHead, pickerTorso, pickerArms, pickerLegs } = finderOptions;
+
     const filterPerksAndCells =
         (mode: (a: boolean, b: boolean) => boolean = orMode) =>
             (item: Weapon | Armour) =>
@@ -143,10 +145,10 @@ const createItemData = (
 
     const findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered = (type: ArmourType): Armour[] => {
         const prepickedItem = match<ArmourType, Armour | undefined | null>(type)
-            .with(ArmourType.Head, () => finderOptions.pickerHead)
-            .with(ArmourType.Torso, () => finderOptions.pickerTorso)
-            .with(ArmourType.Arms, () => finderOptions.pickerArms)
-            .with(ArmourType.Legs, () => finderOptions.pickerLegs)
+            .with(ArmourType.Head, () => pickerHead)
+            .with(ArmourType.Torso, () => pickerTorso)
+            .with(ArmourType.Arms, () => pickerArms)
+            .with(ArmourType.Legs, () => pickerLegs)
             .otherwise(() => null);
 
         if (prepickedItem) {
@@ -180,6 +182,11 @@ const createItemData = (
             return weapon;
         }
 
+        // picker weapon selected and it's not a legendary, don't create wrappers
+        if (pickerWeapon && pickerWeapon.bond === undefined) {
+            return weapon;
+        }
+
         // can't bond exotics
         if (weapon.rarity === ItemRarity.Exotic) {
             return weapon;
@@ -202,9 +209,11 @@ const createItemData = (
         return wrapperWeapon;
     };
 
-    const prepickedWeapon = finderOptions.pickerWeapon
-        ? [createLegendaryWeaponBondWrapper(finderOptions.pickerWeapon)]
-        : null;
+    const matchingWeapons = Object.values(dauntlessBuilderData.weapons)
+        .filter(weapon => weapon.type === weaponType)
+        .filter(weapon => weapon.bond === undefined)
+        .filter(weapon => (finderOptions.removeExotics ? weapon.rarity !== ItemRarity.Exotic : true))
+        .map(createLegendaryWeaponBondWrapper);
 
     return {
         arms: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Arms),
@@ -212,14 +221,9 @@ const createItemData = (
         lantern: findLanternByName(lanternName) as Lantern,
         legs: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Legs),
         torso: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Torso),
-        weapons:
-            prepickedWeapon ??
-            Object.values(dauntlessBuilderData.weapons)
-                .filter(weapon => weapon.type === weaponType)
-                .filter(weapon => weapon.bond === undefined)
-                .filter(weapon => (finderOptions.removeExotics ? weapon.rarity !== ItemRarity.Exotic : true))
-                .map(createLegendaryWeaponBondWrapper)
-                .filter(filterPerksAndCells()),
+        weapons: pickerWeapon
+            ? matchingWeapons.filter(weapon => weapon.name.startsWith(pickerWeapon.name))
+            : matchingWeapons.filter(filterPerksAndCells()),
     };
 };
 

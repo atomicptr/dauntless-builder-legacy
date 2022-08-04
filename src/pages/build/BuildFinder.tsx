@@ -1,4 +1,4 @@
-import { Error } from "@mui/icons-material";
+import { Clear, Error } from "@mui/icons-material";
 import {
     Alert,
     Box,
@@ -159,7 +159,11 @@ const BuildFinder: React.FC = () => {
                 return { [perk.name]: false };
             }
 
-            if (Object.values(selectedPerks).reduce((prev, cur) => prev + cur, 0) <= 18) {
+            const pickerSelectedCount = [pickerArms, pickerHead, pickerLegs, pickerTorso, pickerWeapon].filter(
+                p => !!p,
+            ).length;
+
+            if (pickerSelectedCount <= 3 && Object.values(selectedPerks).reduce((prev, cur) => prev + cur, 0) <= 18) {
                 return { [perk.name]: true };
             }
 
@@ -218,7 +222,17 @@ const BuildFinder: React.FC = () => {
 
         setIsDeterminingSelectablePerks(true);
         runWorkers();
-    }, [selectedPerks, weaponType, builds, finderOptions]);
+    }, [
+        selectedPerks,
+        weaponType,
+        builds,
+        finderOptions,
+        pickerArms,
+        pickerHead,
+        pickerLegs,
+        pickerTorso,
+        pickerWeapon,
+    ]);
 
     const perkFitsInEmptyCellSlot = (build: BuildModel, perk: Perk): boolean => {
         const makeCellArray = (cells: CellType | CellType[] | null | undefined): CellType[] => {
@@ -325,7 +339,10 @@ const BuildFinder: React.FC = () => {
             <PageTitle title={t("pages.build-finder.title")} />
 
             <WeaponTypeSelector
-                onChange={weaponType => dispatch(setBuildFinderWeaponType(weaponType))}
+                onChange={weaponType => {
+                    dispatch(setBuildFinderWeaponType(weaponType));
+                    dispatch(setPicker({ item: null, itemType: ItemType.Weapon }));
+                }}
                 value={weaponType}
             />
             <Typography variant="h5">{t("pages.build-finder.filter-title")}</Typography>
@@ -448,6 +465,7 @@ const BuildFinder: React.FC = () => {
                         {!isMobile && <Box sx={{ flexGrow: 2 }} />}
                         <Button
                             onClick={() => dispatch(clearPerks())}
+                            startIcon={<Clear />}
                             variant={isMobile ? "outlined" : undefined}
                         >
                             {t("pages.build-finder.dev-clear-perks")}
