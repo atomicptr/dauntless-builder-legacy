@@ -20,6 +20,7 @@ import BuildCard from "@src/components/BuildCard";
 import InputDialog from "@src/components/InputDialog";
 import ItemSelectDialog, {
     filterByArmourType,
+    filterByWeaponType,
     FilterFunc,
     filterRemoveExotics,
     filterRemoveLegendaries,
@@ -282,15 +283,24 @@ const BuildFinder: React.FC = () => {
 
     const onPickerClicked = (itemType: ItemType) => {
         const filters = match(itemType)
-            .with(ItemType.Weapon, () => [filterRemoveLegendaries()])
+            .with(
+                ItemType.Weapon,
+                () =>
+                    [
+                        weaponType ? filterByWeaponType(weaponType) : null,
+                        removeLegendary ? filterRemoveLegendaries() : null,
+                    ].filter(f => !!f) as FilterFunc[],
+            )
             .with(ItemType.Head, () => [filterByArmourType(ArmourType.Head)])
             .with(ItemType.Torso, () => [filterByArmourType(ArmourType.Torso)])
             .with(ItemType.Arms, () => [filterByArmourType(ArmourType.Arms)])
             .with(ItemType.Legs, () => [filterByArmourType(ArmourType.Legs)])
             .otherwise(() => []);
+
         if (removeExotics) {
             filters.push(filterRemoveExotics());
         }
+
         setItemSelectFilters(filters);
         setItemSelectDialogType(itemType);
         setItemSelectDialogOpen(true);
@@ -385,12 +395,6 @@ const BuildFinder: React.FC = () => {
                                     spacing={2}
                                 >
                                     <Button
-                                        onClick={() => dispatch(clearPerks())}
-                                        variant="outlined"
-                                    >
-                                        {t("pages.build-finder.dev-clear-perks")}
-                                    </Button>
-                                    <Button
                                         onClick={() => setInputDialogOpen(true)}
                                         variant="outlined"
                                     >
@@ -436,7 +440,19 @@ const BuildFinder: React.FC = () => {
 
             {weaponType !== null && (
                 <>
-                    <Typography variant="h5">{t("pages.build-finder.perks-title")}</Typography>
+                    <Stack
+                        direction={isMobile ? "column" : "row"}
+                        spacing={isMobile ? 2 : undefined}
+                    >
+                        <Typography variant="h5">{t("pages.build-finder.perks-title")}</Typography>
+                        {!isMobile && <Box sx={{ flexGrow: 2 }} />}
+                        <Button
+                            onClick={() => dispatch(clearPerks())}
+                            variant={isMobile ? "outlined" : undefined}
+                        >
+                            {t("pages.build-finder.dev-clear-perks")}
+                        </Button>
+                    </Stack>
 
                     {isDeterminingSelectablePerks ? <LinearProgress /> : null}
 
