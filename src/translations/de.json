@@ -52,7 +52,7 @@
         "about": {
             "assets": "Assets",
             "assets-text": "Alle mit Dauntless zusammenhängenden Assets sind das geistige Eigentum von Phoenix Labs.",
-            "build-info": "Last update: {{buildString}}",
+            "build-info": "Letztes Update: {{buildString}}",
             "contributors": "Mitmacher",
             "dependencies": "Abhängigkeiten ({{number}})",
             "main-text": "Dauntless Builder ist freie und quelloffene Software lizensiert unter den Bedingungen der <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> Lizenz.",
@@ -75,13 +75,16 @@
         },
         "build-finder": {
             "builds-title": "Builds ({{num}})",
-            "dev-clear-perks": "Alle Skills entfernen",
+            "clear-items": "Clear Items",
+            "clear-perks": "Clear All Perks",
             "dev-number-of-builds": "Anzahl der Builds: {{num}}",
             "dev-number-of-perks": "Anzahl der ausgewählten Fähigkeiten: {{num}}",
             "dev-options-title": "Entwickler Einstellungen",
             "dev-set-perks": "Skills direkt setzen",
+            "filter-perks": "Filter Perks...",
             "filter-title": "Filter",
             "perks-title": "$t(terms.perks)",
+            "preselect-title": "Select Items",
             "remove-exotics": "Exotische Items entfernen",
             "remove-legendary": "Legendäre Waffen entfernen",
             "title": "Build Finder"

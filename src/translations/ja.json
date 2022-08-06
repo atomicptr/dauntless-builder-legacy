@@ -75,13 +75,16 @@
         },
         "build-finder": {
             "builds-title": "Builds ({{num}})",
-            "dev-clear-perks": "Clear All Perks",
+            "clear-items": "Clear Items",
+            "clear-perks": "Clear All Perks",
             "dev-number-of-builds": "Number of Builds: {{num}}",
             "dev-number-of-perks": "Number of Perks selected: {{num}}",
             "dev-options-title": "開発者向けオプション",
             "dev-set-perks": "パークを選択",
+            "filter-perks": "Filter Perks...",
             "filter-title": "フィルター",
             "perks-title": "$t(terms.perks)",
+            "preselect-title": "Select Items",
             "remove-exotics": "Remove Exotic Items",
             "remove-legendary": "Remove Legendary Weapons",
             "title": "ビルドファインダー"

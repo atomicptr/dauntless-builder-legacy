@@ -205,8 +205,9 @@ const approveTranslationsWhichAreReferences = async () => {
 };
 
 const main = async () => {
-    const skipReferenceCheck = process.argv.some(arg => arg === "--skip-reference-check");
-    const forceRebuild = process.argv.some(arg => arg === "--force-rebuild");
+    const skipReferenceCheck =
+        process.argv.some(arg => arg === "--skip-reference-check") || !!process.env.CROWDIN_SKIP_REFERENCE_CHECK;
+    const forceRebuild = process.argv.some(arg => arg === "--force-rebuild") || !!process.env.CROWDIN_FORCE_REBUILD;
 
     if (!skipReferenceCheck) {
         console.log("[crowdin] Try to approve all translations which are references.");

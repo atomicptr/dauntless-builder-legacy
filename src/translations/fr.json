@@ -75,13 +75,16 @@
         },
         "build-finder": {
             "builds-title": "Nombre de Builds trouver ({{num}})",
-            "dev-clear-perks": "Effacer tous les effets",
+            "clear-items": "Clear Items",
+            "clear-perks": "Clear All Perks",
             "dev-number-of-builds": "Nombre de builds: {{num}}",
             "dev-number-of-perks": "Nombre d'effets sélectionnés: {{num}}",
             "dev-options-title": "Option de développement",
             "dev-set-perks": "Définir les effets",
+            "filter-perks": "Filter Perks...",
             "filter-title": "Filtre",
             "perks-title": "$t(terms.perks)",
+            "preselect-title": "Select Items",
             "remove-exotics": "Enlever les équipements éxotiques",
             "remove-legendary": "Enlever les armes légendaires",
             "title": "Trouver un build"
