@@ -346,6 +346,7 @@ const BuildFinder: React.FC = () => {
         (perk: Perk, count: number) => (
             <PerkTooltip
                 count={count}
+                filterLevels={["3", "6"]}
                 perk={perk}
                 withDescription
             />

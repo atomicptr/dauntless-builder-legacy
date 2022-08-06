@@ -10,11 +10,14 @@ interface PerkTooltipProps {
     perk: Perk;
     count: number;
     withDescription?: boolean;
+    filterLevels?: string[];
 }
 
-const PerkTooltip: React.FC<PerkTooltipProps> = ({ perk, count, withDescription }) => {
+const PerkTooltip: React.FC<PerkTooltipProps> = ({ perk, count, withDescription, filterLevels = [] }) => {
     const theme = useTheme();
     const { t } = useTranslation();
+
+    filterLevels ??= [];
 
     return (
         <Box>
@@ -24,8 +27,9 @@ const PerkTooltip: React.FC<PerkTooltipProps> = ({ perk, count, withDescription 
                 </Box>
             )}
 
-            {count > 0 &&
-                Object.keys(perk.effects).map(id => (
+            {Object.keys(perk.effects)
+                .filter(id => (filterLevels.length > 0 ? filterLevels.indexOf(id) > -1 : true))
+                .map(id => (
                     <Box
                         key={id}
                         sx={{ color: theme.palette.grey[id === Math.max(0, Math.min(6, count)).toString() ? 50 : 400] }}
