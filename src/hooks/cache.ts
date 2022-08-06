@@ -53,7 +53,7 @@ export const useCache = <T>(name: string, factory: () => T, dependencies: unknow
     return data;
 };
 
-export const useCacheAsync = async <T>(
+export const cacheAsync = async <T>(
     name: string,
     factory: () => Promise<T>,
     dependencies: unknown[] = [],
@@ -73,7 +73,3 @@ export const useCacheAsync = async <T>(
 
     return data;
 };
-
-// This exists because react-hooks/rules-of-hooks doesn't allow us to re-use this somewhere else because it is kinda
-// a hook but works perfectly fine even if you use it outside react components
-export const cacheAsync = useCacheAsync;

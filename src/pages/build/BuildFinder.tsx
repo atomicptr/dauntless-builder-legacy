@@ -245,7 +245,7 @@ const BuildFinder: React.FC = () => {
 
                     return newCanBeAddedMap;
                 },
-                [selectedPerks, weaponType, finderOptions],
+                [selectedPerks, weaponType, builds, finderOptions],
             );
 
             setCanPerkBeAdded(newCanBeAddedMap);
