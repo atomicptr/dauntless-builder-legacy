@@ -28,10 +28,12 @@ import ItemSelectDialog, {
 import MiniItemPicker from "@src/components/MiniItemPicker";
 import PageTitle from "@src/components/PageTitle";
 import { perkData } from "@src/components/PerkList";
+import RarityCard from "@src/components/RarityCard";
 import WeaponTypeSelector from "@src/components/WeaponTypeSelector";
 import { Armour, ArmourType } from "@src/data/Armour";
 import { BuildModel } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
+import { ItemRarity } from "@src/data/ItemRarity";
 import { ItemType } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
 import { Weapon, WeaponType } from "@src/data/Weapon";
@@ -504,8 +506,16 @@ const BuildFinder: React.FC = () => {
                                     direction="row"
                                     spacing={1}
                                 >
-                                    <Card
+                                    <RarityCard
+                                        disabled={!canAddPerk(perk)}
                                         elevation={canAddPerk(perk) ? 1 : 0}
+                                        rarity={
+                                            selectedPerks[perk.name] === 6
+                                                ? ItemRarity.Epic
+                                                : selectedPerks[perk.name] === 3
+                                                    ? ItemRarity.Uncommon
+                                                    : undefined
+                                        }
                                         sx={{ flexGrow: 2 }}
                                     >
                                         <CardActionArea
@@ -518,7 +528,7 @@ const BuildFinder: React.FC = () => {
                                                 {renderPerkLevel(perk)}
                                             </CardContent>
                                         </CardActionArea>
-                                    </Card>
+                                    </RarityCard>
 
                                     {perk.name in selectedPerks && (
                                         <Card sx={{ width: "50px" }}>
