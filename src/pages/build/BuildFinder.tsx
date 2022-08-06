@@ -14,6 +14,7 @@ import {
     LinearProgress,
     Skeleton,
     Stack,
+    Tooltip,
     Typography,
 } from "@mui/material";
 import BuildCard from "@src/components/BuildCard";
@@ -28,6 +29,7 @@ import ItemSelectDialog, {
 import MiniItemPicker from "@src/components/MiniItemPicker";
 import PageTitle from "@src/components/PageTitle";
 import { perkData } from "@src/components/PerkList";
+import PerkTooltip from "@src/components/PerkTooltip";
 import RarityCard from "@src/components/RarityCard";
 import WeaponTypeSelector from "@src/components/WeaponTypeSelector";
 import { Armour, ArmourType } from "@src/data/Armour";
@@ -321,6 +323,17 @@ const BuildFinder: React.FC = () => {
         setItemSelectDialogOpen(true);
     };
 
+    const renderToolTip = useCallback(
+        (perk: Perk, count: number) => (
+            <PerkTooltip
+                count={count}
+                perk={perk}
+                withDescription
+            />
+        ),
+        [],
+    );
+
     if (webworkerDisabled) {
         return (
             <Alert
@@ -506,29 +519,35 @@ const BuildFinder: React.FC = () => {
                                     direction="row"
                                     spacing={1}
                                 >
-                                    <RarityCard
-                                        disabled={!canAddPerk(perk)}
-                                        elevation={canAddPerk(perk) ? 1 : 0}
-                                        rarity={
-                                            selectedPerks[perk.name] === 6
-                                                ? ItemRarity.Epic
-                                                : selectedPerks[perk.name] === 3
-                                                    ? ItemRarity.Uncommon
-                                                    : undefined
-                                        }
-                                        sx={{ flexGrow: 2 }}
+                                    <Tooltip
+                                        arrow
+                                        followCursor
+                                        title={renderToolTip(perk, selectedPerks[perk.name] ?? 0)}
                                     >
-                                        <CardActionArea
+                                        <RarityCard
                                             disabled={!canAddPerk(perk)}
-                                            onClick={() => onPerkClicked(perk)}
+                                            elevation={canAddPerk(perk) ? 1 : 0}
+                                            rarity={
+                                                selectedPerks[perk.name] === 6
+                                                    ? ItemRarity.Epic
+                                                    : selectedPerks[perk.name] === 3
+                                                        ? ItemRarity.Uncommon
+                                                        : undefined
+                                            }
+                                            sx={{ flexGrow: 2 }}
                                         >
-                                            <CardContent>
-                                                {t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))}
-                                                {" "}
-                                                {renderPerkLevel(perk)}
-                                            </CardContent>
-                                        </CardActionArea>
-                                    </RarityCard>
+                                            <CardActionArea
+                                                disabled={!canAddPerk(perk)}
+                                                onClick={() => onPerkClicked(perk)}
+                                            >
+                                                <CardContent>
+                                                    {t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))}
+                                                    {" "}
+                                                    {renderPerkLevel(perk)}
+                                                </CardContent>
+                                            </CardActionArea>
+                                        </RarityCard>
+                                    </Tooltip>
 
                                     {perk.name in selectedPerks && (
                                         <Card sx={{ width: "50px" }}>

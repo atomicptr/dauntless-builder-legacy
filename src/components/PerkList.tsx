@@ -1,15 +1,6 @@
 import { Cake, Warning } from "@mui/icons-material";
-import {
-    Box,
-    List,
-    ListItem,
-    ListItemIcon,
-    ListItemText,
-    ListSubheader,
-    Stack,
-    Tooltip,
-    useTheme,
-} from "@mui/material";
+import { List, ListItem, ListItemIcon, ListItemText, ListSubheader, Tooltip } from "@mui/material";
+import PerkTooltip from "@src/components/PerkTooltip";
 import { BuildModel, findCellByVariantName, findPerkByName } from "@src/data/BuildModel";
 import { ItemType } from "@src/data/ItemType";
 import { Perk, PerkValue } from "@src/data/Perks";
@@ -18,35 +9,26 @@ import useIsLightMode from "@src/hooks/light-mode";
 import { useAppSelector } from "@src/hooks/redux";
 import i18n from "@src/i18n";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
-import React from "react";
+import React, { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 
 const PerkList: React.FC = () => {
     const build = useAppSelector(selectBuild);
     const { t } = useTranslation();
 
-    const theme = useTheme();
     const isLightMode = useIsLightMode();
 
     const sortedPerks = perkData(build);
 
-    const renderToolTip = (perk: Perk, count: number) => (
-        <Box>
-            {Object.keys(perk.effects).map(id => (
-                <Box
-                    key={id}
-                    sx={{ color: theme.palette.grey[id === Math.max(0, Math.min(6, count)).toString() ? 50 : 400] }}
-                >
-                    <Stack
-                        direction="row"
-                        spacing={1}
-                    >
-                        <Box sx={{ whiteSpace: "nowrap" }}>{`+ ${id}`}</Box>
-                        <Box>{perkEffectDescriptionById(perk, id)}</Box>
-                    </Stack>
-                </Box>
-            ))}
-        </Box>
+    const renderToolTip = useCallback(
+        (perk: Perk, count: number) => (
+            <PerkTooltip
+                count={count}
+                perk={perk}
+                withDescription
+            />
+        ),
+        [],
     );
 
     return (
