@@ -94,7 +94,10 @@ const BuildCard: React.FC<BuildCardProps> = ({ build, buildId, title, miniMode }
     const BuildFlagIcon = () => {
         if (build?.hasFlag(BuildFlags.InvalidBuild)) {
             return (
-                <Tooltip title={t("components.build-warning.invalid-build")}>
+                <Tooltip
+                    disableTouchListener
+                    title={t("components.build-warning.invalid-build")}
+                >
                     <Error />
                 </Tooltip>
             );
@@ -102,7 +105,10 @@ const BuildCard: React.FC<BuildCardProps> = ({ build, buildId, title, miniMode }
 
         if (build?.hasFlag(BuildFlags.UpgradedBuild)) {
             return (
-                <Tooltip title={t("components.build-warning.upgraded-build")}>
+                <Tooltip
+                    disableTouchListener
+                    title={t("components.build-warning.upgraded-build")}
+                >
                     <Warning />
                 </Tooltip>
             );
@@ -220,6 +226,7 @@ const BuildCard: React.FC<BuildCardProps> = ({ build, buildId, title, miniMode }
                                     item
                                 >
                                     <Tooltip
+                                        disableTouchListener
                                         title={perkEffectDescriptionById(
                                             perkData.data,
                                             Math.min(perkData.count, 6).toString(),

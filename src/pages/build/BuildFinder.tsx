@@ -581,6 +581,7 @@ const BuildFinder: React.FC = () => {
                                         >
                                             <Tooltip
                                                 arrow
+                                                disableTouchListener
                                                 followCursor
                                                 title={renderToolTip(perk, selectedPerks[perk.name] ?? 0)}
                                             >
