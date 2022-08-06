@@ -382,7 +382,26 @@ const BuildFinder: React.FC = () => {
                 />
             </FormGroup>
 
-            <Typography variant="h5">{t("pages.build-finder.preselect-title")}</Typography>
+            <Stack
+                direction={isMobile ? "column" : "row"}
+                spacing={isMobile ? 2 : undefined}
+            >
+                <Typography variant="h5">{t("pages.build-finder.preselect-title")}</Typography>
+                {!isMobile && <Box sx={{ flexGrow: 2 }} />}
+                <Button
+                    onClick={() => {
+                        dispatch(setPicker({ item: null, itemType: ItemType.Weapon }));
+                        dispatch(setPicker({ item: null, itemType: ItemType.Head }));
+                        dispatch(setPicker({ item: null, itemType: ItemType.Torso }));
+                        dispatch(setPicker({ item: null, itemType: ItemType.Arms }));
+                        dispatch(setPicker({ item: null, itemType: ItemType.Legs }));
+                    }}
+                    startIcon={<Clear />}
+                    variant={isMobile ? "outlined" : undefined}
+                >
+                    {t("pages.build-finder.clear-items")}
+                </Button>
+            </Stack>
 
             <Stack
                 direction={isMobile ? "column" : "row"}

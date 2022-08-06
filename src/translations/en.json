@@ -75,6 +75,7 @@
         },
         "build-finder": {
             "builds-title": "Builds ({{num}})",
+            "clear-items": "Clear Items",
             "dev-clear-perks": "Clear All Perks",
             "dev-number-of-builds": "Number of Builds: {{num}}",
             "dev-number-of-perks": "Number of Perks selected: {{num}}",
