@@ -365,49 +365,47 @@ const MetaBuilds: React.FC = () => {
                 value={weaponType}
             />
 
-            {weaponType !== null && (
+            <Box>
                 <Box>
-                    <Box>
-                        <Tabs
-                            allowScrollButtonsMobile
-                            onChange={(_ev, category) => dispatch(setBuildCategoryIndex(category))}
-                            scrollButtons
-                            value={buildCategoryIndex}
-                            variant="scrollable"
-                        >
-                            {metaBuildsJson.categories.map((category, index) => (
-                                <Tab
-                                    key={index}
-                                    disabled={!hasBuilds(category.name)}
-                                    label={t(`pages.metabuilds.generated.categories.${category.name}.name`)}
-                                />
-                            ))}
-                        </Tabs>
-                    </Box>
-                    {metaBuildsJson.categories.map((category, index) => (
-                        <TabPanel
-                            key={index}
-                            index={index}
-                            value={buildCategoryIndex}
-                        >
-                            {category.name in builds[weaponType] && (
-                                <>
-                                    <Typography>
-                                        {t(`pages.metabuilds.generated.categories.${category.name}.description`)}
-                                    </Typography>
-
-                                    <Stack
-                                        spacing={2}
-                                        sx={{ mt: 2 }}
-                                    >
-                                        {renderSubcategories(builds[weaponType][category.name])}
-                                    </Stack>
-                                </>
-                            )}
-                        </TabPanel>
-                    ))}
+                    <Tabs
+                        allowScrollButtonsMobile
+                        onChange={(_ev, category) => dispatch(setBuildCategoryIndex(category))}
+                        scrollButtons
+                        value={buildCategoryIndex}
+                        variant="scrollable"
+                    >
+                        {metaBuildsJson.categories.map((category, index) => (
+                            <Tab
+                                key={index}
+                                disabled={!hasBuilds(category.name)}
+                                label={t(`pages.metabuilds.generated.categories.${category.name}.name`)}
+                            />
+                        ))}
+                    </Tabs>
                 </Box>
-            )}
+                {metaBuildsJson.categories.map((category, index) => (
+                    <TabPanel
+                        key={index}
+                        index={index}
+                        value={buildCategoryIndex}
+                    >
+                        {category.name in builds[weaponType] && (
+                            <>
+                                <Typography>
+                                    {t(`pages.metabuilds.generated.categories.${category.name}.description`)}
+                                </Typography>
+
+                                <Stack
+                                    spacing={2}
+                                    sx={{ mt: 2 }}
+                                >
+                                    {renderSubcategories(builds[weaponType][category.name])}
+                                </Stack>
+                            </>
+                        )}
+                    </TabPanel>
+                ))}
+            </Box>
         </Stack>
     );
 };

@@ -300,10 +300,9 @@ const BuildFinder: React.FC = () => {
             .with(
                 ItemType.Weapon,
                 () =>
-                    [
-                        weaponType ? filterByWeaponType(weaponType) : null,
-                        removeLegendary ? filterRemoveLegendaries() : null,
-                    ].filter(f => !!f) as FilterFunc[],
+                    [filterByWeaponType(weaponType), removeLegendary ? filterRemoveLegendaries() : null].filter(
+                        f => !!f,
+                    ) as FilterFunc[],
             )
             .with(ItemType.Head, () => [filterByArmourType(ArmourType.Head)])
             .with(ItemType.Torso, () => [filterByArmourType(ArmourType.Torso)])
@@ -455,142 +454,138 @@ const BuildFinder: React.FC = () => {
                 </>
             )}
 
-            {weaponType !== null && (
-                <>
-                    <Stack
-                        direction={isMobile ? "column" : "row"}
-                        spacing={isMobile ? 2 : undefined}
-                    >
-                        <Typography variant="h5">{t("pages.build-finder.perks-title")}</Typography>
-                        {!isMobile && <Box sx={{ flexGrow: 2 }} />}
-                        <Button
-                            onClick={() => dispatch(clearPerks())}
-                            startIcon={<Clear />}
-                            variant={isMobile ? "outlined" : undefined}
-                        >
-                            {t("pages.build-finder.dev-clear-perks")}
-                        </Button>
-                    </Stack>
+            <Stack
+                direction={isMobile ? "column" : "row"}
+                spacing={isMobile ? 2 : undefined}
+            >
+                <Typography variant="h5">{t("pages.build-finder.perks-title")}</Typography>
+                {!isMobile && <Box sx={{ flexGrow: 2 }} />}
+                <Button
+                    onClick={() => dispatch(clearPerks())}
+                    startIcon={<Clear />}
+                    variant={isMobile ? "outlined" : undefined}
+                >
+                    {t("pages.build-finder.dev-clear-perks")}
+                </Button>
+            </Stack>
 
-                    {isDeterminingSelectablePerks ? <LinearProgress /> : null}
+            {isDeterminingSelectablePerks ? <LinearProgress /> : null}
 
+            <Grid
+                container
+                gap={1}
+            >
+                {Object.keys(perks).map(cellType => (
                     <Grid
-                        container
-                        gap={1}
+                        key={cellType}
+                        item
+                        sx={{ flexGrow: 1 }}
+                        xs={isMobile ? 12 : undefined}
                     >
-                        {Object.keys(perks).map(cellType => (
-                            <Grid
-                                key={cellType}
-                                item
-                                sx={{ flexGrow: 1 }}
-                                xs={isMobile ? 12 : undefined}
+                        <Stack spacing={1}>
+                            <Stack
+                                spacing={1}
+                                sx={{ alignItems: "center", my: 2 }}
                             >
-                                <Stack spacing={1}>
-                                    <Stack
-                                        spacing={1}
-                                        sx={{ alignItems: "center", my: 2 }}
-                                    >
-                                        <img
-                                            src={`/assets/icons/perks/${cellType}.png`}
-                                            style={{
-                                                filter: isLightMode ? "invert(100%)" : undefined,
-                                                height: "64px",
-                                                width: "64px",
-                                            }}
-                                        />
-                                        <Typography>{t(`terms.cell-type.${cellType}`)}</Typography>
-                                    </Stack>
+                                <img
+                                    src={`/assets/icons/perks/${cellType}.png`}
+                                    style={{
+                                        filter: isLightMode ? "invert(100%)" : undefined,
+                                        height: "64px",
+                                        width: "64px",
+                                    }}
+                                />
+                                <Typography>{t(`terms.cell-type.${cellType}`)}</Typography>
+                            </Stack>
 
-                                    {perks[cellType as keyof typeof perks].map((perk: Perk) => (
-                                        <Stack
-                                            key={perk.name}
-                                            direction="row"
-                                            spacing={1}
+                            {perks[cellType as keyof typeof perks].map((perk: Perk) => (
+                                <Stack
+                                    key={perk.name}
+                                    direction="row"
+                                    spacing={1}
+                                >
+                                    <Card
+                                        elevation={canAddPerk(perk) ? 1 : 0}
+                                        sx={{ flexGrow: 2 }}
+                                    >
+                                        <CardActionArea
+                                            disabled={!canAddPerk(perk)}
+                                            onClick={() => onPerkClicked(perk)}
                                         >
-                                            <Card
-                                                elevation={canAddPerk(perk) ? 1 : 0}
-                                                sx={{ flexGrow: 2 }}
+                                            <CardContent>
+                                                {t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))}
+                                                {" "}
+                                                {renderPerkLevel(perk)}
+                                            </CardContent>
+                                        </CardActionArea>
+                                    </Card>
+
+                                    {perk.name in selectedPerks && (
+                                        <Card sx={{ width: "50px" }}>
+                                            <CardActionArea
+                                                disabled={isDeterminingSelectablePerks}
+                                                onClick={() =>
+                                                    dispatch(
+                                                        setPerkValue({
+                                                            perkName: perk.name,
+                                                            value: Math.max(0, selectedPerks[perk.name] - 3),
+                                                        }),
+                                                    )
+                                                }
+                                                sx={{
+                                                    alignItems: "center",
+                                                    display: "flex",
+                                                    height: "100%",
+                                                    justifyContent: "center",
+                                                    width: "100%",
+                                                }}
                                             >
-                                                <CardActionArea
-                                                    disabled={!canAddPerk(perk)}
-                                                    onClick={() => onPerkClicked(perk)}
-                                                >
-                                                    <CardContent>
-                                                        {t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))}
-                                                        {" "}
-                                                        {renderPerkLevel(perk)}
-                                                    </CardContent>
-                                                </CardActionArea>
-                                            </Card>
-
-                                            {perk.name in selectedPerks && (
-                                                <Card sx={{ width: "50px" }}>
-                                                    <CardActionArea
-                                                        disabled={isDeterminingSelectablePerks}
-                                                        onClick={() =>
-                                                            dispatch(
-                                                                setPerkValue({
-                                                                    perkName: perk.name,
-                                                                    value: Math.max(0, selectedPerks[perk.name] - 3),
-                                                                }),
-                                                            )
-                                                        }
-                                                        sx={{
-                                                            alignItems: "center",
-                                                            display: "flex",
-                                                            height: "100%",
-                                                            justifyContent: "center",
-                                                            width: "100%",
-                                                        }}
-                                                    >
-                                                        <Box>
-                                                            <BiMinus />
-                                                        </Box>
-                                                    </CardActionArea>
-                                                </Card>
-                                            )}
-                                        </Stack>
-                                    ))}
+                                                <Box>
+                                                    <BiMinus />
+                                                </Box>
+                                            </CardActionArea>
+                                        </Card>
+                                    )}
                                 </Stack>
-                            </Grid>
-                        ))}
-                    </Grid>
-
-                    {(isDeterminingSelectablePerks || isSearchingBuilds) && (
-                        <Box
-                            display="flex"
-                            justifyContent="center"
-                        >
-                            <CircularProgress />
-                        </Box>
-                    )}
-
-                    {!isDeterminingSelectablePerks && !isSearchingBuilds && Object.keys(selectedPerks).length > 0 && (
-                        <>
-                            <Typography variant="h5">
-                                {t("pages.build-finder.builds-title", {
-                                    num: Math.min(builds.length, buildDisplayLimit),
-                                })}
-                            </Typography>
-                            {builds.slice(0, buildDisplayLimit).map((build, index) => (
-                                <Box key={index}>
-                                    <LazyLoadComponent
-                                        placeholder={
-                                            <Skeleton
-                                                height={300}
-                                                variant={"rectangular"}
-                                                width="100%"
-                                            />
-                                        }
-                                    >
-                                        <Box>
-                                            <BuildCard build={build} />
-                                        </Box>
-                                    </LazyLoadComponent>
-                                </Box>
                             ))}
-                        </>
-                    )}
+                        </Stack>
+                    </Grid>
+                ))}
+            </Grid>
+
+            {(isDeterminingSelectablePerks || isSearchingBuilds) && (
+                <Box
+                    display="flex"
+                    justifyContent="center"
+                >
+                    <CircularProgress />
+                </Box>
+            )}
+
+            {!isDeterminingSelectablePerks && !isSearchingBuilds && Object.keys(selectedPerks).length > 0 && (
+                <>
+                    <Typography variant="h5">
+                        {t("pages.build-finder.builds-title", {
+                            num: Math.min(builds.length, buildDisplayLimit),
+                        })}
+                    </Typography>
+                    {builds.slice(0, buildDisplayLimit).map((build, index) => (
+                        <Box key={index}>
+                            <LazyLoadComponent
+                                placeholder={
+                                    <Skeleton
+                                        height={300}
+                                        variant={"rectangular"}
+                                        width="100%"
+                                    />
+                                }
+                            >
+                                <Box>
+                                    <BuildCard build={build} />
+                                </Box>
+                            </LazyLoadComponent>
+                        </Box>
+                    ))}
                 </>
             )}
 

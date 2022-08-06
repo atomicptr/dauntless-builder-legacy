@@ -3,7 +3,7 @@ import { WeaponType } from "@src/data/Weapon";
 import { RootState } from "@src/store";
 
 interface MetaBuildsSelectionState {
-    weaponType: WeaponType | null;
+    weaponType: WeaponType;
     buildCategoryIndex: number;
     showNote: boolean;
 }
@@ -11,7 +11,7 @@ interface MetaBuildsSelectionState {
 const initialState: MetaBuildsSelectionState = {
     buildCategoryIndex: 0,
     showNote: true,
-    weaponType: null,
+    weaponType: WeaponType.Sword,
 };
 
 export const metaBuildsSelectionSlice = createSlice({
