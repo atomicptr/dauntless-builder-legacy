@@ -55,9 +55,11 @@ import {
 import {
     convertFindBuildResultsToBuildModel,
     FinderItemDataOptions,
+    MatchingBuild,
     perks,
 } from "@src/features/build-finder/find-builds";
 import { selectConfiguration } from "@src/features/configuration/configuration-slice";
+import { cacheAsync } from "@src/hooks/cache";
 import useIsMobile from "@src/hooks/is-mobile";
 import useIsLightMode from "@src/hooks/light-mode";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
@@ -83,6 +85,7 @@ const findBuilds = async (
     requestedPerks: AssignedPerkValue,
     maxBuilds: number,
     options: FinderItemDataOptions = {},
+    useCache = true,
 ): Promise<BuildModel[]> => {
     const buildFinder = webworkerDisabled ? null : new BuildFinderWorker();
 
@@ -91,14 +94,27 @@ const findBuilds = async (
         return Promise.resolve([]);
     }
 
-    return new Promise(resolve => {
-        buildFinder.postMessage({ maxBuilds, options, requestedPerks, weaponType });
+    const fetchBuilds = async () => {
+        return new Promise<MatchingBuild[]>(resolve => {
+            buildFinder.postMessage({ maxBuilds, options, requestedPerks, weaponType });
 
-        buildFinder.addEventListener("message", message => {
-            const builds = message.data;
-            resolve(convertFindBuildResultsToBuildModel(builds));
+            buildFinder.addEventListener("message", message => {
+                const builds = message.data;
+                resolve(builds);
+            });
         });
-    });
+    };
+
+    const builds = useCache
+        ? await cacheAsync<MatchingBuild[]>("findBuilds", async () => await fetchBuilds(), [
+            maxBuilds,
+            options,
+            requestedPerks,
+            weaponType,
+        ])
+        : await fetchBuilds();
+
+    return convertFindBuildResultsToBuildModel(builds);
 };
 
 const BuildFinder: React.FC = () => {
@@ -167,6 +183,7 @@ const BuildFinder: React.FC = () => {
                 return { [perk.name]: false };
             }
 
+            const { pickerArms, pickerHead, pickerLegs, pickerTorso, pickerWeapon } = finderOptions;
             const pickerSelectedCount = [pickerArms, pickerHead, pickerLegs, pickerTorso, pickerWeapon].filter(
                 p => !!p,
             ).length;
@@ -210,18 +227,26 @@ const BuildFinder: React.FC = () => {
         };
 
         const runWorkers = async () => {
-            log.timer("determineAvailablePerks");
-            const result = await Promise.all(
-                Object.values(perks)
-                    .flat()
-                    .map(perk => canBeAdded(builds, perk)),
+            const newCanBeAddedMap = await cacheAsync(
+                "finderPerksCanBeAdded",
+                async () => {
+                    log.timer("determineAvailablePerks");
+                    const result = await Promise.all(
+                        Object.values(perks)
+                            .flat()
+                            .map(perk => canBeAdded(builds, perk)),
+                    );
+
+                    let newCanBeAddedMap = {};
+
+                    result.forEach(resultMap => {
+                        newCanBeAddedMap = { ...newCanBeAddedMap, ...resultMap };
+                    });
+
+                    return newCanBeAddedMap;
+                },
+                [selectedPerks, weaponType, finderOptions],
             );
-
-            let newCanBeAddedMap = {};
-
-            result.forEach(resultMap => {
-                newCanBeAddedMap = { ...newCanBeAddedMap, ...resultMap };
-            });
 
             setCanPerkBeAdded(newCanBeAddedMap);
             log.timerEnd("determineAvailablePerks");
@@ -230,17 +255,7 @@ const BuildFinder: React.FC = () => {
 
         setIsDeterminingSelectablePerks(true);
         runWorkers();
-    }, [
-        selectedPerks,
-        weaponType,
-        builds,
-        finderOptions,
-        pickerArms,
-        pickerHead,
-        pickerLegs,
-        pickerTorso,
-        pickerWeapon,
-    ]);
+    }, [selectedPerks, weaponType, builds, finderOptions]);
 
     const perkFitsInEmptyCellSlot = (build: BuildModel, perk: Perk): boolean => {
         const makeCellArray = (cells: CellType | CellType[] | null | undefined): CellType[] => {

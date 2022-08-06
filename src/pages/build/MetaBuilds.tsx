@@ -13,7 +13,7 @@ import {
     setBuildCategoryIndex,
     setMetaBuildsWeaponType,
 } from "@src/features/meta-builds-selection/meta-builds-selection-slice";
-import useCache from "@src/hooks/cache";
+import { useCache } from "@src/hooks/cache";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import React, { ReactNode, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";

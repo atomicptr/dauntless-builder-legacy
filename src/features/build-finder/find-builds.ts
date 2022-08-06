@@ -43,7 +43,7 @@ interface CellsSlottedMap {
     lantern: (string | null)[];
 }
 
-interface MatchingBuild {
+export interface MatchingBuild {
     ident: string;
     build: IntermediateBuild;
     perks: AssignedPerkValue;
