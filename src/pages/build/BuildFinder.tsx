@@ -11,7 +11,10 @@ import {
     FormControlLabel,
     FormGroup,
     Grid,
+    IconButton,
+    InputAdornment,
     LinearProgress,
+    OutlinedInput,
     Skeleton,
     Stack,
     Tooltip,
@@ -100,8 +103,8 @@ const findBuilds = async (
 
 const BuildFinder: React.FC = () => {
     const isLightMode = useIsLightMode();
-
     const { t } = useTranslation();
+
     const {
         weaponType,
         selectedPerks,
@@ -124,6 +127,7 @@ const BuildFinder: React.FC = () => {
     const [itemSelectDialogOpen, setItemSelectDialogOpen] = useState(false);
     const [itemSelectDialogType, setItemSelectDialogType] = useState<ItemType>(ItemType.Weapon);
     const [itemSelectFilters, setItemSelectFilters] = useState<FilterFunc[]>([]);
+    const [perkSearch, setPerkSearch] = useState("");
 
     const dispatch = useAppDispatch();
 
@@ -495,15 +499,33 @@ const BuildFinder: React.FC = () => {
                 <Typography variant="h5">{t("pages.build-finder.perks-title")}</Typography>
                 {!isMobile && <Box sx={{ flexGrow: 2 }} />}
                 <Button
-                    onClick={() => dispatch(clearPerks())}
+                    onClick={() => {
+                        dispatch(clearPerks());
+                        setPerkSearch("");
+                    }}
                     startIcon={<Clear />}
                     variant={isMobile ? "outlined" : undefined}
                 >
-                    {t("pages.build-finder.dev-clear-perks")}
+                    {t("pages.build-finder.clear-perks")}
                 </Button>
             </Stack>
 
             {isDeterminingSelectablePerks ? <LinearProgress /> : null}
+
+            <OutlinedInput
+                endAdornment={
+                    perkSearch.length > 0 ? (
+                        <InputAdornment position="end">
+                            <IconButton onClick={() => setPerkSearch("")}>
+                                <Clear />
+                            </IconButton>
+                        </InputAdornment>
+                    ) : undefined
+                }
+                onChange={ev => setPerkSearch(ev.target.value)}
+                placeholder={t("pages.build-finder.filter-perks")}
+                value={perkSearch}
+            />
 
             <Grid
                 container
@@ -532,70 +554,80 @@ const BuildFinder: React.FC = () => {
                                 <Typography>{t(`terms.cell-type.${cellType}`)}</Typography>
                             </Stack>
 
-                            {perks[cellType as keyof typeof perks].map((perk: Perk) => (
-                                <Stack
-                                    key={perk.name}
-                                    direction="row"
-                                    spacing={1}
-                                >
-                                    <Tooltip
-                                        arrow
-                                        followCursor
-                                        title={renderToolTip(perk, selectedPerks[perk.name] ?? 0)}
-                                    >
-                                        <RarityCard
-                                            disabled={!canAddPerk(perk)}
-                                            elevation={canAddPerk(perk) ? 1 : 0}
-                                            rarity={
-                                                selectedPerks[perk.name] === 6
-                                                    ? ItemRarity.Epic
-                                                    : selectedPerks[perk.name] === 3
-                                                        ? ItemRarity.Uncommon
-                                                        : undefined
-                                            }
-                                            sx={{ flexGrow: 2 }}
+                            {perks[cellType as keyof typeof perks].map(
+                                (perk: Perk) =>
+                                    (perkSearch.length === 0 ||
+                                        perk.name.toLowerCase().indexOf(perkSearch.toLowerCase()) > -1) && (
+                                        <Stack
+                                            key={perk.name}
+                                            direction="row"
+                                            spacing={1}
                                         >
-                                            <CardActionArea
-                                                disabled={!canAddPerk(perk)}
-                                                onClick={() => onPerkClicked(perk)}
+                                            <Tooltip
+                                                arrow
+                                                followCursor
+                                                title={renderToolTip(perk, selectedPerks[perk.name] ?? 0)}
                                             >
-                                                <CardContent>
-                                                    {t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))}
-                                                    {" "}
-                                                    {renderPerkLevel(perk)}
-                                                </CardContent>
-                                            </CardActionArea>
-                                        </RarityCard>
-                                    </Tooltip>
+                                                <RarityCard
+                                                    disabled={!canAddPerk(perk)}
+                                                    elevation={canAddPerk(perk) ? 1 : 0}
+                                                    rarity={
+                                                        selectedPerks[perk.name] === 6
+                                                            ? ItemRarity.Epic
+                                                            : selectedPerks[perk.name] === 3
+                                                                ? ItemRarity.Uncommon
+                                                                : undefined
+                                                    }
+                                                    sx={{ flexGrow: 2 }}
+                                                >
+                                                    <CardActionArea
+                                                        disabled={!canAddPerk(perk)}
+                                                        onClick={() => onPerkClicked(perk)}
+                                                    >
+                                                        <CardContent>
+                                                            {t(
+                                                                itemTranslationIdentifier(
+                                                                    ItemType.Perk,
+                                                                    perk.name,
+                                                                    "name",
+                                                                ),
+                                                            )}
+                                                            {" "}
+                                                            {renderPerkLevel(perk)}
+                                                        </CardContent>
+                                                    </CardActionArea>
+                                                </RarityCard>
+                                            </Tooltip>
 
-                                    {perk.name in selectedPerks && (
-                                        <Card sx={{ width: "50px" }}>
-                                            <CardActionArea
-                                                disabled={isDeterminingSelectablePerks}
-                                                onClick={() =>
-                                                    dispatch(
-                                                        setPerkValue({
-                                                            perkName: perk.name,
-                                                            value: Math.max(0, selectedPerks[perk.name] - 3),
-                                                        }),
-                                                    )
-                                                }
-                                                sx={{
-                                                    alignItems: "center",
-                                                    display: "flex",
-                                                    height: "100%",
-                                                    justifyContent: "center",
-                                                    width: "100%",
-                                                }}
-                                            >
-                                                <Box>
-                                                    <BiMinus />
-                                                </Box>
-                                            </CardActionArea>
-                                        </Card>
-                                    )}
-                                </Stack>
-                            ))}
+                                            {perk.name in selectedPerks && (
+                                                <Card sx={{ width: "50px" }}>
+                                                    <CardActionArea
+                                                        disabled={isDeterminingSelectablePerks}
+                                                        onClick={() =>
+                                                            dispatch(
+                                                                setPerkValue({
+                                                                    perkName: perk.name,
+                                                                    value: Math.max(0, selectedPerks[perk.name] - 3),
+                                                                }),
+                                                            )
+                                                        }
+                                                        sx={{
+                                                            alignItems: "center",
+                                                            display: "flex",
+                                                            height: "100%",
+                                                            justifyContent: "center",
+                                                            width: "100%",
+                                                        }}
+                                                    >
+                                                        <Box>
+                                                            <BiMinus />
+                                                        </Box>
+                                                    </CardActionArea>
+                                                </Card>
+                                            )}
+                                        </Stack>
+                                    ),
+                            )}
                         </Stack>
                     </Grid>
                 ))}
