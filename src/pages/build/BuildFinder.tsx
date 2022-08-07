@@ -355,8 +355,12 @@ const BuildFinder: React.FC = () => {
     );
 
     const canRenderPerk = useCallback(
-        (perk: Perk) => perkSearch.length === 0 || perk.name.toLowerCase().indexOf(perkSearch.toLowerCase()) > -1,
-        [perkSearch],
+        (perk: Perk) =>
+            perkSearch.length === 0 ||
+            t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))
+                .toLowerCase()
+                .indexOf(perkSearch.toLowerCase()) > -1,
+        [perkSearch, t],
     );
 
     if (webworkerDisabled) {
