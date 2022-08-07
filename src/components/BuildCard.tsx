@@ -16,6 +16,7 @@ import {
 import { perkData, perkEffectDescriptionById } from "@src/components/PerkList";
 import { BuildFlags, BuildModel } from "@src/data/BuildModel";
 import { ItemType } from "@src/data/ItemType";
+import useIsMobile from "@src/hooks/is-mobile";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import log from "@src/utils/logger";
 import React from "react";
@@ -70,6 +71,7 @@ const ItemIcon: React.FC<ItemIconProps> = ({ item, miniMode, sx }) => {
 const BuildCard: React.FC<BuildCardProps> = ({ build, buildId, title, miniMode }) => {
     const { t } = useTranslation();
     const theme = useTheme();
+    const isMobile = useIsMobile();
 
     if (!build) {
         if (buildId) {
@@ -95,7 +97,9 @@ const BuildCard: React.FC<BuildCardProps> = ({ build, buildId, title, miniMode }
         if (build?.hasFlag(BuildFlags.InvalidBuild)) {
             return (
                 <Tooltip
-                    disableTouchListener
+                    disableFocusListener={isMobile}
+                    disableHoverListener={isMobile}
+                    disableTouchListener={isMobile}
                     title={t("components.build-warning.invalid-build")}
                 >
                     <Error />
@@ -106,7 +110,9 @@ const BuildCard: React.FC<BuildCardProps> = ({ build, buildId, title, miniMode }
         if (build?.hasFlag(BuildFlags.UpgradedBuild)) {
             return (
                 <Tooltip
-                    disableTouchListener
+                    disableFocusListener={isMobile}
+                    disableHoverListener={isMobile}
+                    disableTouchListener={isMobile}
                     title={t("components.build-warning.upgraded-build")}
                 >
                     <Warning />
@@ -226,7 +232,9 @@ const BuildCard: React.FC<BuildCardProps> = ({ build, buildId, title, miniMode }
                                     item
                                 >
                                     <Tooltip
-                                        disableTouchListener
+                                        disableFocusListener={isMobile}
+                                        disableHoverListener={isMobile}
+                                        disableTouchListener={isMobile}
                                         title={perkEffectDescriptionById(
                                             perkData.data,
                                             Math.min(perkData.count, 6).toString(),

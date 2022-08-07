@@ -354,6 +354,11 @@ const BuildFinder: React.FC = () => {
         [],
     );
 
+    const canRenderPerk = useCallback(
+        (perk: Perk) => perkSearch.length === 0 || perk.name.toLowerCase().indexOf(perkSearch.toLowerCase()) > -1,
+        [perkSearch],
+    );
+
     if (webworkerDisabled) {
         return (
             <Alert
@@ -555,25 +560,28 @@ const BuildFinder: React.FC = () => {
                         xs={isMobile ? 12 : undefined}
                     >
                         <Stack spacing={1}>
-                            <Stack
-                                spacing={1}
-                                sx={{ alignItems: "center", my: 2 }}
-                            >
-                                <img
-                                    src={`/assets/icons/perks/${cellType}.png`}
-                                    style={{
-                                        filter: isLightMode ? "invert(100%)" : undefined,
-                                        height: "64px",
-                                        width: "64px",
-                                    }}
-                                />
-                                <Typography>{t(`terms.cell-type.${cellType}`)}</Typography>
-                            </Stack>
+                            {(isMobile
+                                ? perks[cellType as keyof typeof perks].filter(canRenderPerk).length > 0
+                                : true) && (
+                                <Stack
+                                    spacing={1}
+                                    sx={{ alignItems: "center", my: 2 }}
+                                >
+                                    <img
+                                        src={`/assets/icons/perks/${cellType}.png`}
+                                        style={{
+                                            filter: isLightMode ? "invert(100%)" : undefined,
+                                            height: "64px",
+                                            width: "64px",
+                                        }}
+                                    />
+                                    <Typography>{t(`terms.cell-type.${cellType}`)}</Typography>
+                                </Stack>
+                            )}
 
                             {perks[cellType as keyof typeof perks].map(
                                 (perk: Perk) =>
-                                    (perkSearch.length === 0 ||
-                                        perk.name.toLowerCase().indexOf(perkSearch.toLowerCase()) > -1) && (
+                                    canRenderPerk(perk) && (
                                         <Stack
                                             key={perk.name}
                                             direction="row"
@@ -581,7 +589,9 @@ const BuildFinder: React.FC = () => {
                                         >
                                             <Tooltip
                                                 arrow
-                                                disableTouchListener
+                                                disableFocusListener={isMobile}
+                                                disableHoverListener={isMobile}
+                                                disableTouchListener={isMobile}
                                                 followCursor
                                                 title={renderToolTip(perk, selectedPerks[perk.name] ?? 0)}
                                             >
@@ -602,15 +612,26 @@ const BuildFinder: React.FC = () => {
                                                         onClick={() => onPerkClicked(perk)}
                                                     >
                                                         <CardContent>
-                                                            {t(
-                                                                itemTranslationIdentifier(
-                                                                    ItemType.Perk,
-                                                                    perk.name,
-                                                                    "name",
-                                                                ),
-                                                            )}
-                                                            {" "}
-                                                            {renderPerkLevel(perk)}
+                                                            <Box sx={{ fontSize: isMobile ? "1rem" : undefined }}>
+                                                                {t(
+                                                                    itemTranslationIdentifier(
+                                                                        ItemType.Perk,
+                                                                        perk.name,
+                                                                        "name",
+                                                                    ),
+                                                                )}
+                                                                {" "}
+                                                                {renderPerkLevel(perk)}
+                                                            </Box>
+                                                            <Box hidden={!isMobile}>
+                                                                {t(
+                                                                    itemTranslationIdentifier(
+                                                                        ItemType.Perk,
+                                                                        perk.name,
+                                                                        "description",
+                                                                    ),
+                                                                )}
+                                                            </Box>
                                                         </CardContent>
                                                     </CardActionArea>
                                                 </RarityCard>

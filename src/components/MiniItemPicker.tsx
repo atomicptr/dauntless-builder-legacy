@@ -1,6 +1,7 @@
 import { Box, Card, CardActionArea, CardContent, CardMedia } from "@mui/material";
 import { GenericItem } from "@src/components/GenericItemSelectDialog";
 import { ItemType, itemTypeIcon, itemTypeLocalizationIdentifier } from "@src/data/ItemType";
+import useIsLightMode from "@src/hooks/light-mode";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -14,6 +15,7 @@ const imageSize = 32;
 
 const MiniItemPicker: React.FC<MiniItemPickerProps> = ({ itemType, value, onClick }) => {
     const { t } = useTranslation();
+    const isLightMode = useIsLightMode();
 
     return (
         <Card>
@@ -25,7 +27,11 @@ const MiniItemPicker: React.FC<MiniItemPickerProps> = ({ itemType, value, onClic
                     <CardMedia
                         component={"img"}
                         image={value ? value.icon : itemTypeIcon(itemType)}
-                        sx={{ height: imageSize, width: imageSize }}
+                        sx={{
+                            filter: isLightMode && !value ? "invert(100%)" : undefined,
+                            height: imageSize,
+                            width: imageSize,
+                        }}
                     />
                 </Box>
                 <CardContent>{value ? value.name : t(itemTypeLocalizationIdentifier(itemType))}</CardContent>
