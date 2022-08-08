@@ -26,9 +26,6 @@
         },
         "item-select-dialog": {
             "select-text": "Select {{name}}"
-        },
-        "page-title": {
-            "its-something": "It's something"
         }
     },
     "drawer": {
