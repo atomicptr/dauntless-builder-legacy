@@ -16,7 +16,7 @@ const PageTitle: React.FC<PageTitleProps> = ({ title, hidden }) => {
     return (
         <>
             <Helmet>
-                <title>{`${title} | ${t("app-name")}`}</title>
+                <title>{title.length > 0 ? `${title} | ${t("app-name")}` : t("app-name")}</title>
 
                 <meta
                     content="Dauntless Builder"

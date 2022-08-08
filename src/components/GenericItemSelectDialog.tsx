@@ -70,7 +70,7 @@ const GenericItemSelectDialog: React.FC<GenericItemSelectDialogProps> = ({
             items.filter(item =>
                 matchesSearchIn(searchValue, [item.name, t(itemTranslationIdentifier(itemType, item.name, "name"))]),
             ),
-        [items, searchValue, t],
+        [items, searchValue, itemType, t],
     );
 
     // reset filter values whenever open state changes
