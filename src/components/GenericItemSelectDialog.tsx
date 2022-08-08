@@ -25,6 +25,8 @@ import VirtualizedList from "@src/components/VirtualizedList";
 import { ItemType } from "@src/data/ItemType";
 import useIsMobile from "@src/hooks/is-mobile";
 import useIsLightMode from "@src/hooks/light-mode";
+import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
+import { matchesSearchIn } from "@src/utils/search";
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -64,8 +66,11 @@ const GenericItemSelectDialog: React.FC<GenericItemSelectDialogProps> = ({
     const [searchValue, setSearchValue] = useState<string>("");
 
     const filteredItems = useMemo(
-        () => items.filter(item => item.name.toLowerCase().indexOf(searchValue.toLowerCase()) > -1),
-        [items, searchValue],
+        () =>
+            items.filter(item =>
+                matchesSearchIn(searchValue, [item.name, t(itemTranslationIdentifier(itemType, item.name, "name"))]),
+            ),
+        [items, searchValue, t],
     );
 
     // reset filter values whenever open state changes

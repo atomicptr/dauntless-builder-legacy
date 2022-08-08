@@ -65,6 +65,7 @@ import useIsLightMode from "@src/hooks/light-mode";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import log from "@src/utils/logger";
+import { matchesSearchIn } from "@src/utils/search";
 import BuildFinderWorker from "@src/worker/build-finder?worker";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -356,10 +357,7 @@ const BuildFinder: React.FC = () => {
 
     const canRenderPerk = useCallback(
         (perk: Perk) =>
-            perkSearch.length === 0 ||
-            t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))
-                .toLowerCase()
-                .indexOf(perkSearch.toLowerCase()) > -1,
+            matchesSearchIn(perkSearch, [perk.name, t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))]),
         [perkSearch, t],
     );
 

@@ -40,6 +40,7 @@ import useIsLightMode from "@src/hooks/light-mode";
 import { useAppSelector } from "@src/hooks/redux";
 import i18n from "@src/i18n";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
+import { matchesSearchIn } from "@src/utils/search";
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -402,15 +403,14 @@ export const filterBySearchQuery =
             }
 
             const { t } = i18n;
-            query = query.toLowerCase();
 
-            if (t(itemTranslationIdentifier(itemType, item.name, "name")).toLowerCase().indexOf(query) > -1) {
+            if (matchesSearchIn(query, [item.name, t(itemTranslationIdentifier(itemType, item.name, "name"))])) {
                 return true;
             }
 
             if (itemType === ItemType.Weapon || isArmourType(itemType) || itemType === ItemType.Lantern) {
                 const description = t(itemTranslationIdentifier(itemType, item.name, "description"));
-                return description ? description.toLowerCase().indexOf(query) > -1 : false;
+                return matchesSearchIn(query, [(item as Weapon | Armour | Lantern).description, description]);
             }
 
             return false;

@@ -32,6 +32,7 @@ import { Perk } from "@src/data/Perks";
 import useIsMobile from "@src/hooks/is-mobile";
 import useIsLightMode from "@src/hooks/light-mode";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
+import { matchesSearchIn } from "@src/utils/search";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -88,8 +89,14 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
     );
 
     const filteredItems = useMemo(
-        () => preFilteredItems.filter(cell => cell.name.toLowerCase().indexOf(searchValue.toLowerCase()) > -1),
-        [preFilteredItems, searchValue],
+        () =>
+            preFilteredItems.filter(cell =>
+                matchesSearchIn(searchValue, [
+                    cell.name,
+                    t(itemTranslationIdentifier(ItemType.Cell, cell.name, "name")),
+                ]),
+            ),
+        [preFilteredItems, searchValue, t],
     );
 
     // reset filter values whenever open state changes
