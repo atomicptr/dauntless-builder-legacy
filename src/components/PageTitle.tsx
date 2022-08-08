@@ -23,7 +23,7 @@ const PageTitle: React.FC<PageTitleProps> = ({ title, hidden }) => {
                     property="og:site_name"
                 />
                 <meta
-                    content={title}
+                    content={title.length > 0 ? title : t("components.page-title.its-something")}
                     property="og:title"
                 />
                 <meta
