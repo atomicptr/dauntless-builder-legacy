@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "paths": {},
+        "types": [
+            "node",
+            "jest"
+        ]
+    },
+    "extends": "../tsconfig.json",
+    "include": [
+        "src"
+    ],
+    "ts-node": {
+        "esm": true,
+        "experimentalSpecifierResolution": "node"
+    }
+}
