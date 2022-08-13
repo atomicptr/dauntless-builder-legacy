@@ -7,8 +7,9 @@ import { DataStep } from "./steps/DataStep";
 import { DependenciesStep } from "./steps/DependenciesStep";
 import { GithubContributorsStep } from "./steps/GithubContributorsStep";
 import { I18nStep } from "./steps/I18nStep";
+import { SitemapStep } from "./steps/SitemapStep";
 
-const Steps = [DataStep, I18nStep, GithubContributorsStep, DependenciesStep];
+const Steps = [DataStep, I18nStep, GithubContributorsStep, DependenciesStep, SitemapStep]; // TODO: run meta-builds before SitemapStep
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.join(__dirname, "..", "..");
@@ -89,7 +90,7 @@ const main = async () => {
 
             log(name, `Step ${name} is allowed to fail, continue...`);
         }
-        log(name, `Finished ${name} step.`);
+        debug(name, `Finished ${name} step.`);
     }
 
     log("main", "Done.");

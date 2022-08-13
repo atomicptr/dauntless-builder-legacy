@@ -16,12 +16,12 @@
     },
     {
         "license": "MIT",
-        "name": "@babel/core@7.18.9",
+        "name": "@babel/core@7.18.10",
         "repository": "https://github.com/babel/babel"
     },
     {
         "license": "MIT",
-        "name": "@babel/generator@7.18.9",
+        "name": "@babel/generator@7.18.10",
         "repository": "https://github.com/babel/babel"
     },
     {
@@ -71,6 +71,11 @@
     },
     {
         "license": "MIT",
+        "name": "@babel/helper-string-parser@7.18.10",
+        "repository": "https://github.com/babel/babel"
+    },
+    {
+        "license": "MIT",
         "name": "@babel/helper-validator-identifier@7.18.6",
         "repository": "https://github.com/babel/babel"
     },
@@ -91,7 +96,7 @@
     },
     {
         "license": "MIT",
-        "name": "@babel/parser@7.18.9",
+        "name": "@babel/parser@7.18.11",
         "repository": "https://github.com/babel/babel"
     },
     {
@@ -111,17 +116,17 @@
     },
     {
         "license": "MIT",
-        "name": "@babel/template@7.18.6",
+        "name": "@babel/template@7.18.10",
         "repository": "https://github.com/babel/babel"
     },
     {
         "license": "MIT",
-        "name": "@babel/traverse@7.18.9",
+        "name": "@babel/traverse@7.18.11",
         "repository": "https://github.com/babel/babel"
     },
     {
         "license": "MIT",
-        "name": "@babel/types@7.18.9",
+        "name": "@babel/types@7.18.10",
         "repository": "https://github.com/babel/babel"
     },
     {
@@ -131,7 +136,7 @@
     },
     {
         "license": "MIT",
-        "name": "@emotion/cache@11.10.0",
+        "name": "@emotion/cache@11.10.1",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/cache"
     },
     {
@@ -221,7 +226,7 @@
     },
     {
         "license": "MIT",
-        "name": "@mui/base@5.0.0-alpha.91",
+        "name": "@mui/base@5.0.0-alpha.92",
         "repository": "https://github.com/mui/material-ui"
     },
     {
@@ -231,12 +236,12 @@
     },
     {
         "license": "MIT",
-        "name": "@mui/material@5.9.2",
+        "name": "@mui/material@5.9.3",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/private-theming@5.9.1",
+        "name": "@mui/private-theming@5.9.3",
         "repository": "https://github.com/mui/material-ui"
     },
     {
@@ -246,7 +251,7 @@
     },
     {
         "license": "MIT",
-        "name": "@mui/system@5.9.2",
+        "name": "@mui/system@5.9.3",
         "repository": "https://github.com/mui/material-ui"
     },
     {
@@ -256,7 +261,7 @@
     },
     {
         "license": "MIT",
-        "name": "@mui/utils@5.9.1",
+        "name": "@mui/utils@5.9.3",
         "repository": "https://github.com/mui/material-ui"
     },
     {
@@ -336,7 +341,7 @@
     },
     {
         "license": "CC-BY-4.0",
-        "name": "caniuse-lite@1.0.30001373",
+        "name": "caniuse-lite@1.0.30001374",
         "repository": "https://github.com/browserslist/caniuse-lite"
     },
     {
@@ -401,7 +406,7 @@
     },
     {
         "license": "ISC",
-        "name": "electron-to-chromium@1.4.206",
+        "name": "electron-to-chromium@1.4.211",
         "repository": "https://github.com/kilian/electron-to-chromium"
     },
     {
@@ -510,7 +515,7 @@
     },
     {
         "license": "MIT",
-        "name": "is-core-module@2.9.0",
+        "name": "is-core-module@2.10.0",
         "repository": "https://github.com/inspect-js/is-core-module"
     },
     {

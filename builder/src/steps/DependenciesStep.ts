@@ -10,7 +10,7 @@ const excludeDependencies: string[] = [];
 
 export class DependenciesStep extends WithStepLogger implements Step {
     canRun(_verbose: boolean): boolean {
-        return false;
+        return true;
     }
 
     isAllowedToFail(): boolean {
