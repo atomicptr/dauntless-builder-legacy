@@ -7,9 +7,10 @@ import { DataStep } from "./steps/DataStep";
 import { DependenciesStep } from "./steps/DependenciesStep";
 import { GithubContributorsStep } from "./steps/GithubContributorsStep";
 import { I18nStep } from "./steps/I18nStep";
+import { MetaBuildsStep } from "./steps/MetaBuildsStep";
 import { SitemapStep } from "./steps/SitemapStep";
 
-const Steps = [DataStep, I18nStep, GithubContributorsStep, DependenciesStep, SitemapStep]; // TODO: run meta-builds before SitemapStep
+const Steps = [DataStep, I18nStep, GithubContributorsStep, DependenciesStep, MetaBuildsStep, SitemapStep];
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.join(__dirname, "..", "..");
@@ -40,6 +41,7 @@ const runConfig: RunConfig = {
     publicDir: path.join(rootDir, "public"),
     rootDir,
     targetDir: path.join(rootDir, "src", "json"),
+    translationDir: path.join(rootDir, "src", "translations"),
 };
 
 const log = (name: string, ...args: unknown[]) => {
