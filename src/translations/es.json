@@ -35,7 +35,8 @@
         "meta-builds": "$t(pages.metabuilds.title)",
         "my-builds": "$t(pages.favorites.title)",
         "new-build": "New Build",
-        "settings": "$t(pages.settings.title)"
+        "settings": "$t(pages.settings.title)",
+        "trials": "$t(pages.trials.title)"
     },
     "feature-disabled-browser": "This feature is currently disabled for this web browser.",
     "misc": {
@@ -246,6 +247,36 @@
             "language": "Language",
             "misc": "Misc",
             "title": "Settings"
+        },
+        "trials": {
+            "generated": {
+                "tips": {
+                    "Boreus.0": "You can use the Bombers and the Weak Spot to delay Boreus' Aethercharge. (the shield phase)",
+                    "Charrogg.0": "Charrogg's left arm slam doesn't hit you if you are close to its neck.",
+                    "Charrogg.1": "Charrogg's weakest parts are the firesacs (1 on each side of the head, 1 on each side of the belly).",
+                    "Drask.0": "Tracking Lightning is extremely inconsistent and doesn't deal damage most of the time.",
+                    "Embermane.0": "Use Embermane to protect yourself from the shock pylon's orbs.",
+                    "Gnasher.0": "You can bait Gnasher's interrupt by getting close to him at the start of the fight. The cooldown resets on enrage.",
+                    "Kharabak.0": "Don't get hit by the bees.",
+                    "Koshai.0": "You can bait the frontal interrupt into the turn-around interrupt in a loop.",
+                    "Koshai.1": "Like all Behemoths, Koshai's enrage resets the timer on the interrupt, position yourself to bait it right after the animation ends.",
+                    "Koshai.2": "Koshai grows its antlers at around 1 minute, be ready for the damage window that follows.",
+                    "Pangar.0": "Pangar's interruptable roll is very easy to bait (does it twice in a row only), and the cooldown gets reset on enrage.",
+                    "Pangar.1": "Pangar's interruptable roll is currently bugged and doesn't do any damage until the very end of it, so use that for extremely easy interrupts.",
+                    "Quillshot.0": "You can build Skarn lantern/Frostwülf shield on the platform.",
+                    "Shadowtouched Koshai.0": "You can bait the interrupt at the start pretty easily, and the turn-around interrupt afterwards, just like normal Koshai.",
+                    "Shadowtouched Koshai.1": "The second time Shadowtouched Koshai goes into the ground, he spawns as far away as possible somewhere in the arena and shoots umbral orbs at you, during this time he is extremely vulnerable to damage.",
+                    "Shadowtouched Nayzaga.0": "Just like normal Nayzaga, U. Nayzaga starts the fight with his dual slide interrupt.",
+                    "Shadowtouched Nayzaga.1": "Nayzaga's clone-summoning stomp doesn't deal damage, only the clone does.",
+                    "Shadowtouched Nayzaga.2": "After it goes into its portal, get ready for the following interrupt.",
+                    "Shrike.0": "Shrike's weakest parts are its head and wings.",
+                    "Shrike.1": "Shrike can be instantly booped after enrage.",
+                    "Shrowd.0": "You can use Discipline's Parry on enrage, if you jump at Shrowd the moment he teleports.",
+                    "Skarn.0": "If not using blunt weapons (strikers, hammer) focus the tail during enrage, the rock hitbox has a big gap there."
+                },
+                "title": "Dauntless Trials Builds - 1.10+"
+            },
+            "title": "Trials"
         }
     },
     "terms": {

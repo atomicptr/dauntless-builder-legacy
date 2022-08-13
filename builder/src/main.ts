@@ -3,6 +3,8 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 import { RunConfig, Step } from "./Step";
+import { CrowdinApproveStep } from "./steps/CrowdinApproveStep";
+import { CrowdinBuildStep } from "./steps/CrowdinBuildStep";
 import { DataStep } from "./steps/DataStep";
 import { DependenciesStep } from "./steps/DependenciesStep";
 import { GithubContributorsStep } from "./steps/GithubContributorsStep";
@@ -19,6 +21,8 @@ const Steps = [
     MetaBuildsStep,
     TrialsBuildsStep,
     SitemapStep,
+    CrowdinBuildStep,
+    CrowdinApproveStep,
 ];
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
