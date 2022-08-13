@@ -26,13 +26,21 @@ if (lintMode) {
     let failed = false;
 
     files.forEach(file => {
-        const content = fs.readFileSync(file).toString();
-        sortJson.overwrite(file, sortJsonOptions);
+        const contentBefore = fs.readFileSync(file).toString();
+        try {
+            sortJson.overwrite(file, sortJsonOptions);
+        } catch (err) {
+            console.error(`- File: ${file} could not parse!`, err);
+            failed = true;
+            return;
+        }
         const contentAfter = fs.readFileSync(file).toString();
 
-        if (content !== contentAfter) {
+        if (contentBefore !== contentAfter) {
             console.error(`- File: ${file} is not formatted correctly, run yarn lint:fix`);
             failed = true;
+
+            fs.writeFileSync(file, contentBefore);
         } else {
             console.log(`+ File: ${file}`);
         }
