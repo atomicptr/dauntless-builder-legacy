@@ -13,9 +13,10 @@
         "dev": "vite dev",
         "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
         "deploy": "yarn build && ./scripts/deploy.sh",
-        "lint": "jsonsort -i 4 -c src/translations/*.json .eslintrc tsconfig.json data/_schemas/**.json && eslint .",
+        "lint": "yarn lint:json && eslint .",
+        "lint:json": "jsonsort -i 4 src/translations/*.json src/translations/items/*.json .eslintrc tsconfig.json data/_schemas/**.json",
         "lint:fix": "prettier . --write && yarn lint:fix:json && eslint . --fix",
-        "lint:fix:json": "jsonsort -i 4 src/translations/*.json .eslintrc tsconfig.json data/_schemas/**.json"
+        "lint:fix:json": "yarn lint:json -c"
     },
     "engines": {
         "node": ">=16.0.0",
