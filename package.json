@@ -14,9 +14,9 @@
         "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
         "deploy": "yarn build && ./scripts/deploy.sh",
         "lint": "yarn lint:json && eslint .",
-        "lint:json": "jsonsort -i 4 src/translations/*.json src/translations/items/*.json .eslintrc tsconfig.json data/_schemas/**.json",
+        "lint:json": "ts-node -P ./scripts/tsconfig.json ./scripts/json-sort.ts",
         "lint:fix": "prettier . --write && yarn lint:fix:json && eslint . --fix",
-        "lint:fix:json": "yarn lint:json -c"
+        "lint:fix:json": "yarn lint:json --fix"
     },
     "engines": {
         "node": ">=16.0.0",
@@ -50,6 +50,7 @@
     "devDependencies": {
         "@crowdin/crowdin-api-client": "^1.19.0",
         "@types/command-line-args": "^5.2.0",
+        "@types/glob": "^7.2.0",
         "@types/jest": "^28.1.6",
         "@types/js-yaml": "^4.0.5",
         "@types/md5": "^2.3.2",
@@ -80,7 +81,6 @@
         "jest": "^28.1.3",
         "jest-environment-jsdom": "^28.1.3",
         "js-yaml": "^4.1.0",
-        "json-sort-cli": "^2.0.15",
         "license-checker": "^25.0.1",
         "queue-promise": "^2.2.1",
         "sort-json": "^2.0.1",

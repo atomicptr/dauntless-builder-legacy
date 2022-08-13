@@ -4,6 +4,7 @@ import sortJson from "sort-json";
 
 import { RunConfig, Step } from "../Step";
 import { WithStepLogger } from "../WithStepLogger";
+import {sortJsonOptions} from "../constants";
 
 const createItemTranslationIdentifier = (...parts: string[]): string =>
     ["item", ...parts]
@@ -245,6 +246,6 @@ export class I18nStep extends WithStepLogger implements Step {
 
         fs.writeFileSync(filepath, JSON.stringify(values, null, "    "));
 
-        sortJson.overwrite(filepath);
+        sortJson.overwrite(filepath, sortJsonOptions);
     }
 }

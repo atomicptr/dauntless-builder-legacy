@@ -7,6 +7,7 @@ import sortJson from "sort-json";
 
 import { RunConfig, Step } from "../Step";
 import { WithStepLogger } from "../WithStepLogger";
+import {sortJsonOptions} from "../constants";
 
 interface StringMap {
     [category: string]: {
@@ -111,7 +112,7 @@ export class DataStep extends WithStepLogger implements Step {
             path.join(runConfig.targetDir, "names.json"),
             path.join(mapDir, "names.json"),
             path.join(runConfig.publicDir, "meta.json"),
-        ]);
+        ], sortJsonOptions);
     }
 
     private readJson(path: string) {
