@@ -33,7 +33,7 @@
         "build-finder": "$t(pages.build-finder.title)",
         "home": "$t(pages.home.title)",
         "meta-builds": "$t(pages.metabuilds.title)",
-        "my-builds": "マイビルド",
+        "my-builds": "$t(pages.favorites.title)",
         "new-build": "ビルドを作る",
         "settings": "$t(pages.settings.title)"
     },

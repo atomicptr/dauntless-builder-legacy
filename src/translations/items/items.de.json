@@ -2080,7 +2080,7 @@
     "item.parts.hammer.specials.mighty-landbreaker.part_effect.0": "Halte, um Munition in den Hammer zu laden. Lasse los, um einen Aetherschlot zu erschaffen, der Spielern basierend auf der Qualität der Munition bis zu +35% Schaden verleiht, wenn sie auf ihm treten.",
     "item.parts.repeater.chambers.full-bore-chamber.name": "Hochgeschwindigkeitskammer",
     "item.parts.repeater.chambers.full-bore-chamber.part_effect.0": "Feuert einen durchbohrenden Bolzen, der mit zunehmender Distanz weniger Schaden verursacht.",
-    "item.parts.repeater.chambers.full-bore-chamber.part_effect.1": "Ermächtigt: Der Schaden wird deutlich erhöht und der slayer wird zurückgestoßen.",
+    "item.parts.repeater.chambers.full-bore-chamber.part_effect.1": "Ermächtigt: Der Schaden wird deutlich erhöht und der Slayer wird zurückgestoßen.",
     "item.parts.repeater.chambers.marksman-chamber.name": "Schützenkammer",
     "item.parts.repeater.chambers.marksman-chamber.part_effect.0": "Fires a shot in a line, dealing {{damage}} damage to the first Behemoth hit. If a part is struck, that part takes {{percentDamage}}% more damage from Shots for {{damageTime}} seconds.",
     "item.parts.repeater.chambers.marksman-chamber.part_effect.1": "Empowered: Damage bonus increased to {{empoweredPercentDamage}}%, and {{empoweredPercentAllyDamage}}% to all allies.",
@@ -2156,7 +2156,7 @@
     "item.omnicells.revenant.name": "Wiedergänger",
     "item.omnicells.revenant.active": "Drain up to {{healthDrain}} health to enter Revenant state and spawn a Void Orb. For every {{drainedHealth}} health drained, summon an Umbral Tendril that deals {{umbralDamage}} umbral damage. If an Umbral Tendril hits a target, it spawns an additional Void Orb upon impact. Picking up a Void Orb grants a stack of Void Energy,  which gives +{{percentDamage}}% damage and extends Revenant state by {{revenantDurationExtend}}  second. Revenant state lasts for {{revenantTime}} seconds and prevents all healing.",
     "item.omnicells.revenant.passive": "Lifesteal +{{percentLifesteal}}%. When Revenant state ends, each stack of Void Energy grants {{health}} health per second for {{healthTime}} seconds.",
-    "item.omnicells.tempest.name": "Strum",
+    "item.omnicells.tempest.name": "Sturm",
     "item.omnicells.tempest.active": "Consume a stack of Velocity to dash ahead and deal {{shockDamage}} shock damage to a nearby target, prioritizing unbroken behemoth parts. For every {{percentMovementIncreaseThreshold}}% increase in movement speed, deal +{{percentDamageToUnbrokenPart}}% damage to unbroken parts. Stacks are refreshed on use. {{cooldown}} second cooldown.",
     "item.omnicells.tempest.passive": "Attack speed +{{percentAttackSpeed}}%. Dodging through an attack grants a stack of Velocity. Each stack lasts {{stackTime}} seconds and increases movement speed by {{percentMovespeed}}%"
 }
