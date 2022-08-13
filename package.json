@@ -9,6 +9,7 @@
     "scripts": {
         "build": "yarn build:deps && yarn build:frontend",
         "build:deps": "ts-node -P ./builder/tsconfig.json ./builder/src/main.ts",
+        "build:data": "yarn build:deps --run data i18n",
         "build:frontend": "vite build",
         "dev": "vite dev",
         "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
