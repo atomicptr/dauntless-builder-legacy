@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 
 export interface BatchGetResult {
     [valueRange: string]: string | string[];
@@ -70,9 +70,23 @@ export class GoogleSpreadsheetClient {
     public async batchGet(ranges: string[]) {
         const rangesParam = ranges.map(r => `ranges=${r}`).join("&");
 
-        const res = await axios.get(
-            `${this.baseUrl}/values:batchGet?valueRenderOption=FORMULA&key=${this.apiKey}&` + rangesParam,
-        );
+        let res = null;
+
+        try {
+            res = await axios.get(
+                `${this.baseUrl}/values:batchGet?valueRenderOption=FORMULA&key=${this.apiKey}&` + rangesParam,
+            );
+        } catch (err) {
+            if ((err as AxiosError).response) {
+                const res = (err as AxiosError).response;
+                throw new Error(
+                    `Could not batchGet data from Google Sheets Api: ${res?.status} ${
+                        res?.statusText
+                    }: ${JSON.stringify(res?.data)}`,
+                );
+            }
+            return {};
+        }
 
         if (res.status !== 200) {
             throw Error(`Could not batchGet data from Google Sheets Api: ${res.status} ${res.statusText}`);

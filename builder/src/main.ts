@@ -9,8 +9,17 @@ import { GithubContributorsStep } from "./steps/GithubContributorsStep";
 import { I18nStep } from "./steps/I18nStep";
 import { MetaBuildsStep } from "./steps/MetaBuildsStep";
 import { SitemapStep } from "./steps/SitemapStep";
+import { TrialsBuildsStep } from "./steps/TrialsBuildsStep";
 
-const Steps = [DataStep, I18nStep, GithubContributorsStep, DependenciesStep, MetaBuildsStep, SitemapStep];
+const Steps = [
+    DataStep,
+    I18nStep,
+    GithubContributorsStep,
+    DependenciesStep,
+    MetaBuildsStep,
+    TrialsBuildsStep,
+    SitemapStep,
+];
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.join(__dirname, "..", "..");

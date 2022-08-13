@@ -1,0 +1,308 @@
+{
+    "behemoths": [
+        {
+            "builds": [
+                "gxfJTMAt2CzzU55UJURtWTOvtOgiLCeAf8of7CLbUxBT4C51InumCmjH7FwvC5",
+                "JjfoT7PcxC3KFZPU4cyfJTrSpLuJC5NURjTnCArsRNTqCxBfJuJCX8fLFp5ua",
+                "ARfbTKLUwCQQUOOUMcBCPT2hYdi2C4WcoycYCwYUenTkCPJsOu2CqEhYF4AS8",
+                "dJfvT7IgC80hqjskTjfwTBTBmiACEOH6wTMCMjt3nhjCkdi0uwC0VcqFBEs4",
+                "yKfETJJUBC55UggUjcwUYTZfVLibCRLIrVc7CMAUaMTJC4qsguwCQYHQFExh0",
+                "OWfwTNWcBCbYUbVHkSMhBC8Mcb6iPCWoHK6SMCWvT0rhnC70SQuVCE0IBFxXT1",
+                "2Pf4TmwHgCnnUXXUwSdheTvi0OupCPLHZ4cqCVeU4atkCxjs6ueC8ZUWFP7s3"
+            ],
+            "consumables": ["Aetherdrive", "Blitz", "Frenzy"],
+            "modifiers": ["Weak Spot", "Lightning Stars", "Electrify", "Bombers"],
+            "tips": ["You can use the Bombers and the Weak Spot to delay Boreus' Aethercharge. (the shield phase)"],
+            "title": "Boreus"
+        },
+        {
+            "builds": [
+                "qrfLTEeHvCAAUoFyUqtETaeFqaIvC2gfyVcAC83tZC3C8VuKu8CJOfxSBqsW",
+                "7xfVTjvfKCwwUjFrcBfnTgNtvwI8C3JcmkcWCz8U4CaCZesmuvCNxt7SQgIK",
+                "KBfkT0dC0CJJUpFPcJuYT81c8wC5CbosE2cAC0WiyCBCKVUYuYCM3UkFO8Hj",
+                "qrfLTE3ivCWdToFecJCETaVUqaIvC2gfAecAC8OHYyT3C8VuBgI8CJ6ixSBqsW",
+                "v3frT86hzCPPUVFac8UQTmjIzkIrC1kSzecyCBEfWC0CkZsduyCg7coSaAhb",
+                "0VfrT6bsZC8vHoF4SKhNILKHv1IbCVpierIoCmQspiVC15I4BI6Cn0t0SxXTL",
+                "gxfJTMvc2CzzUBFWcrsWTWzFK1iLCk2s8of7CLbUwC4C51InumCmjHmSwvC5"
+            ],
+            "consumables": ["Aetherdrive", "Blitz", "Frenzy"],
+            "modifiers": ["Whiteout", "Blaze Smollusks", "Behemoth Blitz", "Thick Skull"],
+            "tips": [
+                "Charrogg's left arm slam doesn't hit you if you are close to its neck.",
+                "Charrogg's weakest parts are the firesacs (1 on each side of the head, 1 on each side of the belly)."
+            ],
+            "title": "Charrogg"
+        },
+        {
+            "builds": [
+                "gxfJTMni2CzzUmKsJURtWTOVUOgiLCeAf8of7CLbUwC4C5dhnumCmjH7FwvCP",
+                "MRfWT56hXC72IkBfycRf8TZIx2I5CZRsq7czC15h3wUKCPYsJnT6C68ujFxqTQ",
+                "NBf2TQYSPCQrhK8sncZC4TRCn5imC04HgjIBCONuxacWCk1u0ugCYqcZF2pIV",
+                "nNfqTyvHyCeziOnFxcrCjTpsqJixCOqTQXCPCA8sAYUBCK6CL2CaCeJI0FPNsa",
+                "OWfwTexUBCpnT2vHLceUYT2Tb6iPC4Ocd0cMCeQU0bfnCaVCQuVCE0IBFxXTb",
+                "8MfgTj0fOCEbT0vHBS4hZIRgU1kSpC8VIOdUeC3KsVZTYCnkiJ7UMCY8hpFWkcZ",
+                "Q6fWTYytBCRRU84SvS8sbTrHzpioCW3f7XSwC36SOCeCgmiRupCagIPF2EI6"
+            ],
+            "consumables": ["Aetherdrive", "Blitz", "Frenzy"],
+            "modifiers": ["Behemoth Blitz", "Thick Skull", "Static Shock", "Tracking Lightning", "Frigid Touch"],
+            "tips": ["Tracking Lightning is extremely inconsistent and doesn't deal damage most of the time."],
+            "title": "Drask"
+        },
+        {
+            "builds": [
+                "7xfVTj2cKCbYHjFYUWtnTg7fK8i8Cp8hmkcWCz8UEzhaCZPTBMuvCe5i7SQgIk",
+                "v3frT8AszC57TmmUaczfQTmXizkIrC1NczecyCBEfWC0CdF0EsyCjZsoSaAhV",
+                "mNf6TKyFjCjVcK5IXcjCETnVI7bCpCOxTa8cqCNkUXrTBCvFX2haCePirSa7h2",
+                "Z0fETMdUkCdXIQFBc4CKT2KiJkipCYaFQ0UgCQphxoiYCeQizdhPCvqiLSk1He",
+                "KBfkT0qU0C6QHdWTPcrUYT8vFxni5CR5IE2cAC0WibKTBCdF3BhYCXLiESO8H1",
+                "Q6fWT8ofBCVQINFvSehwIydIzpioCW3fqwHwCydIy5ieCgmid0hpCYEiYS2EI6",
+                "60fPT71sACKkHY7IKSOsrTneSybiNCo5iYJcECroUPpTaCnFzBhRCVpCKS5nca"
+            ],
+            "consumables": ["Aetherdrive", "Blitz", "Frenzy"],
+            "modifiers": ["Static Shock", "Electrify", "Cursed Lightning"],
+            "tips": ["Use Embermane to protect yourself from the shock pylon's orbs."],
+            "title": "Embermane"
+        },
+        {
+            "builds": [
+                "yKfETJocBCdAsEzU7UmtYT4oFrdIbCX1urVc7CMMUqCJC4qs4LCwCQYHQFExhb",
+                "7xfVTj4hKCbYHBgFrcWtnTP3HvwI8C3JcmkcWCz8UmvTaCZesBVuvCAETgFQgIk",
+                "ARfbTKLUwC8pugvIMcNUPT2h7Mt2CQbCoycYCwwUWCkCPJs6xt2CqEhYF4ASX",
+                "rBfoTgIeCeWTV3Hqc7f0T4TOjiNCXJH4QtBCqntQ6TrCZ1u8u4C8gUzFAvHd",
+                "YwfzTbbSgCRgibQtRcdUKTefPrcJC43typc0C66UmC0Cwes05cxCrEuwFM7CX",
+                "60fPT6xIACKns2pcKSKhECnKtybiNCo5iV6IEC4niPpTaCbaTAuRCMdU5F5nca",
+                "bMfLT0NFoC2qTNyuMS8sxT7U1auoCd4iZjcqC11UWCRCPjsYAtWCoLIBFKkUv"
+            ],
+            "consumables": ["Aetherdrive", "Blitz", "Frenzy"],
+            "modifiers": ["Static Shock", "Leaf Shield", "Jagged", "Fury"],
+            "tips": [
+                "You can bait Gnasher's interrupt by getting close to him at the start of the fight. The cooldown resets on enrage."
+            ],
+            "title": "Gnasher"
+        },
+        {
+            "builds": [
+                "qrfLTEOcvCA8FqvHyUqtETaJtznivCqAuAQUACzQiYMS3Cb2UBMu8CZqiPFBqsW",
+                "60fPTOgSAC33U2rHocXfrTnxCz1INCmOsYJcECrrUPBSaC36FzPhRCVpC5F5ncd",
+                "jJfvTNzfXCRLIk7TbcjC4TvJskWiaCqNuNSvCg0I3qUgC7LhKYHACxEHBtdWfj",
+                "Z0fETY4ikCdqCMLhBcjUKT2XUJkipCX5HmSgCQYcxoiYCeQiz1hPCvZsWFk1H0",
+                "wKfQT05U4CRgc06cJFduZTbOtx0iaCxwHNSvCyLSELTeCJXFqkh5CpbHqFgvUw",
+                "3KfYTAAFVCogFwxFMS7hgCdBiY5iRCAXTqMI7Cmkf3oHPCEbS5uXCZaFYF7mCm",
+                "gxfJTKqu2Cz6U5EIpSehWTWjHOgiLCeAfpwI7C3zTxLS4CO7U0wsmCqAi7FwvC5"
+            ],
+            "consumables": ["Aetherdrive", "Blitz", "Frenzy"],
+            "modifiers": ["Shock Smollusks", "Sovereign's Chosen", "Jagged", "Tough Hide"],
+            "tips": ["Don't get hit by the bees."],
+            "title": "Kharabak"
+        },
+        {
+            "builds": [
+                "nNfqTyxhyC77UYYUgUAtjTAEtqJixCOqTM5cPCg5UAYUBCKgUouaCe0S0FPNsa",
+                "2Pf4TbAtgCYPTXXU8cZfeTWBsnVIpCjvsZ4cqCVVU4atkCxjsxateC8ZUWFP7sP",
+                "yKfETmdUBCaoFd0IjcoCYTvjsVLibCRLIrVc7CMAUaMTJC4qsguwCQYHQFExhb",
+                "EQfPT1PHNC0vUQYTmcyC6Tw7iadiJCPeHBzFoCpMfZrTbCmOsZuBCzJTJFLNtd",
+                "2Pf4TbkUgCnRHMAu8ceueTWdC0OupCPLHnPHqCwQH4atkCxjs6ueC8ZUWFP7sP",
+                "OWfwTNNfBCEyHbVHkSMhBC84ub6iPC4OcK5hMCY0C0bfnC7ZhQuVCE0IBFxXTb",
+                "gxfJTKqu2CzzU55UpSrsWTWjHOgiLCeAf8of7CLbUxBT4C51InumCmjH7FwvCP"
+            ],
+            "consumables": ["Aetherdrive", "Blitz", "Frenzy"],
+            "modifiers": ["Styxian Sacrifice", "Fortifications", "Vicious Vigor", "Thick Skull"],
+            "tips": [
+                "You can bait the frontal interrupt into the turn-around interrupt in a loop.",
+                "Like all Behemoths, Koshai's enrage resets the timer on the interrupt, position yourself to bait it right after the animation ends.",
+                "Koshai grows its antlers at around 1 minute, be ready for the damage window that follows."
+            ],
+            "title": "Koshai"
+        },
+        {
+            "builds": [
+                "NBf2TQnfPCQrhxxUYUqt4TLpfn5imC04HNpcBCKqUaJSWCQQUKvhgC5efZF2pIV",
+                "yKfETJECBCaOTEXsjcqfYTkIrdIbConSrVc7CMAUaMTJCyncjWhwCa1sQFExhb",
+                "pnfXTKmHwC6duN4cocxCeTOCqriMCV6S73SLCNOU57CZCwqSeJhdCPQCpFzksq",
+                "nNfqTyvHyCR4c0XhxcrCjTpsqJixCOqTESPCRaFAYUBC3yfLdhaCbRI0FPNsa",
+                "YwfzTbLfgCRjub6sRcdUKTjT27fJCNLCypc0C6rFe4T0CZQu3whxC1qFwFM7CX",
+                "NBf2TQeFPC4mSnVT2SahACYLin5imC04HaSBCdkTamTWC4NFKvhgCvbcZF2pIV",
+                "kofgTvnCWCVEF33UeSosLT4HzPi5CNxC85fdC03ioxS7C00U1YIoCAduNF6vUd"
+            ],
+            "consumables": ["Aetherdrive", "Blitz", "Frenzy"],
+            "modifiers": ["Behemoth Blitz", "Deep Freeze", "Danger Zones"],
+            "tips": [],
+            "title": "Malkarion"
+        },
+        {
+            "builds": [
+                "nNfqTyzFyCeBUWFgUAtjTApsV6HxC3wcM5cPCggUVCBCKgUbBtaCe0S7SPNsr",
+                "qrfLTEZTvCowioFec6fETa1TqaIvC2gfyVcAC88UZC3C8VuNyt8CJOfxSBqsW",
+                "oNfqTNnCwCJQtjFPcPCQTXJfbjC4CEKCRAcxC55UvCXCrYsKjtyCPzTNS5Mce",
+                "EQfPTjbtNC6BuoFmcyC6TwLUoeIJC35cOEcoC00U2CbCmOsJ5tBCzJTLSLNtE",
+                "axfWTxmUOCK8CeFjcMUgTYrUm5I3C0yudPcpCEEUMC2CqRsvLtnCVYu7S47SA",
+                "OWfwTNVfBCbWH3qSaiMhLI8Ktb6iPC4OcK6SMCWvT0bfnCOFJMTVCnMiySxXT1",
+                "ewfeTXEuAC1YtVFXS6sPT6KSnMIYC27f4niKCPPURC6C6kiWbtXCyzC5Se7cO"
+            ],
+            "consumables": ["Aetherdrive", "Blitz", "Frenzy"],
+            "modifiers": ["Whiteout", "Frigid Touch", "Icy Grasp", "Deep Freeze"],
+            "tips": ["You can build Skarn lantern/Frostwülf shield on the platform."],
+            "title": "Quillshot"
+        },
+        {
+            "builds": [
+                "mNf6TKnfjCjVcK5IyUJtETxYi7bCpCOxTa8cqCNkUXrTBCpeTXjTaCePi6Fa7h2",
+                "JjfoT70sxCzNiZPU4cyfJTXyH5LUJC5BuRjTnCArsRNTqCxBf3PtJC4rTLFp5uN",
+                "xgfJT5nUbCg0sNNUOcxC8TajiyQizCLrUq1cxCRPUbCkCZ3TNu5CMaUAFnXiX",
+                "R4f8TRYt7CNgujYuecVCvT8gtEgibC1nuRSZCRaFm0cyCgKs10IdCOzubFZdtE",
+                "bMfLT0nCoCdMCNqcJcqUxTr0speioCmMsZjcqC1whx4TRCdBs40uWCa4iBFKkUv",
+                "PWfoT54seCrvsoOUqSQhbC2pik1i1CyPTvSACyPSORcMC3mTe1hLCMaiXF7zCK",
+                "7xfVTjouKCwwU4mh8SyhnTnYCK8i8Cp8hmkcWCz8U4CaCZPTBZIvCNyfgFQgIk"
+            ],
+            "consumables": ["Aetherdrive", "Blitz", "Frenzy"],
+            "modifiers": ["Radiant Smollusks", "Incandescent Incarceration", "Aftershock", "Flaming Tail"],
+            "title": "Rezakiri"
+        },
+        {
+            "builds": [
+                "60fPT7PCACKkH66UMUmtrTRofz1INCJdTYJcECroUzCaCbaTzBhRCVpC5F5ncd",
+                "oNfqTNYhwCL0IQQUPcBfQTN8ibjC4CJ6TRAcxC54cvCXCORcd2hyCodirF5Mce",
+                "R4f8TReu7CPQH08hecVCvT8Ytr1IbCd5FzBiZC6VF06fyCZJu1eTdCMASbFZdtm",
+                "rBfoTqrUeCwnHOoUqc0C0TEJuknINCK2s8wiBCELUQ6TrCZ1uoqs4C8ZTzFAvHk",
+                "8MfgTjZIOCyzF11U8caUQTdYse2IpCgYC7zSeC2EuoCYCXQiJgTMCaOipFWkcY",
+                "R4f8TR0c7CPQH08hYS1h5C53Fr1IbCd5FzBiZC6VF06fyCZJu1eTdCMASbFZdtm",
+                "v3frT8zTzC57TmmUQSpsQTVrhzkIrCXMtzecyCBEfWC0CnJt0EsyCj5i4FaAhb"
+            ],
+            "consumables": ["Aetherdrive", "Blitz", "Frenzy"],
+            "modifiers": ["Umbral Smollusks", "Splitting Umbral", "Electrify", "Umbral Instability"],
+            "tips": [],
+            "title": "Shadowtouched Drask"
+        },
+        {
+            "builds": [
+                "65cy6CjCA5CaosYUVt1T2BtK5iyCamIbwcYCEzFrMTPCAVs5XIyCdOHyCnMIL",
+                "vWcP0idCpPT5kUrcMfKTaS8rtWCgYs4oIzCyPUBKUNCaWsk8hBCaMH2CPxHB",
+                "XafXTJmFYCvqH76fEcRU5Tvhrpi7CKYFvAIJC1BtgyT3CBoi8jS4CWjIRCReiY",
+                "vWcXIdCzJHgqhrceCKTQTVviWCrQH1pfzCqvUBKUNCaPikasBCOZf2CPxHB",
+                "Azc77h1CwMH8puVcQUjTyfrOiYC8qHEwcoCYoUwATeCN8HP8s6Cm1FWCE4ip",
+                "BzcwLUWC3pCKWTmi3hoIeKs71t0CBmTX8I7CR6f6mCBCmxiB4sjCPbcyCNXC2",
+                "r4cNmU7CekHYXUwS8sMTviEniOC15HX3c8CBjSaYTQCL8CkrsQCebsOCW7f4"
+            ],
+            "consumables": ["Aetherdrive", "Blitz", "Frenzy"],
+            "modifiers": ["Cursed Lightning", "Electrify", "Deep Freeze", "Thick Skull"],
+            "tips": [
+                "Pangar's interruptable roll is very easy to bait (does it twice in a row only), and the cooldown gets reset on enrage.",
+                "Pangar's interruptable roll is currently bugged and doesn't do any damage until the very end of it, so use that for extremely easy interrupts."
+            ],
+            "title": "Pangar"
+        },
+        {
+            "builds": [
+                "WqfjTyYfJCbmUkqUYUOtRTr0UEoiBC7MtoJcrCL0UygivCArIYnhVC0JIdFZXtn",
+                "gxfJTMyC2CJ8CkXfWcRtWTOwTK1iLCk2s8of7CLbUxBT4CJKt0msmC8bF7FwvCP",
+                "MRfWT5piXC7pCkoUyc4C8T2rFXji5CKjHq7czC15hrniKCPkiJ0T6CRdcjFxqTQ",
+                "WqfjTyrhJCbzHMouwcWCRTrYUEoiBCXWckXHrCLWHk4TvCArIYnhVCbxIdFZXtn",
+                "1af8T0nIECaMSa4HOcpU3T4YTZXiKC5QF4NtACA5sdaTmCjBfgRsbCNRf7FypH2",
+                "xgfJT5bubCJLtvAi3SnhqCQkFyQizCaxHgBHxCyKIM1TkCdpsNu5CMaUAFnXiX",
+                "XafXTJnfYCgesJ5HEc0h5Tayfrpi7CZpHzBcJC78UL6t3CBoi8dF4CA5uZFReiY"
+            ],
+            "consumables": ["Blitz", "Frenzy", "Inspiring Pylon"],
+            "modifiers": ["Fortifications", "Momentum", "Bleedout Vines", "Umbral Stars"],
+            "tips": [
+                "You can bait the interrupt at the start pretty easily, and the turn-around interrupt afterwards, just like normal Koshai.",
+                "The second time Shadowtouched Koshai goes into the ground, he spawns as far away as possible somewhere in the arena and shoots umbral orbs at you, during this time he is extremely vulnerable to damage."
+            ],
+            "title": "Shadowtouched Koshai"
+        },
+        {
+            "builds": [
+                "0VfrTmNFZCkkUEyUWU0taT4rFv1IbCVOs0RToCgqUBCVCm0smu6CndsqFxXTx",
+                "8MfgTjrhOCgPU23h8cytQTgmFe2IpCzLsOdUeC3KsVZTYCXQiaAtMCYPcpFWkcZ",
+                "Brf8TN4t3CqLsWnHdc6UJTOnUJOIkCajS71SVC6KFBktJCBMsn1hOCmMTqFpyu3",
+                "LWfOTJNuzC42fngTwcgCQTPLsZkhMCBQFRNtdCaQSnKiMCQvsEu2CZKFwFzgse",
+                "jJfvTX7CXCZWue0ibc0u4TBqsJ2IaC32cApcvCgkCa3cgCd8CyuACK7ckFdWfj",
+                "R4f8TR0c7CNgujWSYS1h5C53FEgibCaViRSZC6VF06fyCZJu1eTdCMASbFZdtE",
+                "kofgTvQiWCjjUQMceSosLTbZfVOH5CwBs85fdC03iJC7CEah4uoCaOINF6vUd"
+            ],
+            "consumables": ["Aetherdrive", "Blitz", "Frenzy"],
+            "modifiers": ["Behemoth Blitz", "Danger Zones", "Combustion"],
+            "tips": [
+                "Just like normal Nayzaga, U. Nayzaga starts the fight with his dual slide interrupt.",
+                "Nayzaga's clone-summoning stomp doesn't deal damage, only the clone does.",
+                "After it goes into its portal, get ready for the following interrupt."
+            ],
+            "title": "Shadowtouched Nayzaga"
+        },
+        {
+            "builds": [
+                "nNfqTyzFyCRACy2SgUAtjTApsV6HxC3pUM5cPCg5U7nhBC4FLdhaCP5s0FPNsr",
+                "pnfXTKwtwC3VfxFocQfeTXRFONfMCdPs73SLCNOU57CZCMJCyhdCaoTeSzksN",
+                "ewfeTX7cACVeIVFqc1CPT6NInMIYC2oF4niKCPmUXvc6CrnC3ohXCVvs2Fe7cO",
+                "5wf8TNIRCONHqgIyTjfjToTMauaCALU1ncQCgzseacECPOSjJhQC5YinFnPiv",
+                "7xfVTjrUKCbYHBEcrcwunTgAUvwI8C3JcmkcWCz8UEzhaCZPTBMuvC2F7SQgIK",
+                "2Pf4TgacgC0ytVriwSdhQCWjcnVIpCj3inPHqCwQHJ4ckCZbIv8heC1FWFP7sP",
+                "rBfoTqjIeCeqiBqcYSQs0TYPTknINCRwT8dfBCaQUOeHrCVFozh4CoMsnSAvHk"
+            ],
+            "consumables": ["Aetherdrive", "Blitz", "Frenzy"],
+            "modifiers": ["Styxian Sacrifice", "Nearsight", "Momentum", "Frigid Touch"],
+            "tips": ["Shrike's weakest parts are its head and wings.", "Shrike can be instantly booped after enrage."],
+            "title": "Shrike"
+        },
+        {
+            "builds": [
+                "2Pf4TmKFgC0ytXXUkUNteT6vTnVIpCj3iZ4cqCVeU1CkCxjsvyseC8wTWFP7sP",
+                "Q6fWTYQsBCVQI3gfXc6fbTYwFeMIoC4LF7XSwC36S03feCN0fd2hpCYzsPF2EI6",
+                "Q6fWTYXCBCemsQQUXcNUbTYpSeMIoC4vt7XSwC36SOCeCgpsdMspCaqCPF2EI6",
+                "rBfoTqrUeCYXUV3Hqc0C0T5oIknINCRwT4QtBCqntOeHrCZ1uoqs4C8ZTzFAvHd",
+                "rBfoTqJFeCYXUVVUqcZU0T5jHknINCRwT8dfBCaQU4CrCkJsoqs4C8ZTzFAvHd",
+                "XafXTJgSYCPps76fYS0hwIbYFW4s7C03fvAIJC1BtAU3CRdF8jS4CWjIZFReiY",
+                "5wf8TzWfRCgPs22UKSRsjT2XUMauaCALUkocQCZNU8CECmAsjZsQCXjinFnPi0"
+            ],
+            "consumables": ["Aetherdrive", "Blitz", "Frenzy"],
+            "modifiers": ["Frost Smollusks", "Combustion", "Fortifications"],
+            "tips": ["You can use Discipline's Parry on enrage, if you jump at Shrowd the moment he teleports."],
+            "title": "Shrowd"
+        },
+        {
+            "builds": [
+                "7xfVTjwiKC0qtppUYUWtnTgXivwI8C3JcmkcWCzzUmvTaCZesbNtvCNxtgFQgIK",
+                "gxfJTK7I2CvWu55UWcVfWTWgsK1iLCk2s8of7CLLUxBT4C51IagtmCmjH7FwvC5",
+                "gxfJTKOh2CvWu55UWcNUWTWaUK1iLCk2s8of7CLLUxBT4C51IagtmCmjH7FwvC5",
+                "ewfeTnkUAC1rCogHqc1CPT6ocnMIYC0VfJWiKCPAHvBT6C6ki34sXCyNc2Fe7cO",
+                "dJfvTAXugCRyTooU8cWUwTbLtq6IACkAsj8cMCZZU3wUjCkxs7NtwC0VcqFBEs4",
+                "MRfWTZZFXC5bInbTWSBhMIEYcKH5CZRsvSzCZXiQiKCZyIJnT6CRdcjFxqTy",
+                "5wf8TQ1tRCB4S22UKSRsjTqYHMauaCApckocQCZZUa4TECmAsqQtQCXxfnFnPiv"
+            ],
+            "consumables": ["Aetherdrive", "Blitz", "Frenzy"],
+            "modifiers": ["Volcanic Vitriol", "Behemoth Blitz", "Combustion", "Shockfall"],
+            "tips": [
+                "If not using blunt weapons (strikers, hammer) focus the tail during enrage, the rock hitbox has a big gap there."
+            ],
+            "title": "Skarn"
+        },
+        {
+            "builds": [
+                "Brf8TNjC3Cq4tWnHPUVtJTOztJOIkCXAs71SVC6KF2YTJCBMs7uOCvbF8tpyu3",
+                "xgfJT5ghbCg8uv0hOcyf8TKSYaizCw8sq1cxCRPUM1TkCdpsqVh5CEbf8tnXiX",
+                "xgfJT5ysbCg0svAiOcxC8T6hYaizCw8sq1cxCRPURJikCZwsNu5CMaU8tnXiX",
+                "mNf6TvIjCPJHK5IXcjCETRT7bCpCk2HqSqCKYIXrTBCpeTX2haCBMsLta7h2",
+                "v3frT88czC5bcOeSacYuQTpfzkIrC1kSMNcyCayF6Ai0CnJtduyCg7c5taAhV",
+                "LWfOTZMhzC4kSqaCXSoh5CdRszBiMCrdHvSdCa6UjqTMCgoh6Kf2CNWUbtzgse",
+                "dJfvTa1IgCqZtmRceSaswTRhq6IACkAsj8cMCZkUpJijCkxs0uwC0VcmtBEsj"
+            ],
+            "consumables": ["Aetherdrive", "Blitz", "Frenzy"],
+            "modifiers": ["Umbral Instability", "Tough Hide", "Momentum", "Icy Grave"],
+            "title": "Skraev"
+        },
+        {
+            "builds": [
+                "0VfrTm3fZCkkUEyUWU0taT43tv1IbCVOs0RToCggUYQTVCm0sjot6CndsqFxXTx",
+                "Q6fWTYnTBCRbC3gfXc6fbTnIeMIoC4LFqkIwCLMF03feCN0fqotpCagIPF2EI6",
+                "qrfLTEWFvCWdTqvHecJCETQCznivCqAuAQUAC0eFYyT3CA4fKu8CJOfPFBqsY",
+                "PWfoT8AfeC07CPaH4c1CLTLsk1i1CyPTmyIAC5ouRmTMCgqhjuLCwoUXF7zCK",
+                "bMfLT0YfoCRwC7LfJcqUxToTpeioCmMs3aUqC2RCxySRC6EC40uWCEzfBFKkUv",
+                "nNfqTyRcyCR4cYeHzS7h8IAPtqJixCOqTQXCPCA8sAYUBC3yfouaCe0S0FPNsa",
+                "rBfoTqkfeCwRUVkUYSQs0TKHOjiNCxLC4QtBCEwiOeHrCkyioqs4C8ZTzFAvHd"
+            ],
+            "consumables": ["Aetherdrive", "Blitz", "Frenzy"],
+            "modifiers": ["Hot Spot", "Fortifications", "Styxian Sacrifice", "Combustion"],
+            "title": "Stormclaw"
+        }
+    ],
+    "title": "Dauntless Trials Builds - 1.10+"
+}

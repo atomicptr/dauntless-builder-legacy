@@ -63,8 +63,6 @@ export class MetaBuildsStep extends WithStepLogger implements Step {
             return;
         }
 
-        const translationBaseFilePath = path.join(runConfig.translationDir, "en.json");
-
         const client = new GoogleSpreadsheetClient(process.env.GOOGLE_SHEETS_APIKEY, spreadsheetId);
 
         const { title, sheets } = await client.sheetData(["tabColor"]);
@@ -356,6 +354,7 @@ export class MetaBuildsStep extends WithStepLogger implements Step {
         sortJson.overwrite(targetFile);
 
         this.log("Adding strings to en.json translation file...");
+        const translationBaseFilePath = path.join(runConfig.translationDir, "en.json");
         const translationRaw = fs.readFileSync(translationBaseFilePath);
         const translationJson = JSON.parse(translationRaw.toString());
 
