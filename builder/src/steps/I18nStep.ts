@@ -22,7 +22,7 @@ interface GenericEntity {
 }
 
 interface Effect {
-    description: string|string[];
+    description: string | string[];
 }
 
 export class I18nStep extends WithStepLogger implements Step {
@@ -30,8 +30,12 @@ export class I18nStep extends WithStepLogger implements Step {
         return "i18n";
     }
 
-    canRun(): boolean {
+    canRun(_verbose: boolean): boolean {
         return true;
+    }
+
+    isAllowedToFail(): boolean {
+        return false;
     }
 
     async run(runConfig: RunConfig): Promise<void> {
@@ -91,12 +95,12 @@ export class I18nStep extends WithStepLogger implements Step {
                                 firstItem.name === item.name && firstIndex.toString() === index.toString()
                                     ? ue.description
                                     : `$t(${createItemTranslationIdentifier(
-                                        category,
-                                        firstItem.name,
-                                        "unique_effects",
-                                        firstIndex.toString(),
-                                        "description",
-                                    )})`;
+                                          category,
+                                          firstItem.name,
+                                          "unique_effects",
+                                          firstIndex.toString(),
+                                          "description",
+                                      )})`;
                         }
 
                         if (ue.title) {
@@ -180,12 +184,12 @@ export class I18nStep extends WithStepLogger implements Step {
                                 firstKey.toString() === key.toString()
                                     ? effect.description
                                     : `$t(${createItemTranslationIdentifier(
-                                        category,
-                                        itemName,
-                                        "effects",
-                                        firstKey,
-                                        "description",
-                                    )})`;
+                                          category,
+                                          itemName,
+                                          "effects",
+                                          firstKey,
+                                          "description",
+                                      )})`;
                             continue;
                         }
 
@@ -213,15 +217,15 @@ export class I18nStep extends WithStepLogger implements Step {
                                         ? null
                                         : firstEffectKey.toString() === key.toString() &&
                                           firstIndex.toString() === index.toString()
-                                            ? effect.description[index]
-                                            : `$t(${createItemTranslationIdentifier(
-                                                category,
-                                                itemName,
-                                                "effects",
-                                                firstEffectKey,
-                                                "description",
-                                                firstIndex,
-                                            )})`;
+                                        ? effect.description[index]
+                                        : `$t(${createItemTranslationIdentifier(
+                                              category,
+                                              itemName,
+                                              "effects",
+                                              firstEffectKey,
+                                              "description",
+                                              firstIndex,
+                                          )})`;
                             }
                         }
                     }

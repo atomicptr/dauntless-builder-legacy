@@ -26,8 +26,12 @@ export class DataStep extends WithStepLogger implements Step {
         return "data";
     }
 
-    canRun(): boolean {
+    canRun(_verbose: boolean): boolean {
         return true;
+    }
+
+    isAllowedToFail(): boolean {
+        return false;
     }
 
     async run(runConfig: RunConfig): Promise<void> {

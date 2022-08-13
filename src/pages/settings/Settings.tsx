@@ -115,8 +115,8 @@ const Settings: React.FC = () => {
                                         >
                                             {getNativeLanguageName(Language[key as keyof typeof Language]) !== null
                                                 ? `${getNativeLanguageName(
-                                                    Language[key as keyof typeof Language],
-                                                )} (${key})`
+                                                      Language[key as keyof typeof Language],
+                                                  )} (${key})`
                                                 : key}
                                         </MenuItem>
                                     ))}

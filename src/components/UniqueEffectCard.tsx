@@ -79,8 +79,7 @@ const UniqueEffectCard: React.FC<UniqueEffectCardProps> = ({ uniqueEffect, item,
                             sx={{ mb: 1 }}
                             variant="h6"
                         >
-                            {t(itemTranslationIdentifier(itemType, item.name, "name"))}
-                            {" "}
+                            {t(itemTranslationIdentifier(itemType, item.name, "name"))}{" "}
                             {ttry(
                                 itemTranslationIdentifier(
                                     itemType,

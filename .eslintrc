@@ -24,13 +24,9 @@
     "root": true,
     "rules": {
         "@typescript-eslint/no-unused-vars": "off",
-        "@typescript-eslint/semi": [
-            "error"
-        ],
+        "@typescript-eslint/semi": ["error"],
         "curly": "error",
-        "i18next/no-literal-string": [
-            "error"
-        ],
+        "i18next/no-literal-string": ["error"],
         "indent": [
             "error",
             4,
@@ -44,35 +40,18 @@
         "no-restricted-imports": [
             "error",
             {
-                "patterns": [
-                    "@mui/*/*/*",
-                    "!@mui/material/test-utils/*"
-                ]
+                "patterns": ["@mui/*/*/*", "!@mui/material/test-utils/*"]
             }
         ],
         "prefer-const": "error",
-        "quotes": [
-            "error",
-            "double"
-        ],
+        "quotes": ["error", "double"],
         "react-hooks/exhaustive-deps": "error",
         "react-hooks/rules-of-hooks": "error",
-        "react/display-name": [
-            "off"
-        ],
-        "react/jsx-closing-bracket-location": [
-            "error",
-            "line-aligned"
-        ],
+        "react/display-name": ["off"],
+        "react/jsx-closing-bracket-location": ["error", "line-aligned"],
         "react/jsx-closing-tag-location": "error",
-        "react/jsx-curly-spacing": [
-            "error",
-            "never"
-        ],
-        "react/jsx-first-prop-new-line": [
-            "error",
-            "multiline"
-        ],
+        "react/jsx-curly-spacing": ["error", "never"],
+        "react/jsx-first-prop-new-line": ["error", "multiline"],
         "react/jsx-max-props-per-line": [
             "error",
             {
@@ -92,9 +71,7 @@
         "react/jsx-sort-props": [
             "error",
             {
-                "reservedFirst": [
-                    "key"
-                ]
+                "reservedFirst": ["key"]
             }
         ],
         "react/jsx-tag-spacing": [
@@ -103,9 +80,7 @@
                 "beforeSelfClosing": "always"
             }
         ],
-        "react/prefer-stateless-function": [
-            "error"
-        ],
+        "react/prefer-stateless-function": ["error"],
         "react/react-in-jsx-scope": "off",
         "react/self-closing-comp": [
             "error",
@@ -126,10 +101,7 @@
             }
         ],
         "sort-keys-fix/sort-keys-fix": "error",
-        "strict": [
-            "error",
-            "global"
-        ],
+        "strict": ["error", "global"],
         "unused-imports/no-unused-imports": "error",
         "unused-imports/no-unused-vars": [
             "error",

@@ -34,10 +34,10 @@ const CellPicker: React.FC<CellPickerProps> = ({ variant, index, itemType, cellT
         variant === null
             ? { filter: isLightMode ? "invert(100%)" : undefined }
             : {
-                background: rarityColor[cell?.variants[variant]?.rarity ?? ItemRarity.Uncommon].main,
-                borderRadius: "200px",
-                padding: 1,
-            };
+                  background: rarityColor[cell?.variants[variant]?.rarity ?? ItemRarity.Uncommon].main,
+                  borderRadius: "200px",
+                  padding: 1,
+              };
 
     return (
         <Card

@@ -7,6 +7,7 @@ export interface RunConfig {
 
 export interface Step {
     name(): string;
-    canRun(): boolean;
+    canRun(verbose: boolean): boolean;
+    isAllowedToFail(): boolean;
     run(runConfig: RunConfig): Promise<void>;
 }
