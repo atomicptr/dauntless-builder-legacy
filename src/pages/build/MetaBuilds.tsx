@@ -123,9 +123,9 @@ const MetaBuilds: React.FC = () => {
     const subcategories =
         weaponType !== null && currentCategory !== null && currentCategory.name in builds[weaponType]
             ? builds[weaponType][currentCategory.name].builds
-                  .map(build => build.subcategory)
-                  .filter(category => !!category)
-                  .filter((value, index, self) => self.indexOf(value) === index)
+                .map(build => build.subcategory)
+                .filter(category => !!category)
+                .filter((value, index, self) => self.indexOf(value) === index)
             : [];
 
     // fix some weapon types not having access to all categories
@@ -303,32 +303,32 @@ const MetaBuilds: React.FC = () => {
         <>
             {subcategories.length > 0
                 ? subcategories.map(subcategory => (
-                      <Box key={subcategory}>
-                          <Typography
-                              sx={{ my: 2 }}
-                              variant="h5"
-                          >
-                              {t(`pages.metabuilds.subcategories.${subcategory}`)}
-                          </Typography>
+                    <Box key={subcategory}>
+                        <Typography
+                            sx={{ my: 2 }}
+                            variant="h5"
+                        >
+                            {t(`pages.metabuilds.subcategories.${subcategory}`)}
+                        </Typography>
 
-                          {subcategory !== null && subcategory in buildCategory.subcategoryDescription && (
-                              <Typography sx={{ mb: 2 }}>
-                                  {t(
-                                      `pages.metabuilds.generated.categories.${buildCategory.name}.subcategoryDescription.${subcategory}`,
-                                  )}
-                              </Typography>
-                          )}
+                        {subcategory !== null && subcategory in buildCategory.subcategoryDescription && (
+                            <Typography sx={{ mb: 2 }}>
+                                {t(
+                                    `pages.metabuilds.generated.categories.${buildCategory.name}.subcategoryDescription.${subcategory}`,
+                                )}
+                            </Typography>
+                        )}
 
-                          <Stack
-                              spacing={2}
-                              sx={{ mt: 2 }}
-                          >
-                              {renderBuildsByElement(
-                                  buildCategory.builds.filter(build => build.subcategory === subcategory),
-                              )}
-                          </Stack>
-                      </Box>
-                  ))
+                        <Stack
+                            spacing={2}
+                            sx={{ mt: 2 }}
+                        >
+                            {renderBuildsByElement(
+                                buildCategory.builds.filter(build => build.subcategory === subcategory),
+                            )}
+                        </Stack>
+                    </Box>
+                ))
                 : renderBuildsByElement(buildCategory.builds)}
 
             {subcategories.length > 0 && (

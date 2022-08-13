@@ -147,8 +147,8 @@ const BuildCard: React.FC<BuildCardProps> = ({ build, buildId, title, miniMode }
                                 (omnicellName === ""
                                     ? weaponName
                                     : weaponName === ""
-                                    ? omnicellName
-                                    : `${omnicellName} / ${weaponName}`)}
+                                        ? omnicellName
+                                        : `${omnicellName} / ${weaponName}`)}
                         </Typography>
                     </Stack>
 

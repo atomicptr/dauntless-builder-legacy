@@ -268,19 +268,19 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                                                 <>
                                                     {itemType === ItemType.Weapon || isArmourType(itemType)
                                                         ? (item as Weapon | Armour).unique_effects
-                                                              ?.filter(ue =>
-                                                                  ue.powerSurged !== undefined
-                                                                      ? ue.powerSurged === powerSurged
-                                                                      : true,
-                                                              )
-                                                              .map((ue, index) => (
-                                                                  <UniqueEffectCard
-                                                                      key={index}
-                                                                      item={item}
-                                                                      itemType={itemType}
-                                                                      uniqueEffect={ue}
-                                                                  />
-                                                              ))
+                                                            ?.filter(ue =>
+                                                                ue.powerSurged !== undefined
+                                                                    ? ue.powerSurged === powerSurged
+                                                                    : true,
+                                                            )
+                                                            .map((ue, index) => (
+                                                                <UniqueEffectCard
+                                                                    key={index}
+                                                                    item={item}
+                                                                    itemType={itemType}
+                                                                    uniqueEffect={ue}
+                                                                />
+                                                            ))
                                                         : null}
 
                                                     {itemType === ItemType.Omnicell ? (
@@ -293,40 +293,40 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                                             (itemType === ItemType.Weapon || isArmourType(itemType)) &&
                                             getCells(item).filter(cell => !!cell).length > 0 &&
                                             !disableComponentsInside ? (
-                                                <Typography
-                                                    color="text.secondary"
-                                                    component="div"
-                                                    variant="subtitle1"
-                                                >
-                                                    <Stack
-                                                        direction={isMobile ? "column" : "row"}
-                                                        spacing={isMobile ? 0 : 1}
+                                                    <Typography
+                                                        color="text.secondary"
+                                                        component="div"
+                                                        variant="subtitle1"
                                                     >
-                                                        <Box>
-                                                            <b>{`${t("terms.cells")}:`}</b>
-                                                        </Box>
-                                                        {getCells(item).map((cellType, index) =>
-                                                            cellType ? (
-                                                                <Box
-                                                                    key={index}
-                                                                    sx={{ alignItems: "center", display: "flex" }}
-                                                                >
-                                                                    <img
-                                                                        src={`/assets/icons/perks/${cellType}.png`}
-                                                                        style={{
-                                                                            filter,
-                                                                            height: "16px",
-                                                                            width: "16px",
-                                                                        }}
-                                                                    />
+                                                        <Stack
+                                                            direction={isMobile ? "column" : "row"}
+                                                            spacing={isMobile ? 0 : 1}
+                                                        >
+                                                            <Box>
+                                                                <b>{`${t("terms.cells")}:`}</b>
+                                                            </Box>
+                                                            {getCells(item).map((cellType, index) =>
+                                                                cellType ? (
+                                                                    <Box
+                                                                        key={index}
+                                                                        sx={{ alignItems: "center", display: "flex" }}
+                                                                    >
+                                                                        <img
+                                                                            src={`/assets/icons/perks/${cellType}.png`}
+                                                                            style={{
+                                                                                filter,
+                                                                                height: "16px",
+                                                                                width: "16px",
+                                                                            }}
+                                                                        />
                                                                     &nbsp;
-                                                                    {t(`terms.cell-type.${cellType}`)}
-                                                                </Box>
-                                                            ) : null,
-                                                        )}
-                                                    </Stack>
-                                                </Typography>
-                                            ) : null
+                                                                        {t(`terms.cell-type.${cellType}`)}
+                                                                    </Box>
+                                                                ) : null,
+                                                            )}
+                                                        </Stack>
+                                                    </Typography>
+                                                ) : null
                                         }
                                         isPowerSurged={canBePowerSurged && powerSurged}
                                         item={item}
@@ -397,56 +397,56 @@ export default ItemSelectDialog;
 
 export const filterBySearchQuery =
     (query: string) =>
-    (item: ItemPickerItem, itemType: ItemType): boolean => {
-        if (!item) {
+        (item: ItemPickerItem, itemType: ItemType): boolean => {
+            if (!item) {
+                return false;
+            }
+
+            const { t } = i18n;
+
+            if (matchesSearchIn(query, [item.name, t(itemTranslationIdentifier(itemType, item.name, "name"))])) {
+                return true;
+            }
+
+            if (itemType === ItemType.Weapon || isArmourType(itemType) || itemType === ItemType.Lantern) {
+                const description = t(itemTranslationIdentifier(itemType, item.name, "description"));
+                return matchesSearchIn(query, [(item as Weapon | Armour | Lantern).description, description]);
+            }
+
             return false;
-        }
-
-        const { t } = i18n;
-
-        if (matchesSearchIn(query, [item.name, t(itemTranslationIdentifier(itemType, item.name, "name"))])) {
-            return true;
-        }
-
-        if (itemType === ItemType.Weapon || isArmourType(itemType) || itemType === ItemType.Lantern) {
-            const description = t(itemTranslationIdentifier(itemType, item.name, "description"));
-            return matchesSearchIn(query, [(item as Weapon | Armour | Lantern).description, description]);
-        }
-
-        return false;
-    };
+        };
 
 export const filterByWeaponType =
     (weaponType: WeaponType) =>
-    (item: ItemPickerItem, _itemType: ItemType): boolean =>
-        (item as Weapon).type === weaponType;
+        (item: ItemPickerItem, _itemType: ItemType): boolean =>
+            (item as Weapon).type === weaponType;
 
 export const filterByArmourType =
     (armourType: ArmourType) =>
-    (item: ItemPickerItem, _itemType: ItemType): boolean =>
-        (item as Armour).type === armourType;
+        (item: ItemPickerItem, _itemType: ItemType): boolean =>
+            (item as Armour).type === armourType;
 
 export const filterByElement =
     (elemental: ElementalType) =>
-    (item: ItemPickerItem, itemType: ItemType): boolean =>
-        itemType === ItemType.Weapon
-            ? (item as Weapon).elemental === elemental
-            : (item as Armour).strength === elemental;
+        (item: ItemPickerItem, itemType: ItemType): boolean =>
+            itemType === ItemType.Weapon
+                ? (item as Weapon).elemental === elemental
+                : (item as Armour).strength === elemental;
 
 export const filterByCellSlot =
     (cellSlot: CellType) =>
-    (item: ItemPickerItem, _itemType: ItemType): boolean =>
-        ((item as Weapon | Armour | Lantern).cells?.indexOf(cellSlot) ?? -1) > -1;
+        (item: ItemPickerItem, _itemType: ItemType): boolean =>
+            ((item as Weapon | Armour | Lantern).cells?.indexOf(cellSlot) ?? -1) > -1;
 
 export const filterByPerk =
     (perk: string) =>
-    (item: ItemPickerItem, _itemType: ItemType): boolean =>
-        ((item as Weapon | Armour).perks ?? []).some(p => p.name === perk);
+        (item: ItemPickerItem, _itemType: ItemType): boolean =>
+            ((item as Weapon | Armour).perks ?? []).some(p => p.name === perk);
 
 export const filterRemoveBondWeapons =
     () =>
-    (item: ItemPickerItem, _itemType: ItemType): boolean =>
-        !(item as Weapon).bond;
+        (item: ItemPickerItem, _itemType: ItemType): boolean =>
+            !(item as Weapon).bond;
 
 export const filterRemoveExotics = () => (item: ItemPickerItem, itemType: ItemType) =>
     itemType === ItemType.Weapon || isArmourType(itemType)

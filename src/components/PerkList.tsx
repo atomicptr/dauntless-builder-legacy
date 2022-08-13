@@ -141,16 +141,16 @@ export const perkEffectDescriptionById = (perk: Perk, id: string): string => {
         .map((description, index) =>
             description !== null
                 ? i18n.t(
-                      itemTranslationIdentifier(
-                          ItemType.Perk,
-                          perk.name,
-                          "effects",
-                          id,
-                          "description",
-                          index.toString(),
-                      ),
-                      perk.effects[id].values,
-                  )
+                    itemTranslationIdentifier(
+                        ItemType.Perk,
+                        perk.name,
+                        "effects",
+                        id,
+                        "description",
+                        index.toString(),
+                    ),
+                    perk.effects[id].values,
+                )
                 : null,
         )
         .filter(description => !!description)

@@ -43,7 +43,8 @@ const OmnicellCard: React.FC<OmnicellCardProps> = ({ item }) => {
                             sx={{ mb: 1 }}
                             variant="h5"
                         >
-                            {t(itemTranslationIdentifier(ItemType.Omnicell, item.name, "name"))}{" "}
+                            {t(itemTranslationIdentifier(ItemType.Omnicell, item.name, "name"))}
+                            {" "}
                             {t("terms.active-ability")}
                         </Typography>
                     </Box>

@@ -58,9 +58,9 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
     const canBePowerSurged =
         item !== null
             ? match(type)
-                  .with(ItemType.Weapon, () => (item as Weapon).power.powerSurged !== undefined)
-                  .with(ArmourItemType, () => (item as Armour).resistance.powerSurged !== undefined)
-                  .otherwise(() => false)
+                .with(ItemType.Weapon, () => (item as Weapon).power.powerSurged !== undefined)
+                .with(ArmourItemType, () => (item as Armour).resistance.powerSurged !== undefined)
+                .otherwise(() => false)
             : false;
 
     const onItemSelected = () => {

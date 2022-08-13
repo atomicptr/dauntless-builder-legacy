@@ -2,9 +2,9 @@ import * as fs from "fs";
 import path from "path";
 import sortJson from "sort-json";
 
+import { sortJsonOptions } from "../constants";
 import { RunConfig, Step } from "../Step";
 import { WithStepLogger } from "../WithStepLogger";
-import {sortJsonOptions} from "../constants";
 
 const createItemTranslationIdentifier = (...parts: string[]): string =>
     ["item", ...parts]
@@ -96,12 +96,12 @@ export class I18nStep extends WithStepLogger implements Step {
                                 firstItem.name === item.name && firstIndex.toString() === index.toString()
                                     ? ue.description
                                     : `$t(${createItemTranslationIdentifier(
-                                          category,
-                                          firstItem.name,
-                                          "unique_effects",
-                                          firstIndex.toString(),
-                                          "description",
-                                      )})`;
+                                        category,
+                                        firstItem.name,
+                                        "unique_effects",
+                                        firstIndex.toString(),
+                                        "description",
+                                    )})`;
                         }
 
                         if (ue.title) {
@@ -185,12 +185,12 @@ export class I18nStep extends WithStepLogger implements Step {
                                 firstKey.toString() === key.toString()
                                     ? effect.description
                                     : `$t(${createItemTranslationIdentifier(
-                                          category,
-                                          itemName,
-                                          "effects",
-                                          firstKey,
-                                          "description",
-                                      )})`;
+                                        category,
+                                        itemName,
+                                        "effects",
+                                        firstKey,
+                                        "description",
+                                    )})`;
                             continue;
                         }
 
@@ -218,15 +218,15 @@ export class I18nStep extends WithStepLogger implements Step {
                                         ? null
                                         : firstEffectKey.toString() === key.toString() &&
                                           firstIndex.toString() === index.toString()
-                                        ? effect.description[index]
-                                        : `$t(${createItemTranslationIdentifier(
-                                              category,
-                                              itemName,
-                                              "effects",
-                                              firstEffectKey,
-                                              "description",
-                                              firstIndex,
-                                          )})`;
+                                            ? effect.description[index]
+                                            : `$t(${createItemTranslationIdentifier(
+                                                category,
+                                                itemName,
+                                                "effects",
+                                                firstEffectKey,
+                                                "description",
+                                                firstIndex,
+                                            )})`;
                             }
                         }
                     }

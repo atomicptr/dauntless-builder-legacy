@@ -335,19 +335,19 @@ const Build: React.FC = () => {
 
                                 {(item as Weapon).bond
                                     ? build.data.bondWeapon?.unique_effects
-                                          ?.filter(ue =>
-                                              ue.powerSurged !== undefined
-                                                  ? ue.powerSurged === build.weaponSurged
-                                                  : true,
-                                          )
-                                          .map((ue, index) => (
-                                              <UniqueEffectCard
-                                                  key={index}
-                                                  item={build.data.bondWeapon as Weapon}
-                                                  itemType={type}
-                                                  uniqueEffect={ue}
-                                              />
-                                          ))
+                                        ?.filter(ue =>
+                                            ue.powerSurged !== undefined
+                                                ? ue.powerSurged === build.weaponSurged
+                                                : true,
+                                        )
+                                        .map((ue, index) => (
+                                            <UniqueEffectCard
+                                                key={index}
+                                                item={build.data.bondWeapon as Weapon}
+                                                itemType={type}
+                                                uniqueEffect={ue}
+                                            />
+                                        ))
                                     : null}
 
                                 <BondWeaponPicker

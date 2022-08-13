@@ -5,9 +5,9 @@ import md5 from "md5";
 import path from "path";
 import sortJson from "sort-json";
 
+import { sortJsonOptions } from "../constants";
 import { RunConfig, Step } from "../Step";
 import { WithStepLogger } from "../WithStepLogger";
-import {sortJsonOptions} from "../constants";
 
 interface StringMap {
     [category: string]: {
@@ -106,13 +106,16 @@ export class DataStep extends WithStepLogger implements Step {
 
         this.log("Build string map with " + num + " entries.");
 
-        sortJson.overwrite([
-            path.join(runConfig.publicDir, "data.json"),
-            path.join(runConfig.targetDir, "data.json"),
-            path.join(runConfig.targetDir, "names.json"),
-            path.join(mapDir, "names.json"),
-            path.join(runConfig.publicDir, "meta.json"),
-        ], sortJsonOptions);
+        sortJson.overwrite(
+            [
+                path.join(runConfig.publicDir, "data.json"),
+                path.join(runConfig.targetDir, "data.json"),
+                path.join(runConfig.targetDir, "names.json"),
+                path.join(mapDir, "names.json"),
+                path.join(runConfig.publicDir, "meta.json"),
+            ],
+            sortJsonOptions,
+        );
     }
 
     private readJson(path: string) {

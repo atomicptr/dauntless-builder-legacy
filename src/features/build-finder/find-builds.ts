@@ -128,15 +128,15 @@ const createItemData = (
 
     const filterPerksAndCells =
         (mode: (a: boolean, b: boolean) => boolean = orMode) =>
-        (item: Weapon | Armour) =>
-            mode(
+            (item: Weapon | Armour) =>
+                mode(
                 (item.perks && item.perks[0].name in requestedPerks) as boolean,
                 ((item.cells &&
                     (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
                         cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
                     )) ||
                     (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
-            );
+                );
 
     const findMatchingArmourPiecesByType = (type: ArmourType) =>
         findArmourPiecesByType(type).filter(
@@ -333,8 +333,8 @@ export const findBuilds = (
             perks:
                 "perks" in item
                     ? (item.perks ?? [])
-                          .map(perk => perk.name)
-                          .filter((perk, index, self) => self.indexOf(perk) === index)
+                        .map(perk => perk.name)
+                        .filter((perk, index, self) => self.indexOf(perk) === index)
                     : [],
         };
 

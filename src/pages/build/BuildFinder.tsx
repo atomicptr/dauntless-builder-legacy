@@ -108,11 +108,11 @@ const findBuilds = async (
 
     const builds = useCache
         ? await cacheAsync<MatchingBuild[]>("findBuilds", async () => await fetchBuilds(), [
-              maxBuilds,
-              options,
-              requestedPerks,
-              weaponType,
-          ])
+            maxBuilds,
+            options,
+            requestedPerks,
+            weaponType,
+        ])
         : await fetchBuilds();
 
     return convertFindBuildResultsToBuildModel(builds);
@@ -604,8 +604,8 @@ const BuildFinder: React.FC = () => {
                                                         selectedPerks[perk.name] === 6
                                                             ? ItemRarity.Epic
                                                             : selectedPerks[perk.name] === 3
-                                                            ? ItemRarity.Uncommon
-                                                            : undefined
+                                                                ? ItemRarity.Uncommon
+                                                                : undefined
                                                     }
                                                     sx={{ flexGrow: 2 }}
                                                 >
@@ -621,7 +621,8 @@ const BuildFinder: React.FC = () => {
                                                                         perk.name,
                                                                         "name",
                                                                     ),
-                                                                )}{" "}
+                                                                )}
+                                                                {" "}
                                                                 {renderPerkLevel(perk)}
                                                             </Box>
                                                             <Box hidden={!isMobile}>

@@ -1,12 +1,14 @@
+import commandLineArgs from "command-line-args";
 import path from "path";
 import { fileURLToPath } from "url";
 
 import { RunConfig, Step } from "./Step";
 import { DataStep } from "./steps/DataStep";
+import { DependenciesStep } from "./steps/DependenciesStep";
+import { GithubContributorsStep } from "./steps/GithubContributorsStep";
 import { I18nStep } from "./steps/I18nStep";
-import commandLineArgs from "command-line-args";
 
-const Steps = [DataStep, I18nStep];
+const Steps = [DataStep, I18nStep, GithubContributorsStep, DependenciesStep];
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.join(__dirname, "..", "..");
@@ -18,17 +20,17 @@ interface CommandLineOptions {
 }
 
 const defaultValues: CommandLineOptions = {
-    verbose: false,
     exclude: [],
     run: [],
+    verbose: false,
 };
 
 const options = Object.assign(
     defaultValues,
     commandLineArgs([
-        { name: "verbose", alias: "v", type: Boolean },
-        { name: "exclude", type: String, multiple: true },
-        { name: "run", type: String, multiple: true },
+        { alias: "v", name: "verbose", type: Boolean },
+        { multiple: true, name: "exclude", type: String },
+        { multiple: true, name: "run", type: String },
     ]),
 ) as CommandLineOptions;
 
