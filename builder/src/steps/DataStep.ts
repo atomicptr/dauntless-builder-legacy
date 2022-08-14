@@ -50,7 +50,7 @@ export class DataStep extends WithStepLogger implements Step {
             this.buildMap(path.join(runConfig.dataDir, "weapons", "*", "*.yml")),
             this.buildMap(path.join(runConfig.dataDir, "parts", "*", "*", "*.yml")),
             this.buildMap(path.join(runConfig.dataDir, "omnicells", "*.yml")),
-            this.buildMap(path.join(runConfig.dataDir, "data", "misc.yml")),
+            this.buildMap(path.join(runConfig.dataDir, "misc.yml")),
         ]);
 
         const object = {
