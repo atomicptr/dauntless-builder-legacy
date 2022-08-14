@@ -390,11 +390,6 @@
         "repository": "https://github.com/frenic/csstype"
     },
     {
-        "license": "UNLICENSED",
-        "name": "dauntless-builder@2.0.0",
-        "repository": "https://github.com/atomicptr/dauntless-builder"
-    },
-    {
         "license": "MIT",
         "name": "debug@4.3.4",
         "repository": "https://github.com/debug-js/debug"

@@ -6,7 +6,7 @@ import { RunConfig, Step } from "../Step";
 import { WithStepLogger } from "../WithStepLogger";
 
 // list of excluded dependencies, use the full package name (without version!) e.g. "@babel/core"
-const excludeDependencies: string[] = [];
+const excludeDependencies: string[] = ["dauntless-builder"];
 
 export class DependenciesStep extends WithStepLogger implements Step {
     canRun(_verbose: boolean): boolean {
