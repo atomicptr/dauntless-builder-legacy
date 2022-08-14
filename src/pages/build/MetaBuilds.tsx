@@ -1,4 +1,6 @@
 import metaBuildsJson from "@json/meta-builds.json";
+import trialsBuildsJson from "@json/trials-builds.json";
+import { ArrowRight } from "@mui/icons-material";
 import { Alert, Box, ListSubheader, Skeleton, Stack, Tab, Tabs, Typography } from "@mui/material";
 import BuildCard from "@src/components/BuildCard";
 import LinkBox from "@src/components/LinkBox";
@@ -15,7 +17,7 @@ import {
 } from "@src/features/meta-builds-selection/meta-builds-selection-slice";
 import { useCache } from "@src/hooks/cache";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
-import React, { ReactNode, useCallback, useEffect } from "react";
+import React, { ReactNode, useCallback, useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 
@@ -52,11 +54,15 @@ interface BuildCategoryBuild {
     vsElement: ElementalType | null;
 }
 
+const trialsCategoryName = "Trials";
+
 const MetaBuilds: React.FC = () => {
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
 
     const { weaponType, buildCategoryIndex, showNote } = useAppSelector(selectMetaBuildsSelection);
+
+    const categories = useMemo(() => metaBuildsJson.categories.map(c => c.name).concat([trialsCategoryName]), []);
 
     const builds = useCache(
         "metabuilds-builds",
@@ -105,9 +111,47 @@ const MetaBuilds: React.FC = () => {
                 }
             }
 
+            for (const behemoth of trialsBuildsJson.behemoths) {
+                for (const buildId of behemoth.builds) {
+                    const build = BuildModel.tryDeserialize(buildId);
+
+                    const weaponType = build.data.weapon?.type;
+
+                    if (!weaponType) {
+                        continue;
+                    }
+
+                    if (!(trialsCategoryName in builds[weaponType])) {
+                        const subcategoryDescription: {
+                            [name: string]: string;
+                        } = {};
+
+                        trialsBuildsJson.behemoths.forEach(behemoth => {
+                            subcategoryDescription[behemoth.title] = (behemoth.tips?.length ?? 0).toString();
+                        });
+
+                        builds[weaponType][trialsCategoryName] = {
+                            builds: [],
+                            description: "",
+                            index: 99,
+                            name: trialsCategoryName,
+                            subcategoryDescription,
+                            tier: null,
+                        };
+                    }
+
+                    builds[weaponType][trialsCategoryName].builds.push({
+                        buildId: build.serialize(),
+                        subcategory: behemoth.title,
+                        title: behemoth.title,
+                        vsElement: null,
+                    });
+                }
+            }
+
             return builds;
         },
-        [metaBuildsJson],
+        [metaBuildsJson, trialsBuildsJson],
     );
 
     const hasBuilds = useCallback(
@@ -116,13 +160,11 @@ const MetaBuilds: React.FC = () => {
         [weaponType, builds],
     );
 
-    const currentCategory = metaBuildsJson.categories[buildCategoryIndex]
-        ? metaBuildsJson.categories[buildCategoryIndex]
-        : null;
+    const currentCategory = categories[buildCategoryIndex] ? categories[buildCategoryIndex] : null;
 
     const subcategories =
-        weaponType !== null && currentCategory !== null && currentCategory.name in builds[weaponType]
-            ? builds[weaponType][currentCategory.name].builds
+        weaponType !== null && currentCategory !== null && currentCategory in builds[weaponType]
+            ? builds[weaponType][currentCategory].builds
                 .map(build => build.subcategory)
                 .filter(category => !!category)
                 .filter((value, index, self) => self.indexOf(value) === index)
@@ -150,6 +192,17 @@ const MetaBuilds: React.FC = () => {
         }
     }, [buildCategoryIndex, weaponType, hasBuilds, dispatch]);
 
+    const categoryTranslate = useCallback(
+        (defaultKey: string, trialsKey?: string, category: string | null = currentCategory) => {
+            category ??= currentCategory;
+            if (trialsKey && category === trialsCategoryName) {
+                return t(trialsKey);
+            }
+            return t(defaultKey);
+        },
+        [t, currentCategory],
+    );
+
     const renderBuild = useCallback(
         (index: number, buildId: string, title: string) => (
             <Box key={index}>
@@ -165,13 +218,17 @@ const MetaBuilds: React.FC = () => {
                     <Box>
                         <BuildCard
                             buildId={buildId}
-                            title={t(`pages.metabuilds.generated.buildTitles.${title}`)}
+                            title={
+                                currentCategory === trialsCategoryName
+                                    ? undefined
+                                    : t(`pages.metabuilds.generated.buildTitles.${title}`)
+                            }
                         />
                     </Box>
                 </LazyLoadComponent>
             </Box>
         ),
-        [t],
+        [t, currentCategory],
     );
 
     const renderBuildsByElement = useCallback(
@@ -308,16 +365,34 @@ const MetaBuilds: React.FC = () => {
                             sx={{ my: 2 }}
                             variant="h5"
                         >
-                            {t(`pages.metabuilds.subcategories.${subcategory}`)}
+                            {categoryTranslate(
+                                `pages.metabuilds.subcategories.${subcategory}`,
+                                `terms.behemoths.${subcategory}`,
+                            )}
                         </Typography>
 
-                        {subcategory !== null && subcategory in buildCategory.subcategoryDescription && (
-                            <Typography sx={{ mb: 2 }}>
-                                {t(
-                                    `pages.metabuilds.generated.categories.${buildCategory.name}.subcategoryDescription.${subcategory}`,
-                                )}
-                            </Typography>
-                        )}
+                        {subcategory !== null &&
+                              subcategory in buildCategory.subcategoryDescription &&
+                              (buildCategory.name === trialsCategoryName ? (
+                                  new Array(Number(buildCategory.subcategoryDescription[subcategory]))
+                                      .fill(null)
+                                      .map((_, index) => (
+                                          <Typography
+                                              key={index}
+                                              sx={{ alignItems: "center", display: "flex", mb: 2 }}
+                                          >
+                                              <ArrowRight /> 
+                                              {" "}
+                                              {t(`pages.trials.generated.tips.${subcategory}.${index}`)}
+                                          </Typography>
+                                      ))
+                              ) : (
+                                  <Typography sx={{ mb: 2 }}>
+                                      {t(
+                                          `pages.metabuilds.generated.categories.${buildCategory.name}.subcategoryDescription.${subcategory}`,
+                                      )}
+                                  </Typography>
+                              ))}
 
                         <Stack
                             spacing={2}
@@ -374,32 +449,40 @@ const MetaBuilds: React.FC = () => {
                         value={buildCategoryIndex}
                         variant="scrollable"
                     >
-                        {metaBuildsJson.categories.map((category, index) => (
+                        {categories.map((category, index) => (
                             <Tab
                                 key={index}
-                                disabled={!hasBuilds(category.name)}
-                                label={t(`pages.metabuilds.generated.categories.${category.name}.name`)}
+                                disabled={!hasBuilds(category)}
+                                label={categoryTranslate(
+                                    `pages.metabuilds.generated.categories.${category}.name`,
+                                    "pages.trials.title",
+                                    category,
+                                )}
                             />
                         ))}
                     </Tabs>
                 </Box>
-                {metaBuildsJson.categories.map((category, index) => (
+                {categories.map((category, index) => (
                     <TabPanel
                         key={index}
                         index={index}
                         value={buildCategoryIndex}
                     >
-                        {category.name in builds[weaponType] && (
+                        {category in builds[weaponType] && (
                             <>
                                 <Typography>
-                                    {t(`pages.metabuilds.generated.categories.${category.name}.description`)}
+                                    {categoryTranslate(
+                                        `pages.metabuilds.generated.categories.${category}.description`,
+                                        "pages.trials.description",
+                                        category,
+                                    )}
                                 </Typography>
 
                                 <Stack
                                     spacing={2}
                                     sx={{ mt: 2 }}
                                 >
-                                    {renderSubcategories(builds[weaponType][category.name])}
+                                    {renderSubcategories(builds[weaponType][category])}
                                 </Stack>
                             </>
                         )}
