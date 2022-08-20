@@ -1,5 +1,5 @@
 name: Timeweave Robes
-description: Torso protection, part of the Timeweave set.
+description: "{{typeAlt}} protection, part of the Timeweave set."
 icon: /assets/icons/armours/timeweave/TimeweaveRobes.png
 type: Torso
 strength: Radiant

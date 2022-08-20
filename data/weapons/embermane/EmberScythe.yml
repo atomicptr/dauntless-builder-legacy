@@ -1,5 +1,6 @@
 name: Ember Scythe
-description: A Slayer's axe forged with Embermane trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Embermane
 icon: /assets/icons/weapons/embermane/EmberScythe.png
 type: Axe
 damage: Slashing

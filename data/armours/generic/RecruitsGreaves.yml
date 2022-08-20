@@ -1,5 +1,5 @@
 name: Recruit's Greaves
-description: Leg and foot protection for the novice Slayer.
+description: "{{typeAlt}} protection for the novice Slayer."
 icon: /assets/icons/armours/generic/RecruitsGreaves.png
 type: Legs
 strength: null

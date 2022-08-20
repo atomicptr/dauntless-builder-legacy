@@ -1,5 +1,6 @@
 name: Valomyr's Burden
-description: A Slayer's hammer forged with Valomyr trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Valomyr
 icon: /assets/icons/weapons/valomyr/ValomyrsBurden.png
 type: Hammer
 damage: Blunt

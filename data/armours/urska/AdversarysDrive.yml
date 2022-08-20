@@ -1,5 +1,6 @@
 name: Adversary's Drive
-description: Leg and foot protection forged from Urska trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Urska
 icon: /assets/icons/armours/urska/AdversarysDrive.png
 type: Legs
 strength: Frost

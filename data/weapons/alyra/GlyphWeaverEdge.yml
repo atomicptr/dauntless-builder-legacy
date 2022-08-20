@@ -1,5 +1,6 @@
 name: Glyph Weaver Edge
-description: A Slayer's sword forged with Alyra trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Alyra
 icon: /assets/icons/weapons/alyra/GlyphWeaverEdge.png
 type: Sword
 damage: Slashing

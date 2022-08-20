@@ -2,6 +2,7 @@ name: The Godhand
 description: >-
   The Godhand is a craftable Exotic weapon in Dauntless. It is crafted from
   Rezakiri reagents.
+behemoth: Rezakiri
 icon: /assets/icons/weapons/rezakiri/TheGodhand.png
 type: War Pike
 damage: Piercing

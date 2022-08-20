@@ -1,5 +1,6 @@
 name: Skarn's Smashers
-description: A Slayer's aether strikers forged with Skarn trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Skarn
 icon: /assets/icons/weapons/skarn/SkarnsSmashers.png
 type: Aether Strikers
 damage: Blunt

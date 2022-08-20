@@ -1,5 +1,6 @@
 name: Storm Pike
-description: A Slayer's war pike forged with Stormclaw trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Stormclaw
 icon: /assets/icons/weapons/stormclaw/StormPike.png
 type: War Pike
 damage: Piercing

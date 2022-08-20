@@ -1,5 +1,6 @@
 name: Heart of Stone
-description: Torso protection forged from Skarn trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Skarn
 icon: /assets/icons/armours/skarn/HeartOfStone.png
 type: Torso
 strength: Terra

@@ -1,5 +1,6 @@
 name: Storm Hammer
-description: A Slayer's hammer forged with Stormclaw trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Stormclaw
 icon: /assets/icons/weapons/stormclaw/StormHammer.png
 type: Hammer
 damage: Blunt

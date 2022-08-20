@@ -1,5 +1,6 @@
 name: Shocking Grasp
-description: Arms protection forged from Nayzaga trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Nayzaga
 icon: /assets/icons/armours/nayzaga/ShockingGrasp.png
 type: Arms
 strength: Shock

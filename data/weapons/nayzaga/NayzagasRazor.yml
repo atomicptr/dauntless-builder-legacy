@@ -1,5 +1,6 @@
 name: Nayzaga's Razor
-description: A Slayer's sword forged with Nayzaga trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Nayzaga
 icon: /assets/icons/weapons/nayzaga/NayzagasRazor.png
 type: Sword
 damage: Slashing

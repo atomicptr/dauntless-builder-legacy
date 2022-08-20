@@ -1,5 +1,6 @@
 name: Voice of Boreus
-description: A Slayer's repeaters forged with Boreus trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Boreus
 icon: /assets/icons/weapons/boreus/VoiceOfBoreus.png
 type: Repeater
 damage: Slashing

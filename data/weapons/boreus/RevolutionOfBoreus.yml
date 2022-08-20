@@ -1,5 +1,6 @@
 name: Revolution of Boreus
-description: A Slayer's war pike forged with Boreus trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Boreus
 icon: /assets/icons/weapons/boreus/RevolutionOfBoreus.png
 type: War Pike
 damage: Piercing

@@ -1,5 +1,6 @@
 name: Fate of the Firebird
-description: A Slayer's war pike forged with Phaelanx trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Phaelanx
 icon: /assets/icons/weapons/phaelanx/FateOfTheFirebird.png
 type: War Pike
 damage: Piercing

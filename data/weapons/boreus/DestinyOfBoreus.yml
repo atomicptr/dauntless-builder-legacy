@@ -1,5 +1,6 @@
 name: Destiny of Boreus
-description: A Slayer's chain blades forged with Boreus trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Boreus
 icon: /assets/icons/weapons/boreus/DestinyOfBoreus.png
 type: Chain Blades
 damage: Slashing

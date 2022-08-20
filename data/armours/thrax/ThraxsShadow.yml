@@ -1,5 +1,6 @@
 name: Thrax's Shadow
-description: Torso protection forged from Thrax trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Thrax
 icon: /assets/icons/armours/thrax/ThraxsShadow.png
 type: Torso
 strength: Umbral

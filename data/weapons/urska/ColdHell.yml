@@ -1,5 +1,6 @@
 name: Cold Hell
-description: A Slayer's war pike forged with Urska trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Urska
 icon: /assets/icons/weapons/urska/ColdHell.png
 type: War Pike
 damage: Piercing

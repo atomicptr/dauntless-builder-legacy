@@ -1,5 +1,6 @@
 name: Quillspike Jacket
-description: Torso protection forged from Quillshot trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Quillshot
 icon: /assets/icons/armours/quillshot/QuillspikeJacket.png
 type: Torso
 strength: null

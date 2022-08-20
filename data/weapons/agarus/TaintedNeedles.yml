@@ -1,5 +1,6 @@
 name: Tainted Needles
-description: A Slayer's repeaters forged with Agarus trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Agarus
 icon: /assets/icons/weapons/agarus/TaintedNeedles.png
 type: Repeater
 damage: Slashing

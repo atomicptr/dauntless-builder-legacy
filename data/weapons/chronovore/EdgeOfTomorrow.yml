@@ -1,5 +1,6 @@
 name: Edge of Tomorrow
-description: A Slayer's sword forged with Chronovore trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Chronovore
 icon: /assets/icons/weapons/chronovore/EdgeOfTomorrow.png
 type: Sword
 damage: Slashing

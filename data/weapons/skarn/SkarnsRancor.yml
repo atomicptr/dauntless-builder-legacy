@@ -1,5 +1,6 @@
 name: Skarn's Rancor
-description: A Slayer's sword forged with Skarn trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Skarn
 icon: /assets/icons/weapons/skarn/SkarnsRancor.png
 type: Sword
 damage: Slashing

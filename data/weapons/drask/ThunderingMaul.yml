@@ -1,5 +1,6 @@
 name: Thundering Maul
-description: A Slayer's hammer forged with Drask trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Drask
 icon: /assets/icons/weapons/drask/ThunderingMaul.png
 type: Hammer
 damage: Blunt

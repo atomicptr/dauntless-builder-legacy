@@ -1,5 +1,6 @@
 name: Kharabak's Claw
-description: A Slayer's axe forged with Kharabak trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Kharabak
 icon: /assets/icons/weapons/kharabak/KharabaksClaw.png
 type: Axe
 damage: Slashing

@@ -1,5 +1,6 @@
 name: Ember Pike
-description: A Slayer's war pike forged with Embermane trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Embermane
 icon: /assets/icons/weapons/embermane/EmberPike.png
 type: War Pike
 damage: Piercing

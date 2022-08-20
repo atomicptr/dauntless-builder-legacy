@@ -1,5 +1,6 @@
 name: Pyroclastic Envoy
-description: A Slayer's war pike forged with Torgadoro trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Torgadoro
 icon: /assets/icons/weapons/torgadoro/PyroclasticEnvoy.png
 type: War Pike
 damage: Piercing

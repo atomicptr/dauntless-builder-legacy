@@ -1,5 +1,6 @@
 name: Quillshot's Tusk
-description: A Slayer's sword forged with Quillshot trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Quillshot
 icon: /assets/icons/weapons/quillshot/QuillshotsTusk.png
 type: Sword
 damage: Slashing

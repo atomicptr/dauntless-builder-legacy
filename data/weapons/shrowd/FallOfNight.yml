@@ -1,5 +1,6 @@
 name: Fall of Night
-description: A Slayer's hammer forged with Shrowd trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Shrowd
 icon: /assets/icons/weapons/shrowd/FallOfNight.png
 type: Hammer
 damage: Blunt

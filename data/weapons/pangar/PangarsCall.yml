@@ -1,5 +1,6 @@
 name: Pangar's Call
-description: A Slayer's sword forged with Pangar trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Pangar
 icon: /assets/icons/weapons/pangar/PangarsCall.png
 type: Sword
 damage: Slashing

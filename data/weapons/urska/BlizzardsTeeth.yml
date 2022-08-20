@@ -1,5 +1,6 @@
 name: Blizzard's Teeth
-description: A Slayer's chain blades forged with Urska trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Urska
 icon: /assets/icons/weapons/urska/BlizzardsTeeth.png
 type: Chain Blades
 damage: Slashing

@@ -1,5 +1,6 @@
 name: Wülf Plate
-description: Torso protection forged from Frostwülf trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Frostwülf
 icon: /assets/icons/armours/frostwulf/WulfPlate.png
 type: Torso
 strength: Frost

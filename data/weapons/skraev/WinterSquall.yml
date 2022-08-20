@@ -1,5 +1,6 @@
 name: Winter Squall
-description: A Slayer's hammer forged with Skraev trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Skraev
 icon: /assets/icons/weapons/skraev/WinterSquall.png
 type: Hammer
 damage: Blunt

@@ -1,5 +1,6 @@
 name: Fiery Gauntlets
-description: Arms protection forged from Embermane trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Embermane
 icon: /assets/icons/armours/embermane/FieryGauntlets.png
 type: Arms
 strength: Blaze

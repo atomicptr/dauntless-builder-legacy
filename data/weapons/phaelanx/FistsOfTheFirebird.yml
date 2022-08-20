@@ -1,5 +1,6 @@
 name: Fists of the Firebird
-description: A Slayer's aether strikers forged with Phaelanx trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Phaelanx
 icon: /assets/icons/weapons/phaelanx/FistsOfTheFirebird.png
 type: Aether Strikers
 damage: Blunt

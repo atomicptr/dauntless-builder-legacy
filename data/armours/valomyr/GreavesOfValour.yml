@@ -1,5 +1,6 @@
 name: Greaves of Valour
-description: Leg and foot protection forged from Valomyr trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Valomyr
 icon: /assets/icons/armours/valomyr/GreavesOfValour.png
 type: Legs
 strength: Radiant

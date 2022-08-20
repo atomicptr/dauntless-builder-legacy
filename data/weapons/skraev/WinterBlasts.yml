@@ -1,5 +1,6 @@
 name: Winter Blasts
-description: A Slayer's repeaters forged with Skraev trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Skraev
 icon: /assets/icons/weapons/skraev/WinterBlasts.png
 type: Repeater
 damage: Slashing

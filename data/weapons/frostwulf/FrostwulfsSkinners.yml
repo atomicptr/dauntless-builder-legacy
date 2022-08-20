@@ -1,5 +1,6 @@
 name: Frostwülf's Skinners
-description: A Slayer's chain blades forged with Frostwülf trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Frostwülf
 icon: /assets/icons/weapons/frostwulf/FrostwulfsSkinners.png
 type: Chain Blades
 damage: Slashing

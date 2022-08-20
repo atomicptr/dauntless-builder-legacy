@@ -1,5 +1,6 @@
 name: Clutches of the Swarm
-description: Arms protection forged from Kharabak trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Kharabak
 icon: /assets/icons/armours/kharabak/ClutchesOfTheSwarm.png
 type: Arms
 strength: Terra

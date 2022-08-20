@@ -1,5 +1,6 @@
 name: Adversary's Guile
-description: Head protection forged from Urska trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Urska
 icon: /assets/icons/armours/urska/AdversarysGuile.png
 type: Head
 strength: Frost

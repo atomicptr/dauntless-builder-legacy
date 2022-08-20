@@ -1,5 +1,6 @@
 name: Charred Spear
-description: A Slayer's war pike forged with Charrogg trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Charrogg
 icon: /assets/icons/weapons/charrogg/CharredSpear.png
 type: War Pike
 damage: Piercing

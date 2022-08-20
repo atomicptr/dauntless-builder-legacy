@@ -1,5 +1,6 @@
 name: Light's Virtue
-description: Torso protection forged from Rezakiri trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Rezakiri
 icon: /assets/icons/armours/rezakiri/LightsVirtue.png
 type: Torso
 strength: Radiant

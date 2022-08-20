@@ -1,5 +1,6 @@
 name: Frostwülf's Rip
-description: A Slayer's war pike forged with Frostwülf trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Frostwülf
 icon: /assets/icons/weapons/frostwulf/FrostwulfsRip.png
 type: War Pike
 damage: Piercing

@@ -22,11 +22,18 @@ import ItemPicker, { ItemPickerItem } from "@src/components/ItemPicker";
 import OmnicellCard from "@src/components/OmnicellCard";
 import UniqueEffectCard from "@src/components/UniqueEffectCard";
 import VirtualizedList from "@src/components/VirtualizedList";
+import { getWeaponTypeKeyByValue } from "@src/components/WeaponTypeFilter";
 import { Armour, ArmourType } from "@src/data/Armour";
 import { CellType } from "@src/data/Cell";
 import { ElementalType } from "@src/data/ElementalType";
 import { ItemRarity } from "@src/data/ItemRarity";
-import { isArmourType, ItemType, itemTypeData, itemTypeLocalizationIdentifier } from "@src/data/ItemType";
+import {
+    ArmourItemType,
+    isArmourType,
+    ItemType,
+    itemTypeData,
+    itemTypeLocalizationIdentifier,
+} from "@src/data/ItemType";
 import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
 import { Weapon, WeaponType } from "@src/data/Weapon";
@@ -43,6 +50,7 @@ import { itemTranslationIdentifier } from "@src/utils/item-translation-identifie
 import { matchesSearchIn } from "@src/utils/search";
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { match } from "ts-pattern";
 
 interface ItemSelectDialogProps {
     open: boolean;
@@ -409,7 +417,25 @@ export const filterBySearchQuery =
             }
 
             if (itemType === ItemType.Weapon || isArmourType(itemType) || itemType === ItemType.Lantern) {
-                const description = t(itemTranslationIdentifier(itemType, item.name, "description"));
+                const behemoth =
+                itemType === ItemType.Weapon || isArmourType(itemType)
+                    ? (item as Weapon).behemoth
+                        ? t(`terms.behemoths.${(item as Weapon | Armour).behemoth}`)
+                        : undefined
+                    : undefined;
+
+                const vars = match(itemType)
+                    .with(ItemType.Weapon, () => ({
+                        behemoth,
+                        type: t(`terms.weapon-types.${getWeaponTypeKeyByValue((item as Weapon).type)}`),
+                    }))
+                    .with(ArmourItemType, () => ({
+                        behemoth,
+                        typeAlt: t(`terms.armour-alt.${(item as Armour).type}`),
+                    }))
+                    .otherwise(() => ({}));
+
+                const description = t(itemTranslationIdentifier(itemType, item.name, "description"), vars);
                 return matchesSearchIn(query, [(item as Weapon | Armour | Lantern).description, description]);
             }
 

@@ -1,5 +1,6 @@
 name: Inferno's Roar
-description: A Slayer's repeaters forged with Hellion trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Hellion
 icon: /assets/icons/weapons/hellion/InfernosRoar.png
 type: Repeater
 damage: Slashing

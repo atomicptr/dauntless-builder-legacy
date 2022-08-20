@@ -1,5 +1,6 @@
 name: Might of Stone
-description: Arms protection forged from Skarn trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Skarn
 icon: /assets/icons/armours/skarn/MightOfStone.png
 type: Arms
 strength: Terra

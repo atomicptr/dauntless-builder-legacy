@@ -1,5 +1,6 @@
 name: The Weeping Hours
-description: A Slayer's chain blades forged with Chronovore trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Chronovore
 icon: /assets/icons/weapons/chronovore/TheWeepingHours.png
 type: Chain Blades
 damage: Slashing

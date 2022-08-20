@@ -1,5 +1,6 @@
 name: Draskscale Greaves
-description: Leg and foot protection forged from Drask trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Drask
 icon: /assets/icons/armours/drask/DraskscaleGreaves.png
 type: Legs
 strength: Shock

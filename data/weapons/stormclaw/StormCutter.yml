@@ -1,5 +1,6 @@
 name: Storm Cutter
-description: A Slayer's axe forged with Stormclaw trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Stormclaw
 icon: /assets/icons/weapons/stormclaw/StormCutter.png
 type: Axe
 damage: Slashing

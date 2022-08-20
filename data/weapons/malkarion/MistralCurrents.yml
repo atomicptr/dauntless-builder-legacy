@@ -1,5 +1,6 @@
 name: Mistral Currents
-description: A Slayer's aether strikers forged with Malkarion trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Malkarion
 icon: /assets/icons/weapons/malkarion/MistralCurrents.png
 type: Aether Strikers
 damage: Blunt

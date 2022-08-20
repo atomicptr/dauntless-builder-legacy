@@ -1,5 +1,6 @@
 name: Circuit Breakers
-description: A Slayer's chain blades forged with Thunderdeep Drask trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Thunderdeep Drask
 icon: /assets/icons/weapons/thunderdeep/CircuitBreakers.png
 type: Chain Blades
 damage: Slashing

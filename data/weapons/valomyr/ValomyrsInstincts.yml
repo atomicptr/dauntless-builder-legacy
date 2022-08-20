@@ -1,5 +1,6 @@
 name: Valomyr's Instincts
-description: A Slayer's repeaters forged with Valomyr trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Valomyr
 icon: /assets/icons/weapons/valomyr/ValomyrsInstincts.png
 type: Repeater
 damage: Slashing

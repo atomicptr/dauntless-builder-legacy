@@ -1,5 +1,6 @@
 name: Millennium's End
-description: A Slayer's war pike forged with Chronovore trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Chronovore
 icon: /assets/icons/weapons/chronovore/MillenniumsEnd.png
 type: War Pike
 damage: Piercing

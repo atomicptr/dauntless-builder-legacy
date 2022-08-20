@@ -1,5 +1,6 @@
 name: Inverse Polarity
-description: A Slayer's war pike forged with Thunderdeep Drask trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Thunderdeep Drask
 icon: /assets/icons/weapons/thunderdeep/InversePolarity.png
 type: War Pike
 damage: Piercing

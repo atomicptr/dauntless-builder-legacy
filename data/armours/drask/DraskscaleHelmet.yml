@@ -1,5 +1,6 @@
 name: Draskscale Helmet
-description: Head protection forged from Drask trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Drask
 icon: /assets/icons/armours/drask/DraskscaleHelmet.png
 type: Head
 strength: Shock

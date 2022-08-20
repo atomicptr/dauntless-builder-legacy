@@ -1,5 +1,6 @@
 name: Gnasher Cloak
-description: Torso protection forged from Gnasher trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Gnasher
 icon: /assets/icons/armours/gnasher/GnasherCloak.png
 type: Torso
 strength: null

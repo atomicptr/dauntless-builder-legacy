@@ -1,5 +1,6 @@
 name: Quillspike Boots
-description: Leg and foot protection forged from Quillshot trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Quillshot
 icon: /assets/icons/armours/quillshot/QuillspikeBoots.png
 type: Legs
 strength: null

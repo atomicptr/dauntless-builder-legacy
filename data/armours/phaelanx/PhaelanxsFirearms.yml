@@ -1,5 +1,6 @@
 name: Phaelanx's Firearms
-description: Arms protection forged from Phaelanx trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Phaelanx
 icon: /assets/icons/armours/phaelanx/PhaelanxsFirearms.png
 type: Arms
 strength: Blaze

@@ -1,5 +1,6 @@
 name: Call of Dawn
-description: A Slayer's sword forged with Rezakiri trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Rezakiri
 icon: /assets/icons/weapons/rezakiri/CallOfDawn.png
 type: Sword
 damage: Slashing

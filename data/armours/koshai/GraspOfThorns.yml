@@ -1,5 +1,6 @@
 name: Grasp of Thorns
-description: Arms protection forged from Koshai trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Koshai
 icon: /assets/icons/armours/koshai/GraspOfThorns.png
 type: Arms
 strength: Terra

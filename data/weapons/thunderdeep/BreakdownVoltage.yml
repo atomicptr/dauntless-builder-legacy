@@ -1,5 +1,6 @@
 name: Breakdown Voltage
-description: A Slayer's axe forged with Thunderdeep Drask trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Thunderdeep Drask
 icon: /assets/icons/weapons/thunderdeep/BreakdownVoltage.png
 type: Axe
 damage: Slashing

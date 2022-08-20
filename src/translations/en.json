@@ -283,12 +283,19 @@
     "terms": {
         "active": "Active",
         "active-ability": "Active Ability",
+        "armour-alt": {
+            "Arms": "Arms",
+            "Head": "Head",
+            "Legs": "Leg and foot",
+            "Torso": "Torso"
+        },
         "arms-armour": "Arms Armour",
         "behemoths": {
             "Agarus": "Agarus",
             "Alyra": "Alyra",
             "Boreus": "Boreus",
             "Charrogg": "Charrogg",
+            "Chronovore": "The Chronovore",
             "Deepfrost Gnasher": "Deepfrost Gnasher",
             "Deepfrost Skarn": "Deepfrost Skarn",
             "Drask": "Drask",
@@ -321,7 +328,7 @@
             "Sporestruck Charrogg": "Sporestruck Charrogg",
             "Sporestruck Embermane": "Sporestruck Embermane",
             "Stormclaw": "Stormclaw",
-            "The Chronovore": "The Chronovore",
+            "The Chronovore": "$t(terms.behemoths.Chronovore)",
             "Thrax": "Thrax",
             "Thunderdeep Drask": "Thunderdeep Drask",
             "Torgadoro": "Torgadoro",

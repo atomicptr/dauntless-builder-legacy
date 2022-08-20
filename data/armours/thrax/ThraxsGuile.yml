@@ -1,5 +1,6 @@
 name: Thrax's Guile
-description: Leg and foot protection forged from Thrax trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Thrax
 icon: /assets/icons/armours/thrax/ThraxsGuile.png
 type: Legs
 strength: Umbral

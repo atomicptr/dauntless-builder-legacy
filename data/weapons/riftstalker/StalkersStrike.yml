@@ -1,5 +1,6 @@
 name: Stalker's Strike
-description: A Slayer's sword forged with Riftstalker trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Riftstalker
 icon: /assets/icons/weapons/riftstalker/StalkersStrike.png
 type: Sword
 damage: Slashing

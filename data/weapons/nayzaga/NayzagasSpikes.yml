@@ -1,5 +1,6 @@
 name: Nayzaga's Spikes
-description: A Slayer's repeaters forged with Nayzaga trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Nayzaga
 icon: /assets/icons/weapons/nayzaga/NayzagasSpikes.png
 type: Repeater
 damage: Slashing

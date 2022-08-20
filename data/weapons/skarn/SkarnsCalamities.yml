@@ -1,5 +1,6 @@
 name: Skarn's Calamities
-description: A Slayer's repeaters forged with Skarn trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Skarn
 icon: /assets/icons/weapons/skarn/SkarnsCalamities.png
 type: Repeater
 damage: Slashing

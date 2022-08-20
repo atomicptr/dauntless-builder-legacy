@@ -1,5 +1,6 @@
 name: Brutality of Boreus
-description: A Slayer's hammer forged with Boreus trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Boreus
 icon: /assets/icons/weapons/boreus/BrutalityOfBoreus.png
 type: Hammer
 damage: Blunt

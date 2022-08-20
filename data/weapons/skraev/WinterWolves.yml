@@ -1,5 +1,6 @@
 name: Winter Wolves
-description: A Slayer's aether strikers forged with Skraev trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Skraev
 icon: /assets/icons/weapons/skraev/WinterWolves.png
 type: Aether Strikers
 damage: Blunt

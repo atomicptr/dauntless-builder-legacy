@@ -1,5 +1,6 @@
 name: Malkarion's March
-description: Leg and foot protection forged from Malkarion trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Malkarion
 icon: /assets/icons/armours/malkarion/MalkarionsMarch.png
 type: Legs
 strength: Shock

@@ -1,5 +1,6 @@
 name: Sight of Stone
-description: Head protection forged from Skarn trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Skarn
 icon: /assets/icons/armours/skarn/SightOfStone.png
 type: Head
 strength: Terra

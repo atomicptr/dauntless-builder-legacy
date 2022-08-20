@@ -1,5 +1,6 @@
 name: Guise of the Rift
-description: Head protection forged from Riftstalker trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Riftstalker
 icon: /assets/icons/armours/riftstalker/GuiseOfTheRift.png
 type: Head
 strength: Umbral

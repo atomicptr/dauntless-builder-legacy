@@ -1,5 +1,6 @@
 name: Valomyr's Revenge
-description: A Slayer's chain blades forged with Valomyr trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Valomyr
 icon: /assets/icons/weapons/valomyr/ValomyrsRevenge.png
 type: Chain Blades
 damage: Slashing

@@ -1,5 +1,6 @@
 name: Hands of the Rift
-description: Arms protection forged from Riftstalker trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Riftstalker
 icon: /assets/icons/armours/riftstalker/HandsOfTheRift.png
 type: Arms
 strength: Umbral

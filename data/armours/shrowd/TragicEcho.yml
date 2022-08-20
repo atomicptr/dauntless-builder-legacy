@@ -2,6 +2,7 @@ name: Tragic Echo
 description: >-
   Tragic Echo is a piece of craftable Exotic armour in Dauntless. It is crafted
   from Shrowd reagents.
+behemoth: Shrowd
 icon: /assets/icons/armours/shrowd/TragicEcho.png
 type: Head
 strength: Umbral

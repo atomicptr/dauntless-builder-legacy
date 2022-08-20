@@ -1,5 +1,6 @@
 name: Stalker's Price
-description: A Slayer's hammer forged with Riftstalker trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Riftstalker
 icon: /assets/icons/weapons/riftstalker/StalkersPrice.png
 type: Hammer
 damage: Blunt

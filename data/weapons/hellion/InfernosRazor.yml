@@ -1,5 +1,6 @@
 name: Inferno's Razor
-description: A Slayer's sword forged with Hellion trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Hellion
 icon: /assets/icons/weapons/hellion/InfernosRazor.png
 type: Sword
 damage: Cutting

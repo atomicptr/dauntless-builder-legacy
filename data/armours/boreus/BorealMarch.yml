@@ -1,5 +1,6 @@
 name: Boreal March
-description: Leg and foot protection forged from Boreus trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Boreus
 icon: /assets/icons/armours/boreus/BorealMarch.png
 type: Legs
 strength: Frost

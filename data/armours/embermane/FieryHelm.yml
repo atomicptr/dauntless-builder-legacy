@@ -1,5 +1,6 @@
 name: Fiery Helm
-description: Head protection forged from Embermane trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Embermane
 icon: /assets/icons/armours/embermane/FieryHelm.png
 type: Head
 strength: Blaze

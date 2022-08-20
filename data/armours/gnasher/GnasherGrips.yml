@@ -1,5 +1,6 @@
 name: Gnasher Grips
-description: Arms protection forged from Gnasher trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Gnasher
 icon: /assets/icons/armours/gnasher/GnasherGrips.png
 type: Arms
 strength: null

@@ -1,5 +1,6 @@
 name: Core of Ice
-description: Torso protection forged from Pangar trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Pangar
 icon: /assets/icons/armours/pangar/CoreOfIce.png
 type: Torso
 strength: Frost

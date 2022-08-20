@@ -1,5 +1,6 @@
 name: Sahvyt's Cutlass
-description: A Slayer's sword forged with Sahvyt trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Sahvyt
 icon: /assets/icons/weapons/sahvyt/SahvytsCutlass.png
 type: Sword
 damage: Slashing

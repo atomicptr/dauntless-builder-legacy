@@ -1,5 +1,6 @@
 name: Valomyr's Hope
-description: A Slayer's war pike forged with Valomyr trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Valomyr
 icon: /assets/icons/weapons/valomyr/ValomyrsHope.png
 type: War Pike
 damage: Piercing

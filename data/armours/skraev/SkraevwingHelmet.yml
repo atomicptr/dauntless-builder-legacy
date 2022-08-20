@@ -1,5 +1,6 @@
 name: Skraevwing Helmet
-description: Head protection forged from Skraev trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Skraev
 icon: /assets/icons/armours/skraev/SkraevwingHelmet.png
 type: Head
 strength: Frost

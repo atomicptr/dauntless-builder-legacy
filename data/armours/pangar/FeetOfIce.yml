@@ -1,5 +1,6 @@
 name: Feet of Ice
-description: Leg and foot protection forged from Pangar trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Pangar
 icon: /assets/icons/armours/pangar/FeetOfIce.png
 type: Legs
 strength: Frost

@@ -1,5 +1,6 @@
 name: Inferno's Decree
-description: A Slayer's axe forged with Hellion trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Hellion
 icon: /assets/icons/weapons/hellion/InfernosDecree.png
 type: Axe
 damage: Cutting

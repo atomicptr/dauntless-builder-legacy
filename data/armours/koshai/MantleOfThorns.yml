@@ -1,5 +1,6 @@
 name: Mantle of Thorns
-description: Torso protection forged from Koshai trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Koshai
 icon: /assets/icons/armours/koshai/MantleOfThorns.png
 type: Torso
 strength: Terra

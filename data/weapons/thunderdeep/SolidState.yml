@@ -1,5 +1,6 @@
 name: Solid State
-description: A Slayer's hammer forged with Thunderdeep Drask trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Thunderdeep Drask
 icon: /assets/icons/weapons/thunderdeep/SolidState.png
 type: Hammer
 damage: Blunt

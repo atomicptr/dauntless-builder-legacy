@@ -1,5 +1,6 @@
 name: Death Blossoms
-description: A Slayer's aether strikers forged with Agarus trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Agarus
 icon: /assets/icons/weapons/agarus/DeathBlossoms.png
 type: Chain Blades
 damage: Slashing

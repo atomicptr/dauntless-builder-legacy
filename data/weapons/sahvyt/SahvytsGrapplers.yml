@@ -1,5 +1,6 @@
 name: Sahvyt's Grapplers
-description: A Slayer's aether strikers forged with Sahvyt trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Sahvyt
 icon: /assets/icons/weapons/sahvyt/SahvytsGrapplers.png
 type: Aether Strikers
 damage: Blunt

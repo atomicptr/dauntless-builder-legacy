@@ -1,5 +1,6 @@
 name: Shocking Heart
-description: Torso protection forged from Nayzaga trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Nayzaga
 icon: /assets/icons/armours/nayzaga/ShockingHeart.png
 type: Torso
 strength: Shock

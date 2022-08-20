@@ -19,6 +19,7 @@ export interface ResistanceLevel {
 export interface Armour {
     name: string;
     description: string;
+    behemoth: string | null;
     icon: string;
     type: ArmourType;
     strength: ElementalType | null;

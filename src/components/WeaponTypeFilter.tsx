@@ -5,13 +5,13 @@ import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+export const getWeaponTypeKeyByValue = (weaponTypeValue: WeaponType): string =>
+    Object.keys(WeaponType)[Object.values(WeaponType).indexOf(weaponTypeValue)];
+
 const WeaponTypeFilter: React.FC = () => {
     const dispatch = useAppDispatch();
     const weaponFilter = useAppSelector(selectWeaponFilter);
     const { t } = useTranslation();
-
-    const getWeaponTypeKeyByValue = (weaponTypeValue: WeaponType): string =>
-        Object.keys(WeaponType)[Object.values(WeaponType).indexOf(weaponTypeValue)];
 
     return (
         <FormControl fullWidth>

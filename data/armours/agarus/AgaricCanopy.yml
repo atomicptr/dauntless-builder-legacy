@@ -1,5 +1,6 @@
 name: Agaric Canopy
-description: Head protection forged from Agarus trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Agarus
 icon: /assets/icons/armours/agarus/AgaricCanopy.png
 type: Head
 strength: Terra

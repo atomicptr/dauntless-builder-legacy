@@ -1,5 +1,6 @@
 name: Scorching Agonies
-description: A Slayer's chain blades forged with Torgadoro trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Torgadoro
 icon: /assets/icons/weapons/torgadoro/ScorchingAgonies.png
 type: Chain Blades
 damage: Slashing

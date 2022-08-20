@@ -1,5 +1,6 @@
 name: Volcanic Helm
-description: Head protection forged from Charrogg trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Charrogg
 icon: /assets/icons/armours/charrogg/VolcanicHelm.png
 type: Head
 strength: Blaze

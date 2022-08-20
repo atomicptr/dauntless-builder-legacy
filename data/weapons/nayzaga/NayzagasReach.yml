@@ -1,5 +1,6 @@
 name: Nayzaga's Reach
-description: A Slayer's chain blades forged with Nayzaga trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Nayzaga
 icon: /assets/icons/weapons/nayzaga/NayzagasReach.png
 type: Chain Blades
 damage: Slashing

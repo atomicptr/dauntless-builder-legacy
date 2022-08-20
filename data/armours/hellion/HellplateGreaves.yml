@@ -1,5 +1,6 @@
 name: Hellplate Greaves
-description: Leg and foot protection forged from Hellion trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Hellion
 icon: /assets/icons/armours/hellion/HellplateGreaves.png
 type: Legs
 strength: Blaze

@@ -1,5 +1,6 @@
 name: Surge Projectors
-description: A Slayer's aether strikers forged with Thunderdeep Drask trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Thunderdeep Drask
 icon: /assets/icons/weapons/thunderdeep/SurgeProjectors.png
 type: Aether Strikers
 damage: Blunt

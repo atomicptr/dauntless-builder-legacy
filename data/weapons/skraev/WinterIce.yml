@@ -1,5 +1,6 @@
 name: Winter Ice
-description: A Slayer's sword forged with Skraev trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Skraev
 icon: /assets/icons/weapons/skraev/WinterIce.png
 type: Sword
 damage: Slashing

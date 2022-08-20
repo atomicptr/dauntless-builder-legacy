@@ -2,6 +2,7 @@ name: Molten Edict
 description: >-
   The Molten Edict is a craftable Exotic weapon in Dauntless. It is crafted from
   Firebrand Charrogg reagents.
+behemoth: Charrogg
 icon: /assets/icons/weapons/charrogg/MoltenEdict.png
 type: Hammer
 damage: Blunt

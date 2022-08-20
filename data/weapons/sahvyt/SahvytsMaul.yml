@@ -1,5 +1,6 @@
 name: Sahvyt's Maul
-description: A Slayer's hammer forged with Sahvyt trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Sahvyt
 icon: /assets/icons/weapons/sahvyt/SahvytsMaul.png
 type: Hammer
 damage: Blunt

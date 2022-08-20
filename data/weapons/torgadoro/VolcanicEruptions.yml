@@ -1,5 +1,6 @@
 name: Volcanic Eruptions
-description: A Slayer's repeaters forged with Torgadoro trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Torgadoro
 icon: /assets/icons/weapons/torgadoro/VolcanicEruptions.png
 type: Repeater
 damage: Slashing

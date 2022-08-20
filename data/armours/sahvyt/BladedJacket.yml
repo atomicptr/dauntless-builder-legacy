@@ -1,5 +1,6 @@
 name: Bladed Jacket
-description: Torso protection forged from Sahvyt trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Sahvyt
 icon: /assets/icons/armours/sahvyt/BladedJacket.png
 type: Torso
 strength: Shock

@@ -1,5 +1,6 @@
 name: Wülf Mane
-description: Head protection forged from Frostwülf trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Frostwülf
 icon: /assets/icons/armours/frostwulf/WulfMane.png
 type: Head
 strength: Frost

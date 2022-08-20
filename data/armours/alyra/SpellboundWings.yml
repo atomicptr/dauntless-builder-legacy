@@ -1,5 +1,6 @@
 name: Spellbound Wings
-description: Torso protection forged from Alyra trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Alyra
 icon: /assets/icons/armours/alyra/SpellboundWings.png
 type: Torso
 strength: Radiant

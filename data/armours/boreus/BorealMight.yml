@@ -1,5 +1,6 @@
 name: Boreal Might
-description: Arms protection forged from Boreus trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Boreus
 icon: /assets/icons/armours/boreus/BorealMight.png
 type: Arms
 strength: Frost

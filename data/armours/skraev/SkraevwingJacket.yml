@@ -1,5 +1,6 @@
 name: Skraevwing Jacket
-description: Torso protection forged from Skraev trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Skraev
 icon: /assets/icons/armours/skraev/SkraevwingJacket.png
 type: Torso
 strength: Frost

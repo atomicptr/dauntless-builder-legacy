@@ -1,5 +1,6 @@
 name: Boreal Resolve
-description: Torso protection forged from Boreus trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Boreus
 icon: /assets/icons/armours/boreus/BorealResolve.png
 type: Torso
 strength: Frost

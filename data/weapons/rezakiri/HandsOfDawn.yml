@@ -1,5 +1,6 @@
 name: Hands of Dawn
-description: A Slayer's aether strikers forged with Rezakiri trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Rezakiri
 icon: /assets/icons/weapons/rezakiri/HandsOfDawn.png
 type: Aether Strikers
 damage: Blunt

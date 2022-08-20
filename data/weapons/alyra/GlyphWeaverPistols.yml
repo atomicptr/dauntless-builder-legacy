@@ -1,5 +1,6 @@
 name: Glyph Weaver Pistols
-description: A Slayer's repeaters forged with Alyra trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Alyra
 icon: /assets/icons/weapons/alyra/GlyphWeaverPistols.png
 type: Repeater
 damage: Slashing

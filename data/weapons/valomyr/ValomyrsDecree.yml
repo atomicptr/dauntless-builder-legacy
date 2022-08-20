@@ -1,5 +1,6 @@
 name: Valomyr's Decree
-description: A Slayer's axe forged with Valomyr trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Valomyr
 icon: /assets/icons/weapons/valomyr/ValomyrsDecree.png
 type: Axe
 damage: Slashing

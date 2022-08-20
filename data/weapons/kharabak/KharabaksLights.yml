@@ -1,5 +1,6 @@
 name: Kharabak's Lights
-description: A Slayer's repeaters forged with Kharabak trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Kharabak
 icon: /assets/icons/weapons/kharabak/KharabaksLights.png
 type: Repeater
 damage: Slashing

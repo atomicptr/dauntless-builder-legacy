@@ -1,5 +1,6 @@
 name: Torgadoro's Apex
-description: Head protection forged from Torgadoro trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Torgadoro
 icon: /assets/icons/armours/torgadoro/TorgadorosApex.png
 type: Head
 strength: Blaze

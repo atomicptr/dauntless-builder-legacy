@@ -1,5 +1,6 @@
 name: Dynamic Deadlights
-description: A Slayer's repeaters forged with Malkarion trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Malkarion
 icon: /assets/icons/weapons/malkarion/DynamicDeadlights.png
 type: Repeater
 damage: Slashing

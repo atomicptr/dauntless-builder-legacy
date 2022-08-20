@@ -1,5 +1,6 @@
 name: Parasitic Curse
-description: A Slayer's aether strikers forged with Agarus trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Agarus
 icon: /assets/icons/weapons/agarus/ParasiticCurse.png
 type: War Pike
 damage: Slashing

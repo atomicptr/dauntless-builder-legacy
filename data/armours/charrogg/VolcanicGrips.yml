@@ -1,5 +1,6 @@
 name: Volcanic Grips
-description: Arms protection forged from Charrogg trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Charrogg
 icon: /assets/icons/armours/charrogg/VolcanicGrips.png
 type: Arms
 strength: Blaze

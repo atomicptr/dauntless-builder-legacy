@@ -1,5 +1,6 @@
 name: Fiery Greaves
-description: Leg and foot protection forged from Embermane trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Embermane
 icon: /assets/icons/armours/embermane/FieryGreaves.png
 type: Legs
 strength: Blaze

@@ -1,5 +1,6 @@
 name: Phaelanx's Heatsinks
-description: Leg and foot protection forged from Phaelanx trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Phaelanx
 icon: /assets/icons/armours/phaelanx/PhaelanxsHeatsinks.png
 type: Legs
 strength: Blaze

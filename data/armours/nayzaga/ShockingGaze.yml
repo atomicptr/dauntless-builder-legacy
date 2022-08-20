@@ -1,5 +1,6 @@
 name: Shocking Gaze
-description: Head protection forged from Nayzaga trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Nayzaga
 icon: /assets/icons/armours/nayzaga/ShockingGaze.png
 type: Head
 strength: Shock

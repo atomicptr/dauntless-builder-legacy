@@ -1,5 +1,6 @@
 name: Thundering Blade
-description: A Slayer's sword forged with Drask trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Drask
 icon: /assets/icons/weapons/drask/ThunderingBlade.png
 type: Sword
 damage: Slashing

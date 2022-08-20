@@ -1,5 +1,6 @@
 name: Talons of the Firebird
-description: A Slayer's chain blades forged with Phaelanx trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Phaelanx
 icon: /assets/icons/weapons/phaelanx/TalonsOfTheFirebird.png
 type: Chain Blades
 damage: Slashing

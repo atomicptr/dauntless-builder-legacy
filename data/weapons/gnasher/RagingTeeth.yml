@@ -1,5 +1,6 @@
 name: Raging Teeth
-description: A Slayer's chain blades forged with Gnasher trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Gnasher
 icon: /assets/icons/weapons/gnasher/RagingTeeth.png
 type: Chain Blades
 damage: Slashing

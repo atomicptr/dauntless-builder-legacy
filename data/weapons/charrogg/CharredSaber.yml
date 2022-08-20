@@ -1,5 +1,6 @@
 name: Charred Saber
-description: A Slayer's sword forged with Charrogg trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Charrogg
 icon: /assets/icons/weapons/charrogg/CharredSaber.png
 type: Sword
 damage: Cutting

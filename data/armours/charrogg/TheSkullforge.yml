@@ -3,6 +3,7 @@ description: >-
   The Skullforge is a piece of craftable Exotic armour in Dauntless. It is
   crafted from Firebrand Charrogg reagents.
 icon: /assets/icons/armours/charrogg/TheSkullforge.png
+behemoth: Charrogg
 type: Head
 strength: Blaze
 weakness: Frost

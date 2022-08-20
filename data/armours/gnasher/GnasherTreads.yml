@@ -1,5 +1,6 @@
 name: Gnasher Treads
-description: Leg and foot protection forged from Gnasher trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Gnasher
 icon: /assets/icons/armours/gnasher/GnasherTreads.png
 type: Legs
 strength: null

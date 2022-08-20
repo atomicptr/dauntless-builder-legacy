@@ -1,5 +1,6 @@
 name: Shocking Stride
-description: Leg and foot protection forged from Nayzaga trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Nayzaga
 icon: /assets/icons/armours/nayzaga/ShockingStride.png
 type: Legs
 strength: Shock

@@ -1,5 +1,6 @@
 name: Torgadoro's Gait
-description: Leg and foot protection forged from Torgadoro trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Torgadoro
 icon: /assets/icons/armours/torgadoro/TorgadorosGait.png
 type: Legs
 strength: Blaze

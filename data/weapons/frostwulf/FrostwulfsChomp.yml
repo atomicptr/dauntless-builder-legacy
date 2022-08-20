@@ -1,5 +1,6 @@
 name: Frostwülf's Chomp
-description: A Slayer's axe forged with Frostwülf trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Frostwülf
 icon: /assets/icons/weapons/frostwulf/FrostwulfsChomp.png
 type: Axe
 damage: Slashing

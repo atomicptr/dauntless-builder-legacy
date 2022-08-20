@@ -1,5 +1,6 @@
 name: Hands of Night
-description: A Slayer's aether strikers forged with Shrowd trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Shrowd
 icon: /assets/icons/weapons/shrowd/HandsOfNight.png
 type: Aether Strikers
 damage: Blunt

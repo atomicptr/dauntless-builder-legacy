@@ -1,5 +1,6 @@
 name: Stalker's Trap
-description: A Slayer's chain blades forged with Riftstalker trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Riftstalker
 icon: /assets/icons/weapons/riftstalker/StalkersTrap.png
 type: Chain Blades
 damage: Slashing

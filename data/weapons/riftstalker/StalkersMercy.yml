@@ -1,5 +1,6 @@
 name: Stalker's Mercy
-description: A Slayer's axe forged with Riftstalker trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Riftstalker
 icon: /assets/icons/weapons/riftstalker/StalkersMercy.png
 type: Axe
 damage: Slashing

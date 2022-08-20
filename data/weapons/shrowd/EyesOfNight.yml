@@ -1,5 +1,6 @@
 name: Eyes of Night
-description: A Slayer's chain blades forged with Shrowd trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Shrowd
 icon: /assets/icons/weapons/shrowd/EyesOfNight.png
 type: Chain Blades
 damage: Slashing

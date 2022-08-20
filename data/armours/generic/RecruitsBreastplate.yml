@@ -1,5 +1,5 @@
 name: Recruit's Breastplate
-description: Torso protection for the novice Slayer.
+description: "{{typeAlt}} protection for the novice Slayer."
 icon: /assets/icons/armours/generic/RecruitsBreastplate.png
 type: Torso
 strength: null

@@ -1,5 +1,6 @@
 name: Sovereign's Sorrow
-description: A Slayer's war pike forged with Koshai trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Koshai
 icon: /assets/icons/weapons/koshai/SovereignsSorrow.png
 type: War Pike
 damage: Piercing

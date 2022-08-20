@@ -1,5 +1,6 @@
 name: Chronoplate
-description: Torso protection forged from Chronovore trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Chronovore
 icon: /assets/icons/armours/chronovore/Chronoplate.png
 type: Torso
 strength: Radiant

@@ -1,5 +1,6 @@
 name: Ice Breakers
-description: A Slayer's aether strikers forged with Urska trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Urska
 icon: /assets/icons/weapons/urska/IceBreakers.png
 type: Aether Strikers
 damage: Blunt

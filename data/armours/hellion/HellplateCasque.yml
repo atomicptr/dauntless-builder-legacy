@@ -1,5 +1,6 @@
 name: Hellplate Casque
-description: Head protection forged from Hellion trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Hellion
 icon: /assets/icons/armours/hellion/HellplateCasque.png
 type: Head
 strength: Blaze

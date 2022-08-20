@@ -1,5 +1,5 @@
 name: Timeweave Gauntlets
-description: Arms protection, part of the Timeweave set.
+description: "{{typeAlt}} protection, part of the Timeweave set."
 icon: /assets/icons/armours/timeweave/TimeweaveGauntlets.png
 type: Arms
 strength: Radiant

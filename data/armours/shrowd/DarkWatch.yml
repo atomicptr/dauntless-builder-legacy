@@ -1,5 +1,6 @@
 name: Dark Watch
-description: Head protection forged from Shrowd trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Shrowd
 icon: /assets/icons/armours/shrowd/DarkWatch.png
 type: Head
 strength: Umbral

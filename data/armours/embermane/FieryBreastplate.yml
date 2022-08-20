@@ -1,5 +1,6 @@
 name: Fiery Breastplate
-description: Torso protection forged from Embermane trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Embermane
 icon: /assets/icons/armours/embermane/FieryBreastplate.png
 type: Torso
 strength: Blaze

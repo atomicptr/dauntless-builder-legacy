@@ -1,5 +1,6 @@
 name: Torgadoro's Core
-description: Torso protection forged from Torgadoro trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Torgadoro
 icon: /assets/icons/armours/torgadoro/TorgadorosCore.png
 type: Torso
 strength: Blaze

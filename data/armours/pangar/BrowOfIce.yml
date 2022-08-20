@@ -1,5 +1,6 @@
 name: Brow of Ice
-description: Head protection forged from Pangar trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Pangar
 icon: /assets/icons/armours/pangar/BrowOfIce.png
 type: Head
 strength: Frost

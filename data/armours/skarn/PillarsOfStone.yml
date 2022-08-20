@@ -1,5 +1,6 @@
 name: Pillars of Stone
-description: Leg and foot protection forged from Skarn trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Skarn
 icon: /assets/icons/armours/skarn/PillarsOfStone.png
 type: Legs
 strength: Terra

@@ -1,5 +1,6 @@
 name: Inferno's Arrow
-description: A Slayer's war pike forged with Hellion trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Hellion
 icon: /assets/icons/weapons/hellion/InfernosArrow.png
 type: War Pike
 damage: Piercing

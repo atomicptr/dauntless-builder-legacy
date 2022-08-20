@@ -1,5 +1,6 @@
 name: Eye of the Swarm
-description: Head protection forged from Kharabak trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Kharabak
 icon: /assets/icons/armours/kharabak/EyeOfTheSwarm.png
 type: Head
 strength: Terra

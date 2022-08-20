@@ -1,5 +1,6 @@
 name: Adversary's Pride
-description: Torso protection forged from Urska trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Urska
 icon: /assets/icons/armours/urska/AdversarysPride.png
 type: Torso
 strength: Frost

@@ -1,5 +1,6 @@
 name: Dance of the Swarm
-description: Leg and foot protection forged from Kharabak trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Kharabak
 icon: /assets/icons/armours/kharabak/DanceOfTheSwarm.png
 type: Legs
 strength: Terra

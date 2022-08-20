@@ -1,5 +1,6 @@
 name: Arms of Ice
-description: Arms protection forged from Pangar trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Pangar
 icon: /assets/icons/armours/pangar/ArmsOfIce.png
 type: Arms
 strength: Frost

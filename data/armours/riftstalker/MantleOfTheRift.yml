@@ -1,5 +1,6 @@
 name: Mantle of the Rift
-description: Torso protection forged from Riftstalker trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Riftstalker
 icon: /assets/icons/armours/riftstalker/MantleOfTheRift.png
 type: Torso
 strength: Umbral

@@ -1,5 +1,6 @@
 name: Light's Walk
-description: Leg and foot protection forged from Rezakiri trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Rezakiri
 icon: /assets/icons/armours/rezakiri/LightsWalk.png
 type: Legs
 strength: Radiant

@@ -1,5 +1,6 @@
 name: Phaelanx's Spearhead
-description: Head protection forged from Phaelanx trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Phaelanx
 icon: /assets/icons/armours/phaelanx/PhaelanxsSpearhead.png
 type: Head
 strength: Blaze

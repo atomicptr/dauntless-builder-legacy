@@ -1,5 +1,6 @@
 name: Spellbound Boots
-description: Leg and foot protection forged from Alyra trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Alyra
 icon: /assets/icons/armours/alyra/SpellboundBoots.png
 type: Legs
 strength: Radiant

@@ -1,5 +1,6 @@
 name: Storm Sword
-description: A Slayer's sword forged with Stormclaw trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Stormclaw
 icon: /assets/icons/weapons/stormclaw/StormSword.png
 type: Sword
 damage: Slashing

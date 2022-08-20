@@ -1,5 +1,6 @@
 name: Sahvyt's Cleaver
-description: A Slayer's axe forged with Sahvyt trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Sahvyt
 icon: /assets/icons/weapons/sahvyt/SahvytsCleaver.png
 type: Axe
 damage: Slashing

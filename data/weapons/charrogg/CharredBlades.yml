@@ -1,5 +1,6 @@
 name: Charred Blades
-description: A Slayer's chain blades forged with Charrogg trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Charrogg
 icon: /assets/icons/weapons/charrogg/CharredBlades.png
 type: Chain Blades
 damage: Slashing

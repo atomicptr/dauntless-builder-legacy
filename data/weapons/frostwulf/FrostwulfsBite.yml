@@ -1,5 +1,6 @@
 name: Frostwülf's Bite
-description: A Slayer's sword forged with Frostwülf trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Frostwülf
 icon: /assets/icons/weapons/frostwulf/FrostwulfsBite.png
 type: Sword
 damage: Slashing

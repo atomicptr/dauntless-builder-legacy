@@ -1,5 +1,6 @@
 name: Reaper of Night
-description: A Slayer's axe forged with Shrowd trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Shrowd
 icon: /assets/icons/weapons/shrowd/ReaperOfNight.png
 type: Axe
 damage: Slashing

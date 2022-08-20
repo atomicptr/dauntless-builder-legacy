@@ -1,5 +1,6 @@
 name: Crest of Valour
-description: Head protection forged from Valomyr trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Valomyr
 icon: /assets/icons/armours/valomyr/CrestOfValour.png
 type: Head
 strength: Radiant

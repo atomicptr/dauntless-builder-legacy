@@ -1,5 +1,6 @@
 name: Hellplate Bracers
-description: Arms protection forged from Hellion trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Hellion
 icon: /assets/icons/armours/hellion/HellplateBracers.png
 type: Arms
 strength: Blaze

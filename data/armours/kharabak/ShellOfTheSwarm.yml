@@ -1,5 +1,6 @@
 name: Shell of the Swarm
-description: Torso protection forged from Kharabak trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Kharabak
 icon: /assets/icons/armours/kharabak/ShellOfTheSwarm.png
 type: Torso
 strength: Terra

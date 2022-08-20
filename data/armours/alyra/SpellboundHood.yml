@@ -1,5 +1,6 @@
 name: Spellbound Hood
-description: Head protection forged from Alyra trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Alyra
 icon: /assets/icons/armours/alyra/SpellboundHood.png
 type: Head
 strength: Radiant

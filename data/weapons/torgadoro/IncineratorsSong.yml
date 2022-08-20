@@ -1,5 +1,6 @@
 name: Incinerator's Song
-description: A Slayer's axe forged with Torgadoro trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Torgadoro
 icon: /assets/icons/weapons/torgadoro/IncineratorsSong.png
 type: Axe
 damage: Slashing

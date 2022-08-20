@@ -1,5 +1,6 @@
 name: Malkarion's Sight
-description: Head protection forged from Malkarion trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Malkarion
 icon: /assets/icons/armours/malkarion/MalkarionsSight.png
 type: Head
 strength: Shock

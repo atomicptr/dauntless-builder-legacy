@@ -1,5 +1,6 @@
 name: Unsteady Ground
-description: A Slayer's aether strikers forged with Agarus trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Agarus
 icon: /assets/icons/weapons/agarus/UnsteadyGround.png
 type: Hammer
 damage: Blunt

@@ -1,5 +1,6 @@
 name: Stalker's Scorn
-description: A Slayer's aether strikers forged with Riftstalker trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Riftstalker
 icon: /assets/icons/weapons/riftstalker/StalkersScorn.png
 type: Aether Strikers
 damage: Blunt

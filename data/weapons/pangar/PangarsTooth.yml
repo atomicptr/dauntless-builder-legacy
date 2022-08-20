@@ -1,5 +1,6 @@
 name: Pangar's Tooth
-description: A Slayer's war pike forged with Pangar trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Pangar
 icon: /assets/icons/weapons/pangar/PangarsTooth.png
 type: War Pike
 damage: Piercing

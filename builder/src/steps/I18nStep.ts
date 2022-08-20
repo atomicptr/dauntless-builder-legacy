@@ -67,7 +67,12 @@ export class I18nStep extends WithStepLogger implements Step {
                 }
 
                 if (item.description) {
-                    values[createItemTranslationIdentifier(category, itemName, "description")] = item.description;
+                    const firstItem =
+                        Object.values(items as GenericEntity[]).find(i => i.description === item.description) ?? item;
+                    values[createItemTranslationIdentifier(category, itemName, "description")] =
+                        firstItem.name === item.name
+                            ? item.description
+                            : `$t(${createItemTranslationIdentifier(category, firstItem.name, "description")})`;
                 }
 
                 if (item.unique_effects) {

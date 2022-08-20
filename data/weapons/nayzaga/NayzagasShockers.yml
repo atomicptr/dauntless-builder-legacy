@@ -1,5 +1,6 @@
 name: Nayzaga's Shockers
-description: A Slayer's aether strikers forged with Nayzaga trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Nayzaga
 icon: /assets/icons/weapons/nayzaga/NayzagasShockers.png
 type: Aether Strikers
 damage: Blunt

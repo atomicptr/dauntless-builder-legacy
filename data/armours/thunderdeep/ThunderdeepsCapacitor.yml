@@ -1,5 +1,6 @@
 name: Thunderdeep's Capacitor
-description: Head protection forged from Thunderdeep Drask trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Thunderdeep Drask
 icon: /assets/icons/armours/thunderdeep/ThunderdeepsCapacitor.png
 type: Head
 strength: Shock

@@ -1,5 +1,6 @@
 name: Lightning Plate
-description: Torso protection forged from Stormclaw trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Stormclaw
 icon: /assets/icons/armours/stormclaw/LightningPlate.png
 type: Torso
 strength: Shock

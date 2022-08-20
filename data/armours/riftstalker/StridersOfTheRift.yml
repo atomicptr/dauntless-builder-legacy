@@ -1,5 +1,6 @@
 name: Striders of the Rift
-description: Leg and foot protection forged from Riftstalker trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Riftstalker
 icon: /assets/icons/armours/riftstalker/StridersOfTheRift.png
 type: Legs
 strength: Umbral

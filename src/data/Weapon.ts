@@ -29,6 +29,7 @@ export interface PowerLevel {
 export interface Weapon {
     name: string;
     description: string;
+    behemoth: string | null;
     icon: string;
     type: WeaponType;
     damage: DamageType;

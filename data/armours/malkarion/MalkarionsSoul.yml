@@ -1,5 +1,6 @@
 name: Malkarion's Soul
-description: Torso protection forged from Malkarion trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Malkarion
 icon: /assets/icons/armours/malkarion/MalkarionsSoul.png
 type: Torso
 strength: Shock

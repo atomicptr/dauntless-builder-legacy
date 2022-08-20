@@ -1,5 +1,6 @@
 name: Storm Blades
-description: A Slayer's chain blades forged with Stormclaw trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Stormclaw
 icon: /assets/icons/weapons/stormclaw/StormBlades.png
 type: Chain Blades
 damage: Slashing

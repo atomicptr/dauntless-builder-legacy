@@ -1,5 +1,6 @@
 name: Light's Crown
-description: Head protection forged from Rezakiri trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Rezakiri
 icon: /assets/icons/armours/rezakiri/LightsCrown.png
 type: Head
 strength: Radiant

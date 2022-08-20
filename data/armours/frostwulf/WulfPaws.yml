@@ -1,5 +1,6 @@
 name: Wülf Paws
-description: Leg and foot protection forged from Frostwülf trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Frostwülf
 icon: /assets/icons/armours/frostwulf/WulfPaws.png
 type: Legs
 strength: Frost

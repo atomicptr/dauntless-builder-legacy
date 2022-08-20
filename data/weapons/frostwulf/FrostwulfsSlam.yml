@@ -1,5 +1,6 @@
 name: Frostwülf's Slam
-description: A Slayer's hammer forged with Frostwülf trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Frostwülf
 icon: /assets/icons/weapons/frostwulf/FrostwulfsSlam.png
 type: Hammer
 damage: Blunt

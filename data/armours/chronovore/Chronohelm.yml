@@ -1,5 +1,6 @@
 name: Chronohelm
-description: Head protection forged from Chronovore trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Chronovore
 icon: /assets/icons/armours/chronovore/Chronohelm.png
 type: Head
 strength: Radiant

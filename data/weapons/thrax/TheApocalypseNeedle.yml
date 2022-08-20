@@ -1,5 +1,6 @@
 name: The Apocalypse Needle
-description: A Slayer's war pike forged with Thrax trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Thrax
 icon: /assets/icons/weapons/thrax/TheApocalypseNeedle.png
 type: War Pike
 damage: Piercing

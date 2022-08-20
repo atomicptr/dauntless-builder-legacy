@@ -1,5 +1,6 @@
 name: Adversary's Wrath
-description: Arms protection forged from Urska trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Urska
 icon: /assets/icons/armours/urska/AdversarysWrath.png
 type: Arms
 strength: Frost

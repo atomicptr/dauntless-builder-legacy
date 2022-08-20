@@ -1,5 +1,6 @@
 name: Raging Fists
-description: A Slayer's aether strikers forged with Gnasher trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Gnasher
 icon: /assets/icons/weapons/gnasher/RagingFists.png
 type: Aether Strikers
 damage: Blunt

@@ -1,5 +1,6 @@
 name: Ember Maul
-description: A Slayer's hammer forged with Embermane trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Embermane
 icon: /assets/icons/weapons/embermane/EmberMaul.png
 type: Hammer
 damage: Blunt

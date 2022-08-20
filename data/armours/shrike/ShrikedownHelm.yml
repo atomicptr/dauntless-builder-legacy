@@ -1,5 +1,6 @@
 name: Shrikedown Helm
-description: Head protection forged from Shrike trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Shrike
 icon: /assets/icons/armours/shrike/ShrikedownHelm.png
 type: Head
 strength: null

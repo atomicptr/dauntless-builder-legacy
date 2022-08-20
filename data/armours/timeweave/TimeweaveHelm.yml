@@ -1,5 +1,5 @@
 name: Timeweave Helm
-description: Head protection, part of the Timeweave set.
+description: "{{typeAlt}} protection, part of the Timeweave set."
 icon: /assets/icons/armours/timeweave/TimeweaveHelm.png
 type: Head
 strength: Radiant

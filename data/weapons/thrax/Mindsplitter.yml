@@ -1,5 +1,6 @@
 name: Mindsplitter
-description: A Slayer's axe forged with Thrax trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Thrax
 icon: /assets/icons/weapons/thrax/Mindsplitter.png
 type: Axe
 damage: Slashing

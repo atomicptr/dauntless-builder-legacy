@@ -1,5 +1,6 @@
 name: Gauntlets of Valour
-description: Arms protection forged from Valomyr trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Valomyr
 icon: /assets/icons/armours/valomyr/GauntletsOfValour.png
 type: Arms
 strength: Radiant

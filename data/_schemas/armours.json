@@ -2,6 +2,12 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "additionalProperties": false,
     "properties": {
+        "behemoth": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
         "cells": {
             "type": [
                 "string",

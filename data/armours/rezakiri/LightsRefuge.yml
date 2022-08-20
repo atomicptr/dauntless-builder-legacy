@@ -1,5 +1,6 @@
 name: Light's Refuge
-description: Arms protection forged from Rezakiri trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Rezakiri
 icon: /assets/icons/armours/rezakiri/LightsRefuge.png
 type: Arms
 strength: Radiant

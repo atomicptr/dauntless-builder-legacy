@@ -1,5 +1,6 @@
 name: Draskscale Gauntlets
-description: Arms protection forged from Drask trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Drask
 icon: /assets/icons/armours/drask/DraskscaleGauntlets.png
 type: Arms
 strength: Shock

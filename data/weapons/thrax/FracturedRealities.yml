@@ -1,5 +1,6 @@
 name: Fractured Realities
-description: A Slayer's aether strikers forged with Thrax trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Thrax
 icon: /assets/icons/weapons/thrax/FracturedRealities.png
 type: Aether Strikers
 damage: Blunt

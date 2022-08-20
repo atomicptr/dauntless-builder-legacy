@@ -1,5 +1,6 @@
 name: Tectonic Faults
-description: A Slayer's aether strikers forged with Torgadoro trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Torgadoro
 icon: /assets/icons/weapons/torgadoro/TectonicFaults.png
 type: Aether Strikers
 damage: Blunt

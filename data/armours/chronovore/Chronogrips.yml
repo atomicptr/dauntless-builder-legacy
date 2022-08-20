@@ -1,5 +1,6 @@
 name: Chronogrips
-description: Arms protection forged from Chronovore trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Chronovore
 icon: /assets/icons/armours/chronovore/Chronogrips.png
 type: Arms
 strength: Radiant

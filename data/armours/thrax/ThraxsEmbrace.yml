@@ -1,5 +1,6 @@
 name: Thrax's Embrace
-description: Arms protection forged from Thrax trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Thrax
 icon: /assets/icons/armours/thrax/ThraxsEmbrace.png
 type: Arms
 strength: Umbral

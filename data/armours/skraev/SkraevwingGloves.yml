@@ -1,5 +1,6 @@
 name: Skraevwing Gloves
-description: Arms protection forged from Skraev trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Skraev
 icon: /assets/icons/armours/skraev/SkraevwingGloves.png
 type: Arms
 strength: Frost

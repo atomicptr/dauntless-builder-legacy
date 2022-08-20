@@ -1,5 +1,6 @@
 name: Shrikedown Plate
-description: Torso protection forged from Shrike trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Shrike
 icon: /assets/icons/armours/shrike/ShrikedownPlate.png
 type: Torso
 strength: null

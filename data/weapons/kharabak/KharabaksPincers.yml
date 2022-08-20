@@ -1,5 +1,6 @@
 name: Kharabak's Pincers
-description: A Slayer's aether strikers forged with Kharabak trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Kharabak
 icon: /assets/icons/weapons/kharabak/KharabaksPincers.png
 type: Aether Strikers
 damage: Blunt

@@ -1,5 +1,6 @@
 name: Dark Path
-description: Leg and foot protection forged from Shrowd trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Shrowd
 icon: /assets/icons/armours/shrowd/DarkPath.png
 type: Legs
 strength: Umbral

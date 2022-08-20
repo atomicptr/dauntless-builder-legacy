@@ -1,5 +1,6 @@
 name: Fall of the Shrike
-description: A Slayer's hammer forged with Shrike trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Shrike
 icon: /assets/icons/weapons/shrike/FallOfTheShrike.png
 type: Hammer
 damage: Blunt

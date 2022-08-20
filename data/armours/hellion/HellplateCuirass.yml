@@ -1,5 +1,6 @@
 name: Hellplate Cuirass
-description: Torso protection forged from Hellion trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Hellion
 icon: /assets/icons/armours/hellion/HellplateCuirass.png
 type: Torso
 strength: Blaze

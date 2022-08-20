@@ -1,5 +1,6 @@
 name: Volcanic Treads
-description: Leg and foot protection forged from Charrogg trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Charrogg
 icon: /assets/icons/armours/charrogg/VolcanicTreads.png
 type: Legs
 strength: Blaze

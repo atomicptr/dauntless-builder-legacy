@@ -1,5 +1,6 @@
 name: Volcanic Aegis
-description: Torso protection forged from Charrogg trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Charrogg
 icon: /assets/icons/armours/charrogg/VolcanicAegis.png
 type: Torso
 strength: Blaze

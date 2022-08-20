@@ -1,5 +1,6 @@
 name: Lightning Boots
-description: Leg and foot protection forged from Stormclaw trophies.
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Stormclaw
 icon: /assets/icons/armours/stormclaw/LightningBoots.png
 type: Legs
 strength: Shock

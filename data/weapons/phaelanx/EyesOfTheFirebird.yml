@@ -1,5 +1,6 @@
 name: Eyes of the Firebird
-description: A Slayer's repeaters forged with Phaelanx trophies.
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Phaelanx
 icon: /assets/icons/weapons/phaelanx/EyesOfTheFirebird.png
 type: Repeater
 damage: Slashing
