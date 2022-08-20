@@ -47,7 +47,7 @@ import useIsLightMode from "@src/hooks/light-mode";
 import { useAppSelector } from "@src/hooks/redux";
 import i18n from "@src/i18n";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
-import { matchesSearchIn } from "@src/utils/search";
+import { matchesSearch, matchesSearchIn } from "@src/utils/search";
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { match } from "ts-pattern";
@@ -436,7 +436,7 @@ export const filterBySearchQuery =
                     .otherwise(() => ({}));
 
                 const description = t(itemTranslationIdentifier(itemType, item.name, "description"), vars);
-                return matchesSearchIn(query, [(item as Weapon | Armour | Lantern).description, description]);
+                return matchesSearch(query, description);
             }
 
             return false;

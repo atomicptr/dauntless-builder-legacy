@@ -1,5 +1,5 @@
 {
-    "item.armours.adversarys-drive.description": "{{typeAlt}} protection forged from {{behemoth}} trophies.",
+    "item.armours.adversarys-drive.description": "{{behemoth}}の素材から作られる{{typeAlt}}。",
     "item.armours.adversarys-drive.name": "Adversary's Drive",
     "item.armours.adversarys-guile.description": "$t(item.armours.adversarys-drive.description)",
     "item.armours.adversarys-guile.name": "Adversary's Guile",
@@ -1354,7 +1354,7 @@
     "item.perks.zeal.effects.5.description": "$t(item.perks.zeal.effects.1.description)",
     "item.perks.zeal.effects.6.description": "$t(item.perks.zeal.effects.1.description)",
     "item.perks.zeal.name": "熱意",
-    "item.weapons.agents-of-decay.description": "A Slayer's {{type}} forged with {{behemoth}} trophies.",
+    "item.weapons.agents-of-decay.description": "{{behemoth}}の素材から作られたスレイヤーの{{type}}。",
     "item.weapons.agents-of-decay.name": "崩壊因子",
     "item.weapons.agents-of-decay.unique_effects.0.description": "Legendary Ability: Revive all Slayers in a large radius, granting them healing over time and immunity to stagger. Usable while downed.\n",
     "item.weapons.blizzards-teeth.description": "$t(item.weapons.agents-of-decay.description)",

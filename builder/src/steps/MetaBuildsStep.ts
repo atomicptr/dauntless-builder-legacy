@@ -365,21 +365,38 @@ export class MetaBuildsStep extends WithStepLogger implements Step {
 
         translationJson["pages"]["metabuilds"]["generated"]["title"] = newSheets.title;
 
-        const replaceBehemothNames = (buildTitle: string) => {
+        const fixBuildTitle = (buildTitle: string) => {
+            // replace behemoth titles
             Object.keys(translationJson.terms.behemoths).forEach(behemoth => {
                 buildTitle = buildTitle.replace(behemoth, `$t(terms.behemoths.${behemoth})`);
             });
 
             const commonShortNames = {
                 Chrono: "Chronovore",
+                Frostwulf: "Forstwülf",
+                Khara: "Kharabak",
                 Malk: "Malkarion",
-                Torgo: "Torgadoro",
+                Reza: "Rezakiri",
+                Rift: "Riftstalker",
+                Torg: "Torgadoro",
+                Valo: "Valomyr",
+                ["Wülf"]: "Frostwülf",
             };
 
+            // replace short names
             Object.keys(commonShortNames).forEach(shortName => {
                 const behemoth = commonShortNames[shortName as keyof typeof commonShortNames];
-                buildTitle = buildTitle.replace(shortName, `$t(terms.behemoths.${behemoth})`);
+                buildTitle = buildTitle.replace(new RegExp(`^${shortName}`, "g"), `$t(terms.behemoths.${behemoth})`);
+                buildTitle = buildTitle.replace(
+                    new RegExp(`\\(${shortName}\\)`, "g"),
+                    `($t(terms.behemoths.${behemoth}))`,
+                );
             });
+
+            // remove duplicate spaces
+            while (buildTitle.indexOf("  ") > -1) {
+                buildTitle = buildTitle.replace("  ", " ");
+            }
 
             return buildTitle;
         };
@@ -392,7 +409,7 @@ export class MetaBuildsStep extends WithStepLogger implements Step {
             };
 
             for (const build of category.builds) {
-                translationJson["pages"]["metabuilds"]["generated"]["buildTitles"][build.title] = replaceBehemothNames(
+                translationJson["pages"]["metabuilds"]["generated"]["buildTitles"][build.title] = fixBuildTitle(
                     build.title,
                 );
             }
