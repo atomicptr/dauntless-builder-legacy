@@ -5,3 +5,4 @@
 /test
 /scripts/*.js
 /coverage
+/src/json
