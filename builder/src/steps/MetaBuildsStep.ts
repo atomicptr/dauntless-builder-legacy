@@ -367,7 +367,7 @@ export class MetaBuildsStep extends WithStepLogger implements Step {
 
         const replaceBehemothNames = (buildTitle: string) => {
             Object.keys(translationJson.terms.behemoths).forEach(behemoth => {
-                buildTitle = buildTitle.replace(behemoth, `$t(terms.behemoth.${behemoth})`);
+                buildTitle = buildTitle.replace(behemoth, `$t(terms.behemoths.${behemoth})`);
             });
 
             const commonShortNames = {
@@ -378,7 +378,7 @@ export class MetaBuildsStep extends WithStepLogger implements Step {
 
             Object.keys(commonShortNames).forEach(shortName => {
                 const behemoth = commonShortNames[shortName as keyof typeof commonShortNames];
-                buildTitle = buildTitle.replace(shortName, `$t(terms.behemoth.${behemoth})`);
+                buildTitle = buildTitle.replace(shortName, `$t(terms.behemoths.${behemoth})`);
             });
 
             return buildTitle;
