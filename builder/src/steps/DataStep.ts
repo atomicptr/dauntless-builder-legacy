@@ -230,7 +230,7 @@ export class DataStep extends WithStepLogger implements Step {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
 
-    private sortByKey<T>(object: T): T {
+    private sortByKey<T extends object>(object: T): T {
         const newObject = <T>{};
 
         const sortedKeys = Object.keys(object).sort();
@@ -238,8 +238,8 @@ export class DataStep extends WithStepLogger implements Step {
         for (const key of sortedKeys) {
             let value = object[key as keyof T];
 
-            if (typeof value === "object" && Object.keys(value).length > 0) {
-                value = this.sortByKey(value);
+            if (typeof value === "object" && Object.keys(value as object).length > 0) {
+                value = this.sortByKey(value as object) as T[keyof T];
             }
 
             newObject[key as keyof T] = value;
