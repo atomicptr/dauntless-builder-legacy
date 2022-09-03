@@ -6,7 +6,7 @@ type: Repeater
 damage: Slashing
 elemental: Blaze
 cells:
-  - Finesse
+  - Brutality
   - Fortitude
 power:
   base: 40
