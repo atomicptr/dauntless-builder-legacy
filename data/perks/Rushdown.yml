@@ -1,0 +1,40 @@
+name: Rushdown
+description: ...
+type: Finesse
+effects:
+  '1':
+    description: >-
+      ...
+    values:
+      staminaRecovery: 0
+      movementSpeedIncrease: 0
+  '2':
+    description: >-
+      ...
+    values:
+      staminaRecovery: 0
+      movementSpeedIncrease: 0
+  '3':
+    description: >-
+      ...
+    values:
+      staminaRecovery: 0
+      movementSpeedIncrease: 0
+  '4':
+    description: >-
+      ...
+    values:
+      staminaRecovery: 0
+      movementSpeedIncrease: 0
+  '5':
+    description: >-
+      ...
+    values:
+      staminaRecovery: 0
+      movementSpeedIncrease: 0
+  '6':
+    description: >-
+      ...
+    values:
+      staminaRecovery: 0
+      movementSpeedIncrease: 0

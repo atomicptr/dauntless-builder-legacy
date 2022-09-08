@@ -1,0 +1,15 @@
+name: Rushdown Cell
+slot: Finesse
+variants:
+  +1 Rushdown Cell:
+    rarity: uncommon
+    perks:
+      Rushdown: 1
+  +2 Rushdown Cell:
+    rarity: rare
+    perks:
+      Rushdown: 2
+  +3 Rushdown Cell:
+    rarity: epic
+    perks:
+      Rushdown: 3

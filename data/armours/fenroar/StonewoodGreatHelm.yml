@@ -1,0 +1,18 @@
+name: Stonewood Great Helm
+description: "{{typeAlt}} protection forged from {{behemoth}} trophies."
+behemoth: Fenroar
+icon: /assets/icons/armours/fenroar/StonewoodGreatHelm.png
+type: Head
+strength: Terra
+weakness: Shock
+cells: Insight
+resistance:
+  base: 15
+  powerSurged: 30
+perks:
+  - name: Stunning Vigour
+    value: 2
+    powerSurged: false
+  - name: Stunning Vigour
+    value: 3
+    powerSurged: true
