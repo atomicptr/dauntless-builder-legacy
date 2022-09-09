@@ -1,40 +1,52 @@
 name: Rushdown
-description: ...
+description: Interrupting a Behemoth restores Stamina and grants Movespeed. At +6 also temporarily removes stamina costs.
 type: Finesse
 effects:
   '1':
-    description: >-
-      ...
+    description:
+      - Interrupting a Behemoth restores {{percentStaminaRecovery}}% of maximum stamina.
+      - Interrupting a Behemoth grants {{percentMovementSpeed}}% movement speed for 10s.
+      - null
     values:
-      staminaRecovery: 0
-      movementSpeedIncrease: 0
+      percentStaminaRecovery: 30
+      percentMovementSpeed: 10
   '2':
-    description: >-
-      ...
+    description:
+      - Interrupting a Behemoth restores {{percentStaminaRecovery}}% of maximum stamina.
+      - Interrupting a Behemoth grants {{percentMovementSpeed}}% movement speed for 10s.
+      - null
     values:
-      staminaRecovery: 0
-      movementSpeedIncrease: 0
+      percentStaminaRecovery: 40
+      percentMovementSpeed: 20
   '3':
-    description: >-
-      ...
+    description:
+      - Interrupting a Behemoth restores {{percentStaminaRecovery}}% of maximum stamina.
+      - Interrupting a Behemoth grants {{percentMovementSpeed}}% movement speed for 10s.
+      - null
     values:
-      staminaRecovery: 0
-      movementSpeedIncrease: 0
+      percentStaminaRecovery: 50
+      percentMovementSpeed: 20
   '4':
-    description: >-
-      ...
+    description:
+      - Interrupting a Behemoth restores {{percentStaminaRecovery}}% of maximum stamina.
+      - Interrupting a Behemoth grants {{percentMovementSpeed}}% movement speed for 10s.
+      - null
     values:
-      staminaRecovery: 0
-      movementSpeedIncrease: 0
+      percentStaminaRecovery: 75
+      percentMovementSpeed: 40
   '5':
-    description: >-
-      ...
+    description:
+      - Interrupting a Behemoth restores {{percentStaminaRecovery}}% of maximum stamina.
+      - Interrupting a Behemoth grants {{percentMovementSpeed}}% movement speed for 10s.
+      - null
     values:
-      staminaRecovery: 0
-      movementSpeedIncrease: 0
+      percentStaminaRecovery: 100
+      percentMovementSpeed: 40
   '6':
-    description: >-
-      ...
+    description:
+      - Interrupting a Behemoth restores {{percentStaminaRecovery}}% of maximum stamina.
+      - Interrupting a Behemoth grants {{percentMovementSpeed}}% movement speed for 10s.
+      - Interrupting a Behemoth removes all stamina costs for 10s.
     values:
-      staminaRecovery: 0
-      movementSpeedIncrease: 0
+      percentStaminaRecovery: 100
+      percentMovementSpeed: 40
