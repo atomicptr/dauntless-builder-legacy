@@ -1,0 +1,39 @@
+name: Fenroar's Branch
+description: A Slayer's {{type}} forged with {{behemoth}} trophies.
+behemoth: Fenroar
+icon: /assets/icons/weapons/fenroar/FenroarsBranch.png
+type: War Pike
+damage: Piercing
+elemental: Terra
+cells:
+  - Finesse
+  - Brutality
+power:
+  base: 60
+  powerSurged: 120
+perks:
+  - name: Parasitic
+    value: 2
+    powerSurged: false
+  - name: Parasitic
+    value: 3
+    powerSurged: true
+unique_effects:
+  - name: NoAttackDamage
+    description: &fenroarUeDescription >-
+      On jumping, create a platform of stone in the air ahead of you that lasts for up to {{platformTime}} seconds.
+      Up to {{numberJumps}} jumps in a row can be performed before ability must be recharged. Activating Lantern
+      refreshes the {{numberJumps}} jumps. Shortly after forming, the platform falls, dealing {{fallDamage}} Terra
+      damage, and interrupting behemoths.
+    values:
+      platformTime: 3
+      numberJumps: 2
+      fallDamage: 250
+    powerSurged: false
+  - name: NoAttackDamage
+    description: *fenroarUeDescription
+    values:
+      platformTime: 3
+      numberJumps: 2
+      fallDamage: 250
+    powerSurged: true

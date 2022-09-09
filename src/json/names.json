@@ -130,7 +130,11 @@
         "128": "Spellbound Boots",
         "129": "Spellbound Gauntlets",
         "130": "Spellbound Hood",
-        "131": "Spellbound Wings"
+        "131": "Spellbound Wings",
+        "132": "Stonewood Boots",
+        "133": "Stonewood Chest Plate",
+        "134": "Stonewood Gauntlets",
+        "135": "Stonewood Great Helm"
     },
     "Cells": {
         "1": "+1 Assassin's Vigour Cell",
@@ -327,7 +331,10 @@
         "192": "+3 Aegis Cell",
         "193": "+1 Invigorated Cell",
         "194": "+2 Invigorated Cell",
-        "195": "+3 Invigorated Cell"
+        "195": "+3 Invigorated Cell",
+        "196": "+1 Rushdown Cell",
+        "197": "+2 Rushdown Cell",
+        "198": "+3 Rushdown Cell"
     },
     "Lanterns": {
         "1": "Drask's Eye",
@@ -504,7 +511,8 @@
         "63": "Assassin's Frenzy",
         "64": "Tactician",
         "65": "Aegis",
-        "66": "Invigorated"
+        "66": "Invigorated",
+        "67": "Rushdown"
     },
     "Weapons": {
         "1": "Brutality of Boreus",
@@ -729,6 +737,13 @@
         "220": "Glyph Weaver Edge",
         "221": "Glyph Weaver Maul",
         "222": "Glyph Weaver Pistols",
-        "223": "Glyph Weaver Spear"
+        "223": "Glyph Weaver Spear",
+        "224": "Fenroar's Blade",
+        "225": "Fenroar's Branch",
+        "226": "Fenroar's Roots",
+        "227": "Fenroar's Spine",
+        "228": "Fenroar's Thistles",
+        "229": "Fenroar's Thorns",
+        "230": "Fenroar's Trunk"
     }
 }
