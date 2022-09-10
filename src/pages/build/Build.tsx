@@ -1,4 +1,5 @@
-import { Grid, ListSubheader, Typography } from "@mui/material";
+import { ManageSearch } from "@mui/icons-material";
+import { Button, Grid, ListSubheader, Typography } from "@mui/material";
 import BondWeaponPicker from "@src/components/BondWeaponPicker";
 import BuildWarning from "@src/components/BuildWarning";
 import CellPicker from "@src/components/CellPicker";
@@ -32,13 +33,18 @@ import { Omnicell } from "@src/data/Omnicell";
 import { Part, partBuildIdentifier, PartType, partTypeData } from "@src/data/Part";
 import { Weapon, weaponBuildIdentifier, WeaponType } from "@src/data/Weapon";
 import { selectBuild, setBuildId, updateBuild } from "@src/features/build/build-slice";
+import {
+    clearPerks,
+    setBuildFinderWeaponType,
+    setPerkValue,
+} from "@src/features/build-finder/build-finder-selection-slice";
 import { selectConfiguration } from "@src/features/configuration/configuration-slice";
 import { resetFilter, setWeaponTypeFilter } from "@src/features/item-select-filter/item-select-filter-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import { defaultBuildName } from "@src/utils/default-build-name";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
@@ -81,6 +87,50 @@ const Build: React.FC = () => {
     useEffect(() => {
         history.replaceState({}, "", `/b/${build.serialize()}`);
     }, [build]);
+
+    const metaDescription = useMemo(() => {
+        const result =
+            "⚔️ " +
+            [
+                build.data.head?.name,
+                build.data.torso?.name,
+                build.data.arms?.name,
+                build.data.legs?.name,
+                ...perkData(build)
+                    .filter(perk => perk.count >= 4)
+                    .map(perk => `+${perk.count} ${perk.name}`),
+            ]
+                .filter(p => !!p)
+                .join(", ");
+
+        if (result.length < 10) {
+            return "Create and share Dauntless builds with your friends!";
+        }
+
+        if (result.length > 140) {
+            return result.substring(0, 137) + "...";
+        }
+
+        return result;
+    }, [build]);
+
+    const onCopyBuildToFinderButtonClicked = useCallback(() => {
+        dispatch(clearPerks());
+
+        if (build.data.weapon) {
+            dispatch(setBuildFinderWeaponType(build.data.weapon.type));
+        }
+
+        const perks = perkData(build);
+
+        for (const perk of perks) {
+            const perkName = perk.name;
+            const value = perk.count <= 3 ? 3 : 6;
+            dispatch(setPerkValue({ perkName, value }));
+        }
+
+        navigate("/b/finder");
+    }, [build, dispatch, navigate]);
 
     if (!buildId || !BuildModel.isValid(buildId)) {
         navigate("/b/new");
@@ -238,32 +288,6 @@ const Build: React.FC = () => {
             ));
 
     const buildName = defaultBuildName(build);
-
-    const metaDescription = (() => {
-        const result =
-            "⚔️ " +
-            [
-                build.data.head?.name,
-                build.data.torso?.name,
-                build.data.arms?.name,
-                build.data.legs?.name,
-                ...perkData(build)
-                    .filter(perk => perk.count >= 4)
-                    .map(perk => `+${perk.count} ${perk.name}`),
-            ]
-                .filter(p => !!p)
-                .join(", ");
-
-        if (result.length < 10) {
-            return "Create and share Dauntless builds with your friends!";
-        }
-
-        if (result.length > 140) {
-            return result.substring(0, 137) + "...";
-        }
-
-        return result;
-    })();
 
     return (
         <>
@@ -442,6 +466,15 @@ const Build: React.FC = () => {
                     sx={{ width: isMobile ? "100%" : undefined }}
                 >
                     {isMobile ? <PerkListMobile /> : <PerkList />}
+
+                    <Button
+                        onClick={onCopyBuildToFinderButtonClicked}
+                        startIcon={<ManageSearch />}
+                        sx={{ width: "100%" }}
+                        variant="outlined"
+                    >
+                        {t("pages.build.copy-build-to-finder")}
+                    </Button>
 
                     {configuration.devMode ? (
                         <pre>
