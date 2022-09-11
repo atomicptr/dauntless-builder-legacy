@@ -1,4 +1,4 @@
-import { deDE, enUS, esES, frFR, jaJP } from "@mui/material/locale";
+import {deDE, enUS, esES, frFR, itIT, jaJP, ptPT, ruRU} from "@mui/material/locale";
 import { store } from "@src/store";
 import log from "@src/utils/logger";
 import i18n, { CallbackError } from "i18next";
@@ -13,6 +13,9 @@ export enum Language {
     Japanese = "ja",
     French = "fr",
     Spanish = "es",
+    Italian = "it",
+    Portuguese = "pt",
+    Russian = "ru",
 }
 
 const nativeLanguageNames = {
@@ -21,9 +24,12 @@ const nativeLanguageNames = {
     [Language.Japanese]: "日本語",
     [Language.French]: "Français",
     [Language.Spanish]: "Español",
+    [Language.Italian]: "Italiano",
+    [Language.Portuguese]: "Português",
+    [Language.Russian]: "русский",
 };
 
-const betaLanguages = [Language.German, Language.Japanese, Language.French, Language.Spanish];
+const betaLanguages = [Language.German, Language.Japanese, Language.Spanish, Language.Italian, Language.Portuguese, Language.Russian];
 
 export const currentLanguage = (): Language => i18n.languages[0] as Language;
 
@@ -34,6 +40,9 @@ export const muiLocaleComponent = () =>
         .with(Language.Japanese, () => jaJP)
         .with(Language.French, () => frFR)
         .with(Language.Spanish, () => esES)
+        .with(Language.Italian, () => itIT)
+        .with(Language.Portuguese, () => ptPT)
+        .with(Language.Russian, () => ruRU)
         .otherwise(() => enUS);
 
 export const getNativeLanguageName = (lang: Language): string | null => nativeLanguageNames[lang] ?? null;

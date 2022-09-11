@@ -64,6 +64,7 @@
         },
         "build": {
             "click-here-to-select": "Hier klicken um eins auszuwählen",
+            "copy-build-to-finder": "Copy build to Finder",
             "filter-by": "Nach {{name}} filtern",
             "no-perks": "Keine Skills verfügbar.",
             "no-x-selected": "Kein <b>{{name}}</b> ausgewählt.",

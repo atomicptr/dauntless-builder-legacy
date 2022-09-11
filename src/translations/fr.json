@@ -64,6 +64,7 @@
         },
         "build": {
             "click-here-to-select": "Cliquez pour ajouter.",
+            "copy-build-to-finder": "Copy build to Finder",
             "filter-by": "Filtrer par {{name}}",
             "no-perks": "Aucun effet disponible.",
             "no-x-selected": "<b>{{name}}</b>",

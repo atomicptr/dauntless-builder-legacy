@@ -64,6 +64,7 @@
         },
         "build": {
             "click-here-to-select": "Haga clic aquí para seleccionar uno.",
+            "copy-build-to-finder": "Copy build to Finder",
             "filter-by": "Filtrar por {{name}}",
             "no-perks": "No hay ventajas disponibles.",
             "no-x-selected": "No <b>{{name}}</b> seleccionado.",
