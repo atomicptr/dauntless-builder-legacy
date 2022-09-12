@@ -1,4 +1,4 @@
-import {deDE, enUS, esES, frFR, itIT, jaJP, ptBR, ptPT, ruRU} from "@mui/material/locale";
+import { deDE, enUS, esES, frFR, itIT, jaJP, ptBR, ruRU } from "@mui/material/locale";
 import { store } from "@src/store";
 import log from "@src/utils/logger";
 import i18n, { CallbackError } from "i18next";
@@ -29,7 +29,14 @@ const nativeLanguageNames = {
     [Language.Russian]: "русский",
 };
 
-const betaLanguages = [Language.German, Language.Japanese, Language.Spanish, Language.Italian, Language.Portuguese, Language.Russian];
+const betaLanguages = [
+    Language.German,
+    Language.Japanese,
+    Language.Spanish,
+    Language.Italian,
+    Language.Portuguese,
+    Language.Russian,
+];
 
 export const currentLanguage = (): Language => i18n.languages[0] as Language;
 

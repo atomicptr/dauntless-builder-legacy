@@ -1,5 +1,6 @@
 import contributorsJson from "@json/contributors.json";
 import dependenciesJson from "@json/dependencies.json";
+import translatorsJson from "@json/translators.json";
 import { GitHub } from "@mui/icons-material";
 import { Avatar, Box, Button, Card, CardActionArea, CardContent, Grid, Stack, Typography } from "@mui/material";
 import LinkBox from "@src/components/LinkBox";
@@ -16,6 +17,12 @@ export interface Contributor {
     contributions: number;
 }
 
+export interface Translator {
+    avatarUrl: string | null;
+    proofreader: boolean;
+    username: string;
+}
+
 export interface Dependency {
     name: string;
     license: string;
@@ -23,6 +30,7 @@ export interface Dependency {
 }
 
 const contributors: Contributor[] = contributorsJson;
+const translators: Translator[] = translatorsJson;
 const dependencies: Dependency[] = dependenciesJson;
 
 // remove specific version from dependency list
@@ -56,6 +64,38 @@ const About: React.FC = () => {
                             variant="h5"
                         >
                             {`${contributor.login}`}
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+        </Grid>
+    );
+
+    const renderTranslator = (translator: Translator) => (
+        <Grid
+            key={translator.username}
+            item
+            md={4}
+            xs={12}
+        >
+            <Card>
+                <CardActionArea
+                    component="a"
+                    href={`https://crowdin.com/profile/${translator.username}`}
+                    target="_blank"
+                >
+                    <CardContent sx={{ alignItems: "center", display: "flex", gap: 2 }}>
+                        <Box>
+                            <Avatar
+                                src={translator.avatarUrl ?? undefined}
+                                sx={{ height: 64, width: 64 }}
+                            />
+                        </Box>
+                        <Typography
+                            component="div"
+                            variant="h5"
+                        >
+                            {`${translator.username}`}
                         </Typography>
                     </CardContent>
                 </CardActionArea>
@@ -160,6 +200,20 @@ const About: React.FC = () => {
                 spacing={2}
             >
                 {contributors.map(renderContributor)}
+            </Grid>
+
+            <Typography
+                component="div"
+                variant="h4"
+            >
+                {t("pages.about.translators")}
+            </Typography>
+
+            <Grid
+                container
+                spacing={2}
+            >
+                {translators.map(renderTranslator)}
             </Grid>
 
             <Typography

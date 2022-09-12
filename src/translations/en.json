@@ -60,7 +60,8 @@
             "privacy": "Privacy",
             "privacy-text": "We are not collecting any data.",
             "source-code": "Source Code",
-            "title": "About"
+            "title": "About",
+            "translators": "Translators"
         },
         "build": {
             "click-here-to-select": "Click here to select one.",
