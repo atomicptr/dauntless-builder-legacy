@@ -1,4 +1,4 @@
-import {deDE, enUS, esES, frFR, itIT, jaJP, ptPT, ruRU} from "@mui/material/locale";
+import {deDE, enUS, esES, frFR, itIT, jaJP, ptBR, ptPT, ruRU} from "@mui/material/locale";
 import { store } from "@src/store";
 import log from "@src/utils/logger";
 import i18n, { CallbackError } from "i18next";
@@ -41,7 +41,7 @@ export const muiLocaleComponent = () =>
         .with(Language.French, () => frFR)
         .with(Language.Spanish, () => esES)
         .with(Language.Italian, () => itIT)
-        .with(Language.Portuguese, () => ptPT)
+        .with(Language.Portuguese, () => ptBR)
         .with(Language.Russian, () => ruRU)
         .otherwise(() => enUS);
 
