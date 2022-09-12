@@ -33,7 +33,7 @@ import {
 import BuildMenu from "@src/components/BuildMenu";
 import LinkBox from "@src/components/LinkBox";
 import { drawerWidth } from "@src/components/theme";
-import { crowdinLink, discordServerUrl, githubUrl, issuesUrl, matrixChannelUrl } from "@src/constants";
+import { crowdinLink, discordServerUrl, githubUrl, matrixChannelUrl } from "@src/constants";
 import dauntlessBuilderData from "@src/data/Data";
 import { selectConfiguration } from "@src/features/configuration/configuration-slice";
 import { selectFavorites } from "@src/features/favorites/favorites-slice";
