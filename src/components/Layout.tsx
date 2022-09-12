@@ -233,19 +233,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <Container maxWidth={"xl"}>
                 <DrawerHeader sx={{ marginBottom: "16px" }} />
 
-                <Alert
-                    severity="warning"
-                    sx={{ mb: 2 }}
-                >
-                    <LinkBox
-                        text={t("alert.alpha-version", {
-                            discordServerUrl,
-                            issuesUrl,
-                            matrixChannelUrl,
-                        })}
-                    />
-                </Alert>
-
                 {isBetaLanguage(currentLanguage()) ? (
                     <Alert
                         severity="warning"
