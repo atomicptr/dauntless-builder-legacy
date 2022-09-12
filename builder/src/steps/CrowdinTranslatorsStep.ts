@@ -32,6 +32,7 @@ export class CrowdinTranslatorsStep extends WithStepLogger implements Step {
         if (!process.env.CROWDIN_TOKEN) {
             return;
         }
+
         const credentials = {
             token: process.env.CROWDIN_TOKEN,
         };

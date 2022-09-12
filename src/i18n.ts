@@ -1,3 +1,4 @@
+import crowdinStats from "@json/crowdin-stats.json";
 import { deDE, enUS, esES, frFR, itIT, jaJP, ptBR, ruRU } from "@mui/material/locale";
 import { store } from "@src/store";
 import log from "@src/utils/logger";
@@ -29,14 +30,7 @@ const nativeLanguageNames = {
     [Language.Russian]: "русский",
 };
 
-const betaLanguages = [
-    Language.German,
-    Language.Japanese,
-    Language.Spanish,
-    Language.Italian,
-    Language.Portuguese,
-    Language.Russian,
-];
+const betaThreshold = 95;
 
 export const currentLanguage = (): Language => i18n.languages[0] as Language;
 
@@ -54,7 +48,17 @@ export const muiLocaleComponent = () =>
 
 export const getNativeLanguageName = (lang: Language): string | null => nativeLanguageNames[lang] ?? null;
 
-export const isBetaLanguage = (lang: Language): boolean => betaLanguages.indexOf(lang) > -1;
+export const isBetaLanguage = (lang: Language): boolean => {
+    if (lang === Language.English) {
+        return false;
+    }
+
+    if (!(lang in crowdinStats.progress)) {
+        return true;
+    }
+
+    return crowdinStats.progress[lang] < betaThreshold;
+};
 
 export const ttry = (tryIdent: string, elseIdent: string): string => {
     if (i18n.exists(tryIdent)) {

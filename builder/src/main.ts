@@ -5,6 +5,7 @@ import { fileURLToPath } from "url";
 import { RunConfig, Step } from "./Step";
 import { CrowdinApproveStep } from "./steps/CrowdinApproveStep";
 import { CrowdinBuildStep } from "./steps/CrowdinBuildStep";
+import { CrowdinStatsStep } from "./steps/CrowdinStatsStep";
 import { CrowdinTranslatorsStep } from "./steps/CrowdinTranslatorsStep";
 import { DataStep } from "./steps/DataStep";
 import { DependenciesStep } from "./steps/DependenciesStep";
@@ -24,6 +25,7 @@ const Steps = [
     SitemapStep,
     CrowdinBuildStep,
     CrowdinTranslatorsStep,
+    CrowdinStatsStep,
     CrowdinApproveStep,
 ];
 
