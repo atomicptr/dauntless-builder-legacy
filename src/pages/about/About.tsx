@@ -13,8 +13,6 @@ export interface Contributor {
     login: string;
     avatar_url: string;
     html_url: string;
-    type: string;
-    contributions: number;
 }
 
 export interface Translator {
