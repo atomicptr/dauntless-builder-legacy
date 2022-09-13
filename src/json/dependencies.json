@@ -11,22 +11,22 @@
     },
     {
         "license": "MIT",
-        "name": "@babel/compat-data@7.18.8",
+        "name": "@babel/compat-data@7.19.0",
         "repository": "https://github.com/babel/babel"
     },
     {
         "license": "MIT",
-        "name": "@babel/core@7.18.10",
+        "name": "@babel/core@7.19.0",
         "repository": "https://github.com/babel/babel"
     },
     {
         "license": "MIT",
-        "name": "@babel/generator@7.18.12",
+        "name": "@babel/generator@7.19.0",
         "repository": "https://github.com/babel/babel"
     },
     {
         "license": "MIT",
-        "name": "@babel/helper-compilation-targets@7.18.9",
+        "name": "@babel/helper-compilation-targets@7.19.0",
         "repository": "https://github.com/babel/babel"
     },
     {
@@ -36,7 +36,7 @@
     },
     {
         "license": "MIT",
-        "name": "@babel/helper-function-name@7.18.9",
+        "name": "@babel/helper-function-name@7.19.0",
         "repository": "https://github.com/babel/babel"
     },
     {
@@ -51,12 +51,12 @@
     },
     {
         "license": "MIT",
-        "name": "@babel/helper-module-transforms@7.18.9",
+        "name": "@babel/helper-module-transforms@7.19.0",
         "repository": "https://github.com/babel/babel"
     },
     {
         "license": "MIT",
-        "name": "@babel/helper-plugin-utils@7.18.9",
+        "name": "@babel/helper-plugin-utils@7.19.0",
         "repository": "https://github.com/babel/babel"
     },
     {
@@ -86,7 +86,7 @@
     },
     {
         "license": "MIT",
-        "name": "@babel/helpers@7.18.9",
+        "name": "@babel/helpers@7.19.0",
         "repository": "https://github.com/babel/babel"
     },
     {
@@ -96,7 +96,7 @@
     },
     {
         "license": "MIT",
-        "name": "@babel/parser@7.18.11",
+        "name": "@babel/parser@7.19.0",
         "repository": "https://github.com/babel/babel"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
         "license": "MIT",
-        "name": "@babel/runtime@7.18.9",
+        "name": "@babel/runtime@7.19.0",
         "repository": "https://github.com/babel/babel"
     },
     {
@@ -121,22 +121,22 @@
     },
     {
         "license": "MIT",
-        "name": "@babel/traverse@7.18.11",
+        "name": "@babel/traverse@7.19.0",
         "repository": "https://github.com/babel/babel"
     },
     {
         "license": "MIT",
-        "name": "@babel/types@7.18.10",
+        "name": "@babel/types@7.19.0",
         "repository": "https://github.com/babel/babel"
     },
     {
         "license": "MIT",
-        "name": "@emotion/babel-plugin@11.10.0",
+        "name": "@emotion/babel-plugin@11.10.2",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/babel-plugin"
     },
     {
         "license": "MIT",
-        "name": "@emotion/cache@11.10.1",
+        "name": "@emotion/cache@11.10.3",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/cache"
     },
     {
@@ -156,7 +156,7 @@
     },
     {
         "license": "MIT",
-        "name": "@emotion/react@11.10.0",
+        "name": "@emotion/react@11.10.4",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/react"
     },
     {
@@ -171,13 +171,18 @@
     },
     {
         "license": "MIT",
-        "name": "@emotion/styled@11.10.0",
+        "name": "@emotion/styled@11.10.4",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/styled"
     },
     {
         "license": "MIT",
         "name": "@emotion/unitless@0.8.0",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/unitless"
+    },
+    {
+        "license": "MIT",
+        "name": "@emotion/use-insertion-effect-with-fallbacks@1.0.0",
+        "repository": "https://github.com/emotion-js/emotion/tree/main/packages/use-insertion-effect-with-fallbacks"
     },
     {
         "license": "MIT",
@@ -226,42 +231,47 @@
     },
     {
         "license": "MIT",
-        "name": "@mui/base@5.0.0-alpha.92",
+        "name": "@mui/base@5.0.0-alpha.96",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/icons-material@5.8.4",
+        "name": "@mui/core-downloads-tracker@5.10.4",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/material@5.10.0",
+        "name": "@mui/icons-material@5.10.3",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/private-theming@5.9.3",
+        "name": "@mui/material@5.10.4",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/styled-engine@5.10.0",
+        "name": "@mui/private-theming@5.10.3",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/system@5.10.0",
+        "name": "@mui/styled-engine@5.10.4",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/types@7.1.5",
+        "name": "@mui/system@5.10.4",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/utils@5.9.3",
+        "name": "@mui/types@7.2.0",
+        "repository": "https://github.com/mui/material-ui"
+    },
+    {
+        "license": "MIT",
+        "name": "@mui/utils@5.10.3",
         "repository": "https://github.com/mui/material-ui"
     },
     {
@@ -271,7 +281,7 @@
     },
     {
         "license": "MIT",
-        "name": "@reduxjs/toolkit@1.8.4",
+        "name": "@reduxjs/toolkit@1.8.5",
         "repository": "https://github.com/reduxjs/redux-toolkit"
     },
     {
@@ -306,7 +316,7 @@
     },
     {
         "license": "MIT",
-        "name": "@types/react@18.0.17",
+        "name": "@types/react@18.0.18",
         "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
     },
     {
@@ -341,7 +351,7 @@
     },
     {
         "license": "CC-BY-4.0",
-        "name": "caniuse-lite@1.0.30001375",
+        "name": "caniuse-lite@1.0.30001393",
         "repository": "https://github.com/browserslist/caniuse-lite"
     },
     {
@@ -401,7 +411,7 @@
     },
     {
         "license": "ISC",
-        "name": "electron-to-chromium@1.4.218",
+        "name": "electron-to-chromium@1.4.244",
         "repository": "https://github.com/kilian/electron-to-chromium"
     },
     {
@@ -485,7 +495,7 @@
     },
     {
         "license": "MIT",
-        "name": "i18next@21.9.0",
+        "name": "i18next@21.9.1",
         "repository": "https://github.com/i18next/i18next"
     },
     {
@@ -630,7 +640,7 @@
     },
     {
         "license": "MIT",
-        "name": "react-i18next@11.18.3",
+        "name": "react-i18next@11.18.5",
         "repository": "https://github.com/i18next/react-i18next"
     },
     {
@@ -770,7 +780,7 @@
     },
     {
         "license": "MIT",
-        "name": "update-browserslist-db@1.0.5",
+        "name": "update-browserslist-db@1.0.7",
         "repository": "https://github.com/browserslist/update-db"
     },
     {

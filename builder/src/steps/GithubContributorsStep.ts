@@ -3,7 +3,6 @@ import fs from "fs";
 import path from "path";
 import sortJson from "sort-json";
 
-import { Contributor } from "../../../src/pages/about/About";
 import { sortJsonOptions } from "../constants";
 import { RunConfig, Step } from "../Step";
 import { WithStepLogger } from "../WithStepLogger";
@@ -57,4 +56,12 @@ export class GithubContributorsStep extends WithStepLogger implements Step {
 
         return res.data;
     }
+}
+
+interface Contributor {
+    login: string;
+    avatar_url: string;
+    html_url: string;
+    type: string;
+    contributions: number;
 }
