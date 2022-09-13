@@ -1,6 +1,5 @@
 {
     "alert": {
-        "alpha-version": "Dauntless Builder v2 est actuellement en version bêta, si vous rencontrez des problèmes, merci de nous les communiquer sur <a style=\"color: #fff;\" href=\"{{issuesUrl}}\" target=\"_blank\">Github</a>, <a style=\"color: #fff;\" href=\"{{matrixChannelUrl}}\" target=\"_blank\">Matrix Channel</a> ou <a style=\"color: #fff;\" href=\"{{discordServerUrl}}\" target=\"_blank\">Discord</a>.",
         "translation-warning": "Vous consultez actuellement cette page en <b>{{languageName}}</b>, les traductions sont actuellement en bêta. Si vous parlez cette langue, pensez à <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">contribuer à la traduction</a>."
     },
     "app-name": "Dauntless Builder",
@@ -60,7 +59,8 @@
             "privacy": "Confidentialité",
             "privacy-text": "Nous ne collectons aucune donnée.",
             "source-code": "Code Source",
-            "title": "A propos"
+            "title": "A propos",
+            "translators": "Translators"
         },
         "build": {
             "click-here-to-select": "Cliquez pour ajouter.",
