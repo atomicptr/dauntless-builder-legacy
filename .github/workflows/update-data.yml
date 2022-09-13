@@ -16,14 +16,24 @@ jobs:
           cache: "yarn"
       - run: yarn install
       - run: yarn build:deps
-      - name: Commit changes
         env:
           CROWDIN_TOKEN: ${{ secrets.CROWDIN_TOKEN }}
           GOOGLE_SHEETS_APIKEY: ${{ secrets.GOOGLE_SHEETS_APIKEY }}
-        run: |
-          git status
-          git config user.name "Shrike Bot"
-          git config user.email "github-actions@github.com"
-          git add src/json
-          git commit -m '🦉 HOOT updated data'
-          git push
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          title: "🦉 Automatically Updated JSON Data"
+          committer: Shrike Bot <shrikebot@qr9.de>
+          commit-message: "🦉 HOOT Updated Data"
+          delete-branch: true
+          branch-suffix: short-commit-hash
+          body: "🦉🦉🦉"
+          assignees: atomicptr
+
+          # NOTE: Please keep this list alphabetically sorted
+          add-paths: |
+            src/json/contributors.json
+            src/json/crowdin-stats.json
+            src/json/meta-builds.json
+            src/json/translators.json
+            src/json/trials-builds.json
