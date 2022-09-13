@@ -1,9 +1,11 @@
 on:
   schedule:
     - cron: "0 0 * * *"
+  workflow_dispatch: {}
 
 jobs:
   update-data:
+    name: Update Data
     runs-on: ubuntu-latest
     environment: UpdateData
     steps:
