@@ -1,0 +1,27 @@
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    environment: UpdateData
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "yarn"
+      - run: yarn install
+      - run: yarn build:deps
+      - name: Commit changes
+        env:
+          CROWDIN_TOKEN: ${{ secrets.CROWDIN_TOKEN }}
+          GOOGLE_SHEETS_APIKEY: ${{ secrets.GOOGLE_SHEETS_APIKEY }}
+        run: |
+          git status
+          git config user.name "Shrike Bot"
+          git config user.email "github-actions@github.com"
+          git add src/json
+          git commit -m '🦉 HOOT updated data'
+          git push
