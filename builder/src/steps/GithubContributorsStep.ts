@@ -39,7 +39,8 @@ export class GithubContributorsStep extends WithStepLogger implements Step {
             }))
             .sort((a, b) => b.contributions - a.contributions)
             .filter(contributor => contributor.type !== "Bot")
-            .filter(contributor => excludeContributors.indexOf(contributor.login) === -1);
+            .filter(contributor => excludeContributors.indexOf(contributor.login) === -1)
+            .map(({avatar_url, html_url, login}) => ({avatar_url, html_url, login}));
 
         fs.writeFileSync(filepath, JSON.stringify(filtered, null, "    "));
         sortJson.overwrite(filepath, sortJsonOptions);

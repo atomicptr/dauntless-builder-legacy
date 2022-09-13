@@ -1,86 +1,62 @@
 [
     {
         "avatar_url": "https://avatars.githubusercontent.com/u/674705?v=4",
-        "contributions": 682,
         "html_url": "https://github.com/atomicptr",
-        "login": "atomicptr",
-        "type": "User"
+        "login": "atomicptr"
     },
     {
         "avatar_url": "https://avatars.githubusercontent.com/u/33606227?v=4",
-        "contributions": 59,
         "html_url": "https://github.com/ds-exe",
-        "login": "ds-exe",
-        "type": "User"
+        "login": "ds-exe"
     },
     {
         "avatar_url": "https://avatars.githubusercontent.com/u/16074153?v=4",
-        "contributions": 12,
         "html_url": "https://github.com/leghort",
-        "login": "leghort",
-        "type": "User"
+        "login": "leghort"
     },
     {
         "avatar_url": "https://avatars.githubusercontent.com/u/54872220?v=4",
-        "contributions": 7,
         "html_url": "https://github.com/NathalieWK",
-        "login": "NathalieWK",
-        "type": "User"
+        "login": "NathalieWK"
     },
     {
         "avatar_url": "https://avatars.githubusercontent.com/u/17255761?v=4",
-        "contributions": 6,
         "html_url": "https://github.com/Waffeln",
-        "login": "Waffeln",
-        "type": "User"
+        "login": "Waffeln"
     },
     {
         "avatar_url": "https://avatars.githubusercontent.com/u/9445627?v=4",
-        "contributions": 4,
         "html_url": "https://github.com/ChaosSaber",
-        "login": "ChaosSaber",
-        "type": "User"
+        "login": "ChaosSaber"
     },
     {
         "avatar_url": "https://avatars.githubusercontent.com/u/275635?v=4",
-        "contributions": 3,
         "html_url": "https://github.com/IvanKarpan",
-        "login": "IvanKarpan",
-        "type": "User"
+        "login": "IvanKarpan"
     },
     {
         "avatar_url": "https://avatars.githubusercontent.com/u/6952853?v=4",
-        "contributions": 2,
         "html_url": "https://github.com/BenjinYap",
-        "login": "BenjinYap",
-        "type": "User"
+        "login": "BenjinYap"
     },
     {
         "avatar_url": "https://avatars.githubusercontent.com/u/3085888?v=4",
-        "contributions": 1,
         "html_url": "https://github.com/hpsbranco",
-        "login": "hpsbranco",
-        "type": "User"
+        "login": "hpsbranco"
     },
     {
         "avatar_url": "https://avatars.githubusercontent.com/u/2782889?v=4",
-        "contributions": 1,
         "html_url": "https://github.com/Onewaysidewalks",
-        "login": "Onewaysidewalks",
-        "type": "User"
+        "login": "Onewaysidewalks"
     },
     {
         "avatar_url": "https://avatars.githubusercontent.com/u/6152557?v=4",
-        "contributions": 1,
         "html_url": "https://github.com/Wynd",
-        "login": "Wynd",
-        "type": "User"
+        "login": "Wynd"
     },
     {
         "avatar_url": "https://avatars.githubusercontent.com/u/67715709?v=4",
-        "contributions": 1,
         "html_url": "https://github.com/pipeworks-asmith",
-        "login": "pipeworks-asmith",
-        "type": "User"
+        "login": "pipeworks-asmith"
     }
 ]

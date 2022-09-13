@@ -23,11 +23,13 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           title: "🦉 Automatically Updated JSON Data"
-          committer: Shrike Bot <shrikebot@qr9.de>
+          author: "Shrike Bot <shrikebot@qr9.de>"
+          committer: "Shrike Bot <shrikebot@qr9.de>"
           commit-message: "🦉 HOOT Updated Data"
+          branch: task/update-data
           delete-branch: true
           branch-suffix: short-commit-hash
-          body: "🦉🦉🦉"
+          body: ""
           assignees: atomicptr
 
           # NOTE: Please keep this list alphabetically sorted
@@ -37,3 +39,4 @@ jobs:
             src/json/meta-builds.json
             src/json/translators.json
             src/json/trials-builds.json
+            src/translations
