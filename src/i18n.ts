@@ -72,6 +72,36 @@ detector.addDetector({
     lookup: () => store.getState().configuration.language,
     name: "reduxState",
 });
+detector.addDetector({
+    lookup: () => {
+        // get parameters to overwrite languages
+        //      * lang:         For testing
+        //      * fb_locale:    Used by facebook for embeds
+        const paramNames = ["lang", "fb_locale"];
+
+        const urlParams = new URLSearchParams(window.location.search);
+
+        for (const paramName of paramNames) {
+            const value = urlParams.get(paramName);
+
+            if (!value) {
+                continue;
+            }
+
+            const lang = value.substring(0, 2);
+            const hasLanguage = Object.values(Language).indexOf(lang as Language) > -1;
+
+            if (!hasLanguage) {
+                continue;
+            }
+
+            return lang;
+        }
+
+        return undefined;
+    },
+    name: "queryParams",
+});
 
 const dynamicallyImportLanguageFiles = resourcesToBackend(async (language, _namespace, callback) => {
     try {
@@ -94,7 +124,7 @@ i18n.use(dynamicallyImportLanguageFiles)
         debug: DB_DEVMODE,
         detection: {
             caches: [],
-            order: ["reduxState", "navigator"],
+            order: ["queryParams", "reduxState", "navigator"],
         },
         fallbackLng: Language.English,
         interpolation: {
