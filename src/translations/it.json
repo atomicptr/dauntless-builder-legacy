@@ -1,30 +1,30 @@
 {
     "alert": {
-        "translation-warning": "You're currently viewing this page with your language set to <b>{{languageName}}</b>, translations are currently in beta and are very spotty. If you speak this language, please consider <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">contributing to the translation efforts</a>."
+        "translation-warning": "Stai visualizzando questa pagina con la tua lingua impostata a <b>{{languageName}}</b>, le traduzioni sono attualmente in beta e potrebbero risultare incorrette. Se conoscete questa lingua, si prega di considerare <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">contribuzioni agli sforzi di traduzione</a>."
     },
     "app-name": "Dauntless Builder",
     "components": {
         "build-menu": {
-            "added-build-to-favorites": "Added build \"{{name}}\" to favorites.",
-            "build-name": "Build Name",
-            "copied-to-clipboard": "Copied to Clipboard",
-            "copy-to-clipboard": "Copy build to clipboard",
-            "favorite-build": "Add this build to your favorites",
-            "open-last-edited-build": "Open your last edited build",
-            "remove-build-from-favorites": "Removed build \"{{name}}\" from favorites.",
-            "set-build-name": "Set Build Name",
-            "unfavorite-build": "Remove this build from your favorites"
+            "added-build-to-favorites": "Aggiunto build \"{{name}}\" ai preferiti.",
+            "build-name": "Nome Build",
+            "copied-to-clipboard": "Copiato negli Appunti",
+            "copy-to-clipboard": "Copia build negli appunti",
+            "favorite-build": "Aggiungi questa build ai tuoi preferiti",
+            "open-last-edited-build": "Apri l'ultima build che hai modificato",
+            "remove-build-from-favorites": "Rimosso build \"{{name}}\" dai preferiti.",
+            "set-build-name": "Imposta il nome della Build",
+            "unfavorite-build": "Rimuovi questa build dai tuoi preferiti"
         },
         "build-warning": {
-            "invalid-build": "Due to changes in Dauntless this build is no longer compatible with the current version of Dauntless Builder, one or more parts have been removed in order to display it.",
-            "upgraded-build": "This build was made for an earlier version of Dauntless and might be outdated."
+            "invalid-build": "A causa dei cambiamenti in Dauntless questa build non è più compatibile con l'attuale versione di Dauntless Builder, una o più parti sono state rimosse per visualizzarla.",
+            "upgraded-build": "Questa build è stata realizzata per una versione precedente di Dauntless e potrebbe essere obsoleta."
         },
         "item-picker": {
             "lantern-hold-line": "<b>$t(terms.hold)</b>: {{hold}}",
             "omnicell-passive-line": "<b>$t(terms.passive)</b>: {{passive}}"
         },
         "item-select-dialog": {
-            "select-text": "Select {{name}}"
+            "select-text": "Seleziona {{name}}"
         }
     },
     "drawer": {
@@ -33,91 +33,91 @@
         "home": "$t(pages.home.title)",
         "meta-builds": "$t(pages.metabuilds.title)",
         "my-builds": "$t(pages.favorites.title)",
-        "new-build": "New Build",
+        "new-build": "Nuova Build",
         "settings": "$t(pages.settings.title)",
         "trials": "$t(pages.trials.title)"
     },
-    "feature-disabled-browser": "This feature is currently disabled for this web browser.",
+    "feature-disabled-browser": "Questa funzione è attualmente disabilitata per questo browser web.",
     "misc": {
         "dauntless-version": "Dauntless v{{version}}",
-        "discord-server": "Dauntless Builder Discord Server",
+        "discord-server": "Server Discord del Dauntless Builder",
         "github-repository": "Github Repository",
-        "matrix-channel": "Dauntless Builder Matrix Server",
+        "matrix-channel": "Dauntless Builder Server Matrix",
         "patch-url": "https://playdauntless.com/patch-notes/{{version}}"
     },
     "pages": {
         "404": {
-            "not-found": "Page Not Found"
+            "not-found": "Pagina non trovata"
         },
         "about": {
-            "assets": "Assets",
-            "assets-text": "All Dauntless related assets are the intellectual property of Phoenix Labs.",
-            "build-info": "Last update: {{buildString}}",
-            "contributors": "Contributors",
-            "dependencies": "Dependencies ({{number}})",
-            "main-text": "Dauntless Builder is free and open source software licensed under the terms of the <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> license.",
+            "assets": "Assetti",
+            "assets-text": "Tutti i assetti connessi a Dauntless sono proprietà intellettuale di Phoenix Labs.",
+            "build-info": "Ultimo aggiornamento: {{buildString}}",
+            "contributors": "Contributori",
+            "dependencies": "Dipendenze ({{number}})",
+            "main-text": "Dauntless Builder è software libero e open source concesso sotto i termini della licenza <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a>.",
             "privacy": "Privacy",
-            "privacy-text": "We are not collecting any data.",
-            "source-code": "Source Code",
-            "title": "About",
-            "translators": "Translators"
+            "privacy-text": "Non stiamo raccogliendo alcun dato.",
+            "source-code": "Codice sorgente",
+            "title": "Info",
+            "translators": "Traduttori"
         },
         "build": {
-            "click-here-to-select": "Click here to select one.",
-            "copy-build-to-finder": "Copy build to Finder",
-            "filter-by": "Filter by {{name}}",
-            "no-perks": "No perks available.",
-            "no-x-selected": "No <b>{{name}}</b> selected.",
-            "part-select-dialog-title": "Select weapon part",
-            "power-surged-add": "Power Surge",
-            "power-surged-remove": "Base Power",
-            "title": "{{weaponName}} {{omnicell}} Build",
-            "toggle-filters": "Toggle display of filters",
-            "toggle-unique-effects": "Toggle display of unique effects"
+            "click-here-to-select": "Clicca qui per selezionare.",
+            "copy-build-to-finder": "Copia build su Finder",
+            "filter-by": "Filtra per {{name}}",
+            "no-perks": "Nessuna cella disponibile.",
+            "no-x-selected": "Nessuna <b>{{name}}</b> selezionata.",
+            "part-select-dialog-title": "Seleziona la parte dell'arma",
+            "power-surged-add": "Aumenta Potenza",
+            "power-surged-remove": "Potenza Base",
+            "title": "Build {{weaponName}} {{omnicell}}",
+            "toggle-filters": "Mostra/nascondi filtri",
+            "toggle-unique-effects": "Mostra/nascondi effetti unici"
         },
         "build-finder": {
-            "builds-title": "Builds ({{num}})",
-            "clear-items": "Clear Items",
-            "clear-perks": "Clear All Perks",
-            "dev-number-of-builds": "Number of Builds: {{num}}",
-            "dev-number-of-perks": "Number of Perks selected: {{num}}",
-            "dev-options-title": "Development Options",
-            "dev-set-perks": "Set Perks",
-            "filter-perks": "Filter Perks...",
-            "filter-title": "Filter",
+            "builds-title": "Build ({{num}})",
+            "clear-items": "Rimuovi elementi",
+            "clear-perks": "Rimuovi tutte le celle",
+            "dev-number-of-builds": "Numero di Builds: {{num}}",
+            "dev-number-of-perks": "Numero di Celle selezionate: {{num}}",
+            "dev-options-title": "Opzioni Di Sviluppo",
+            "dev-set-perks": "Seleziona Celle",
+            "filter-perks": "Filtra Celle...",
+            "filter-title": "Filtro",
             "perks-title": "$t(terms.perks)",
-            "preselect-title": "Select Items",
-            "remove-exotics": "Remove Exotic Items",
-            "remove-legendary": "Remove Legendary Weapons",
+            "preselect-title": "Seleziona elementi",
+            "remove-exotics": "Rimuovi oggetti esotici",
+            "remove-legendary": "Rimuovi armi leggendarie",
             "title": "Build Finder"
         },
         "favorites": {
-            "build-name": "Build Name",
-            "edit-name": "Edit Favorite Name",
-            "title": "My Builds"
+            "build-name": "Nome Build",
+            "edit-name": "Modifica nome dei preferiti",
+            "title": "Le mie Build"
         },
         "home": {
-            "contributing-text": "If you're interested in contributing code or especially localizations please head over to our <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a>!",
-            "contributing-title": "Contributing",
+            "contributing-text": "Se sei interessato a contribuire al codice o in particolare alle localizzazioni, vai al nostro <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a>!",
+            "contributing-title": "Contributi",
             "links": {
                 "discord": "Discord",
                 "github": "Github",
-                "localize": "Help with localization",
+                "localize": "Contribuisci alla traduzione",
                 "matrix": "Matrix"
             },
-            "links-title": "Links",
-            "localization-text": "Dauntless Builder now supports localizations, please head over to the Settings page and select your preferred language if it wasn't already picked up automatically! If that language is currently unsupported and you'd be interested in helping, please read the \"Contributing\" section below.",
-            "localization-title": "Localization",
-            "test-builds": "Test Builds",
+            "links-title": "Link",
+            "localization-text": "Il Builder senza Dauntless ora supporta le localizzazioni, per favore vai alla pagina Impostazioni e seleziona la lingua preferita se non è già stata presa automaticamente! Se quella lingua non è attualmente supportata e saresti interessato ad aiutare, leggi la sezione \"Contribuisci\" qui sotto.",
+            "localization-title": "Lingua",
+            "test-builds": "Test Build",
             "title": "Home",
-            "welcome-text": "a free and open source web application for creating and sharing builds for the popular free to play monster hunting game Dauntless.",
-            "welcome-title": "Welcome to Dauntless Builder,"
+            "welcome-text": "un'applicazione web gratuita e open source per la creazione e la condivisione di build per il popolare gioco gratuito Dauntless.",
+            "welcome-title": "Benvenuto nel Dauntless Builder"
         },
         "metabuilds": {
             "generated": {
                 "buildTitles": {
-                    "Agarus (K) Speed": "$t(terms.behemoths.Agarus) (K) Speed",
-                    "Agarus (K) Survival": "$t(terms.behemoths.Agarus) (K) Survival",
+                    "Agarus (K) Speed": "$t(terms.behemoths.Agarus) (K) Rapidità",
+                    "Agarus (K) Survival": "$t(terms.behemoths.Agarus) (K) Sopravvivenza",
                     "Agarus (Khara) Resolve": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Resolve",
                     "Agarus (Khara) Wound": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Wound",
                     "Agarus (Kharabak)": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak))",
