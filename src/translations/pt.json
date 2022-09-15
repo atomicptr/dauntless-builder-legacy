@@ -207,7 +207,7 @@
                     },
                     "Revenant": {
                         "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 125 healing over 10 seconds — after Revenant expires.",
-                        "name": "Revenant"
+                        "name": "Vingativo"
                     },
                     "Tempest": {
                         "description": "Tempest features 10% passive attack speed bonus and the ability to build up stacks of Velocity when dodging through attacks. You spend the stacks to dash and deal damage based on how much movespeed you currently have. The movespeed bonus damage only applies to unbroken parts.",
