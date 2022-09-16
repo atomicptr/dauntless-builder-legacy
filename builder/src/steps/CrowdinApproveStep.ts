@@ -65,7 +65,7 @@ export class CrowdinApproveStep extends WithStepLogger implements Step {
 
             const strings = stringsRes.data
                 .map(res => ({ id: res.data.id, text: res.data.text.toString() }))
-                .filter(({ text }) => /^\$t\([\w\s-.]+\)$/gm.exec(text) !== null);
+                .filter(({ text }) => /^\$t\([\w\s\-.]+\)$/gm.exec(text) !== null);
 
             const addTranslation = async (id: number, text: string, languageId: string) => {
                 const translations = await stringTranslationsApi.listStringTranslations(
