@@ -239,11 +239,7 @@ export class I18nStep extends WithStepLogger implements Step {
             }
         }
 
-        const targetDir = path.join(runConfig.rootDir, "src", "translations", "items");
-
-        if (!fs.existsSync(targetDir)) {
-            fs.mkdirSync(targetDir);
-        }
+        const targetDir = path.join(runConfig.i18nBaseDir, "en");
 
         const filepath = path.join(targetDir, "items.en.json");
 
