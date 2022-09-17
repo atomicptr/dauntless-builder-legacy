@@ -3,7 +3,7 @@ export interface RunConfig {
     dataDir: string;
     rootDir: string;
     publicDir: string;
-    translationDir: string;
+    i18nBaseDir: string;
 }
 
 export interface Step {

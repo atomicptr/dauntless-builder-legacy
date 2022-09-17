@@ -114,7 +114,7 @@ export class TrialsBuildsStep extends WithStepLogger implements Step {
 
         this.log("Adding strings to en.json translation file...");
 
-        const translationBaseFilePath = path.join(runConfig.translationDir, "en.json");
+        const translationBaseFilePath = path.join(runConfig.i18nBaseDir, "en", "en.json");
         const translationRaw = fs.readFileSync(translationBaseFilePath);
         const translationJson = JSON.parse(translationRaw.toString());
 

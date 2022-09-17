@@ -3,7 +3,7 @@
 /dist
 /public
 /vite.config.ts
-/src/translations/items
+/src/json/i18n/items*
 /coverage
 /src/json
 /.github

@@ -37,4 +37,4 @@ jobs:
             src/json/meta-builds.json
             src/json/translators.json
             src/json/trials-builds.json
-            src/translations
+            src/json/i18n

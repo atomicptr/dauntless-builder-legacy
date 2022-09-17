@@ -106,8 +106,8 @@ detector.addDetector({
 const dynamicallyImportLanguageFiles = resourcesToBackend(async (language, _namespace, callback) => {
     try {
         const [websiteData, itemData] = await Promise.all([
-            import(`@src/translations/${language}.json`),
-            import(`@src/translations/items/items.${language}.json`),
+            import(`@json/i18n/${language}/${language}.json`),
+            import(`@json/i18n/${language}/items.${language}.json`),
         ]);
 
         callback(null, { ...websiteData.default, ...itemData.default });

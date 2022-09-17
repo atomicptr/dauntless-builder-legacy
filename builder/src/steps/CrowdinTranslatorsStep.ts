@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import sortJson from "sort-json";
 
-import { crowdinProjectId } from "../constants";
+import { crowdinProjectId, sortJsonOptions } from "../constants";
 import { RunConfig, Step } from "../Step";
 import { WithStepLogger } from "../WithStepLogger";
 
@@ -55,6 +55,6 @@ export class CrowdinTranslatorsStep extends WithStepLogger implements Step {
         const filePath = path.join(runConfig.targetDir, "translators.json");
 
         fs.writeFileSync(filePath, JSON.stringify(json));
-        sortJson.overwrite(filePath);
+        sortJson.overwrite(filePath, sortJsonOptions);
     }
 }

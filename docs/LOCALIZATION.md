@@ -17,9 +17,9 @@ does not contain an entry.
 
 # App Localization
 
-These localization entries are handled by one big JSON file per language and can be found in `src/translations`.
+These localization entries are handled by one big JSON file per language and can be found in `src/json/i18n`.
 
-Here is an outtake of the English language file `src/translations/en.json`:
+Here is an outtake of the English language file `src/json/i18n/en/en.json`:
 
 ```json
 {
@@ -41,13 +41,13 @@ Every entry is generally made up of two parts, an identifier (for instance **app
 as a separator (components.build-menu.added-build-to-favorites).
 
 Generally if you want to translate something into another language you'd go into the language file of your language, for
-instance French would be `src/translations/fr.json` copy over the identifier and add a different translation.
+instance French would be `src/json/i18n/fr/fr.json` copy over the identifier and add a different translation.
 
 The translation part can also contain variables which are referenced by surrounding them with two curly braces (see {{name}}).
 
 # Item Data Localization
 
-Item data localization is derived from the JSON files in src/translations/items. The source language entries are automatically
+Item data localization is derived from the JSON files in src/json/i18n/???/items. The source language entries are automatically
 generated from the data yaml files.
 
 ## Using variables in translation entries
@@ -98,7 +98,7 @@ Lets say we're adding support for Sindarin (for sake of the example we'll use **
 
 **(Keep in mind we're only adding translations here manually as an example, this should generally be done via Crowdin)**
 
-First lets start by creating the file `src/translations/si.json`
+First lets start by creating the file `src/json/i18n/si/si.json`
 
 ```json
 {

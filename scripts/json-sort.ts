@@ -13,8 +13,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const lintMode = process.argv.find(arg => arg === "--fix") === undefined;
 
-const filePatterns = [".eslintrc", "**/tsconfig.json", "src/translations/**.json", "data/_schemas/**.json"].map(
-    pattern => path.join(__dirname, "..", pattern),
+const filePatterns = [".eslintrc", "**/tsconfig.json", "data/_schemas/**.json"].map(pattern =>
+    path.join(__dirname, "..", pattern),
 );
 
 const files = filePatterns

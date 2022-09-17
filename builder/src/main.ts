@@ -55,10 +55,10 @@ const options = Object.assign(
 
 const runConfig: RunConfig = {
     dataDir: path.join(rootDir, "data"),
+    i18nBaseDir: path.join(rootDir, "src", "json", "i18n"),
     publicDir: path.join(rootDir, "public"),
     rootDir,
     targetDir: path.join(rootDir, "src", "json"),
-    translationDir: path.join(rootDir, "src", "translations"),
 };
 
 const log = (name: string, ...args: unknown[]) => {

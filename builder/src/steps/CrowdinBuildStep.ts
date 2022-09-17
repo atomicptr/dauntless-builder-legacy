@@ -3,9 +3,10 @@ import axios from "axios";
 import fs from "fs";
 import os from "os";
 import path from "path";
+import sortJson from "sort-json";
 import yauzl from "yauzl";
 
-import { crowdinProjectId } from "../constants";
+import { crowdinProjectId, sortJsonOptions } from "../constants";
 import { RunConfig, Step } from "../Step";
 import { wait } from "../utils/wait";
 import { WithStepLogger } from "../WithStepLogger";
@@ -34,7 +35,6 @@ export class CrowdinBuildStep extends WithStepLogger implements Step {
         }
 
         const forceRebuild = !!process.env.CROWDIN_FORCE_REBUILD;
-        const itemTranslationsDir = path.join(runConfig.translationDir, "items");
 
         const credentials = {
             token: process.env.CROWDIN_TOKEN,
@@ -122,9 +122,11 @@ export class CrowdinBuildStep extends WithStepLogger implements Step {
                         const language = entry.fileName.substring(0, 2);
                         const isItemsFile = entry.fileName.indexOf("items.") > -1;
 
+                        const targetDir = path.join(runConfig.i18nBaseDir, language);
+
                         const targetFile = isItemsFile
-                            ? path.join(itemTranslationsDir, `items.${language}.json`)
-                            : path.join(runConfig.translationDir, `${language}.json`);
+                            ? path.join(targetDir, `items.${language}.json`)
+                            : path.join(targetDir, `${language}.json`);
 
                         const targetWriteStream = fs.createWriteStream(targetFile);
 
@@ -136,6 +138,8 @@ export class CrowdinBuildStep extends WithStepLogger implements Step {
                             reader.on("end", () => {
                                 entryCounter--;
                                 this.log(`Wrote ${targetFile}`);
+
+                                sortJson.overwrite(targetDir, sortJsonOptions);
                             });
 
                             reader.pipe(targetWriteStream);
