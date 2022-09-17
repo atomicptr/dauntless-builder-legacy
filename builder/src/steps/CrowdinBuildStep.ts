@@ -104,6 +104,8 @@ export class CrowdinBuildStep extends WithStepLogger implements Step {
             const writer = fs.createWriteStream(zipPath);
             const stream = res.data.pipe(writer);
 
+            const files: string[] = [];
+
             stream.on("finish", () => {
                 yauzl.open(zipPath, (err, zipFile) => {
                     if (err) {
@@ -138,8 +140,7 @@ export class CrowdinBuildStep extends WithStepLogger implements Step {
                             reader.on("end", () => {
                                 entryCounter--;
                                 this.log(`Wrote ${targetFile}`);
-
-                                sortJson.overwrite(targetDir, sortJsonOptions);
+                                files.push(targetFile);
                             });
 
                             reader.pipe(targetWriteStream);
@@ -150,6 +151,9 @@ export class CrowdinBuildStep extends WithStepLogger implements Step {
                         while (entryCounter > 0) {
                             await wait(100);
                         }
+
+                        sortJson.overwrite(files, sortJsonOptions);
+
                         this.log("Finished extracting zip file.");
                         resolve();
                     });

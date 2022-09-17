@@ -56,11 +56,11 @@
             "contributors": "Contributors",
             "dependencies": "Dependencies ({{number}})",
             "main-text": "Dauntless Builder is free and open source software licensed under the terms of the <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> license.",
-            "privacy": "Privacy",
+            "privacy": "Privacidade",
             "privacy-text": "We are not collecting any data.",
             "source-code": "Source Code",
-            "title": "About",
-            "translators": "Translators"
+            "title": "Sobre",
+            "translators": "Tradutores"
         },
         "build": {
             "click-here-to-select": "Click here to select one.",
@@ -77,24 +77,24 @@
         },
         "build-finder": {
             "builds-title": "Builds ({{num}})",
-            "clear-items": "Clear Items",
+            "clear-items": "Excluir itens",
             "clear-perks": "Clear All Perks",
-            "dev-number-of-builds": "Number of Builds: {{num}}",
+            "dev-number-of-builds": "Número de Builds: {{num}}",
             "dev-number-of-perks": "Number of Perks selected: {{num}}",
             "dev-options-title": "Development Options",
             "dev-set-perks": "Set Perks",
             "filter-perks": "Filter Perks...",
             "filter-title": "Filter",
             "perks-title": "$t(terms.perks)",
-            "preselect-title": "Select Items",
-            "remove-exotics": "Remove Exotic Items",
-            "remove-legendary": "Remove Legendary Weapons",
-            "title": "Build Finder"
+            "preselect-title": "Selecionar Itens",
+            "remove-exotics": "Remover Itens Exóticos",
+            "remove-legendary": "Remover Armas Lendárias",
+            "title": "Localizador de Builds"
         },
         "favorites": {
-            "build-name": "Build Name",
+            "build-name": "Nome da build",
             "edit-name": "Edit Favorite Name",
-            "title": "My Builds"
+            "title": "Minhas builds"
         },
         "home": {
             "contributing-text": "If you're interested in contributing code or especially localizations please head over to our <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a>!",
@@ -174,7 +174,7 @@
                 "categories": {
                     "Artificer": {
                         "description": "Artificer features a drone you can control that has multiple functions depending on what you are targeting: if targeting the ground, it creates a healing and shielding aura that blocks Behemoth's projectiles; if targeting a player it creates a healing and shield aura that follows them; if targeting a downed slayer it revives them and creates a healing and shielding aura that follows them; and, if targeting a Behemoth, it marks a part to take extra damage.",
-                        "name": "Artificer"
+                        "name": "Artífice"
                     },
                     "Bastion": {
                         "description": "Bastion features higher shield gain from perks and the passive ability to generate shields when damage is dealt. Its active ability consumes all the shield you currently have and deals damage based on how much shield was consumed. Neglecting the active ability significantly lowers your potential damage.",
