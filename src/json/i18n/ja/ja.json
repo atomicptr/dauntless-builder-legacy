@@ -1,6 +1,6 @@
 {
     "alert": {
-        "translation-warning": "You're currently viewing this page with your language set to <b>{{languageName}}</b>, translations are currently in beta and are very spotty. If you speak this language, please consider <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">contributing to the translation efforts</a>."
+        "translation-warning": "このサイト現在、<b>{{languageName}}</b>に設定されている。翻訳は未完成だが、日本人のために翻訳を<a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">手伝って貰えば本当に感謝します</a>。"
     },
     "app-name": "Dauntless Builder",
     "components": {
@@ -301,6 +301,7 @@
             "Deepfrost Skarn": "Deepfrost Skarn",
             "Drask": "Drask",
             "Embermane": "Embermane",
+            "Fenroar": "Fenroar",
             "Flameborn Gnasher": "Flameborn Gnasher",
             "Flameborn Quillshot": "Flameborn Quillshot",
             "Flameborn Rezakiri": "Flameborn Rezakiri",
