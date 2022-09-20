@@ -178,7 +178,7 @@
                     },
                     "Bastion": {
                         "description": "Bastion features higher shield gain from perks and the passive ability to generate shields when damage is dealt. Its active ability consumes all the shield you currently have and deals damage based on how much shield was consumed. Neglecting the active ability significantly lowers your potential damage.",
-                        "name": "Bastion"
+                        "name": "Bastião"
                     },
                     "Catalyst": {
                         "description": "These are the best builds you can have for general hunting, maximizing damage and using Blitz tonics as your source of attack speed.\nRecommended tonics for maximum damage: Frenzy, Blitz, Aetherdrive.",
@@ -186,7 +186,7 @@
                     },
                     "Discipline": {
                         "description": "Discipline is a high-risk high-reward Omnicell, featuring a high damage parry ability that grants you stacks of critical damage if timed correctly and, at max stacks, grants you a high amount of critical chance.",
-                        "name": "Discipline"
+                        "name": "Disciplina"
                     },
                     "Escalations": {
                         "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear. ",
@@ -203,7 +203,7 @@
                     },
                     "Iceborne": {
                         "description": "Iceborne provides lifesteal and damage reduction the less health you have, with an active ability that grants hyperarmor and more lifesteal. The active deals more damage when used at maximum health.",
-                        "name": "Iceborne"
+                        "name": "Glacinata"
                     },
                     "Revenant": {
                         "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 125 healing over 10 seconds — after Revenant expires.",
@@ -211,7 +211,7 @@
                     },
                     "Tempest": {
                         "description": "Tempest features 10% passive attack speed bonus and the ability to build up stacks of Velocity when dodging through attacks. You spend the stacks to dash and deal damage based on how much movespeed you currently have. The movespeed bonus damage only applies to unbroken parts.",
-                        "name": "Tempest"
+                        "name": "Tempestade"
                     }
                 },
                 "title": "Dauntless Meta Builds - 1.10+"
