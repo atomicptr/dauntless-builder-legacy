@@ -1251,7 +1251,7 @@
     "item.perks.savagery.effects.6.description": "$t(item.perks.savagery.effects.1.description)",
     "item.perks.savagery.name": "Selvageria",
     "item.perks.sharpened.description": "Aumenta o percentual do dano de quebra.",
-    "item.perks.sharpened.effects.1.description.0": "+{{percentPartDamage}}% part damage",
+    "item.perks.sharpened.effects.1.description.0": "+{{percentPartDamage}} de Dano de Quebra",
     "item.perks.sharpened.effects.1.description.1": null,
     "item.perks.sharpened.effects.2.description.0": "$t(item.perks.sharpened.effects.1.description.0)",
     "item.perks.sharpened.effects.2.description.1": null,
