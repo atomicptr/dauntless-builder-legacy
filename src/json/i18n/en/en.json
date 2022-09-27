@@ -163,7 +163,7 @@
                     "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Speed",
                     "Urska (F) Speed": "$t(terms.behemoths.Urska) (F) Speed",
                     "Urska (F) Survival": "$t(terms.behemoths.Urska) (F) Survival",
-                    "Urska (Frostwulf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Forstwülf))",
+                    "Urska (Frostwulf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Frostwülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Pangar)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar))",
                     "Urska (Pangar) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Resolve",

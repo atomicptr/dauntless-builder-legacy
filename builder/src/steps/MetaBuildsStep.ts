@@ -373,7 +373,7 @@ export class MetaBuildsStep extends WithStepLogger implements Step {
 
             const commonShortNames = {
                 Chrono: "Chronovore",
-                Frostwulf: "Forstwülf",
+                Frostwulf: "Frostwülf",
                 Khara: "Kharabak",
                 Malk: "Malkarion",
                 Reza: "Rezakiri",
