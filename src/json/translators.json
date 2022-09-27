@@ -88,5 +88,15 @@
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15462946/medium/fe03d10e600c9b0bad9b40d8dfa4222b.jpeg",
         "proofreader": false,
         "username": "diogobrat"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15464986/medium/98e7863d9d02fdcbd6a56c8dd3230803_default.png",
+        "proofreader": false,
+        "username": "Raven0V"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15465634/medium/9cd403e4440b57dc358d06c04217d6e7.jpeg",
+        "proofreader": false,
+        "username": "radge91"
     }
 ]
