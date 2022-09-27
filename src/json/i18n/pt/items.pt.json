@@ -224,7 +224,7 @@
     "item.armours.thraxs-embrace.description": "$t(item.armours.adversarys-drive.description)",
     "item.armours.thraxs-embrace.name": "Abraço do Thrax",
     "item.armours.thraxs-guile.description": "$t(item.armours.adversarys-drive.description)",
-    "item.armours.thraxs-guile.name": "Afã do Thrax",
+    "item.armours.thraxs-guile.name": "Perfídia do Thrax",
     "item.armours.thraxs-scream.description": "$t(item.armours.adversarys-drive.description)",
     "item.armours.thraxs-scream.name": "Berro do Thrax",
     "item.armours.thraxs-shadow.description": "$t(item.armours.adversarys-drive.description)",
