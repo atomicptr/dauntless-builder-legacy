@@ -106,7 +106,7 @@
                 "matrix": "Matrix"
             },
             "links-title": "Link",
-            "localization-text": "Il Builder senza Dauntless ora supporta le localizzazioni, per favore vai alla pagina Impostazioni e seleziona la lingua preferita se non è già stata presa automaticamente! Se quella lingua non è attualmente supportata e saresti interessato ad aiutare, leggi la sezione \"Contribuisci\" qui sotto.",
+            "localization-text": "Il Dauntless Builder ora supporta le localizzazioni, per favore vai alla pagina Impostazioni e seleziona la lingua preferita se non è già stata presa automaticamente! Se quella lingua non è attualmente supportata e saresti interessato ad aiutare, leggi la sezione \"Contribuisci\" qui sotto.",
             "localization-title": "Lingua",
             "test-builds": "Test Build",
             "title": "Home",
@@ -174,7 +174,7 @@
                 "categories": {
                     "Artificer": {
                         "description": "Artificer features a drone you can control that has multiple functions depending on what you are targeting: if targeting the ground, it creates a healing and shielding aura that blocks Behemoth's projectiles; if targeting a player it creates a healing and shield aura that follows them; if targeting a downed slayer it revives them and creates a healing and shielding aura that follows them; and, if targeting a Behemoth, it marks a part to take extra damage.",
-                        "name": "Artificer"
+                        "name": "Artificiere"
                     },
                     "Bastion": {
                         "description": "Bastion features higher shield gain from perks and the passive ability to generate shields when damage is dealt. Its active ability consumes all the shield you currently have and deals damage based on how much shield was consumed. Neglecting the active ability significantly lowers your potential damage.",
@@ -182,72 +182,72 @@
                     },
                     "Catalyst": {
                         "description": "These are the best builds you can have for general hunting, maximizing damage and using Blitz tonics as your source of attack speed.\nRecommended tonics for maximum damage: Frenzy, Blitz, Aetherdrive.",
-                        "name": "Catalyst"
+                        "name": "Catalizzatore"
                     },
                     "Discipline": {
                         "description": "Discipline is a high-risk high-reward Omnicell, featuring a high damage parry ability that grants you stacks of critical damage if timed correctly and, at max stacks, grants you a high amount of critical chance.",
                         "name": "Discipline"
                     },
                     "Escalations": {
-                        "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear. ",
-                        "name": "Escalations",
+                        "description": "Build per affrontare le ascese. Include build senza Equipaggiamento delle ascese / prove",
+                        "name": "Ascese",
                         "subcategoryDescription": {
-                            "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive. Bulwark for survivability.",
-                            "legendaries": "Builds for the various Escalations.",
-                            "preEsca": "Builds for the various Escalations. Contains no Trials cells nor Escalation gear."
+                            "heroics": "Build per le varie ascese eroiche. Usa \"Catalizzatore\". Tonici consigliati : Frenesia, Incalzante, Dell'aether.\nIl tonico del bastione per soppravivenza.",
+                            "legendaries": "Build per le varie ascese.",
+                            "preEsca": "Build per le varie ascese. Non contiene ne celle delle prove ne equipaggiamento delle ascese."
                         }
                     },
                     "Exotics": {
-                        "description": "Builds that use the Exotic Weapons and Helmets. Off-meta and generally worse than using regular weapons, with the exception of Molten Edict.",
-                        "name": "Exotics"
+                        "description": "Build che usano armi ed elmi di rarità Esotica. Non meta e spesso peggiori delle armi/armature standard, a eccezione del'Edito Lavico.",
+                        "name": "Esotiche"
                     },
                     "Iceborne": {
-                        "description": "Iceborne provides lifesteal and damage reduction the less health you have, with an active ability that grants hyperarmor and more lifesteal. The active deals more damage when used at maximum health.",
-                        "name": "Iceborne"
+                        "description": "Sangue Freddo conferisce ruba vita e riduzione dei danni (meno vita hai, maggiore sono i bonus).\nL'abilità attiva garantisce HyperArmor (non vieni stordito dagli attacchi) e ulteriore ruba vita. L'abilità attiva infligge più danni a vita massima.",
+                        "name": "Sangue Freddo"
                     },
                     "Revenant": {
-                        "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 125 healing over 10 seconds — after Revenant expires.",
-                        "name": "Revenant"
+                        "description": "Redivivo è un Omnicella ad alto rischio caratterizzato da un'abilità attiva che consuma fino a 500 HP per evocare fino a cinque tentacoli d'ombra che infliggono danni elevati e attiva lo stato Redivivo. Quando i Tentacoli colpiscono un bersaglio, generano sfere del vuoto, raccogliendole ti dà cariche di energia del vuoto, ciascuna fornisce un danno del 4% mentre si è nello stato Redivivo e aumenta il periodo del bonus di 1 secondo per ogni sfera raccolta. Allo scadere del bonus, per ogni sfera raccolta rigeneral 115 HP in un'arco di 10 secondi. (ATTENZIONE, durante lo stato di redivivo non è possibile curarsi in alcun modo).",
+                        "name": "Redivivo"
                     },
                     "Tempest": {
-                        "description": "Tempest features 10% passive attack speed bonus and the ability to build up stacks of Velocity when dodging through attacks. You spend the stacks to dash and deal damage based on how much movespeed you currently have. The movespeed bonus damage only applies to unbroken parts.",
-                        "name": "Tempest"
+                        "description": "Tempesta garantisce un 10% di velocità d'attacco passiva e l'abilità di ottenere cariche di velocità quando schivi gli attacchi. Utilizzare l'omnicella consuma una carica di velocità per Infliggere danni, il danno aumenta più è alta la velocità di movimento. Il danno bonus si applica solamente alle parti non rotte",
+                        "name": "Tempesta"
                     }
                 },
                 "title": "Dauntless Meta Builds - 1.10+"
             },
             "note": "The builds listed here are automatically extracted from the <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>Community Meta Builds Spreadsheet</a>, if you have feedback please pass it along to the people in the #meta-discussion channel on the <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>official Dauntless Discord server</a>!",
             "subcategories": {
-                "The Hunger": "The Hunger",
-                "heroics": "Heroics",
-                "legendaries": "Legendaries",
-                "preEsca": "Pre-Escalation"
+                "The Hunger": "L'affamato",
+                "heroics": "Eroiche",
+                "legendaries": "Leggendarie",
+                "preEsca": "Pre-Ascesa"
             },
-            "title": "Meta Builds",
+            "title": "Build Meta",
             "vsElement": {
-                "Blaze": "vs. Blaze",
-                "Frost": "vs. Frost",
-                "Radiant": "vs. Radiant",
-                "Shock": "vs. Shock",
-                "Terra": "vs. Terra",
-                "Umbral": "vs. Umbral"
+                "Blaze": "vs. Ardente",
+                "Frost": "vs. gelida",
+                "Radiant": "Vs. Radiante",
+                "Shock": "vs. Folgorante",
+                "Terra": "Vs. Terrestre",
+                "Umbral": "Vs. Oscuro"
             }
         },
         "newbuild": {
-            "title": "Create a new build"
+            "title": "Crea una nuova build"
         },
         "settings": {
             "data": "Application Data",
-            "data-export": "Export",
-            "data-import": "Import",
-            "data-text": "Dauntless Builder is currently storing all data inside your browser, which means switching devices or browsers will not retain any of your favorite builds and/or other data. In the future we plan to allow some sort of cloud data syncing but until then, you can use Import/Export to backup your data and/or move it between devices.",
+            "data-export": "Esporta",
+            "data-import": "Importa",
+            "data-text": "Al momento Dauntless Builder sta archiviando tutti i dati nel tuo Browser, cambiare dispositivo o Browser non manterrà nessuna delle tue builds preferite e/o altri dati. In futuro permetteremo di archiviare i dati in cloud, intanto è consigliato utilizzare la funzione \"importa/esporta\"(in impostazioni) per fare un backup dei dati e/o trasferirli tra dispositivi.",
             "dev-mode-toggle": "Toggle Developer Mode",
-            "enable-light-mode": "Enable Light Mode (Use this at your own risk!)",
+            "enable-light-mode": "Abilità la modalità luminosa (usare a proprio rischio)",
             "export-logs": "Export logs",
-            "general": "General",
-            "language": "Language",
-            "misc": "Misc",
-            "title": "Settings"
+            "general": "Generali",
+            "language": "Lingua",
+            "misc": "Varie",
+            "title": "Impostazioni"
         },
         "trials": {
             "description": "Meta builds for Trials encounters, these are not general hunt builds.",
