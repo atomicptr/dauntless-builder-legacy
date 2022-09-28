@@ -2,7 +2,7 @@
     "alert": {
         "translation-warning": "Você está vendo esta página, pois sua língua está definida para <b>{{languageName}}</b>, traduções ainda estão em desenvolvimento. Se você fala essa língua, por favor considere <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">contribuir com a tradução</a>."
     },
-    "app-name": "Construtor Dauntless",
+    "app-name": "Dauntless Builder",
     "components": {
         "build-menu": {
             "added-build-to-favorites": "Build \"{{name}}\" adicionada aos favoritos.",
@@ -163,7 +163,7 @@
                     "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Velocidade",
                     "Urska (F) Speed": "$t(terms.behemoths.Urska) (F) Velocidade",
                     "Urska (F) Survival": "$t(terms.behemoths.Urska) (F) Sobrevivência",
-                    "Urska (Frostwulf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Forstwülf))",
+                    "Urska (Frostwulf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Frostwülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Pangar)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar))",
                     "Urska (Pangar) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Determinação",
@@ -328,7 +328,6 @@
             "Skarn": "Skarn",
             "Skraev": "Skraev",
             "Sporestruck Charrogg": "Charrogg Esporoso",
-            "Sporestruck Embermane": "Embermane Esporoso",
             "Stormclaw": "Stormclaw",
             "The Chronovore": "$t(terms.behemoths.Chronovore)",
             "Thrax": "Thrax",
