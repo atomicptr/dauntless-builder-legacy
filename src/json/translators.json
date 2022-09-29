@@ -66,7 +66,7 @@
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15442124/medium/5546d3b3bd4a9d5de878c6010df95b88.jpeg",
-        "proofreader": false,
+        "proofreader": true,
         "username": "cesar-amorim"
     },
     {
@@ -91,12 +91,17 @@
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15464986/medium/98e7863d9d02fdcbd6a56c8dd3230803_default.png",
-        "proofreader": false,
+        "proofreader": true,
         "username": "Raven0V"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15465634/medium/9cd403e4440b57dc358d06c04217d6e7.jpeg",
         "proofreader": false,
         "username": "radge91"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15467760/medium/523ad8f0a923004e8a57d054d4c4ca80.jpeg",
+        "proofreader": false,
+        "username": "alhomely009"
     }
 ]
