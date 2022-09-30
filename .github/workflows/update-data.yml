@@ -26,7 +26,6 @@ jobs:
           commit-message: "update external data"
           branch: task/update-data
           delete-branch: true
-          branch-suffix: short-commit-hash
           body: ""
           assignees: atomicptr
 
