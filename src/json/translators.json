@@ -103,5 +103,15 @@
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15467760/medium/523ad8f0a923004e8a57d054d4c4ca80.jpeg",
         "proofreader": false,
         "username": "alhomely009"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15469940/medium/144a095160fa28ae5d84c26ad6f10bbf.png",
+        "proofreader": false,
+        "username": "nzuridov"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15470148/medium/4ec3d80ef83cd1acf114443a289f4daf_default.png",
+        "proofreader": false,
+        "username": "HideTheReaper"
     }
 ]
