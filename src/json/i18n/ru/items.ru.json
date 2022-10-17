@@ -1,6 +1,6 @@
 {
     "item.armours.adversarys-drive.description": "{{typeAlt}} protection forged from {{behemoth}} trophies.",
-    "item.armours.adversarys-drive.name": "Adversary's Drive",
+    "item.armours.adversarys-drive.name": "Predator",
     "item.armours.adversarys-guile.description": "$t(item.armours.adversarys-drive.description)",
     "item.armours.adversarys-guile.name": "Adversary's Guile",
     "item.armours.adversarys-pride.description": "$t(item.armours.adversarys-drive.description)",
