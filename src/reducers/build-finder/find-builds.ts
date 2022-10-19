@@ -130,12 +130,12 @@ const createItemData = (
         (mode: (a: boolean, b: boolean) => boolean = orMode) =>
             (item: Weapon | Armour) =>
                 mode(
-                (item.perks && item.perks[0].name in requestedPerks) as boolean,
-                ((item.cells &&
-                    (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
-                        cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
-                    )) ||
-                    (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
+                    (item.perks && item.perks[0].name in requestedPerks) as boolean,
+                    ((item.cells &&
+                        (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
+                            cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
+                        )) ||
+                        (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
                 );
 
     const findMatchingArmourPiecesByType = (type: ArmourType) =>
@@ -234,6 +234,23 @@ export const findBuilds = (
     options: FinderItemDataOptions = {},
 ) => {
     const itemData = createItemData(weaponType, lanternName, requestedPerks, options);
+
+    interface AssignedSlotValue {
+        [slotName: string]: number;
+    }
+    const requestedSlots: AssignedSlotValue = {};
+
+    for (const perkName in requestedPerks) {
+        const desiredValue = requestedPerks[perkName];
+        if (requestedSlots[perkCellMap[perkName]]) {
+            requestedSlots[perkCellMap[perkName]] += desiredValue / 3;
+        } else {
+            requestedSlots[perkCellMap[perkName]] = desiredValue / 3;
+        }
+    }
+
+    const currentRequestedSlots = Object.assign({}, requestedSlots);
+    const currentRequestedPerks = Object.assign({}, requestedPerks);
 
     const determineBasePerks = (build: IntermediateBuild): AssignedPerkValue => {
         const perkStrings = Object.values(build)
@@ -364,12 +381,12 @@ export const findBuilds = (
         const createBuildIdentifier = (build: IntermediateBuild, cellsSlotted: CellsSlottedMap): string =>
             md5(
                 "build::" +
-                    Object.keys(sortObjectByKeys(build))
-                        .map(key => build[key as keyof IntermediateBuild].name)
-                        .join("::") +
-                    Object.keys(sortObjectByKeys(cellsSlotted))
-                        .map(key => cellsSlotted[key as keyof CellsSlottedMap] ?? "Null")
-                        .join("::"),
+                Object.keys(sortObjectByKeys(build))
+                    .map(key => build[key as keyof IntermediateBuild].name)
+                    .join("::") +
+                Object.keys(sortObjectByKeys(cellsSlotted))
+                    .map(key => cellsSlotted[key as keyof CellsSlottedMap] ?? "Null")
+                    .join("::"),
             );
 
         for (const weapon of itemData.weapons) {
