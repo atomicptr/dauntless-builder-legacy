@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: UpdateData
     # Only run this task on the main repository and not on forks
-    if: github.repository == "atomicptr/dauntless-builder"
+    if: github.repository == 'atomicptr/dauntless-builder'
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
