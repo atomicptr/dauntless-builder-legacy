@@ -1,30 +1,30 @@
 {
     "alert": {
-        "translation-warning": "You're currently viewing this page with your language set to <b>{{languageName}}</b>, translations are currently in beta and are very spotty. If you speak this language, please consider <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">contributing to the translation efforts</a>."
+        "translation-warning": "В настоящее время вы созерцаете эту страницу на языке: <b>{{languageName}}</b>, перевод на данный момент находится в бета-тестировании, посему неоднозначный. Если вы достаточно хорошо говорите наэтом языке, присоединяйтесь к переводу по <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">этой ссылке</a>."
     },
-    "app-name": "Dauntless Builder",
+    "app-name": "Конструктор Dauntless",
     "components": {
         "build-menu": {
-            "added-build-to-favorites": "Added build \"{{name}}\" to favorites.",
-            "build-name": "Build Name",
-            "copied-to-clipboard": "Copied to Clipboard",
-            "copy-to-clipboard": "Copy build to clipboard",
-            "favorite-build": "Add this build to your favorites",
-            "open-last-edited-build": "Open your last edited build",
-            "remove-build-from-favorites": "Removed build \"{{name}}\" from favorites.",
-            "set-build-name": "Set Build Name",
-            "unfavorite-build": "Remove this build from your favorites"
+            "added-build-to-favorites": "Добавить сборку \"{{name}}\" в избранные.",
+            "build-name": "Название сборки",
+            "copied-to-clipboard": "Скопировано в буфер",
+            "copy-to-clipboard": "Копировать сборку в буфер обмена",
+            "favorite-build": "Добавить эту сборку в избранное",
+            "open-last-edited-build": "Открыть последнюю отредактированную сборку",
+            "remove-build-from-favorites": "Удалить сборку \"{{name}}\" из избранного.",
+            "set-build-name": "Назвать сборку",
+            "unfavorite-build": "Удалить эту сборку из списка избранных"
         },
         "build-warning": {
-            "invalid-build": "Due to changes in Dauntless this build is no longer compatible with the current version of Dauntless Builder, one or more parts have been removed in order to display it.",
-            "upgraded-build": "This build was made for an earlier version of Dauntless and might be outdated."
+            "invalid-build": "Из-за изменений в Dauntless эта сборка больше не совместима с текущей версией Конструктора Dauntless, одна или несколько частей были удалены для отображения.",
+            "upgraded-build": "Эта сборка была сделана для более ранней версии Dauntless и может быть устаревшей."
         },
         "item-picker": {
             "lantern-hold-line": "<b>$t(terms.hold)</b>: {{hold}}",
             "omnicell-passive-line": "<b>$t(terms.passive)</b>: {{passive}}"
         },
         "item-select-dialog": {
-            "select-text": "Select {{name}}"
+            "select-text": "Выбрать «{{name}}»"
         }
     },
     "drawer": {
@@ -33,152 +33,152 @@
         "home": "$t(pages.home.title)",
         "meta-builds": "$t(pages.metabuilds.title)",
         "my-builds": "$t(pages.favorites.title)",
-        "new-build": "New Build",
+        "new-build": "Новая сборка",
         "settings": "$t(pages.settings.title)",
         "trials": "$t(pages.trials.title)"
     },
-    "feature-disabled-browser": "This feature is currently disabled for this web browser.",
+    "feature-disabled-browser": "Эта функция в настоящее время отключена для этого веб-браузера.",
     "misc": {
         "dauntless-version": "Dauntless v{{version}}",
-        "discord-server": "Dauntless Builder Discord Server",
-        "github-repository": "Github Repository",
-        "matrix-channel": "Dauntless Builder Matrix Server",
+        "discord-server": "Discord сервер Конструктора Dauntless",
+        "github-repository": "Репозиторий Github",
+        "matrix-channel": "Matrix сервер Конструктора Dauntless",
         "patch-url": "https://playdauntless.com/patch-notes/{{version}}"
     },
     "pages": {
         "404": {
-            "not-found": "Page Not Found"
+            "not-found": "Страница не найдена"
         },
         "about": {
-            "assets": "Assets",
-            "assets-text": "All Dauntless related assets are the intellectual property of Phoenix Labs.",
-            "build-info": "Last update: {{buildString}}",
-            "contributors": "Contributors",
-            "dependencies": "Dependencies ({{number}})",
-            "main-text": "Dauntless Builder is free and open source software licensed under the terms of the <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> license.",
-            "privacy": "Privacy",
-            "privacy-text": "We are not collecting any data.",
-            "source-code": "Source Code",
-            "title": "About",
-            "translators": "Translators"
+            "assets": "Активы",
+            "assets-text": "Все связанные с Dauntless активы являются интеллектуальной собственностью Phoenix Labs.",
+            "build-info": "Последнее обновление: {{buildString}}",
+            "contributors": "Участники",
+            "dependencies": "Зависимости ({{number}})",
+            "main-text": "Dauntless Builder — бесплатное программное обеспечение с открытым исходным кодом, лицензированное на условиях <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> лицензии.",
+            "privacy": "Конфиденциальность",
+            "privacy-text": "Мы не собираем каких-либо данных.",
+            "source-code": "Исходный код",
+            "title": "О нас",
+            "translators": "Переводчики"
         },
         "build": {
-            "click-here-to-select": "Click here to select one.",
-            "copy-build-to-finder": "Copy build to Finder",
-            "filter-by": "Filter by {{name}}",
-            "no-perks": "No perks available.",
-            "no-x-selected": "No <b>{{name}}</b> selected.",
-            "part-select-dialog-title": "Select weapon part",
-            "power-surged-add": "Power Surge",
-            "power-surged-remove": "Base Power",
-            "title": "{{weaponName}} {{omnicell}} Build",
-            "toggle-filters": "Toggle display of filters",
-            "toggle-unique-effects": "Toggle display of unique effects"
+            "click-here-to-select": "Для выбора нажмите здесь.",
+            "copy-build-to-finder": "Копировать сборку в Поиск",
+            "filter-by": "Фильтр по {{name}}",
+            "no-perks": "Нет доступных умений.",
+            "no-x-selected": "<b>{{name}}</b> не выбран.",
+            "part-select-dialog-title": "Выберите часть оружия",
+            "power-surged-add": "Всплеск мощи",
+            "power-surged-remove": "Базовая мощь",
+            "title": "{{weaponName}} {{omnicell}} сборка",
+            "toggle-filters": "Переключение отображения фильтров",
+            "toggle-unique-effects": "Переключение отображения уникальных эффектов"
         },
         "build-finder": {
-            "builds-title": "Builds ({{num}})",
-            "clear-items": "Clear Items",
-            "clear-perks": "Clear All Perks",
-            "dev-number-of-builds": "Number of Builds: {{num}}",
-            "dev-number-of-perks": "Number of Perks selected: {{num}}",
-            "dev-options-title": "Development Options",
-            "dev-set-perks": "Set Perks",
-            "filter-perks": "Filter Perks...",
-            "filter-title": "Filter",
+            "builds-title": "Сборки ({{num}})",
+            "clear-items": "Очистить предметы",
+            "clear-perks": "Очистить все умения",
+            "dev-number-of-builds": "Количество сборок: {{num}}",
+            "dev-number-of-perks": "Количество выбранных умений: {{num}}",
+            "dev-options-title": "Варианты развития",
+            "dev-set-perks": "Установить умения",
+            "filter-perks": "Фильтр умений...",
+            "filter-title": "Фильтр",
             "perks-title": "$t(terms.perks)",
-            "preselect-title": "Select Items",
-            "remove-exotics": "Remove Exotic Items",
-            "remove-legendary": "Remove Legendary Weapons",
-            "title": "Build Finder"
+            "preselect-title": "Выбор предметов",
+            "remove-exotics": "Удалить экзотические предметы",
+            "remove-legendary": "Удалить легендарное оружие",
+            "title": "Поиск сборок"
         },
         "favorites": {
-            "build-name": "Build Name",
-            "edit-name": "Edit Favorite Name",
-            "title": "My Builds"
+            "build-name": "Название сборки",
+            "edit-name": "Изменить название избранного",
+            "title": "Мои сборки"
         },
         "home": {
-            "contributing-text": "If you're interested in contributing code or especially localizations please head over to our <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a>!",
-            "contributing-title": "Contributing",
+            "contributing-text": "Если вы заинтересованы в разработке кода или особенно переводе, пожалуйста, перейдите на наш <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a>!",
+            "contributing-title": "Содействие",
             "links": {
                 "discord": "Discord",
-                "github": "Github",
-                "localize": "Help with localization",
+                "github": "GitHub",
+                "localize": "Помощь с переводом",
                 "matrix": "Matrix"
             },
-            "links-title": "Links",
-            "localization-text": "Dauntless Builder now supports localizations, please head over to the Settings page and select your preferred language if it wasn't already picked up automatically! If that language is currently unsupported and you'd be interested in helping, please read the \"Contributing\" section below.",
-            "localization-title": "Localization",
-            "test-builds": "Test Builds",
-            "title": "Home",
-            "welcome-text": "a free and open source web application for creating and sharing builds for the popular free to play monster hunting game Dauntless.",
-            "welcome-title": "Welcome to Dauntless Builder,"
+            "links-title": "Ссылки",
+            "localization-text": "Dauntless Builder теперь поддерживает локализацию, пожалуйста, перейдите на страницу Настройки и выберите предпочитаемый язык, если он еще не выбран автоматически! Если этот язык сейчас не поддерживается и вы хотите помочь, пожалуйста, прочитайте раздел \"Вклад\" ниже.",
+            "localization-title": "Перевод",
+            "test-builds": "Тестовые сборки",
+            "title": "Главная",
+            "welcome-text": "бесплатное веб-приложение с открытым исходным кодом для создания и обмена сборками для популярной бесплатной игры в охоту на монстров Dauntless.",
+            "welcome-title": "Добро пожаловать в конструктор Dauntless,"
         },
         "metabuilds": {
             "generated": {
                 "buildTitles": {
-                    "Agarus (K) Speed": "$t(terms.behemoths.Agarus) (K) Speed",
-                    "Agarus (K) Survival": "$t(terms.behemoths.Agarus) (K) Survival",
+                    "Agarus (K) Speed": "$t(terms.behemoths.Agarus) (К) Скорость",
+                    "Agarus (K) Survival": "$t(terms.behemoths.Agarus) (K) Выживание",
                     "Agarus (Khara) Resolve": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Resolve",
-                    "Agarus (Khara) Wound": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Wound",
+                    "Agarus (Khara) Wound": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Рана",
                     "Agarus (Kharabak)": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak))",
                     "Charrogg": "$t(terms.behemoths.Charrogg)",
-                    "Chrono (R) Speed": "$t(terms.behemoths.Chronovore) (R) Speed",
+                    "Chrono (R) Speed": "$t(terms.behemoths.Chronovore) (R) Скорость",
                     "Chrono (Reza)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Rezakiri))",
-                    "Chrono (Reza) Wound": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Rezakiri)) Wound",
-                    "Chrono (V) Speed": "$t(terms.behemoths.Chronovore) (V) Speed",
-                    "Chrono (V) Survival": "$t(terms.behemoths.Chronovore) (V) Survival",
+                    "Chrono (Reza) Wound": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Rezakiri)) Рана",
+                    "Chrono (V) Speed": "$t(terms.behemoths.Chronovore) (V) Скорость",
+                    "Chrono (V) Survival": "$t(terms.behemoths.Chronovore) (V) Выживание",
                     "Chrono (Valo)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr))",
                     "Chrono (Valo) Resolve": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Resolve",
-                    "Chrono (Valo) Wound": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Wound",
+                    "Chrono (Valo) Wound": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Рана",
                     "Disc Pred": "Disc Pred",
                     "Disc Sav": "Disc Sav",
                     "Hellion": "$t(terms.behemoths.Hellion)",
                     "Kharabak": "$t(terms.behemoths.Kharabak)",
-                    "Malk (S) Speed": "$t(terms.behemoths.Malkarion) (S) Speed",
-                    "Malk (S) Survival": "$t(terms.behemoths.Malkarion) (S) Survival",
+                    "Malk (S) Speed": "$t(terms.behemoths.Malkarion) (S) Скорость",
+                    "Malk (S) Survival": "$t(terms.behemoths.Malkarion) (S) Выживание",
                     "Malk (Sahvyt)": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt))",
                     "Malk (Sahvyt) Resolve": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt)) Resolve",
-                    "Malk (Sahvyt) Wound": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt)) Wound",
+                    "Malk (Sahvyt) Wound": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt)) Рана",
                     "Pangar": "$t(terms.behemoths.Pangar)",
                     "Prismedic": "Prismedic",
                     "Rage Pred": "Rage Pred",
                     "Rezakiri": "$t(terms.behemoths.Rezakiri)",
                     "Riftstalker": "$t(terms.behemoths.Riftstalker)",
                     "Sahvyt": "$t(terms.behemoths.Sahvyt)",
-                    "Thrax (R) Speed": "$t(terms.behemoths.Thrax) (R) Speed",
-                    "Thrax (R)Speed": "$t(terms.behemoths.Thrax) (R)Speed",
+                    "Thrax (R) Speed": "$t(terms.behemoths.Thrax) (R) Скорость",
+                    "Thrax (R)Speed": "$t(terms.behemoths.Thrax) (R) Скорость",
                     "Thrax (Rift)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker))",
                     "Thrax (Rift) Resolve": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Resolve",
-                    "Thrax (Rift) Wound": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Wound",
-                    "Torg (C) Speed": "$t(terms.behemoths.Torgadoro) (C) Speed",
-                    "Torg (C) Survival": "$t(terms.behemoths.Torgadoro) (C) Survival",
+                    "Thrax (Rift) Wound": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Рана",
+                    "Torg (C) Speed": "$t(terms.behemoths.Torgadoro) (С) Скорость",
+                    "Torg (C) Survival": "$t(terms.behemoths.Torgadoro) (C) Выживание",
                     "Torg (Charrogg)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Charrogg))",
                     "Torg (Charrogg) Resolve": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Charrogg)) Resolve",
-                    "Torg (H) Speed": "$t(terms.behemoths.Torgadoro) (H) Speed",
-                    "Torg (H) Survival": "$t(terms.behemoths.Torgadoro) (H) Survival",
+                    "Torg (H) Speed": "$t(terms.behemoths.Torgadoro) (H) Скорость",
+                    "Torg (H) Survival": "$t(terms.behemoths.Torgadoro) (H) Выживание",
                     "Torg (Hellion)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion))",
-                    "Torg (Hellion) Wound": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion)) Wound",
+                    "Torg (Hellion) Wound": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion)) Рана",
                     "Urska (Boreus)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Boreus))",
-                    "Urska (F)    Speed": "$t(terms.behemoths.Urska) (F) Speed",
-                    "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Speed",
-                    "Urska (F) Speed": "$t(terms.behemoths.Urska) (F) Speed",
-                    "Urska (F) Survival": "$t(terms.behemoths.Urska) (F) Survival",
+                    "Urska (F)    Speed": "$t(terms.behemoths.Urska) (F) Скорость",
+                    "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Скорость",
+                    "Urska (F) Speed": "$t(terms.behemoths.Urska) (F) Скорость",
+                    "Urska (F) Survival": "$t(terms.behemoths.Urska) (F) Выживание",
                     "Urska (Frostwulf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Frostwülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Pangar)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar))",
                     "Urska (Pangar) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Resolve",
-                    "Urska (Pangar) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Wound",
+                    "Urska (Pangar) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Рана",
                     "Urska (Wülf) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Resolve",
                     "Valomyr": "$t(terms.behemoths.Valomyr)"
                 },
                 "categories": {
                     "Artificer": {
                         "description": "Artificer features a drone you can control that has multiple functions depending on what you are targeting: if targeting the ground, it creates a healing and shielding aura that blocks Behemoth's projectiles; if targeting a player it creates a healing and shield aura that follows them; if targeting a downed slayer it revives them and creates a healing and shielding aura that follows them; and, if targeting a Behemoth, it marks a part to take extra damage.",
-                        "name": "Artificer"
+                        "name": "Творец"
                     },
                     "Bastion": {
                         "description": "Bastion features higher shield gain from perks and the passive ability to generate shields when damage is dealt. Its active ability consumes all the shield you currently have and deals damage based on how much shield was consumed. Neglecting the active ability significantly lowers your potential damage.",
-                        "name": "Bastion"
+                        "name": "Бстион"
                     },
                     "Catalyst": {
                         "description": "These are the best builds you can have for general hunting, maximizing damage and using Blitz tonics as your source of attack speed.\nRecommended tonics for maximum damage: Frenzy, Blitz, Aetherdrive.",
@@ -186,11 +186,11 @@
                     },
                     "Discipline": {
                         "description": "Discipline is a high-risk high-reward Omnicell, featuring a high damage parry ability that grants you stacks of critical damage if timed correctly and, at max stacks, grants you a high amount of critical chance.",
-                        "name": "Discipline"
+                        "name": "Дисциплина"
                     },
                     "Escalations": {
                         "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear. ",
-                        "name": "Escalations",
+                        "name": "Восхождения",
                         "subcategoryDescription": {
                             "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive. Bulwark for survivability.",
                             "legendaries": "Builds for the various Escalations.",
@@ -199,55 +199,55 @@
                     },
                     "Exotics": {
                         "description": "Builds that use the Exotic Weapons and Helmets. Off-meta and generally worse than using regular weapons, with the exception of Molten Edict.",
-                        "name": "Exotics"
+                        "name": "Экзотический"
                     },
                     "Iceborne": {
                         "description": "Iceborne provides lifesteal and damage reduction the less health you have, with an active ability that grants hyperarmor and more lifesteal. The active deals more damage when used at maximum health.",
-                        "name": "Iceborne"
+                        "name": "Закаленность"
                     },
                     "Revenant": {
                         "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 125 healing over 10 seconds — after Revenant expires.",
-                        "name": "Revenant"
+                        "name": "Ревенант"
                     },
                     "Tempest": {
                         "description": "Tempest features 10% passive attack speed bonus and the ability to build up stacks of Velocity when dodging through attacks. You spend the stacks to dash and deal damage based on how much movespeed you currently have. The movespeed bonus damage only applies to unbroken parts.",
-                        "name": "Tempest"
+                        "name": "Буря"
                     }
                 },
-                "title": "Dauntless Meta Builds - 1.10+"
+                "title": "Мета-сборки Dauntless - 1.10+"
             },
-            "note": "The builds listed here are automatically extracted from the <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>Community Meta Builds Spreadsheet</a>, if you have feedback please pass it along to the people in the #meta-discussion channel on the <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>official Dauntless Discord server</a>!",
+            "note": "Сборки перечисленные ниже автоматически извелкаются из <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>электронных таблиц сообщества Мета-сборок </a>, если вам есть что сказать - передайте это в #meta-discussion канал на <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>оффицииальном Discord сервере Dauntless</a>!",
             "subcategories": {
-                "The Hunger": "The Hunger",
-                "heroics": "Heroics",
-                "legendaries": "Legendaries",
+                "The Hunger": "Голод",
+                "heroics": "Героический",
+                "legendaries": "Легендарный",
                 "preEsca": "Pre-Escalation"
             },
-            "title": "Meta Builds",
+            "title": "Мета сборки",
             "vsElement": {
-                "Blaze": "vs. Blaze",
-                "Frost": "vs. Frost",
-                "Radiant": "vs. Radiant",
-                "Shock": "vs. Shock",
-                "Terra": "vs. Terra",
-                "Umbral": "vs. Umbral"
+                "Blaze": "против Пламенных",
+                "Frost": "против Морозных",
+                "Radiant": "против Сияющих",
+                "Shock": "против Электрических",
+                "Terra": "против Природных",
+                "Umbral": "против Сумрачных"
             }
         },
         "newbuild": {
-            "title": "Create a new build"
+            "title": "Создать новую сборку"
         },
         "settings": {
-            "data": "Application Data",
-            "data-export": "Export",
-            "data-import": "Import",
+            "data": "Данные приложений",
+            "data-export": "Экспорт",
+            "data-import": "Импорт",
             "data-text": "Dauntless Builder is currently storing all data inside your browser, which means switching devices or browsers will not retain any of your favorite builds and/or other data. In the future we plan to allow some sort of cloud data syncing but until then, you can use Import/Export to backup your data and/or move it between devices.",
-            "dev-mode-toggle": "Toggle Developer Mode",
-            "enable-light-mode": "Enable Light Mode (Use this at your own risk!)",
-            "export-logs": "Export logs",
+            "dev-mode-toggle": "Вкл/Выкл режим разработчика",
+            "enable-light-mode": "Включить режим Лайт (используйте это на свой страх и риск!)",
+            "export-logs": "Экспорт логов",
             "general": "General",
-            "language": "Language",
+            "language": "Язык",
             "misc": "Misc",
-            "title": "Settings"
+            "title": "Настройки"
         },
         "trials": {
             "description": "Meta builds for Trials encounters, these are not general hunt builds.",
@@ -269,127 +269,127 @@
                     "Shadowtouched Koshai.0": "You can bait the interrupt at the start pretty easily, and the turn-around interrupt afterwards, just like normal Koshai.",
                     "Shadowtouched Koshai.1": "The second time Shadowtouched Koshai goes into the ground, he spawns as far away as possible somewhere in the arena and shoots umbral orbs at you, during this time he is extremely vulnerable to damage.",
                     "Shadowtouched Nayzaga.0": "Just like normal Nayzaga, U. Nayzaga starts the fight with his dual slide interrupt.",
-                    "Shadowtouched Nayzaga.1": "Nayzaga's clone-summoning stomp doesn't deal damage, only the clone does.",
-                    "Shadowtouched Nayzaga.2": "After it goes into its portal, get ready for the following interrupt.",
-                    "Shrike.0": "Shrike's weakest parts are its head and wings.",
-                    "Shrike.1": "Shrike can be instantly booped after enrage.",
-                    "Shrowd.0": "You can use Discipline's Parry on enrage, if you jump at Shrowd the moment he teleports.",
-                    "Skarn.0": "If not using blunt weapons (strikers, hammer) focus the tail during enrage, the rock hitbox has a big gap there."
+                    "Shadowtouched Nayzaga.1": "Призывающий топот Найзаги не наносит урона - только призванный клон.",
+                    "Shadowtouched Nayzaga.2": "После его входа в портал - приготовьтесь прервать следующую атаку.",
+                    "Shrike.0": "Наиболее слабые части Шрайка - голова и крылья.",
+                    "Shrike.1": "Шрайк может мгновенно подлететь после впадания в ярость.",
+                    "Shrowd.0": "Во время ярости вы можете использовать Пылающий кулак (Дисциплина), если вы прыгните на Шрауда во время его телепорта.",
+                    "Skarn.0": "Если вы не пользуетесь дробящим оружием (крушителями, молотами) - сосредоточьтесь на хвосте во время ярости, Рок хит бокс имеет большой разрыв там."
                 },
-                "title": "Dauntless Trials Builds - 1.10+"
+                "title": "Сборки испытаний Dauntless - 1.10+"
             },
-            "title": "Trials"
+            "title": "Испытания"
         }
     },
     "terms": {
-        "active": "Active",
-        "active-ability": "Active Ability",
+        "active": "Активный",
+        "active-ability": "Активные Способности",
         "armour-alt": {
-            "Arms": "Arms",
-            "Head": "Head",
-            "Legs": "Leg and foot",
-            "Torso": "Torso"
+            "Arms": "Руки",
+            "Head": "Голова",
+            "Legs": "Ноги",
+            "Torso": "Торс"
         },
-        "arms-armour": "Arms Armour",
+        "arms-armour": "Наручи",
         "behemoths": {
-            "Agarus": "Agarus",
-            "Alyra": "Alyra",
-            "Boreus": "Boreus",
-            "Charrogg": "Charrogg",
-            "Chronovore": "The Chronovore",
-            "Deepfrost Gnasher": "Deepfrost Gnasher",
-            "Deepfrost Skarn": "Deepfrost Skarn",
-            "Drask": "Drask",
-            "Embermane": "Embermane",
-            "Fenroar": "Fenroar",
-            "Flameborn Gnasher": "Flameborn Gnasher",
-            "Flameborn Quillshot": "Flameborn Quillshot",
-            "Flameborn Rezakiri": "Flameborn Rezakiri",
-            "Frostwülf": "Frostwülf",
-            "Gnasher": "Gnasher",
-            "Hellion": "Hellion",
-            "Kharabak": "Kharabak",
-            "Koshai": "Koshai",
-            "Lightbound Boreus": "Lightbound Boreus",
-            "Lightbound Koshai": "Lightbound Koshai",
-            "Malkarion": "Malkarion",
-            "Nayzaga": "Nayzaga",
-            "Pangar": "Pangar",
-            "Phaelanx": "Phaelanx",
-            "Quillshot": "Quillshot",
-            "Rezakiri": "Rezakiri",
-            "Riftstalker": "Riftstalker",
-            "Sahvyt": "Sahvyt",
-            "Shadowtouched Drask": "Shadowtouched Drask",
-            "Shadowtouched Koshai": "Shadowtouched Koshai",
-            "Shadowtouched Nayzaga": "Shadowtouched Nayzaga",
-            "Shrike": "Shrike",
-            "Shrowd": "Shrowd",
-            "Skarn": "Skarn",
-            "Skraev": "Skraev",
-            "Sporestruck Charrogg": "Sporestruck Charrogg",
-            "Stormclaw": "Stormclaw",
+            "Agarus": "Агар",
+            "Alyra": "Алира",
+            "Boreus": "Борей",
+            "Charrogg": "Чаррогг",
+            "Chronovore": "Хроновор",
+            "Deepfrost Gnasher": "Мерзлотный Гнашер",
+            "Deepfrost Skarn": "Мерзлотный Скарн",
+            "Drask": "Драск",
+            "Embermane": "Эмбермейн",
+            "Fenroar": "Фенрык",
+            "Flameborn Gnasher": "Пламеродный Гнашер",
+            "Flameborn Quillshot": "Пламеродный Квиллшот",
+            "Flameborn Rezakiri": "Пламеродный Резакири",
+            "Frostwülf": "Фроствульф",
+            "Gnasher": "Гнашер",
+            "Hellion": "Геллион",
+            "Kharabak": "Карабак",
+            "Koshai": "Кошай",
+            "Lightbound Boreus": "Мерцающий Борей",
+            "Lightbound Koshai": "Мерцающий Кошай",
+            "Malkarion": "Малкарион",
+            "Nayzaga": "Найзага",
+            "Pangar": "Пангар",
+            "Phaelanx": "Феланкс",
+            "Quillshot": "Квиллшот",
+            "Rezakiri": "Резакири",
+            "Riftstalker": "Рифтсталкер",
+            "Sahvyt": "Сахвит",
+            "Shadowtouched Drask": "Мракородный Драск",
+            "Shadowtouched Koshai": "Мракородный Кошай",
+            "Shadowtouched Nayzaga": "Мракородная Найзага",
+            "Shrike": "Шрайк",
+            "Shrowd": "Шрауд",
+            "Skarn": "Скарн",
+            "Skraev": "Скрейв",
+            "Sporestruck Charrogg": "Спораженный Чаррогг",
+            "Stormclaw": "Стормкло",
             "The Chronovore": "$t(terms.behemoths.Chronovore)",
-            "Thrax": "Thrax",
-            "Thunderdeep Drask": "Thunderdeep Drask",
-            "Torgadoro": "Torgadoro",
-            "Urska": "Urska",
-            "Valomyr": "Valomyr"
+            "Thrax": "Тракс",
+            "Thunderdeep Drask": "Драск Громовержец",
+            "Torgadoro": "Торгадоро",
+            "Urska": "Урска",
+            "Valomyr": "Валомир"
         },
-        "bond-weapon": "Bond Weapon",
-        "cancel": "Cancel",
-        "cell": "Cell",
-        "cell-slot": "Cell Slot",
+        "bond-weapon": "Привязанное оружие",
+        "cancel": "Отмена",
+        "cell": "Ген",
+        "cell-slot": "Ячейка для гена",
         "cell-type": {
-            "Alacrity": "Alacrity",
-            "Brutality": "Brutality",
-            "Finesse": "Finesse",
-            "Fortitude": "Fortitude",
-            "Insight": "Insight",
-            "Prismatic": "Prismatic"
+            "Alacrity": "Прыткость",
+            "Brutality": "Беспощадности",
+            "Finesse": "Мастерства",
+            "Fortitude": "Стойкость",
+            "Insight": "Пронзания",
+            "Prismatic": "Призматический"
         },
-        "cells": "Cells",
-        "close": "Close",
-        "elemental-type": "Element",
+        "cells": "Ячейки",
+        "close": "Закрыть",
+        "elemental-type": "Стихия",
         "elemental-types": {
-            "Blaze": "Blaze",
-            "Frost": "Frost",
-            "Radiant": "Radiant",
-            "Shock": "Shock",
-            "Terra": "Terra",
-            "Umbral": "Umbral"
+            "Blaze": "Пламя",
+            "Frost": "Мороз",
+            "Radiant": "Свет",
+            "Shock": "Электричество",
+            "Terra": "Природа",
+            "Umbral": "Сумрак"
         },
-        "head-armour": "Head Armour",
-        "hold": "Hold",
-        "lantern": "Lantern",
-        "legs-armour": "Legs Armour",
-        "omnicell": "Omnicell",
-        "part": "Part",
+        "head-armour": "Шлем",
+        "hold": "Держать",
+        "lantern": "Фонарь",
+        "legs-armour": "Поножи",
+        "omnicell": "Ячейка омнигена",
+        "part": "Часть",
         "parts": {
-            "chamber": "Chamber",
-            "grip": "Grip",
-            "mod": "Mod",
-            "special": "Special"
+            "chamber": "Патроны",
+            "grip": "Рукоять",
+            "mod": "Модификатор",
+            "special": "Особый"
         },
-        "passive": "Passive",
-        "perks": "Perks",
-        "power": "Power",
-        "resistance": "Resistance",
-        "save": "Save",
-        "search": "Search",
-        "torso-armour": "Torso Armour",
-        "unique-effect": "Unique Effect",
-        "unselect": "Select Nothing",
-        "weapon": "Weapon",
-        "weapon-type": "Weapon Type",
+        "passive": "Пассивно",
+        "perks": "Умения",
+        "power": "Мощь",
+        "resistance": "Сопротивление",
+        "save": "Сохранить",
+        "search": "Поиск",
+        "torso-armour": "Нагрудник",
+        "unique-effect": "Уникальный эффект",
+        "unselect": "Ничего",
+        "weapon": "Оружие",
+        "weapon-type": "Тип оружия",
         "weapon-types": {
-            "AetherStrikers": "Aether Strikers",
-            "Axe": "Axe",
-            "ChainBlades": "Chain Blades",
-            "Hammer": "Hammer",
-            "Repeater": "Repeater",
-            "Sword": "Sword",
-            "WarPike": "War Pike"
+            "AetherStrikers": "Эфирные Крушители",
+            "Axe": "Топор",
+            "ChainBlades": "Цепные клинки",
+            "Hammer": "Молот",
+            "Repeater": "Репитер",
+            "Sword": "Меч",
+            "WarPike": "Боевая пика"
         }
     }
 }
