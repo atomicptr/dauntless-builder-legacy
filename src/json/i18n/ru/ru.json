@@ -1,13 +1,13 @@
 {
     "alert": {
-        "translation-warning": "В настоящее время вы созерцаете эту страницу на языке: <b>{{languageName}}</b>, перевод на данный момент находится в бета-тестировании, посему неоднозначный. Если вы достаточно хорошо говорите наэтом языке, присоединяйтесь к переводу по <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">этой ссылке</a>."
+        "translation-warning": "В настоящее время вы видите эту страницу на: <b>{{languageName}}</b> языке, перевод на данный момент находится в бета-тестировании, поэтому местами может быть сумбурным. Если у вас есть конструктивные дополнения / исправления к существующему переводу, присоединяйтесь по <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">этой ссылке</a>."
     },
     "app-name": "Конструктор Dauntless",
     "components": {
         "build-menu": {
             "added-build-to-favorites": "Добавить сборку \"{{name}}\" в избранные.",
             "build-name": "Название сборки",
-            "copied-to-clipboard": "Скопировано в буфер",
+            "copied-to-clipboard": "Скопировано в буфер обмена",
             "copy-to-clipboard": "Копировать сборку в буфер обмена",
             "favorite-build": "Добавить эту сборку в избранное",
             "open-last-edited-build": "Открыть последнюю отредактированную сборку",
@@ -16,7 +16,7 @@
             "unfavorite-build": "Удалить эту сборку из списка избранных"
         },
         "build-warning": {
-            "invalid-build": "Из-за изменений в Dauntless эта сборка больше не совместима с текущей версией Конструктора Dauntless, одна или несколько частей были удалены для отображения.",
+            "invalid-build": "Из-за изменений в Dauntless эта сборка больше не совместима с текущей версией конструктора Dauntless, одна или несколько частей были удалены.",
             "upgraded-build": "Эта сборка была сделана для более ранней версии Dauntless и может быть устаревшей."
         },
         "item-picker": {
@@ -37,11 +37,11 @@
         "settings": "$t(pages.settings.title)",
         "trials": "$t(pages.trials.title)"
     },
-    "feature-disabled-browser": "Эта функция в настоящее время отключена для этого веб-браузера.",
+    "feature-disabled-browser": "Эта особенность в настоящее время отключена для этого веб-браузера.",
     "misc": {
         "dauntless-version": "Dauntless v{{version}}",
-        "discord-server": "Discord сервер Конструктора Dauntless",
-        "github-repository": "Репозиторий Github",
+        "discord-server": "Discord сервер конструктора Dauntless",
+        "github-repository": "Хранилище Github",
         "matrix-channel": "Matrix сервер Конструктора Dauntless",
         "patch-url": "https://playdauntless.com/patch-notes/{{version}}"
     },
@@ -50,14 +50,14 @@
             "not-found": "Страница не найдена"
         },
         "about": {
-            "assets": "Активы",
-            "assets-text": "Все связанные с Dauntless активы являются интеллектуальной собственностью Phoenix Labs.",
+            "assets": "Ресурсы",
+            "assets-text": "Все связанные с Dauntless ресурсы являются интеллектуальной собственностью Phoenix Labs.",
             "build-info": "Последнее обновление: {{buildString}}",
-            "contributors": "Участники",
+            "contributors": "Помощники",
             "dependencies": "Зависимости ({{number}})",
             "main-text": "Dauntless Builder — бесплатное программное обеспечение с открытым исходным кодом, лицензированное на условиях <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> лицензии.",
             "privacy": "Конфиденциальность",
-            "privacy-text": "Мы не собираем каких-либо данных.",
+            "privacy-text": "Мы не собираем какие-либо данные.",
             "source-code": "Исходный код",
             "title": "О нас",
             "translators": "Переводчики"
@@ -67,7 +67,7 @@
             "copy-build-to-finder": "Копировать сборку в Поиск",
             "filter-by": "Фильтр по {{name}}",
             "no-perks": "Нет доступных умений.",
-            "no-x-selected": "<b>{{name}}</b> не выбран.",
+            "no-x-selected": "<b>{{name}}</b> не выбрано.",
             "part-select-dialog-title": "Выберите часть оружия",
             "power-surged-add": "Всплеск мощи",
             "power-surged-remove": "Базовая мощь",
@@ -97,17 +97,17 @@
             "title": "Мои сборки"
         },
         "home": {
-            "contributing-text": "Если вы заинтересованы в разработке кода или особенно переводе, пожалуйста, перейдите на наш <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a>!",
+            "contributing-text": "Если вы заинтересованы в разработке кода или переводе, пожалуйста, перейдите на наш <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a>!",
             "contributing-title": "Содействие",
             "links": {
                 "discord": "Discord",
                 "github": "GitHub",
-                "localize": "Помощь с переводом",
+                "localize": "Помощь с локализацией",
                 "matrix": "Matrix"
             },
             "links-title": "Ссылки",
             "localization-text": "Dauntless Builder теперь поддерживает локализацию, пожалуйста, перейдите на страницу Настройки и выберите предпочитаемый язык, если он еще не выбран автоматически! Если этот язык сейчас не поддерживается и вы хотите помочь, пожалуйста, прочитайте раздел \"Вклад\" ниже.",
-            "localization-title": "Перевод",
+            "localization-title": "Локализация",
             "test-builds": "Тестовые сборки",
             "title": "Главная",
             "welcome-text": "бесплатное веб-приложение с открытым исходным кодом для создания и обмена сборками для популярной бесплатной игры в охоту на монстров Dauntless.",
@@ -118,7 +118,7 @@
                 "buildTitles": {
                     "Agarus (K) Speed": "$t(terms.behemoths.Agarus) (К) Скорость",
                     "Agarus (K) Survival": "$t(terms.behemoths.Agarus) (K) Выживание",
-                    "Agarus (Khara) Resolve": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Resolve",
+                    "Agarus (Khara) Resolve": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Решимость",
                     "Agarus (Khara) Wound": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Рана",
                     "Agarus (Kharabak)": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak))",
                     "Charrogg": "$t(terms.behemoths.Charrogg)",
@@ -128,32 +128,32 @@
                     "Chrono (V) Speed": "$t(terms.behemoths.Chronovore) (V) Скорость",
                     "Chrono (V) Survival": "$t(terms.behemoths.Chronovore) (V) Выживание",
                     "Chrono (Valo)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr))",
-                    "Chrono (Valo) Resolve": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Resolve",
+                    "Chrono (Valo) Resolve": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Решимость",
                     "Chrono (Valo) Wound": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Рана",
-                    "Disc Pred": "Disc Pred",
-                    "Disc Sav": "Disc Sav",
+                    "Disc Pred": "Дисциплина / Хищник",
+                    "Disc Sav": "Дисциплина / Свирепость",
                     "Hellion": "$t(terms.behemoths.Hellion)",
                     "Kharabak": "$t(terms.behemoths.Kharabak)",
                     "Malk (S) Speed": "$t(terms.behemoths.Malkarion) (S) Скорость",
                     "Malk (S) Survival": "$t(terms.behemoths.Malkarion) (S) Выживание",
                     "Malk (Sahvyt)": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt))",
-                    "Malk (Sahvyt) Resolve": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt)) Resolve",
+                    "Malk (Sahvyt) Resolve": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt)) Решимость",
                     "Malk (Sahvyt) Wound": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt)) Рана",
                     "Pangar": "$t(terms.behemoths.Pangar)",
-                    "Prismedic": "Prismedic",
-                    "Rage Pred": "Rage Pred",
+                    "Prismedic": "Призматический / Медик",
+                    "Rage Pred": "Ярость / Хищник",
                     "Rezakiri": "$t(terms.behemoths.Rezakiri)",
                     "Riftstalker": "$t(terms.behemoths.Riftstalker)",
                     "Sahvyt": "$t(terms.behemoths.Sahvyt)",
                     "Thrax (R) Speed": "$t(terms.behemoths.Thrax) (R) Скорость",
                     "Thrax (R)Speed": "$t(terms.behemoths.Thrax) (R) Скорость",
                     "Thrax (Rift)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker))",
-                    "Thrax (Rift) Resolve": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Resolve",
+                    "Thrax (Rift) Resolve": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Решимость",
                     "Thrax (Rift) Wound": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Рана",
                     "Torg (C) Speed": "$t(terms.behemoths.Torgadoro) (С) Скорость",
                     "Torg (C) Survival": "$t(terms.behemoths.Torgadoro) (C) Выживание",
                     "Torg (Charrogg)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Charrogg))",
-                    "Torg (Charrogg) Resolve": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Charrogg)) Resolve",
+                    "Torg (Charrogg) Resolve": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Charrogg)) Решимость",
                     "Torg (H) Speed": "$t(terms.behemoths.Torgadoro) (H) Скорость",
                     "Torg (H) Survival": "$t(terms.behemoths.Torgadoro) (H) Выживание",
                     "Torg (Hellion)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion))",
@@ -166,51 +166,51 @@
                     "Urska (Frostwulf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Frostwülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Pangar)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar))",
-                    "Urska (Pangar) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Resolve",
+                    "Urska (Pangar) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Решимость",
                     "Urska (Pangar) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Рана",
-                    "Urska (Wülf) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Resolve",
+                    "Urska (Wülf) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Решимость",
                     "Valomyr": "$t(terms.behemoths.Valomyr)"
                 },
                 "categories": {
                     "Artificer": {
-                        "description": "Artificer features a drone you can control that has multiple functions depending on what you are targeting: if targeting the ground, it creates a healing and shielding aura that blocks Behemoth's projectiles; if targeting a player it creates a healing and shield aura that follows them; if targeting a downed slayer it revives them and creates a healing and shielding aura that follows them; and, if targeting a Behemoth, it marks a part to take extra damage.",
+                        "description": "Особенность Творца - дрон. Вы контролируете его разнообразные способности, которые зависят от цели. Следопыт: убирает негативные статусные эффекты и дарует ауру Творца. Область: создает стену, защищающую от вражеских снарядов и дающую ауру Творца ближайшим следопытам. Чудовище: увеличивает урон по выбранной части тела. Потерявший сознание Следопыт: приводит в чувство и дарует ауру Творца.",
                         "name": "Творец"
                     },
                     "Bastion": {
-                        "description": "Bastion features higher shield gain from perks and the passive ability to generate shields when damage is dealt. Its active ability consumes all the shield you currently have and deals damage based on how much shield was consumed. Neglecting the active ability significantly lowers your potential damage.",
+                        "description": "Особенность Бастиона - увеличение наложенных на вас щитов и пассивная способность получать щиты при нанесении урона. Активная способность - поглощает все ваши щиты и наносит урон врагам рядом в зависимости от количества поглощенного щита. Пренебрежение активной способностью значительно понижает потенциальный урон.",
                         "name": "Бстион"
                     },
                     "Catalyst": {
-                        "description": "These are the best builds you can have for general hunting, maximizing damage and using Blitz tonics as your source of attack speed.\nRecommended tonics for maximum damage: Frenzy, Blitz, Aetherdrive.",
-                        "name": "Catalyst"
+                        "description": "Это лучшие сборки, которые вы можете использовать для обычной охоты, увеличивая урон за счет использования зелья Скорости для повышения скорости атаки. Рекомендуемые зелья для максимального урона: Ярости, Скорости и Эфирного насыщения.",
+                        "name": "Катализация"
                     },
                     "Discipline": {
-                        "description": "Discipline is a high-risk high-reward Omnicell, featuring a high damage parry ability that grants you stacks of critical damage if timed correctly and, at max stacks, grants you a high amount of critical chance.",
+                        "description": "Дисциплина - омниген с высоким риском использования и отдачей. Имеет парирующую атаку с высоким уроном, которая при правильном временном применении накапливает размер критического урона и при максимальной зарядке дает высокий шанс крита.",
                         "name": "Дисциплина"
                     },
                     "Escalations": {
-                        "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear. ",
+                        "description": "Сборки для Восхождений. Включают сборки без предметов из Восхождений и Испытаний. ",
                         "name": "Восхождения",
                         "subcategoryDescription": {
-                            "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive. Bulwark for survivability.",
-                            "legendaries": "Builds for the various Escalations.",
-                            "preEsca": "Builds for the various Escalations. Contains no Trials cells nor Escalation gear."
+                            "heroics": "Сборки для различных Героических Восхождений. Используют Катализацию. Рекомендуемые зелья: Ярости, Скорости, Эфирного насыщения. Бастион для выживания.",
+                            "legendaries": "Сборки для различных Восхождений.",
+                            "preEsca": "Сборки для различных Восхождений. Не содержат ни ячеек Испытаний, ни предметов из Восхождения."
                         }
                     },
                     "Exotics": {
-                        "description": "Builds that use the Exotic Weapons and Helmets. Off-meta and generally worse than using regular weapons, with the exception of Molten Edict.",
-                        "name": "Экзотический"
+                        "description": "Сборки, которые построены на использовании экзотического оружия и шлемов. Не мета сборки. В основном хуже, чем использующие обычное оружие, исключение составляет разве что Лавовый Эдикт.",
+                        "name": "Экзотические"
                     },
                     "Iceborne": {
-                        "description": "Iceborne provides lifesteal and damage reduction the less health you have, with an active ability that grants hyperarmor and more lifesteal. The active deals more damage when used at maximum health.",
+                        "description": "Закаленность дает вам пассивно вампиризм и снижение получаемого урона с понижением здоровья, а также активную способность повышающую защиту и вампиризм еще больше. При использовании с максимальным здоровьем активная способность нанесет больше урона.",
                         "name": "Закаленность"
                     },
                     "Revenant": {
-                        "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 125 healing over 10 seconds — after Revenant expires.",
+                        "description": "Ревенант - омниген с высоким риском и высокой наградой, использование активной способности поглащает 500 ХП для призыва сумрачных щупалец, которые наносят высокий урон и вводят вас в состояние Ревенанта. Когда щупальца наносят урон цели - они создают Сферы Пустоты, собирая их вы накапливаете Энергию Пустоты, каждая из которых повышает урон на 4% в состоянии Ревенанта и продлевает это состояние на 1 секунду, а также после окончания Ревенанта лечит на 125 на продолжении 10 секунд.",
                         "name": "Ревенант"
                     },
                     "Tempest": {
-                        "description": "Tempest features 10% passive attack speed bonus and the ability to build up stacks of Velocity when dodging through attacks. You spend the stacks to dash and deal damage based on how much movespeed you currently have. The movespeed bonus damage only applies to unbroken parts.",
+                        "description": "Особенность Бури + 10% к скорости атаки, и возможность накапливать заряды Беглости при уклонении от атаки. Вы тратите заряды на рывки и нанесение урона в зависимости от того, какая у вас сейчас скорость передвижения. Бонусный урон от скорости передвижения применяется только к не сломаным частям тела.",
                         "name": "Буря"
                     }
                 },
@@ -219,9 +219,9 @@
             "note": "Сборки перечисленные ниже автоматически извелкаются из <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>электронных таблиц сообщества Мета-сборок </a>, если вам есть что сказать - передайте это в #meta-discussion канал на <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>оффицииальном Discord сервере Dauntless</a>!",
             "subcategories": {
                 "The Hunger": "Голод",
-                "heroics": "Героический",
-                "legendaries": "Легендарный",
-                "preEsca": "Pre-Escalation"
+                "heroics": "Героические",
+                "legendaries": "Легендарные",
+                "preEsca": "Пред-Восхождение"
             },
             "title": "Мета сборки",
             "vsElement": {
@@ -240,41 +240,41 @@
             "data": "Данные приложений",
             "data-export": "Экспорт",
             "data-import": "Импорт",
-            "data-text": "Dauntless Builder is currently storing all data inside your browser, which means switching devices or browsers will not retain any of your favorite builds and/or other data. In the future we plan to allow some sort of cloud data syncing but until then, you can use Import/Export to backup your data and/or move it between devices.",
+            "data-text": "На текущий момент времени конструктор Dauntless хранит все данные внутри вашего браузера, что значит переключение между устройствами или браузерами не сохранит ваши избранные сборки или другие данные. В будущем мы планируем предоставить некий вид облака данных, го до этого вы можете пользоваться Импортом/Экспортом для резервного копирования ваших данных и перемещенния их между устройствами.",
             "dev-mode-toggle": "Вкл/Выкл режим разработчика",
             "enable-light-mode": "Включить режим Лайт (используйте это на свой страх и риск!)",
             "export-logs": "Экспорт логов",
-            "general": "General",
+            "general": "Основные",
             "language": "Язык",
-            "misc": "Misc",
+            "misc": "Прочее",
             "title": "Настройки"
         },
         "trials": {
-            "description": "Meta builds for Trials encounters, these are not general hunt builds.",
+            "description": "Мета-сборки предназначены для Испытаний, они не для основной охоты.",
             "generated": {
                 "tips": {
-                    "Boreus.0": "You can use the Bombers and the Weak Spot to delay Boreus' Aethercharge. (the shield phase)",
-                    "Charrogg.0": "Charrogg's left arm slam doesn't hit you if you are close to its neck.",
-                    "Charrogg.1": "Charrogg's weakest parts are the firesacs (1 on each side of the head, 1 on each side of the belly).",
-                    "Drask.0": "Tracking Lightning is extremely inconsistent and doesn't deal damage most of the time.",
-                    "Embermane.0": "Use Embermane to protect yourself from the shock pylon's orbs.",
-                    "Gnasher.0": "You can bait Gnasher's interrupt by getting close to him at the start of the fight. The cooldown resets on enrage.",
-                    "Kharabak.0": "Don't get hit by the bees.",
-                    "Koshai.0": "You can bait the frontal interrupt into the turn-around interrupt in a loop.",
-                    "Koshai.1": "Like all Behemoths, Koshai's enrage resets the timer on the interrupt, position yourself to bait it right after the animation ends.",
-                    "Koshai.2": "Koshai grows its antlers at around 1 minute, be ready for the damage window that follows.",
-                    "Pangar.0": "Pangar's interruptable roll is very easy to bait (does it twice in a row only), and the cooldown gets reset on enrage.",
-                    "Pangar.1": "Pangar's interruptable roll is currently bugged and doesn't do any damage until the very end of it, so use that for extremely easy interrupts.",
-                    "Quillshot.0": "You can build Skarn lantern/Frostwülf shield on the platform.",
-                    "Shadowtouched Koshai.0": "You can bait the interrupt at the start pretty easily, and the turn-around interrupt afterwards, just like normal Koshai.",
-                    "Shadowtouched Koshai.1": "The second time Shadowtouched Koshai goes into the ground, he spawns as far away as possible somewhere in the arena and shoots umbral orbs at you, during this time he is extremely vulnerable to damage.",
-                    "Shadowtouched Nayzaga.0": "Just like normal Nayzaga, U. Nayzaga starts the fight with his dual slide interrupt.",
+                    "Boreus.0": "Вы можете использовать Бомберов и Слабые места для задержки Эфирного заряда Борея (фаза щита)",
+                    "Charrogg.0": "Хлопок левой передней лапой Чаррогга не ударит вас, если вы находитесь близко к его шее.",
+                    "Charrogg.1": "Наиболее уязвимые места Чаррогга - огненные железы (по одной над каждой лапой).",
+                    "Drask.0": "Преследуемая молния довольно неустойчива и не наносит урона большую часть времени.",
+                    "Embermane.0": "Используйте Эмбермена, чтобы защитить себя от сфер шоковых пилонов.",
+                    "Gnasher.0": "Вы можете подловить прерывание Гнашера подойдя ближе к нему в начале боя. Перезарядка происходит в состоянии ярости.",
+                    "Kharabak.0": "Не попадитесь пчелам.",
+                    "Koshai.0": "Вы можете подловить фронтальное прерывание внутри поворотного прерывания по кругу.",
+                    "Koshai.1": "Как у всех чудовищ, ярость Кошая сбрасывает таймер прерывания, подбирайте свою позицию для того, чтобы подловить его прямо после окончания анимации.",
+                    "Koshai.2": "Кошай отращивает свои рога примерно за минуту, будьте готовы к последующему окну урона.",
+                    "Pangar.0": "Вращаемое прерывание Пангара довольно просто подловить (всего 2 кувырка), перезарядка сбрасывается в ярости.",
+                    "Pangar.1": "Вращаемое прерывание Пангара на текущий момент времени сломано и не наносит урона до конечного этапа, пользуйтесь для предельно простого прерывания.",
+                    "Quillshot.0": "Вы можете построить на основе Фонаря Скарна/щита Фроствульфа.",
+                    "Shadowtouched Koshai.0": "Вы можете подловить прерывание в начале очень просто и последующее поворотное прерывание, как у обычного Кошая.",
+                    "Shadowtouched Koshai.1": "После повторного побега под землю Мракородный Кошай появляется в случайном, наиболее удаленном от вас месте на арене и запускает сумрачную сферу в вас. В это время он чрезвычайно уязвим к урону.",
+                    "Shadowtouched Nayzaga.0": "Так же как и обычная Найзага начинает бой с двойного прерываемого скольжения.",
                     "Shadowtouched Nayzaga.1": "Призывающий топот Найзаги не наносит урона - только призванный клон.",
-                    "Shadowtouched Nayzaga.2": "После его входа в портал - приготовьтесь прервать следующую атаку.",
+                    "Shadowtouched Nayzaga.2": "После его входа в портал - приготовьтесь к последующему прерыванию.",
                     "Shrike.0": "Наиболее слабые части Шрайка - голова и крылья.",
-                    "Shrike.1": "Шрайк может мгновенно подлететь после впадания в ярость.",
+                    "Shrike.1": "Шрайк может мгновенно взорваться после впадания в ярость.",
                     "Shrowd.0": "Во время ярости вы можете использовать Пылающий кулак (Дисциплина), если вы прыгните на Шрауда во время его телепорта.",
-                    "Skarn.0": "Если вы не пользуетесь дробящим оружием (крушителями, молотами) - сосредоточьтесь на хвосте во время ярости, Рок хит бокс имеет большой разрыв там."
+                    "Skarn.0": "Если вы не пользуетесь дробящим оружием (крушителями, молотами) - сосредоточьтесь на хвосте во время ярости, хит бокс Скалы имеет большой разрыв там."
                 },
                 "title": "Сборки испытаний Dauntless - 1.10+"
             },
@@ -283,7 +283,7 @@
     },
     "terms": {
         "active": "Активный",
-        "active-ability": "Активные Способности",
+        "active-ability": "Активная Способность",
         "armour-alt": {
             "Arms": "Руки",
             "Head": "Голова",
@@ -342,10 +342,10 @@
         "cell-slot": "Ячейка для гена",
         "cell-type": {
             "Alacrity": "Прыткость",
-            "Brutality": "Беспощадности",
-            "Finesse": "Мастерства",
+            "Brutality": "Беспощадность",
+            "Finesse": "Мастерство",
             "Fortitude": "Стойкость",
-            "Insight": "Пронзания",
+            "Insight": "Пронзание",
             "Prismatic": "Призматический"
         },
         "cells": "Ячейки",
@@ -371,7 +371,7 @@
             "mod": "Модификатор",
             "special": "Особый"
         },
-        "passive": "Пассивно",
+        "passive": "Пассивный",
         "perks": "Умения",
         "power": "Мощь",
         "resistance": "Сопротивление",
@@ -379,7 +379,7 @@
         "search": "Поиск",
         "torso-armour": "Нагрудник",
         "unique-effect": "Уникальный эффект",
-        "unselect": "Ничего",
+        "unselect": "Не выбрать ничего",
         "weapon": "Оружие",
         "weapon-type": "Тип оружия",
         "weapon-types": {
@@ -387,7 +387,7 @@
             "Axe": "Топор",
             "ChainBlades": "Цепные клинки",
             "Hammer": "Молот",
-            "Repeater": "Репитер",
+            "Repeater": "Репитеры",
             "Sword": "Меч",
             "WarPike": "Боевая пика"
         }
