@@ -123,5 +123,25 @@
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15496190/medium/367c56179c3aa2005e51926b48b0e90e.png",
         "proofreader": false,
         "username": "holi4"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15501646/medium/4ada7d12ec388ea20deb31cc2865b0c5.png",
+        "proofreader": false,
+        "username": "GCI_URAN"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15502450/medium/12dc44cf606338a32bf5699f3b7852ca.jpeg",
+        "proofreader": false,
+        "username": "playlinsor"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15512286/medium/a525c8ea11eb0c051f48e8a04ae8a117_default.png",
+        "proofreader": true,
+        "username": "scouvs"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15515490/medium/033a56d08117208a71852dfed3d3b0a0.jpeg",
+        "proofreader": false,
+        "username": "Skinmaker"
     }
 ]
