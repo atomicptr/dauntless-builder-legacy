@@ -2104,7 +2104,7 @@
     "item.weapons.the-twin-suns.unique_effects.1.title": "Патронник",
     "item.weapons.the-twin-suns.unique_effects.2.description": "Совершите рывок в указанном направлении, во время которого вы неуязвимы. При идеальном уклонении вы совершаете {{miniShots}} выстрелов, которые гарантированно наносят критический урон. В режиме магнитных бомб выстреливаются {{magBombs}} магнитные бомбы.",
     "item.weapons.the-twin-suns.unique_effects.2.title": "Рукоять",
-    "item.weapons.the-twin-suns.unique_effects.3.description": "After a critical strike, reduce the cooldown of Mag Bomb mode by {{cooldownReduceTime}} seconds.",
+    "item.weapons.the-twin-suns.unique_effects.3.description": "Каждое критическое попадание уменьшает перезарядку магнитных бомб на {{cooldownReduceTime}} секунд.",
     "item.weapons.the-twin-suns.unique_effects.3.title": "Призма",
     "item.weapons.the-weeping-hours.description": "$t(item.weapons.agents-of-decay.description)",
     "item.weapons.the-weeping-hours.name": "Часы скорби",
