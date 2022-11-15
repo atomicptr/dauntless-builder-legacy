@@ -65,7 +65,7 @@
         "username": "Jax08"
     },
     {
-        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15442124/medium/5546d3b3bd4a9d5de878c6010df95b88.jpeg",
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15442124/medium/bbfd9e57ab30faa763d6e7b364dfdef2.jpg",
         "proofreader": true,
         "username": "cesar-amorim"
     },
@@ -153,5 +153,15 @@
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15530051/medium/9ebfbbcc0e20cf4b5b02519c8c5bc6f1.png",
         "proofreader": false,
         "username": "suica.047"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15532485/medium/89b82687ae13a6f0c4ea0abf0d75f570_default.png",
+        "proofreader": false,
+        "username": "ReaperLord"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15534557/medium/a1afbd739353f4b3db788c16b2ecdb34_default.png",
+        "proofreader": false,
+        "username": "RyZeIsTop"
     }
 ]
