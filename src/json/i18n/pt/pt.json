@@ -240,7 +240,7 @@
             "data": "Dados de Aplicação",
             "data-export": "Exportar",
             "data-import": "Importar",
-            "data-text": "Dauntless Builder está atualmente armazenando todos os dados dentro do seu navegador o que significa trocar de dispositivo ou navegadores fará perpetuar nenhuma de suas Builds favoritas ou quaisquer outros dados. Futuramente, planejamos permitir algum tipo de sincronização de dados na nuvem, mas até lá você pode usar Importar/Exportar para backup de seus dados e/ou movê-lo entre dispositivos.",
+            "data-text": "Dauntless Builder está atualmente armazenando todos os dados dentro do seu navegador o que significa trocar de dispositivo ou navegadores não fará perpetuar nenhuma de suas Builds favoritas ou quaisquer outros dados. Futuramente, planejamos permitir algum tipo de sincronização de dados na nuvem, mas até lá você pode usar Importar/Exportar para backup de seus dados e/ou movê-lo entre dispositivos.",
             "dev-mode-toggle": "Alternar para Modo de desenvolvedor",
             "enable-light-mode": "Ativar o Modo Claro (Use por sua conta e risco!)",
             "export-logs": "Exportar logs",
