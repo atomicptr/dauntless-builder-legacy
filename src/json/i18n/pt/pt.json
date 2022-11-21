@@ -130,7 +130,7 @@
                     "Chrono (Valo)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr))",
                     "Chrono (Valo) Resolve": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Determinação",
                     "Chrono (Valo) Wound": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Ferida",
-                    "Disc Pred": "Disc Pred",
+                    "Disc Pred": "Ok",
                     "Disc Sav": "Disc Sav",
                     "Hellion": "$t(terms.behemoths.Hellion)",
                     "Kharabak": "$t(terms.behemoths.Kharabak)",
