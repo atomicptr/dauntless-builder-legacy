@@ -154,21 +154,29 @@ const MetaBuilds: React.FC = () => {
         [metaBuildsJson, trialsBuildsJson],
     );
 
+    const buildsForWeapon = useMemo(() => (weaponType in builds ? builds[weaponType] : {}), [builds, weaponType]);
+
     const hasBuilds = useCallback(
         (category: string): boolean =>
-            weaponType !== null && category in builds[weaponType] && builds[weaponType][category].builds.length > 0,
-        [weaponType, builds],
+            weaponType !== null && category in buildsForWeapon && buildsForWeapon[category].builds.length > 0,
+        [weaponType, buildsForWeapon],
     );
 
-    const currentCategory = categories[buildCategoryIndex] ? categories[buildCategoryIndex] : null;
+    const currentCategory = useMemo(
+        () => (categories[buildCategoryIndex] ? categories[buildCategoryIndex] : null),
+        [categories, buildCategoryIndex],
+    );
 
-    const subcategories =
-        weaponType !== null && currentCategory !== null && currentCategory in builds[weaponType]
-            ? builds[weaponType][currentCategory].builds
-                .map(build => build.subcategory)
-                .filter(category => !!category)
-                .filter((value, index, self) => self.indexOf(value) === index)
-            : [];
+    const subcategories = useMemo(
+        () =>
+            weaponType !== null && currentCategory !== null && currentCategory in buildsForWeapon
+                ? buildsForWeapon[currentCategory].builds
+                    .map(build => build.subcategory)
+                    .filter(category => !!category)
+                    .filter((value, index, self) => self.indexOf(value) === index)
+                : [],
+        [weaponType, currentCategory, buildsForWeapon],
+    );
 
     // fix some weapon types not having access to all categories
     useEffect(() => {
@@ -221,7 +229,7 @@ const MetaBuilds: React.FC = () => {
                             title={
                                 currentCategory === trialsCategoryName
                                     ? undefined
-                                    : t(`pages.metabuilds.generated.buildTitles.${title}`)
+                                    : (t(`pages.metabuilds.generated.buildTitles.${title}`) as string)
                             }
                         />
                     </Box>
@@ -468,7 +476,7 @@ const MetaBuilds: React.FC = () => {
                         index={index}
                         value={buildCategoryIndex}
                     >
-                        {category in builds[weaponType] && (
+                        {category in buildsForWeapon && (
                             <>
                                 <Typography>
                                     {categoryTranslate(
@@ -482,7 +490,7 @@ const MetaBuilds: React.FC = () => {
                                     spacing={2}
                                     sx={{ mt: 2 }}
                                 >
-                                    {renderSubcategories(builds[weaponType][category])}
+                                    {renderSubcategories(buildsForWeapon[category])}
                                 </Stack>
                             </>
                         )}
