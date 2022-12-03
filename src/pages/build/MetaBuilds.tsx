@@ -229,7 +229,7 @@ const MetaBuilds: React.FC = () => {
                             title={
                                 currentCategory === trialsCategoryName
                                     ? undefined
-                                    : (t(`pages.metabuilds.generated.buildTitles.${title}`) as string)
+                                    : (t(`pages.metabuilds.generated.buildTitles.${title}`))
                             }
                         />
                     </Box>
