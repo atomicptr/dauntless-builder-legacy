@@ -1,0 +1,28 @@
+name: Drop
+description: Stamina regenerates more quickly, but the amount regenerated is reduced by your maximum stamina.
+type: Insight
+effects:
+  '1':
+    description: Stamina regenerates more quickly, but the amount regenerated is reduced by {{percentReducedMax}}% of your maximum
+    values:
+      percentReducedMax: 15
+  '2':
+    description: Stamina regenerates more quickly, but the amount regenerated is reduced by {{percentReducedMax}}% of your maximum
+    values:
+      percentReducedMax: 25
+  '3':
+    description: Stamina regenerates more quickly, but the amount regenerated is reduced by {{percentReducedMax}}% of your maximum
+    values:
+      percentReducedMax: 35
+  '4':
+    description: Stamina regenerates more quickly, but the amount regenerated is reduced by {{percentReducedMax}}% of your maximum
+    values:
+      percentReducedMax: 50
+  '5':
+    description: Stamina regenerates more quickly, but the amount regenerated is reduced by {{percentReducedMax}}% of your maximum
+    values:
+      percentReducedMax: 60
+  '6':
+    description: Stamina regenerates more quickly, but the amount regenerated is reduced by {{percentReducedMax}}% of your maximum
+    values:
+      percentReducedMax: 75

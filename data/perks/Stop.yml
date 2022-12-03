@@ -1,0 +1,28 @@
+name: Stop
+description: Dodging through a Behemoth's physical attack deals stagger damage to its head.
+type: Brutality
+effects:
+  '1':
+    description: Dodging through a Behemoth's physical attack deals {{staggerDamage}} stagger damage to its head.
+    values:
+      staggerDamage: 50
+  '2':
+    description: Dodging through a Behemoth's physical attack deals {{staggerDamage}} stagger damage to its head.
+    values:
+      staggerDamage: 75
+  '3':
+    description: Dodging through a Behemoth's physical attack deals {{staggerDamage}} stagger damage to its head.
+    values:
+      staggerDamage: 100
+  '4':
+    description: Dodging through a Behemoth's physical attack deals {{staggerDamage}} stagger damage to its head.
+    values:
+      staggerDamage: 150
+  '5':
+    description: Dodging through a Behemoth's physical attack deals {{staggerDamage}} stagger damage to its head.
+    values:
+      staggerDamage: 200
+  '6':
+    description: Dodging through a Behemoth's physical attack deals {{staggerDamage}} stagger damage to its head.
+    values:
+      staggerDamage: 250

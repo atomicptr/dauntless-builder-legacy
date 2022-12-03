@@ -334,7 +334,16 @@
         "195": "+3 Invigorated Cell",
         "196": "+1 Rushdown Cell",
         "197": "+2 Rushdown Cell",
-        "198": "+3 Rushdown Cell"
+        "198": "+3 Rushdown Cell",
+        "199": "+1 Roll Cell",
+        "200": "+2 Roll Cell",
+        "201": "+3 Roll Cell",
+        "202": "+1 Stop Cell",
+        "203": "+2 Stop Cell",
+        "204": "+3 Stop Cell",
+        "205": "+1 Drop Cell",
+        "206": "+2 Drop Cell",
+        "207": "+3 Drop Cell"
     },
     "Lanterns": {
         "1": "Drask's Eye",
@@ -512,7 +521,10 @@
         "64": "Tactician",
         "65": "Aegis",
         "66": "Invigorated",
-        "67": "Rushdown"
+        "67": "Rushdown",
+        "68": "Drop",
+        "69": "Roll",
+        "70": "Stop"
     },
     "Weapons": {
         "1": "Brutality of Boreus",

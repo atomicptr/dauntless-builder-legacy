@@ -1,0 +1,15 @@
+name: Drop Cell
+slot: Insight
+variants:
+  +1 Drop Cell:
+    rarity: uncommon
+    perks:
+      Drop: 1
+  +2 Drop Cell:
+    rarity: rare
+    perks:
+      Drop: 2
+  +3 Drop Cell:
+    rarity: epic
+    perks:
+      Drop: 3

@@ -1,0 +1,15 @@
+name: Roll Cell
+slot: Alacrity
+variants:
+  +1 Roll Cell:
+    rarity: uncommon
+    perks:
+      Roll: 1
+  +2 Roll Cell:
+    rarity: rare
+    perks:
+      Roll: 2
+  +3 Roll Cell:
+    rarity: epic
+    perks:
+      Roll: 3

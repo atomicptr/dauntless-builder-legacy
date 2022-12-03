@@ -1,18 +1,26 @@
+import dauntlessBuilderData from "@src/data/Data";
 import log from "@src/utils/logger";
 import md5 from "md5";
 
 const createCacheIdentifier = (name: string, dependencies: unknown[]): string =>
     `cache::${name}::${md5(
         dependencies
-            .concat([DB_BUILD_TIME])
+            .concat([DB_BUILD_TIME, dauntlessBuilderData.misc.dauntless_version])
             .map(d => JSON.stringify(d))
             .join("::"),
     )}`;
 
 const retrieveItem = (cacheIdentifier: string) => {
     const item = localStorage.getItem(cacheIdentifier);
+    const checksum = localStorage.getItem(`${cacheIdentifier}::checksum`);
 
     if (item !== null) {
+        const dataChecksum = md5(item);
+
+        if (checksum !== dataChecksum) {
+            return null;
+        }
+
         try {
             return JSON.parse(item);
         } catch (e) {
@@ -25,7 +33,9 @@ const retrieveItem = (cacheIdentifier: string) => {
 };
 
 const storeItem = (cacheIdentifier: string, data: unknown) => {
-    localStorage.setItem(cacheIdentifier, JSON.stringify(data));
+    const jsonData = JSON.stringify(data);
+    localStorage.setItem(cacheIdentifier, jsonData);
+    localStorage.setItem(`${cacheIdentifier}::checksum`, md5(jsonData));
 };
 
 const purgeOutdatedKeys = (name: string) => {
@@ -43,6 +53,8 @@ export const useCache = <T>(name: string, factory: () => T, dependencies: unknow
     if (item !== null) {
         return item;
     }
+
+    log.debug(`Could not find cache for ${cacheIdentifier}, will re-create...`);
 
     purgeOutdatedKeys(name);
 
@@ -64,6 +76,8 @@ export const cacheAsync = async <T>(
     if (item !== null) {
         return item;
     }
+
+    log.debug(`Could not find cache for ${cacheIdentifier}, will re-create...`);
 
     purgeOutdatedKeys(name);
 
