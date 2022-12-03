@@ -1,4 +1,4 @@
-import axios, { AxiosError } from "axios";
+import axios, {AxiosError, AxiosRequestConfig} from "axios";
 
 export interface BatchGetResult {
     [valueRange: string]: string | string[];
@@ -29,6 +29,13 @@ export interface TransformExport {
     exportAs: string;
 }
 
+const axiosConfig = {
+    headers: {
+        "Accept-Encoding": "deflate",
+        "Accept": "application/json",
+    }
+} as AxiosRequestConfig;
+
 export class GoogleSpreadsheetClient {
     constructor(private apiKey: string, private spreadsheetId: string) {}
 
@@ -37,7 +44,7 @@ export class GoogleSpreadsheetClient {
     }
 
     public async sheetData(_extraSheetProps: string[] = []): Promise<SheetDataResult> {
-        const res = (await axios.get(`${this.baseUrl}?key=${this.apiKey}`)) as {
+        const res = (await axios.get(`${this.baseUrl}?key=${this.apiKey}`, axiosConfig)) as {
             status: number;
             statusText: string;
             data: {
@@ -75,6 +82,7 @@ export class GoogleSpreadsheetClient {
         try {
             res = await axios.get(
                 `${this.baseUrl}/values:batchGet?valueRenderOption=FORMULA&key=${this.apiKey}&` + rangesParam,
+                axiosConfig,
             );
         } catch (err) {
             if ((err as AxiosError).response) {

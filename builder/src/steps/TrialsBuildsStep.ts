@@ -99,7 +99,9 @@ export class TrialsBuildsStep extends WithStepLogger implements Step {
                 modifiers: cleanArray(modifiers as string[]),
                 tips:
                     tips !== undefined
-                        ? cleanArray((tips as string).split("*").filter(tip => tip.trim().length > 0))
+                        ? Array.isArray(tips)
+                            ? tips.map(tip => tip.trim()).filter(tip => tip.length > 0)
+                            : cleanArray((tips as string).split("*").filter(tip => tip.trim().length > 0))
                         : undefined,
                 title: cleanString(title as string),
             });
