@@ -1,0 +1,15 @@
+name: Stop Cell
+slot: Brutality
+variants:
+  +1 Stop Cell:
+    rarity: uncommon
+    perks:
+      Stop: 1
+  +2 Stop Cell:
+    rarity: rare
+    perks:
+      Stop: 2
+  +3 Stop Cell:
+    rarity: epic
+    perks:
+      Stop: 3

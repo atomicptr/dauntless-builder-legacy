@@ -1,0 +1,28 @@
+name: Roll
+description: Staggering a Behemoth makes your next dodges cost no stamina.
+type: Alacrity
+effects:
+  '1':
+    description: 'Staggering a Behemoth makes your next {{numberDodges}} cost no stamina.'
+    values:
+      numberDodges: 2
+  '2':
+    description: 'Staggering a Behemoth makes your next {{numberDodges}} cost no stamina.'
+    values:
+      numberDodges: 3
+  '3':
+    description: 'Staggering a Behemoth makes your next {{numberDodges}} cost no stamina.'
+    values:
+      numberDodges: 4
+  '4':
+    description: 'Staggering a Behemoth makes your next {{numberDodges}} cost no stamina.'
+    values:
+      numberDodges: 6
+  '5':
+    description: 'Staggering a Behemoth makes your next {{numberDodges}} cost no stamina.'
+    values:
+      numberDodges: 8
+  '6':
+    description: 'Staggering a Behemoth makes your next {{numberDodges}} cost no stamina.'
+    values:
+      numberDodges: 10
