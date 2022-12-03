@@ -1,13 +1,18 @@
 [
     {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13738209/medium/f86ce4a76c429dd334d138f714b0a1ee.jpg",
+        "proofreader": true,
+        "username": "Medaey"
+    },
+    {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15101141/medium/f0e4f75afce7ea3035cd7dc38c64d487.png",
         "proofreader": true,
         "username": "atomicptr"
     },
     {
-        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13738209/medium/f86ce4a76c429dd334d138f714b0a1ee.jpg",
-        "proofreader": true,
-        "username": "Medaey"
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15251142/medium/cc574df4de1054b65862137469d89ee2.jpeg",
+        "proofreader": false,
+        "username": "srthehail"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15369904/medium/738a7359164e42ad54a0ee7f08d2151f.png",
@@ -43,11 +48,6 @@
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15403158/medium/1d563f2119bc1e3039f757aaa0a23566.png",
         "proofreader": false,
         "username": "nekomimirin011"
-    },
-    {
-        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15251142/medium/cc574df4de1054b65862137469d89ee2.jpeg",
-        "proofreader": false,
-        "username": "srthehail"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15417372/medium/55432e1b6226d72202ab32f74aa14bc7.jpeg",

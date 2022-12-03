@@ -1,4 +1,4 @@
-import axios, {AxiosError, AxiosRequestConfig} from "axios";
+import axios, { AxiosError, AxiosRequestConfig } from "axios";
 
 export interface BatchGetResult {
     [valueRange: string]: string | string[];
@@ -31,9 +31,9 @@ export interface TransformExport {
 
 const axiosConfig = {
     headers: {
+        Accept: "application/json",
         "Accept-Encoding": "deflate",
-        "Accept": "application/json",
-    }
+    },
 } as AxiosRequestConfig;
 
 export class GoogleSpreadsheetClient {
