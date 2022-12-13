@@ -1,4 +1,13 @@
-import { Brightness7, Build, CloudDownload, CloudUpload, Download, TableRows, Translate } from "@mui/icons-material";
+import {
+    Brightness7,
+    Build,
+    CloudDownload,
+    CloudUpload,
+    Download,
+    Search,
+    TableRows,
+    Translate,
+} from "@mui/icons-material";
 import {
     Box,
     Button,
@@ -18,15 +27,16 @@ import {
     Switch,
 } from "@mui/material";
 import PageTitle from "@src/components/PageTitle";
-import {
-    selectConfiguration,
-    setDevMode,
-    setLanguage,
-    setLightModeEnabled,
-} from "@src/features/configuration/configuration-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import { currentLanguage, getNativeLanguageName, Language } from "@src/i18n";
+import {
+    selectConfiguration,
+    setDevMode,
+    setFinderPerkMatching,
+    setLanguage,
+    setLightModeEnabled,
+} from "@src/reducers/configuration/configuration-slice";
 import { exportState, persistState } from "@src/store";
 import log, { Logger } from "@src/utils/logger";
 import React from "react";
@@ -162,6 +172,24 @@ const Settings: React.FC = () => {
                         {t("pages.settings.data-export")}
                     </Button>
                 </CardActions>
+            </Card>
+
+            <ListSubheader>{t("pages.settings.finder-options")}</ListSubheader>
+            <Card>
+                <CardContent>
+                    <List sx={{ p: 0 }}>
+                        <ListItem>
+                            <ListItemIcon>
+                                <Search />
+                            </ListItemIcon>
+                            <ListItemText primary={t("pages.build-finder.perk-matching-enabled")} />
+                            <Switch
+                                checked={configuration.finderPerkMatchingEnabled}
+                                onChange={ev => dispatch(setFinderPerkMatching(ev.target.checked))}
+                            />
+                        </ListItem>
+                    </List>
+                </CardContent>
             </Card>
 
             <ListSubheader>{t("pages.settings.misc")}</ListSubheader>

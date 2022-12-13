@@ -1,12 +1,12 @@
 import { Box, FormControl, InputLabel, ListItemIcon, ListItemText, MenuItem, Select, Stack } from "@mui/material";
 import { ElementalType } from "@src/data/ElementalType";
 import { ItemType } from "@src/data/ItemType";
+import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import {
     GenericItemType,
     selectItemSelectFilter,
     setElementFilter,
-} from "@src/features/item-select-filter/item-select-filter-slice";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
+} from "@src/reducers/item-select-filter/item-select-filter-slice";
 import React from "react";
 import { useTranslation } from "react-i18next";
 

@@ -3,6 +3,7 @@ import { Box, Button, Stack } from "@mui/material";
 import BuildCard from "@src/components/BuildCard";
 import InputDialog from "@src/components/InputDialog";
 import PageTitle from "@src/components/PageTitle";
+import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import {
     Favorite,
     moveDownByBuildId,
@@ -10,8 +11,7 @@ import {
     removeFavoriteByBuildId,
     selectFavorites,
     updateFavorite,
-} from "@src/features/favorites/favorites-slice";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
+} from "@src/reducers/favorites/favorites-slice";
 import React from "react";
 import { useTranslation } from "react-i18next";
 

@@ -1,15 +1,15 @@
 import { Bookmark, BookmarkBorder, ContentCopy, Undo } from "@mui/icons-material";
 import { Fab, IconButton, useTheme } from "@mui/material";
 import InputDialog from "@src/components/InputDialog";
-import { selectBuild, selectLastEditedBuild } from "@src/features/build/build-slice";
+import useIsMobile from "@src/hooks/is-mobile";
+import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
+import { selectBuild, selectLastEditedBuild } from "@src/reducers/build/build-slice";
 import {
     addFavorite,
     isBuildInFavorites,
     removeFavoriteByBuildId,
     selectFavorites,
-} from "@src/features/favorites/favorites-slice";
-import useIsMobile from "@src/hooks/is-mobile";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
+} from "@src/reducers/favorites/favorites-slice";
 import { defaultBuildName } from "@src/utils/default-build-name";
 import { useSnackbar } from "notistack";
 import React, { useState } from "react";

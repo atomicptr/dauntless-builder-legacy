@@ -28,7 +28,7 @@ import Favorites from "@src/pages/favorites/Favorites";
 import useIsMobile from "@src/hooks/is-mobile";
 import log from "@src/utils/logger";
 import { useAppSelector } from "@src/hooks/redux";
-import { selectConfiguration } from "@src/features/configuration/configuration-slice";
+import { selectConfiguration } from "@src/reducers/configuration/configuration-slice";
 
 const DauntlessBuilderApp = () => {
     const isMobile = useIsMobile();

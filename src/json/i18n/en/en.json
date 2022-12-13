@@ -89,7 +89,9 @@
             "preselect-title": "Select Items",
             "remove-exotics": "Remove Exotic Items",
             "remove-legendary": "Remove Legendary Weapons",
-            "title": "Build Finder"
+            "title": "Build Finder",
+            "options-title": "Options",
+            "perk-matching-enabled": "Enable smart perk selection (High performance costs, if you notice performance issues uncheck this)"
         },
         "favorites": {
             "build-name": "Build Name",
@@ -247,7 +249,8 @@
             "general": "General",
             "language": "Language",
             "misc": "Misc",
-            "title": "Settings"
+            "title": "Settings",
+            "finder-options": "Build Finder Options"
         },
         "trials": {
             "description": "Meta builds for Trials encounters, these are not general hunt builds.",

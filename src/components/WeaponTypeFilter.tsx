@@ -1,7 +1,7 @@
 import { Box, FormControl, InputLabel, ListItemIcon, ListItemText, MenuItem, Select, Stack } from "@mui/material";
 import { WeaponType } from "@src/data/Weapon";
-import { selectWeaponFilter, setWeaponTypeFilter } from "@src/features/item-select-filter/item-select-filter-slice";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
+import { selectWeaponFilter, setWeaponTypeFilter } from "@src/reducers/item-select-filter/item-select-filter-slice";
 import React from "react";
 import { useTranslation } from "react-i18next";
 

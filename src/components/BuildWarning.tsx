@@ -1,8 +1,8 @@
 import { Error, Warning } from "@mui/icons-material";
 import { Alert } from "@mui/material";
 import { BuildFlags } from "@src/data/BuildModel";
-import { selectBuild } from "@src/features/build/build-slice";
 import { useAppSelector } from "@src/hooks/redux";
+import { selectBuild } from "@src/reducers/build/build-slice";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
