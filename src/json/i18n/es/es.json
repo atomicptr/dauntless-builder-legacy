@@ -150,11 +150,11 @@
                     "Thrax (Rift)": "$t(Thrax) $t(Riftstalker)",
                     "Thrax (Rift) Resolve": "$t(Thrax) $t(Riftstalker) Resolución",
                     "Thrax (Rift) Wound": "$t(Thrax) ($t(Riftstalker)) Herida",
-                    "Torg (C) Speed": "$t(terms.behemoths.Torgadoro) (C) Speed",
+                    "Torg (C) Speed": "$t(terms.behemoths.Torgadoro) (C) Velocidad",
                     "Torg (C) Survival": "$t(terms.behemoths.Torgadoro) (H) Supervivencia",
                     "Torg (Charrogg)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Charrogg))",
-                    "Torg (Charrogg) Resolve": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Charrogg)) Resolve",
-                    "Torg (H) Speed": "$t(terms.behemoths.Torgadoro) (H) Speed",
+                    "Torg (Charrogg) Resolve": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Charrogg)) Resolución",
+                    "Torg (H) Speed": "$t(terms.behemoths.Torgadoro) (H) Velocidad",
                     "Torg (H) Survival": "$t(terms.behemoths.Torgadoro) (H) Supervivencia",
                     "Torg (Hellion)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion))",
                     "Torg (Hellion) Wound": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion)) Herida",
@@ -210,7 +210,7 @@
                         "name": "Revenant"
                     },
                     "Tempest": {
-                        "description": "Tempest features 10% passive attack speed bonus and the ability to build up stacks of Velocity when dodging through attacks. You spend the stacks to dash and deal damage based on how much movespeed you currently have. The movespeed bonus damage only applies to unbroken parts.",
+                        "description": "Tempestad ofrece un 10% de bonificación de velocidad de ataque pasiva y la habilidad de acumular cargas de Velocidad al esquivar a través de ataques. Gastas cargas para cargar e inflingir daño en base a cuanta velocidad tengas. La bonificación de daño de la velocidad solo aplica a partes sin romper.",
                         "name": "Tempestad"
                     }
                 },
@@ -266,13 +266,13 @@
                     "Pangar.0": "El giro interrumpible del Pangar es muy fácil de romper (lo hace dos veces seguidas), y el enfriamiento se resetea cuando se enoja.",
                     "Pangar.1": "El giro interrumpible del Pangar está bugueado y no hace daño sino hasta el final, y eso lo hace extremadamente fácil de interrumpir.",
                     "Quillshot.0": "Puedes construir el escudo de la linterna de Skarn/Frostwülf en la plataforma.",
-                    "Shadowtouched Koshai.0": "You can bait the interrupt at the start pretty easily, and the turn-around interrupt afterwards, just like normal Koshai.",
+                    "Shadowtouched Koshai.0": "Se puede baitear la interrupción al principio con bastante facilidad, y después interrumpir en la vuelta, al igual que el Koshai normal.",
                     "Shadowtouched Koshai.1": "La segunda vez que el Koshai Sombrío se va bajo el suelo, este aparece lo más lejos posible en la arena y te lanza orbes sombríos, durante este tiempo el Koshai es muy vulnerable al daño.",
                     "Shadowtouched Nayzaga.0": "Justo como el Nayzaga normal, el Nayzaga Sombrío empieza la pelea con su deslizamiento interrumpible doble.",
                     "Shadowtouched Nayzaga.1": "La pisada genera-clones del Nayzaga no inflije daño, solo el cercano hace daño.",
                     "Shadowtouched Nayzaga.2": "Cuando esntra a su portal preparate para la siguiente interrupción.",
                     "Shrike.0": "Las partes más débiles del Shrike son su cabeza y sus alas.",
-                    "Shrike.1": "Shrike can be instantly booped after enrage.",
+                    "Shrike.1": "Shrike poede ser inmediatamente boopeado después del enfurecer.",
                     "Shrowd.0": "Puedes usar el contraataque de Disciplina cuando el Shrowd salta cuando se va a teletransportar.",
                     "Skarn.0": "Si no se utilizan armas contundentes (golpeadores, martillo) enfocarse en la cola durante la rabia, el hitbox de roca tiene un gran hueco allí."
                 },
@@ -341,9 +341,9 @@
         "cell": "Célula",
         "cell-slot": "Ranura de célula",
         "cell-type": {
-            "Alacrity": "Alacrity",
+            "Alacrity": "Presteza",
             "Brutality": "Brutalidad",
-            "Finesse": "Finesse",
+            "Finesse": "Sutil",
             "Fortitude": "Fortaleza",
             "Insight": "Perspicacia",
             "Prismatic": "Prismático"
@@ -360,7 +360,7 @@
             "Umbral": "Umbria"
         },
         "head-armour": "Armadura de Cabeza",
-        "hold": "Hold",
+        "hold": "Mantener",
         "lantern": "Farol",
         "legs-armour": "Armadura de piernas",
         "omnicell": "Omnicélula",

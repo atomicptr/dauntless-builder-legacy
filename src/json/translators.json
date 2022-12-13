@@ -168,5 +168,10 @@
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15542553/medium/58f27b50e758f723141fa5e2f1070956.jpeg",
         "proofreader": false,
         "username": "edersoncosta.lg"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15573079/medium/0d2d150defb2da02eab96555502a83fd.png",
+        "proofreader": false,
+        "username": "Shadowrunner"
     }
 ]
