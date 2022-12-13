@@ -9,14 +9,14 @@ import WeaponTypeSelector from "@src/components/WeaponTypeSelector";
 import { BuildModel } from "@src/data/BuildModel";
 import { ElementalType } from "@src/data/ElementalType";
 import { WeaponType } from "@src/data/Weapon";
+import { useCache } from "@src/hooks/cache";
+import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import {
     removeNote,
     selectMetaBuildsSelection,
     setBuildCategoryIndex,
     setMetaBuildsWeaponType,
-} from "@src/features/meta-builds-selection/meta-builds-selection-slice";
-import { useCache } from "@src/hooks/cache";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
+} from "@src/reducers/meta-builds-selection/meta-builds-selection-slice";
 import React, { ReactNode, useCallback, useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
@@ -229,7 +229,7 @@ const MetaBuilds: React.FC = () => {
                             title={
                                 currentCategory === trialsCategoryName
                                     ? undefined
-                                    : (t(`pages.metabuilds.generated.buildTitles.${title}`))
+                                    : t(`pages.metabuilds.generated.buildTitles.${title}`)
                             }
                         />
                     </Box>

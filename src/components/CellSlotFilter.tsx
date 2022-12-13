@@ -1,13 +1,13 @@
 import { Box, FormControl, InputLabel, ListItemIcon, ListItemText, MenuItem, Select, Stack } from "@mui/material";
 import { CellType } from "@src/data/Cell";
 import { ItemType } from "@src/data/ItemType";
+import useIsLightMode from "@src/hooks/light-mode";
+import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import {
     GenericItemType,
     selectItemSelectFilter,
     setCellSlotsFilter,
-} from "@src/features/item-select-filter/item-select-filter-slice";
-import useIsLightMode from "@src/hooks/light-mode";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
+} from "@src/reducers/item-select-filter/item-select-filter-slice";
 import React from "react";
 import { useTranslation } from "react-i18next";
 

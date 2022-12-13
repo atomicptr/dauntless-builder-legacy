@@ -6,10 +6,12 @@ interface ConfigurationState {
     devMode: boolean;
     language?: Language;
     lightModeEnabled: boolean;
+    finderPerkMatchingEnabled: boolean;
 }
 
 const initialState: ConfigurationState = {
     devMode: DB_DEVMODE,
+    finderPerkMatchingEnabled: true,
     language: undefined,
     lightModeEnabled: false,
 };
@@ -20,6 +22,9 @@ export const configurationSlice = createSlice({
     reducers: {
         setDevMode: (state, action: PayloadAction<boolean>) => {
             state.devMode = DB_DEVMODE || action.payload;
+        },
+        setFinderPerkMatching: (state, action: PayloadAction<boolean>) => {
+            state.finderPerkMatchingEnabled = action.payload;
         },
         setLanguage: (state, action: PayloadAction<Language>) => {
             state.language = action.payload;
@@ -33,7 +38,7 @@ export const configurationSlice = createSlice({
 
 const initState = (state: ConfigurationState) => Object.assign({}, initialState, state);
 
-export const { setLanguage, setDevMode, setLightModeEnabled } = configurationSlice.actions;
+export const { setLanguage, setDevMode, setLightModeEnabled, setFinderPerkMatching } = configurationSlice.actions;
 
 export const selectConfiguration = (state: RootState) => ({
     ...initState(state.configuration),

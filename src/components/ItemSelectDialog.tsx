@@ -37,15 +37,15 @@ import {
 import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
 import { Weapon, WeaponType } from "@src/data/Weapon";
-import {
-    GenericItemType,
-    selectFilterCount,
-    selectItemSelectFilter,
-} from "@src/features/item-select-filter/item-select-filter-slice";
 import useIsMobile from "@src/hooks/is-mobile";
 import useIsLightMode from "@src/hooks/light-mode";
 import { useAppSelector } from "@src/hooks/redux";
 import i18n from "@src/i18n";
+import {
+    GenericItemType,
+    selectFilterCount,
+    selectItemSelectFilter,
+} from "@src/reducers/item-select-filter/item-select-filter-slice";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import { matchesSearch, matchesSearchIn } from "@src/utils/search";
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";

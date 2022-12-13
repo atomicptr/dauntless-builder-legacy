@@ -1,7 +1,7 @@
 import { BuildModel } from "@src/data/BuildModel";
-import { selectConfiguration, setDevMode } from "@src/features/configuration/configuration-slice";
-import { addFavorite, isBuildInFavorites, selectFavorites } from "@src/features/favorites/favorites-slice";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
+import { selectConfiguration, setDevMode } from "@src/reducers/configuration/configuration-slice";
+import { addFavorite, isBuildInFavorites, selectFavorites } from "@src/reducers/favorites/favorites-slice";
 import log, { LogLevel } from "@src/utils/logger";
 import React, { useEffect } from "react";
 

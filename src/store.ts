@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import buildReducer from "./features/build/build-slice";
-import buildFinderSelectionReducer from "./features/build-finder/build-finder-selection-slice";
-import configurationReducer from "./features/configuration/configuration-slice";
-import favoritesReducer from "./features/favorites/favorites-slice";
-import itemSelectFilterReducer from "./features/item-select-filter/item-select-filter-slice";
-import metaBuildsSelectionReducer from "./features/meta-builds-selection/meta-builds-selection-slice";
+import buildReducer from "./reducers/build/build-slice";
+import buildFinderSelectionReducer from "./reducers/build-finder/build-finder-selection-slice";
+import configurationReducer from "./reducers/configuration/configuration-slice";
+import favoritesReducer from "./reducers/favorites/favorites-slice";
+import itemSelectFilterReducer from "./reducers/item-select-filter/item-select-filter-slice";
+import metaBuildsSelectionReducer from "./reducers/meta-builds-selection/meta-builds-selection-slice";
 
 const stateIdentifier = "state";
 const reducersNotToBePersisted = ["itemSelectFilter"];

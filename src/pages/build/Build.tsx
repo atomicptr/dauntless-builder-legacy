@@ -32,16 +32,16 @@ import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
 import { Part, partBuildIdentifier, PartType, partTypeData } from "@src/data/Part";
 import { Weapon, weaponBuildIdentifier, WeaponType } from "@src/data/Weapon";
-import { selectBuild, setBuildId, updateBuild } from "@src/features/build/build-slice";
+import useIsMobile from "@src/hooks/is-mobile";
+import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
+import { selectBuild, setBuildId, updateBuild } from "@src/reducers/build/build-slice";
 import {
     clearPerks,
     setBuildFinderWeaponType,
     setPerkValue,
-} from "@src/features/build-finder/build-finder-selection-slice";
-import { selectConfiguration } from "@src/features/configuration/configuration-slice";
-import { resetFilter, setWeaponTypeFilter } from "@src/features/item-select-filter/item-select-filter-slice";
-import useIsMobile from "@src/hooks/is-mobile";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
+} from "@src/reducers/build-finder/build-finder-selection-slice";
+import { selectConfiguration } from "@src/reducers/configuration/configuration-slice";
+import { resetFilter, setWeaponTypeFilter } from "@src/reducers/item-select-filter/item-select-filter-slice";
 import { defaultBuildName } from "@src/utils/default-build-name";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React, { useCallback, useEffect, useMemo, useState } from "react";

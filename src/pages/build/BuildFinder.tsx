@@ -42,6 +42,10 @@ import { ItemRarity } from "@src/data/ItemRarity";
 import { ItemType } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
 import { Weapon, WeaponType } from "@src/data/Weapon";
+import { cacheAsync } from "@src/hooks/cache";
+import useIsMobile from "@src/hooks/is-mobile";
+import useIsLightMode from "@src/hooks/light-mode";
+import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import {
     AssignedPerkValue,
     clearPerks,
@@ -51,18 +55,14 @@ import {
     setPicker,
     setRemoveExotics,
     setRemoveLegendary,
-} from "@src/features/build-finder/build-finder-selection-slice";
+} from "@src/reducers/build-finder/build-finder-selection-slice";
 import {
     convertFindBuildResultsToBuildModel,
     FinderItemDataOptions,
     MatchingBuild,
     perks,
-} from "@src/features/build-finder/find-builds";
-import { selectConfiguration } from "@src/features/configuration/configuration-slice";
-import { cacheAsync } from "@src/hooks/cache";
-import useIsMobile from "@src/hooks/is-mobile";
-import useIsLightMode from "@src/hooks/light-mode";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
+} from "@src/reducers/build-finder/find-builds";
+import { selectConfiguration, setFinderPerkMatching } from "@src/reducers/configuration/configuration-slice";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import log from "@src/utils/logger";
 import { matchesSearchIn } from "@src/utils/search";
@@ -161,6 +161,8 @@ const BuildFinder: React.FC = () => {
         [removeExotics, removeLegendary, pickerWeapon, pickerHead, pickerTorso, pickerArms, pickerLegs],
     );
 
+    const totalPerkCount = useMemo(() => Object.values(selectedPerks).reduce((sum, n) => sum + n, 0), [selectedPerks]);
+
     useEffect(() => {
         log.timer("findBuilds");
         setIsSearchingBuilds(true);
@@ -173,6 +175,10 @@ const BuildFinder: React.FC = () => {
     }, [weaponType, selectedPerks, finderOptions]);
 
     useEffect(() => {
+        if (!configuration.finderPerkMatchingEnabled) {
+            return;
+        }
+
         const canBeAdded = async (builds: BuildModel[], perk: Perk): Promise<{ [perkName: string]: boolean }> => {
             const totalPerkValue = Object.values(selectedPerks).reduce((prev, cur) => prev + cur, 0);
 
@@ -256,7 +262,7 @@ const BuildFinder: React.FC = () => {
 
         setIsDeterminingSelectablePerks(true);
         runWorkers();
-    }, [selectedPerks, weaponType, builds, finderOptions]);
+    }, [selectedPerks, weaponType, builds, finderOptions, configuration.finderPerkMatchingEnabled]);
 
     const perkFitsInEmptyCellSlot = (build: BuildModel, perk: Perk): boolean => {
         const makeCellArray = (cells: CellType | CellType[] | null | undefined): CellType[] => {
@@ -302,9 +308,15 @@ const BuildFinder: React.FC = () => {
         (perk: Perk): boolean =>
             !isDeterminingSelectablePerks &&
             !isSearchingBuilds &&
-            perk.name in canPerkBeAdded &&
-            canPerkBeAdded[perk.name],
-        [isDeterminingSelectablePerks, isSearchingBuilds, canPerkBeAdded],
+            totalPerkCount < 36 &&
+            (!configuration.finderPerkMatchingEnabled || (perk.name in canPerkBeAdded && canPerkBeAdded[perk.name])),
+        [
+            isDeterminingSelectablePerks,
+            isSearchingBuilds,
+            canPerkBeAdded,
+            totalPerkCount,
+            configuration.finderPerkMatchingEnabled,
+        ],
     );
 
     const onPerkClicked = (perk: Perk) => {
@@ -460,6 +472,20 @@ const BuildFinder: React.FC = () => {
                     value={pickerLegs}
                 />
             </Stack>
+
+            <Typography variant="h5">{t("pages.build-finder.options-title")}</Typography>
+
+            <FormGroup>
+                <FormControlLabel
+                    control={
+                        <Checkbox
+                            checked={configuration.finderPerkMatchingEnabled}
+                            onChange={e => dispatch(setFinderPerkMatching(e.target.checked))}
+                        />
+                    }
+                    label={t("pages.build-finder.perk-matching-enabled")}
+                />
+            </FormGroup>
 
             {configuration.devMode && (
                 <>

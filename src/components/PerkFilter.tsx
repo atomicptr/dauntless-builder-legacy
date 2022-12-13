@@ -3,13 +3,13 @@ import { findPerkByName } from "@src/data/BuildModel";
 import dauntlessBuilderData from "@src/data/Data";
 import { isArmourType, ItemType, itemTypeData } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
+import useIsLightMode from "@src/hooks/light-mode";
+import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import {
     GenericItemType,
     selectItemSelectFilter,
     setPerkFilter,
-} from "@src/features/item-select-filter/item-select-filter-slice";
-import useIsLightMode from "@src/hooks/light-mode";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
+} from "@src/reducers/item-select-filter/item-select-filter-slice";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";

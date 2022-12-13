@@ -1,5 +1,5 @@
-import { selectConfiguration } from "@src/features/configuration/configuration-slice";
 import { useAppSelector } from "@src/hooks/redux";
+import { selectConfiguration } from "@src/reducers/configuration/configuration-slice";
 
 const useIsLightMode = () => {
     const configuration = useAppSelector(selectConfiguration);
