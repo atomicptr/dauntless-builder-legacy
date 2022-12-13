@@ -307,7 +307,7 @@ const BuildFinder: React.FC = () => {
             !isDeterminingSelectablePerks &&
             !isSearchingBuilds &&
             perk.name in canPerkBeAdded &&
-            (configuration.finderPerkMatchingEnabled || canPerkBeAdded[perk.name]),
+            (!configuration.finderPerkMatchingEnabled || canPerkBeAdded[perk.name]),
         [isDeterminingSelectablePerks, isSearchingBuilds, canPerkBeAdded, configuration.finderPerkMatchingEnabled],
     );
 
