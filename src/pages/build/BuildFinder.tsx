@@ -161,6 +161,8 @@ const BuildFinder: React.FC = () => {
         [removeExotics, removeLegendary, pickerWeapon, pickerHead, pickerTorso, pickerArms, pickerLegs],
     );
 
+    const totalPerkCount = useMemo(() => Object.values(selectedPerks).reduce((sum, n) => sum + n, 0), [selectedPerks]);
+
     useEffect(() => {
         log.timer("findBuilds");
         setIsSearchingBuilds(true);
@@ -306,9 +308,15 @@ const BuildFinder: React.FC = () => {
         (perk: Perk): boolean =>
             !isDeterminingSelectablePerks &&
             !isSearchingBuilds &&
-            perk.name in canPerkBeAdded &&
-            (!configuration.finderPerkMatchingEnabled || canPerkBeAdded[perk.name]),
-        [isDeterminingSelectablePerks, isSearchingBuilds, canPerkBeAdded, configuration.finderPerkMatchingEnabled],
+            totalPerkCount < 36 &&
+            (!configuration.finderPerkMatchingEnabled || (perk.name in canPerkBeAdded && canPerkBeAdded[perk.name])),
+        [
+            isDeterminingSelectablePerks,
+            isSearchingBuilds,
+            canPerkBeAdded,
+            totalPerkCount,
+            configuration.finderPerkMatchingEnabled,
+        ],
     );
 
     const onPerkClicked = (perk: Perk) => {
