@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+if [[ -z $1 ]]; then
+	echo "ERR: Usage:\n\tpiprun COMMAND [params...]"
+	exit 1
+fi
+
+if [[ -x $(command -v $1) ]]; then
+	pip install $1 > /dev/null
+fi
+
+exec $1 ${@:2}
