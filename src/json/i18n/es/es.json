@@ -203,11 +203,11 @@
                     },
                     "Iceborne": {
                         "description": "Iceborne proporciona una reducción de la salud y de los daños, con una habilidad activa que otorga hiperarmadura y más vitalidad. La activa hace más daño cuando se usa con la salud al máximo.",
-                        "name": "Iceborne"
+                        "name": "Glacial"
                     },
                     "Revenant": {
                         "description": "Revenant es un Omnicell de alto riesgo de alto premio, con una habilidad activa que consume hasta 500 HP para reunir hasta cinco zarcillos umbríos que causan un gran daño y te ponen en el estado de Revenant. Cuando los tendrils golpean a un objetivo, generan orbes de vacío, recolectarlos te da cargas de energía de vacío, cada una de ellas proporcionando un 4% de daño mientras que en estado de Revenant, una extensión de 1 segundo al estado de Revenant, y 125 de curación en 10 segundos — después de que expire Revenant.",
-                        "name": "Revenant"
+                        "name": "Aparición"
                     },
                     "Tempest": {
                         "description": "Tempestad ofrece un 10% de bonificación de velocidad de ataque pasiva y la habilidad de acumular cargas de Velocidad al esquivar a través de ataques. Gastas cargas para cargar e inflingir daño en base a cuanta velocidad tengas. La bonificación de daño de la velocidad solo aplica a partes sin romper.",
@@ -226,11 +226,11 @@
             "title": "Builds Meta",
             "vsElement": {
                 "Blaze": "vs Fuego",
-                "Frost": "vs Hielo",
+                "Frost": "vs. Gélido",
                 "Radiant": "vs Radiante",
-                "Shock": "vs Rayo",
+                "Shock": "vs. Eléctrico",
                 "Terra": "vs Terra",
-                "Umbral": "vs Sombrío"
+                "Umbral": "vs. Umbrío"
             }
         },
         "newbuild": {
@@ -278,7 +278,7 @@
                 },
                 "title": "Dauntless Pruebas Builds - 1.10+"
             },
-            "title": "Pruebas"
+            "title": "Retos"
         }
     },
     "terms": {

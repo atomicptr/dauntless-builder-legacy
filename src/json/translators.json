@@ -173,5 +173,15 @@
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15573079/medium/0d2d150defb2da02eab96555502a83fd.png",
         "proofreader": false,
         "username": "Shadowrunner"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15575103/medium/6978a2772d6b420610ab6893d21583a2_default.png",
+        "proofreader": false,
+        "username": "ezIvan"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15575687/medium/88579217490bc561a6529fa3da43872f.jpeg",
+        "proofreader": false,
+        "username": "XiiiAlberto"
     }
 ]

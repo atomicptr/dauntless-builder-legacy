@@ -214,9 +214,9 @@
                         "name": "Tempesta"
                     }
                 },
-                "title": "Dauntless Meta Builds - 1.10+"
+                "title": "Builds di Dauntless in Meta - 1.10+"
             },
-            "note": "The builds listed here are automatically extracted from the <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>Community Meta Builds Spreadsheet</a>, if you have feedback please pass it along to the people in the #meta-discussion channel on the <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>official Dauntless Discord server</a>!",
+            "note": "Questa lista di builds è automaticamente riportata da <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'> Community Meta Builds Spreadsheet</a>, se hai un feedback per favore fallo sapere alle persone nel canale #meta-discussion channel sul <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>server Discord ufficiale di Dauntless</a>!",
             "subcategories": {
                 "The Hunger": "L'affamato",
                 "heroics": "Eroiche",
@@ -278,25 +278,25 @@
                 },
                 "title": "Dauntless Trials Builds - 1.10+"
             },
-            "title": "Trials"
+            "title": "Prove"
         }
     },
     "terms": {
         "active": "Active",
         "active-ability": "Active Ability",
         "armour-alt": {
-            "Arms": "Arms",
-            "Head": "Head",
-            "Legs": "Leg and foot",
-            "Torso": "Torso"
+            "Arms": "Braccia",
+            "Head": "Elmo",
+            "Legs": "Gambali",
+            "Torso": "Busto"
         },
-        "arms-armour": "Arms Armour",
+        "arms-armour": "Armatura delle braccia",
         "behemoths": {
             "Agarus": "Agarus",
             "Alyra": "Alyra",
             "Boreus": "Boreus",
             "Charrogg": "Charrogg",
-            "Chronovore": "The Chronovore",
+            "Chronovore": "Il Cronovoro",
             "Deepfrost Gnasher": "Deepfrost Gnasher",
             "Deepfrost Skarn": "Deepfrost Skarn",
             "Drask": "Drask",
@@ -310,8 +310,8 @@
             "Hellion": "Hellion",
             "Kharabak": "Kharabak",
             "Koshai": "Koshai",
-            "Lightbound Boreus": "Lightbound Boreus",
-            "Lightbound Koshai": "Lightbound Koshai",
+            "Lightbound Boreus": "Boreus alboreo",
+            "Lightbound Koshai": "Koshai alboreo",
             "Malkarion": "Malkarion",
             "Nayzaga": "Nayzaga",
             "Pangar": "Pangar",
@@ -320,9 +320,9 @@
             "Rezakiri": "Rezakiri",
             "Riftstalker": "Riftstalker",
             "Sahvyt": "Sahvyt",
-            "Shadowtouched Drask": "Shadowtouched Drask",
-            "Shadowtouched Koshai": "Shadowtouched Koshai",
-            "Shadowtouched Nayzaga": "Shadowtouched Nayzaga",
+            "Shadowtouched Drask": "Drask foscomanto",
+            "Shadowtouched Koshai": "Koshai foscomanto",
+            "Shadowtouched Nayzaga": "Nayzaga foscomanto",
             "Shrike": "Shrike",
             "Shrowd": "Shrowd",
             "Skarn": "Skarn",
