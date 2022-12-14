@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+if [[ -z $(command -v python) ]]; then
+  echo "ERR: Python is required!"
+  exit 1
+fi
+
+python -m pip install json-linter -U > /dev/null
+python -m json_linter ${@}

@@ -15,7 +15,7 @@
         "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
         "deploy": "yarn build && ./scripts/deploy.sh",
         "lint": "yarn lint:json && eslint .",
-        "lint:json": "ts-node -P ./scripts/tsconfig.json ./scripts/json-sort.ts",
+        "lint:json": "scripts/json-linter -r src tsconfig.json .eslintrc",
         "lint:fix": "prettier . --write && yarn lint:fix:json && eslint . --fix",
         "lint:fix:json": "yarn lint:json --fix"
     },
