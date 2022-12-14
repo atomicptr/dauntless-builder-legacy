@@ -85,13 +85,13 @@
             "dev-set-perks": "Set Perks",
             "filter-perks": "Filter Perks...",
             "filter-title": "Filter",
+            "options-title": "Options",
+            "perk-matching-enabled": "Enable smart perk selection (High performance costs, if you notice performance issues uncheck this)",
             "perks-title": "$t(terms.perks)",
             "preselect-title": "Select Items",
             "remove-exotics": "Remove Exotic Items",
             "remove-legendary": "Remove Legendary Weapons",
-            "title": "Build Finder",
-            "options-title": "Options",
-            "perk-matching-enabled": "Enable smart perk selection (High performance costs, if you notice performance issues uncheck this)"
+            "title": "Build Finder"
         },
         "favorites": {
             "build-name": "Build Name",
@@ -246,11 +246,11 @@
             "dev-mode-toggle": "Toggle Developer Mode",
             "enable-light-mode": "Enable Light Mode (Use this at your own risk!)",
             "export-logs": "Export logs",
+            "finder-options": "Build Finder Options",
             "general": "General",
             "language": "Language",
             "misc": "Misc",
-            "title": "Settings",
-            "finder-options": "Build Finder Options"
+            "title": "Settings"
         },
         "trials": {
             "description": "Meta builds for Trials encounters, these are not general hunt builds.",
