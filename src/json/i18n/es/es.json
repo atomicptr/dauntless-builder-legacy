@@ -60,11 +60,11 @@
             "privacy-text": "No estamos recopilando ningún dato.",
             "source-code": "Código fuente",
             "title": "Acerca de",
-            "translators": "Traducciones"
+            "translators": "Traductores"
         },
         "build": {
             "click-here-to-select": "Haga clic aquí para seleccionar uno.",
-            "copy-build-to-finder": "Copiar build al buscador",
+            "copy-build-to-finder": "Copiar equipamiento al buscador",
             "filter-by": "Filtrar por {{name}}",
             "no-perks": "No hay ventajas disponibles.",
             "no-x-selected": "No <b>{{name}}</b> seleccionado.",
@@ -85,6 +85,8 @@
             "dev-set-perks": "Establecer ventajas",
             "filter-perks": "Filtrar ventajas...",
             "filter-title": "Filtrar",
+            "options-title": "Opciones",
+            "perk-matching-enabled": "Activar selección de ventajas inteligente (Coste de alto rendimiento, si nota algún problema de rendimiento desmarque esto)",
             "perks-title": "$t(terms.perks)",
             "preselect-title": "Seleccionar objetos",
             "remove-exotics": "Quitar objetos exóticos",
@@ -105,7 +107,7 @@
                 "localize": "Ayuda con la traducción",
                 "matrix": "Matrix"
             },
-            "links-title": "Vínculos",
+            "links-title": "Links",
             "localization-text": "¡Dauntless Builder ahora soporta traducciones, por favor ve a ajustes y selecciona tu idioma preferido si no fue elegido automáticamente! Si ese idioma no está actualmente listo y te interesaría ayudar, por favor lee la sección \"Contribuir\" a continuación.",
             "localization-title": "Traducción",
             "test-builds": "Probar Builds",
@@ -181,47 +183,47 @@
                         "name": "Bastión"
                     },
                     "Catalyst": {
-                        "description": "Estas son los mejores equipamientos que puedes tener para la caza general, la maximización del daño y el uso de tónicos de Blitz como fuente de velocidad de ataque.\nTónicos recomendados para máximo daño: Frenesí, Blitz, Aetherdriive.",
+                        "description": "Estas son los mejores equipamientos que puedes tener para la caza general, la maximización del daño y el uso de tónicos de Fervor como fuente de velocidad de ataque.\nTónicos recomendados para máximo daño: Frenesí, Fervor, Afinación Aethérica.",
                         "name": "Catalizador"
                     },
                     "Discipline": {
-                        "description": "Disciplina es un Omnicell de alta recompensa y alto riesgo, con una gran habilidad de bloqueo de daño que te otorga montones de daño crítico si es coordinado correctamente y, con un máximo de cargas, le otorga una gran cantidad de probabilidad de crítico.",
+                        "description": "Disciplina es un omnicélula de alta recompensa y alto riesgo, con una gran habilidad de bloqueo de daño que te otorga montones de daño crítico si es coordinado correctamente y, con un máximo de cargas, le otorga una gran cantidad de probabilidad de crítico.",
                         "name": "Disciplina"
                     },
                     "Escalations": {
                         "description": "Equipamientos para hacer frente a las Escaladas. Incluye equipamientos sin equipo de Escaladas y Retos. ",
                         "name": "Escaladas",
                         "subcategoryDescription": {
-                            "heroics": "Equipamiento para las variadas escaladas heróicas. Usa Catalizador. Tónicos recomendados: Frenesí, Blitz, Aetherdrive. Bulwark para supervivencia.",
+                            "heroics": "Equipamiento para las variadas escaladas heróicas. Usa Catalizador. Tónicos recomendados: Frenesí, Fervor, Afinación Aethérica. Baluarte para supervivencia.",
                             "legendaries": "Equipamientos para varias escaladas.",
                             "preEsca": "Equipamiento para varias escaladas. No contiene células de retos o equipo de escalada."
                         }
                     },
                     "Exotics": {
-                        "description": "Equipamientos que usan armas y cascos exóticos. Off-meta y generalmente peores que usar armas normales, con la excepción de Molten Edict.",
+                        "description": "Equipamientos que usan armas y cascos exóticos. Off-meta y generalmente peores que usar armas normales, con la excepción de Decreto Fundido.",
                         "name": "Exóticos"
                     },
                     "Iceborne": {
-                        "description": "Iceborne proporciona una reducción de la salud y de los daños, con una habilidad activa que otorga hiperarmadura y más vitalidad. La activa hace más daño cuando se usa con la salud al máximo.",
+                        "description": "Glacial proporciona una reducción de la salud y de los daños, con una habilidad activa que otorga hiperarmadura y más vitalidad. La activa hace más daño cuando se usa con la salud al máximo.",
                         "name": "Glacial"
                     },
                     "Revenant": {
-                        "description": "Revenant es un Omnicell de alto riesgo de alto premio, con una habilidad activa que consume hasta 500 HP para reunir hasta cinco zarcillos umbríos que causan un gran daño y te ponen en el estado de Revenant. Cuando los tendrils golpean a un objetivo, generan orbes de vacío, recolectarlos te da cargas de energía de vacío, cada una de ellas proporcionando un 4% de daño mientras que en estado de Revenant, una extensión de 1 segundo al estado de Revenant, y 125 de curación en 10 segundos — después de que expire Revenant.",
+                        "description": "Aparición es un omnicélula de alto riesgo de alto premio, con una habilidad activa que consume hasta 500 HP para reunir hasta cinco zarcillos umbríos que causan un gran daño y te ponen en el estado de Aparición. Cuando los zarcillos golpean a un objetivo, generan orbes de vacío, recolectarlos te da cargas de energía de vacío, cada una de ellas proporcionando un 4% de daño mientras estas en el estado de Aparición, una extensión de 1 segundo al estado de Aparición, y 125 de curación en 10 segundos — después de que expire Aparición.",
                         "name": "Aparición"
                     },
                     "Tempest": {
-                        "description": "Tempestad ofrece un 10% de bonificación de velocidad de ataque pasiva y la habilidad de acumular cargas de Velocidad al esquivar a través de ataques. Gastas cargas para cargar e inflingir daño en base a cuanta velocidad tengas. La bonificación de daño de la velocidad solo aplica a partes sin romper.",
+                        "description": "Tempestad ofrece un 10% de bonificación de velocidad de ataque pasiva y la habilidad de acumular cargas de Velocidad al esquivar a través de ataques. Gastas cargas para cargar e infligir daño en base a cuanta velocidad tengas. La bonificación de daño de la velocidad solo aplica a partes sin romper.",
                         "name": "Tempestad"
                     }
                 },
                 "title": "Dauntless Meta Builds - 1.10+"
             },
-            "note": "Las buildslistadas aquí son extraidas automáticamente de <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>Community Meta Builds Spreadsheet</a>, si tienes feedback por favor envíalo a #meta-discussion channel on the <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>official Dauntless Discord server</a>!",
+            "note": "Las builds listadas aquí son extraidas automáticamente de <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>Community Meta Builds Spreadsheet</a>, si tienes feedback por favor envíalo a #meta-discussion channel on the <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>official Dauntless Discord server</a>!",
             "subcategories": {
                 "The Hunger": "La Gula",
                 "heroics": "Heroicas",
                 "legendaries": "Legendarias",
-                "preEsca": "Pre-Esca"
+                "preEsca": "Pre-Escalada"
             },
             "title": "Builds Meta",
             "vsElement": {
@@ -244,6 +246,7 @@
             "dev-mode-toggle": "Activar Herramientas para Desarrolladores",
             "enable-light-mode": "Activar Modo Claro (¡Úsalo bajo tu propio riesgo!)",
             "export-logs": "Registros de exportar",
+            "finder-options": "Opciones de búsqueda de equipamiento",
             "general": "General",
             "language": "Idioma",
             "misc": "Misceláneo",
@@ -253,28 +256,31 @@
             "description": "Builds Meta para encuentros de las Pruebas, estas no son builds de caza general.",
             "generated": {
                 "tips": {
-                    "Boreus.0": "Puedes usar los Bomberos y el punto débil para retrasar la carga de aetherload de Boreus. (fase de escudo)",
+                    "Boreus [*].0": "Puedes usar a los bombarderos y el punto débil para retrasar la carga aetherica del Boreus. (la fase de escudo)",
                     "Charrogg.0": "El brazo izquierdo de Charrogg no te golpea si estás cerca de su cuello.",
-                    "Charrogg.1": "Las partes más débiles del Charrogg son sus sacos ígneos (I en cada lado de la cabeza, 1 en cada lado de la barriga).",
-                    "Drask.0": "Relámpago rastreador es extremadamente inconsistente y no inflige daño la mayoría de veces.",
+                    "Charrogg.1": "Las partes más débiles del Charrogg son sus sacos ígneos (1 en cada lado de la cabeza, 1 en cada lado de la barriga).",
                     "Embermane.0": "Usa Embermane para protegerte de los orbes del pilón de de rayo.",
                     "Gnasher.0": "Puedes engañar la interrupción del Gnasher acercándote a él al principio de la pelea. El enfriamiento se reinicia cuando el behemoth se enoja.",
                     "Kharabak.0": "Que no te golpeen las abejas.",
+                    "Kharabak.1": "*Para las armas enfocadas a heridas usar tónico de percepción en lugar de afinación aetherica",
                     "Koshai.0": "Se puede engañar la interrupción frontal en la interrupción del turno en un bucle.",
                     "Koshai.1": "Como todos los Behemoths, la rabia del Koshai restablece el temporizador de la interrupción, posiciónate delante justo después de que la animación termine para engañarlo.",
                     "Koshai.2": "Koshai crea sus astas alrededor de 1 minuto, mantente listo para la ventana de daño que sigue.",
                     "Pangar.0": "El giro interrumpible del Pangar es muy fácil de romper (lo hace dos veces seguidas), y el enfriamiento se resetea cuando se enoja.",
                     "Pangar.1": "El giro interrumpible del Pangar está bugueado y no hace daño sino hasta el final, y eso lo hace extremadamente fácil de interrumpir.",
                     "Quillshot.0": "Puedes construir el escudo de la linterna de Skarn/Frostwülf en la plataforma.",
+                    "Rezakiri.0": " Asegúrate de usar aparición entre 500 y 600 de vida para mantener activo el efecto único del Shrowd.",
                     "Shadowtouched Koshai.0": "Se puede baitear la interrupción al principio con bastante facilidad, y después interrumpir en la vuelta, al igual que el Koshai normal.",
                     "Shadowtouched Koshai.1": "La segunda vez que el Koshai Sombrío se va bajo el suelo, este aparece lo más lejos posible en la arena y te lanza orbes sombríos, durante este tiempo el Koshai es muy vulnerable al daño.",
                     "Shadowtouched Nayzaga.0": "Justo como el Nayzaga normal, el Nayzaga Sombrío empieza la pelea con su deslizamiento interrumpible doble.",
                     "Shadowtouched Nayzaga.1": "La pisada genera-clones del Nayzaga no inflije daño, solo el cercano hace daño.",
-                    "Shadowtouched Nayzaga.2": "Cuando esntra a su portal preparate para la siguiente interrupción.",
+                    "Shadowtouched Nayzaga.2": "Cuando entra a su portal prepárate para la siguiente interrupción.",
                     "Shrike.0": "Las partes más débiles del Shrike son su cabeza y sus alas.",
                     "Shrike.1": "Shrike poede ser inmediatamente boopeado después del enfurecer.",
-                    "Shrowd.0": "Puedes usar el contraataque de Disciplina cuando el Shrowd salta cuando se va a teletransportar.",
-                    "Skarn.0": "Si no se utilizan armas contundentes (golpeadores, martillo) enfocarse en la cola durante la rabia, el hitbox de roca tiene un gran hueco allí."
+                    "Shrowd.0": "Puedes usar el contraataque de Disciplina cuando el Shrowd salta y se va a teletransportar.",
+                    "Skarn.0": "Si no se utilizan armas contundentes (golpeadores, martillo) enfocarse en la cola durante la rabia, el hitbox de roca tiene un gran hueco allí.",
+                    "Skarn.1": "A diferencia de otras armas, en los repetidores preferirás la unión del Drask porque querrás disparar a la cabeza durante toda la cacería.",
+                    "Thunderdeep Drask.0": "He do be a fast boi."
                 },
                 "title": "Dauntless Pruebas Builds - 1.10+"
             },
@@ -336,16 +342,16 @@
             "Urska": "Urska",
             "Valomyr": "Valomyr"
         },
-        "bond-weapon": "Arma vinculada",
+        "bond-weapon": "Unión de arma",
         "cancel": "Cancelar",
         "cell": "Célula",
         "cell-slot": "Ranura de célula",
         "cell-type": {
-            "Alacrity": "Presteza",
+            "Alacrity": "Celeridad",
             "Brutality": "Brutalidad",
-            "Finesse": "Sutil",
+            "Finesse": "Sutilleza",
             "Fortitude": "Fortaleza",
-            "Insight": "Perspicacia",
+            "Insight": "Percepción",
             "Prismatic": "Prismático"
         },
         "cells": "Células",
