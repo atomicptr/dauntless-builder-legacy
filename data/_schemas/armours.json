@@ -23,6 +23,12 @@
         "icon": {
             "type": "string"
         },
+        "tags": {
+            "type": ["array", "null"],
+            "items": {
+                "type": "string"
+            }
+        },
         "name": {
             "type": "string"
         },

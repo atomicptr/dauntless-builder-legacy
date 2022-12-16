@@ -1,3 +1,5 @@
+import { Tags } from "@src/data/Tags";
+
 import { CellType } from "./Cell";
 import { ElementalType } from "./ElementalType";
 import { ItemRarity } from "./ItemRarity";
@@ -29,4 +31,5 @@ export interface Armour {
     perks?: PerkValue[];
     unique_effects?: UniqueEffect[];
     rarity?: ItemRarity;
+    tags?: Tags[];
 }

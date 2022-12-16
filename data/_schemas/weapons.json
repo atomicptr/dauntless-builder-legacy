@@ -42,6 +42,12 @@
         "name": {
             "type": "string"
         },
+        "tags": {
+            "type": ["array", "null"],
+            "items": {
+                "type": "string"
+            }
+        },
         "perks": {
             "items": {
                 "additionalProperties": false,

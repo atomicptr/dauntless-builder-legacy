@@ -1,3 +1,4 @@
+import { Tags } from "@src/data/Tags";
 import { match } from "ts-pattern";
 
 import { CellType } from "./Cell";
@@ -42,6 +43,7 @@ export interface Weapon {
     perks?: PerkValue[];
     unique_effects?: UniqueEffect[];
     rarity?: ItemRarity;
+    tags?: Tags[];
 }
 
 export type WeaponName = "aetherstrikers" | "axe" | "chainblades" | "hammer" | "repeater" | "sword" | "warpike";

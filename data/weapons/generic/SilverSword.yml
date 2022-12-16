@@ -1,0 +1,55 @@
+# We decided against supporting the full level range of this weapon because that would be a lot of effort for pretty much
+# no gains unless they add more weapons like these...
+name: Silver Sword
+description: The sword once used by Silver Nikola, Queen Linnea's ancestor.
+icon: /assets/icons/weapons/generic/SilverSword.png
+type: Sword
+damage: Slashing
+elemental: Frost
+cells: [Fortitude, Brutality]
+tags: [Event]
+power:
+  base: 10
+  powerSurged: 120
+perks:
+  - name: Guardian
+    value: 1
+    powerSurged: false
+  - name: Guardian
+    value: 3
+    powerSurged: true
+  - name: Warmth
+    value: 3
+    powerSurged: true
+unique_effects:
+  - name: Passive
+    title: Passive
+    description: +{{percentShield}}% Shield
+    values:
+      percentShield: 10
+    powerSurged: false
+  - name: Passive
+    title: Passive
+    description: >-
+      +{{percentShield}}% Shield{{NL}}
+      +{{percentHealing}}% Healing{{NL}}
+      +{{maxHealth}} Max Health
+    values:
+      percentShield: 10
+      percentHealing: 30
+      maxHealth: 300
+    powerSurged: true
+  - name: UniqueEffect
+    description: >-
+      Using your special continually generates Frost Sprites that grant your next attack +{{damage}} damage and minor
+      frost damage (Max 4 Sprites)
+    values:
+      damage: 60
+    powerSurged: true
+  - name: Unsupported
+    title: Disclaimer
+    icon: /assets/icons/generic/nope.png
+    description: >-
+      Since this is a time limited event weapon and it features a very complex upgrade path with multiple levels we
+      decided to not support all levels except for the maximum one (power surged here) on Dauntless Builder.
+    powerSurged: false

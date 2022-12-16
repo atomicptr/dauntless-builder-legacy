@@ -1,6 +1,7 @@
 import { Star } from "@mui/icons-material";
 import { Box, Card, CardActionArea, CardContent, CardMedia, Skeleton, Stack, Typography } from "@mui/material";
 import ElementalIcon from "@src/components/ElementalIcon";
+import EventMarker from "@src/components/EventMarker";
 import PerksText from "@src/components/PerksText";
 import { itemPickerDefaultImageSize } from "@src/components/theme";
 import { Armour } from "@src/data/Armour";
@@ -159,6 +160,12 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                         sx={{ alignItems: "center", display: "flex", mb: 1 }}
                                         variant="h5"
                                     >
+                                        {(type === ItemType.Weapon || isArmourType(type)) && (
+                                            <Box sx={{ mr: 1 }}>
+                                                <EventMarker item={item as Weapon | Armour} />
+                                            </Box>
+                                        )}
+
                                         {t(itemTranslationIdentifier(type, item.name, "name"))}
                                         {isPowerSurged && canBePowerSurged ? <Star sx={{ ml: 1 }} /> : null}
                                     </Typography>
