@@ -19,6 +19,7 @@
             "invalid-build": "Из-за изменений в Dauntless эта сборка больше не совместима с текущей версией конструктора Dauntless, одна или несколько частей были удалены.",
             "upgraded-build": "Эта сборка была сделана для более ранней версии Dauntless и может быть устаревшей."
         },
+        "event-marker": "This item was part of an event and might not be obtainable anymore.",
         "item-picker": {
             "lantern-hold-line": "<b>$t(terms.hold)</b>: {{hold}}",
             "omnicell-passive-line": "<b>$t(terms.passive)</b>: {{passive}}"

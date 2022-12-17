@@ -19,6 +19,7 @@
             "invalid-build": "Debido a cambios en Dauntless esta versión ya no es compatible con la versión actual de Dauntless Builder, una o más partes se han eliminado para mostrarlo.",
             "upgraded-build": "Este equipamiento fue hecho para una versión anterior de Dauntless y podría estar obsoleta."
         },
+        "event-marker": "Este objeto formaba parte de un evento y es posible que ya no pueda obtenerse.",
         "item-picker": {
             "lantern-hold-line": "<b>$t(terms.hold)</b>: {{hold}}",
             "omnicell-passive-line": "<b>$t(terms.passive)</b>: {{passive}}"
@@ -107,7 +108,7 @@
                 "localize": "Ayuda con la traducción",
                 "matrix": "Matrix"
             },
-            "links-title": "Links",
+            "links-title": "Enlaces",
             "localization-text": "¡Dauntless Builder ahora soporta traducciones, por favor ve a ajustes y selecciona tu idioma preferido si no fue elegido automáticamente! Si ese idioma no está actualmente listo y te interesaría ayudar, por favor lee la sección \"Contribuir\" a continuación.",
             "localization-title": "Traducción",
             "test-builds": "Probar Builds",

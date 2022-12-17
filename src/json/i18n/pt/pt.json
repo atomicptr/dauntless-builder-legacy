@@ -19,6 +19,7 @@
             "invalid-build": "Devido a mudanças no Dauntless esta build não é mais compatível com a versão atual do site, uma ou mais partes foram removidas para a correta exibição.",
             "upgraded-build": "Esta Build foi feita para uma versão antiga do Dauntless e pode estar desatualizada."
         },
+        "event-marker": "This item was part of an event and might not be obtainable anymore.",
         "item-picker": {
             "lantern-hold-line": "<b>$t(terms.hold)</b>: {{hold}}",
             "omnicell-passive-line": "<b>$t(terms.passive)</b>: {{passive}}"
