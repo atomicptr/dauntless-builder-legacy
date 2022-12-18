@@ -4,7 +4,7 @@ import { CellType } from "@src/data/Cell";
 import dauntlessBuilderData from "@src/data/Data";
 import { ItemRarity } from "@src/data/ItemRarity";
 import { Lantern } from "@src/data/Lantern";
-import { Perk } from "@src/data/Perks";
+import { Perk, PerkValue } from "@src/data/Perks";
 import { Weapon, WeaponType } from "@src/data/Weapon";
 import { AssignedPerkValue } from "@src/features/build-finder/build-finder-selection-slice";
 import createPermutation from "@src/utils/create-permutation";
@@ -227,6 +227,70 @@ const createItemData = (
     };
 };
 
+type ArmourData = {
+    [armourType in ArmourType]: {
+        [perkName: string]: {
+            [cellType in CellType]: Armour[];
+        }
+    }
+}
+
+let armourData: ArmourData | null = null;
+
+const generateArmourData = (): ArmourData => {
+
+    if (armourData !== null) {
+        return armourData;
+    }
+
+    const addArmour = (armourType: ArmourType, perkName: string, cellType: CellType, armour: Armour) => {
+
+        if (armourData == null) {
+            armourData = {
+                [ArmourType.Head]: {},
+                [ArmourType.Torso]: {},
+                [ArmourType.Arms]: {},
+                [ArmourType.Legs]: {},
+            }
+        }
+
+        if (!(perkName in armourData[armourType])) {
+            armourData[armourType][perkName] = {
+                [CellType.Prismatic]: [] as Armour[],
+                [CellType.Alacrity]: [] as Armour[],
+                [CellType.Brutality]: [] as Armour[],
+                [CellType.Finesse]: [] as Armour[],
+                [CellType.Fortitude]: [] as Armour[],
+                [CellType.Insight]: [] as Armour[],
+            };
+        }
+
+        armourData[armourType][perkName][cellType].push(armour);
+    };
+
+    const addArmours = (armourType: ArmourType) => {
+        for (const armour of findArmourPiecesByType(armourType)) {
+            if (!armour.cells) {
+                continue;
+            }
+
+            (Array.isArray(armour.cells) ? armour.cells : [armour.cells]).forEach(cell => {
+                if (armour.perks) {
+                    addArmour(armourType, armour.perks[0].name, cell, armour)
+                }
+            })
+        }
+    }
+
+    addArmours(ArmourType.Head);
+    addArmours(ArmourType.Torso);
+    addArmours(ArmourType.Arms);
+    addArmours(ArmourType.Legs);
+
+    //heads[ArmourType.Head]["Aetheric Attunement"][CellType.Insight]
+    return armourData as unknown as ArmourData;
+}
+
 export const findBuilds = (
     weaponType: WeaponType | null,
     requestedPerks: AssignedPerkValue,
@@ -251,6 +315,8 @@ export const findBuilds = (
 
     const currentRequestedSlots = Object.assign({}, requestedSlots);
     const currentRequestedPerks = Object.assign({}, requestedPerks);
+
+    const armourData = generateArmourData();
 
     const determineBasePerks = (build: IntermediateBuild): AssignedPerkValue => {
         const perkStrings = Object.values(build)
