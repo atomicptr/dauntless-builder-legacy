@@ -19,7 +19,7 @@
             "invalid-build": "A causa dei cambiamenti in Dauntless questa build non è più compatibile con l'attuale versione di Dauntless Builder, una o più parti sono state rimosse per visualizzarla.",
             "upgraded-build": "Questa build è stata realizzata per una versione precedente di Dauntless e potrebbe essere obsoleta."
         },
-        "event-marker": "This item was part of an event and might not be obtainable anymore.",
+        "event-marker": "Questo oggetto faceva parte di un evento e non può più essere ottenuto.",
         "item-picker": {
             "lantern-hold-line": "<b>$t(terms.hold)</b>: {{hold}}",
             "omnicell-passive-line": "<b>$t(terms.passive)</b>: {{passive}}"
@@ -86,7 +86,7 @@
             "dev-set-perks": "Seleziona Celle",
             "filter-perks": "Filtra Celle...",
             "filter-title": "Filtro",
-            "options-title": "Options",
+            "options-title": "Impostazioni",
             "perk-matching-enabled": "Enable smart perk selection (High performance costs, if you notice performance issues uncheck this)",
             "perks-title": "$t(terms.perks)",
             "preselect-title": "Seleziona elementi",
@@ -113,7 +113,7 @@
             "localization-title": "Lingua",
             "test-builds": "Test Build",
             "title": "Home",
-            "welcome-text": "un'applicazione web gratuita e open source per la creazione e la condivisione di build per il popolare gioco gratuito Dauntless.",
+            "welcome-text": "Un'applicazione web gratuita e open source per la creazione e la condivisione di build per il popolare gioco gratuito Dauntless.",
             "welcome-title": "Benvenuto nel Dauntless Builder"
         },
         "metabuilds": {
@@ -244,7 +244,7 @@
             "data-export": "Esporta",
             "data-import": "Importa",
             "data-text": "Al momento Dauntless Builder sta archiviando tutti i dati nel tuo Browser, cambiare dispositivo o Browser non manterrà nessuna delle tue builds preferite e/o altri dati. In futuro permetteremo di archiviare i dati in cloud, intanto è consigliato utilizzare la funzione \"importa/esporta\"(in impostazioni) per fare un backup dei dati e/o trasferirli tra dispositivi.",
-            "dev-mode-toggle": "Toggle Developer Mode",
+            "dev-mode-toggle": "Attiva/Disattiva Modalità Sviluppatore",
             "enable-light-mode": "Abilità la modalità luminosa (usare a proprio rischio)",
             "export-logs": "Export logs",
             "finder-options": "Build Finder Options",
@@ -334,7 +334,7 @@
             "Shrowd": "Shrowd",
             "Skarn": "Skarn",
             "Skraev": "Skraev",
-            "Sporestruck Charrogg": "Sporestruck Charrogg",
+            "Sporestruck Charrogg": "Charrogg sporizzato",
             "Stormclaw": "Stormclaw",
             "The Chronovore": "$t(terms.behemoths.Chronovore)",
             "Thrax": "Thrax",
@@ -343,10 +343,10 @@
             "Urska": "Urska",
             "Valomyr": "Valomyr"
         },
-        "bond-weapon": "Bond Weapon",
-        "cancel": "Cancel",
-        "cell": "Cell",
-        "cell-slot": "Cell Slot",
+        "bond-weapon": "Legame arma",
+        "cancel": "Annulla",
+        "cell": "Cella",
+        "cell-slot": "Slot cella",
         "cell-type": {
             "Alacrity": "Alacrity",
             "Brutality": "Brutality",
@@ -355,7 +355,7 @@
             "Insight": "Insight",
             "Prismatic": "Prismatic"
         },
-        "cells": "Cells",
+        "cells": "Celle",
         "close": "Close",
         "elemental-type": "Element",
         "elemental-types": {
@@ -368,13 +368,13 @@
         },
         "head-armour": "Head Armour",
         "hold": "Hold",
-        "lantern": "Lantern",
+        "lantern": "Lanterna",
         "legs-armour": "Legs Armour",
-        "omnicell": "Omnicell",
+        "omnicell": "Omnicella",
         "part": "Part",
         "parts": {
             "chamber": "Chamber",
-            "grip": "Grip",
+            "grip": "Calcio",
             "mod": "Mod",
             "special": "Special"
         },
@@ -382,21 +382,21 @@
         "perks": "Perks",
         "power": "Power",
         "resistance": "Resistance",
-        "save": "Save",
-        "search": "Search",
+        "save": "Salva",
+        "search": "Cerca",
         "torso-armour": "Torso Armour",
-        "unique-effect": "Unique Effect",
-        "unselect": "Select Nothing",
-        "weapon": "Weapon",
-        "weapon-type": "Weapon Type",
+        "unique-effect": "Effetto unico",
+        "unselect": "Seleziona nulla",
+        "weapon": "Arma",
+        "weapon-type": "Tipo di arma",
         "weapon-types": {
-            "AetherStrikers": "Aether Strikers",
-            "Axe": "Axe",
-            "ChainBlades": "Chain Blades",
-            "Hammer": "Hammer",
-            "Repeater": "Repeater",
-            "Sword": "Sword",
-            "WarPike": "War Pike"
+            "AetherStrikers": "Pugni corazzati",
+            "Axe": "Ascia",
+            "ChainBlades": "Lame a catena",
+            "Hammer": "Martello",
+            "Repeater": "Pistole",
+            "Sword": "Spada",
+            "WarPike": "Lancia da guerra"
         }
     }
 }
