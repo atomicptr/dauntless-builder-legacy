@@ -174,5 +174,17 @@ export class ArmourDataStep extends WithStepLogger implements Step {
             addArmours(ArmourType.Legs);
             return armourData as unknown as ArmourData; //heads[ArmourType.Head]["Aetheric Attunement"][CellType.Insight]
         }
+
+        const filepath = path.join(runConfig.targetDir, "armour_data.json");
+
+        this.log(`Writing ${filepath}...`);
+
+        fs.writeFileSync(filepath, JSON.stringify(generateArmourData(), null, "    "));
+
+        const filepath2 = path.join(runConfig.targetDir, "armour_data_cells.json");
+
+        this.log(`Writing ${filepath}...`);
+
+        fs.writeFileSync(filepath2, JSON.stringify(generateArmourDataCells(), null, "    "));
     }
 }

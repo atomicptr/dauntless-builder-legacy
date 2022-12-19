@@ -5,6 +5,8 @@
 /public/sitemap.xml
 /src/json/data.json
 /benchmarks
+/src/json/armour_data.json
+/src/json/armour_data_cells.json
 
 # dev stuff
 /map
