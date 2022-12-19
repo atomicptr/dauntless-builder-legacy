@@ -18,7 +18,7 @@ perks:
   - name: Guardian
     value: 3
     powerSurged: true
-  - name: Warmth
+  - name: Galvanized
     value: 3
     powerSurged: true
 unique_effects:
