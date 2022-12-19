@@ -346,10 +346,17 @@ export const findBuilds = (
 ) => {
     const itemData = createItemData(weaponType, lanternName, requestedPerks, options);
 
-    interface AssignedSlotValue {
-        [slotName: string]: number;
+    type AssignedSlotValue = {
+        [cellType in CellType]: number;
     }
-    const requestedSlots: AssignedSlotValue = {};
+    const requestedSlots: AssignedSlotValue = {
+        [CellType.Prismatic]: 0,
+        [CellType.Alacrity]: 0,
+        [CellType.Brutality]: 0,
+        [CellType.Finesse]: 0,
+        [CellType.Fortitude]: 0,
+        [CellType.Insight]: 0,
+    };
 
     for (const perkName in requestedPerks) {
         const desiredValue = requestedPerks[perkName];
@@ -503,16 +510,21 @@ export const findBuilds = (
                     .join("::"),
             );
 
-        interface IntToArmourType {
-            [val: number]: ArmourType
-        }
-
-        const intToArmourType: IntToArmourType = { 0: ArmourType.Head, 1: ArmourType.Torso, 2: ArmourType.Arms, 3: ArmourType.Legs };
+        const armourPieces = [ArmourType.Head, ArmourType.Torso, ArmourType.Arms, ArmourType.Legs];
 
         const chooseItem = (i: number, perks: AssignedPerkValue, cells: AssignedSlotValue, weapon: Weapon, selections: SelectionData) => {
-            //armourData[intToArmourType[i]]
+            for (const perk in perks) {
+                for (const cell in cells) {
+                    if (armourData[armourPieces[i]][perk] && cells[cell as CellType] > 0) {
+                        armourData[armourPieces[i]][perk][cell as CellType];
+                    }
+                }
+
+                //chooseItem(i + 1, perks, cells, weapon, selections);
+            }
+
             if (i < 4) {
-                //chooseItem(i++, perks, cells, weapon, selections);
+
             } else {
 
             }
@@ -535,11 +547,11 @@ export const findBuilds = (
                 currentRequestedPerks[weapon.perks[0].name] -= 3;
             }
             if (weapon.cells) {
-                if (currentRequestedSlots[weapon.cells[0]]) {
-                    currentRequestedSlots[weapon.cells[0]] -= 1;
+                if (currentRequestedSlots[weapon.cells[0] as CellType]) {
+                    currentRequestedSlots[weapon.cells[0] as CellType] -= 1;
                 }
-                if (currentRequestedSlots[weapon.cells[1]]) {
-                    currentRequestedSlots[weapon.cells[1]] -= 1;
+                if (currentRequestedSlots[weapon.cells[1] as CellType]) {
+                    currentRequestedSlots[weapon.cells[1] as CellType] -= 1;
                 }
             }
             chooseItem(0, currentRequestedPerks, currentRequestedSlots, weapon, selections);
@@ -547,11 +559,11 @@ export const findBuilds = (
                 currentRequestedPerks[weapon.perks[0].name] += 3;
             }
             if (weapon.cells) {
-                if (currentRequestedSlots[weapon.cells[0]]) {
-                    currentRequestedSlots[weapon.cells[0]] += 1;
+                if (currentRequestedSlots[weapon.cells[0] as CellType]) {
+                    currentRequestedSlots[weapon.cells[0] as CellType] += 1;
                 }
-                if (currentRequestedSlots[weapon.cells[1]]) {
-                    currentRequestedSlots[weapon.cells[1]] += 1;
+                if (currentRequestedSlots[weapon.cells[1] as CellType]) {
+                    currentRequestedSlots[weapon.cells[1] as CellType] += 1;
                 }
             }
             // for (const [head, torso, arms, legs] of createPermutation([
