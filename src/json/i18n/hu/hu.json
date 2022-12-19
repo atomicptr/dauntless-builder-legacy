@@ -240,7 +240,6 @@
             "title": "Create a new build"
         },
         "settings": {
-            "community-language": "This language is not officially supported by Dauntless, but members of our community decided to add a translation for Dauntless Builder regardless.",
             "data": "Application Data",
             "data-export": "Export",
             "data-import": "Import",

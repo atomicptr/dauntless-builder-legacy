@@ -126,6 +126,10 @@ export class CrowdinBuildStep extends WithStepLogger implements Step {
 
                         const targetDir = path.join(runConfig.i18nBaseDir, language);
 
+                        if (!fs.existsSync(targetDir)) {
+                            fs.mkdirSync(targetDir);
+                        }
+
                         const targetFile = isItemsFile
                             ? path.join(targetDir, `items.${language}.json`)
                             : path.join(targetDir, `${language}.json`);

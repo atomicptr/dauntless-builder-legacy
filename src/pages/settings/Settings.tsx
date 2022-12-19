@@ -4,6 +4,7 @@ import {
     CloudDownload,
     CloudUpload,
     Download,
+    People,
     Search,
     TableRows,
     Translate,
@@ -24,12 +25,14 @@ import {
     ListSubheader,
     MenuItem,
     Select,
+    Stack,
     Switch,
+    Tooltip,
 } from "@mui/material";
 import PageTitle from "@src/components/PageTitle";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
-import { currentLanguage, getNativeLanguageName, Language } from "@src/i18n";
+import { currentLanguage, flagCode, getNativeLanguageName, isCommunityLanguage, Language } from "@src/i18n";
 import {
     selectConfiguration,
     setDevMode,
@@ -40,6 +43,7 @@ import {
 import { exportState, persistState } from "@src/store";
 import log, { Logger } from "@src/utils/logger";
 import React from "react";
+import ReactCountryFlag from "react-country-flag";
 import { useTranslation } from "react-i18next";
 
 const Settings: React.FC = () => {
@@ -123,11 +127,28 @@ const Settings: React.FC = () => {
                                             key={key}
                                             value={Language[key as keyof typeof Language]}
                                         >
-                                            {getNativeLanguageName(Language[key as keyof typeof Language]) !== null
-                                                ? `${getNativeLanguageName(
-                                                    Language[key as keyof typeof Language],
-                                                )} (${key})`
-                                                : key}
+                                            <Stack
+                                                alignItems="center"
+                                                direction="row"
+                                                spacing={1}
+                                            >
+                                                <ReactCountryFlag
+                                                    countryCode={flagCode(Language[key as keyof typeof Language])}
+                                                />
+                                                <Box>
+                                                    {getNativeLanguageName(Language[key as keyof typeof Language]) !==
+                                                    null
+                                                        ? `${getNativeLanguageName(
+                                                            Language[key as keyof typeof Language],
+                                                        )} (${key})`
+                                                        : key}
+                                                </Box>
+                                                {isCommunityLanguage(Language[key as keyof typeof Language]) && (
+                                                    <Tooltip title={t("pages.settings.community-language")}>
+                                                        <People />
+                                                    </Tooltip>
+                                                )}
+                                            </Stack>
                                         </MenuItem>
                                     ))}
                                 </Select>

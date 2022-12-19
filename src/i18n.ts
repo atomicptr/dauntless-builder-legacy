@@ -1,5 +1,5 @@
 import crowdinStats from "@json/crowdin-stats.json";
-import { deDE, enUS, esES, frFR, itIT, jaJP, ptBR, ruRU } from "@mui/material/locale";
+import { deDE, enUS, esES, frFR, huHU, itIT, jaJP, ptBR, ruRU } from "@mui/material/locale";
 import { store } from "@src/store";
 import log from "@src/utils/logger";
 import i18n, { CallbackError } from "i18next";
@@ -11,6 +11,7 @@ import { match } from "ts-pattern";
 export enum Language {
     English = "en",
     German = "de",
+    Hungarian = "hu",
     Japanese = "ja",
     French = "fr",
     Spanish = "es",
@@ -22,6 +23,7 @@ export enum Language {
 const nativeLanguageNames = {
     [Language.English]: "English",
     [Language.German]: "Deutsch",
+    [Language.Hungarian]: "magyar nyelv",
     [Language.Japanese]: "日本語",
     [Language.French]: "Français",
     [Language.Spanish]: "Español",
@@ -29,6 +31,9 @@ const nativeLanguageNames = {
     [Language.Portuguese]: "Português",
     [Language.Russian]: "русский",
 };
+
+// Languages that aren't officially supported by Dauntless
+const communityLanguages = [Language.Hungarian];
 
 const betaThreshold = 95;
 
@@ -38,6 +43,7 @@ export const muiLocaleComponent = () =>
     match(i18n.language)
         .with(Language.English, () => enUS)
         .with(Language.German, () => deDE)
+        .with(Language.Hungarian, () => huHU)
         .with(Language.Japanese, () => jaJP)
         .with(Language.French, () => frFR)
         .with(Language.Spanish, () => esES)
@@ -59,6 +65,21 @@ export const isBetaLanguage = (lang: Language): boolean => {
 
     return crowdinStats.progress[lang] < betaThreshold;
 };
+
+export const isCommunityLanguage = (lang: Language): boolean => communityLanguages.indexOf(lang) > -1;
+
+export const flagCode = (lang: Language): string =>
+    match(lang)
+        .with(Language.English, () => "us")
+        .with(Language.German, () => "de")
+        .with(Language.Hungarian, () => "hu")
+        .with(Language.Japanese, () => "jp")
+        .with(Language.French, () => "fr")
+        .with(Language.Spanish, () => "es")
+        .with(Language.Italian, () => "it")
+        .with(Language.Portuguese, () => "br")
+        .with(Language.Russian, () => "ru")
+        .otherwise(() => "x");
 
 export const ttry = (tryIdent: string, elseIdent: string): string => {
     if (i18n.exists(tryIdent)) {
