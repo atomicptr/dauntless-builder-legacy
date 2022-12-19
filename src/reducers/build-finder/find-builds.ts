@@ -227,6 +227,64 @@ const createItemData = (
     };
 };
 
+const cellToArmourArray = () => {
+    return {
+        [CellType.Prismatic]: [] as Armour[],
+        [CellType.Alacrity]: [] as Armour[],
+        [CellType.Brutality]: [] as Armour[],
+        [CellType.Finesse]: [] as Armour[],
+        [CellType.Fortitude]: [] as Armour[],
+        [CellType.Insight]: [] as Armour[],
+    }
+}
+
+type ArmourDataCells = {
+    [armourType in ArmourType]: {
+        [cellType in CellType]: Armour[];
+    }
+}
+
+let armourDataCells: ArmourDataCells | null = null;
+
+const generateArmourDataCells = (): ArmourDataCells => {
+    if (armourDataCells !== null) {
+        return armourDataCells;
+    }
+
+    const addArmour = (armourType: ArmourType, cellType: CellType, armour: Armour) => {
+        if (armourDataCells == null) {
+            armourDataCells = {
+                [ArmourType.Head]: cellToArmourArray(),
+                [ArmourType.Torso]: cellToArmourArray(),
+                [ArmourType.Arms]: cellToArmourArray(),
+                [ArmourType.Legs]: cellToArmourArray(),
+            }
+        }
+
+        armourDataCells[armourType][cellType].push(armour);
+    };
+
+    const addArmours = (armourType: ArmourType) => {
+        for (const armour of findArmourPiecesByType(armourType)) {
+            if (!armour.cells) {
+                continue;
+            }
+
+            (Array.isArray(armour.cells) ? armour.cells : [armour.cells]).forEach(cell => {
+                if (armour.perks) {
+                    addArmour(armourType, cell, armour)
+                }
+            })
+        }
+    }
+
+    addArmours(ArmourType.Head);
+    addArmours(ArmourType.Torso);
+    addArmours(ArmourType.Arms);
+    addArmours(ArmourType.Legs);
+    return armourDataCells as unknown as ArmourDataCells; //heads[ArmourType.Head]["Aetheric Attunement"][CellType.Insight]
+}
+
 type ArmourData = {
     [armourType in ArmourType]: {
         [perkName: string]: {
@@ -238,13 +296,11 @@ type ArmourData = {
 let armourData: ArmourData | null = null;
 
 const generateArmourData = (): ArmourData => {
-
     if (armourData !== null) {
         return armourData;
     }
 
     const addArmour = (armourType: ArmourType, perkName: string, cellType: CellType, armour: Armour) => {
-
         if (armourData == null) {
             armourData = {
                 [ArmourType.Head]: {},
@@ -255,14 +311,7 @@ const generateArmourData = (): ArmourData => {
         }
 
         if (!(perkName in armourData[armourType])) {
-            armourData[armourType][perkName] = {
-                [CellType.Prismatic]: [] as Armour[],
-                [CellType.Alacrity]: [] as Armour[],
-                [CellType.Brutality]: [] as Armour[],
-                [CellType.Finesse]: [] as Armour[],
-                [CellType.Fortitude]: [] as Armour[],
-                [CellType.Insight]: [] as Armour[],
-            };
+            armourData[armourType][perkName] = cellToArmourArray();
         }
 
         armourData[armourType][perkName][cellType].push(armour);
@@ -286,9 +335,7 @@ const generateArmourData = (): ArmourData => {
     addArmours(ArmourType.Torso);
     addArmours(ArmourType.Arms);
     addArmours(ArmourType.Legs);
-
-    //heads[ArmourType.Head]["Aetheric Attunement"][CellType.Insight]
-    return armourData as unknown as ArmourData;
+    return armourData as unknown as ArmourData; //heads[ArmourType.Head]["Aetheric Attunement"][CellType.Insight]
 }
 
 export const findBuilds = (
@@ -317,6 +364,7 @@ export const findBuilds = (
     const currentRequestedPerks = Object.assign({}, requestedPerks);
 
     const armourData = generateArmourData();
+    const armourDataCells = generateArmourDataCells();
 
     const determineBasePerks = (build: IntermediateBuild): AssignedPerkValue => {
         const perkStrings = Object.values(build)
@@ -455,33 +503,83 @@ export const findBuilds = (
                     .join("::"),
             );
 
-        for (const weapon of itemData.weapons) {
-            for (const [head, torso, arms, legs] of createPermutation([
-                itemData.head,
-                itemData.torso,
-                itemData.arms,
-                itemData.legs,
-            ])) {
-                if (matchingBuilds.length >= maxBuilds) {
-                    return matchingBuilds;
-                }
+        interface IntToArmourType {
+            [val: number]: ArmourType
+        }
 
-                const build = createIntermediateBuild(weapon, head, torso, arms, legs);
+        const intToArmourType: IntToArmourType = { 0: ArmourType.Head, 1: ArmourType.Torso, 2: ArmourType.Arms, 3: ArmourType.Legs };
 
-                const { fulfillsCriteria, perks, cellsSlotted } = evaluateBuild(build);
+        const chooseItem = (i: number, perks: AssignedPerkValue, cells: AssignedSlotValue, weapon: Weapon, selections: SelectionData) => {
+            //armourData[intToArmourType[i]]
+            if (i < 4) {
+                //chooseItem(i++, perks, cells, weapon, selections);
+            } else {
 
-                if (!fulfillsCriteria) {
-                    continue;
-                }
-
-                const ident = createBuildIdentifier(build, cellsSlotted);
-                const doesBuildAlreadyExist = matchingBuilds.find(build => build.ident === ident) !== undefined;
-                if (doesBuildAlreadyExist) {
-                    continue;
-                }
-
-                matchingBuilds.push({ build, cellsSlotted, ident, perks });
             }
+        }
+
+        type SelectionData = {
+            [armourType in ArmourType]: Armour | null
+        }
+
+        for (const weapon of itemData.weapons) {
+            const selections: SelectionData = {
+                [ArmourType.Head]: null,
+                [ArmourType.Torso]: null,
+                [ArmourType.Arms]: null,
+                [ArmourType.Legs]: null,
+            }
+            // Make dynamic for all perks and cells
+            // Put into sub method for adjustments
+            if (weapon.perks && currentRequestedPerks[weapon.perks[0].name]) {
+                currentRequestedPerks[weapon.perks[0].name] -= 3;
+            }
+            if (weapon.cells) {
+                if (currentRequestedSlots[weapon.cells[0]]) {
+                    currentRequestedSlots[weapon.cells[0]] -= 1;
+                }
+                if (currentRequestedSlots[weapon.cells[1]]) {
+                    currentRequestedSlots[weapon.cells[1]] -= 1;
+                }
+            }
+            chooseItem(0, currentRequestedPerks, currentRequestedSlots, weapon, selections);
+            if (weapon.perks && currentRequestedPerks[weapon.perks[0].name]) {
+                currentRequestedPerks[weapon.perks[0].name] += 3;
+            }
+            if (weapon.cells) {
+                if (currentRequestedSlots[weapon.cells[0]]) {
+                    currentRequestedSlots[weapon.cells[0]] += 1;
+                }
+                if (currentRequestedSlots[weapon.cells[1]]) {
+                    currentRequestedSlots[weapon.cells[1]] += 1;
+                }
+            }
+            // for (const [head, torso, arms, legs] of createPermutation([
+            //     itemData.head,
+            //     itemData.torso,
+            //     itemData.arms,
+            //     itemData.legs,
+            // ])) {
+            //     if (matchingBuilds.length >= maxBuilds) {
+            //         return matchingBuilds;
+            //     }
+
+            //     const build = createIntermediateBuild(weapon, head, torso, arms, legs);
+
+            //     const { fulfillsCriteria, perks, cellsSlotted } = evaluateBuild(build);
+
+            //     if (!fulfillsCriteria) {
+            //         continue;
+            //     }
+
+            //     const ident = createBuildIdentifier(build, cellsSlotted);
+            //     const doesBuildAlreadyExist = matchingBuilds.find(build => build.ident === ident) !== undefined;
+            //     if (doesBuildAlreadyExist) {
+            //         continue;
+            //     }
+
+            //     matchingBuilds.push({ build, cellsSlotted, ident, perks });
+            // }
         }
 
         return matchingBuilds;
