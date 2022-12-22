@@ -421,13 +421,19 @@ export const findBuilds = (
             return;
         };
 
-        const finished = () => {
+        const finished = (weapon: Weapon) => {
+            let required = 0;
             for (const cell in requestedSlots) {
                 if (requestedSlots[cell as CellType] > 0) {
-                    return false;
+                    required += requestedSlots[cell as CellType];
                 }
             }
-            return true;
+            (Array.isArray(weapon.cells) ? weapon.cells : [weapon.cells]).forEach(cell => {
+                if (cell === CellType.Prismatic) {
+                    required -= 1;
+                }
+            });
+            return required <= 0;
         };
 
         const armourPieces = [ArmourType.Head, ArmourType.Torso, ArmourType.Arms, ArmourType.Legs];
@@ -448,7 +454,7 @@ export const findBuilds = (
                 adjustPerksAndCells(prepickedItem, 1);
                 return;
             }
-            if (finished()) {
+            if (finished(weapon)) {
                 for (let j = i; j < 4; j++) {
                     armourSelections[armourPieces[j]] = armourDataCells[armourPieces[j]][CellType.Alacrity][0];
                 }
