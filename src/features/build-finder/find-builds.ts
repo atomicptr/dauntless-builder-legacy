@@ -380,7 +380,7 @@ export const findBuilds = (
             requestedSlots[cellType] += adjustment;
         }
 
-        const adjustWeapon = (weapon: Weapon, adjustment: number) => {
+        const adjustPerksAndCells = (weapon: Weapon | Armour, adjustment: number) => {
             if (weapon.perks) {
                 (weapon.perks.forEach(perk => {
                     if (perk.powerSurged) {
@@ -389,21 +389,6 @@ export const findBuilds = (
                 }))
             }
             (Array.isArray(weapon.cells) ? weapon.cells : [weapon.cells]).forEach(cell => {
-                if (cell) {
-                    adjustCell(cell, adjustment);
-                }
-            })
-        }
-
-        const adjustArmour = (armour: Armour, adjustment: number) => {
-            if (armour.perks) {
-                (armour.perks.forEach(perk => {
-                    if (perk.powerSurged) {
-                        adjustPerk(perk.name, adjustment);
-                    }
-                }))
-            }
-            (Array.isArray(armour.cells) ? armour.cells : [armour.cells]).forEach(cell => {
                 if (cell) {
                     adjustCell(cell, adjustment);
                 }
@@ -441,10 +426,10 @@ export const findBuilds = (
                         if (matchingBuilds.length > maxBuilds) {
                             return;
                         }
-                        adjustArmour(armourPiece, -1);
+                        adjustPerksAndCells(armourPiece, -1);
                         armourSelections[armourPieces[i]] = armourPiece;
                         chooseItem(i + 1, weapon, armourSelections);
-                        adjustArmour(armourPiece, 1);
+                        adjustPerksAndCells(armourPiece, 1);
                     }
                 }
             }
@@ -465,9 +450,9 @@ export const findBuilds = (
                 [ArmourType.Legs]: null,
             }
 
-            adjustWeapon(weapon, -1);
+            adjustPerksAndCells(weapon, -1);
             chooseItem(0, weapon, armourSelections);
-            adjustWeapon(weapon, 1);
+            adjustPerksAndCells(weapon, 1);
         }
 
         return matchingBuilds;
