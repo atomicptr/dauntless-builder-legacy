@@ -66,6 +66,7 @@ import { selectConfiguration, setFinderPerkMatching } from "@src/reducers/config
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import log from "@src/utils/logger";
 import { matchesSearchIn } from "@src/utils/search";
+import AvailablePerksChecker from "@src/worker/available-perks-checker?worker";
 import BuildFinderWorker from "@src/worker/build-finder?worker";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -118,39 +119,41 @@ const findBuilds = async (
     return convertFindBuildResultsToBuildModel(builds);
 };
 
+type AvailablePerkCheckResult = { [perkName: string]: boolean };
+
 const findAvailablePerks = async (
     weaponType: WeaponType | null,
-    requestedPerks: AssignedPerkValue[],
+    requestedPerks: AssignedPerkValue,
+    perksToAdd: string[],
     options: FinderItemDataOptions = {},
     useCache = true,
-): Promise<boolean[]> => {
-    const buildFinder = webworkerDisabled ? null : new BuildFinderWorker();
+): Promise<AvailablePerkCheckResult> => {
+    const perkChecker = webworkerDisabled ? null : new AvailablePerksChecker();
 
-    if (buildFinder === null) {
+    if (perkChecker === null) {
         log.warn("Web Worker based build finder is currently disabled due to not using Chrome!");
-        return Promise.resolve([]);
+        return Promise.resolve({});
     }
 
-    const fetchBuilds = async () => {
-        return new Promise<MatchingBuild[][]>(resolve => {
-            buildFinder.postMessage({ maxBuilds: 1, options, requestedPerks, weaponType });
+    const checkAvailablePerks = async () => {
+        return new Promise<AvailablePerkCheckResult>(resolve => {
+            perkChecker.postMessage({ options, perksToAdd, requestedPerks, weaponType });
 
-            buildFinder.addEventListener("message", message => {
+            perkChecker.addEventListener("message", message => {
                 const results = message.data;
                 resolve(results);
             });
         });
     };
 
-    const results = useCache
-        ? await cacheAsync<MatchingBuild[][]>("findAvailablePerks", async () => await fetchBuilds(), [
+    return useCache
+        ? await cacheAsync<AvailablePerkCheckResult>("findAvailablePerks", async () => await checkAvailablePerks(), [
+            perksToAdd,
             options,
             requestedPerks,
             weaponType,
         ])
-        : await fetchBuilds();
-
-    return results.map(res => res.length > 0);
+        : await checkAvailablePerks();
 };
 
 const BuildFinder: React.FC = () => {
@@ -262,6 +265,7 @@ const BuildFinder: React.FC = () => {
                 return { [perk.name]: true };
             }
 
+            // means we will do have to do a deep search later...
             return { [perk.name]: null };
         };
 
@@ -282,32 +286,24 @@ const BuildFinder: React.FC = () => {
                         newCanBeAddedMap = { ...newCanBeAddedMap, ...resultMap };
                     });
 
-                    const deepSearchKeys: string[] = [];
-                    const deepSearchPerks: AssignedPerkValue[] = [];
+                    const deepSearchPerks = Object.entries(newCanBeAddedMap)
+                        .filter(([_key, value]) => value === null)
+                        .map(([key]) => key);
 
-                    Object.entries(newCanBeAddedMap).forEach(([key, value]) => {
-                        if (value !== null) {
-                            return;
-                        }
-
-                        log.debug(`Have to do deep search for ${key}`, { selectedPerks });
-
-                        const requestedPerkValue = key in selectedPerks ? selectedPerks[key] + 3 : 3;
-                        const requestedPerks = { ...selectedPerks, [key]: requestedPerkValue };
-
-                        deepSearchKeys.push(key);
-                        deepSearchPerks.push(requestedPerks);
-                    });
+                    if (deepSearchPerks.length === 0) {
+                        return newCanBeAddedMap;
+                    }
 
                     const deepSearchPerksResult = await findAvailablePerks(
                         weaponType,
+                        selectedPerks,
                         deepSearchPerks,
                         finderOptions,
                         false,
                     );
 
-                    deepSearchKeys.forEach((key, index) => {
-                        newCanBeAddedMap[key as keyof typeof newCanBeAddedMap] = deepSearchPerksResult[index];
+                    Object.entries(deepSearchPerksResult).forEach(([key, value]) => {
+                        newCanBeAddedMap[key as keyof typeof newCanBeAddedMap] = value;
                     });
 
                     return newCanBeAddedMap;
