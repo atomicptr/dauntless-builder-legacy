@@ -208,6 +208,7 @@ export const findBuilds = (
     maxBuilds: number,
     options: FinderItemDataOptions = {},
 ) => {
+    const finderOptions = Object.assign({}, defaultFinderItemDataOptions, options);
     const itemData = createItemData(weaponType, lanternName, requestedPerks, options);
 
     type AssignedSlotValue = {
@@ -448,6 +449,9 @@ export const findBuilds = (
                         if (matchingBuilds.length > maxBuilds) {
                             return;
                         }
+                        if (finderOptions.removeExotics && armourPiece.rarity === ItemRarity.Exotic) {
+                            continue;
+                        }
                         adjustPerksAndCells(armourPiece, -1);
                         armourSelections[armourPieces[i]] = armourPiece;
                         chooseItem(i + 1, weapon, armourSelections);
@@ -463,6 +467,9 @@ export const findBuilds = (
                     }
                     if (matchingBuilds.length > maxBuilds) {
                         return;
+                    }
+                    if (finderOptions.removeExotics && armourPiece.rarity === ItemRarity.Exotic) {
+                        continue;
                     }
                     adjustPerksAndCells(armourPiece, -1);
                     armourSelections[armourPieces[i]] = armourPiece;
