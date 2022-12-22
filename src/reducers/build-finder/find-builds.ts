@@ -434,6 +434,21 @@ export const findBuilds = (
                     }
                 }
             }
+            for (const cell in requestedSlots) {
+                if (requestedSlots[cell as CellType] > 0) {
+                    const armourPiece = armourDataCells[armourPieces[i]][cell as CellType][0];
+                    if (!armourPiece) {
+                        continue;
+                    }
+                    if (matchingBuilds.length > maxBuilds) {
+                        return;
+                    }
+                    adjustPerksAndCells(armourPiece, -1);
+                    armourSelections[armourPieces[i]] = armourPiece;
+                    chooseItem(i + 1, weapon, armourSelections);
+                    adjustPerksAndCells(armourPiece, 1);
+                }
+            }
         }
 
         type ArmourSelectionData = {
