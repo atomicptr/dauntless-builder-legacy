@@ -1,6 +1,8 @@
 import * as fs from "fs";
 import path from "path";
+import sortJson from "sort-json";
 
+import { sortJsonOptions } from "../constants";
 import { RunConfig, Step } from "../Step";
 import { WithStepLogger } from "../WithStepLogger";
 
@@ -55,13 +57,12 @@ export class ArmourDataStep extends WithStepLogger implements Step {
 
         const data: {
             armours: {
-                [name: string]: Armour
-            }
+                [name: string]: Armour;
+            };
         } = JSON.parse(fs.readFileSync(dataJsonPath).toString());
 
         const findArmourPiecesByType = (type: ArmourType) => {
-            return Object.values(data.armours)
-                .filter(armourPiece => armourPiece.type === type);
+            return Object.values(data.armours).filter(armourPiece => armourPiece.type === type);
         };
 
         const cellToArmourArray = () => {
@@ -72,14 +73,14 @@ export class ArmourDataStep extends WithStepLogger implements Step {
                 [CellType.Finesse]: [] as Armour[],
                 [CellType.Fortitude]: [] as Armour[],
                 [CellType.Insight]: [] as Armour[],
-            }
-        }
+            };
+        };
 
         type ArmourDataCells = {
             [armourType in ArmourType]: {
                 [cellType in CellType]: Armour[];
-            }
-        }
+            };
+        };
 
         let armourDataCells: ArmourDataCells | null = null;
 
@@ -95,7 +96,7 @@ export class ArmourDataStep extends WithStepLogger implements Step {
                         [ArmourType.Torso]: cellToArmourArray(),
                         [ArmourType.Arms]: cellToArmourArray(),
                         [ArmourType.Legs]: cellToArmourArray(),
-                    }
+                    };
                 }
 
                 armourDataCells[armourType][cellType].push(armour);
@@ -109,26 +110,26 @@ export class ArmourDataStep extends WithStepLogger implements Step {
 
                     (Array.isArray(armour.cells) ? armour.cells : [armour.cells]).forEach(cell => {
                         if (armour.perks) {
-                            addArmour(armourType, cell, armour)
+                            addArmour(armourType, cell, armour);
                         }
-                    })
+                    });
                 }
-            }
+            };
 
             addArmours(ArmourType.Head);
             addArmours(ArmourType.Torso);
             addArmours(ArmourType.Arms);
             addArmours(ArmourType.Legs);
             return armourDataCells as unknown as ArmourDataCells; //heads[ArmourType.Head]["Aetheric Attunement"][CellType.Insight]
-        }
+        };
 
         type ArmourData = {
             [armourType in ArmourType]: {
                 [perkName: string]: {
                     [cellType in CellType]: Armour[];
-                }
-            }
-        }
+                };
+            };
+        };
 
         let armourData: ArmourData | null = null;
 
@@ -144,7 +145,7 @@ export class ArmourDataStep extends WithStepLogger implements Step {
                         [ArmourType.Torso]: {},
                         [ArmourType.Arms]: {},
                         [ArmourType.Legs]: {},
-                    }
+                    };
                 }
 
                 if (!(perkName in armourData[armourType])) {
@@ -162,18 +163,18 @@ export class ArmourDataStep extends WithStepLogger implements Step {
 
                     (Array.isArray(armour.cells) ? armour.cells : [armour.cells]).forEach(cell => {
                         if (armour.perks) {
-                            addArmour(armourType, armour.perks[0].name, cell, armour)
+                            addArmour(armourType, armour.perks[0].name, cell, armour);
                         }
-                    })
+                    });
                 }
-            }
+            };
 
             addArmours(ArmourType.Head);
             addArmours(ArmourType.Torso);
             addArmours(ArmourType.Arms);
             addArmours(ArmourType.Legs);
             return armourData as unknown as ArmourData; //heads[ArmourType.Head]["Aetheric Attunement"][CellType.Insight]
-        }
+        };
 
         const filepath = path.join(runConfig.targetDir, "armour_data.json");
 
@@ -186,5 +187,7 @@ export class ArmourDataStep extends WithStepLogger implements Step {
         this.log(`Writing ${filepath}...`);
 
         fs.writeFileSync(filepath2, JSON.stringify(generateArmourDataCells(), null, "    "));
+        sortJson.overwrite(filepath, sortJsonOptions);
+        sortJson.overwrite(filepath2, sortJsonOptions);
     }
 }

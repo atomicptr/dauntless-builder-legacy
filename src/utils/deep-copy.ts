@@ -3,4 +3,4 @@ export const deepCopy = <T>(obj: T): T => {
         return structuredClone(obj);
     }
     return JSON.parse(JSON.stringify(obj));
-}
+};

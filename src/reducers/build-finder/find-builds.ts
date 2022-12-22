@@ -1,13 +1,12 @@
 import armourDataJson from "@json/armour_data.json";
 import armourDataCellsJson from "@json/armour_data_cells.json";
-
 import { Armour, ArmourType } from "@src/data/Armour";
 import { BuildModel, findCellVariantByPerk, findLanternByName } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
 import dauntlessBuilderData from "@src/data/Data";
 import { ItemRarity } from "@src/data/ItemRarity";
 import { Lantern } from "@src/data/Lantern";
-import { Perk, PerkValue } from "@src/data/Perks";
+import { Perk } from "@src/data/Perks";
 import { Weapon, WeaponType } from "@src/data/Weapon";
 import { AssignedPerkValue } from "@src/reducers/build-finder/build-finder-selection-slice";
 import { deepCopy } from "@src/utils/deep-copy";
@@ -62,17 +61,17 @@ type ArmourData = {
     [armourType in ArmourType]: {
         [perkName: string]: {
             [cellType in CellType]: Armour[];
-        }
-    }
-}
+        };
+    };
+};
 
 const armourData: ArmourData = armourDataJson as unknown as ArmourData;
 
 type ArmourDataCells = {
     [armourType in ArmourType]: {
         [cellType in CellType]: Armour[];
-    }
-}
+    };
+};
 
 const armourDataCells: ArmourDataCells = armourDataCellsJson as unknown as ArmourDataCells;
 
@@ -147,12 +146,12 @@ const createItemData = (
         (mode: (a: boolean, b: boolean) => boolean = orMode) =>
             (item: Weapon | Armour) =>
                 mode(
-                    (item.perks && item.perks[0].name in requestedPerks) as boolean,
-                    ((item.cells &&
-                        (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
-                            cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
-                        )) ||
-                        (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
+                (item.perks && item.perks[0].name in requestedPerks) as boolean,
+                ((item.cells &&
+                    (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
+                        cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
+                    )) ||
+                    (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
                 );
 
     const createLegendaryWeaponBondWrapper = (weapon: Weapon): Weapon => {
@@ -214,7 +213,7 @@ export const findBuilds = (
 
     type AssignedSlotValue = {
         [cellType in CellType]: number;
-    }
+    };
     const requestedSlots: AssignedSlotValue = {
         [CellType.Prismatic]: 0,
         [CellType.Alacrity]: 0,
@@ -364,43 +363,48 @@ export const findBuilds = (
         const createBuildIdentifier = (build: IntermediateBuild, cellsSlotted: CellsSlottedMap): string =>
             md5(
                 "build::" +
-                Object.keys(sortObjectByKeys(build))
-                    .map(key => build[key as keyof IntermediateBuild].name)
-                    .join("::") +
-                Object.keys(sortObjectByKeys(cellsSlotted))
-                    .map(key => cellsSlotted[key as keyof CellsSlottedMap] ?? "Null")
-                    .join("::"),
+                    Object.keys(sortObjectByKeys(build))
+                        .map(key => build[key as keyof IntermediateBuild].name)
+                        .join("::") +
+                    Object.keys(sortObjectByKeys(cellsSlotted))
+                        .map(key => cellsSlotted[key as keyof CellsSlottedMap] ?? "Null")
+                        .join("::"),
             );
 
         const adjustPerk = (perkName: string, adjustment: number) => {
             if (requestedPerksCurrent[perkName] !== undefined) {
                 requestedPerksCurrent[perkName] += adjustment * 3;
             }
-            adjustCell(perkCellMap[perkName], adjustment)
-        }
+            adjustCell(perkCellMap[perkName], adjustment);
+        };
 
         const adjustCell = (cellType: CellType, adjustment: number) => {
             requestedSlots[cellType] += adjustment;
-        }
+        };
 
         const adjustPerksAndCells = (weapon: Weapon | Armour, adjustment: number) => {
             if (weapon.perks) {
-                (weapon.perks.forEach(perk => {
+                weapon.perks.forEach(perk => {
                     if (perk.powerSurged) {
                         adjustPerk(perk.name, adjustment);
                     }
-                }))
+                });
             }
             (Array.isArray(weapon.cells) ? weapon.cells : [weapon.cells]).forEach(cell => {
                 if (cell) {
                     adjustCell(cell, adjustment);
                 }
-            })
-        }
+            });
+        };
 
         const createBuild = (weapon: Weapon, armourSelections: ArmourSelectionData) => {
-            const build = createIntermediateBuild(weapon, armourSelections[ArmourType.Head] as Armour, armourSelections[ArmourType.Torso] as Armour,
-                armourSelections[ArmourType.Arms] as Armour, armourSelections[ArmourType.Legs] as Armour);
+            const build = createIntermediateBuild(
+                weapon,
+                armourSelections[ArmourType.Head] as Armour,
+                armourSelections[ArmourType.Torso] as Armour,
+                armourSelections[ArmourType.Arms] as Armour,
+                armourSelections[ArmourType.Legs] as Armour,
+            );
             const { fulfillsCriteria, perks, cellsSlotted } = evaluateBuild(build);
 
             if (!fulfillsCriteria) {
@@ -415,7 +419,7 @@ export const findBuilds = (
 
             matchingBuilds.push({ build, cellsSlotted, ident, perks });
             return;
-        }
+        };
 
         const finished = () => {
             for (const cell in requestedSlots) {
@@ -424,7 +428,7 @@ export const findBuilds = (
                 }
             }
             return true;
-        }
+        };
 
         const armourPieces = [ArmourType.Head, ArmourType.Torso, ArmourType.Arms, ArmourType.Legs];
 
@@ -446,7 +450,7 @@ export const findBuilds = (
             }
             if (finished()) {
                 for (let j = i; j < 4; j++) {
-                    armourSelections[armourPieces[j]] = armourDataCells[armourPieces[j]][CellType.Alacrity][0]
+                    armourSelections[armourPieces[j]] = armourDataCells[armourPieces[j]][CellType.Alacrity][0];
                 }
                 createBuild(weapon, armourSelections);
                 return;
@@ -457,7 +461,11 @@ export const findBuilds = (
             }
             for (const perk in requestedPerksCurrent) {
                 for (const cell in requestedSlots) {
-                    if (armourData[armourPieces[i]][perk] && requestedPerksCurrent[perk] > 0 && requestedSlots[cell as CellType] > 0) {
+                    if (
+                        armourData[armourPieces[i]][perk] &&
+                        requestedPerksCurrent[perk] > 0 &&
+                        requestedSlots[cell as CellType] > 0
+                    ) {
                         const armourPiece = armourData[armourPieces[i]][perk][cell as CellType][0];
                         if (!armourPiece) {
                             continue;
@@ -493,11 +501,11 @@ export const findBuilds = (
                     adjustPerksAndCells(armourPiece, 1);
                 }
             }
-        }
+        };
 
         type ArmourSelectionData = {
-            [armourType in ArmourType]: Armour | null
-        }
+            [armourType in ArmourType]: Armour | null;
+        };
 
         for (const weapon of itemData.weapons) {
             if (matchingBuilds.length > maxBuilds) {
@@ -508,7 +516,7 @@ export const findBuilds = (
                 [ArmourType.Torso]: null,
                 [ArmourType.Arms]: null,
                 [ArmourType.Legs]: null,
-            }
+            };
 
             adjustPerksAndCells(weapon, -1);
             chooseItem(0, weapon, armourSelections);
@@ -558,4 +566,3 @@ export const convertFindBuildResultsToBuildModel = (matchingBuilds: MatchingBuil
 };
 
 const orMode = (a: boolean, b: boolean) => a || b;
-const andMode = (a: boolean, b: boolean) => a && b;
