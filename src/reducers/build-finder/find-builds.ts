@@ -10,6 +10,7 @@ import { Lantern } from "@src/data/Lantern";
 import { Perk, PerkValue } from "@src/data/Perks";
 import { Weapon, WeaponType } from "@src/data/Weapon";
 import { AssignedPerkValue } from "@src/reducers/build-finder/build-finder-selection-slice";
+import { deepCopy } from "@src/utils/deep-copy";
 import sortObjectByKeys from "@src/utils/sort-object-by-keys";
 import md5 from "md5";
 import { match } from "ts-pattern";
@@ -230,7 +231,7 @@ export const findBuilds = (
         }
     }
 
-    const requestedPerksCurrent: AssignedPerkValue = structuredClone(requestedPerks);
+    const requestedPerksCurrent: AssignedPerkValue = deepCopy(requestedPerks);
 
     const determineBasePerks = (build: IntermediateBuild): AssignedPerkValue => {
         const perkStrings = Object.values(build)
