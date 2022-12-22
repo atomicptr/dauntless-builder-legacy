@@ -19,8 +19,16 @@ jobs:
           node-version: 16
           cache: "yarn"
       - run: yarn install
-      - run: |
+      - name: Lint & Sanity Checks
+        run: |
           yarn lint
           yarn build:deps
           tsc
+      - name: Tests
+        run: |
           yarn test
+      - name: Benchmarks
+        run: |
+          yarn benchmark
+        # only run on pull requests
+        if: github.event_name == 'pull_request'

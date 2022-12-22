@@ -4,6 +4,7 @@
 /public/map
 /public/sitemap.xml
 /src/json/data.json
+/benchmarks
 
 # dev stuff
 /map
