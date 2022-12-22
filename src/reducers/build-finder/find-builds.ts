@@ -209,6 +209,7 @@ export const findBuilds = (
     options: FinderItemDataOptions = {},
 ) => {
     const finderOptions = Object.assign({}, defaultFinderItemDataOptions, options);
+    const { pickerHead, pickerTorso, pickerArms, pickerLegs } = finderOptions;
     const itemData = createItemData(weaponType, lanternName, requestedPerks, options);
 
     type AssignedSlotValue = {
@@ -428,6 +429,21 @@ export const findBuilds = (
         const armourPieces = [ArmourType.Head, ArmourType.Torso, ArmourType.Arms, ArmourType.Legs];
 
         const chooseItem = (i: number, weapon: Weapon, armourSelections: ArmourSelectionData) => {
+            const prepickedItem = match<ArmourType, Armour | undefined | null>(armourPieces[i])
+                .with(ArmourType.Head, () => pickerHead)
+                .with(ArmourType.Torso, () => pickerTorso)
+                .with(ArmourType.Arms, () => pickerArms)
+                .with(ArmourType.Legs, () => pickerLegs)
+                .otherwise(() => null);
+
+            if (prepickedItem) {
+                armourSelections[armourPieces[i]] = prepickedItem;
+                adjustPerksAndCells(prepickedItem, -1);
+                armourSelections[armourPieces[i]] = prepickedItem;
+                chooseItem(i + 1, weapon, armourSelections);
+                adjustPerksAndCells(prepickedItem, 1);
+                return;
+            }
             if (finished()) {
                 for (let j = i; j < 4; j++) {
                     armourSelections[armourPieces[j]] = armourDataCells[armourPieces[j]][CellType.Alacrity][0]
