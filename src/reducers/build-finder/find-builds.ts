@@ -10,7 +10,6 @@ import { Lantern } from "@src/data/Lantern";
 import { Perk, PerkValue } from "@src/data/Perks";
 import { Weapon, WeaponType } from "@src/data/Weapon";
 import { AssignedPerkValue } from "@src/reducers/build-finder/build-finder-selection-slice";
-import createPermutation from "@src/utils/create-permutation";
 import sortObjectByKeys from "@src/utils/sort-object-by-keys";
 import md5 from "md5";
 import { match } from "ts-pattern";
@@ -55,10 +54,6 @@ export interface MatchingBuild {
 
 export interface FinderItemData {
     weapons: Weapon[];
-    head: Armour[];
-    torso: Armour[];
-    arms: Armour[];
-    legs: Armour[];
     lantern: Lantern;
 }
 
@@ -145,7 +140,7 @@ const createItemData = (
 ): FinderItemData => {
     const finderOptions = Object.assign({}, defaultFinderItemDataOptions, options);
 
-    const { pickerWeapon, pickerHead, pickerTorso, pickerArms, pickerLegs } = finderOptions;
+    const { pickerWeapon } = finderOptions;
 
     const filterPerksAndCells =
         (mode: (a: boolean, b: boolean) => boolean = orMode) =>
@@ -158,44 +153,6 @@ const createItemData = (
                         )) ||
                         (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
                 );
-
-    const findMatchingArmourPiecesByType = (type: ArmourType) =>
-        findArmourPiecesByType(type).filter(
-            filterPerksAndCells(Object.keys(requestedPerks).length <= 3 ? orMode : andMode),
-        );
-
-    const findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered = (type: ArmourType): Armour[] => {
-        const prepickedItem = match<ArmourType, Armour | undefined | null>(type)
-            .with(ArmourType.Head, () => pickerHead)
-            .with(ArmourType.Torso, () => pickerTorso)
-            .with(ArmourType.Arms, () => pickerArms)
-            .with(ArmourType.Legs, () => pickerLegs)
-            .otherwise(() => null);
-
-        if (prepickedItem) {
-            return [prepickedItem];
-        }
-
-        let matching = findMatchingArmourPiecesByType(type);
-        for (const perk in requestedPerks) {
-            const hasMatchingCellSlot =
-                Object.values(matching)
-                    .map(armourPiece => (Array.isArray(armourPiece.cells) ? armourPiece.cells : [armourPiece.cells]))
-                    .filter(cells => cells.indexOf(perkCellMap[perk]) > -1).length > 0;
-            if (!hasMatchingCellSlot) {
-                matching = matching.concat(findArmourPieceByCell(type, perk, options));
-            }
-        }
-        return matching;
-    };
-
-    const findArmourPieceByCell = (type: ArmourType, perkName: string, options: FinderItemDataOptions = {}) => {
-        const hasMatchingCellSlot = (cells: CellType | CellType[] | null, slot: CellType) =>
-            (Array.isArray(cells) ? cells : [cells]).indexOf(slot) > -1;
-        return findArmourPiecesByType(type, options).filter(armourPiece =>
-            hasMatchingCellSlot(armourPiece.cells, perkCellMap[perkName]),
-        )[0];
-    };
 
     const createLegendaryWeaponBondWrapper = (weapon: Weapon): Weapon => {
         // legendaries disable so we don't need wrappers
@@ -237,11 +194,7 @@ const createItemData = (
         .map(createLegendaryWeaponBondWrapper);
 
     return {
-        arms: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Arms),
-        head: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Head),
         lantern: findLanternByName(lanternName) as Lantern,
-        legs: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Legs),
-        torso: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Torso),
         weapons: pickerWeapon
             ? matchingWeapons.filter(weapon => weapon.name.startsWith(pickerWeapon.name))
             : matchingWeapons.filter(filterPerksAndCells()),
@@ -277,11 +230,7 @@ export const findBuilds = (
         }
     }
 
-    const requestedPerksCurrent: AssignedPerkValue = {}
-
-    for (const perkName in requestedPerks) {
-        requestedPerksCurrent[perkName] = requestedPerks[perkName];
-    }
+    const requestedPerksCurrent: AssignedPerkValue = structuredClone(requestedPerks);
 
     const determineBasePerks = (build: IntermediateBuild): AssignedPerkValue => {
         const perkStrings = Object.values(build)
