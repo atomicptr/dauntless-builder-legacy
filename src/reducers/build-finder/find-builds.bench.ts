@@ -3,6 +3,48 @@ import { findBuilds } from "@src/reducers/build-finder/find-builds";
 import { benchmarkSuite } from "jest-bench";
 
 benchmarkSuite("findBuilds", {
+    ["a random build test"]: () => {
+        findBuilds(
+            WeaponType.Repeater,
+            {
+                "Aetheric Evasion": 3,
+                Catalyst: 3,
+                Deconstruction: 3,
+                Galvanized: 3,
+                Medic: 3,
+                Merciless: 3,
+                Pacifier: 3,
+                Stop: 3,
+                Vampiric: 3,
+                "Weighted Strikes": 3,
+                Zeal: 3,
+            },
+            50,
+            {
+                removeExotics: false,
+                removeLegendary: true,
+            },
+        );
+    },
+    ["another random build test"]: () => {
+        findBuilds(
+            WeaponType.Repeater,
+            {
+                Adrenaline: 6,
+                Berserker: 3,
+                Catalyst: 3,
+                Cunning: 6,
+                Endurance: 6,
+                Overpower: 3,
+                Predator: 6,
+            },
+            50,
+            {
+                removeExotics: false,
+                removeLegendary: true,
+            },
+        );
+    },
     ["find builds with 3x Alacrity cells"]: () => {
         findBuilds(
             WeaponType.Repeater,
@@ -46,29 +88,6 @@ benchmarkSuite("findBuilds", {
                 Endurance: 6,
                 Evasion: 6,
                 "Evasive Fury": 6,
-            },
-            50,
-            {
-                removeExotics: false,
-                removeLegendary: true,
-            },
-        );
-    },
-    ["random build test"]: () => {
-        findBuilds(
-            WeaponType.Repeater,
-            {
-                "Aetheric Evasion": 3,
-                Catalyst: 3,
-                Deconstruction: 3,
-                Galvanized: 3,
-                Medic: 3,
-                Merciless: 3,
-                Pacifier: 3,
-                Stop: 3,
-                Vampiric: 3,
-                "Weighted Strikes": 3,
-                Zeal: 3,
             },
             50,
             {
