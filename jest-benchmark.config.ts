@@ -2,10 +2,10 @@ import config from "./jest.config";
 
 export default {
     ...config,
+    reporters: ["default", "jest-bench/reporter"],
     testEnvironment: "jest-bench/environment",
     testEnvironmentOptions: {
         testEnvironment: "jsdom",
     },
-    reporters: ["default", "jest-bench/reporter"],
     testRegex: "(\\.bench)\\.(ts|tsx|js)$",
 };
