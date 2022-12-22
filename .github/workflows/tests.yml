@@ -24,3 +24,4 @@ jobs:
           yarn build:deps
           tsc
           yarn test
+          yarn benchmark
