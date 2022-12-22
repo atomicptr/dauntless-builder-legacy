@@ -3,7 +3,58 @@ import { findBuilds } from "@src/reducers/build-finder/find-builds";
 import { benchmarkSuite } from "jest-bench";
 
 benchmarkSuite("findBuilds", {
-    ["random expensive test"]: () => {
+    ["find builds with 3x Alacrity cells"]: () => {
+        findBuilds(
+            WeaponType.Repeater,
+            {
+                Adrenaline: 6,
+                Agility: 6,
+                "Assassin's Frenzy": 6,
+            },
+            50,
+            {
+                removeExotics: false,
+                removeLegendary: true,
+            },
+        );
+    },
+    ["find builds with 5x Alacrity cells"]: () => {
+        findBuilds(
+            WeaponType.Repeater,
+            {
+                Adrenaline: 6,
+                Agility: 6,
+                "Assassin's Frenzy": 6,
+                Conditioning: 6,
+                Endurance: 6,
+            },
+            50,
+            {
+                removeExotics: false,
+                removeLegendary: true,
+            },
+        );
+    },
+    ["find no builds due to invalid criteria"]: () => {
+        findBuilds(
+            WeaponType.Repeater,
+            {
+                Adrenaline: 6,
+                Agility: 6,
+                "Assassin's Frenzy": 6,
+                Conditioning: 6,
+                Endurance: 6,
+                Evasion: 6,
+                "Evasive Fury": 6,
+            },
+            50,
+            {
+                removeExotics: false,
+                removeLegendary: true,
+            },
+        );
+    },
+    ["random build test"]: () => {
         findBuilds(
             WeaponType.Repeater,
             {

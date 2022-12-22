@@ -13,6 +13,7 @@
         "build:frontend": "vite build",
         "dev": "vite dev",
         "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
+        "bench": "yarn benchmark",
         "benchmark": "yarn test --projects jest-benchmark.config.ts",
         "deploy": "yarn build && ./scripts/deploy.sh",
         "lint": "yarn lint:json && eslint .",
