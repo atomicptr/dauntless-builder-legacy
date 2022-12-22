@@ -181,7 +181,7 @@
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15575687/medium/88579217490bc561a6529fa3da43872f.jpeg",
-        "proofreader": false,
+        "proofreader": true,
         "username": "XiiiAlberto"
     },
     {

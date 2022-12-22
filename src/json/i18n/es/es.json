@@ -78,7 +78,7 @@
         },
         "build-finder": {
             "builds-title": "Equipamientos ({{num}})",
-            "clear-items": "Limpiar elementos",
+            "clear-items": "Limpiar objetos",
             "clear-perks": "Borrar todas las ventajas",
             "dev-number-of-builds": "Número de equipamientos: {{num}}",
             "dev-number-of-perks": "Número de ventajas seleccionadas: {{num}}",
@@ -113,7 +113,7 @@
             "localization-title": "Traducción",
             "test-builds": "Probar Builds",
             "title": "Inicio",
-            "welcome-text": "una aplicación web gratuita y de código abierto para crear y compartir construcciones para el popular juego de caza de monstruos Dauntless.",
+            "welcome-text": "Una aplicación web gratuita y de código abierto para crear y compartir equipamientos para el popular juego de caza de monstruos Dauntless.",
             "welcome-title": "Bienvenido a Dauntless Builder"
         },
         "metabuilds": {
@@ -240,7 +240,7 @@
             "title": "Crear nueva build"
         },
         "settings": {
-            "community-language": "This language is not officially supported by Dauntless, but members of our community decided to add a translation for Dauntless Builder regardless.",
+            "community-language": "Este idioma no está soportado oficialmente por Dauntless, pero los miembros de nuestra comunidad decidieron añadir una traducción para Dauntless Builder a pesar de todo.",
             "data": "Datos de la aplicación",
             "data-export": "Exportar",
             "data-import": "Importar",
@@ -282,7 +282,7 @@
                     "Shrowd.0": "Puedes usar el contraataque de Disciplina cuando el Shrowd salta y se va a teletransportar.",
                     "Skarn.0": "Si no se utilizan armas contundentes (golpeadores, martillo) enfocarse en la cola durante la rabia, el hitbox de roca tiene un gran hueco allí.",
                     "Skarn.1": "A diferencia de otras armas, en los repetidores preferirás la unión del Drask porque querrás disparar a la cabeza durante toda la cacería.",
-                    "Thunderdeep Drask.0": "He do be a fast boi."
+                    "Thunderdeep Drask.0": "Es un Behemoth rápido."
                 },
                 "title": "Dauntless Pruebas Builds - 1.10+"
             },
@@ -387,7 +387,7 @@
         "search": "Buscar",
         "torso-armour": "Armadura de Torso",
         "unique-effect": "Efecto único",
-        "unselect": "Nada",
+        "unselect": "Nada seleccionado",
         "weapon": "Arma",
         "weapon-type": "Tipo de Arma",
         "weapon-types": {
