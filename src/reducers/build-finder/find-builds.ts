@@ -396,26 +396,47 @@ export const findBuilds = (
             })
         }
 
+        const createBuild = (weapon: Weapon, armourSelections: ArmourSelectionData) => {
+            const build = createIntermediateBuild(weapon, armourSelections[ArmourType.Head] as Armour, armourSelections[ArmourType.Torso] as Armour,
+                armourSelections[ArmourType.Arms] as Armour, armourSelections[ArmourType.Legs] as Armour);
+            const { fulfillsCriteria, perks, cellsSlotted } = evaluateBuild(build);
+
+            if (!fulfillsCriteria) {
+                return;
+            }
+
+            const ident = createBuildIdentifier(build, cellsSlotted);
+            const doesBuildAlreadyExist = matchingBuilds.find(build => build.ident === ident) !== undefined;
+            if (doesBuildAlreadyExist) {
+                return;
+            }
+
+            matchingBuilds.push({ build, cellsSlotted, ident, perks });
+            return;
+        }
+
+        const finished = () => {
+            for (const cell in requestedSlots) {
+                if (requestedSlots[cell as CellType] > 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         const armourPieces = [ArmourType.Head, ArmourType.Torso, ArmourType.Arms, ArmourType.Legs];
 
         const chooseItem = (i: number, weapon: Weapon, armourSelections: ArmourSelectionData) => {
+            if (finished()) {
+                for (let j = i; j < 4; j++) {
+                    armourSelections[armourPieces[j]] = armourDataCells[armourPieces[j]][CellType.Alacrity][0]
+                }
+                createBuild(weapon, armourSelections);
+                return;
+            }
             if (i > 3) {
-                const build = createIntermediateBuild(weapon, armourSelections[ArmourType.Head] as Armour, armourSelections[ArmourType.Torso] as Armour,
-                    armourSelections[ArmourType.Arms] as Armour, armourSelections[ArmourType.Legs] as Armour);
-                const { fulfillsCriteria, perks, cellsSlotted } = evaluateBuild(build);
-
-                if (!fulfillsCriteria) {
-                    return;
-                }
-
-                const ident = createBuildIdentifier(build, cellsSlotted);
-                const doesBuildAlreadyExist = matchingBuilds.find(build => build.ident === ident) !== undefined;
-                if (doesBuildAlreadyExist) {
-                    return;
-                }
-
-                matchingBuilds.push({ build, cellsSlotted, ident, perks });
-                return
+                createBuild(weapon, armourSelections);
+                return;
             }
             for (const perk in requestedPerksCurrent) {
                 for (const cell in requestedSlots) {
