@@ -1,6 +1,6 @@
-import { WeaponType } from "@src/data/Weapon";
-import { AssignedPerkValue } from "@src/reducers/build-finder/build-finder-selection-slice";
-import { findBuilds, MatchingBuild } from "@src/reducers/build-finder/find-builds";
+import {WeaponType} from "@src/data/Weapon";
+import {AssignedPerkValue} from "@src/reducers/build-finder/build-finder-selection-slice";
+import {findBuilds, MatchingBuild} from "@src/reducers/build-finder/find-builds";
 
 describe("findBuilds", () => {
     const hasWhatYouWanted = (requestedPerks: AssignedPerkValue, build: MatchingBuild) => {
@@ -45,6 +45,54 @@ describe("findBuilds", () => {
             Conditioning: 6,
             Endurance: 6,
         });
+    });
+
+    it("finds the right builds when asking for something similar to a meta build", () => {
+        findsTheRightBuilds(WeaponType.Sword, {
+            "Adrenaline": 6,
+            "Berserker": 3,
+            "Catalyst": 3,
+            "Cunning": 6,
+            "Endurance": 6,
+            "Overpower": 3,
+            "Predator": 6
+        });
+    });
+
+    it("finds a certain build", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                "Adrenaline": 6,
+                "Berserker": 3,
+                "Catalyst": 3,
+                "Cunning": 6,
+                "Endurance": 6,
+                "Overpower": 3,
+                "Predator": 6
+            },
+            50,
+            {
+                removeLegendary: true,
+            }
+        );
+
+        const build = builds.find(build => (
+            build.build.weapon.name === "Cry of the Shrike" &&
+            build.cellsSlotted.weapon[0] === "Endurance" &&
+            build.cellsSlotted.weapon[1] === "Endurance" &&
+            build.build.head.name == "Timeweave Helm" &&
+            build.cellsSlotted.head[0] === "Cunning" &&
+            build.build.torso.name === "Skraevwing Jacket" &&
+            build.cellsSlotted.torso[0] === "Adrenaline" &&
+            build.build.arms.name === "Torgadoro's Brawn" &&
+            build.cellsSlotted.arms[0] === "Berserker" &&
+            build.build.legs.name === "Thrax's Guile" &&
+            build.cellsSlotted.legs[0] === "Predator" &&
+            build.cellsSlotted.lantern[0] === "Catalyst"
+        ));
+
+        expect(build).toBeTruthy();
     });
 
     it("finds no builds when the criterias are nonsense", () => {
