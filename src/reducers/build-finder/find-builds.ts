@@ -421,15 +421,6 @@ export const findBuilds = (
             return;
         };
 
-        const getPrePickedItem = (armourType: ArmourType) => {
-            return match<ArmourType, Armour | undefined | null>(armourType)
-                .with(ArmourType.Head, () => pickerHead)
-                .with(ArmourType.Torso, () => pickerTorso)
-                .with(ArmourType.Arms, () => pickerArms)
-                .with(ArmourType.Legs, () => pickerLegs)
-                .otherwise(() => null);
-        };
-
         const finished = (weapon: Weapon) => {
             let required = 0;
             for (const cell in requestedSlots) {
@@ -448,29 +439,21 @@ export const findBuilds = (
         const armourPieces = [ArmourType.Head, ArmourType.Torso, ArmourType.Arms, ArmourType.Legs];
 
         const chooseItem = (i: number, weapon: Weapon, armourSelections: ArmourSelectionData) => {
-            const prepickedItem = getPrePickedItem(armourPieces[i]);
-
-            if (prepickedItem) {
-                adjustPerksAndCells(prepickedItem, -1);
-                armourSelections[armourPieces[i]] = prepickedItem;
-                chooseItem(i + 1, weapon, armourSelections);
-                adjustPerksAndCells(prepickedItem, 1);
+            if (i > 3) {
+                createBuild(weapon, armourSelections);
                 return;
             }
             if (finished(weapon)) {
                 for (let j = i; j < 4; j++) {
-                    const prepickedArmour = getPrePickedItem(armourPieces[j]);
-                    if (prepickedArmour) {
-                        armourSelections[armourPieces[j]] = prepickedArmour;
-                    } else {
+                    if (armourSelections[armourPieces[i]] === null) {
                         armourSelections[armourPieces[j]] = armourDataCells[armourPieces[j]][CellType.Alacrity][0];
                     }
                 }
                 createBuild(weapon, armourSelections);
                 return;
             }
-            if (i > 3) {
-                createBuild(weapon, armourSelections);
+            if (armourSelections[armourPieces[i]] !== null) {
+                chooseItem(i + 1, weapon, armourSelections);
                 return;
             }
             for (const perk in requestedPerksCurrent) {
@@ -494,6 +477,7 @@ export const findBuilds = (
                         armourSelections[armourPieces[i]] = armourPiece;
                         chooseItem(i + 1, weapon, armourSelections);
                         adjustPerksAndCells(armourPiece, 1);
+                        armourSelections[armourPieces[i]] = null;
                     }
                 }
             }
@@ -513,6 +497,7 @@ export const findBuilds = (
                     armourSelections[armourPieces[i]] = armourPiece;
                     chooseItem(i + 1, weapon, armourSelections);
                     adjustPerksAndCells(armourPiece, 1);
+                    armourSelections[armourPieces[i]] = null;
                 }
             }
         };
@@ -521,16 +506,29 @@ export const findBuilds = (
             [armourType in ArmourType]: Armour | null;
         };
 
+        const armourSelections: ArmourSelectionData = {
+            [ArmourType.Head]: null,
+            [ArmourType.Torso]: null,
+            [ArmourType.Arms]: null,
+            [ArmourType.Legs]: null,
+        };
+
+        armourPieces.forEach(armourType => {
+            const prePickedItem = match<ArmourType, Armour | undefined | null>(armourType)
+                .with(ArmourType.Head, () => pickerHead)
+                .with(ArmourType.Torso, () => pickerTorso)
+                .with(ArmourType.Arms, () => pickerArms)
+                .with(ArmourType.Legs, () => pickerLegs)
+                .otherwise(() => null);
+            if (prePickedItem) {
+                armourSelections[armourType] = prePickedItem;
+            }
+        });
+
         for (const weapon of itemData.weapons) {
             if (matchingBuilds.length > maxBuilds) {
                 return matchingBuilds;
             }
-            const armourSelections: ArmourSelectionData = {
-                [ArmourType.Head]: null,
-                [ArmourType.Torso]: null,
-                [ArmourType.Arms]: null,
-                [ArmourType.Legs]: null,
-            };
 
             adjustPerksAndCells(weapon, -1);
             chooseItem(0, weapon, armourSelections);
