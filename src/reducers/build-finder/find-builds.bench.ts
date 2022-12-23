@@ -3,6 +3,48 @@ import { findBuilds } from "@src/reducers/build-finder/find-builds";
 import { benchmarkSuite } from "jest-bench";
 
 benchmarkSuite("findBuilds", {
+    ["a random build test"]: () => {
+        findBuilds(
+            WeaponType.Repeater,
+            {
+                "Aetheric Evasion": 3,
+                Catalyst: 3,
+                Deconstruction: 3,
+                Galvanized: 3,
+                Medic: 3,
+                Merciless: 3,
+                Pacifier: 3,
+                Stop: 3,
+                Vampiric: 3,
+                "Weighted Strikes": 3,
+                Zeal: 3,
+            },
+            50,
+            {
+                removeExotics: false,
+                removeLegendary: true,
+            },
+        );
+    },
+    ["another random build test"]: () => {
+        findBuilds(
+            WeaponType.Repeater,
+            {
+                Adrenaline: 6,
+                Berserker: 3,
+                Catalyst: 3,
+                Cunning: 6,
+                Endurance: 6,
+                Overpower: 3,
+                Predator: 6,
+            },
+            50,
+            {
+                removeExotics: false,
+                removeLegendary: true,
+            },
+        );
+    },
     ["find builds with 3x Alacrity cells"]: () => {
         findBuilds(
             WeaponType.Repeater,
@@ -35,6 +77,46 @@ benchmarkSuite("findBuilds", {
             },
         );
     },
+    ["find builds with a lot of +3 options"]: () => {
+        findBuilds(
+            WeaponType.Sword,
+            {
+                Acidic: 3,
+                Adrenaline: 3,
+                Aegis: 3,
+                Aetherborne: 3,
+                Aetherhunter: 3,
+                "Aetheric Attunement": 3,
+                Agility: 3,
+                "Assassin's Vigour": 3,
+                Barbed: 3,
+                Berserker: 3,
+                Cunning: 3,
+            },
+            50,
+            {
+                removeExotics: true,
+                removeLegendary: true,
+            },
+        );
+    },
+    ["find builds with exotics"]: () => {
+        findBuilds(
+            WeaponType.Repeater,
+            {
+                Aetherhunter: 6,
+                Bladestorm: 6,
+                Rage: 6,
+                Ragehunter: 6,
+                Tenacious: 6,
+            },
+            50,
+            {
+                removeExotics: false,
+                removeLegendary: true,
+            },
+        );
+    },
     ["find no builds due to invalid criteria"]: () => {
         findBuilds(
             WeaponType.Repeater,
@@ -46,29 +128,6 @@ benchmarkSuite("findBuilds", {
                 Endurance: 6,
                 Evasion: 6,
                 "Evasive Fury": 6,
-            },
-            50,
-            {
-                removeExotics: false,
-                removeLegendary: true,
-            },
-        );
-    },
-    ["random build test"]: () => {
-        findBuilds(
-            WeaponType.Repeater,
-            {
-                "Aetheric Evasion": 3,
-                Catalyst: 3,
-                Deconstruction: 3,
-                Galvanized: 3,
-                Medic: 3,
-                Merciless: 3,
-                Pacifier: 3,
-                Stop: 3,
-                Vampiric: 3,
-                "Weighted Strikes": 3,
-                Zeal: 3,
             },
             50,
             {

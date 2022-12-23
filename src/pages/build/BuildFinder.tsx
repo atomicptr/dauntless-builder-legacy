@@ -249,7 +249,7 @@ const BuildFinder: React.FC = () => {
                 }
 
                 if (buildPerk.name in selectedPerks) {
-                    return buildPerk.count === selectedPerks[buildPerk.count] + 3;
+                    return buildPerk.count === selectedPerks[buildPerk.name] + 3;
                 }
 
                 return true;
