@@ -1,6 +1,6 @@
-import { WeaponType } from "@src/data/Weapon";
-import { AssignedPerkValue } from "@src/reducers/build-finder/build-finder-selection-slice";
-import { findBuilds, MatchingBuild } from "@src/reducers/build-finder/find-builds";
+import {WeaponType} from "@src/data/Weapon";
+import {AssignedPerkValue} from "@src/reducers/build-finder/build-finder-selection-slice";
+import {findBuilds, MatchingBuild} from "@src/reducers/build-finder/find-builds";
 
 describe("findBuilds", () => {
     const hasWhatYouWanted = (requestedPerks: AssignedPerkValue, build: MatchingBuild) => {
@@ -102,6 +102,36 @@ describe("findBuilds", () => {
         );
 
         expect(build).toBeTruthy();
+    });
+
+    it("should find the number of max builds for a wide selection", () => {
+        const maxBuilds = 100;
+
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                "Berserker": 3,
+                "Tenacious": 6
+            },
+            maxBuilds,
+        );
+
+        expect(builds.length).toBe(maxBuilds);
+    });
+
+    it("should find the number of max builds for a wide selection with reduced maxBuilds", () => {
+        const maxBuilds = 5;
+
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                "Berserker": 3,
+                "Tenacious": 6
+            },
+            maxBuilds,
+        );
+
+        expect(builds.length).toBe(maxBuilds);
     });
 
     it("finds no builds when the criterias are nonsense", () => {
