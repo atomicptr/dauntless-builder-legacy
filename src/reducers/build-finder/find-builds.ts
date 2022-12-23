@@ -146,12 +146,12 @@ const createItemData = (
         (mode: (a: boolean, b: boolean) => boolean = orMode) =>
             (item: Weapon | Armour) =>
                 mode(
-                (item.perks && item.perks[0].name in requestedPerks) as boolean,
-                ((item.cells &&
-                    (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
-                        cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
-                    )) ||
-                    (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
+                    (item.perks && item.perks[0].name in requestedPerks) as boolean,
+                    ((item.cells &&
+                        (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
+                            cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
+                        )) ||
+                        (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
                 );
 
     const createLegendaryWeaponBondWrapper = (weapon: Weapon): Weapon => {
@@ -363,12 +363,12 @@ export const findBuilds = (
         const createBuildIdentifier = (build: IntermediateBuild, cellsSlotted: CellsSlottedMap): string =>
             md5(
                 "build::" +
-                    Object.keys(sortObjectByKeys(build))
-                        .map(key => build[key as keyof IntermediateBuild].name)
-                        .join("::") +
-                    Object.keys(sortObjectByKeys(cellsSlotted))
-                        .map(key => cellsSlotted[key as keyof CellsSlottedMap] ?? "Null")
-                        .join("::"),
+                Object.keys(sortObjectByKeys(build))
+                    .map(key => build[key as keyof IntermediateBuild].name)
+                    .join("::") +
+                Object.keys(sortObjectByKeys(cellsSlotted))
+                    .map(key => cellsSlotted[key as keyof CellsSlottedMap] ?? "Null")
+                    .join("::"),
             );
 
         const adjustPerk = (perkName: string, adjustment: number) => {
@@ -421,6 +421,15 @@ export const findBuilds = (
             return;
         };
 
+        const getPrePickedItem = (armourType: ArmourType) => {
+            return match<ArmourType, Armour | undefined | null>(armourType)
+                .with(ArmourType.Head, () => pickerHead)
+                .with(ArmourType.Torso, () => pickerTorso)
+                .with(ArmourType.Arms, () => pickerArms)
+                .with(ArmourType.Legs, () => pickerLegs)
+                .otherwise(() => null);
+        }
+
         const finished = (weapon: Weapon) => {
             let required = 0;
             for (const cell in requestedSlots) {
@@ -439,15 +448,9 @@ export const findBuilds = (
         const armourPieces = [ArmourType.Head, ArmourType.Torso, ArmourType.Arms, ArmourType.Legs];
 
         const chooseItem = (i: number, weapon: Weapon, armourSelections: ArmourSelectionData) => {
-            const prepickedItem = match<ArmourType, Armour | undefined | null>(armourPieces[i])
-                .with(ArmourType.Head, () => pickerHead)
-                .with(ArmourType.Torso, () => pickerTorso)
-                .with(ArmourType.Arms, () => pickerArms)
-                .with(ArmourType.Legs, () => pickerLegs)
-                .otherwise(() => null);
+            const prepickedItem = getPrePickedItem(armourPieces[i]);
 
             if (prepickedItem) {
-                armourSelections[armourPieces[i]] = prepickedItem;
                 adjustPerksAndCells(prepickedItem, -1);
                 armourSelections[armourPieces[i]] = prepickedItem;
                 chooseItem(i + 1, weapon, armourSelections);
@@ -456,7 +459,12 @@ export const findBuilds = (
             }
             if (finished(weapon)) {
                 for (let j = i; j < 4; j++) {
-                    armourSelections[armourPieces[j]] = armourDataCells[armourPieces[j]][CellType.Alacrity][0];
+                    const prepickedArmour = getPrePickedItem(armourPieces[j]);
+                    if (prepickedArmour) {
+                        armourSelections[armourPieces[j]] = prepickedArmour;
+                    } else {
+                        armourSelections[armourPieces[j]] = armourDataCells[armourPieces[j]][CellType.Alacrity][0];
+                    }
                 }
                 createBuild(weapon, armourSelections);
                 return;
