@@ -445,7 +445,7 @@ export const findBuilds = (
             }
             if (finished(weapon)) {
                 for (let j = i; j < 4; j++) {
-                    if (armourSelections[armourPieces[i]] === null) {
+                    if (armourSelections[armourPieces[j]] === null) {
                         armourSelections[armourPieces[j]] = armourDataCells[armourPieces[j]][CellType.Alacrity][0];
                     }
                 }
