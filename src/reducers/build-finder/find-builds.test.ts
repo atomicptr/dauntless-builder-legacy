@@ -1,6 +1,7 @@
-import {WeaponType} from "@src/data/Weapon";
-import {AssignedPerkValue} from "@src/reducers/build-finder/build-finder-selection-slice";
-import {findBuilds, MatchingBuild} from "@src/reducers/build-finder/find-builds";
+import { findWeaponByName } from "@src/data/BuildModel";
+import { WeaponType } from "@src/data/Weapon";
+import { AssignedPerkValue } from "@src/reducers/build-finder/build-finder-selection-slice";
+import { findBuilds, MatchingBuild } from "@src/reducers/build-finder/find-builds";
 
 describe("findBuilds", () => {
     const hasWhatYouWanted = (requestedPerks: AssignedPerkValue, build: MatchingBuild) => {
@@ -110,8 +111,8 @@ describe("findBuilds", () => {
         const builds = findBuilds(
             WeaponType.Sword,
             {
-                "Berserker": 3,
-                "Tenacious": 6
+                Berserker: 3,
+                Tenacious: 6,
             },
             maxBuilds,
         );
@@ -125,13 +126,52 @@ describe("findBuilds", () => {
         const builds = findBuilds(
             WeaponType.Sword,
             {
-                "Berserker": 3,
-                "Tenacious": 6
+                Berserker: 3,
+                Tenacious: 6,
             },
             maxBuilds,
         );
 
         expect(builds.length).toBe(maxBuilds);
+    });
+
+    it("finds builds even with a LOT of +3 options", () => {
+        findsTheRightBuilds(WeaponType.Sword, {
+            Acidic: 3,
+            Adrenaline: 3,
+            Aegis: 3,
+            Aetherborne: 3,
+            Aetherhunter: 3,
+            "Aetheric Attunement": 3,
+            Agility: 3,
+            "Assassin's Vigour": 3,
+            Barbed: 3,
+            Berserker: 3,
+            Cunning: 3,
+        });
+    });
+
+    it("should support weapon prepicking", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                "Assassin's Vigour": 6,
+                Barbed: 6,
+                Berserker: 3,
+            },
+            50,
+            {
+                pickerWeapon: findWeaponByName("Training Sword"),
+                removeExotics: true,
+                removeLegendary: true,
+            },
+        );
+
+        expect(builds.length > 0).toBeTruthy();
+
+        builds.forEach(build => {
+            expect(build.build.weapon.name).toBe("Training Sword");
+        });
     });
 
     it("finds no builds when the criterias are nonsense", () => {

@@ -77,6 +77,29 @@ benchmarkSuite("findBuilds", {
             },
         );
     },
+    ["find builds with a lot of +3 options"]: () => {
+        findBuilds(
+            WeaponType.Sword,
+            {
+                Acidic: 3,
+                Adrenaline: 3,
+                Aegis: 3,
+                Aetherborne: 3,
+                Aetherhunter: 3,
+                "Aetheric Attunement": 3,
+                Agility: 3,
+                "Assassin's Vigour": 3,
+                Barbed: 3,
+                Berserker: 3,
+                Cunning: 3,
+            },
+            50,
+            {
+                removeExotics: true,
+                removeLegendary: true,
+            },
+        );
+    },
     ["find no builds due to invalid criteria"]: () => {
         findBuilds(
             WeaponType.Repeater,
