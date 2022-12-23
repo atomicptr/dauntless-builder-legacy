@@ -1,5 +1,6 @@
 import armourDataJson from "@json/armour_data.json";
 import armourDataCellsJson from "@json/armour_data_cells.json";
+import { CellTowerOutlined } from "@mui/icons-material";
 import { Armour, ArmourType } from "@src/data/Armour";
 import { BuildModel, findCellVariantByPerk, findLanternByName } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
@@ -146,12 +147,12 @@ const createItemData = (
         (mode: (a: boolean, b: boolean) => boolean = orMode) =>
             (item: Weapon | Armour) =>
                 mode(
-                (item.perks && item.perks[0].name in requestedPerks) as boolean,
-                ((item.cells &&
-                    (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
-                        cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
-                    )) ||
-                    (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
+                    (item.perks && item.perks[0].name in requestedPerks) as boolean,
+                    ((item.cells &&
+                        (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
+                            cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
+                        )) ||
+                        (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
                 );
 
     const createLegendaryWeaponBondWrapper = (weapon: Weapon): Weapon => {
@@ -363,12 +364,12 @@ export const findBuilds = (
         const createBuildIdentifier = (build: IntermediateBuild, cellsSlotted: CellsSlottedMap): string =>
             md5(
                 "build::" +
-                    Object.keys(sortObjectByKeys(build))
-                        .map(key => build[key as keyof IntermediateBuild].name)
-                        .join("::") +
-                    Object.keys(sortObjectByKeys(cellsSlotted))
-                        .map(key => cellsSlotted[key as keyof CellsSlottedMap] ?? "Null")
-                        .join("::"),
+                Object.keys(sortObjectByKeys(build))
+                    .map(key => build[key as keyof IntermediateBuild].name)
+                    .join("::") +
+                Object.keys(sortObjectByKeys(cellsSlotted))
+                    .map(key => cellsSlotted[key as keyof CellsSlottedMap] ?? "Null")
+                    .join("::"),
             );
 
         const adjustPerk = (perkName: string, adjustment: number) => {
@@ -436,6 +437,28 @@ export const findBuilds = (
             return required <= 0;
         };
 
+        const completeBuilds = (i: number, weapon: Weapon, armourSelections: ArmourSelectionData) => {
+            if (i > 3) {
+                createBuild(weapon, armourSelections);
+                return;
+            }
+            for (const cell in CellType) {
+                if (cell === CellType.Prismatic) {
+                    continue;
+                }
+                if (armourSelections[armourPieces[i]] === null) {
+                    for (let j = 0; j < armourDataCells[armourPieces[i]][cell as CellType].length; j++) {
+                        if (matchingBuilds.length >= maxBuilds) {
+                            return;
+                        }
+                        armourSelections[armourPieces[i]] = armourDataCells[armourPieces[i]][cell as CellType][j];
+                        completeBuilds(i + 1, weapon, armourSelections)
+                        armourSelections[armourPieces[i]] = null
+                    }
+                }
+            }
+        }
+
         const armourPieces = [ArmourType.Head, ArmourType.Torso, ArmourType.Arms, ArmourType.Legs];
 
         const chooseItem = (i: number, weapon: Weapon, armourSelections: ArmourSelectionData) => {
@@ -444,12 +467,7 @@ export const findBuilds = (
                 return;
             }
             if (finished(weapon)) {
-                for (let j = i; j < 4; j++) {
-                    if (armourSelections[armourPieces[j]] === null) {
-                        armourSelections[armourPieces[j]] = armourDataCells[armourPieces[j]][CellType.Alacrity][0];
-                    }
-                }
-                createBuild(weapon, armourSelections);
+                completeBuilds(i, weapon, armourSelections);
                 return;
             }
             if (armourSelections[armourPieces[i]] !== null) {
@@ -467,7 +485,7 @@ export const findBuilds = (
                         if (!armourPiece) {
                             continue;
                         }
-                        if (matchingBuilds.length > maxBuilds) {
+                        if (matchingBuilds.length >= maxBuilds) {
                             return;
                         }
                         if (finderOptions.removeExotics && armourPiece.rarity === ItemRarity.Exotic) {
@@ -487,7 +505,7 @@ export const findBuilds = (
                     if (!armourPiece) {
                         continue;
                     }
-                    if (matchingBuilds.length > maxBuilds) {
+                    if (matchingBuilds.length >= maxBuilds) {
                         return;
                     }
                     if (finderOptions.removeExotics && armourPiece.rarity === ItemRarity.Exotic) {
@@ -526,7 +544,7 @@ export const findBuilds = (
         });
 
         for (const weapon of itemData.weapons) {
-            if (matchingBuilds.length > maxBuilds) {
+            if (matchingBuilds.length >= maxBuilds) {
                 return matchingBuilds;
             }
 
