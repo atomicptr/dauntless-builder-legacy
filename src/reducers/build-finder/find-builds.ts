@@ -1,6 +1,5 @@
 import armourDataJson from "@json/armour_data.json";
 import armourDataCellsJson from "@json/armour_data_cells.json";
-import { CellTowerOutlined } from "@mui/icons-material";
 import { Armour, ArmourType } from "@src/data/Armour";
 import { BuildModel, findCellVariantByPerk, findLanternByName } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
@@ -147,12 +146,12 @@ const createItemData = (
         (mode: (a: boolean, b: boolean) => boolean = orMode) =>
             (item: Weapon | Armour) =>
                 mode(
-                    (item.perks && item.perks[0].name in requestedPerks) as boolean,
-                    ((item.cells &&
-                        (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
-                            cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
-                        )) ||
-                        (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
+                (item.perks && item.perks[0].name in requestedPerks) as boolean,
+                ((item.cells &&
+                    (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
+                        cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
+                    )) ||
+                    (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
                 );
 
     const createLegendaryWeaponBondWrapper = (weapon: Weapon): Weapon => {
@@ -364,12 +363,12 @@ export const findBuilds = (
         const createBuildIdentifier = (build: IntermediateBuild, cellsSlotted: CellsSlottedMap): string =>
             md5(
                 "build::" +
-                Object.keys(sortObjectByKeys(build))
-                    .map(key => build[key as keyof IntermediateBuild].name)
-                    .join("::") +
-                Object.keys(sortObjectByKeys(cellsSlotted))
-                    .map(key => cellsSlotted[key as keyof CellsSlottedMap] ?? "Null")
-                    .join("::"),
+                    Object.keys(sortObjectByKeys(build))
+                        .map(key => build[key as keyof IntermediateBuild].name)
+                        .join("::") +
+                    Object.keys(sortObjectByKeys(cellsSlotted))
+                        .map(key => cellsSlotted[key as keyof CellsSlottedMap] ?? "Null")
+                        .join("::"),
             );
 
         const adjustPerk = (perkName: string, adjustment: number) => {
@@ -452,12 +451,12 @@ export const findBuilds = (
                             return;
                         }
                         armourSelections[armourPieces[i]] = armourDataCells[armourPieces[i]][cell as CellType][j];
-                        completeBuilds(i + 1, weapon, armourSelections)
-                        armourSelections[armourPieces[i]] = null
+                        completeBuilds(i + 1, weapon, armourSelections);
+                        armourSelections[armourPieces[i]] = null;
                     }
                 }
             }
-        }
+        };
 
         const armourPieces = [ArmourType.Head, ArmourType.Torso, ArmourType.Arms, ArmourType.Legs];
 
