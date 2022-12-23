@@ -1,4 +1,4 @@
-import { findWeaponByName } from "@src/data/BuildModel";
+import { findArmourByName, findWeaponByName } from "@src/data/BuildModel";
 import { WeaponType } from "@src/data/Weapon";
 import { AssignedPerkValue } from "@src/reducers/build-finder/build-finder-selection-slice";
 import { findBuilds, MatchingBuild } from "@src/reducers/build-finder/find-builds";
@@ -171,6 +171,33 @@ describe("findBuilds", () => {
 
         builds.forEach(build => {
             expect(build.build.weapon.name).toBe("Training Sword");
+        });
+    });
+
+    it("should support armour prepicking", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                Aetherborne: 6,
+                "Assassin's Vigour": 6,
+            },
+            50,
+            {
+                pickerArms: findArmourByName("Malkarion's Grasp"),
+                pickerHead: findArmourByName("Adversary's Guile"),
+                pickerLegs: findArmourByName("Adversary's Drive"),
+                pickerTorso: findArmourByName("Spellbound Wings"),
+                removeExotics: true,
+                removeLegendary: true,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+
+        builds.forEach(build => {
+            expect(build.build.head.name).toBe("Adversary's Guile");
+            expect(build.build.torso.name).toBe("Spellbound Wings");
+            expect(build.build.arms.name).toBe("Malkarion's Grasp");
+            expect(build.build.legs.name).toBe("Adversary's Drive");
         });
     });
 
