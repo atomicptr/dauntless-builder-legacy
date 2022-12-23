@@ -201,6 +201,113 @@ describe("findBuilds", () => {
         });
     });
 
+    it("should support exotics", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                Aetherhunter: 6,
+                Bladestorm: 6,
+                Rage: 6,
+                Ragehunter: 6,
+                Tenacious: 6,
+            },
+            50,
+            {
+                removeExotics: false,
+                removeLegendary: true,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+
+        const buildsWithHunger = builds.filter(build => build.build.weapon.name === "The Hunger");
+        expect(buildsWithHunger.length).toBeGreaterThanOrEqual(4);
+    });
+
+    it("finds builds with legendary enabled", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                Aegis: 6,
+                Drop: 3,
+                Endurance: 3,
+                Galvanized: 6,
+                Guardian: 6,
+                Savagery: 6,
+                Sprinter: 6,
+            },
+            50,
+            {
+                removeExotics: false,
+                removeLegendary: false,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+    });
+
+    it("finds builds with legendary enabled", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                Aegis: 6,
+                Drop: 3,
+                Endurance: 3,
+                Galvanized: 6,
+                Guardian: 6,
+                Savagery: 6,
+                Sprinter: 6,
+            },
+            50,
+            {
+                removeExotics: false,
+                removeLegendary: false,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+    });
+
+    it("finds builds with legendary enabled and something prepicked", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                Aegis: 6,
+                Drop: 3,
+                Galvanized: 6,
+                Guardian: 6,
+                Savagery: 6,
+                Sprinter: 6,
+            },
+            50,
+            {
+                pickerWeapon: findWeaponByName("Cry of the Shrike"),
+                removeExotics: false,
+                removeLegendary: false,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+    });
+
+    it("finds builds with legendary enabled and The Hunger prepicked", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                Aegis: 6,
+                Berserker: 3,
+                Drop: 3,
+                Galvanized: 6,
+                Guardian: 6,
+                Savagery: 6,
+                Sprinter: 3,
+            },
+            50,
+            {
+                pickerWeapon: findWeaponByName("The Hunger"),
+                removeExotics: false,
+                removeLegendary: false,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+    });
+
     it("finds no builds when the criterias are nonsense", () => {
         const builds = findBuilds(
             WeaponType.Hammer,

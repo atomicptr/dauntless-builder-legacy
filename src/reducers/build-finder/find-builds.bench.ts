@@ -100,6 +100,23 @@ benchmarkSuite("findBuilds", {
             },
         );
     },
+    ["find builds with exotics"]: () => {
+        findBuilds(
+            WeaponType.Repeater,
+            {
+                Aetherhunter: 6,
+                Bladestorm: 6,
+                Rage: 6,
+                Ragehunter: 6,
+                Tenacious: 6,
+            },
+            50,
+            {
+                removeExotics: false,
+                removeLegendary: true,
+            },
+        );
+    },
     ["find no builds due to invalid criteria"]: () => {
         findBuilds(
             WeaponType.Repeater,
