@@ -146,12 +146,12 @@ const createItemData = (
         (mode: (a: boolean, b: boolean) => boolean = orMode) =>
             (item: Weapon | Armour) =>
                 mode(
-                (item.perks && item.perks[0].name in requestedPerks) as boolean,
-                ((item.cells &&
-                    (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
-                        cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
-                    )) ||
-                    (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
+                    (item.perks && item.perks[0].name in requestedPerks) as boolean,
+                    ((item.cells &&
+                        (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
+                            cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
+                        )) ||
+                        (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
                 );
 
     const createLegendaryWeaponBondWrapper = (weapon: Weapon): Weapon => {
@@ -363,19 +363,19 @@ export const findBuilds = (
         const createBuildIdentifier = (build: IntermediateBuild, cellsSlotted: CellsSlottedMap): string =>
             md5(
                 "build::" +
-                    Object.keys(sortObjectByKeys(build))
-                        .map(key => build[key as keyof IntermediateBuild].name)
-                        .join("::") +
-                    Object.keys(sortObjectByKeys(cellsSlotted))
-                        .map(key => cellsSlotted[key as keyof CellsSlottedMap] ?? "Null")
-                        .join("::"),
+                Object.keys(sortObjectByKeys(build))
+                    .map(key => build[key as keyof IntermediateBuild].name)
+                    .join("::") +
+                Object.keys(sortObjectByKeys(cellsSlotted))
+                    .map(key => cellsSlotted[key as keyof CellsSlottedMap] ?? "Null")
+                    .join("::"),
             );
 
         const adjustPerk = (perkName: string, adjustment: number) => {
             if (requestedPerksCurrent[perkName] !== undefined) {
                 requestedPerksCurrent[perkName] += adjustment * 3;
+                adjustCell(perkCellMap[perkName], adjustment);
             }
-            adjustCell(perkCellMap[perkName], adjustment);
         };
 
         const adjustCell = (cellType: CellType, adjustment: number) => {
