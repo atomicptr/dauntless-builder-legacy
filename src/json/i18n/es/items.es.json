@@ -1724,7 +1724,7 @@
     "item.weapons.infernos-flames.unique_effects.0.description": "$t(item.weapons.infernos-arrow.unique_effects.0.description)",
     "item.weapons.infernos-flames.unique_effects.1.description": "$t(item.weapons.infernos-arrow.unique_effects.0.description)",
     "item.weapons.infernos-razor.description": "$t(item.weapons.agents-of-decay.description)",
-    "item.weapons.infernos-razor.name": "Inferno's Razor",
+    "item.weapons.infernos-razor.name": "Cuchilla infernal",
     "item.weapons.infernos-razor.unique_effects.0.description": "$t(item.weapons.infernos-arrow.unique_effects.0.description)",
     "item.weapons.infernos-razor.unique_effects.1.description": "$t(item.weapons.infernos-arrow.unique_effects.0.description)",
     "item.weapons.infernos-roar.description": "$t(item.weapons.agents-of-decay.description)",
