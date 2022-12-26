@@ -469,19 +469,28 @@ export const findBuilds = (
 
         const armourPieces = [ArmourType.Head, ArmourType.Torso, ArmourType.Arms, ArmourType.Legs];
 
-        const chooseItem = (i: number, weapon: Weapon, armourSelections: ArmourSelectionData) => {
+        const chooseArmour = (i: number, weapon: Weapon, armourSelections: ArmourSelectionData) => {
             if (i > armourPieces.length - 1) {
                 createBuild(weapon, armourSelections);
                 return;
             }
             if (armourSelections[armourPieces[i]] !== null) {
-                chooseItem(i + 1, weapon, armourSelections);
+                chooseArmour(i + 1, weapon, armourSelections);
                 return;
             }
             if (cellRequirementsMet(weapon)) {
                 fillInRemainingArmourPieces(i, weapon, armourSelections);
                 return;
             }
+            chooseMatchingPerkAndCellArmourPiece(i, weapon, armourSelections);
+            chooseMatchingCellArmourPiece(i, weapon, armourSelections);
+        };
+
+        const chooseMatchingPerkAndCellArmourPiece = (
+            i: number,
+            weapon: Weapon,
+            armourSelections: ArmourSelectionData,
+        ) => {
             for (const perk in requestedPerksCurrent) {
                 for (const cell in requestedSlots) {
                     if (
@@ -491,42 +500,41 @@ export const findBuilds = (
                         requestedPerksCurrent[perk] > 0
                     ) {
                         const armourPiece = armourData[armourPieces[i]][perk][cell as CellType][0];
-                        if (!armourPiece) {
-                            continue;
-                        }
-                        if (matchingBuilds.length >= maxBuilds) {
-                            return;
-                        }
-                        if (finderOptions.removeExotics && armourPiece.rarity === ItemRarity.Exotic) {
-                            continue;
-                        }
-                        adjustPerkAndCellsRequirements(armourPiece, -1);
-                        armourSelections[armourPieces[i]] = armourPiece;
-                        chooseItem(i + 1, weapon, armourSelections);
-                        adjustPerkAndCellsRequirements(armourPiece, 1);
-                        armourSelections[armourPieces[i]] = null;
+                        adjustSelectedArmourPiece(armourPiece, i, weapon, armourSelections);
                     }
                 }
             }
+        };
+
+        const chooseMatchingCellArmourPiece = (i: number, weapon: Weapon, armourSelections: ArmourSelectionData) => {
             for (const cell in requestedSlots) {
                 if (requestedSlots[cell as CellType] > 0) {
                     const armourPiece = armourDataCells[armourPieces[i]][cell as CellType][0];
-                    if (!armourPiece) {
-                        continue;
-                    }
-                    if (matchingBuilds.length >= maxBuilds) {
-                        return;
-                    }
-                    if (finderOptions.removeExotics && armourPiece.rarity === ItemRarity.Exotic) {
-                        continue;
-                    }
-                    adjustPerkAndCellsRequirements(armourPiece, -1);
-                    armourSelections[armourPieces[i]] = armourPiece;
-                    chooseItem(i + 1, weapon, armourSelections);
-                    adjustPerkAndCellsRequirements(armourPiece, 1);
-                    armourSelections[armourPieces[i]] = null;
+                    adjustSelectedArmourPiece(armourPiece, i, weapon, armourSelections);
                 }
             }
+        };
+
+        const adjustSelectedArmourPiece = (
+            armourPiece: Armour,
+            i: number,
+            weapon: Weapon,
+            armourSelections: ArmourSelectionData,
+        ) => {
+            if (!armourPiece) {
+                return;
+            }
+            if (matchingBuilds.length >= maxBuilds) {
+                return;
+            }
+            if (finderOptions.removeExotics && armourPiece.rarity === ItemRarity.Exotic) {
+                return;
+            }
+            adjustPerkAndCellsRequirements(armourPiece, -1);
+            armourSelections[armourPieces[i]] = armourPiece;
+            chooseArmour(i + 1, weapon, armourSelections);
+            adjustPerkAndCellsRequirements(armourPiece, 1);
+            armourSelections[armourPieces[i]] = null;
         };
 
         type ArmourSelectionData = {
@@ -565,7 +573,7 @@ export const findBuilds = (
             }
 
             adjustPerkAndCellsRequirements(weapon, -1);
-            chooseItem(0, weapon, armourSelections);
+            chooseArmour(0, weapon, armourSelections);
             adjustPerkAndCellsRequirements(weapon, 1);
         }
 
