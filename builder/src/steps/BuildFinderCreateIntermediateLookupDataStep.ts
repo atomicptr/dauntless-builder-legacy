@@ -6,7 +6,7 @@ import { sortJsonOptions } from "../constants";
 import { RunConfig, Step } from "../Step";
 import { WithStepLogger } from "../WithStepLogger";
 
-export class ArmourDataStep extends WithStepLogger implements Step {
+export class BuildFinderCreateIntermediateLookupDataStep extends WithStepLogger implements Step {
     canRun(_verbose: boolean): boolean {
         return true;
     }
@@ -176,13 +176,13 @@ export class ArmourDataStep extends WithStepLogger implements Step {
             return armourData as unknown as ArmourData; //heads[ArmourType.Head]["Aetheric Attunement"][CellType.Insight]
         };
 
-        const filepath = path.join(runConfig.targetDir, "armour_data.json");
+        const filepath = path.join(runConfig.targetDir, "build_finder_intermediate_lookup_data.json");
 
         this.log(`Writing ${filepath}...`);
 
         fs.writeFileSync(filepath, JSON.stringify(generateArmourData(), null, "    "));
 
-        const filepath2 = path.join(runConfig.targetDir, "armour_data_cells.json");
+        const filepath2 = path.join(runConfig.targetDir, "build_finder_intermediate_lookup_data_cells.json");
 
         this.log(`Writing ${filepath}...`);
 
