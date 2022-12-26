@@ -81,21 +81,22 @@ export class BuildFinderCreateIntermediateLookupDataStep extends WithStepLogger 
             };
         } = JSON.parse(fs.readFileSync(dataJsonPath).toString());
 
-        const filepath = path.join(runConfig.targetDir, "build_finder_intermediate_lookup_data.json");
+        const lookupDataPath = path.join(runConfig.targetDir, "build-finder-intermediate-lookup-armour-data.json");
 
-        this.log(`Writing ${filepath}...`);
+        this.log(`Writing ${lookupDataPath}...`);
 
-        fs.writeFileSync(filepath, JSON.stringify(this.generateArmourData(data), null, "    "));
+        fs.writeFileSync(lookupDataPath, JSON.stringify(this.generateArmourData(data), null, "    "));
 
-        sortJson.overwrite(filepath, sortJsonOptions);
+        const lookupDataCellsPath = path.join(
+            runConfig.targetDir,
+            "build-finder-intermediate-lookup-armour-data-cells.json",
+        );
 
-        const filepath2 = path.join(runConfig.targetDir, "build_finder_intermediate_lookup_data_cells.json");
+        this.log(`Writing ${lookupDataCellsPath}...`);
 
-        this.log(`Writing ${filepath2}...`);
+        fs.writeFileSync(lookupDataCellsPath, JSON.stringify(this.generateArmourDataCells(data), null, "    "));
 
-        fs.writeFileSync(filepath2, JSON.stringify(this.generateArmourDataCells(data), null, "    "));
-
-        sortJson.overwrite(filepath2, sortJsonOptions);
+        sortJson.overwrite([lookupDataPath, lookupDataCellsPath], sortJsonOptions);
     }
 
     private findArmourPiecesByType(type: ArmourType, data: Data) {
@@ -114,21 +115,14 @@ export class BuildFinderCreateIntermediateLookupDataStep extends WithStepLogger 
     }
 
     private generateArmourData = (data: Data): ArmourData => {
-        let armourData: ArmourData | null = null;
-        if (armourData !== null) {
-            return armourData;
-        }
+        const armourData: ArmourData = {
+            [ArmourType.Head]: {},
+            [ArmourType.Torso]: {},
+            [ArmourType.Arms]: {},
+            [ArmourType.Legs]: {},
+        };
 
         const addArmour = (armourType: ArmourType, perkName: string, cellType: CellType, armour: Armour) => {
-            if (armourData == null) {
-                armourData = {
-                    [ArmourType.Head]: {},
-                    [ArmourType.Torso]: {},
-                    [ArmourType.Arms]: {},
-                    [ArmourType.Legs]: {},
-                };
-            }
-
             if (!(perkName in armourData[armourType])) {
                 armourData[armourType][perkName] = this.cellToArmourArray();
             }
@@ -154,25 +148,18 @@ export class BuildFinderCreateIntermediateLookupDataStep extends WithStepLogger 
         addArmours(ArmourType.Torso);
         addArmours(ArmourType.Arms);
         addArmours(ArmourType.Legs);
-        return armourData as unknown as ArmourData;
+        return armourData;
     };
 
     private generateArmourDataCells(data: Data) {
-        let armourDataCells: ArmourDataCells | null = null;
-        if (armourDataCells !== null) {
-            return armourDataCells;
-        }
+        const armourDataCells: ArmourDataCells = {
+            [ArmourType.Head]: this.cellToArmourArray(),
+            [ArmourType.Torso]: this.cellToArmourArray(),
+            [ArmourType.Arms]: this.cellToArmourArray(),
+            [ArmourType.Legs]: this.cellToArmourArray(),
+        };
 
         const addArmour = (armourType: ArmourType, cellType: CellType, armour: Armour) => {
-            if (armourDataCells == null) {
-                armourDataCells = {
-                    [ArmourType.Head]: this.cellToArmourArray(),
-                    [ArmourType.Torso]: this.cellToArmourArray(),
-                    [ArmourType.Arms]: this.cellToArmourArray(),
-                    [ArmourType.Legs]: this.cellToArmourArray(),
-                };
-            }
-
             armourDataCells[armourType][cellType].push(armour);
         };
 
@@ -194,6 +181,6 @@ export class BuildFinderCreateIntermediateLookupDataStep extends WithStepLogger 
         addArmours(ArmourType.Torso);
         addArmours(ArmourType.Arms);
         addArmours(ArmourType.Legs);
-        return armourDataCells as unknown as ArmourDataCells; //heads[ArmourType.Head]["Aetheric Attunement"][CellType.Insight]
+        return armourDataCells;
     }
 }

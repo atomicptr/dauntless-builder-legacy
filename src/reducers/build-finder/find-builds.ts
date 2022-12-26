@@ -1,5 +1,5 @@
-import armourDataJson from "@json/build_finder_intermediate_lookup_data.json";
-import armourDataCellsJson from "@json/build_finder_intermediate_lookup_data_cells.json";
+import armourDataJson from "@json/build-finder-intermediate-lookup-armour-data.json";
+import armourDataCellsJson from "@json/build-finder-intermediate-lookup-armour-data-cells.json";
 import { Armour, ArmourType } from "@src/data/Armour";
 import { BuildModel, findCellVariantByPerk, findLanternByName } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
