@@ -382,15 +382,15 @@ export const findBuilds = (
             requestedSlots[cellType] += adjustment;
         };
 
-        const adjustPerksAndCells = (weapon: Weapon | Armour, adjustment: number) => {
-            if (weapon.perks) {
-                weapon.perks.forEach(perk => {
+        const adjustPerksAndCells = (item: Weapon | Armour, adjustment: number) => {
+            if (item.perks) {
+                item.perks.forEach(perk => {
                     if (perk.powerSurged) {
                         adjustPerk(perk.name, adjustment);
                     }
                 });
             }
-            (Array.isArray(weapon.cells) ? weapon.cells : [weapon.cells]).forEach(cell => {
+            (Array.isArray(item.cells) ? item.cells : [item.cells]).forEach(cell => {
                 if (cell) {
                     adjustCell(cell, adjustment);
                 }
@@ -450,6 +450,12 @@ export const findBuilds = (
                         if (matchingBuilds.length >= maxBuilds) {
                             return;
                         }
+                        if (
+                            finderOptions.removeExotics &&
+                            armourDataCells[armourPieces[i]][cell as CellType][j].rarity === ItemRarity.Exotic
+                        ) {
+                            continue;
+                        }
                         armourSelections[armourPieces[i]] = armourDataCells[armourPieces[i]][cell as CellType][j];
                         completeBuilds(i + 1, weapon, armourSelections);
                         armourSelections[armourPieces[i]] = null;
@@ -465,20 +471,21 @@ export const findBuilds = (
                 createBuild(weapon, armourSelections);
                 return;
             }
-            if (finished(weapon)) {
-                completeBuilds(i, weapon, armourSelections);
-                return;
-            }
             if (armourSelections[armourPieces[i]] !== null) {
                 chooseItem(i + 1, weapon, armourSelections);
+                return;
+            }
+            if (finished(weapon)) {
+                completeBuilds(i, weapon, armourSelections);
                 return;
             }
             for (const perk in requestedPerksCurrent) {
                 for (const cell in requestedSlots) {
                     if (
                         armourData[armourPieces[i]][perk] &&
-                        requestedPerksCurrent[perk] > 0 &&
-                        requestedSlots[cell as CellType] > 0
+                        requestedSlots[perkCellMap[perk]] > 0 &&
+                        requestedSlots[cell as CellType] > 0 &&
+                        requestedPerksCurrent[perk] > 0
                     ) {
                         const armourPiece = armourData[armourPieces[i]][perk][cell as CellType][0];
                         if (!armourPiece) {
@@ -539,6 +546,13 @@ export const findBuilds = (
                 .otherwise(() => null);
             if (prePickedItem) {
                 armourSelections[armourType] = prePickedItem;
+                adjustPerksAndCells(prePickedItem, -1);
+            }
+        });
+
+        (Array.isArray(itemData.lantern.cells) ? itemData.lantern.cells : [itemData.lantern.cells]).forEach(cell => {
+            if (cell) {
+                adjustCell(cell, -1);
             }
         });
 
