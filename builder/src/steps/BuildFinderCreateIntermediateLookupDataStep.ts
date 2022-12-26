@@ -65,7 +65,7 @@ export class BuildFinderCreateIntermediateLookupDataStep extends WithStepLogger 
     }
 
     name(): string {
-        return "armour-data";
+        return "build-finder-intermediate-data";
     }
 
     async run(runConfig: RunConfig): Promise<void> {
