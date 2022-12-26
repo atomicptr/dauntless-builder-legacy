@@ -57,6 +57,11 @@ export interface FinderItemData {
     lantern: Lantern;
 }
 
+enum Change {
+    Increase = 3,
+    Decrease = -3,
+}
+
 type ArmourData = {
     [armourType in ArmourType]: {
         [perkName: string]: {
@@ -226,10 +231,10 @@ export const findBuilds = (
     for (const perkName in requestedPerks) {
         const desiredValue = requestedPerks[perkName];
         if (requestedSlots[perkCellMap[perkName]]) {
-            requestedSlots[perkCellMap[perkName]] += desiredValue / 3;
+            requestedSlots[perkCellMap[perkName]] += desiredValue;
             continue;
         }
-        requestedSlots[perkCellMap[perkName]] = desiredValue / 3;
+        requestedSlots[perkCellMap[perkName]] = desiredValue;
     }
 
     const requestedPerksCurrent: AssignedPerkValue = deepCopy(requestedPerks);
@@ -371,22 +376,22 @@ export const findBuilds = (
                         .join("::"),
             );
 
-        const adjustPerkRequirements = (perkName: string, adjustment: number) => {
+        const adjustPerkRequirements = (perkName: string, change: Change) => {
             if (requestedPerksCurrent[perkName] === undefined) {
                 return;
             }
-            requestedPerksCurrent[perkName] += adjustment * 3;
-            adjustCellRequirements(perkCellMap[perkName], adjustment);
+            requestedPerksCurrent[perkName] += change;
+            adjustCellRequirements(perkCellMap[perkName], change);
         };
 
-        const adjustCellRequirements = (cellType: CellType, adjustment: number) => {
-            requestedSlots[cellType] += adjustment;
+        const adjustCellRequirements = (cellType: CellType, change: Change) => {
+            requestedSlots[cellType] += change;
         };
 
-        const adjustPerkAndCellsRequirements = (item: Weapon | Armour, adjustment: number) => {
+        const adjustPerkAndCellsRequirements = (item: Weapon | Armour, change: Change) => {
             (Array.isArray(item.cells) ? item.cells : [item.cells]).forEach(cell => {
                 if (cell) {
-                    adjustCellRequirements(cell, adjustment);
+                    adjustCellRequirements(cell, change);
                 }
             });
             if (!item.perks) {
@@ -394,7 +399,7 @@ export const findBuilds = (
             }
             item.perks.forEach(perk => {
                 if (!perk.powerSurged) {
-                    adjustPerkRequirements(perk.name, adjustment);
+                    adjustPerkRequirements(perk.name, change);
                 }
             });
         };
@@ -433,7 +438,7 @@ export const findBuilds = (
             // adjust required for prismatic cells which can be any
             (Array.isArray(weapon.cells) ? weapon.cells : [weapon.cells]).forEach(cell => {
                 if (cell === CellType.Prismatic) {
-                    required -= 1;
+                    required += Change.Decrease;
                 }
             });
             return required <= 0;
@@ -530,10 +535,10 @@ export const findBuilds = (
             if (finderOptions.removeExotics && armourPiece.rarity === ItemRarity.Exotic) {
                 return;
             }
-            adjustPerkAndCellsRequirements(armourPiece, -1);
+            adjustPerkAndCellsRequirements(armourPiece, Change.Decrease);
             armourSelections[armourPieces[i]] = armourPiece;
             chooseArmour(i + 1, weapon, armourSelections);
-            adjustPerkAndCellsRequirements(armourPiece, 1);
+            adjustPerkAndCellsRequirements(armourPiece, Change.Increase);
             armourSelections[armourPieces[i]] = null;
         };
 
@@ -557,13 +562,13 @@ export const findBuilds = (
                 .otherwise(() => null);
             if (prePickedItem) {
                 armourSelections[armourType] = prePickedItem;
-                adjustPerkAndCellsRequirements(prePickedItem, -1);
+                adjustPerkAndCellsRequirements(prePickedItem, Change.Decrease);
             }
         });
 
         (Array.isArray(itemData.lantern.cells) ? itemData.lantern.cells : [itemData.lantern.cells]).forEach(cell => {
             if (cell) {
-                adjustCellRequirements(cell, -1);
+                adjustCellRequirements(cell, Change.Decrease);
             }
         });
 
@@ -572,9 +577,9 @@ export const findBuilds = (
                 return matchingBuilds;
             }
 
-            adjustPerkAndCellsRequirements(weapon, -1);
+            adjustPerkAndCellsRequirements(weapon, Change.Decrease);
             chooseArmour(0, weapon, armourSelections);
-            adjustPerkAndCellsRequirements(weapon, 1);
+            adjustPerkAndCellsRequirements(weapon, Change.Increase);
         }
 
         return matchingBuilds;
