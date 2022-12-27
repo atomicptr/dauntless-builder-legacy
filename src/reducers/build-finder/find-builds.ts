@@ -445,6 +445,7 @@ export const findBuilds = (
         };
 
         const perkAndCellRequired = (i: number, weapon: Weapon) => {
+            // number of pieces left to slot * number of perks per piece - adjustment for no perk
             return (armourPieces.length - i) * 6 - 3 < cellRequirements(weapon);
         };
 
