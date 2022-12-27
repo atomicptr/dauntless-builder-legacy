@@ -444,8 +444,8 @@ export const findBuilds = (
             return required;
         };
 
-        const canFindBuildWithNonStrictPerk = (i: number, weapon: Weapon) => {
-            return (armourPieces.length - i) * 6 - 3 >= cellRequirements(weapon);
+        const perkAndCellRequired = (i: number, weapon: Weapon) => {
+            return (armourPieces.length - i) * 6 - 3 < cellRequirements(weapon);
         };
 
         const fillInRemainingArmourPieces = (i: number, weapon: Weapon, armourSelections: ArmourSelectionData) => {
@@ -487,13 +487,12 @@ export const findBuilds = (
                 chooseArmour(i + 1, weapon, armourSelections);
                 return;
             }
-            const requirements = cellRequirements(weapon);
-            if (requirements <= 0) {
+            if (cellRequirements(weapon) <= 0) {
                 fillInRemainingArmourPieces(i, weapon, armourSelections);
                 return;
             }
             chooseMatchingPerkAndCellArmourPiece(i, weapon, armourSelections);
-            if (!canFindBuildWithNonStrictPerk(i, weapon)) {
+            if (perkAndCellRequired(i, weapon)) {
                 return;
             }
             chooseMatchingCellArmourPiece(i, weapon, armourSelections);
