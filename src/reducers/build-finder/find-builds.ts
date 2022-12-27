@@ -428,7 +428,7 @@ export const findBuilds = (
             return;
         };
 
-        const cellRequirementsMet = (weapon: Weapon) => {
+        const cellRequirements = (weapon: Weapon) => {
             let required = 0;
             for (const cell in requestedSlots) {
                 if (requestedSlots[cell as CellType] > 0) {
@@ -441,7 +441,11 @@ export const findBuilds = (
                     required += Change.Decrease;
                 }
             });
-            return required <= 0;
+            return required;
+        };
+
+        const canFindBuildWithNonStrictPerk = (i: number, weapon: Weapon) => {
+            return (armourPieces.length - i) * 6 - 3 >= cellRequirements(weapon);
         };
 
         const fillInRemainingArmourPieces = (i: number, weapon: Weapon, armourSelections: ArmourSelectionData) => {
@@ -483,11 +487,15 @@ export const findBuilds = (
                 chooseArmour(i + 1, weapon, armourSelections);
                 return;
             }
-            if (cellRequirementsMet(weapon)) {
+            const requirements = cellRequirements(weapon);
+            if (requirements <= 0) {
                 fillInRemainingArmourPieces(i, weapon, armourSelections);
                 return;
             }
             chooseMatchingPerkAndCellArmourPiece(i, weapon, armourSelections);
+            if (!canFindBuildWithNonStrictPerk(i, weapon)) {
+                return;
+            }
             chooseMatchingCellArmourPiece(i, weapon, armourSelections);
         };
 
@@ -504,8 +512,9 @@ export const findBuilds = (
                         requestedSlots[cell as CellType] > 0 &&
                         requestedPerksCurrent[perk] > 0
                     ) {
-                        const armourPiece = armourData[armourPieces[i]][perk][cell as CellType][0];
-                        adjustSelectedArmourPiece(armourPiece, i, weapon, armourSelections);
+                        armourData[armourPieces[i]][perk][cell as CellType].forEach(armourPiece => {
+                            adjustSelectedArmourPiece(armourPiece, i, weapon, armourSelections);
+                        });
                     }
                 }
             }
