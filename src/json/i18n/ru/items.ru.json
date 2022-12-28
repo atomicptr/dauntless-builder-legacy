@@ -1975,7 +1975,7 @@
     "item.weapons.silver-sword.unique_effects.0.title": "Пассивный",
     "item.weapons.silver-sword.unique_effects.1.description": "Увеличивает все получаемые щиты на {{percentShield}}%{{NL}}+{{percentHealing}}% к получаемому от любых источников исцелению{{NL}}+{{maxHealth}} единиц к максимальному уровню здоровья",
     "item.weapons.silver-sword.unique_effects.1.title": "Пассивный",
-    "item.weapons.silver-sword.unique_effects.2.description": "Using your special continually generates Frost Sprites that grant your next attack +{{damage}} damage and minor frost damage (Max 4 Sprites)",
+    "item.weapons.silver-sword.unique_effects.2.description": "Во время действия способности вы непрерывно создаёте морозных духов, которые увеличивают основной урон вашей следующей атаки на {{damage}} единиц, а также наносят небольшое количество морозного урона (максимум 4 духа)",
     "item.weapons.silver-sword.unique_effects.3.description": "Поскольку это временное ограниченное оружие, и оно имеет очень сложный путь обновления с несколькими уровнями, мы в Конструкторе Dauntless решили не поддерживать все уровни, за исключением максимального (всплеск мощи уже учтен).",
     "item.weapons.silver-sword.unique_effects.3.title": "Уведомление",
     "item.weapons.skarns-calamities.description": "$t(item.weapons.agents-of-decay.description)",
