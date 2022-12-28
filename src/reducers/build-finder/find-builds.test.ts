@@ -322,7 +322,307 @@ describe("findBuilds", () => {
             },
             1,
         );
-
         expect(builds.length).toBe(0);
+    });
+
+    it("finds builds with exotics enabled", () => {
+        const builds = findBuilds(
+            WeaponType.ChainBlades,
+            {
+                Berserker: 3,
+                Bladestorm: 3,
+                Guardian: 3,
+                Invigorated: 3,
+                Parasitic: 3,
+                Pulse: 3,
+                Rage: 3,
+                Rushdown: 3,
+                Tactician: 3,
+                Vampiric: 3,
+                "Weighted Strikes": 3,
+            },
+            50,
+            {
+                removeExotics: false,
+                removeLegendary: true,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+    });
+
+    it("finds no builds with exotics disabled", () => {
+        const builds = findBuilds(
+            WeaponType.ChainBlades,
+            {
+                Berserker: 3,
+                Bladestorm: 3,
+                Guardian: 3,
+                Invigorated: 3,
+                Parasitic: 3,
+                Pulse: 3,
+                Rage: 3,
+                Rushdown: 3,
+                Tactician: 3,
+                Vampiric: 3,
+                "Weighted Strikes": 3,
+            },
+            50,
+            {
+                removeExotics: true,
+                removeLegendary: true,
+            },
+        );
+        expect(builds.length).toBe(0);
+    });
+
+    it("finds builds with legendary weapons enabled", () => {
+        const builds = findBuilds(
+            WeaponType.ChainBlades,
+            {
+                Berserker: 3,
+                Bladestorm: 3,
+                Guardian: 3,
+                Invigorated: 3,
+                Parasitic: 3,
+                Pulse: 3,
+                Rage: 3,
+                Rushdown: 3,
+                Tactician: 3,
+                Vampiric: 3,
+                "Weighted Strikes": 3,
+            },
+            50,
+            {
+                removeExotics: true,
+                removeLegendary: false,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+    });
+
+    it("finds builds with 1 perk selected", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                Tenacious: 3,
+            },
+            50,
+            {
+                removeExotics: true,
+                removeLegendary: true,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+    });
+
+    it("finds builds with 2 perks selected", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                Tenacious: 6,
+            },
+            50,
+            {
+                removeExotics: true,
+                removeLegendary: true,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+    });
+
+    it("finds builds with 3 perks selected", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                Relentless: 3,
+                Tenacious: 6,
+            },
+            50,
+            {
+                removeExotics: true,
+                removeLegendary: true,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+    });
+
+    it("finds builds with 4 perks selected", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                Relentless: 3,
+                "Shellshock Resist": 3,
+                Tenacious: 6,
+            },
+            50,
+            {
+                removeExotics: true,
+                removeLegendary: true,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+    });
+
+    it("finds builds with 5 perks selected", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                Drop: 3,
+                Relentless: 3,
+                "Shellshock Resist": 3,
+                Tenacious: 6,
+            },
+            50,
+            {
+                removeExotics: true,
+                removeLegendary: true,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+    });
+
+    it("finds builds with 6 perks selected", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                Drop: 6,
+                Relentless: 3,
+                "Shellshock Resist": 3,
+                Tenacious: 6,
+            },
+            50,
+            {
+                removeExotics: true,
+                removeLegendary: true,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+    });
+
+    it("finds builds with 7 perks selected", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                Drop: 6,
+                Merciless: 3,
+                Relentless: 3,
+                "Shellshock Resist": 3,
+                Tenacious: 6,
+            },
+            50,
+            {
+                removeExotics: true,
+                removeLegendary: true,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+    });
+
+    it("finds builds with 8 perks selected", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                Drop: 6,
+                Merciless: 3,
+                Molten: 3,
+                Relentless: 3,
+                "Shellshock Resist": 3,
+                Tenacious: 6,
+            },
+            50,
+            {
+                removeExotics: true,
+                removeLegendary: true,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+    });
+
+    it("finds builds with 9 perks selected", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                Drop: 6,
+                Merciless: 3,
+                Molten: 3,
+                "Nine Lives": 3,
+                Relentless: 3,
+                "Shellshock Resist": 3,
+                Tenacious: 6,
+            },
+            50,
+            {
+                removeExotics: true,
+                removeLegendary: true,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+    });
+
+    it("finds builds with 10 perks selected", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                Drop: 6,
+                Merciless: 3,
+                Molten: 3,
+                "Nine Lives": 3,
+                Pacifier: 3,
+                Relentless: 3,
+                "Shellshock Resist": 3,
+                Tenacious: 6,
+            },
+            50,
+            {
+                removeExotics: true,
+                removeLegendary: true,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+    });
+
+    it("finds builds with 11 perks selected", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                Drop: 6,
+                Merciless: 3,
+                Molten: 3,
+                "Nine Lives": 3,
+                Pacifier: 6,
+                Relentless: 3,
+                "Shellshock Resist": 3,
+                Tenacious: 6,
+            },
+            50,
+            {
+                removeExotics: true,
+                removeLegendary: true,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+    });
+
+    it("finds builds with 12 perks selected", () => {
+        const builds = findBuilds(
+            WeaponType.Sword,
+            {
+                Cunning: 3,
+                Drop: 6,
+                Merciless: 3,
+                Molten: 3,
+                "Nine Lives": 3,
+                Pacifier: 6,
+                Relentless: 3,
+                "Shellshock Resist": 3,
+                Tenacious: 6,
+            },
+            50,
+            {
+                removeExotics: true,
+                removeLegendary: true,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
     });
 });
