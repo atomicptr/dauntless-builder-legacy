@@ -1,7 +1,7 @@
-name: Screams of the Shrike
+name: Eyes of the Shrike
 description: A Slayer's {{type}} forged with {{behemoth}} trophies.
 behemoth: Shrike
-icon: /assets/icons/weapons/shrike/ScreamsOfTheShrike.png
+icon: /assets/icons/weapons/shrike/EyesOfTheShrike.png
 type: Repeater
 damage: Slashing
 elemental: null

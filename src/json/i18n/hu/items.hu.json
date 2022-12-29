@@ -1962,7 +1962,7 @@
     "item.weapons.scream-of-the-shrike.unique_effects.0.description": "$t(item.weapons.cry-of-the-shrike.unique_effects.0.description)",
     "item.weapons.scream-of-the-shrike.unique_effects.1.description": "$t(item.weapons.cry-of-the-shrike.unique_effects.0.description)",
     "item.weapons.screams-of-the-shrike.description": "$t(item.weapons.agents-of-decay.description)",
-    "item.weapons.screams-of-the-shrike.name": "Screams of the Shrike",
+    "item.weapons.screams-of-the-shrike.name": "Eyes of the Shrike",
     "item.weapons.screams-of-the-shrike.unique_effects.0.description": "$t(item.weapons.cry-of-the-shrike.unique_effects.0.description)",
     "item.weapons.screams-of-the-shrike.unique_effects.1.description": "$t(item.weapons.cry-of-the-shrike.unique_effects.0.description)",
     "item.weapons.shriek-of-the-firebird.description": "$t(item.weapons.agents-of-decay.description)",
