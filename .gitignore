@@ -5,6 +5,8 @@
 /public/sitemap.xml
 /src/json/data.json
 /benchmarks
+/src/json/build-finder-intermediate-lookup-armour-data.json
+/src/json/build-finder-intermediate-lookup-armour-data-cells.json
 
 # dev stuff
 /map

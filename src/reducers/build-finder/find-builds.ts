@@ -1,3 +1,5 @@
+import armourDataJson from "@json/build-finder-intermediate-lookup-armour-data.json";
+import armourDataCellsJson from "@json/build-finder-intermediate-lookup-armour-data-cells.json";
 import { Armour, ArmourType } from "@src/data/Armour";
 import { BuildModel, findCellVariantByPerk, findLanternByName } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
@@ -7,7 +9,7 @@ import { Lantern } from "@src/data/Lantern";
 import { Perk } from "@src/data/Perks";
 import { Weapon, WeaponType } from "@src/data/Weapon";
 import { AssignedPerkValue } from "@src/reducers/build-finder/build-finder-selection-slice";
-import createPermutation from "@src/utils/create-permutation";
+import { deepCopy } from "@src/utils/deep-copy";
 import sortObjectByKeys from "@src/utils/sort-object-by-keys";
 import md5 from "md5";
 import { match } from "ts-pattern";
@@ -52,12 +54,31 @@ export interface MatchingBuild {
 
 export interface FinderItemData {
     weapons: Weapon[];
-    head: Armour[];
-    torso: Armour[];
-    arms: Armour[];
-    legs: Armour[];
     lantern: Lantern;
 }
+
+enum Change {
+    Increase,
+    Decrease,
+}
+
+type ArmourData = {
+    [armourType in ArmourType]: {
+        [perkName: string]: {
+            [cellType in CellType]: Armour[];
+        };
+    };
+};
+
+const armourData: ArmourData = armourDataJson as unknown as ArmourData;
+
+type ArmourDataCells = {
+    [armourType in ArmourType]: {
+        [cellType in CellType]: Armour[];
+    };
+};
+
+const armourDataCells: ArmourDataCells = armourDataCellsJson as unknown as ArmourDataCells;
 
 export const perks = (() => {
     const perkByType = {
@@ -124,57 +145,15 @@ const createItemData = (
 ): FinderItemData => {
     const finderOptions = Object.assign({}, defaultFinderItemDataOptions, options);
 
-    const { pickerWeapon, pickerHead, pickerTorso, pickerArms, pickerLegs } = finderOptions;
+    const { pickerWeapon } = finderOptions;
 
-    const filterPerksAndCells =
-        (mode: (a: boolean, b: boolean) => boolean = orMode) =>
-            (item: Weapon | Armour) =>
-                mode(
-                (item.perks && item.perks[0].name in requestedPerks) as boolean,
-                ((item.cells &&
-                    (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
-                        cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
-                    )) ||
-                    (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
-                );
-
-    const findMatchingArmourPiecesByType = (type: ArmourType) =>
-        findArmourPiecesByType(type).filter(
-            filterPerksAndCells(Object.keys(requestedPerks).length <= 3 ? orMode : andMode),
-        );
-
-    const findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered = (type: ArmourType): Armour[] => {
-        const prepickedItem = match<ArmourType, Armour | undefined | null>(type)
-            .with(ArmourType.Head, () => pickerHead)
-            .with(ArmourType.Torso, () => pickerTorso)
-            .with(ArmourType.Arms, () => pickerArms)
-            .with(ArmourType.Legs, () => pickerLegs)
-            .otherwise(() => null);
-
-        if (prepickedItem) {
-            return [prepickedItem];
-        }
-
-        let matching = findMatchingArmourPiecesByType(type);
-        for (const perk in requestedPerks) {
-            const hasMatchingCellSlot =
-                Object.values(matching)
-                    .map(armourPiece => (Array.isArray(armourPiece.cells) ? armourPiece.cells : [armourPiece.cells]))
-                    .filter(cells => cells.indexOf(perkCellMap[perk]) > -1).length > 0;
-            if (!hasMatchingCellSlot) {
-                matching = matching.concat(findArmourPieceByCell(type, perk, options));
-            }
-        }
-        return matching;
-    };
-
-    const findArmourPieceByCell = (type: ArmourType, perkName: string, options: FinderItemDataOptions = {}) => {
-        const hasMatchingCellSlot = (cells: CellType | CellType[] | null, slot: CellType) =>
-            (Array.isArray(cells) ? cells : [cells]).indexOf(slot) > -1;
-        return findArmourPiecesByType(type, options).filter(armourPiece =>
-            hasMatchingCellSlot(armourPiece.cells, perkCellMap[perkName]),
-        )[0];
-    };
+    const filterPerksAndCells = (item: Weapon | Armour) =>
+        ((item.perks && item.perks[0].name in requestedPerks) as boolean) ||
+        (((item.cells &&
+            (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
+                cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
+            )) ||
+            (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean);
 
     const createLegendaryWeaponBondWrapper = (weapon: Weapon): Weapon => {
         // legendaries disable so we don't need wrappers
@@ -216,14 +195,10 @@ const createItemData = (
         .map(createLegendaryWeaponBondWrapper);
 
     return {
-        arms: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Arms),
-        head: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Head),
         lantern: findLanternByName(lanternName) as Lantern,
-        legs: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Legs),
-        torso: findMatchingArmourPiecesAndEnsureAllCellSlotsAreCovered(ArmourType.Torso),
         weapons: pickerWeapon
             ? matchingWeapons.filter(weapon => weapon.name.startsWith(pickerWeapon.name))
-            : matchingWeapons.filter(filterPerksAndCells()),
+            : matchingWeapons.filter(weapon => filterPerksAndCells(weapon)),
     };
 };
 
@@ -233,7 +208,33 @@ export const findBuilds = (
     maxBuilds: number,
     options: FinderItemDataOptions = {},
 ) => {
+    const finderOptions = Object.assign({}, defaultFinderItemDataOptions, options);
+    const { pickerHead, pickerTorso, pickerArms, pickerLegs } = finderOptions;
     const itemData = createItemData(weaponType, lanternName, requestedPerks, options);
+
+    type AssignedSlotValue = {
+        [cellType in CellType]: number;
+    };
+
+    const requestedSlots: AssignedSlotValue = {
+        [CellType.Prismatic]: 0,
+        [CellType.Alacrity]: 0,
+        [CellType.Brutality]: 0,
+        [CellType.Finesse]: 0,
+        [CellType.Fortitude]: 0,
+        [CellType.Insight]: 0,
+    };
+
+    for (const perkName in requestedPerks) {
+        const desiredValue = requestedPerks[perkName];
+        if (requestedSlots[perkCellMap[perkName]]) {
+            requestedSlots[perkCellMap[perkName]] += desiredValue;
+            continue;
+        }
+        requestedSlots[perkCellMap[perkName]] = desiredValue;
+    }
+
+    const requestedPerksCurrent: AssignedPerkValue = deepCopy(requestedPerks);
 
     const determineBasePerks = (build: IntermediateBuild): AssignedPerkValue => {
         const perkStrings = Object.values(build)
@@ -372,33 +373,227 @@ export const findBuilds = (
                         .join("::"),
             );
 
-        for (const weapon of itemData.weapons) {
-            for (const [head, torso, arms, legs] of createPermutation([
-                itemData.head,
-                itemData.torso,
-                itemData.arms,
-                itemData.legs,
-            ])) {
-                if (matchingBuilds.length >= maxBuilds) {
-                    return matchingBuilds;
-                }
+        const stepPerkSize = 3;
 
-                const build = createIntermediateBuild(weapon, head, torso, arms, legs);
+        const perkAdjustmentSize = (change: Change) =>
+            match(change)
+                .with(Change.Increase, () => stepPerkSize)
+                .with(Change.Decrease, () => -stepPerkSize)
+                .run();
 
-                const { fulfillsCriteria, perks, cellsSlotted } = evaluateBuild(build);
-
-                if (!fulfillsCriteria) {
-                    continue;
-                }
-
-                const ident = createBuildIdentifier(build, cellsSlotted);
-                const doesBuildAlreadyExist = matchingBuilds.find(build => build.ident === ident) !== undefined;
-                if (doesBuildAlreadyExist) {
-                    continue;
-                }
-
-                matchingBuilds.push({ build, cellsSlotted, ident, perks });
+        const adjustPerkRequirements = (perkName: string, change: Change) => {
+            if (requestedPerksCurrent[perkName] === undefined) {
+                return;
             }
+            requestedPerksCurrent[perkName] += perkAdjustmentSize(change);
+            adjustCellRequirements(perkCellMap[perkName], change);
+        };
+
+        const adjustCellRequirements = (cellType: CellType, change: Change) => {
+            requestedSlots[cellType] += perkAdjustmentSize(change);
+        };
+
+        const adjustPerkAndCellsRequirements = (item: Weapon | Armour, change: Change) => {
+            (Array.isArray(item.cells) ? item.cells : [item.cells]).forEach(cell => {
+                if (cell) {
+                    adjustCellRequirements(cell, change);
+                }
+            });
+            if (!item.perks) {
+                return;
+            }
+            item.perks.forEach(perk => {
+                if (!perk.powerSurged) {
+                    adjustPerkRequirements(perk.name, change);
+                }
+            });
+        };
+
+        const createBuild = (weapon: Weapon, armourSelections: ArmourSelectionData) => {
+            const build = createIntermediateBuild(
+                weapon,
+                armourSelections[ArmourType.Head] as Armour,
+                armourSelections[ArmourType.Torso] as Armour,
+                armourSelections[ArmourType.Arms] as Armour,
+                armourSelections[ArmourType.Legs] as Armour,
+            );
+            const { fulfillsCriteria, perks, cellsSlotted } = evaluateBuild(build);
+
+            if (!fulfillsCriteria) {
+                return;
+            }
+
+            const ident = createBuildIdentifier(build, cellsSlotted);
+            const doesBuildAlreadyExist = matchingBuilds.find(build => build.ident === ident) !== undefined;
+            if (doesBuildAlreadyExist) {
+                return;
+            }
+
+            matchingBuilds.push({ build, cellsSlotted, ident, perks });
+            return;
+        };
+
+        const cellRequirements = (weapon: Weapon) => {
+            let required = 0;
+            for (const cell in requestedSlots) {
+                if (requestedSlots[cell as CellType] > 0) {
+                    required += requestedSlots[cell as CellType];
+                }
+            }
+            // adjust required for prismatic cells which can be any
+            (Array.isArray(weapon.cells) ? weapon.cells : [weapon.cells]).forEach(cell => {
+                if (cell === CellType.Prismatic) {
+                    required -= stepPerkSize;
+                }
+            });
+            return required;
+        };
+
+        const perkAndCellRequired = (i: number, weapon: Weapon) => {
+            // number of pieces left to slot * number of perks per piece - adjustment for no perk
+            return (armourPieces.length - i) * (2 * stepPerkSize) - stepPerkSize < cellRequirements(weapon);
+        };
+
+        const fillInRemainingArmourPieces = (i: number, weapon: Weapon, armourSelections: ArmourSelectionData) => {
+            if (i > armourPieces.length - 1) {
+                createBuild(weapon, armourSelections);
+                return;
+            }
+            for (const cell in CellType) {
+                if (cell === CellType.Prismatic) {
+                    continue;
+                }
+                if (armourSelections[armourPieces[i]] === null) {
+                    for (let j = 0; j < armourDataCells[armourPieces[i]][cell as CellType].length; j++) {
+                        if (matchingBuilds.length >= maxBuilds) {
+                            return;
+                        }
+                        if (
+                            finderOptions.removeExotics &&
+                            armourDataCells[armourPieces[i]][cell as CellType][j].rarity === ItemRarity.Exotic
+                        ) {
+                            continue;
+                        }
+                        armourSelections[armourPieces[i]] = armourDataCells[armourPieces[i]][cell as CellType][j];
+                        fillInRemainingArmourPieces(i + 1, weapon, armourSelections);
+                        armourSelections[armourPieces[i]] = null;
+                    }
+                }
+            }
+        };
+
+        const armourPieces = [ArmourType.Head, ArmourType.Torso, ArmourType.Arms, ArmourType.Legs];
+
+        const chooseArmour = (i: number, weapon: Weapon, armourSelections: ArmourSelectionData) => {
+            if (i > armourPieces.length - 1) {
+                createBuild(weapon, armourSelections);
+                return;
+            }
+            if (armourSelections[armourPieces[i]] !== null) {
+                chooseArmour(i + 1, weapon, armourSelections);
+                return;
+            }
+            if (cellRequirements(weapon) <= 0) {
+                fillInRemainingArmourPieces(i, weapon, armourSelections);
+                return;
+            }
+            chooseMatchingPerkAndCellArmourPiece(i, weapon, armourSelections);
+            if (perkAndCellRequired(i, weapon)) {
+                return;
+            }
+            chooseMatchingCellArmourPiece(i, weapon, armourSelections);
+        };
+
+        const chooseMatchingPerkAndCellArmourPiece = (
+            i: number,
+            weapon: Weapon,
+            armourSelections: ArmourSelectionData,
+        ) => {
+            for (const perk in requestedPerksCurrent) {
+                for (const cell in requestedSlots) {
+                    if (
+                        armourData[armourPieces[i]][perk] &&
+                        requestedSlots[perkCellMap[perk]] > 0 &&
+                        requestedSlots[cell as CellType] > 0 &&
+                        requestedPerksCurrent[perk] > 0
+                    ) {
+                        armourData[armourPieces[i]][perk][cell as CellType].forEach(armourPiece => {
+                            adjustSelectedArmourPiece(armourPiece, i, weapon, armourSelections);
+                        });
+                    }
+                }
+            }
+        };
+
+        const chooseMatchingCellArmourPiece = (i: number, weapon: Weapon, armourSelections: ArmourSelectionData) => {
+            for (const cell in requestedSlots) {
+                if (requestedSlots[cell as CellType] > 0) {
+                    const armourPiece = armourDataCells[armourPieces[i]][cell as CellType][0];
+                    adjustSelectedArmourPiece(armourPiece, i, weapon, armourSelections);
+                }
+            }
+        };
+
+        const adjustSelectedArmourPiece = (
+            armourPiece: Armour,
+            i: number,
+            weapon: Weapon,
+            armourSelections: ArmourSelectionData,
+        ) => {
+            if (!armourPiece) {
+                return;
+            }
+            if (matchingBuilds.length >= maxBuilds) {
+                return;
+            }
+            if (finderOptions.removeExotics && armourPiece.rarity === ItemRarity.Exotic) {
+                return;
+            }
+            adjustPerkAndCellsRequirements(armourPiece, Change.Decrease);
+            armourSelections[armourPieces[i]] = armourPiece;
+            chooseArmour(i + 1, weapon, armourSelections);
+            adjustPerkAndCellsRequirements(armourPiece, Change.Increase);
+            armourSelections[armourPieces[i]] = null;
+        };
+
+        type ArmourSelectionData = {
+            [armourType in ArmourType]: Armour | null;
+        };
+
+        const armourSelections: ArmourSelectionData = {
+            [ArmourType.Head]: null,
+            [ArmourType.Torso]: null,
+            [ArmourType.Arms]: null,
+            [ArmourType.Legs]: null,
+        };
+
+        armourPieces.forEach(armourType => {
+            const prePickedItem = match<ArmourType, Armour | undefined | null>(armourType)
+                .with(ArmourType.Head, () => pickerHead)
+                .with(ArmourType.Torso, () => pickerTorso)
+                .with(ArmourType.Arms, () => pickerArms)
+                .with(ArmourType.Legs, () => pickerLegs)
+                .otherwise(() => null);
+            if (prePickedItem) {
+                armourSelections[armourType] = prePickedItem;
+                adjustPerkAndCellsRequirements(prePickedItem, Change.Decrease);
+            }
+        });
+
+        (Array.isArray(itemData.lantern.cells) ? itemData.lantern.cells : [itemData.lantern.cells]).forEach(cell => {
+            if (cell) {
+                adjustCellRequirements(cell, Change.Decrease);
+            }
+        });
+
+        for (const weapon of itemData.weapons) {
+            if (matchingBuilds.length >= maxBuilds) {
+                return matchingBuilds;
+            }
+
+            adjustPerkAndCellsRequirements(weapon, Change.Decrease);
+            chooseArmour(0, weapon, armourSelections);
+            adjustPerkAndCellsRequirements(weapon, Change.Increase);
         }
 
         return matchingBuilds;
@@ -442,6 +637,3 @@ export const convertFindBuildResultsToBuildModel = (matchingBuilds: MatchingBuil
         return build;
     });
 };
-
-const orMode = (a: boolean, b: boolean) => a || b;
-const andMode = (a: boolean, b: boolean) => a && b;

@@ -3,6 +3,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 import { RunConfig, Step } from "./Step";
+import { BuildFinderCreateIntermediateLookupDataStep } from "./steps/BuildFinderCreateIntermediateLookupDataStep";
 import { CrowdinApproveStep } from "./steps/CrowdinApproveStep";
 import { CrowdinBuildStep } from "./steps/CrowdinBuildStep";
 import { CrowdinStatsStep } from "./steps/CrowdinStatsStep";
@@ -17,6 +18,7 @@ import { TrialsBuildsStep } from "./steps/TrialsBuildsStep";
 
 const Steps = [
     DataStep,
+    BuildFinderCreateIntermediateLookupDataStep,
     I18nStep,
     GithubContributorsStep,
     DependenciesStep,
