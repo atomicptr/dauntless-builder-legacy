@@ -58,8 +58,8 @@ export interface FinderItemData {
 }
 
 enum Change {
-    Increase = 3,
-    Decrease = -3,
+    Increase,
+    Decrease,
 }
 
 type ArmourData = {
@@ -147,17 +147,13 @@ const createItemData = (
 
     const { pickerWeapon } = finderOptions;
 
-    const filterPerksAndCells =
-        (mode: (a: boolean, b: boolean) => boolean = orMode) =>
-            (item: Weapon | Armour) =>
-                mode(
-                (item.perks && item.perks[0].name in requestedPerks) as boolean,
-                ((item.cells &&
-                    (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
-                        cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
-                    )) ||
-                    (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean,
-                );
+    const filterPerksAndCells = (item: Weapon | Armour) =>
+        ((item.perks && item.perks[0].name in requestedPerks) as boolean) ||
+        (((item.cells &&
+            (Array.isArray(item.cells) ? item.cells : [item.cells]).some(
+                cellSlot => Object.values(perkCellMap).indexOf(cellSlot) > -1,
+            )) ||
+            (item.cells && item.cells.indexOf(CellType.Prismatic) > -1)) as boolean);
 
     const createLegendaryWeaponBondWrapper = (weapon: Weapon): Weapon => {
         // legendaries disable so we don't need wrappers
@@ -202,7 +198,7 @@ const createItemData = (
         lantern: findLanternByName(lanternName) as Lantern,
         weapons: pickerWeapon
             ? matchingWeapons.filter(weapon => weapon.name.startsWith(pickerWeapon.name))
-            : matchingWeapons.filter(filterPerksAndCells()),
+            : matchingWeapons.filter(weapon => filterPerksAndCells(weapon)),
     };
 };
 
@@ -219,6 +215,7 @@ export const findBuilds = (
     type AssignedSlotValue = {
         [cellType in CellType]: number;
     };
+
     const requestedSlots: AssignedSlotValue = {
         [CellType.Prismatic]: 0,
         [CellType.Alacrity]: 0,
@@ -376,16 +373,24 @@ export const findBuilds = (
                         .join("::"),
             );
 
+        const stepPerkSize = 3;
+
+        const perkAdjustmentSize = (change: Change) =>
+            match(change)
+                .with(Change.Increase, () => stepPerkSize)
+                .with(Change.Decrease, () => -stepPerkSize)
+                .run();
+
         const adjustPerkRequirements = (perkName: string, change: Change) => {
             if (requestedPerksCurrent[perkName] === undefined) {
                 return;
             }
-            requestedPerksCurrent[perkName] += change;
+            requestedPerksCurrent[perkName] += perkAdjustmentSize(change);
             adjustCellRequirements(perkCellMap[perkName], change);
         };
 
         const adjustCellRequirements = (cellType: CellType, change: Change) => {
-            requestedSlots[cellType] += change;
+            requestedSlots[cellType] += perkAdjustmentSize(change);
         };
 
         const adjustPerkAndCellsRequirements = (item: Weapon | Armour, change: Change) => {
@@ -438,7 +443,7 @@ export const findBuilds = (
             // adjust required for prismatic cells which can be any
             (Array.isArray(weapon.cells) ? weapon.cells : [weapon.cells]).forEach(cell => {
                 if (cell === CellType.Prismatic) {
-                    required += Change.Decrease;
+                    required -= stepPerkSize;
                 }
             });
             return required;
@@ -446,7 +451,7 @@ export const findBuilds = (
 
         const perkAndCellRequired = (i: number, weapon: Weapon) => {
             // number of pieces left to slot * number of perks per piece - adjustment for no perk
-            return (armourPieces.length - i) * 6 - 3 < cellRequirements(weapon);
+            return (armourPieces.length - i) * (2 * stepPerkSize) - stepPerkSize < cellRequirements(weapon);
         };
 
         const fillInRemainingArmourPieces = (i: number, weapon: Weapon, armourSelections: ArmourSelectionData) => {
@@ -632,5 +637,3 @@ export const convertFindBuildResultsToBuildModel = (matchingBuilds: MatchingBuil
         return build;
     });
 };
-
-const orMode = (a: boolean, b: boolean) => a || b;
