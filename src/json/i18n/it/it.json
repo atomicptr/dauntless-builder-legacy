@@ -5,13 +5,13 @@
     "app-name": "Dauntless Builder",
     "components": {
         "build-menu": {
-            "added-build-to-favorites": "Aggiunto build \"{{name}}\" ai preferiti.",
+            "added-build-to-favorites": "Aggiunta la build \"{{name}}\" ai preferiti.",
             "build-name": "Nome Build",
             "copied-to-clipboard": "Copiato negli Appunti",
             "copy-to-clipboard": "Copia build negli appunti",
             "favorite-build": "Aggiungi questa build ai tuoi preferiti",
             "open-last-edited-build": "Apri l'ultima build che hai modificato",
-            "remove-build-from-favorites": "Rimosso build \"{{name}}\" dai preferiti.",
+            "remove-build-from-favorites": "Rimossa la build \"{{name}}\" dai preferiti.",
             "set-build-name": "Imposta il nome della Build",
             "unfavorite-build": "Rimuovi questa build dai tuoi preferiti"
         },
@@ -181,7 +181,7 @@
                     },
                     "Bastion": {
                         "description": "Bastion features higher shield gain from perks and the passive ability to generate shields when damage is dealt. Its active ability consumes all the shield you currently have and deals damage based on how much shield was consumed. Neglecting the active ability significantly lowers your potential damage.",
-                        "name": "Bastion"
+                        "name": "Bastione"
                     },
                     "Catalyst": {
                         "description": "These are the best builds you can have for general hunting, maximizing damage and using Blitz tonics as your source of attack speed.\nRecommended tonics for maximum damage: Frenzy, Blitz, Aetherdrive.",
@@ -240,7 +240,7 @@
             "title": "Crea una nuova build"
         },
         "settings": {
-            "community-language": "This language is not officially supported by Dauntless, but members of our community decided to add a translation for Dauntless Builder regardless.",
+            "community-language": "Questa lingua non è ufficialmente supportata da Dauntless, ma i membri della nostra community hanno deciso di aggiungere la traduzione per Dauntless Builder in ogni caso.",
             "data": "Application Data",
             "data-export": "Esporta",
             "data-import": "Importa",
@@ -259,8 +259,8 @@
             "generated": {
                 "tips": {
                     "Boreus [*].0": "You can use the Bombers and the Weak Spot to delay Boreus' Aethercharge. (the shield phase)",
-                    "Charrogg.0": "Charrogg's left arm slam doesn't hit you if you are close to its neck.",
-                    "Charrogg.1": "Charrogg's weakest parts are the firesacs (1 on each side of the head, 1 on each side of the belly).",
+                    "Charrogg.0": "L'impatto della zampa anteriore sinistra del Charrogg non ti colpisce se sei vicino al suo collo.",
+                    "Charrogg.1": "Le parti più deboli del Charrogg sono le sacche lanciafiamme (una su ogni lato della testa e del ventre).",
                     "Embermane.0": "Use Embermane to protect yourself from the shock pylon's orbs.",
                     "Gnasher.0": "You can bait Gnasher's interrupt by getting close to him at the start of the fight. The cooldown resets on enrage.",
                     "Kharabak.0": "*Don't get hit by the bees.",
@@ -269,13 +269,13 @@
                     "Koshai.1": "Like all Behemoths, Koshai's enrage resets the timer on the interrupt, position yourself to bait it right after the animation ends.",
                     "Koshai.2": "Koshai grows its antlers at around 1 minute, be ready for the damage window that follows.",
                     "Pangar.0": "Pangar's interruptable roll is very easy to bait (does it twice in a row only), and the cooldown gets reset on enrage.",
-                    "Pangar.1": "Pangar's interruptable roll is currently bugged and doesn't do any damage until the very end of it, so use that for extremely easy interrupts.",
+                    "Pangar.1": "La rotolata interrompibile del Pangar al momento è buggata e non infligge alcun danno se non prorpio alla fine. Sfruttala per interruzioni molto semplici.",
                     "Quillshot.0": "You can build Skarn lantern/Frostwülf shield on the platform.",
-                    "Rezakiri.0": " Be sure to use revenant between 500 and 600 HP to keep shroud unique effect active.",
+                    "Rezakiri.0": " Assicurati di utilizzare Redivivo tra i 500 e i 600 HP per mantenere l'effetto unico dello Shrowd attivo.",
                     "Shadowtouched Koshai.0": "You can bait the interrupt at the start pretty easily, and the turn-around interrupt afterwards, just like normal Koshai.",
                     "Shadowtouched Koshai.1": "The second time Shadowtouched Koshai goes into the ground, he spawns as far away as possible somewhere in the arena and shoots umbral orbs at you, during this time he is extremely vulnerable to damage.",
                     "Shadowtouched Nayzaga.0": "Just like normal Nayzaga, U. Nayzaga starts the fight with his dual slide interrupt.",
-                    "Shadowtouched Nayzaga.1": "Nayzaga's clone-summoning stomp doesn't deal damage, only the clone does.",
+                    "Shadowtouched Nayzaga.1": "L'impatto evoca-clone del Nayzaga non infligge danno, solo il clone lo fa.",
                     "Shadowtouched Nayzaga.2": "After it goes into its portal, get ready for the following interrupt.",
                     "Shrike.0": "Shrike's weakest parts are its head and wings.",
                     "Shrike.1": "Shrike can be instantly booped after enrage.",
@@ -305,14 +305,14 @@
             "Boreus": "Boreus",
             "Charrogg": "Charrogg",
             "Chronovore": "Il Cronovoro",
-            "Deepfrost Gnasher": "Deepfrost Gnasher",
-            "Deepfrost Skarn": "Deepfrost Skarn",
+            "Deepfrost Gnasher": "Gnasher algente",
+            "Deepfrost Skarn": "Skarn algente",
             "Drask": "Drask",
             "Embermane": "Embermane",
             "Fenroar": "Fenroar",
-            "Flameborn Gnasher": "Flameborn Gnasher",
-            "Flameborn Quillshot": "Flameborn Quillshot",
-            "Flameborn Rezakiri": "Flameborn Rezakiri",
+            "Flameborn Gnasher": "Gnasher fiammeggiante",
+            "Flameborn Quillshot": "Quillshot fiammeggiante",
+            "Flameborn Rezakiri": "Rezakiri fiammeggiante",
             "Frostwülf": "Frostwülf",
             "Gnasher": "Gnasher",
             "Hellion": "Hellion",
