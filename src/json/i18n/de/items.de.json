@@ -237,7 +237,7 @@
     "item.armours.thunderdeeps-regulators.name": "Thunderdeeps Regulatoren",
     "item.armours.thunderdeeps-turbines.description": "$t(item.armours.adversarys-drive.description)",
     "item.armours.thunderdeeps-turbines.name": "Thunderdeeps Turbinen",
-    "item.armours.timeweave-gauntlets.description": "{{typeAlt}} protection, part of the Timeweave set.",
+    "item.armours.timeweave-gauntlets.description": "{{typeAlt}} Schutz, Teil des Zeitgewebes.",
     "item.armours.timeweave-gauntlets.name": "Timeweave Gauntlets",
     "item.armours.timeweave-helm.description": "$t(item.armours.timeweave-gauntlets.description)",
     "item.armours.timeweave-helm.name": "Timeweave Helm",

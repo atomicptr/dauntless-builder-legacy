@@ -1569,7 +1569,7 @@
     "item.weapons.eyes-of-the-firebird.unique_effects.0.description": "$t(item.weapons.call-of-the-firebird.unique_effects.0.description)",
     "item.weapons.eyes-of-the-firebird.unique_effects.1.description": "$t(item.weapons.call-of-the-firebird.unique_effects.0.description)",
     "item.weapons.eyes-of-the-shrike.description": "$t(item.weapons.agents-of-decay.description)",
-    "item.weapons.eyes-of-the-shrike.name": "Eyes of the Shrike",
+    "item.weapons.eyes-of-the-shrike.name": "Ojos del Shrike",
     "item.weapons.eyes-of-the-shrike.unique_effects.0.description": "$t(item.weapons.cry-of-the-shrike.unique_effects.0.description)",
     "item.weapons.eyes-of-the-shrike.unique_effects.1.description": "$t(item.weapons.cry-of-the-shrike.unique_effects.0.description)",
     "item.weapons.fall-of-night.description": "$t(item.weapons.agents-of-decay.description)",
