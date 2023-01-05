@@ -189,7 +189,7 @@
                     },
                     "Discipline": {
                         "description": "Discipline is a high-risk high-reward Omnicell, featuring a high damage parry ability that grants you stacks of critical damage if timed correctly and, at max stacks, grants you a high amount of critical chance.",
-                        "name": "Discipline"
+                        "name": "Disciplina"
                     },
                     "Escalations": {
                         "description": "Build per affrontare le ascese. Include build senza Equipaggiamento delle ascese / prove",
@@ -261,7 +261,7 @@
                     "Boreus [*].0": "You can use the Bombers and the Weak Spot to delay Boreus' Aethercharge. (the shield phase)",
                     "Charrogg.0": "L'impatto della zampa anteriore sinistra del Charrogg non ti colpisce se sei vicino al suo collo.",
                     "Charrogg.1": "Le parti più deboli del Charrogg sono le sacche lanciafiamme (una su ogni lato della testa e del ventre).",
-                    "Embermane.0": "Use Embermane to protect yourself from the shock pylon's orbs.",
+                    "Embermane.0": "Usa l'Embermane per proteggerti dalle sfere dei piloni elettrizzanti.",
                     "Gnasher.0": "You can bait Gnasher's interrupt by getting close to him at the start of the fight. The cooldown resets on enrage.",
                     "Kharabak.0": "*Don't get hit by the bees.",
                     "Kharabak.1": "*For wound focused weapons use insight tonic instead of aetherdrive",
@@ -295,10 +295,10 @@
         "armour-alt": {
             "Arms": "Braccia",
             "Head": "Elmo",
-            "Legs": "Gambali",
+            "Legs": "Gambe",
             "Torso": "Busto"
         },
-        "arms-armour": "Armatura delle braccia",
+        "arms-armour": "Guanti d'arme",
         "behemoths": {
             "Agarus": "Agarus",
             "Alyra": "Alyra",
@@ -339,7 +339,7 @@
             "Stormclaw": "Stormclaw",
             "The Chronovore": "$t(terms.behemoths.Chronovore)",
             "Thrax": "Thrax",
-            "Thunderdeep Drask": "Thunderdeep Drask",
+            "Thunderdeep Drask": "Drask tuonante",
             "Torgadoro": "Torgadoro",
             "Urska": "Urska",
             "Valomyr": "Valomyr"
@@ -367,10 +367,10 @@
             "Terra": "Terra",
             "Umbral": "Umbral"
         },
-        "head-armour": "Head Armour",
+        "head-armour": "Elmo",
         "hold": "Hold",
         "lantern": "Lanterna",
-        "legs-armour": "Legs Armour",
+        "legs-armour": "Gambali",
         "omnicell": "Omnicella",
         "part": "Part",
         "parts": {
@@ -385,7 +385,7 @@
         "resistance": "Resistance",
         "save": "Salva",
         "search": "Cerca",
-        "torso-armour": "Torso Armour",
+        "torso-armour": "Corazza",
         "unique-effect": "Effetto unico",
         "unselect": "Seleziona nulla",
         "weapon": "Arma",
