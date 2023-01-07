@@ -5,6 +5,11 @@
         "username": "Medaey"
     },
     {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14003855/medium/fe47b38132d54f1e95875ef3511cc623_default.png",
+        "proofreader": false,
+        "username": "StepkaMonkey"
+    },
+    {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15101141/medium/f0e4f75afce7ea3035cd7dc38c64d487.png",
         "proofreader": true,
         "username": "atomicptr"
