@@ -125,6 +125,27 @@
         },
         {
             "builds": [
+                "nNfqTyzFyC77UyBUgUAtjTApsV6HxCgFM5cPCg5UVCBCK6CLdhaCP5s7SPNsr",
+                "v3frT8AszC57TmmUaczfQTmXizkIrC1NczecyCBEfWC0CdF0EsyCjZsoSaAhV",
+                "mNf6TKyFjCjVcK5IXcjCETnVI7bCpCOxTa8cqCNkUXrTBCvFX2haCePirSa7h2",
+                "Z0fETMdUkCdXIQFBc4CKT2KiJkipCYaFQ0UgCQphxoiYCeQizdhPCvqiLSk1He",
+                "KBfkT0qU0C6QHdWTPcrUYT8vFxni5CR5IE2cAC0WibKTBCdF3BhYCXLiESO8H1",
+                "pnfXTE1iwCgbcxFXSAh7CXAUqriMCV6SXSLCJzs57CZCMJCeohdCPQCeSzksN",
+                "gxfJTMvc2CJ8C55UpSrsWTWzFK1iLCk2s8of7CLbUwC4CVF0msmCqAimSwvC5"
+            ],
+            "consumables": [
+                "Aetherdrive",
+                "Blitz",
+                "Frenzy"
+            ],
+            "modifiers": [
+                "Inferno",
+                "Electrify"
+            ],
+            "title": "Phaelanx"
+        },
+        {
+            "builds": [
                 "yKfETJocBCdAsEzU7UmtYT4oFrdIbCX1urVc7CMMUqCJC4qs4LCwCQYHQFExhb",
                 "7xfVTj4hKCbYHBgFrcWtnTP3HvwI8C3JcmkcWCz8UmvTaCZesBVuvCAETgFQgIk",
                 "ARfbTKLUwC8pugvIMcNUPT2h7Mt2CQbCoycYCwwUWCkCPJs6xt2CqEhYF4ASX",
