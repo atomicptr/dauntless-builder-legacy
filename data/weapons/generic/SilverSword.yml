@@ -35,7 +35,7 @@ unique_effects:
       +{{percentHealing}}% Healing{{NL}}
       +{{maxHealth}} Max Health
     values:
-      percentShield: 10
+      percentShield: 50
       percentHealing: 30
       maxHealth: 300
     powerSurged: true
