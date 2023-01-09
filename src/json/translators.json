@@ -1,5 +1,10 @@
 [
     {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/12989647/medium/02e170ed524edbf2a989ef8c9103a574_default.png",
+        "proofreader": false,
+        "username": "Joccc"
+    },
+    {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13738209/medium/f86ce4a76c429dd334d138f714b0a1ee.jpg",
         "proofreader": true,
         "username": "Medaey"
@@ -193,5 +198,10 @@
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15585593/medium/4d600ec1d3c8003c3def52260e212688.jpeg",
         "proofreader": false,
         "username": "AgateSlayer"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15627039/medium/912d155008bb9c8492cdc621cbff3aa0.jpeg",
+        "proofreader": false,
+        "username": "anhvu6891"
     }
 ]
