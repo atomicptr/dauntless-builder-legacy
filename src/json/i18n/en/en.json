@@ -166,7 +166,6 @@
                     "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Speed",
                     "Urska (F) Speed": "$t(terms.behemoths.Urska) (F) Speed",
                     "Urska (F) Survival": "$t(terms.behemoths.Urska) (F) Survival",
-                    "Urska (Frostwulf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Frostwülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Pangar)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar))",
                     "Urska (Pangar) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Resolve",
@@ -176,7 +175,7 @@
                 },
                 "categories": {
                     "Artificer": {
-                        "description": "Artificer features a drone you can control that has multiple functions depending on what you are targeting: if targeting the ground, it creates a healing and shielding aura that blocks Behemoth's projectiles; if targeting a player it creates a healing and shield aura that follows them; if targeting a downed slayer it revives them and creates a healing and shielding aura that follows them; and, if targeting a Behemoth, it marks a part to take extra damage.",
+                        "description": "Artificer features a drone you can control that has multiple functions depending on what you are targeting: if targeting the ground, it creates a healing and shielding aura that blocks Behemoth's projectiles; if targeting a player it creates a healing and shielding aura that follows them; if targeting a downed slayer it revives them and creates a healing and shielding aura that follows them; and, if targeting a Behemoth, it marks a part to take extra damage.",
                         "name": "Artificer"
                     },
                     "Bastion": {
