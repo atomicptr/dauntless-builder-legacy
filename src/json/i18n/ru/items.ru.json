@@ -1969,7 +1969,7 @@
     "item.weapons.shriek-of-the-firebird.name": "Крик огненной птицы",
     "item.weapons.shriek-of-the-firebird.unique_effects.0.description": "$t(item.weapons.call-of-the-firebird.unique_effects.0.description)",
     "item.weapons.shriek-of-the-firebird.unique_effects.1.description": "$t(item.weapons.call-of-the-firebird.unique_effects.0.description)",
-    "item.weapons.silver-sword.description": "Меч однажды был использован Серебряным Николаем, предком Королевы Линны.",
+    "item.weapons.silver-sword.description": "Меч однажды был использован Серебряной Николой, предком Королевы Линны.",
     "item.weapons.silver-sword.name": "Серебряный Меч",
     "item.weapons.silver-sword.unique_effects.0.description": "Увеличивает все получаемые щиты на {{percentShield}}%",
     "item.weapons.silver-sword.unique_effects.0.title": "Пассивный",
