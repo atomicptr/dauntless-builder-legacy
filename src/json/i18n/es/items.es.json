@@ -228,7 +228,7 @@
     "item.armours.thraxs-scream.description": "$t(item.armours.adversarys-drive.description)",
     "item.armours.thraxs-scream.name": "Grito de Thrax",
     "item.armours.thraxs-shadow.description": "$t(item.armours.adversarys-drive.description)",
-    "item.armours.thraxs-shadow.name": "Sombra de Thraz",
+    "item.armours.thraxs-shadow.name": "Sombra de Thrax",
     "item.armours.thunderdeeps-capacitor.description": "$t(item.armours.adversarys-drive.description)",
     "item.armours.thunderdeeps-capacitor.name": "Capacitador sobrecargado",
     "item.armours.thunderdeeps-dynamo.description": "$t(item.armours.adversarys-drive.description)",
