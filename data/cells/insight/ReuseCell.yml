@@ -1,0 +1,15 @@
+name: Reuse Cell
+slot: Insight
+variants:
+  +1 Reuse Cell:
+    rarity: uncommon
+    perks:
+      Reuse: 1
+  +2 Reuse Cell:
+    rarity: rare
+    perks:
+      Reuse: 2
+  +3 Reuse Cell:
+    rarity: epic
+    perks:
+      Reuse: 3

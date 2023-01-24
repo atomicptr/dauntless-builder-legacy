@@ -1,0 +1,46 @@
+name: Reduce
+description: Lowers attack speed but increases damage dealt.
+type: Brutality
+effects:
+  '1':
+    description:
+      - Damage is increased by {{percentDamage}}%.
+      - Attack Speed is adjusted by {{percentReducedAtkSpeed}}%.
+    values:
+      percentDamage: 10
+      percentReducedAtkSpeed: -5
+  '2':
+    description:
+      - Damage is increased by {{percentDamage}}%.
+      - Attack Speed is adjusted by {{percentReducedAtkSpeed}}%.
+    values:
+      percentDamage: 15
+      percentReducedAtkSpeed: -10
+  '3':
+    description:
+      - Damage is increased by {{percentDamage}}%.
+      - Attack Speed is adjusted by {{percentReducedAtkSpeed}}%.
+    values:
+      percentDamage: 20
+      percentReducedAtkSpeed: -15
+  '4':
+    description:
+      - Damage is increased by {{percentDamage}}%.
+      - Attack Speed is adjusted by {{percentReducedAtkSpeed}}%.
+    values:
+      percentDamage: 30
+      percentReducedAtkSpeed: -20
+  '5':
+    description:
+      - Damage is increased by {{percentDamage}}%.
+      - Attack Speed is adjusted by {{percentReducedAtkSpeed}}%.
+    values:
+      percentDamage: 40
+      percentReducedAtkSpeed: -25
+  '6':
+    description:
+      - Damage is increased by {{percentDamage}}%.
+      - Attack Speed is adjusted by {{percentReducedAtkSpeed}}%.
+    values:
+      percentDamage: 50
+      percentReducedAtkSpeed: -30

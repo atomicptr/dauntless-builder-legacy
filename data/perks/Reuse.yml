@@ -1,0 +1,64 @@
+name: Reuse
+description: Breaking a Behemoth part grants a small attack speed bonus, with a chance to get a much larger one that applies to your whole party.
+type: Insight
+effects:
+  '1':
+    description: >-
+      Breaking or assisting in breaking a Behemoth Part has a {{percentTriggerChance}}% chance to grant allies nearby
+      {{percentIncreasedAtkSpeed}}% increased attack speed for {{duration}} seconds. Else gain only
+      {{percentIncreasedAtkSpeedDefault}}% attack speed for self.
+    values:
+      percentTriggerChance: 5
+      percentIncreasedAtkSpeed: 20
+      duration: 30
+      percentIncreasedAtkSpeedDefault: 10
+  '2':
+    description: >-
+      Breaking or assisting in breaking a Behemoth Part has a {{percentTriggerChance}}% chance to grant allies nearby
+      {{percentIncreasedAtkSpeed}}% increased attack speed for {{duration}} seconds. Else gain only
+      {{percentIncreasedAtkSpeedDefault}}% attack speed for self.
+    values:
+      percentTriggerChance: 15
+      percentIncreasedAtkSpeed: 20
+      duration: 30
+      percentIncreasedAtkSpeedDefault: 10
+  '3':
+    description: >-
+      Breaking or assisting in breaking a Behemoth Part has a {{percentTriggerChance}}% chance to grant allies nearby
+      {{percentIncreasedAtkSpeed}}% increased attack speed for {{duration}} seconds. Else gain only
+      {{percentIncreasedAtkSpeedDefault}}% attack speed for self.
+    values:
+      percentTriggerChance: 30
+      percentIncreasedAtkSpeed: 20
+      duration: 30
+      percentIncreasedAtkSpeedDefault: 10
+  '4':
+    description: >-
+      Breaking or assisting in breaking a Behemoth Part has a {{percentTriggerChance}}% chance to grant allies nearby
+      {{percentIncreasedAtkSpeed}}% increased attack speed for {{duration}} seconds. Else gain only
+      {{percentIncreasedAtkSpeedDefault}}% attack speed for self.
+    values:
+      percentTriggerChance: 50
+      percentIncreasedAtkSpeed: 20
+      duration: 30
+      percentIncreasedAtkSpeedDefault: 10
+  '5':
+    description: >-
+      Breaking or assisting in breaking a Behemoth Part has a {{percentTriggerChance}}% chance to grant allies nearby
+      {{percentIncreasedAtkSpeed}}% increased attack speed for {{duration}} seconds. Else gain only
+      {{percentIncreasedAtkSpeedDefault}}% attack speed for self.
+    values:
+      percentTriggerChance: 75
+      percentIncreasedAtkSpeed: 20
+      duration: 30
+      percentIncreasedAtkSpeedDefault: 10
+  '6':
+    description: >-
+      Breaking or assisting in breaking a Behemoth Part has a {{percentTriggerChance}}% chance to grant allies nearby
+      {{percentIncreasedAtkSpeed}}% increased attack speed for {{duration}} seconds. Else gain only
+      {{percentIncreasedAtkSpeedDefault}}% attack speed for self.
+    values:
+      percentTriggerChance: 90
+      percentIncreasedAtkSpeed: 20
+      duration: 30
+      percentIncreasedAtkSpeedDefault: 10

@@ -1,0 +1,15 @@
+name: Recycle Cell
+slot: Finesse
+variants:
+  +1 Recycle Cell:
+    rarity: uncommon
+    perks:
+      Recycle: 1
+  +2 Recycle Cell:
+    rarity: rare
+    perks:
+      Recycle: 2
+  +3 Recycle Cell:
+    rarity: epic
+    perks:
+      Recycle: 3

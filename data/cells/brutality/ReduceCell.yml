@@ -1,0 +1,15 @@
+name: Reduce Cell
+slot: Brutality
+variants:
+  +1 Reduce Cell:
+    rarity: uncommon
+    perks:
+      Reduce: 1
+  +2 Reduce Cell:
+    rarity: rare
+    perks:
+      Reduce: 2
+  +3 Reduce Cell:
+    rarity: epic
+    perks:
+      Reduce: 3

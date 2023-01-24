@@ -1,0 +1,46 @@
+name: Recycle
+description: Breaking a Behemoth part grants a small attack speed bonus, with a chance to get a much larger one that applies to your whole party.
+type: Finesse
+effects:
+  '1':
+    description: >-
+      Dealing damage to the same part consecutively grants {{percentIncreasedDamage}}% increased damage. Stacks up to
+      {{maxStacks}} times.
+    values:
+      percentIncreasedDamage: 10
+      maxStacks: 1
+  '2':
+    description: >-
+      Dealing damage to the same part consecutively grants {{percentIncreasedDamage}}% increased damage. Stacks up to
+      {{maxStacks}} times.
+    values:
+      percentIncreasedDamage: 10
+      maxStacks: 2
+  '3':
+    description: >-
+      Dealing damage to the same part consecutively grants {{percentIncreasedDamage}}% increased damage. Stacks up to
+      {{maxStacks}} times.
+    values:
+      percentIncreasedDamage: 10
+      maxStacks: 3
+  '4':
+    description: >-
+      Dealing damage to the same part consecutively grants {{percentIncreasedDamage}}% increased damage. Stacks up to
+      {{maxStacks}} times.
+    values:
+      percentIncreasedDamage: 10
+      maxStacks: 4
+  '5':
+    description: >-
+      Dealing damage to the same part consecutively grants {{percentIncreasedDamage}}% increased damage. Stacks up to
+      {{maxStacks}} times.
+    values:
+      percentIncreasedDamage: 10
+      maxStacks: 5
+  '6':
+    description: >-
+      Dealing damage to the same part consecutively grants {{percentIncreasedDamage}}% increased damage. Stacks up to
+      {{maxStacks}} times.
+    values:
+      percentIncreasedDamage: 10
+      maxStacks: 6

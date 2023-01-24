@@ -343,7 +343,16 @@
         "204": "+3 Stop Cell",
         "205": "+1 Drop Cell",
         "206": "+2 Drop Cell",
-        "207": "+3 Drop Cell"
+        "207": "+3 Drop Cell",
+        "208": "+1 Reduce Cell",
+        "209": "+2 Reduce Cell",
+        "210": "+3 Reduce Cell",
+        "211": "+1 Recycle Cell",
+        "212": "+2 Recycle Cell",
+        "213": "+3 Recycle Cell",
+        "214": "+1 Reuse Cell",
+        "215": "+2 Reuse Cell",
+        "216": "+3 Reuse Cell"
     },
     "Lanterns": {
         "1": "Drask's Eye",
@@ -524,7 +533,10 @@
         "67": "Rushdown",
         "68": "Drop",
         "69": "Roll",
-        "70": "Stop"
+        "70": "Stop",
+        "71": "Recycle",
+        "72": "Reduce",
+        "73": "Reuse"
     },
     "Weapons": {
         "1": "Brutality of Boreus",
