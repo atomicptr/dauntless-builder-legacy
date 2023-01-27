@@ -3,302 +3,6 @@
         {
             "builds": [
                 {
-                    "buildId": "zKfyTXbhOCBnceFmUzt6TkPteAIBCz4ivqcXCKwUMEcACebTYXhqCgJsQSPvt8",
-                    "subcategory": null,
-                    "title": "Urska (Frostwülf)",
-                    "vsElement": "Blaze"
-                },
-                {
-                    "buildId": "dJfvTaBCgC8QHWF8cdtwTboS5FACkyC6dtMCZ2H3wUjCkdijKhwCnesySNLF4",
-                    "subcategory": null,
-                    "title": "Urska (Frostwülf)",
-                    "vsElement": "Blaze"
-                },
-                {
-                    "buildId": "4Nf5TLOUQCwFNVfwc0CxTxECmRIqCwPiv6crCodUQ4ckCMniyJhVCOgs2S4rt6",
-                    "subcategory": null,
-                    "title": "Urska (Frostwülf)",
-                    "vsElement": "Blaze"
-                },
-                {
-                    "buildId": "JjfoT75hxC3WTdes4ceCJTXAH5jFJC5NURjTnCoKidRcqCkAuj7hJCA3ToSLvfa",
-                    "subcategory": null,
-                    "title": "Urska (Pangar) Wound",
-                    "vsElement": "Blaze"
-                },
-                {
-                    "buildId": "LWfOTJOTzCXFnmtwcgCQTdvuZkhMCB8tgWcdCeRUnjcMCwZi6Kf2CdYs7SJ3uP",
-                    "subcategory": null,
-                    "title": "Urska (Frostwülf)",
-                    "vsElement": "Blaze"
-                },
-                {
-                    "buildId": "5wf8TzVCRCdFQMUKSPujTqBSMauaCALUkNfQC3RUeacECPOSjJhQC4qhoSAaUv",
-                    "subcategory": null,
-                    "title": "Urska (Frostwülf)",
-                    "vsElement": "Blaze"
-                },
-                {
-                    "buildId": "JjfoTAQFxCz5CdesNS2hvIaJS5jFJC5MCR2tnC4EHdqiqCNFjxhJC4whoSLvfa",
-                    "subcategory": null,
-                    "title": "Urska (Frostwülf)",
-                    "vsElement": "Blaze"
-                },
-                {
-                    "buildId": "7xfVTjeFKCz3cjF6T4TnTg0TvwI8C30UmkcWCz8UEmFaCwaiBMuvCevs7SB7tK",
-                    "subcategory": null,
-                    "title": "Urska (Frostwülf)",
-                    "vsElement": "Blaze"
-                },
-                {
-                    "buildId": "wKfQTgkF4CXXULeHdURtZTN0UNFaCxxUzkcvC6EFELTeCJLtqkh5CKofoSemtw",
-                    "subcategory": null,
-                    "title": "Torg (Hellion)",
-                    "vsElement": "Frost"
-                },
-                {
-                    "buildId": "7xfVTjOIKCwmHpdHrcWtnTBSbF8C3YumkcWCz8UmvTaCZPTBVuvCAET7SBLhK",
-                    "subcategory": null,
-                    "title": "Torg (Charrogg)",
-                    "vsElement": "Frost"
-                },
-                {
-                    "buildId": "Brf8TNqT3Cq4tQzcdcECJTXhJOIkCX6uLkfVCMbF2YTJCWJInpuOCmMTgS23F0",
-                    "subcategory": null,
-                    "title": "Torg (Hellion)",
-                    "vsElement": "Frost"
-                },
-                {
-                    "buildId": "7xfVTjZTKCbeU41frcYCnTAhvwI8C30UmAfWCdpHEzhaCzAFBWSvCAET7SB7tK",
-                    "subcategory": null,
-                    "title": "Torg (Hellion) Wound",
-                    "vsElement": "Frost"
-                },
-                {
-                    "buildId": "OWfwTeKUBCQjFbVHLcyCYTKSX5IPCwnHK6SMCr1sA0unC1nHQuVCn2SySqwS1",
-                    "subcategory": null,
-                    "title": "Torg (Hellion)",
-                    "vsElement": "Frost"
-                },
-                {
-                    "buildId": "MRfWT55IXCO3fnetyc7u8Tkfx2I5CZzfqOfzCRbTr3cKCZyIJ0T6CRXsoS7Nfy",
-                    "subcategory": null,
-                    "title": "Torg (Hellion)",
-                    "vsElement": "Frost"
-                },
-                {
-                    "buildId": "qrfLTw7tvCoVSkac0SohXIa0CqaIvC2gfAQUACzQiLYc3CorFBMu8C5aixSVRSW",
-                    "subcategory": null,
-                    "title": "Torg (Hellion)",
-                    "vsElement": "Frost"
-                },
-                {
-                    "buildId": "EQfPTj2tNC00UbacwTkT6T8hvFJCooUOEcoC0miP8sbCmJiBquBCj0sLSL1cE",
-                    "subcategory": null,
-                    "title": "Torg (Charrogg)",
-                    "vsElement": "Frost"
-                },
-                {
-                    "buildId": "YwfzTbEUgCvmIJRiPUYtKTZQfPrcJC43typc0C6rF8eU0CboH3JhxC1qFoSyoTA",
-                    "subcategory": null,
-                    "title": "Agarus (Kharabak)",
-                    "vsElement": "Shock"
-                },
-                {
-                    "buildId": "rBfoTqWFeCwnHOYiqcet0T7IeFNCRqc8dfBCaQUOeHrCkyioXh4CLzcnS4rhk",
-                    "subcategory": null,
-                    "title": "Agarus (Kharabak)",
-                    "vsElement": "Shock"
-                },
-                {
-                    "buildId": "gxfJTM2I2CzxHmoUWc0CWToCK1iLCk2spwI7C3zTvxc4CWjT0wsmC8bFmS2NF5",
-                    "subcategory": null,
-                    "title": "Agarus (Kharabak)",
-                    "vsElement": "Shock"
-                },
-                {
-                    "buildId": "wKfQTgqH4CXrH0qIzcYCZTyCjAIaC4MczRfvCPjHJEceCo6Fqkh5CKofoSeKSw",
-                    "subcategory": null,
-                    "title": "Agarus (Khara) Wound",
-                    "vsElement": "Shock"
-                },
-                {
-                    "buildId": "KBfkT04T0C6zULKuPc0CYT2s8wC5CAOFp1IACPnC6bcBCpnHYuYCXrSESXVSj",
-                    "subcategory": null,
-                    "title": "Agarus (Kharabak)",
-                    "vsElement": "Shock"
-                },
-                {
-                    "buildId": "bMfLT0YfoCRgH78CJc1uxToT1auoCd4iZdfqC2eFQxcRCrLC4EuWCaQsKS4ghJ",
-                    "subcategory": null,
-                    "title": "Agarus (Kharabak)",
-                    "vsElement": "Shock"
-                },
-                {
-                    "buildId": "2Pf4TmNUgCnRHk0cwSdh3IW6snVIpCjvsn7IqC51sJ4ckCZbIv2heCLVcaS8Bs3",
-                    "subcategory": null,
-                    "title": "Agarus (Kharabak)",
-                    "vsElement": "Shock"
-                },
-                {
-                    "buildId": "EQfPTj8HNC4zSbeTwTkT6T6HoeIJC3pUOEcoC0miPZcbCEpHBquBCj0sLSL1cE",
-                    "subcategory": null,
-                    "title": "Agarus (Kharabak)",
-                    "vsElement": "Shock"
-                },
-                {
-                    "buildId": "2Pf4TmXSgCnnUXXUkUNteTWkTnVIpCj3iZ4cqCVeUJ4ckCmgHv3ueCLVcaS8Bs3",
-                    "subcategory": null,
-                    "title": "Malk (Sahvyt)",
-                    "vsElement": "Terra"
-                },
-                {
-                    "buildId": "7xfVTLniKCwwUpdHrcWtnTgkubF8CwwUmkcWCz8UEzhaCZPTBVuvCe5i7SB7tK",
-                    "subcategory": null,
-                    "title": "Malk (Sahvyt)",
-                    "vsElement": "Terra"
-                },
-                {
-                    "buildId": "60fPTO2cAC3WT2JSoc0CrTnLfz1INCmOs8TECR1I5PfaC2PIzPhRCVqsKSLdfd",
-                    "subcategory": null,
-                    "title": "Malk (Sahvyt)",
-                    "vsElement": "Terra"
-                },
-                {
-                    "buildId": "EQfPT1ZsNC0vUbeTmcyC6TwPIoeIJC3VfwToC7viPZcbCW2TBVuBCjLHLSoESE",
-                    "subcategory": null,
-                    "title": "Malk (Sahvyt) Wound",
-                    "vsElement": "Terra"
-                },
-                {
-                    "buildId": "8MfgTOafOCyLuPNF8cPCQTRZse2IpCgYCOdUeCdMsLVcYCx5H2uMCavSjSgBSY",
-                    "subcategory": null,
-                    "title": "Malk (Sahvyt)",
-                    "vsElement": "Terra"
-                },
-                {
-                    "buildId": "8MfgTOnuOCgBHPNF8c5uQTRxIe2IpCzBi7afeCdoHLVcYC6AUJgTMCaosjSgBSY",
-                    "subcategory": null,
-                    "title": "Malk (Sahvyt)",
-                    "vsElement": "Terra"
-                },
-                {
-                    "buildId": "rBfoTnnseCwnHO7SYS6hEIYVSknINCRvt4QtBCEwiOQcrCpOUomu4CLzcnS40tk",
-                    "subcategory": null,
-                    "title": "Malk (Sahvyt)",
-                    "vsElement": "Terra"
-                },
-                {
-                    "buildId": "Brf8T8mI3Cq4tQXU7TNTJTWJHJOIkCX6u71SVC6KF2BhJCLdHn1hOCj2sgS23F0",
-                    "subcategory": null,
-                    "title": "Malk (Sahvyt)",
-                    "vsElement": "Terra"
-                },
-                {
-                    "buildId": "rBfoTqOieCwwUVVUeUet0T5zuknINCRwT8dfBCaQUOQcrCL3HoXh4CLzcnS4rhk",
-                    "subcategory": null,
-                    "title": "Thrax (Rift)",
-                    "vsElement": "Radiant"
-                },
-                {
-                    "buildId": "YwfzTbZsgC33UJgCRcYtKTknT0UJCggUypc0C6rF8Ru0CwXi3JhxC1qFoSyXUA",
-                    "subcategory": null,
-                    "title": "Thrax (Rift)",
-                    "vsElement": "Radiant"
-                },
-                {
-                    "buildId": "MRfWT5KUXCYLHPdtyc4C8TjRFx2I5CZRsATzCRLIr3cKCZyIJnT6CRXsoS7PHy",
-                    "subcategory": null,
-                    "title": "Thrax (Rift)",
-                    "vsElement": "Radiant"
-                },
-                {
-                    "buildId": "dJfvTakTgC80hqjs8cNCwT58sq6IACk0H2TMCBwHp3cjC5ocj3hwCnMHySNLF4",
-                    "subcategory": null,
-                    "title": "Thrax (Rift) Wound",
-                    "vsElement": "Radiant"
-                },
-                {
-                    "buildId": "7xfVTjMfKCbeUMourcYCnTnxCvwI8C6Vsn3IWCdmsEmFaC7BHmuvCePS7SB7tK",
-                    "subcategory": null,
-                    "title": "Thrax (Rift)",
-                    "vsElement": "Radiant"
-                },
-                {
-                    "buildId": "axfWTxbSOCWPHMEhjcLugTVatm5I3C08fdxfpCL3frbc2CPpSzahnCkZs7SPmhA",
-                    "subcategory": null,
-                    "title": "Thrax (Rift)",
-                    "vsElement": "Radiant"
-                },
-                {
-                    "buildId": "0VfrT6JhZCkBHvnS4SKhNILbCv1IbCVOserIoCmaiAYuVCrvC4Pu6CaMs0SL7fL",
-                    "subcategory": null,
-                    "title": "Thrax (Rift)",
-                    "vsElement": "Radiant"
-                },
-                {
-                    "buildId": "R4f8TRMF7CPPU55U4TOTvT8Eur1IbC8bszdcZC2zum0cyCR8H1dIdCO6sLSZ5cm",
-                    "subcategory": null,
-                    "title": "Thrax (Rift)",
-                    "vsElement": "Radiant"
-                },
-                {
-                    "buildId": "MRfWT5BcXC7pCnetqUWt8T2zix2I5CZzfq7czC15hr3cKCjKHJnT6CRXsoS7Nfy",
-                    "subcategory": null,
-                    "title": "Chrono (Reza)",
-                    "vsElement": "Umbral"
-                },
-                {
-                    "buildId": "PWfoT8NCeC2PC1jT4cRtLTw7i0nh1CB4tjkcAC7eUofMC3mTe0TLCMzs1SA2Hn",
-                    "subcategory": null,
-                    "title": "Chrono (Reza)",
-                    "vsElement": "Umbral"
-                },
-                {
-                    "buildId": "JjfoT7VfxC3WTdes4ceCJTXgI5jFJC5NUvTnCoKidRcqCkAuj7hJCA3ToSLvfa",
-                    "subcategory": null,
-                    "title": "Chrono (Reza)",
-                    "vsElement": "Umbral"
-                },
-                {
-                    "buildId": "Z0fETMAFkCx8Hg0hBc4CKTm6I1eupC6gU4TgCJ0cxNcYCwyizdhPCvdHLSaBS0",
-                    "subcategory": null,
-                    "title": "Chrono (Reza) Wound",
-                    "vsElement": "Umbral"
-                },
-                {
-                    "buildId": "60fPT7QFACKns2JSoc0CrTKEuz1INCJdTV6IEC4ni5PfaC3eTAuRCVJSKSLdfd",
-                    "subcategory": null,
-                    "title": "Chrono (Reza)",
-                    "vsElement": "Umbral"
-                },
-                {
-                    "buildId": "qrfLTEacvContZcecauET0mIqaIvC2rFAecACPkiL0t3C8EhBLu8CZ2TxSVrUW",
-                    "subcategory": null,
-                    "title": "Chrono (Reza)",
-                    "vsElement": "Umbral"
-                },
-                {
-                    "buildId": "XafXTJgSYCgesXViYS0hwIb5SW4s7CjzsvAIJC1BtLgc3C6YHqu4CAocJSnXSm",
-                    "subcategory": null,
-                    "title": "Chrono (Reza)",
-                    "vsElement": "Umbral"
-                },
-                {
-                    "buildId": "VafqTrLTrCNjT23SmT5TpTZzhNeSzC7yHdMcBC4bfWacbCV7HZIMCqRHPSwBfM",
-                    "subcategory": null,
-                    "title": "Chrono (Reza)",
-                    "vsElement": "Umbral"
-                }
-            ],
-            "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 125 healing over 10 seconds — after Revenant expires.",
-            "index": 1,
-            "name": "Revenant",
-            "tier": 1
-        },
-        {
-            "builds": [
-                {
                     "buildId": "kofgTvxSWCqktZxu7U0tLT1dTVOH5Cw5i85fdC03iArH7CqF1YIoCA2ixSmoTd",
                     "subcategory": null,
                     "title": "Urska (Frostwülf)",
@@ -552,8 +256,304 @@
                 }
             ],
             "description": "Discipline is a high-risk high-reward Omnicell, featuring a high damage parry ability that grants you stacks of critical damage if timed correctly and, at max stacks, grants you a high amount of critical chance.",
-            "index": 2,
+            "index": 1,
             "name": "Discipline",
+            "tier": 1
+        },
+        {
+            "builds": [
+                {
+                    "buildId": "zKfyTXbhOCBnceFmUzt6TkPteAIBCz4ivqcXCKwUMEcACebTYXhqCgJsQSPvt8",
+                    "subcategory": null,
+                    "title": "Urska (Frostwülf)",
+                    "vsElement": "Blaze"
+                },
+                {
+                    "buildId": "dJfvTaBCgC8QHWF8cdtwTboS5FACkyC6dtMCZ2H3wUjCkdijKhwCnesySNLF4",
+                    "subcategory": null,
+                    "title": "Urska (Frostwülf)",
+                    "vsElement": "Blaze"
+                },
+                {
+                    "buildId": "4Nf5TLOUQCwFNVfwc0CxTxECmRIqCwPiv6crCodUQ4ckCMniyJhVCOgs2S4rt6",
+                    "subcategory": null,
+                    "title": "Urska (Frostwülf)",
+                    "vsElement": "Blaze"
+                },
+                {
+                    "buildId": "JjfoT75hxC3WTdes4ceCJTXAH5jFJC5NURjTnCoKidRcqCkAuj7hJCA3ToSLvfa",
+                    "subcategory": null,
+                    "title": "Urska (Pangar) Wound",
+                    "vsElement": "Blaze"
+                },
+                {
+                    "buildId": "LWfOTJOTzCXFnmtwcgCQTdvuZkhMCB8tgWcdCeRUnjcMCwZi6Kf2CdYs7SJ3uP",
+                    "subcategory": null,
+                    "title": "Urska (Frostwülf)",
+                    "vsElement": "Blaze"
+                },
+                {
+                    "buildId": "5wf8TzVCRCdFQMUKSPujTqBSMauaCALUkNfQC3RUeacECPOSjJhQC4qhoSAaUv",
+                    "subcategory": null,
+                    "title": "Urska (Frostwülf)",
+                    "vsElement": "Blaze"
+                },
+                {
+                    "buildId": "JjfoTAQFxCz5CdesNS2hvIaJS5jFJC5MCR2tnC4EHdqiqCNFjxhJC4whoSLvfa",
+                    "subcategory": null,
+                    "title": "Urska (Frostwülf)",
+                    "vsElement": "Blaze"
+                },
+                {
+                    "buildId": "7xfVTjeFKCz3cjF6T4TnTg0TvwI8C30UmkcWCz8UEmFaCwaiBMuvCevs7SB7tK",
+                    "subcategory": null,
+                    "title": "Urska (Frostwülf)",
+                    "vsElement": "Blaze"
+                },
+                {
+                    "buildId": "wKfQTgkF4CXXULeHdURtZTN0UNFaCxxUzkcvC6EFELTeCJLtqkh5CKofoSemtw",
+                    "subcategory": null,
+                    "title": "Torg (Hellion)",
+                    "vsElement": "Frost"
+                },
+                {
+                    "buildId": "7xfVTjOIKCwmHpdHrcWtnTBSbF8C3YumkcWCz8UmvTaCZPTBVuvCAET7SBLhK",
+                    "subcategory": null,
+                    "title": "Torg (Charrogg)",
+                    "vsElement": "Frost"
+                },
+                {
+                    "buildId": "Brf8TNqT3Cq4tQzcdcECJTXhJOIkCX6uLkfVCMbF2YTJCWJInpuOCmMTgS23F0",
+                    "subcategory": null,
+                    "title": "Torg (Hellion)",
+                    "vsElement": "Frost"
+                },
+                {
+                    "buildId": "7xfVTjZTKCbeU41frcYCnTAhvwI8C30UmAfWCdpHEzhaCzAFBWSvCAET7SB7tK",
+                    "subcategory": null,
+                    "title": "Torg (Hellion) Wound",
+                    "vsElement": "Frost"
+                },
+                {
+                    "buildId": "OWfwTeKUBCQjFbVHLcyCYTKSX5IPCwnHK6SMCr1sA0unC1nHQuVCn2SySqwS1",
+                    "subcategory": null,
+                    "title": "Torg (Hellion)",
+                    "vsElement": "Frost"
+                },
+                {
+                    "buildId": "MRfWT55IXCO3fnetyc7u8Tkfx2I5CZzfqOfzCRbTr3cKCZyIJ0T6CRXsoS7Nfy",
+                    "subcategory": null,
+                    "title": "Torg (Hellion)",
+                    "vsElement": "Frost"
+                },
+                {
+                    "buildId": "qrfLTw7tvCoVSkac0SohXIa0CqaIvC2gfAQUACzQiLYc3CorFBMu8C5aixSVRSW",
+                    "subcategory": null,
+                    "title": "Torg (Hellion)",
+                    "vsElement": "Frost"
+                },
+                {
+                    "buildId": "EQfPTj2tNC00UbacwTkT6T8hvFJCooUOEcoC0miP8sbCmJiBquBCj0sLSL1cE",
+                    "subcategory": null,
+                    "title": "Torg (Charrogg)",
+                    "vsElement": "Frost"
+                },
+                {
+                    "buildId": "YwfzTbEUgCvmIJRiPUYtKTZQfPrcJC43typc0C6rF8eU0CboH3JhxC1qFoSyoTA",
+                    "subcategory": null,
+                    "title": "Agarus (Kharabak)",
+                    "vsElement": "Shock"
+                },
+                {
+                    "buildId": "rBfoTqWFeCwnHOYiqcet0T7IeFNCRqc8dfBCaQUOeHrCkyioXh4CLzcnS4rhk",
+                    "subcategory": null,
+                    "title": "Agarus (Kharabak)",
+                    "vsElement": "Shock"
+                },
+                {
+                    "buildId": "gxfJTM2I2CzxHmoUWc0CWToCK1iLCk2spwI7C3zTvxc4CWjT0wsmC8bFmS2NF5",
+                    "subcategory": null,
+                    "title": "Agarus (Kharabak)",
+                    "vsElement": "Shock"
+                },
+                {
+                    "buildId": "wKfQTgqH4CXrH0qIzcYCZTyCjAIaC4MczRfvCPjHJEceCo6Fqkh5CKofoSeKSw",
+                    "subcategory": null,
+                    "title": "Agarus (Khara) Wound",
+                    "vsElement": "Shock"
+                },
+                {
+                    "buildId": "KBfkT04T0C6zULKuPc0CYT2s8wC5CAOFp1IACPnC6bcBCpnHYuYCXrSESXVSj",
+                    "subcategory": null,
+                    "title": "Agarus (Kharabak)",
+                    "vsElement": "Shock"
+                },
+                {
+                    "buildId": "bMfLT0YfoCRgH78CJc1uxToT1auoCd4iZdfqC2eFQxcRCrLC4EuWCaQsKS4ghJ",
+                    "subcategory": null,
+                    "title": "Agarus (Kharabak)",
+                    "vsElement": "Shock"
+                },
+                {
+                    "buildId": "2Pf4TmNUgCnRHk0cwSdh3IW6snVIpCjvsn7IqC51sJ4ckCZbIv2heCLVcaS8Bs3",
+                    "subcategory": null,
+                    "title": "Agarus (Kharabak)",
+                    "vsElement": "Shock"
+                },
+                {
+                    "buildId": "EQfPTj8HNC4zSbeTwTkT6T6HoeIJC3pUOEcoC0miPZcbCEpHBquBCj0sLSL1cE",
+                    "subcategory": null,
+                    "title": "Agarus (Kharabak)",
+                    "vsElement": "Shock"
+                },
+                {
+                    "buildId": "2Pf4TmXSgCnnUXXUkUNteTWkTnVIpCj3iZ4cqCVeUJ4ckCmgHv3ueCLVcaS8Bs3",
+                    "subcategory": null,
+                    "title": "Malk (Sahvyt)",
+                    "vsElement": "Terra"
+                },
+                {
+                    "buildId": "7xfVTLniKCwwUpdHrcWtnTgkubF8CwwUmkcWCz8UEzhaCZPTBVuvCe5i7SB7tK",
+                    "subcategory": null,
+                    "title": "Malk (Sahvyt)",
+                    "vsElement": "Terra"
+                },
+                {
+                    "buildId": "gxfJTKOh2CzzUmdiWc0CWTWaUxFLCErf8of7CLLUvxc4CWjT0wsmCqAimSmqT5",
+                    "subcategory": null,
+                    "title": "Malk (Sahvyt)",
+                    "vsElement": "Terra"
+                },
+                {
+                    "buildId": "EQfPT1ZsNC0vUbeTmcyC6TwPIoeIJC3VfwToC7viPZcbCW2TBVuBCjLHLSoESE",
+                    "subcategory": null,
+                    "title": "Malk (Sahvyt) Wound",
+                    "vsElement": "Terra"
+                },
+                {
+                    "buildId": "8MfgTOafOCyLuPNF8cPCQTRZse2IpCgYCOdUeCdMsLVcYCx5H2uMCavSjSgBSY",
+                    "subcategory": null,
+                    "title": "Malk (Sahvyt)",
+                    "vsElement": "Terra"
+                },
+                {
+                    "buildId": "8MfgTOnuOCgBHPNF8c5uQTRxIe2IpCzBi7afeCdoHLVcYC6AUJgTMCaosjSgBSY",
+                    "subcategory": null,
+                    "title": "Malk (Sahvyt)",
+                    "vsElement": "Terra"
+                },
+                {
+                    "buildId": "rBfoTnnseCwnHO7SYS6hEIYVSknINCRvt4QtBCEwiOQcrCpOUomu4CLzcnS40tk",
+                    "subcategory": null,
+                    "title": "Malk (Sahvyt)",
+                    "vsElement": "Terra"
+                },
+                {
+                    "buildId": "Brf8T8mI3Cq4tQXU7TNTJTWJHJOIkCX6u71SVC6KF2BhJCLdHn1hOCj2sgS23F0",
+                    "subcategory": null,
+                    "title": "Malk (Sahvyt)",
+                    "vsElement": "Terra"
+                },
+                {
+                    "buildId": "rBfoTqOieCwwUVVUeUet0T5zuknINCRwT8dfBCaQUOQcrCL3HoXh4CLzcnS4rhk",
+                    "subcategory": null,
+                    "title": "Thrax (Rift)",
+                    "vsElement": "Radiant"
+                },
+                {
+                    "buildId": "YwfzTbZsgC33UJgCRcYtKTknT0UJCggUypc0C6rF8Ru0CwXi3JhxC1qFoSyXUA",
+                    "subcategory": null,
+                    "title": "Thrax (Rift)",
+                    "vsElement": "Radiant"
+                },
+                {
+                    "buildId": "MRfWT5KUXCYLHPdtyc4C8TjRFx2I5CZRsATzCRLIr3cKCZyIJnT6CRXsoS7PHy",
+                    "subcategory": null,
+                    "title": "Thrax (Rift)",
+                    "vsElement": "Radiant"
+                },
+                {
+                    "buildId": "dJfvTakTgC80hqjs8cNCwT58sq6IACk0H2TMCBwHp3cjC5ocj3hwCnMHySNLF4",
+                    "subcategory": null,
+                    "title": "Thrax (Rift) Wound",
+                    "vsElement": "Radiant"
+                },
+                {
+                    "buildId": "7xfVTjMfKCbeUMourcYCnTnxCvwI8C6Vsn3IWCdmsEmFaC7BHmuvCePS7SB7tK",
+                    "subcategory": null,
+                    "title": "Thrax (Rift)",
+                    "vsElement": "Radiant"
+                },
+                {
+                    "buildId": "axfWTxbSOCWPHMEhjcLugTVatm5I3C08fdxfpCL3frbc2CPpSzahnCkZs7SPmhA",
+                    "subcategory": null,
+                    "title": "Thrax (Rift)",
+                    "vsElement": "Radiant"
+                },
+                {
+                    "buildId": "0VfrT6JhZCkBHvnS4SKhNILbCv1IbCVOserIoCmaiAYuVCrvC4Pu6CaMs0SL7fL",
+                    "subcategory": null,
+                    "title": "Thrax (Rift)",
+                    "vsElement": "Radiant"
+                },
+                {
+                    "buildId": "R4f8TRMF7CPPU55U4TOTvT8Eur1IbC8bszdcZC2zum0cyCR8H1dIdCO6sLSZ5cm",
+                    "subcategory": null,
+                    "title": "Thrax (Rift)",
+                    "vsElement": "Radiant"
+                },
+                {
+                    "buildId": "MRfWT5BcXC7pCnetqUWt8T2zix2I5CZzfq7czC15hr3cKCjKHJnT6CRXsoS7Nfy",
+                    "subcategory": null,
+                    "title": "Chrono (Reza)",
+                    "vsElement": "Umbral"
+                },
+                {
+                    "buildId": "PWfoT8NCeC2PC1jT4cRtLTw7i0nh1CB4tjkcAC7eUofMC3mTe0TLCMzs1SA2Hn",
+                    "subcategory": null,
+                    "title": "Chrono (Reza)",
+                    "vsElement": "Umbral"
+                },
+                {
+                    "buildId": "JjfoT7VfxC3WTdes4ceCJTXgI5jFJC5NUvTnCoKidRcqCkAuj7hJCA3ToSLvfa",
+                    "subcategory": null,
+                    "title": "Chrono (Reza)",
+                    "vsElement": "Umbral"
+                },
+                {
+                    "buildId": "Z0fETMAFkCx8Hg0hBc4CKTm6I1eupC6gU4TgCJ0cxNcYCwyizdhPCvdHLSaBS0",
+                    "subcategory": null,
+                    "title": "Chrono (Reza) Wound",
+                    "vsElement": "Umbral"
+                },
+                {
+                    "buildId": "60fPT7QFACKns2JSoc0CrTKEuz1INCJdTV6IEC4ni5PfaC3eTAuRCVJSKSLdfd",
+                    "subcategory": null,
+                    "title": "Chrono (Reza)",
+                    "vsElement": "Umbral"
+                },
+                {
+                    "buildId": "qrfLTEacvContZcecauET0mIqaIvC2rFAecACPkiL0t3C8EhBLu8CZ2TxSVrUW",
+                    "subcategory": null,
+                    "title": "Chrono (Reza)",
+                    "vsElement": "Umbral"
+                },
+                {
+                    "buildId": "XafXTJgSYCgesXViYS0hwIb5SW4s7CjzsvAIJC1BtLgc3C6YHqu4CAocJSnXSm",
+                    "subcategory": null,
+                    "title": "Chrono (Reza)",
+                    "vsElement": "Umbral"
+                },
+                {
+                    "buildId": "VafqTrLTrCNjT23SmT5TpTZzhNeSzC7yHdMcBC4bfWacbCV7HZIMCqRHPSwBfM",
+                    "subcategory": null,
+                    "title": "Chrono (Reza)",
+                    "vsElement": "Umbral"
+                }
+            ],
+            "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 125 healing over 10 seconds — after Revenant expires.",
+            "index": 2,
+            "name": "Revenant",
             "tier": 1
         },
         {
