@@ -1674,7 +1674,7 @@
     "item.weapons.fractured-realities.unique_effects.0.description": "$t(item.weapons.eldritch-torments.unique_effects.0.description)",
     "item.weapons.frostwulfs-bite.description": "$t(item.weapons.agents-of-decay.description)",
     "item.weapons.frostwulfs-bite.name": "Mordida do Wülf",
-    "item.weapons.frostwulfs-bite.unique_effects.0.description": "Após usar a habilidade da Lanterna, crie um Gêiser que causa {{frostDamage}} de dano gélido repetidamente. Qualquer Slayer que se passe pelo Gêiser pela primeira vez recebe um escudo de vida cumulativo com {{health}} que dura {{shieldTime}} segundos (máximo de escudo de {{shieldMax}}).",
+    "item.weapons.frostwulfs-bite.unique_effects.0.description": "Após usar a habilidade da Lanterna, cria um gêiser que causa {{frostDamage}} de dano gélido continuamente. Qualquer Slayer que passe pelo gêiser pela primeira vez recebe um escudo cumulativo de {{health}} de vida que dura {{shieldTime}} segundos (máximo de escudo de {{shieldMax}}).",
     "item.weapons.frostwulfs-bite.unique_effects.1.description": "$t(item.weapons.frostwulfs-bite.unique_effects.0.description)",
     "item.weapons.frostwulfs-chillers.description": "$t(item.weapons.agents-of-decay.description)",
     "item.weapons.frostwulfs-chillers.name": "Resfriador do Wülf",
