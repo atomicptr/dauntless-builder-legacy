@@ -154,6 +154,7 @@ export class DataStep extends WithStepLogger implements Step {
 
     private buildMap(filesGlob: string) {
         return new Promise((resolve, _reject) => {
+            filesGlob = filesGlob.replaceAll("\\", "/");
             glob(filesGlob, (err, files) => {
                 let data = {} as {
                     [name: string]: unknown;
