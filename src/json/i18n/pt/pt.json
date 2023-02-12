@@ -210,7 +210,7 @@
                     },
                     "Revenant": {
                         "description": "Aparição é uma Omnicélula de alto risco e alta recompensa com uma habilidade ativa que consome até 500 HP para invocar até cinco tentáculos sombrios que causam alto dano e colocam você no estado Vingativo. Quando os tentáculos atingem um alvo, eles geram Orbes do Vazio, coletando-os concede instâncias de Energia do Vazio, cada um fornece 4% de dano enquanto no estado Vingativo, uma extensão de 1 segundo ao estado Vingativo, e 125 de cura ao longo de 10 segundos — após Aparição acabar.",
-                        "name": "Vingativo"
+                        "name": "Aparição"
                     },
                     "Tempest": {
                         "description": "A Tempestade possui 10% de bônus de velocidade de ataque passivo e a habilidade de acumular instâncias de Velocidade ao esquivar através de ataques. Você gasta instãncias para fazer uma investida e causar dano baseado em quantas instâncias de Velocidade você tem no momento. O bônus de dano que a velocidade de movimento concede só se aplica a partes não quebradas.",
@@ -271,7 +271,7 @@
                     "Pangar.0": "A rolagem de interrupção do Pangar é muito fácil de se provocar (Ele faz isso duas vezes em seguida, apenas) e o tempo de espera é reiniciado ao se enfurecer.",
                     "Pangar.1": "A rolagem de interrupção do Pangar atualmente está bugada e não causa nenhum dano até a parte final, então a use para obter interrupções fáceis.",
                     "Quillshot.0": "Você pode construir um escudo de Skarn/Frostwülf na plataforma.",
-                    "Rezakiri.0": " Certifique-se de usar o Estado Vingativo entre 500 e 600 de Vida para manter ativo o efeito único da arma do Shroud.",
+                    "Rezakiri.0": " Certifique-se de usar o Estado Aparição entre 500 e 600 de Vida para manter ativo o efeito único da arma do Shroud.",
                     "Shadowtouched Koshai.0": "Você pode provocar a interrupção de saída com muita facilidade, e voltar a interromper depois, como o Koshai normal.",
                     "Shadowtouched Koshai.1": "A segunda vez que Koshai Tocado pelas Sombras entra no chão, ele gera o mais longe possível em algum lugar na arena e atira orbes sombrias em você, enquanto faz isso ele é extremamente vulnerável a danos.",
                     "Shadowtouched Nayzaga.0": "Assim como o Nayzaga normal, o Nayzaga Tocado Pelas Sombras começa a luta com seu deslize duplo.",
@@ -379,7 +379,7 @@
             "mod": "Modificador",
             "special": "Especial"
         },
-        "passive": "Passiva",
+        "passive": "Passivo",
         "perks": "Vantagens",
         "power": "Poder",
         "resistance": "Resistência",
