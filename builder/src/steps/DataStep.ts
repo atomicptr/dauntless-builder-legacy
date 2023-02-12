@@ -154,7 +154,7 @@ export class DataStep extends WithStepLogger implements Step {
 
     private buildMap(filesGlob: string) {
         return new Promise((resolve, _reject) => {
-            glob(filesGlob, (err, files) => {
+            glob(filesGlob, { windowsPathsNoEscape: true }, (err, files) => {
                 let data = {} as {
                     [name: string]: unknown;
                 };
