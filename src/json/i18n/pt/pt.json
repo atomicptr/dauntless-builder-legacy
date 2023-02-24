@@ -19,7 +19,7 @@
             "invalid-build": "Devido a mudanças no Dauntless esta build não é mais compatível com a versão atual do site, uma ou mais partes foram removidas para a correta exibição.",
             "upgraded-build": "Esta Build foi feita para uma versão antiga do Dauntless e pode estar desatualizada."
         },
-        "event-marker": "This item was part of an event and might not be obtainable anymore.",
+        "event-marker": "Este item foi parte de um evento e pode não ser possível obtê-lo mais.",
         "item-picker": {
             "lantern-hold-line": "<b>$t(terms.hold)</b>: {{hold}}",
             "omnicell-passive-line": "<b>$t(terms.passive)</b>: {{passive}}"
@@ -134,7 +134,7 @@
                     "Chrono (Valo) Resolve": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Determinação",
                     "Chrono (Valo) Wound": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Ferida",
                     "Disc Pred": "Disc Pred",
-                    "Disc Sav": "Disc Sav",
+                    "Disc Sav": "Discipligeria",
                     "Hellion": "$t(terms.behemoths.Hellion)",
                     "Kharabak": "$t(terms.behemoths.Kharabak)",
                     "Malk (S) Speed": "$t(terms.behemoths.Malkarion) (S) Velocidade",
@@ -144,7 +144,7 @@
                     "Malk (Sahvyt) Wound": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt)) Ferida",
                     "Pangar": "$t(terms.behemoths.Pangar)",
                     "Prismedic": "Prismático",
-                    "Rage Pred": "Rage Pred",
+                    "Rage Pred": "Preda-ira",
                     "Rezakiri": "$t(terms.behemoths.Rezakiri)",
                     "Riftstalker": "$t(terms.behemoths.Riftstalker)",
                     "Sahvyt": "$t(terms.behemoths.Sahvyt)",
@@ -240,7 +240,7 @@
             "title": "Criar uma nova Build"
         },
         "settings": {
-            "community-language": "This language is not officially supported by Dauntless, but members of our community decided to add a translation for Dauntless Builder regardless.",
+            "community-language": "Esta linguagem não é oficialmente suportada em Dauntless, mas membros de nossa comunidade decidiram adicionar uma tradução para o Construtor do Dauntless independente disso.",
             "data": "Dados de Aplicação",
             "data-export": "Exportar",
             "data-import": "Importar",
