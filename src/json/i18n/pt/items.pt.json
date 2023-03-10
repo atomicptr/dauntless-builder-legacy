@@ -1291,7 +1291,7 @@
     "item.perks.roll.effects.4.description": "$t(item.perks.roll.effects.1.description)",
     "item.perks.roll.effects.5.description": "$t(item.perks.roll.effects.1.description)",
     "item.perks.roll.effects.6.description": "$t(item.perks.roll.effects.1.description)",
-    "item.perks.roll.name": "Rolar",
+    "item.perks.roll.name": "Rolamento",
     "item.perks.rushdown.description": "Interromper um Behemoth recupera Estamina e concede velocidade de movimento. Em +6 também temporariamente remove custos de estamina.",
     "item.perks.rushdown.effects.1.description.0": "Interromper um Behemoth recupera {{percentStaminaRecovery}}% da estamina máxima.",
     "item.perks.rushdown.effects.1.description.1": "Interromper um Behemoth concede {{percentMovementSpeed}}% velocidade de movimento por 10s.",
