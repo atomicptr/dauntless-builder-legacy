@@ -152,6 +152,7 @@ i18n.use(dynamicallyImportLanguageFiles)
             escapeValue: false,
         },
         load: "languageOnly",
+        returnNull: false,
     });
 
 export default i18n;

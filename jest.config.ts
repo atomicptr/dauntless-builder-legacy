@@ -4,11 +4,6 @@ export default {
     coverageDirectory: "coverage",
     coverageProvider: "v8",
     extensionsToTreatAsEsm: [".ts", ".tsx"],
-    globals: {
-        "ts-jest": {
-            useESM: true,
-        },
-    },
     moduleFileExtensions: ["js", "ts", "tsx"],
     moduleNameMapper: {
         "^@json(.*)$": "<rootDir>/src/json$1",
@@ -16,5 +11,12 @@ export default {
     },
     preset: "ts-jest",
     testEnvironment: "jsdom",
-    transform: {},
+    transform: {
+        "^.+\\.tsx?$": [
+            "ts-jest",
+            {
+                useESM: true,
+            },
+        ],
+    },
 };

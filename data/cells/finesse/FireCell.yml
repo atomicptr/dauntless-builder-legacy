@@ -1,0 +1,15 @@
+name: Fire Cell
+slot: Finesse
+variants:
+  +1 Fire Cell:
+    rarity: uncommon
+    perks:
+      Fire: 1
+  +2 Fire Cell:
+    rarity: rare
+    perks:
+      Fire: 2
+  +3 Fire Cell:
+    rarity: epic
+    perks:
+      Fire: 3

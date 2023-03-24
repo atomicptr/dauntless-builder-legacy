@@ -1,0 +1,44 @@
+name: Fire
+description: >-
+  Fight like Fire. Gain increased movement speed and attack speed at all times, but lose health as you damage behemoths.
+type: Finesse
+effects:
+  '1':
+    description: &description
+    - Gain {{percentIncreasedAttackSpeed}}% increased Attack Speed
+    - Gain {{percentIncreasedMovementSpeed}}% increased Movement Speed
+    - On hitting a behemoth with a weapon attack, lose life equal to {{percentHitLifeLoss}}% of your max health.
+    values:
+      percentIncreasedAttackSpeed: 5
+      percentIncreasedMovementSpeed: 5
+      percentHitLifeLoss: 1
+  '2':
+    description: *description
+    values:
+      percentIncreasedAttackSpeed: 7.5
+      percentIncreasedMovementSpeed: 10
+      percentHitLifeLoss: 2
+  '3':
+    description: *description
+    values:
+      percentIncreasedAttackSpeed: 10
+      percentIncreasedMovementSpeed: 15
+      percentHitLifeLoss: 3
+  '4':
+    description: *description
+    values:
+      percentIncreasedAttackSpeed: 12.5
+      percentIncreasedMovementSpeed: 20
+      percentHitLifeLoss: 4
+  '5':
+    description: *description
+    values:
+      percentIncreasedAttackSpeed: 15
+      percentIncreasedMovementSpeed: 25
+      percentHitLifeLoss: 5
+  '6':
+    description: *description
+    values:
+      percentIncreasedAttackSpeed: 20
+      percentIncreasedMovementSpeed: 30
+      percentHitLifeLoss: 5

@@ -152,78 +152,76 @@ export class DataStep extends WithStepLogger implements Step {
         }
     }
 
-    private buildMap(filesGlob: string) {
-        return new Promise((resolve, _reject) => {
-            glob(filesGlob, { windowsPathsNoEscape: true }, (err, files) => {
-                let data = {} as {
-                    [name: string]: unknown;
+    private async buildMap(filesGlob: string) {
+        const files = await glob(filesGlob, { windowsPathsNoEscape: true });
+
+        let data = {} as {
+            [name: string]: unknown;
+        };
+
+        for (const file of files) {
+            const content = fs.readFileSync(file, "utf8");
+            const doc = yaml.load(content) as {
+                name: string;
+                variants: unknown[];
+                [field: string]: unknown;
+            };
+
+            // it is a cell use variant names instead of name
+            if (file.indexOf("/cells/") > -1) {
+                data[doc.name] = doc;
+
+                for (const v of Object.keys(doc.variants)) {
+                    this.tryInsertToStringMap("Cells", v);
+                }
+            } else if (file.indexOf("/parts/") > -1) {
+                type Part = {
+                    [weaponType: string]: {
+                        [partType: string]: {
+                            [field: string]: unknown;
+                        };
+                    };
                 };
 
-                for (const file of files) {
-                    const content = fs.readFileSync(file, "utf8");
-                    const doc = yaml.load(content) as {
-                        name: string;
-                        variants: unknown[];
-                        [field: string]: unknown;
-                    };
+                const parts = file.split("/");
+                const partsFolderIndex = parts.indexOf("parts");
 
-                    // it is a cell use variant names instead of name
-                    if (file.indexOf("/cells/") > -1) {
-                        data[doc.name] = doc;
+                const [weaponType, partType] = parts.slice(partsFolderIndex + 1) as [string, string];
 
-                        for (const v of Object.keys(doc.variants)) {
-                            this.tryInsertToStringMap("Cells", v);
-                        }
-                    } else if (file.indexOf("/parts/") > -1) {
-                        type Part = {
-                            [weaponType: string]: {
-                                [partType: string]: {
-                                    [field: string]: unknown;
-                                };
-                            };
-                        };
-
-                        const parts = file.split("/");
-                        const partsFolderIndex = parts.indexOf("parts");
-
-                        const [weaponType, partType] = parts.slice(partsFolderIndex + 1) as [string, string];
-
-                        if (!(data as Part)[weaponType]) {
-                            (data as Part)[weaponType] = {};
-                        }
-
-                        if (!(data as Part)[weaponType][partType]) {
-                            (data as Part)[weaponType][partType] = {};
-                        }
-
-                        (data as Part)[weaponType][partType][doc.name] = doc;
-                        this.tryInsertToStringMap(`Parts:${this.ucfirst(weaponType)}`, doc.name);
-                    } else if (file.indexOf("misc.yml") > -1) {
-                        // don't use string maps on misc
-                        data = doc;
-                    } else {
-                        data[doc.name] = doc;
-                        let type = doc.type as string;
-
-                        if (file.indexOf("/perks/") > 0) {
-                            type = "Perks";
-                        } else if (file.indexOf("/lanterns/") > 0) {
-                            type = "Lanterns";
-                        } else if (file.indexOf("/weapons/") > 0) {
-                            type = "Weapons";
-                        } else if (file.indexOf("/armours/") > 0) {
-                            type = "Armours";
-                        } else if (file.indexOf("/omnicells/") > 0) {
-                            type = "Omnicells";
-                        }
-
-                        this.tryInsertToStringMap(type, doc.name);
-                    }
+                if (!(data as Part)[weaponType]) {
+                    (data as Part)[weaponType] = {};
                 }
 
-                resolve(data);
-            });
-        });
+                if (!(data as Part)[weaponType][partType]) {
+                    (data as Part)[weaponType][partType] = {};
+                }
+
+                (data as Part)[weaponType][partType][doc.name] = doc;
+                this.tryInsertToStringMap(`Parts:${this.ucfirst(weaponType)}`, doc.name);
+            } else if (file.indexOf("misc.yml") > -1) {
+                // don't use string maps on misc
+                data = doc;
+            } else {
+                data[doc.name] = doc;
+                let type = doc.type as string;
+
+                if (file.indexOf("/perks/") > 0) {
+                    type = "Perks";
+                } else if (file.indexOf("/lanterns/") > 0) {
+                    type = "Lanterns";
+                } else if (file.indexOf("/weapons/") > 0) {
+                    type = "Weapons";
+                } else if (file.indexOf("/armours/") > 0) {
+                    type = "Armours";
+                } else if (file.indexOf("/omnicells/") > 0) {
+                    type = "Omnicells";
+                }
+
+                this.tryInsertToStringMap(type, doc.name);
+            }
+        }
+
+        return data;
     }
 
     private ucfirst(string: string) {

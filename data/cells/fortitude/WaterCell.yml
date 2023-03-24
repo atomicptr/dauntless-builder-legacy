@@ -1,0 +1,15 @@
+name: Water Cell
+slot: Fortitude
+variants:
+  +1 Water Cell:
+    rarity: uncommon
+    perks:
+      Water: 1
+  +2 Water Cell:
+    rarity: rare
+    perks:
+      Water: 2
+  +3 Water Cell:
+    rarity: epic
+    perks:
+      Water: 3

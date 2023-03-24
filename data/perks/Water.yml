@@ -1,0 +1,31 @@
+name: Water
+description: >-
+  Move like Water. Dodging through a Behemoth's attacks grants resolve and damage reduction against the next one.
+type: Fortitude
+effects:
+  '1':
+    description: &description >-
+      After dodging through a Behemoth's Attack, you will be immune to stagger and take {{percentDamageReduction}}%
+      less damage from the next Behemoth attack within 45 seconds.
+    values:
+      percentDamageReduction: 10
+  '2':
+    description: *description
+    values:
+      percentDamageReduction: 20
+  '3':
+    description: *description
+    values:
+      percentDamageReduction: 30
+  '4':
+    description: *description
+    values:
+      percentDamageReduction: 60
+  '5':
+    description: *description
+    values:
+      percentDamageReduction: 80
+  '6':
+    description: *description
+    values:
+      percentDamageReduction: 100
