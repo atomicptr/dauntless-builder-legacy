@@ -352,7 +352,16 @@
         "213": "+3 Recycle Cell",
         "214": "+1 Reuse Cell",
         "215": "+2 Reuse Cell",
-        "216": "+3 Reuse Cell"
+        "216": "+3 Reuse Cell",
+        "217": "+1 Water Cell",
+        "218": "+2 Water Cell",
+        "219": "+3 Water Cell",
+        "220": "+1 Fire Cell",
+        "221": "+2 Fire Cell",
+        "222": "+3 Fire Cell",
+        "223": "+1 Earth Cell",
+        "224": "+2 Earth Cell",
+        "225": "+3 Earth Cell"
     },
     "Lanterns": {
         "1": "Drask's Eye",
@@ -536,7 +545,10 @@
         "70": "Stop",
         "71": "Recycle",
         "72": "Reduce",
-        "73": "Reuse"
+        "73": "Reuse",
+        "74": "Fire",
+        "75": "Earth",
+        "76": "Water"
     },
     "Weapons": {
         "1": "Brutality of Boreus",

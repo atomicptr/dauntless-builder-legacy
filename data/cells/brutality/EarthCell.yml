@@ -1,0 +1,15 @@
+name: Earth Cell
+slot: Brutality
+variants:
+  +1 Earth Cell:
+    rarity: uncommon
+    perks:
+      Earth: 1
+  +2 Earth Cell:
+    rarity: rare
+    perks:
+      Earth: 2
+  +3 Earth Cell:
+    rarity: epic
+    perks:
+      Earth: 3

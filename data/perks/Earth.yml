@@ -1,0 +1,43 @@
+name: Earth
+description: Weaponize your shields, detonating them with attacks to deal damage to behemoths.
+type: Brutality
+effects:
+  '1':
+    description:
+      - &description >-
+        Hitting a Behemoth with a weapon attack while shields are over 200 will detonate all your shields, depleting them
+        and dealing damage equals to {{percentShieldDamage}}% of the value of the removed shield.
+      - null
+    values:
+      percentShieldDamage: 100
+  '2':
+    description:
+      - *description
+      - null
+    values:
+      percentShieldDamage: 150
+  '3':
+    description:
+      - *description
+      - null
+    values:
+      percentShieldDamage: 200
+  '4':
+    description:
+      - *description
+      - null
+    values:
+      percentShieldDamage: 300
+  '5':
+    description:
+      - *description
+      - null
+    values:
+      percentShieldDamage: 400
+  '6':
+    description:
+      - *description
+      - After Detonating your shield, gain a {{shieldBack}} health shield
+    values:
+      percentShieldDamage: 400
+      shieldBack: 100
