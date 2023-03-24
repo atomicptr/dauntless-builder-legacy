@@ -95,7 +95,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
     const [showFilters, setShowFilters] = useState<boolean>(!isMobile);
     const [showUniqueEffects, setShowUniqueEffects] = useState<boolean>(!isMobile && !disableUniqueEffectDisplay);
 
-    const filterAreaRef = useRef<HTMLElement>(null);
+    const filterAreaRef = useRef<HTMLDivElement>(null);
 
     const itemFilter = useAppSelector(selectItemSelectFilter);
     const filterCount = useAppSelector(selectFilterCount);
