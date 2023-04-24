@@ -268,5 +268,15 @@
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15751649/medium/672e32839a1a550bee66597575c2db50_default.png",
         "proofreader": false,
         "username": "Yomino12"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15778551/medium/dbed834ce68074d100b556c3dac6d171_default.png",
+        "proofreader": false,
+        "username": "barney48"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15790261/medium/091431797b0458955bcc5627edbe64bb.png",
+        "proofreader": false,
+        "username": "emanuele.gandellini"
     }
 ]

@@ -132,7 +132,6 @@
                     "Chrono (V) Survival": "$t(terms.behemoths.Chronovore) (V) Survival",
                     "Chrono (Valo)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr))",
                     "Chrono (Valo) Resolve": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Resolve",
-                    "Chrono (Valo) Wound": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Wound",
                     "Disc Pred": "Disc Pred",
                     "Disc Sav": "Disc Sav",
                     "Hellion": "$t(terms.behemoths.Hellion)",
@@ -170,7 +169,6 @@
                     "Urska (Frostwülf) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Wound",
                     "Urska (Pangar)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar))",
                     "Urska (Pangar) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Resolve",
-                    "Urska (Pangar) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Wound",
                     "Urska (Wülf) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Resolve",
                     "Valomyr": "$t(terms.behemoths.Valomyr)"
                 },
