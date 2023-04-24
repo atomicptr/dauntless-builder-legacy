@@ -1115,51 +1115,39 @@
         {
             "builds": [
                 {
-                    "buildId": "OWfwTeMiBCE6T1jcRU8tYT5EUX5IPCP3tK5hMCY0CAYHnCaVCJqHVCOPtBFqwS2",
+                    "buildId": "oNfqTNpcwCLzId4s6UztQTXdubjC4CEBHRAcxC54cLqtXC0Fd2hyComsNSYnfE",
                     "subcategory": null,
-                    "title": "Urska (Pangar)",
+                    "title": "Urska (Frostwülf)",
                     "vsElement": "Blaze"
                 },
                 {
-                    "buildId": "v3frT8AszCPdUPJfacwtQTVPTeFrC40hMbSyCBeHN3T0Ckmi01syCrwh4FBot4",
+                    "buildId": "NBf2TQXUPC01SPFncqt4TYatxFmC2JIgqHBCKnHamTWCVAFKvhgC53uMSXyS5",
                     "subcategory": null,
-                    "title": "Urska (Pangar)",
+                    "title": "Urska (Frostwülf)",
                     "vsElement": "Blaze"
                 },
                 {
-                    "buildId": "LWfOTJ8FzCOOUwPIwcBtQTRpTXFMCrmUgWcdCeeUnjcMC2VC6wf2CNWU7SJxCw",
+                    "buildId": "0VfrTmosZC8vHEyUjckCaTLrtv1IbCVOs0MfoCmpHYQTVCm0s4WS6CkF0Sy4tQ",
                     "subcategory": null,
-                    "title": "Urska (Pangar) Resolve",
+                    "title": "Urska (Frostwülf)",
                     "vsElement": "Blaze"
                 },
                 {
-                    "buildId": "oNfqTNnCwCJEIdATPcPCQTNkHbjC4CEBHOxcxCBziLdcXC87UdBhyC1kFrFygSE",
+                    "buildId": "Z0fETMdUkCjFg0hBc4CKT2Ki1eupC6yTQ0UgCQphxNcYCwyizdhPCvZsLSAXsB",
                     "subcategory": null,
-                    "title": "Urska (Pangar)",
+                    "title": "Urska (Frostwülf)",
                     "vsElement": "Blaze"
                 },
                 {
-                    "buildId": "v3frT8ZSzCg2fOeSacnCQTV3HzkIrC1muaTyCrmHN3T0CnjH01syCrwh4FBot4",
+                    "buildId": "gxfJTMWF2CyFmoUpSjuWTWASK1iLCkvi8gf7C3BUvxc4CWjT0msmCqNsmSmqTw",
                     "subcategory": null,
-                    "title": "Urska (Pangar) Wound",
+                    "title": "Urska (Frostwülf)",
                     "vsElement": "Blaze"
                 },
                 {
-                    "buildId": "MRfWT5oTXC7pCnetyc4C8TjyCx2I5C10UxdHzC1gc6sKCZyIJnT6CRdcjF7PHm",
+                    "buildId": "Q6fWT8ofBCgF8MTvSehwIydIeMIoC4vtqwHwCydIy0ceCwWid0hpCYzsYSXwSV",
                     "subcategory": null,
-                    "title": "Urska (Pangar)",
-                    "vsElement": "Blaze"
-                },
-                {
-                    "buildId": "jJfvTXWSXCZbcejSbc0u4TBWtJ2IaC3VUn2fvCQrCmsgCd8CKYHACWBukFa8SW",
-                    "subcategory": null,
-                    "title": "Urska (Pangar)",
-                    "vsElement": "Blaze"
-                },
-                {
-                    "buildId": "zKfyTLZiOCJbHq2cnSyh0Ck0ieAIBCnQuYwhXCKdHzsACebTYrhqCg4i1FPvtN",
-                    "subcategory": null,
-                    "title": "Urska (Pangar)",
+                    "title": "Urska (Frostwülf)",
                     "vsElement": "Blaze"
                 },
                 {
@@ -1181,21 +1169,9 @@
                     "vsElement": "Frost"
                 },
                 {
-                    "buildId": "NBf2TQWuPC00UKxUncqt4T3SxFmC2JINpcBCKKUxacWCQ2HK3HgCvbcMS8Pc5",
-                    "subcategory": null,
-                    "title": "Torg (Charrogg) Resolve",
-                    "vsElement": "Frost"
-                },
-                {
                     "buildId": "60fPT76uACaYT2JSoc0CrTWhz1INCm4iVMsECbKfesaC2PIzPhRCEkf5FLdfJ",
                     "subcategory": null,
                     "title": "Torg (Hellion)",
-                    "vsElement": "Frost"
-                },
-                {
-                    "buildId": "R4f8TRai7CN1coAIecVCvTghr1IbC8bszjfZC6yTWsyCgKs10IdCVKhbFekSx",
-                    "subcategory": null,
-                    "title": "Torg (Hellion) Wound",
                     "vsElement": "Frost"
                 },
                 {
@@ -1235,21 +1211,9 @@
                     "vsElement": "Shock"
                 },
                 {
-                    "buildId": "KBfkT02c0CJJU6PTPcKtYTQI2F5C2XIE2cAC00U6bcBCpnH3ehYCxJUESXVSK",
-                    "subcategory": null,
-                    "title": "Agarus (Khara) Resolve",
-                    "vsElement": "Shock"
-                },
-                {
                     "buildId": "xgfJT5qubCOvfbXtOcxC8TxCYaizCwgigBHxCyKIRMckCJMHqVh5COVtAFmySy",
                     "subcategory": null,
                     "title": "Agarus (Kharabak)",
-                    "vsElement": "Shock"
-                },
-                {
-                    "buildId": "bMfLT0EFoCp6IKehJcOCxTVC1auoCd4iZdfqC2eFjsRCrLC40uWCEzfBF4WtN",
-                    "subcategory": null,
-                    "title": "Agarus (Khara) Wound",
                     "vsElement": "Shock"
                 },
                 {
@@ -1289,21 +1253,9 @@
                     "vsElement": "Terra"
                 },
                 {
-                    "buildId": "Z0fETYmIkCx8HaqHBcjUKT2VH8FpCXXUM2cgCAAUxpfYCoOfJKtPCv5SWFaBSB",
-                    "subcategory": null,
-                    "title": "Malk (Sahvyt) Resolve",
-                    "vsElement": "Terra"
-                },
-                {
                     "buildId": "60fPTO2cACaYT2Quoc0CrTnLfz1INCm4iVMsECbKf5PfaC2PIzNuRCEkf5FLdfJ",
                     "subcategory": null,
                     "title": "Malk (Sahvyt)",
-                    "vsElement": "Terra"
-                },
-                {
-                    "buildId": "gxfJTKOh2CvKcWZSWc0CWTWaUK1iLCkvi8gf7C3BUJs4CWjT0eImC8bF7F2NFw",
-                    "subcategory": null,
-                    "title": "Malk (Sahvyt) Wound",
                     "vsElement": "Terra"
                 },
                 {
@@ -1343,21 +1295,9 @@
                     "vsElement": "Radiant"
                 },
                 {
-                    "buildId": "WqfjTyvUJCZnuMouwcOtRTPJTVUBC77UoJcrCLLUykcvCXVHRmtVC0kudFzySp",
-                    "subcategory": null,
-                    "title": "Thrax (Rift) Resolve",
-                    "vsElement": "Radiant"
-                },
-                {
                     "buildId": "jJfvTXnhXCRMcXvubcjC4TB0FJ2IaC3VUApcvCgkCa3cgCd8CKYHACWBukFa8SW",
                     "subcategory": null,
                     "title": "Thrax (Rift)",
-                    "vsElement": "Radiant"
-                },
-                {
-                    "buildId": "Q6fWTYeuBCjoU07iXcvCbTmWFeMIoC4vt72fwCRmTPseCwWid2hpCR8HPFjgSV",
-                    "subcategory": null,
-                    "title": "Thrax (Rift) Wound",
                     "vsElement": "Radiant"
                 },
                 {
@@ -1397,21 +1337,9 @@
                     "vsElement": "Umbral"
                 },
                 {
-                    "buildId": "VafqTrMCrCLLUy5hwcptpTVQSmFzC5kudMcBC44UWacbCV7HjwhMC30TPS6nTj",
-                    "subcategory": null,
-                    "title": "Chrono (Valo) Resolve",
-                    "vsElement": "Umbral"
-                },
-                {
                     "buildId": "zKfyTXjtOCBnc5osAcgC6TpvIeAIBCz4iYwhXCp2fzsACZzHYXhqC8eF1FPvtN",
                     "subcategory": null,
                     "title": "Chrono (Reza)",
-                    "vsElement": "Umbral"
-                },
-                {
-                    "buildId": "0VfrTm0hZCeRuraujckCaT4Ytv1IbCVpi0MfoCmpHdsVCrvC4Pu6CaMsqFL7fQ",
-                    "subcategory": null,
-                    "title": "Chrono (Valo) Wound",
                     "vsElement": "Umbral"
                 },
                 {
@@ -1440,7 +1368,7 @@
                 }
             ],
             "description": "Artificer features a drone you can control that has multiple functions depending on what you are targeting: if targeting the ground, it creates a healing and shielding aura that blocks Behemoth's projectiles; if targeting a player it creates a healing and shielding aura that follows them; if targeting a downed slayer it revives them and creates a healing and shielding aura that follows them; and, if targeting a Behemoth, it marks a part to take extra damage.",
-            "index": 6,
+            "index": 5,
             "name": "Artificer",
             "tier": 4
         },
