@@ -1430,7 +1430,7 @@
     "item.perks.sprinter.effects.3.description": "$t(item.perks.sprinter.effects.1.description)",
     "item.perks.sprinter.effects.4.description": "$t(item.perks.sprinter.effects.1.description)",
     "item.perks.sprinter.effects.5.description": "$t(item.perks.sprinter.effects.1.description)",
-    "item.perks.sprinter.effects.6.description": "+{{percentMoveSpeed}}% movement speed and {{percentSprintCost}} reduced sprint cost",
+    "item.perks.sprinter.effects.6.description": "$t(item.perks.sprinter.effects.1.description)",
     "item.perks.sprinter.name": "Sprinter",
     "item.perks.stop.description": "Dodging through a Behemoth's physical attack deals stagger damage to its head.",
     "item.perks.stop.effects.1.description": "Dodging through a Behemoth's physical attack deals {{staggerDamage}} stagger damage to its head.",

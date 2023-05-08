@@ -26,9 +26,9 @@ effects:
     description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}}% reduced sprint cost
     values:
       percentMoveSpeed: 15
-      percentSprintCost: -35
+      percentSprintCost: -30
   '6':
-    description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}} reduced sprint cost
+    description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}}% reduced sprint cost
     values:
       percentMoveSpeed: 17.5
       percentSprintCost: -35

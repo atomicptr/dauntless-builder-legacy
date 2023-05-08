@@ -1,17 +1,17 @@
 [
     {
         "license": "MIT",
-        "name": "@babel/code-frame@7.18.6",
+        "name": "@babel/code-frame@7.21.4",
         "repository": "https://github.com/babel/babel"
     },
     {
         "license": "MIT",
-        "name": "@babel/helper-module-imports@7.18.6",
+        "name": "@babel/helper-module-imports@7.21.4",
         "repository": "https://github.com/babel/babel"
     },
     {
         "license": "MIT",
-        "name": "@babel/helper-string-parser@7.19.4",
+        "name": "@babel/helper-string-parser@7.21.5",
         "repository": "https://github.com/babel/babel"
     },
     {
@@ -26,137 +26,137 @@
     },
     {
         "license": "MIT",
-        "name": "@babel/runtime@7.21.0",
+        "name": "@babel/runtime@7.21.5",
         "repository": "https://github.com/babel/babel"
     },
     {
         "license": "MIT",
-        "name": "@babel/types@7.21.3",
+        "name": "@babel/types@7.21.5",
         "repository": "https://github.com/babel/babel"
     },
     {
         "license": "MIT",
-        "name": "@emotion/babel-plugin@11.10.6",
+        "name": "@emotion/babel-plugin@11.11.0",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/babel-plugin"
     },
     {
         "license": "MIT",
-        "name": "@emotion/cache@11.10.5",
+        "name": "@emotion/cache@11.11.0",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/cache"
     },
     {
         "license": "MIT",
-        "name": "@emotion/hash@0.9.0",
+        "name": "@emotion/hash@0.9.1",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/hash"
     },
     {
         "license": "MIT",
-        "name": "@emotion/is-prop-valid@1.2.0",
+        "name": "@emotion/is-prop-valid@1.2.1",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/is-prop-valid"
     },
     {
         "license": "MIT",
-        "name": "@emotion/memoize@0.8.0",
+        "name": "@emotion/memoize@0.8.1",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/memoize"
     },
     {
         "license": "MIT",
-        "name": "@emotion/react@11.10.6",
+        "name": "@emotion/react@11.11.0",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/react"
     },
     {
         "license": "MIT",
-        "name": "@emotion/serialize@1.1.1",
+        "name": "@emotion/serialize@1.1.2",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/serialize"
     },
     {
         "license": "MIT",
-        "name": "@emotion/sheet@1.2.1",
+        "name": "@emotion/sheet@1.2.2",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/sheet"
     },
     {
         "license": "MIT",
-        "name": "@emotion/styled@11.10.6",
+        "name": "@emotion/styled@11.11.0",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/styled"
     },
     {
         "license": "MIT",
-        "name": "@emotion/unitless@0.8.0",
+        "name": "@emotion/unitless@0.8.1",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/unitless"
     },
     {
         "license": "MIT",
-        "name": "@emotion/use-insertion-effect-with-fallbacks@1.0.0",
+        "name": "@emotion/use-insertion-effect-with-fallbacks@1.0.1",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/use-insertion-effect-with-fallbacks"
     },
     {
         "license": "MIT",
-        "name": "@emotion/utils@1.2.0",
+        "name": "@emotion/utils@1.2.1",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/utils"
     },
     {
         "license": "MIT",
-        "name": "@emotion/weak-memoize@0.3.0",
+        "name": "@emotion/weak-memoize@0.3.1",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/weak-memoize"
     },
     {
         "license": "MIT",
-        "name": "@mui/base@5.0.0-alpha.122",
+        "name": "@mui/base@5.0.0-alpha.128",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/core-downloads-tracker@5.11.14",
+        "name": "@mui/core-downloads-tracker@5.12.3",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/icons-material@5.11.11",
+        "name": "@mui/icons-material@5.11.16",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/material@5.11.14",
+        "name": "@mui/material@5.12.3",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/private-theming@5.11.13",
+        "name": "@mui/private-theming@5.12.3",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/styled-engine@5.11.11",
+        "name": "@mui/styled-engine@5.12.3",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/system@5.11.14",
+        "name": "@mui/system@5.12.3",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/types@7.2.3",
+        "name": "@mui/types@7.2.4",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/utils@5.11.13",
+        "name": "@mui/utils@5.12.3",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@popperjs/core@2.11.6",
+        "name": "@popperjs/core@2.11.7",
         "repository": "https://github.com/popperjs/popper-core"
     },
     {
         "license": "MIT",
-        "name": "@reduxjs/toolkit@1.9.3",
+        "name": "@reduxjs/toolkit@1.9.5",
         "repository": "https://github.com/reduxjs/redux-toolkit"
     },
     {
         "license": "MIT",
-        "name": "@remix-run/router@1.4.0",
+        "name": "@remix-run/router@1.6.1",
         "repository": "https://github.com/remix-run/react-router"
     },
     {
@@ -176,22 +176,27 @@
     },
     {
         "license": "MIT",
-        "name": "@types/react-dom@18.0.11",
+        "name": "@types/react-dom@18.2.4",
         "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
     },
     {
         "license": "MIT",
-        "name": "@types/react-is@17.0.3",
+        "name": "@types/react-is@17.0.4",
         "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
     },
     {
         "license": "MIT",
-        "name": "@types/react-transition-group@4.4.5",
+        "name": "@types/react-transition-group@4.4.6",
         "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
     },
     {
         "license": "MIT",
-        "name": "@types/react@18.0.28",
+        "name": "@types/react@17.0.59",
+        "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+    },
+    {
+        "license": "MIT",
+        "name": "@types/react@18.2.6",
         "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
     },
     {
@@ -261,7 +266,7 @@
     },
     {
         "license": "MIT",
-        "name": "csstype@3.1.1",
+        "name": "csstype@3.1.2",
         "repository": "https://github.com/frenic/csstype"
     },
     {
@@ -296,7 +301,7 @@
     },
     {
         "license": "MIT",
-        "name": "goober@2.1.12",
+        "name": "goober@2.1.13",
         "repository": "https://github.com/cristianbote/goober"
     },
     {
@@ -336,7 +341,7 @@
     },
     {
         "license": "MIT",
-        "name": "i18next@22.4.13",
+        "name": "i18next@22.4.15",
         "repository": "https://github.com/i18next/i18next"
     },
     {
@@ -361,7 +366,7 @@
     },
     {
         "license": "MIT",
-        "name": "is-core-module@2.11.0",
+        "name": "is-core-module@2.12.0",
         "repository": "https://github.com/inspect-js/is-core-module"
     },
     {
@@ -441,7 +446,7 @@
     },
     {
         "license": "MIT",
-        "name": "react-country-flag@3.0.2"
+        "name": "react-country-flag@3.1.0"
     },
     {
         "license": "MIT",
@@ -460,7 +465,7 @@
     },
     {
         "license": "MIT",
-        "name": "react-i18next@12.2.0",
+        "name": "react-i18next@12.2.2",
         "repository": "https://github.com/i18next/react-i18next"
     },
     {
@@ -490,12 +495,12 @@
     },
     {
         "license": "MIT",
-        "name": "react-router-dom@6.9.0",
+        "name": "react-router-dom@6.11.1",
         "repository": "https://github.com/remix-run/react-router"
     },
     {
         "license": "MIT",
-        "name": "react-router@6.9.0",
+        "name": "react-router@6.11.1",
         "repository": "https://github.com/remix-run/react-router"
     },
     {
@@ -510,12 +515,12 @@
     },
     {
         "license": "MIT",
-        "name": "react-virtualized-auto-sizer@1.0.7",
+        "name": "react-virtualized-auto-sizer@1.0.15",
         "repository": "https://github.com/bvaughn/react-virtualized-auto-sizer"
     },
     {
         "license": "MIT",
-        "name": "react-window@1.8.8",
+        "name": "react-window@1.8.9",
         "repository": "https://github.com/bvaughn/react-window"
     },
     {
@@ -540,7 +545,7 @@
     },
     {
         "license": "MIT",
-        "name": "reselect@4.1.7",
+        "name": "reselect@4.1.8",
         "repository": "https://github.com/reduxjs/reselect"
     },
     {
@@ -550,7 +555,7 @@
     },
     {
         "license": "MIT",
-        "name": "resolve@1.22.1",
+        "name": "resolve@1.22.2",
         "repository": "https://github.com/browserify/resolve"
     },
     {
@@ -565,7 +570,7 @@
     },
     {
         "license": "MIT",
-        "name": "stylis@4.1.3",
+        "name": "stylis@4.2.0",
         "repository": "https://github.com/thysultan/stylis.js"
     },
     {
@@ -585,7 +590,7 @@
     },
     {
         "license": "MIT",
-        "name": "ts-pattern@4.2.2",
+        "name": "ts-pattern@4.2.3",
         "repository": "https://github.com/gvergnaud/ts-pattern"
     },
     {
