@@ -1,21 +1,21 @@
 # We decided against supporting the full level range of this weapon because that would be a lot of effort for pretty much
 # no gains unless they add more weapons like these...
-name: Silver Sword
-description: The sword once used by Silver Nikola, Queen Linnea's ancestor.
-icon: /assets/icons/weapons/generic/SilverSword.png
-type: Sword
-damage: Slashing
-elemental: Frost
-cells: [Fortitude, Brutality]
+name: The Golden Claws
+description: A treasured pair of pugilist weapons once thought lost to time.
+icon: /assets/icons/weapons/event/TheGoldenClaws.png
+type: Aether Strikers
+damage: Blunt
+elemental: Umbral
+cells: [Alacrity, Finesse]
 tags: [Event]
 power:
   base: 10
   powerSurged: 120
 perks:
-  - name: Guardian
+  - name: Bladestorm
     value: 1
     powerSurged: false
-  - name: Guardian
+  - name: Bladestorm
     value: 3
     powerSurged: true
   - name: Galvanized
@@ -31,20 +31,21 @@ unique_effects:
   - name: Passive
     title: Passive
     description: >-
-      +{{percentShield}}% Shield{{NL}}
-      +{{percentHealing}}% Healing{{NL}}
-      +{{maxHealth}} Max Health
+      +{{percentPartDamage}}% Part Damage
+      -{{reducedMaxHealth}} max health
     values:
-      percentShield: 50
-      percentHealing: 30
-      maxHealth: 300
+      percentPartDamage: 30
+      reducedMaxHealth: 200
     powerSurged: true
   - name: UniqueEffect
     description: >-
-      Using your special continually generates Frost Sprites that grant your next attack +{{damage}} damage and minor
-      frost damage (Max 4 Sprites)
+      After dodging through an attack, your next attack within 5 seconds deals +{{percentPartDamage}}% part damage
+      After dodging through an attack, your next attack within 5 seconds deals +{{staggerDamage}} stagger damage
+      While below 30% of your maximum health, gain +{{percentAttackSpeed}}% attack speed
     values:
-      damage: 60
+      percentPartDamage: 150
+      percentAttackSpeed: 15
+      staggerDamage: 150
     powerSurged: true
   - name: Unsupported
     title: Disclaimer

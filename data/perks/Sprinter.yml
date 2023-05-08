@@ -5,30 +5,30 @@ effects:
   '1':
     description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}}% reduced sprint cost
     values:
-      percentMoveSpeed: 10
+      percentMoveSpeed: 5
       percentSprintCost: -10
   '2':
     description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}}% reduced sprint cost
     values:
-      percentMoveSpeed: 15
+      percentMoveSpeed: 7.5
       percentSprintCost: -15
   '3':
     description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}}% reduced sprint cost
     values:
-      percentMoveSpeed: 20
+      percentMoveSpeed: 10
       percentSprintCost: -20
   '4':
     description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}}% reduced sprint cost
     values:
-      percentMoveSpeed: 25
+      percentMoveSpeed: 12.5
       percentSprintCost: -25
   '5':
     description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}}% reduced sprint cost
     values:
-      percentMoveSpeed: 30
+      percentMoveSpeed: 15
       percentSprintCost: -35
   '6':
     description: +{{percentMoveSpeed}}% movement speed and {{percentSprintCost}} reduced sprint cost
     values:
-      percentMoveSpeed: 35
+      percentMoveSpeed: 17.5
       percentSprintCost: -35

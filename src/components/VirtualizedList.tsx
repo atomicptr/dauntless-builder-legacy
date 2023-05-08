@@ -42,11 +42,11 @@ const VirtualizedList: React.FC<VirtualizedListProps> = ({
         <AutoSizer>
             {({ height, width }) => (
                 <VariableSizeList
-                    height={height - (subtractFromHeight ?? 0)}
+                    height={(height ?? 0) - (subtractFromHeight ?? 0)}
                     itemCount={count}
                     itemSize={getRowHeight}
                     ref={listRef}
-                    width={width}
+                    width={width ?? 0}
                 >
                     {Row}
                 </VariableSizeList>

@@ -361,7 +361,16 @@
         "222": "+3 Fire Cell",
         "223": "+1 Earth Cell",
         "224": "+2 Earth Cell",
-        "225": "+3 Earth Cell"
+        "225": "+3 Earth Cell",
+        "226": "+1 Conservation Cell",
+        "227": "+2 Conservation Cell",
+        "228": "+3 Conservation Cell",
+        "229": "+1 Impulse Cell",
+        "230": "+2 Impulse Cell",
+        "231": "+3 Impulse Cell",
+        "232": "+1 Inertia Cell",
+        "233": "+2 Inertia Cell",
+        "234": "+3 Inertia Cell"
     },
     "Lanterns": {
         "1": "Drask's Eye",
@@ -548,7 +557,10 @@
         "73": "Reuse",
         "74": "Fire",
         "75": "Earth",
-        "76": "Water"
+        "76": "Water",
+        "77": "Inertia",
+        "78": "Impulse",
+        "79": "Conservation"
     },
     "Weapons": {
         "1": "Brutality of Boreus",
@@ -781,6 +793,7 @@
         "228": "Fenroar's Thistles",
         "229": "Fenroar's Thorns",
         "230": "Fenroar's Trunk",
-        "231": "Silver Sword"
+        "231": "Silver Sword",
+        "232": "The Golden Claws"
     }
 }

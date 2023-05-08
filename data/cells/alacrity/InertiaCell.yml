@@ -1,0 +1,15 @@
+name: Inertia Cell
+slot: Alacrity
+variants:
+  +1 Inertia Cell:
+    rarity: uncommon
+    perks:
+      Inertia: 1
+  +2 Inertia Cell:
+    rarity: rare
+    perks:
+      Inertia: 2
+  +3 Inertia Cell:
+    rarity: epic
+    perks:
+      Inertia: 3
