@@ -1,0 +1,50 @@
+name: Impulse
+description: >-
+  Critical Damage is increased based on Movement Speed.
+type: Finesse
+effects:
+  '1':
+    description: &description >-
+      Gain {{percentIncreasedMovementSpeed}}% increased Movement Speed. Critical hit damage is increased by
+      {{percentCriticalHitDamage}}% for every {{percentCriticalHitDamageIncreaseForEveryXMovementSpeed}}% increased
+      Movement Speed, benefiting from up to {{percentUpToMovementSpeed}}% increased Movement Speed.
+    values:
+      percentIncreasedMovementSpeed: 10
+      percentCriticalHitDamage: 1
+      percentCriticalHitDamageIncreaseForEveryXMovementSpeed: 5
+      percentUpToMovementSpeed: 50
+  '2':
+    description: *description
+    values:
+      percentIncreasedMovementSpeed: 10
+      percentCriticalHitDamage: 2.5
+      percentCriticalHitDamageIncreaseForEveryXMovementSpeed: 5
+      percentUpToMovementSpeed: 50
+  '3':
+    description: *description
+    values:
+      percentIncreasedMovementSpeed: 10
+      percentCriticalHitDamage: 4
+      percentCriticalHitDamageIncreaseForEveryXMovementSpeed: 5
+      percentUpToMovementSpeed: 50
+  '4':
+    description: *description
+    values:
+      percentIncreasedMovementSpeed: 10
+      percentCriticalHitDamage: 6
+      percentCriticalHitDamageIncreaseForEveryXMovementSpeed: 5
+      percentUpToMovementSpeed: 50
+  '5':
+    description: *description
+    values:
+      percentIncreasedMovementSpeed: 10
+      percentCriticalHitDamage: 8
+      percentCriticalHitDamageIncreaseForEveryXMovementSpeed: 5
+      percentUpToMovementSpeed: 50
+  '6':
+    description: *description
+    values:
+      percentIncreasedMovementSpeed: 10
+      percentCriticalHitDamage: 10
+      percentCriticalHitDamageIncreaseForEveryXMovementSpeed: 5
+      percentUpToMovementSpeed: 50

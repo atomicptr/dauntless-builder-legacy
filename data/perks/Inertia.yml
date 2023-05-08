@@ -1,0 +1,43 @@
+name: Inertia
+description: Increase critical chance steadily while sprinting.
+type: Alacrity
+effects:
+  '1':
+    description: &description >-
+      While Sprinting, build up to {{percentIncreasedCriticalStrikeChance}}% increased critical chance over
+      {{criticalChanceBuildupTime}} seconds. This critical chance lasts for {{duration}} seconds or until
+      critical damage is dealt.
+    values:
+      percentIncreasedCriticalStrikeChance: 10
+      criticalChanceBuildupTime: 4
+      duration: 2
+  '2':
+    description: *description
+    values:
+      percentIncreasedCriticalStrikeChance: 20
+      criticalChanceBuildupTime: 4
+      duration: 2
+  '3':
+    description: *description
+    values:
+      percentIncreasedCriticalStrikeChance: 30
+      criticalChanceBuildupTime: 4
+      duration: 2
+  '4':
+    description: *description
+    values:
+      percentIncreasedCriticalStrikeChance: 50
+      criticalChanceBuildupTime: 4
+      duration: 2
+  '5':
+    description: *description
+    values:
+      percentIncreasedCriticalStrikeChance: 76
+      criticalChanceBuildupTime: 4
+      duration: 2
+  '6':
+    description: *description
+    values:
+      percentIncreasedCriticalStrikeChance: 100
+      criticalChanceBuildupTime: 4
+      duration: 2

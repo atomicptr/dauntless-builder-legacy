@@ -1,0 +1,38 @@
+name: Conservation
+description: >-
+  Gain shields whenever your max movement speed is reduced for any reason.
+type: Fortitude
+effects:
+  '1':
+    description: &description >-
+      Losing Bonus Movement Speed grants {{shields}} shields for every {{percentMovementSpeedLost}}% Movement Speed lost.
+      This effect cannot happen more than once every 2 seconds.
+    values:
+      shields: 20
+      percentMovementSpeedLost: 5
+
+  '2':
+    description: *description
+    values:
+      shields: 30
+      percentMovementSpeedLost: 5
+  '3':
+    description: *description
+    values:
+      shields: 40
+      percentMovementSpeedLost: 5
+  '4':
+    description: *description
+    values:
+      shields: 60
+      percentMovementSpeedLost: 5
+  '5':
+    description: *description
+    values:
+      shields: 80
+      percentMovementSpeedLost: 5
+  '6':
+    description: *description
+    values:
+      shields: 100
+      percentMovementSpeedLost: 5

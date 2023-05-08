@@ -2,7 +2,7 @@
 # no gains unless they add more weapons like these...
 name: The Golden Claws
 description: A treasured pair of pugilist weapons once thought lost to time.
-icon: /assets/icons/weapons/generic/TheGoldenClaws.webp
+icon: /assets/icons/weapons/event/TheGoldenClaws.png
 type: Aether Strikers
 damage: Blunt
 elemental: Umbral

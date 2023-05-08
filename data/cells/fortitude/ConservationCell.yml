@@ -1,0 +1,15 @@
+name: Conservation Cell
+slot: Fortitude
+variants:
+  +1 Conservation Cell:
+    rarity: uncommon
+    perks:
+      Conservation: 1
+  +2 Conservation Cell:
+    rarity: rare
+    perks:
+      Conservation: 2
+  +3 Conservation Cell:
+    rarity: epic
+    perks:
+      Conservation: 3

@@ -1,0 +1,15 @@
+name: Impulse Cell
+slot: Finesse
+variants:
+  +1 Impulse Cell:
+    rarity: uncommon
+    perks:
+      Impulse: 1
+  +2 Impulse Cell:
+    rarity: rare
+    perks:
+      Impulse: 2
+  +3 Impulse Cell:
+    rarity: epic
+    perks:
+      Impulse: 3

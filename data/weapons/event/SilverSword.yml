@@ -2,7 +2,7 @@
 # no gains unless they add more weapons like these...
 name: Silver Sword
 description: The sword once used by Silver Nikola, Queen Linnea's ancestor.
-icon: /assets/icons/weapons/generic/SilverSword.png
+icon: /assets/icons/weapons/event/SilverSword.png
 type: Sword
 damage: Slashing
 elemental: Frost
