@@ -21,7 +21,8 @@ We're using Crowdin for managing localizations: https://crowdin.com/project/daun
 
 Requirements:
 
--   Node.js 16+ (Non LTS versions are generally unsupported)
+-   Linux / MacOS / WSL v2+, regular Windows is unsupported
+-   Node.js 18+ (Non LTS versions are unsupported)
 -   yarn package manager (install via `npm install -g yarn`)
 
 ```bash
