@@ -121,7 +121,6 @@
                 "buildTitles": {
                     "Agarus (K) Speed": "$t(terms.behemoths.Agarus) (K) Speed",
                     "Agarus (K) Survival": "$t(terms.behemoths.Agarus) (K) Survival",
-                    "Agarus (Khara) Resolve": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Resolve",
                     "Agarus (Khara) Wound": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Wound",
                     "Agarus (Kharabak)": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak))",
                     "Charrogg": "$t(terms.behemoths.Charrogg)",
@@ -131,7 +130,6 @@
                     "Chrono (V) Speed": "$t(terms.behemoths.Chronovore) (V) Speed",
                     "Chrono (V) Survival": "$t(terms.behemoths.Chronovore) (V) Survival",
                     "Chrono (Valo)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr))",
-                    "Chrono (Valo) Resolve": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Resolve",
                     "Disc Pred": "Disc Pred",
                     "Disc Sav": "Disc Sav",
                     "Hellion": "$t(terms.behemoths.Hellion)",
@@ -139,7 +137,6 @@
                     "Malk (S) Speed": "$t(terms.behemoths.Malkarion) (S) Speed",
                     "Malk (S) Survival": "$t(terms.behemoths.Malkarion) (S) Survival",
                     "Malk (Sahvyt)": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt))",
-                    "Malk (Sahvyt) Resolve": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt)) Resolve",
                     "Malk (Sahvyt) Wound": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt)) Wound",
                     "Pangar": "$t(terms.behemoths.Pangar)",
                     "Prismedic": "Prismedic",
@@ -148,12 +145,10 @@
                     "Riftstalker": "$t(terms.behemoths.Riftstalker)",
                     "Sahvyt": "$t(terms.behemoths.Sahvyt)",
                     "Thrax (Rift)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker))",
-                    "Thrax (Rift) Resolve": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Resolve",
                     "Thrax (Rift) Wound": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Wound",
                     "Torg (C) Speed": "$t(terms.behemoths.Torgadoro) (C) Speed",
                     "Torg (C) Survival": "$t(terms.behemoths.Torgadoro) (C) Survival",
                     "Torg (Charrogg)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Charrogg))",
-                    "Torg (Charrogg) Resolve": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Charrogg)) Resolve",
                     "Torg (H) Speed": "$t(terms.behemoths.Torgadoro) (H) Speed",
                     "Torg (H) Survival": "$t(terms.behemoths.Torgadoro) (H) Survival",
                     "Torg (Hellion)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion))",
@@ -164,10 +159,8 @@
                     "Urska (F) Speed": "$t(terms.behemoths.Urska) (F) Speed",
                     "Urska (F) Survival": "$t(terms.behemoths.Urska) (F) Survival",
                     "Urska (Frostwülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
-                    "Urska (Frostwülf) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Wound",
                     "Urska (Pangar)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar))",
-                    "Urska (Pangar) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Resolve",
-                    "Urska (Wülf) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Resolve",
+                    "Urska (Wülf) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Wound",
                     "Valomyr": "$t(terms.behemoths.Valomyr)"
                 },
                 "categories": {
@@ -205,7 +198,7 @@
                         "name": "Iceborne"
                     },
                     "Revenant": {
-                        "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 125 healing over 10 seconds — after Revenant expires.",
+                        "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 115 healing over 10 seconds — after Revenant expires.",
                         "name": "Revenant"
                     },
                     "Tempest": {
