@@ -121,6 +121,7 @@
                 "buildTitles": {
                     "Agarus (K) Speed": "$t(terms.behemoths.Agarus) (K) Speed",
                     "Agarus (K) Survival": "$t(terms.behemoths.Agarus) (K) Survival",
+                    "Agarus (Khar) Wound": "$t(terms.behemoths.Agarus) (Khar) Wound",
                     "Agarus (Khara) Wound": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Wound",
                     "Agarus (Kharabak)": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak))",
                     "Charrogg": "$t(terms.behemoths.Charrogg)",
@@ -130,6 +131,7 @@
                     "Chrono (V) Speed": "$t(terms.behemoths.Chronovore) (V) Speed",
                     "Chrono (V) Survival": "$t(terms.behemoths.Chronovore) (V) Survival",
                     "Chrono (Valo)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr))",
+                    "Disc Adrenaline": "Disc Adrenaline",
                     "Disc Pred": "Disc Pred",
                     "Disc Sav": "Disc Sav",
                     "Hellion": "$t(terms.behemoths.Hellion)",
@@ -140,7 +142,6 @@
                     "Malk (Sahvyt) Wound": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt)) Wound",
                     "Pangar": "$t(terms.behemoths.Pangar)",
                     "Prismedic": "Prismedic",
-                    "Rage Pred": "Rage Pred",
                     "Rezakiri": "$t(terms.behemoths.Rezakiri)",
                     "Riftstalker": "$t(terms.behemoths.Riftstalker)",
                     "Sahvyt": "$t(terms.behemoths.Sahvyt)",
