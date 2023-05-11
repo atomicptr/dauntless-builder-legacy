@@ -9,7 +9,7 @@
                     "vsElement": "Blaze"
                 },
                 {
-                    "buildId": "XafXTJ8FYCvyUNFEcYt5TbgSgF7CZ4Uv7HJC74HgyT3CBoi8dF4CAEiJSoBsY",
+                    "buildId": "YwfzTbXTgC3OToxHRcYtKT1Wi27fJCg6HyJi0CxqIe4T0COF3QuxCxNioSKrfX",
                     "subcategory": null,
                     "title": "Urska (Frostwülf)",
                     "vsElement": "Blaze"
@@ -17,7 +17,7 @@
                 {
                     "buildId": "WqfjTyWTJCbmUkASwcWCRTa0t03hBC4nFo3frCQ1Ck4TvCAoHY1sVCVFMSNMTn",
                     "subcategory": null,
-                    "title": "Urska (Frostwülf)",
+                    "title": "Urska (Wülf) Wound",
                     "vsElement": "Blaze"
                 },
                 {
@@ -27,229 +27,241 @@
                     "vsElement": "Blaze"
                 },
                 {
-                    "buildId": "PWfoT8yheCoF1LhqSjuLT2Nu0nh1C6gTjXfAC3VUORcMCdbCePhLCMzs1SOosK",
+                    "buildId": "jJfvTXWSXCNghXmF0S0u4TvLtkWiaCqNun2fvCQ6T3qUgC4FKEsACxQirSOEsj",
+                    "subcategory": null,
+                    "title": "Urska (Wülf) Wound",
+                    "vsElement": "Blaze"
+                },
+                {
+                    "buildId": "yKfETe0SBCaoFd8UWuYhpIvxTVLibCRLIemI7CzFaMTJC4jijBuwC6pSnSAZsb",
                     "subcategory": null,
                     "title": "Urska (Frostwülf)",
                     "vsElement": "Blaze"
                 },
                 {
-                    "buildId": "dJfvTwKUgC4FLYueSph1Ibmfq6IACkJi6dtMCXbtp3cjC5ocjKhwCnesyS2ATj",
+                    "buildId": "1af8T06FECovFkrcOc2h3T3gtaQtKC3XUMPcACxRUn5imCpFgAhbCrzsNS6df2",
                     "subcategory": null,
                     "title": "Urska (Frostwülf)",
                     "vsElement": "Blaze"
                 },
                 {
-                    "buildId": "3KfYT3gfVCogFdas8TeT2Td1UQjFRCm5i32I7C6aF3oHPCdFW8hXCeXsVS73sm",
-                    "subcategory": null,
-                    "title": "Urska (Frostwülf)",
-                    "vsElement": "Blaze"
-                },
-                {
-                    "buildId": "8MfgTjJCOCyLuPNFoUytQTgVfe2IpCzBi7zSeC2EuLVcYC6AUJgTMCaospFQ7uZ",
+                    "buildId": "mNf6TKjFjCjbhJniyUJtETxZfdkIpCWJha8cqCNkUeXcBCzOSX2haCeasrSKpf2",
                     "subcategory": null,
                     "title": "Torg (Hellion)",
                     "vsElement": "Frost"
                 },
                 {
-                    "buildId": "5wf8TzXhRCOkF22UEcvtjTLSdFaCwZU1wSQCZ6Ha4TECmkijJhQC4qhnFLYF0",
-                    "subcategory": null,
-                    "title": "Torg (Charrogg)",
-                    "vsElement": "Frost"
-                },
-                {
-                    "buildId": "WqfjTykHJCbmUMouwcWCRTXh03hBC4nFo3frCQ1Ck4TvCAoHY1sVCbxIdFNMTn",
+                    "buildId": "v3frT8dUzCgqh2WfacwtQTXuWVirC4Ecz0iyCaKfN3T0Ckmi0yIyCrwh8f7JFV",
                     "subcategory": null,
                     "title": "Torg (Hellion)",
                     "vsElement": "Frost"
                 },
                 {
-                    "buildId": "WqfjTyAIJCZnuMouwcWCRTnSEoiBCXWck8IrCQZsykcvCkPuY1sVC0JIdFNMTn",
+                    "buildId": "wKfQTgAU4CRgcAyFzcYCZT6hjAIaC4KFzRfvCPYtELTeCJXFqEu5CKofoSwQFz",
+                    "subcategory": null,
+                    "title": "Torg (Hellion) Wound",
+                    "vsElement": "Frost"
+                },
+                {
+                    "buildId": "axfWTxNsOCKVimQijc0CgTQSjYi3C45cdkipCAbT7U2CjmHztnCkji7SMRtV",
                     "subcategory": null,
                     "title": "Torg (Hellion)",
                     "vsElement": "Frost"
                 },
                 {
-                    "buildId": "Brf8TNNH3CK8IpOidcmuJTKfJOIkCX6u7bfVCMJc2BhJCg5sn1hOCj2sqFJKu3",
+                    "buildId": "EQfPTjjHNCYqfQZImcgu6TKfoeIJC3pUOkfoC7VHPZcbCW2TBquBCj0sLSdYhd",
+                    "subcategory": null,
+                    "title": "Torg (Hellion) Wound",
+                    "vsElement": "Frost"
+                },
+                {
+                    "buildId": "nNfqT7PuyCqxHOPU5u7h8IAKCqJixCOqTQXCPCnmiAYUBC3yfLyIaCbyi7SBZia",
                     "subcategory": null,
                     "title": "Torg (Hellion)",
                     "vsElement": "Frost"
                 },
                 {
-                    "buildId": "EQfPTk8TNC4zSbeTbSWheIwESoeIJCyOIB4toCKwfPZcbCW2TBquBCjaiJFdYhd",
+                    "buildId": "KBfkT0ki0CXZtLOHPcbhYT1ixni5CR5IE2cAC0Wi6bcBCorF3AuYCXbsESdwh1",
                     "subcategory": null,
                     "title": "Torg (Hellion)",
                     "vsElement": "Frost"
                 },
                 {
-                    "buildId": "8MfgTjqtOCyLuPNFLTVTQTrhe2IpCzBi7zSeC2EuLVcYC6AUJgTMCaospFWzuZ",
-                    "subcategory": null,
-                    "title": "Torg (Charrogg)",
-                    "vsElement": "Frost"
-                },
-                {
-                    "buildId": "bMfLT0ZUoC2YhaWUYUWtxTmBC1auoCd4i3VcqCb7fQxcRCrLC4EuWCaQsBFO2sv",
+                    "buildId": "yKfETJ1HBCd8Hg4U7UmtYT4YtrdIbCX1ueyH7CWvUpacJCVECjWhwCa1snSAZsb",
                     "subcategory": null,
                     "title": "Agarus (Kharabak)",
                     "vsElement": "Shock"
                 },
                 {
-                    "buildId": "0VfrTmJuZCknUmmUjc0taTMIwFbCzRUedHoCg3HYQTVCmOi4ku6CeOsqFy4tx",
+                    "buildId": "8MfgTjmIOCgBH0vH8cytQTpI1kSpCbaH7QieC3vFVZTYCnkiJOHMCgNfjSQ7uZ",
                     "subcategory": null,
                     "title": "Agarus (Kharabak)",
                     "vsElement": "Shock"
                 },
                 {
-                    "buildId": "VafqTrVtrCwZiyjFwcECpTpCNeSzC7jCdpfBC0XfaLTbCresjNuMC30T7FqviY",
+                    "buildId": "v3frT8gtzCgyt2nSacnCQToCzkIrC1kSzBfyCrmHN3T0CkZs0yIyCrwhoS7JFV",
+                    "subcategory": null,
+                    "title": "Agarus (Khar) Wound",
+                    "vsElement": "Shock"
+                },
+                {
+                    "buildId": "YwfzTb4ugC3OTJgCRcECKTLs27fJCNLCyJi0CxqI8eU0CvAI3QuxCxNioSKrfX",
                     "subcategory": null,
                     "title": "Agarus (Kharabak)",
                     "vsElement": "Shock"
                 },
                 {
-                    "buildId": "JjfoT7QuxC3WT7xf4ceCJT7spaiJCOmTRjTnCoKidRcqCkAujOuJC42SLFwMFN",
+                    "buildId": "oNfqTN6swC5nsa7UaSxuQTVTbjC4CEBHR5fxCkbHLqtXCOPtd2hyComsNSYnfM",
+                    "subcategory": null,
+                    "title": "Agarus (Khar) Wound",
+                    "vsElement": "Shock"
+                },
+                {
+                    "buildId": "7xfVTjgfKC0RcMLSAuyhxIgPiK8i8Cp8hn3IWCdBimvTaCzAFBWSvCAET7S3Psk",
                     "subcategory": null,
                     "title": "Agarus (Kharabak)",
                     "vsElement": "Shock"
                 },
                 {
-                    "buildId": "yKfETJPtBCVRUEzUjc3uYTbTrdIbCX1urAf7CP2tpNiJCyxtjWhwCa1sQFAZsb",
+                    "buildId": "yKfETJgUBCd8Hg4UjcYhYTrHrdIbCX1ueyH7CWvUpacJCVECjWhwCa1snSAZsb",
                     "subcategory": null,
                     "title": "Agarus (Kharabak)",
                     "vsElement": "Shock"
                 },
                 {
-                    "buildId": "v3frT8BszCPeHP5FQSZhyIm8FzkIrCXMtMNcyCayF6Nc0CMwi0EsyCj5i4F7JFV",
-                    "subcategory": null,
-                    "title": "Agarus (Kharabak)",
-                    "vsElement": "Shock"
-                },
-                {
-                    "buildId": "Pdc3QUJC5Vc2KczTMTvTWHMAhkCx0i6nUjC4pC37hRC0gUYVh7CRwsrFeohA",
-                    "subcategory": null,
-                    "title": "Agarus (Kharabak)",
-                    "vsElement": "Shock"
-                },
-                {
-                    "buildId": "60fPT7WFACaZt8bUMUmtrTn6Uz1INCm4iVMsECbKf5PfaC2PIzBhRCVqs5FbeIa",
+                    "buildId": "LWfOTJdTzCdpHwjf1UBtQTdmHZkhMCB8tRNtdCaQSnjcMCwZi6Kf2CdYs7SbvIe",
                     "subcategory": null,
                     "title": "Malk (Sahvyt)",
                     "vsElement": "Terra"
                 },
                 {
-                    "buildId": "gxfJTK7I2Cz6UWntWcRtWTWgsxFLCErfpxH7CL2HxBT4C5dh0msmCqNs7FmqTP",
+                    "buildId": "v3frT3vizCPeH2WfacwtQTmJtWVirC4Ecz0iyCaKfN3T0Ckmi0yIyCrwhoS7JFV",
                     "subcategory": null,
                     "title": "Malk (Sahvyt)",
                     "vsElement": "Terra"
                 },
                 {
-                    "buildId": "VafqTnmtrCwZiVzTwcECpTbjFNeSzC7jCdpfBC0XfaLTbCresjNuMC30T7FqviY",
+                    "buildId": "xgfJTzJFbCEjHr8IOcxC8TQ7CyQizCLrUgJIxCpgiRMckCJMHqQu5CEAFJSrzhX",
                     "subcategory": null,
                     "title": "Malk (Sahvyt)",
                     "vsElement": "Terra"
                 },
                 {
-                    "buildId": "5wf8TQxFRCONHvkSEc0CjTqxtw7iaC2Wh1ncQC3xTeacECPOSj8uQC4mSnFLYF0",
+                    "buildId": "XafXTEgtYCvqHXgCEcAC5TbnUrpi7CKYFz1iJC1niLgc3CR0c8OU4CA5uJSoBsY",
                     "subcategory": null,
                     "title": "Malk (Sahvyt)",
                     "vsElement": "Terra"
                 },
                 {
-                    "buildId": "R4f8Tmbf7CN1cjYuec6uvT5LSr1IbCd5FzjfZC6yT06fyCZnc1dIdCO6sbFW1uE",
+                    "buildId": "Brf8T8KC3C1ZtjVHdc6UJTW4C0eukC3oS7PiVCYmuBktJCBXinpuOCmMTgSJKu3",
                     "subcategory": null,
                     "title": "Malk (Sahvyt)",
                     "vsElement": "Terra"
                 },
                 {
-                    "buildId": "mNf6TeeSjCPJHK5IwSdhZInLTdkIpCopSgPIqCxJseXcBCzOSXkHaCePi6FKpf2",
+                    "buildId": "zKfyTLLiOCJbH58Ibuyh4IkZUENiBCOJTY3IXC36TE3TACwoSYysqC8VUQSrWhp",
                     "subcategory": null,
                     "title": "Malk (Sahvyt)",
                     "vsElement": "Terra"
                 },
                 {
-                    "buildId": "rBfoTbQHeCYyiVkUrTMT0TYvhknINCRwT4PFBC5dIOQcrCpOUozh4CoMszFAYtd",
+                    "buildId": "MRfWTXwhXC5nUvLUycBh8TEXSx2I5CZzfxdHzCZKTr3cKCZyIJ0T6CRXsoS8dtQ",
                     "subcategory": null,
                     "title": "Malk (Sahvyt)",
                     "vsElement": "Terra"
                 },
                 {
-                    "buildId": "PWfoT8YheC2KcPmtOURtLTMns0nh1C6gTmPHACy0IORcMCdbCePhLCMzsXFOosK",
+                    "buildId": "ewfeTXJSACjOURXTjUQtPTZwHnMIYC2oFJWiKCQphXvc6CrnC3ohXCVvs5SVJhP",
                     "subcategory": null,
                     "title": "Thrax (Rift)",
                     "vsElement": "Radiant"
                 },
                 {
-                    "buildId": "NBf2TQgCPC0OUK8sncqt4TJPTn5imC2ZSNpcBCKqUamTWCVAFKvhgCvbcZFXySV",
+                    "buildId": "OWfwTemhBCEyHb6SLc8tYTMBTb6iPCWoHK6SMCWvT0bfnCaVCQuVCOptySvkcb",
                     "subcategory": null,
                     "title": "Thrax (Rift)",
                     "vsElement": "Radiant"
                 },
                 {
-                    "buildId": "Brf8TNLc3Cq4tWnHdcECJT7ziJOIkCXAs7bfVCMJcBktJCBMsn3hOCmMTqFJKu3",
+                    "buildId": "8MfgTjRcOCgBH1zC8cPCQTdVF1kSpC8VI7QieC3vFVZTYCnkiJWTMCgNfjSQ7uZ",
                     "subcategory": null,
                     "title": "Thrax (Rift)",
                     "vsElement": "Radiant"
                 },
                 {
-                    "buildId": "0VfrTm7UZCeqIrJIjckCaTW8Cv1IbCVOsedHoC2eUAYuVCrvC4ku6CeZiqFy4tx",
+                    "buildId": "EQfPTjRfNC4zSxKHmcyC6TEYCoeIJC35cB4toCK5cPZcbCW2TZuBCreILSdYhd",
                     "subcategory": null,
                     "title": "Thrax (Rift)",
                     "vsElement": "Radiant"
                 },
                 {
-                    "buildId": "8MfgTj6SOCoMs0yi8c5uQTd8te2IpCzBi7afeCdoHLVcYC6AUJgTMCaospFQ7uZ",
+                    "buildId": "mNf6TKvijCPJHWzCXcWUETXzt7bCpCOxTgPIqCxgieXcBCzOSvuaCBoTrSKpf2",
                     "subcategory": null,
                     "title": "Thrax (Rift)",
                     "vsElement": "Radiant"
                 },
                 {
-                    "buildId": "R4f8Tanu7CNgu02CYS1hgI5bcr1IbCd5F1qSZCRvum0cyCgKs1dIdCOzubFW1uE",
+                    "buildId": "NBf2T2xSPC4mSM6hvuahBIYbUJ8ImCnXsgjIBCONuamTWC4xUK3HgCvzFMSXySV",
                     "subcategory": null,
                     "title": "Thrax (Rift)",
                     "vsElement": "Radiant"
                 },
                 {
-                    "buildId": "WecogFKCMyI7KiQTPTZTJ1UrpIECNdc7duoCrkUQLckC0ZUAjiRCPasbFqRfz",
+                    "buildId": "PWfoT8vTeC07CPaH4cQhLTwbU0nh1C6gTjkcAC7eUORcMCdbCePhLCMzs1SOosK",
                     "subcategory": null,
                     "title": "Thrax (Rift)",
                     "vsElement": "Radiant"
                 },
                 {
-                    "buildId": "ewfeTXBIAC1MIR5HjUQtPTZNHnMIYC2oF4niKCPmUXvc6CrnC3ohXCVvs2FVJhP",
+                    "buildId": "axfWTxeSOCKVi63irUWtgTgdTjYi3Cp2HdPcpCE2UbaT2CqRszRunCkji7SMRtV",
                     "subcategory": null,
                     "title": "Chrono (Valo)",
                     "vsElement": "Umbral"
                 },
                 {
-                    "buildId": "gxfJTMyC2Cz6U55UWcRtWTOwTxFLCErfpxH7CL2HxBT4C5dh0msmCqNs7FmqTP",
-                    "subcategory": null,
-                    "title": "Chrono (Valo)",
-                    "vsElement": "Umbral"
-                },
-                {
-                    "buildId": "4Nf5TL2fQCNEhbQtwc0CxT6kFmRIqCaESvJfrCeWH4AtkCNeTynuVCLKcEFg6fj",
+                    "buildId": "YwfzTbwUgC3OToxHRcYtKTkgi27fJCg6HVS0CxqIe4T0CZQu3QuxC1qFoSKrfX",
                     "subcategory": null,
                     "title": "Chrono (Reza)",
                     "vsElement": "Umbral"
                 },
                 {
-                    "buildId": "LWfOTJNuzCmqUnmtwcgCQTPLsZkhMCBQFRNtdCaQSnKiMCgoh6Kf2CdXiwFbvIe",
-                    "subcategory": null,
-                    "title": "Chrono (Valo)",
-                    "vsElement": "Umbral"
-                },
-                {
-                    "buildId": "v3frT8rUzCg2f2LFacYuQT85izkIrC1NczBfyCrmH6Nc0CMwi0EsyCjZs4F7JFV",
-                    "subcategory": null,
-                    "title": "Chrono (Valo)",
-                    "vsElement": "Umbral"
-                },
-                {
-                    "buildId": "nNfqTyquyCqxH0xIzS7h8IARuV6HxCXEtQoUPCR3u7AFBCAMuLdhaCPES0FBZia",
+                    "buildId": "dJfvTaoSgCRyTqjs8cNCwT5PcBmiACzaH7SMCM3Fp3cjCe1HjguwCn4iyS2ATj",
                     "subcategory": null,
                     "title": "Chrono (Reza)",
                     "vsElement": "Umbral"
                 },
                 {
-                    "buildId": "YkcxNhoCAaS3OTATZTmT5aCZXi2CZrSgOcyC08I06seC5pSw8h0CNOs1FmgCy",
+                    "buildId": "R4f8TReu7Ce7TjYuecVCvT8Ytr1IbCd5FzjfZC6yT06fyCBNs1KidCVKhLSW1uE",
+                    "subcategory": null,
+                    "title": "Chrono (Reza) Wound",
+                    "vsElement": "Umbral"
+                },
+                {
+                    "buildId": "ewfeTXKTACjdHR5Hqc1CPTZptQ2iYCvKU4aiKCe6tvBT6C6vu3ZuXCARH5SVJhP",
+                    "subcategory": null,
+                    "title": "Chrono (Valo)",
+                    "vsElement": "Umbral"
+                },
+                {
+                    "buildId": "jJfvTX7CXCRYue7FbcQU4TBqskWiaCqNunbcvC1jha3cgCrzHKEsACxQirSOEsj",
+                    "subcategory": null,
+                    "title": "Chrono (Reza)",
+                    "vsElement": "Umbral"
+                },
+                {
+                    "buildId": "8MfgTjZIOCyLuPJsBSaUQTdYs1kSpC8VI7afeCdmiVZTYCXMSJOHMCgLUjSQ7uZ",
+                    "subcategory": null,
+                    "title": "Chrono (Reza)",
+                    "vsElement": "Umbral"
+                },
+                {
+                    "buildId": "R4f8TR0c7Ce7TjYuWu1hgI53Fr1IbCd5F17cZCknu06fyCZMS1KidCV3uLSW1uE",
+                    "subcategory": null,
+                    "title": "Chrono (Reza)",
+                    "vsElement": "Umbral"
+                },
+                {
+                    "buildId": "Brf8TNPu3C1ZtQdudcOhJT7MC0eukC3oS71SVC6KF2BhJCg5snpuOCjRigSJKu3",
                     "subcategory": null,
                     "title": "Chrono (Valo)",
                     "vsElement": "Umbral"
@@ -263,73 +275,67 @@
         {
             "builds": [
                 {
-                    "buildId": "7xfVTj2cKCz3cjFYUWtnTg7fvwI8C30UmkcWCz8UEmFaCwaiBMuvCevs7S3PsK",
+                    "buildId": "EQfPTjrcNCYVtoF6Urt6Tw0FoeIJC3pUOEcoC0miPZcbCEpHBquBCj0sLSdYhE",
                     "subcategory": null,
                     "title": "Urska (Frostwülf)",
                     "vsElement": "Blaze"
                 },
                 {
-                    "buildId": "pnfXTKwtwCgZUxFockteTXRFpFMCRKUAWcLCNxH57CZCMNHeJhdCxkseSE5FN",
+                    "buildId": "8MfgTjBfOCoAUMF8cytQTRnte2IpCzBi7zSeC2EuLVcYCx5HJgTMCaosjSQ7uY",
                     "subcategory": null,
                     "title": "Urska (Frostwülf)",
                     "vsElement": "Blaze"
                 },
                 {
-                    "buildId": "nNfqTyETyCMF0xIxcrCjTAniV6HxC3pUM5cPCg5U7AFBCAMuLdhaCP5s7SBZir",
+                    "buildId": "Brf8TNOC3CMFprCdcECJTWduJOIkCX6u71SVC6KF2BhJCg5sn1hOCj2sgSJKu0",
                     "subcategory": null,
                     "title": "Urska (Frostwülf)",
                     "vsElement": "Blaze"
                 },
                 {
-                    "buildId": "EQfPTjOCNCkFbeTmcyC6TwetoeIJC3pUOkfoC7VHPZcbCW2TBquBCj0sLSdYhE",
+                    "buildId": "kofgTvpUWCpFm1FvcmCLT1esVOH5Cw5i87fdCpRHAou7CzxS1YIoCA2ixSmoTv",
                     "subcategory": null,
                     "title": "Urska (Wülf) Wound",
                     "vsElement": "Blaze"
                 },
                 {
-                    "buildId": "KBfkT05t0CLFLKuPc0CYT8Qf8wC5CbkiE2cAC0Wi6bcBCorF3BhYCXbsESdwhj",
+                    "buildId": "YwfzTbPigCRjuJgCRcECKT12H27fJCNLCyJi0CxqI8eU0CboH3QuxCpFoSKrfA",
                     "subcategory": null,
                     "title": "Urska (Frostwülf)",
                     "vsElement": "Blaze"
                 },
                 {
-                    "buildId": "2Pf4Tm5TgCdFk0c8ceueTW2SnVIpCj3iZwfqC5KCJ4ckCZbIv8heCxJsaSXYS3",
+                    "buildId": "mNf6TKzfjCoFWeFXcouETnMidkIpCWJhaWfqCxpHeXcBCzOSX2haCeasrSKpf3",
                     "subcategory": null,
                     "title": "Urska (Frostwülf)",
                     "vsElement": "Blaze"
                 },
                 {
-                    "buildId": "Q6fWT8ofBCeZC8MTvSehwIydIeMIoC4vtqwHwCydIy5ieCzFd0hpCYzsYSXwS5",
+                    "buildId": "v3frTJOTzCgyt2WfQSZhyImnhzkIrC1NcMbSyC4QH6Ai0CdF0EsyCjZsoS7JFb",
                     "subcategory": null,
                     "title": "Urska (Frostwülf)",
                     "vsElement": "Blaze"
                 },
                 {
-                    "buildId": "Brf8TNwF3CJ2I1F7TNTJTWKFJOIkCX6u71SVC6KF2BhJCg5sn1hOCj2sgSJKu0",
+                    "buildId": "pnfXTKATwCWzfxFyTPTeTXNtONfMCd0i73SLCNOUk5cZCabHeJhdCxkseSE5FN",
                     "subcategory": null,
                     "title": "Urska (Frostwülf)",
                     "vsElement": "Blaze"
                 },
                 {
-                    "buildId": "xgfJT5XHbCEEUN7HdUwt8Tz1fZFzCaaUq1cxCRPUM1TkCZ3TqVh5COVtJSrzhx",
+                    "buildId": "PWfoT8BSeCOgI1ATOURtLTM4Fk1i1CyPTjkcAC77UNCMCYXC7ptLCrWI1SOosn",
                     "subcategory": null,
                     "title": "Torg (Hellion)",
                     "vsElement": "Frost"
                 },
                 {
-                    "buildId": "axfWTxZIOCWPH63ijcWtgT0SWF3CppUdPcpCE2UbaT2Cq4izjhnCvOc7SMRtA",
-                    "subcategory": null,
-                    "title": "Torg (Charrogg)",
-                    "vsElement": "Frost"
-                },
-                {
-                    "buildId": "v3frT8JfzCKJCPvhacnCQTjheFrC44UzecyCBEf6Nc0CMwi01syCrwhoS7JFb",
+                    "buildId": "2Pf4TmvugCYPTMxS8cNteTKu0OupCKYHZLiqCAOT4atkCxMiv3ueCLVcaSXYS3",
                     "subcategory": null,
                     "title": "Torg (Hellion)",
                     "vsElement": "Frost"
                 },
                 {
-                    "buildId": "1af8T0buECovFabUOczC3TzhaQtKC3XUMBfACj7Hn5imCjBfg5ubCkWtNS6dfY",
+                    "buildId": "4Nf5TLqtQCRPTNrTwc0CxTLhKZiqCeJfvJfrCems4AtkCN6synuVCLKc2Sg6f6",
                     "subcategory": null,
                     "title": "Torg (Hellion) Wound",
                     "vsElement": "Frost"
@@ -1513,7 +1519,7 @@
                     "vsElement": "Radiant"
                 },
                 {
-                    "buildId": "Brf8TN5F3CK1cpRHdcVtJT7Qf0eukCdKH7PiVCYmu1UJCLdHntOCmMTgSJKuj",
+                    "buildId": "Q6fWTYrSBCjEf0eCXcZtbTmxTzpioCpgH7diwCLwf7UeCkLHdtpCR8HYSXwSo",
                     "subcategory": null,
                     "title": "Thrax (Rift)",
                     "vsElement": "Radiant"
@@ -1525,13 +1531,13 @@
                     "vsElement": "Radiant"
                 },
                 {
-                    "buildId": "gxfJTMrS2CzxHW5CWc0CWTk4COgiLCeAf8Ki7C8dURU4CWjTbhmCzKHmSmqTk",
+                    "buildId": "wKfQTg4h4CXrHALhzcYCZTmXCx0iaCgPFzpivC8dUQUeCE3Hqt5CKZSoSwQF1",
                     "subcategory": null,
                     "title": "Thrax (Rift)",
                     "vsElement": "Radiant"
                 },
                 {
-                    "buildId": "JjfoT7jCxC3WTZYH4c0UJTXktpaiJCOmTKXinCAaTwUqCkAujtJCAoHoSwMFO",
+                    "buildId": "Z0fETMyukCx8HMriBcjUKTmksJkipCYaFM2cgCJ4TRUYCONHJKtPC14fLSAXsz",
                     "subcategory": null,
                     "title": "Thrax (Rift)",
                     "vsElement": "Radiant"
@@ -1555,9 +1561,9 @@
                     "vsElement": "Umbral"
                 },
                 {
-                    "buildId": "jJfvTXgHXCZWue7FbcBt4TaWFNFaCQzUnbcvC11UJCgC7LhK7hACWBurSOEs0",
+                    "buildId": "xgfJT5NSbCJMCrwHOcwt8TawiyQizCLvtgBHxCyOiRJikCdpsqQu5COVtJSrzhX",
                     "subcategory": null,
-                    "title": "Chrono (Valo)",
+                    "title": "Chrono (Reza)",
                     "vsElement": "Umbral"
                 },
                 {
@@ -1567,7 +1573,7 @@
                     "vsElement": "Umbral"
                 },
                 {
-                    "buildId": "LWfOTJNuzCmOuqLTwcgCQTPLszBiMCrdHgKidCx2IVUMC2VC6Pc2CNMC7SbvI7",
+                    "buildId": "5wf8Tz6uRCONHqRTEc0CjT2NTw7iaC2WhkbiQCgwTvUECw1Hj8uQC5QhoSLYF0",
                     "subcategory": null,
                     "title": "Chrono (Valo)",
                     "vsElement": "Umbral"
@@ -1585,9 +1591,9 @@
                     "vsElement": "Umbral"
                 },
                 {
-                    "buildId": "mNf6TKgFjCPPUdVHXcdhETx1f7bCpCk2Ha8cqCNkURCBCLKtXkHaCBJIrSKpfZ",
+                    "buildId": "nNfqTyJSyC77UYeHxc7hjTKdhBFxCy7UM5cPCggUyUBCp2HLtaCP5s7SBZiQ",
                     "subcategory": null,
-                    "title": "Chrono (Valo)",
+                    "title": "Chrono (Reza)",
                     "vsElement": "Umbral"
                 }
             ],
@@ -2535,19 +2541,19 @@
         {
             "builds": [
                 {
-                    "buildId": "Z0fETX1TkCdqCMLhOT1TKTaT8FpC6bcQrCgCJ0cxNcYCONHzdhPCvqiWFk4te",
+                    "buildId": "ARfbT1JcwCQyHOKHzTVhPTJTYdi2C4WcoycYCwYUenTkCPJsbrU2CL0IPS8gtX",
                     "subcategory": "The Hunger",
                     "title": "Disc Pred",
                     "vsElement": null
                 },
                 {
-                    "buildId": "Q6fWTKxSBCV1C8MTrTqTbTXTzdIoCW3fqkIwCROIy0ceCkLHd0hpCYEiPF2qU6",
+                    "buildId": "7xfVTOJUKCwmHppU6TyhnTVTbF8CwnUmkcWCzzUEmFaCwaiBMuvCevs7S3Psk",
                     "subcategory": "The Hunger",
-                    "title": "Rage Pred",
+                    "title": "Disc Adrenaline",
                     "vsElement": null
                 },
                 {
-                    "buildId": "LWfOT3ptzC4kSnosZTYuQT5TZkhMCNMUR7TdCgJHnKiMCg4f6Pc2CdXiwFJ3ue",
+                    "buildId": "LWfOT3ptzC4kSP4HZTjUQT5TzBiMCpbhgLfdCgkijqTMCg5u6Kf2CNMC7SbvIe",
                     "subcategory": null,
                     "title": "Disc Sav",
                     "vsElement": null
@@ -2559,13 +2565,13 @@
                     "vsElement": null
                 },
                 {
-                    "buildId": "Z0fETyIkCdqC2OhOTQfKTaT1eupCkViQrCgCJvSxNcYCONHzNuPCvqiWFAXse",
+                    "buildId": "bMfLTnIoCdMCKETNTNfxTyT1auoCoxf3aUqC2kUQxcRC6OH4LSWCa4iKSO2sv",
                     "subcategory": null,
                     "title": "Disc Pred",
                     "vsElement": null
                 },
                 {
-                    "buildId": "NBf2TAOIPCQLInQtWTYTvsnTn5imC04HgqHBCd6Fx8iWCVAF0ugC5VUrU8AsV",
+                    "buildId": "mNf6TWLUjCmdidVHQTOTesRT7bCpCOxTaviqC62heXcBCzOSXkHaCePirSKpf2",
                     "subcategory": null,
                     "title": "Disc Pred",
                     "vsElement": null
