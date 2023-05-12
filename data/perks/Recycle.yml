@@ -1,5 +1,5 @@
 name: Recycle
-description: Breaking a Behemoth part grants a small attack speed bonus, with a chance to get a much larger one that applies to your whole party.
+description: Dealing repeated damage to the same part grants a stacking damage buff.
 type: Finesse
 effects:
   '1':
