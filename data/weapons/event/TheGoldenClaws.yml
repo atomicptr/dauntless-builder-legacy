@@ -5,7 +5,7 @@ description: A treasured pair of pugilist weapons once thought lost to time.
 icon: /assets/icons/weapons/event/TheGoldenClaws.png
 type: Aether Strikers
 damage: Blunt
-elemental: Umbral
+elemental: Radiant
 cells: [Alacrity, Finesse]
 tags: [Event]
 power:
