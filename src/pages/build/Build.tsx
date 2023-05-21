@@ -13,7 +13,7 @@ import ItemSelectDialog, {
     filterByElement,
     filterByWeaponType,
     FilterFunc,
-    filterRemoveBondWeapons,
+    filterRemoveBondWeapons, filterRemoveExotics,
 } from "@src/components/ItemSelectDialog";
 import OmnicellCard from "@src/components/OmnicellCard";
 import PageTitle from "@src/components/PageTitle";
@@ -240,6 +240,7 @@ const Build: React.FC = () => {
                 filterByWeaponType(build.data.weapon.type),
                 filterByElement(build.data.weapon.bond.elemental),
                 filterRemoveBondWeapons(),
+                filterRemoveExotics(),
             ],
             itemType: ItemType.Weapon,
         });
