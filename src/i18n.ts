@@ -1,5 +1,5 @@
 import crowdinStats from "@json/crowdin-stats.json";
-import { deDE, enUS, esES, frFR, huHU, itIT, jaJP, ptBR, ruRU, trTR } from "@mui/material/locale";
+import { csCZ, deDE, enUS, esES, frFR, huHU, itIT, jaJP, ptBR, ruRU, trTR } from "@mui/material/locale";
 import { store } from "@src/store";
 import log from "@src/utils/logger";
 import i18n, { CallbackError } from "i18next";
@@ -19,6 +19,7 @@ export enum Language {
     Portuguese = "pt",
     Russian = "ru",
     Turkish = "tr",
+    Czech = "cs",
 }
 
 const nativeLanguageNames = {
@@ -32,12 +33,14 @@ const nativeLanguageNames = {
     [Language.Portuguese]: "Português",
     [Language.Russian]: "русский",
     [Language.Turkish]: "Türkçe",
+    [Language.Czech]: "čeština"
 };
 
 // Languages that aren't officially supported by Dauntless
 const communityLanguages = [
     Language.Hungarian,
     Language.Turkish,
+    Language.Czech,
 ];
 
 const betaThreshold = 95;
@@ -56,6 +59,7 @@ export const muiLocaleComponent = () =>
         .with(Language.Portuguese, () => ptBR)
         .with(Language.Russian, () => ruRU)
         .with(Language.Turkish, () => trTR)
+        .with(Language.Czech, () => csCZ)
         .otherwise(() => enUS);
 
 export const getNativeLanguageName = (lang: Language): string | null => nativeLanguageNames[lang] ?? null;
@@ -86,6 +90,7 @@ export const flagCode = (lang: Language): string =>
         .with(Language.Portuguese, () => "br")
         .with(Language.Russian, () => "ru")
         .with(Language.Turkish, () => "tr")
+        .with(Language.Czech, () => "cz")
         .otherwise(() => "x");
 
 export const ttry = (tryIdent: string, elseIdent: string): string => {
