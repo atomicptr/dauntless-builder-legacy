@@ -252,3 +252,43 @@ const linkToDauntlessBuilder = `https://www.dauntless-builder.com/b/${buildId}`;
 // And thats pretty much it.
 console.log(linkToDauntlessBuilder);
 ```
+
+### Localized data
+
+To access the localized strings you have to make a request against:
+
+```bash
+GET https://www.dauntless-builder.com/i18n/${LANGUAGE}.json
+```
+
+Notice that you need to replace LANGUAGE with one of the language short codes defined in src/i18n.ts
+
+(For instance ja)
+
+This will return a JSON file looking a bit like this:
+
+```json
+{
+    "item.armours.adversarys-drive.description": "{{behemoth}}の素材から作られる{{typeAlt}}。",
+    "item.armours.adversarys-drive.name": "アドバーサリードライブ",
+    "item.armours.adversarys-guile.description": "$t(item.armours.adversarys-drive.description)",
+    "item.armours.adversarys-guile.name": "アドバーサリーガイル",
+    "item.armours.adversarys-pride.description": "$t(item.armours.adversarys-drive.description)",
+    "item.armours.adversarys-pride.name": "アドバーサリープライド",
+    "item.armours.adversarys-wrath.description": "$t(item.armours.adversarys-drive.description)",
+    "item.armours.adversarys-wrath.name": "アドバーサリーラース",
+    // ...
+}
+```
+
+You will instantly notice three things:
+
+1. The keys which are generated through this function:
+```ts
+const createItemTranslationIdentifier = (...parts: string[]): string =>
+    ["item", ...parts]
+        .map(p => p.toString().toLowerCase().replace(/\s/g, "-").replace(/ü/g, "u").replace(/[']/g, "").trim())
+        .join(".");
+```
+2. **$t(key)** variables, which are a reference to another entry in the file
+3. **{{key}}** variables, which references variables specified in the data.json

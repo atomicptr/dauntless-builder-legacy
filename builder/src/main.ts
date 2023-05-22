@@ -4,6 +4,7 @@ import { fileURLToPath } from "url";
 
 import { RunConfig, Step } from "./Step";
 import { BuildFinderCreateIntermediateLookupDataStep } from "./steps/BuildFinderCreateIntermediateLookupDataStep";
+import { CopyFilesStep } from "./steps/CopyFilesStep";
 import { CrowdinApproveStep } from "./steps/CrowdinApproveStep";
 import { CrowdinBuildStep } from "./steps/CrowdinBuildStep";
 import { CrowdinStatsStep } from "./steps/CrowdinStatsStep";
@@ -29,6 +30,7 @@ const Steps = [
     CrowdinTranslatorsStep,
     CrowdinStatsStep,
     CrowdinApproveStep,
+    CopyFilesStep,
 ];
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));

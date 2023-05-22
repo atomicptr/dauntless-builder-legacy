@@ -3,6 +3,7 @@
 /public/*.json
 /public/map
 /public/sitemap.xml
+/public/i18n
 /src/json/data.json
 /benchmarks
 /src/json/build-finder-intermediate-lookup-armour-data.json
