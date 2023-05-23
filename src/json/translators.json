@@ -298,5 +298,20 @@
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15822847/medium/30c1015c924039fa53fafd1206ee285e.png",
         "proofreader": false,
         "username": "Soldat_XF"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15832355/medium/8172f9d21111cc3ad1ce4ec89a70c198.jpg",
+        "proofreader": false,
+        "username": "Makhuta"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15839335/medium/2a06569f6bccde50645d9a33f36e93b0.png",
+        "proofreader": false,
+        "username": "pasqui2018cermelli"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15840515/medium/22e288bf7c22d228fbcffbf1fc08dd7d.png",
+        "proofreader": false,
+        "username": "Timschcko"
     }
 ]
