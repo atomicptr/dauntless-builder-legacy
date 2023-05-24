@@ -1,31 +1,31 @@
 {
     "alert": {
-        "translation-warning": "You're currently viewing this page with your language set to <b>{{languageName}}</b>, translations are currently in beta and are very spotty. If you speak this language, please consider <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">contributing to the translation efforts</a>."
+        "translation-warning": "Právě zobrazujete tuto stránku s nastaveným jazykem na <b>{{languageName}}</b>, Překlady jsou v současné době v beta verzi a jsou velmi nepřesné. Pokud mluvíte tímto jazykem, zvažte <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">přispění k překladu</a>."
     },
     "app-name": "Dauntless Builder",
     "components": {
         "build-menu": {
-            "added-build-to-favorites": "Added build \"{{name}}\" to favorites.",
-            "build-name": "Build Name",
-            "copied-to-clipboard": "Copied to Clipboard",
-            "copy-to-clipboard": "Copy build to clipboard",
-            "favorite-build": "Add this build to your favorites",
-            "open-last-edited-build": "Open your last edited build",
-            "remove-build-from-favorites": "Removed build \"{{name}}\" from favorites.",
-            "set-build-name": "Set Build Name",
-            "unfavorite-build": "Remove this build from your favorites"
+            "added-build-to-favorites": "Přidáno build \"{{name}}\" do oblíbených.",
+            "build-name": "Název buildu",
+            "copied-to-clipboard": "Zkopírováno do schránky",
+            "copy-to-clipboard": "Zkopírovat build do schránky",
+            "favorite-build": "Přidat tento build do oblíbených",
+            "open-last-edited-build": "Otevřít poslední upravený build",
+            "remove-build-from-favorites": "Odstranění buildu \"{{name}}\" z oblíbených.",
+            "set-build-name": "Nastavit název buildu",
+            "unfavorite-build": "Odebrat tento build z oblíbených"
         },
         "build-warning": {
-            "invalid-build": "Due to changes in Dauntless this build is no longer compatible with the current version of Dauntless Builder, one or more parts have been removed in order to display it.",
-            "upgraded-build": "This build was made for an earlier version of Dauntless and might be outdated."
+            "invalid-build": "Vzhledem ke změnám v Dauntless není tento build již kompatibilní s aktuální verzí Dauntless Builderu, jedna nebo více částí byly odstraněny za účelem jejich zobrazení.",
+            "upgraded-build": "Tento build byl vytvořen pro dřívější verzi Dauntless a může být zastaralý."
         },
-        "event-marker": "This item was part of an event and might not be obtainable anymore.",
+        "event-marker": "Tento předmět byl součástí události a již nemusí být dostupný.",
         "item-picker": {
             "lantern-hold-line": "<b>$t(terms.hold)</b>: {{hold}}",
             "omnicell-passive-line": "<b>$t(terms.passive)</b>: {{passive}}"
         },
         "item-select-dialog": {
-            "select-text": "Select {{name}}"
+            "select-text": "Vybrat {{name}}"
         }
     },
     "drawer": {
@@ -34,94 +34,94 @@
         "home": "$t(pages.home.title)",
         "meta-builds": "$t(pages.metabuilds.title)",
         "my-builds": "$t(pages.favorites.title)",
-        "new-build": "New Build",
+        "new-build": "Nový build",
         "settings": "$t(pages.settings.title)",
         "trials": "$t(pages.trials.title)"
     },
-    "feature-disabled-browser": "This feature is currently disabled for this web browser.",
+    "feature-disabled-browser": "Tato funkce je v současné době pro tento webový prohlížeč vypnuta.",
     "misc": {
         "dauntless-version": "Dauntless v{{version}}",
         "discord-server": "Dauntless Builder Discord Server",
-        "github-repository": "Github Repository",
+        "github-repository": "GitHub repozitář",
         "matrix-channel": "Dauntless Builder Matrix Server",
         "patch-url": "https://playdauntless.com/patch-notes/{{version}}"
     },
     "pages": {
         "404": {
-            "not-found": "Page Not Found"
+            "not-found": "Stránka nebyla nalezena"
         },
         "about": {
-            "assets": "Assets",
-            "assets-text": "All Dauntless related assets are the intellectual property of Phoenix Labs.",
-            "build-info": "Last update: {{buildString}}",
-            "contributors": "Contributors",
-            "dependencies": "Dependencies ({{number}})",
-            "main-text": "Dauntless Builder is free and open source software licensed under the terms of the <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> license.",
-            "privacy": "Privacy",
-            "privacy-text": "We are not collecting any data.",
-            "source-code": "Source Code",
-            "title": "About",
-            "translators": "Translators"
+            "assets": "Assety",
+            "assets-text": "Veškerý majetek související s Dauntless je duševním vlastnictvím Phoenix Labs.",
+            "build-info": "Poslední aktualizace: {{buildString}}",
+            "contributors": "Přispívající",
+            "dependencies": "Závislosti ({{number}})",
+            "main-text": "Dauntless Builder je free open source software licencovaný podle podmínek <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> licence.",
+            "privacy": "Soukromí",
+            "privacy-text": "Neshromažďujeme žádné údaje.",
+            "source-code": "Zdrojový kód",
+            "title": "O programu",
+            "translators": "Překladatelé"
         },
         "build": {
-            "click-here-to-select": "Click here to select one.",
-            "copy-build-to-finder": "Copy build to Finder",
-            "filter-by": "Filter by {{name}}",
-            "no-perks": "No perks available.",
-            "no-x-selected": "No <b>{{name}}</b> selected.",
-            "part-select-dialog-title": "Select weapon part",
+            "click-here-to-select": "Klikněte zde pro výběr.",
+            "copy-build-to-finder": "Kopírovat build do Hledače",
+            "filter-by": "Filtrovat podle {{name}}",
+            "no-perks": "Nejsou k dispozici žádné perky.",
+            "no-x-selected": "Žádné <b>{{name}}</b> nevybráno.",
+            "part-select-dialog-title": "Vyberte část zbraně",
             "power-surged-add": "Power Surge",
-            "power-surged-remove": "Base Power",
+            "power-surged-remove": "Základní síla",
             "title": "{{weaponName}} {{omnicell}} Build",
-            "toggle-filters": "Toggle display of filters",
-            "toggle-unique-effects": "Toggle display of unique effects"
+            "toggle-filters": "Přepnout zobrazení filtrů",
+            "toggle-unique-effects": "Přepnout zobrazení jedinečných efektů"
         },
         "build-finder": {
-            "builds-title": "Builds ({{num}})",
-            "clear-items": "Clear Items",
-            "clear-perks": "Clear All Perks",
-            "dev-number-of-builds": "Number of Builds: {{num}}",
-            "dev-number-of-perks": "Number of Perks selected: {{num}}",
-            "dev-options-title": "Development Options",
-            "dev-set-perks": "Set Perks",
-            "filter-perks": "Filter Perks...",
-            "filter-title": "Filter",
-            "options-title": "Options",
-            "perk-matching-enabled": "Enable smart perk selection (High performance costs, if you notice performance issues uncheck this)",
+            "builds-title": "Buildů ({{num}})",
+            "clear-items": "Odebrat položky",
+            "clear-perks": "Vymazat všechny perky",
+            "dev-number-of-builds": "Počet buildů: {{num}}",
+            "dev-number-of-perks": "Počet vybraných perků: {{num}}",
+            "dev-options-title": "Nastavení vývoje",
+            "dev-set-perks": "Nastavit perky",
+            "filter-perks": "Filtrovat perky...",
+            "filter-title": "Filtr",
+            "options-title": "Možnosti",
+            "perk-matching-enabled": "Povolit chytrý výběr perků (vysoké náklady na výkon, pokud zjistíte problémy s výkonem odškrtněte)",
             "perks-title": "$t(terms.perks)",
-            "preselect-title": "Select Items",
-            "remove-exotics": "Remove Exotic Items",
-            "remove-legendary": "Remove Legendary Weapons",
-            "title": "Build Finder"
+            "preselect-title": "Vybrat položky",
+            "remove-exotics": "Vyjmout exotické položky",
+            "remove-legendary": "Vyjmout legendární zbraně",
+            "title": "Vyhledávač buildů"
         },
         "favorites": {
-            "build-name": "Build Name",
-            "edit-name": "Edit Favorite Name",
-            "title": "My Builds"
+            "build-name": "Název buildu",
+            "edit-name": "Upravit oblíbené jméno",
+            "title": "Moje buildy"
         },
         "home": {
-            "contributing-text": "If you're interested in contributing code or especially localizations please head over to our <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a>!",
-            "contributing-title": "Contributing",
+            "contributing-text": "Pokud máte zájem na přispívání ke kódu nebo zejména lokalizaci, přejděte prosím na náš <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a>!",
+            "contributing-title": "Přispět",
             "links": {
                 "discord": "Discord",
-                "github": "Github",
-                "localize": "Help with localization",
-                "matrix": "Matrix"
+                "github": "GitHub",
+                "localize": "Pomoct s překladem",
+                "matrix": "Matice"
             },
-            "links-title": "Links",
-            "localization-text": "Dauntless Builder now supports localizations, please head over to the Settings page and select your preferred language if it wasn't already picked up automatically! If that language is currently unsupported and you'd be interested in helping, please read the \"Contributing\" section below.",
-            "localization-title": "Localization",
-            "test-builds": "Test Builds",
-            "title": "Home",
-            "welcome-text": "a free and open source web application for creating and sharing builds for the popular free to play monster hunting game Dauntless.",
-            "welcome-title": "Welcome to Dauntless Builder,"
+            "links-title": "Odkazy",
+            "localization-text": "Dauntless builder nyní podporuje lokalizace, přejděte prosím na stránku Nastavení a vyberte Váš preferovaný jazyk, pokud již nebyl automaticky vybrán! Pokud je tento jazyk v současné době nepodporován a máte zájem pomoct, přečtěte si prosím oddíl \"Přispět\".",
+            "localization-title": "Lokalizace",
+            "test-builds": "Testovací build",
+            "title": "Domovská stránka",
+            "welcome-text": "bezplatná a open source webová aplikace pro vytváření a sdílení buildů pro populární monster hunter hru Dauntlesss.",
+            "welcome-title": "Vítejte v Dauntless builderu"
         },
         "metabuilds": {
             "generated": {
                 "buildTitles": {
-                    "Agarus (K) Speed": "$t(terms.behemoths.Agarus) (K) Speed",
-                    "Agarus (K) Survival": "$t(terms.behemoths.Agarus) (K) Survival",
-                    "Agarus (Khara) Resolve": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Resolve",
+                    "Agarus (K) Speed": "$t(terms.behemoths.Agarus) (K) Rychlost",
+                    "Agarus (K) Survival": "$t(terms.behemoths.Agarus) (K) Přežití",
+                    "Agarus (Khara) Resolve": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Rozřešení",
                     "Agarus (Khara) Wound": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Wound",
                     "Agarus (Kharabak)": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak))",
                     "Charrogg": "$t(terms.behemoths.Charrogg)",
@@ -189,11 +189,11 @@
                     },
                     "Discipline": {
                         "description": "Discipline is a high-risk high-reward Omnicell, featuring a high damage parry ability that grants you stacks of critical damage if timed correctly and, at max stacks, grants you a high amount of critical chance.",
-                        "name": "Discipline"
+                        "name": "Disciplína"
                     },
                     "Escalations": {
-                        "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear. ",
-                        "name": "Escalations",
+                        "description": "Builds pro zvládnutí Escalationu. Zahrnuje sestavy bez vybavení z Escalationu & Trialů. ",
+                        "name": "Escalationy",
                         "subcategoryDescription": {
                             "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive. Bulwark for survivability.",
                             "legendaries": "Builds for the various Escalations.",
