@@ -13,7 +13,8 @@ import ItemSelectDialog, {
     filterByElement,
     filterByWeaponType,
     FilterFunc,
-    filterRemoveBondWeapons, filterRemoveExotics,
+    filterRemoveBondWeapons,
+    filterRemoveExotics,
 } from "@src/components/ItemSelectDialog";
 import OmnicellCard from "@src/components/OmnicellCard";
 import PageTitle from "@src/components/PageTitle";

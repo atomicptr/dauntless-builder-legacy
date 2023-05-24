@@ -33,15 +33,11 @@ const nativeLanguageNames = {
     [Language.Portuguese]: "Português",
     [Language.Russian]: "русский",
     [Language.Turkish]: "Türkçe",
-    [Language.Czech]: "čeština"
+    [Language.Czech]: "čeština",
 };
 
 // Languages that aren't officially supported by Dauntless
-const communityLanguages = [
-    Language.Hungarian,
-    Language.Turkish,
-    Language.Czech,
-];
+const communityLanguages = [Language.Hungarian, Language.Turkish, Language.Czech];
 
 const betaThreshold = 95;
 

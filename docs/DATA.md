@@ -276,7 +276,7 @@ This will return a JSON file looking a bit like this:
     "item.armours.adversarys-pride.description": "$t(item.armours.adversarys-drive.description)",
     "item.armours.adversarys-pride.name": "アドバーサリープライド",
     "item.armours.adversarys-wrath.description": "$t(item.armours.adversarys-drive.description)",
-    "item.armours.adversarys-wrath.name": "アドバーサリーラース",
+    "item.armours.adversarys-wrath.name": "アドバーサリーラース"
     // ...
 }
 ```
@@ -284,11 +284,13 @@ This will return a JSON file looking a bit like this:
 You will instantly notice three things:
 
 1. The keys which are generated through this function:
+
 ```ts
 const createItemTranslationIdentifier = (...parts: string[]): string =>
     ["item", ...parts]
         .map(p => p.toString().toLowerCase().replace(/\s/g, "-").replace(/ü/g, "u").replace(/[']/g, "").trim())
         .join(".");
 ```
+
 2. **$t(key)** variables, which are a reference to another entry in the file
 3. **{{key}}** variables, which references variables specified in the data.json
