@@ -6,14 +6,14 @@
     "components": {
         "build-menu": {
             "added-build-to-favorites": "Added build \"{{name}}\" to favorites.",
-            "build-name": "Build Name",
-            "copied-to-clipboard": "Copied to Clipboard",
-            "copy-to-clipboard": "Copy build to clipboard",
-            "favorite-build": "Add this build to your favorites",
-            "open-last-edited-build": "Open your last edited build",
+            "build-name": "Build Adı",
+            "copied-to-clipboard": "Panoya kopyalandı",
+            "copy-to-clipboard": "Build'i panoya kopyala",
+            "favorite-build": "Bu build'i favorilerime ekle",
+            "open-last-edited-build": "Son düzenlediğiniz build'i açın",
             "remove-build-from-favorites": "Removed build \"{{name}}\" from favorites.",
             "set-build-name": "Set Build Name",
-            "unfavorite-build": "Remove this build from your favorites"
+            "unfavorite-build": "Bu build'i favorilerinizden kaldırın"
         },
         "build-warning": {
             "invalid-build": "Due to changes in Dauntless this build is no longer compatible with the current version of Dauntless Builder, one or more parts have been removed in order to display it.",
@@ -34,34 +34,34 @@
         "home": "$t(pages.home.title)",
         "meta-builds": "$t(pages.metabuilds.title)",
         "my-builds": "$t(pages.favorites.title)",
-        "new-build": "New Build",
+        "new-build": "Yeni Build",
         "settings": "$t(pages.settings.title)",
         "trials": "$t(pages.trials.title)"
     },
-    "feature-disabled-browser": "This feature is currently disabled for this web browser.",
+    "feature-disabled-browser": "Bu özellik şu anda bu web tarayıcısı için devre dışı.",
     "misc": {
         "dauntless-version": "Dauntless v{{version}}",
-        "discord-server": "Dauntless Builder Discord Server",
-        "github-repository": "Github Repository",
-        "matrix-channel": "Dauntless Builder Matrix Server",
+        "discord-server": "Dauntless Builder Discord Sunucusu",
+        "github-repository": "GitHub Reposu",
+        "matrix-channel": "Dauntless Builder Matrix Sunucusu",
         "patch-url": "https://playdauntless.com/patch-notes/{{version}}"
     },
     "pages": {
         "404": {
-            "not-found": "Page Not Found"
+            "not-found": "Sayfa Bulunamadı"
         },
         "about": {
             "assets": "Assets",
             "assets-text": "All Dauntless related assets are the intellectual property of Phoenix Labs.",
-            "build-info": "Last update: {{buildString}}",
-            "contributors": "Contributors",
+            "build-info": "Son güncelleme: {{buildString}}",
+            "contributors": "Katkıda bulunanlar",
             "dependencies": "Dependencies ({{number}})",
             "main-text": "Dauntless Builder is free and open source software licensed under the terms of the <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> license.",
-            "privacy": "Privacy",
-            "privacy-text": "We are not collecting any data.",
-            "source-code": "Source Code",
-            "title": "About",
-            "translators": "Translators"
+            "privacy": "Gizlilik",
+            "privacy-text": "Herhangi bir veri toplamıyoruz.",
+            "source-code": "Kaynak Kodu",
+            "title": "Hakkında",
+            "translators": "Çevirmenler"
         },
         "build": {
             "click-here-to-select": "Click here to select one.",
@@ -78,43 +78,43 @@
         },
         "build-finder": {
             "builds-title": "Builds ({{num}})",
-            "clear-items": "Clear Items",
+            "clear-items": "Öğeleri Sil",
             "clear-perks": "Clear All Perks",
             "dev-number-of-builds": "Number of Builds: {{num}}",
             "dev-number-of-perks": "Number of Perks selected: {{num}}",
             "dev-options-title": "Development Options",
             "dev-set-perks": "Set Perks",
             "filter-perks": "Filter Perks...",
-            "filter-title": "Filter",
-            "options-title": "Options",
+            "filter-title": "Filtre",
+            "options-title": "Şeçenekler",
             "perk-matching-enabled": "Enable smart perk selection (High performance costs, if you notice performance issues uncheck this)",
             "perks-title": "$t(terms.perks)",
-            "preselect-title": "Select Items",
+            "preselect-title": "Öğeleri seç",
             "remove-exotics": "Remove Exotic Items",
             "remove-legendary": "Remove Legendary Weapons",
             "title": "Build Finder"
         },
         "favorites": {
-            "build-name": "Build Name",
+            "build-name": "Build Adı",
             "edit-name": "Edit Favorite Name",
-            "title": "My Builds"
+            "title": "Buildlerim"
         },
         "home": {
-            "contributing-text": "If you're interested in contributing code or especially localizations please head over to our <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a>!",
-            "contributing-title": "Contributing",
+            "contributing-text": "Eğer kod katkısı veya özellikle yerelleştirmeler konusunda ilgileniyorsanız, lütfen <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a> hesabımıza uğrayın!",
+            "contributing-title": "Katkıda Bulunma",
             "links": {
                 "discord": "Discord",
                 "github": "Github",
-                "localize": "Help with localization",
+                "localize": "Yerelleştirme konusunda bize yardımcı olun",
                 "matrix": "Matrix"
             },
-            "links-title": "Links",
-            "localization-text": "Dauntless Builder now supports localizations, please head over to the Settings page and select your preferred language if it wasn't already picked up automatically! If that language is currently unsupported and you'd be interested in helping, please read the \"Contributing\" section below.",
-            "localization-title": "Localization",
+            "links-title": "Bağlantılar",
+            "localization-text": "Dauntless Builder artık yerelleştirmeleri destekliyor. Eğer tercih ettiğiniz dil otomatik olarak algılanmadıysa, Ayarlar sayfasına yönelin. Desteklenmeyen bir dil seçtiyseniz ve yardımcı olmak isterseniz, lütfen aşağıdaki \"Katkıda Bulunma\" bölümünü okuyun.",
+            "localization-title": "Yerelleştirme",
             "test-builds": "Test Builds",
-            "title": "Home",
+            "title": "Ana sayfa",
             "welcome-text": "a free and open source web application for creating and sharing builds for the popular free to play monster hunting game Dauntless.",
-            "welcome-title": "Welcome to Dauntless Builder,"
+            "welcome-title": "Dauntless Builder'a hoş geldiniz,"
         },
         "metabuilds": {
             "generated": {
@@ -237,22 +237,22 @@
             }
         },
         "newbuild": {
-            "title": "Create a new build"
+            "title": "Yeni build oluştur"
         },
         "settings": {
-            "community-language": "This language is not officially supported by Dauntless, but members of our community decided to add a translation for Dauntless Builder regardless.",
+            "community-language": "Bu dil resmi olarak Dauntless tarafından desteklenmemektedir, ancak topluluğumuzun üyeleri Dauntless Builder için bir çeviri eklediler.",
             "data": "Application Data",
             "data-export": "Export",
             "data-import": "Import",
             "data-text": "Dauntless Builder is currently storing all data inside your browser, which means switching devices or browsers will not retain any of your favorite builds and/or other data. In the future we plan to allow some sort of cloud data syncing but until then, you can use Import/Export to backup your data and/or move it between devices.",
-            "dev-mode-toggle": "Toggle Developer Mode",
-            "enable-light-mode": "Enable Light Mode (Use this at your own risk!)",
-            "export-logs": "Export logs",
+            "dev-mode-toggle": "Geliştirici modunu aç",
+            "enable-light-mode": "Aydınlık Modunu Etkinleştirin (Bunu kendi sorumluluğunuzda kullanın!)",
+            "export-logs": "Günlüğü dışa aktar",
             "finder-options": "Build Finder Options",
             "general": "General",
-            "language": "Language",
-            "misc": "Misc",
-            "title": "Settings"
+            "language": "Dil",
+            "misc": "Diğer",
+            "title": "Seçenekler"
         },
         "trials": {
             "description": "Meta builds for Trials encounters, these are not general hunt builds.",
@@ -304,7 +304,7 @@
             "Alyra": "Alyra",
             "Boreus": "Boreus",
             "Charrogg": "Charrogg",
-            "Chronovore": "The Chronovore",
+            "Chronovore": "Chronovore",
             "Deepfrost Gnasher": "Deepfrost Gnasher",
             "Deepfrost Skarn": "Deepfrost Skarn",
             "Drask": "Drask",
@@ -345,7 +345,7 @@
             "Valomyr": "Valomyr"
         },
         "bond-weapon": "Bond Weapon",
-        "cancel": "Cancel",
+        "cancel": "İptal Et",
         "cell": "Cell",
         "cell-slot": "Cell Slot",
         "cell-type": {
@@ -383,21 +383,21 @@
         "perks": "Perks",
         "power": "Power",
         "resistance": "Resistance",
-        "save": "Save",
-        "search": "Search",
+        "save": "Kaydet",
+        "search": "Ara",
         "torso-armour": "Torso Armour",
         "unique-effect": "Unique Effect",
         "unselect": "Select Nothing",
-        "weapon": "Weapon",
-        "weapon-type": "Weapon Type",
+        "weapon": "Silah",
+        "weapon-type": "Silah Türü",
         "weapon-types": {
             "AetherStrikers": "Aether Strikers",
-            "Axe": "Axe",
+            "Axe": "Balta",
             "ChainBlades": "Chain Blades",
-            "Hammer": "Hammer",
+            "Hammer": "Çekiç",
             "Repeater": "Repeater",
-            "Sword": "Sword",
-            "WarPike": "War Pike"
+            "Sword": "Kılıç",
+            "WarPike": "Savaş Mızrağı"
         }
     }
 }
