@@ -1,31 +1,31 @@
 {
     "alert": {
-        "translation-warning": "You're currently viewing this page with your language set to <b>{{languageName}}</b>, translations are currently in beta and are very spotty. If you speak this language, please consider <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">contributing to the translation efforts</a>."
+        "translation-warning": "Şu anda bu sayfayı <b>{{languageName}}</b> dilinde görüntülüyorsunuz, çeviriler şu anda beta aşamasında ve eksik olabilir. Eğer bu dili konuşuyorsanız, lütfen <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">çeviri çalışmalarına katkıda bulunmayı düşünün</a>."
     },
     "app-name": "Dauntless Builder",
     "components": {
         "build-menu": {
-            "added-build-to-favorites": "Added build \"{{name}}\" to favorites.",
+            "added-build-to-favorites": "\"{{name}}\" adlı build favorilere eklendi.",
             "build-name": "Build Adı",
             "copied-to-clipboard": "Panoya kopyalandı",
             "copy-to-clipboard": "Build'i panoya kopyala",
             "favorite-build": "Bu build'i favorilerime ekle",
             "open-last-edited-build": "Son düzenlediğiniz build'i açın",
-            "remove-build-from-favorites": "Removed build \"{{name}}\" from favorites.",
-            "set-build-name": "Set Build Name",
+            "remove-build-from-favorites": "\"{{name}}\" adlı build favorilerden kaldırıldı.",
+            "set-build-name": "Build İsmini Belirle",
             "unfavorite-build": "Bu build'i favorilerinizden kaldırın"
         },
         "build-warning": {
             "invalid-build": "Due to changes in Dauntless this build is no longer compatible with the current version of Dauntless Builder, one or more parts have been removed in order to display it.",
-            "upgraded-build": "This build was made for an earlier version of Dauntless and might be outdated."
+            "upgraded-build": "Bu build, Dauntless'ın daha önceki bir sürümü için hazırlanmış olup güncel olmayabilir."
         },
-        "event-marker": "This item was part of an event and might not be obtainable anymore.",
+        "event-marker": "Bu öğe bir etkinliğin parçasıydı ve artık elde edilebilir olmayabilir.",
         "item-picker": {
             "lantern-hold-line": "<b>$t(terms.hold)</b>: {{hold}}",
             "omnicell-passive-line": "<b>$t(terms.passive)</b>: {{passive}}"
         },
         "item-select-dialog": {
-            "select-text": "Select {{name}}"
+            "select-text": "{{name}} Seç"
         }
     },
     "drawer": {
@@ -42,7 +42,7 @@
     "misc": {
         "dauntless-version": "Dauntless v{{version}}",
         "discord-server": "Dauntless Builder Discord Sunucusu",
-        "github-repository": "GitHub Reposu",
+        "github-repository": "Github Reposu",
         "matrix-channel": "Dauntless Builder Matrix Sunucusu",
         "patch-url": "https://playdauntless.com/patch-notes/{{version}}"
     },
@@ -51,12 +51,12 @@
             "not-found": "Sayfa Bulunamadı"
         },
         "about": {
-            "assets": "Assets",
-            "assets-text": "All Dauntless related assets are the intellectual property of Phoenix Labs.",
+            "assets": "Kaynaklar",
+            "assets-text": "Dauntless ile ilgili tüm kaynaklar, Phoenix Labs'in fikri mülkiyetidir.",
             "build-info": "Son güncelleme: {{buildString}}",
             "contributors": "Katkıda bulunanlar",
             "dependencies": "Dependencies ({{number}})",
-            "main-text": "Dauntless Builder is free and open source software licensed under the terms of the <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> license.",
+            "main-text": "Dauntless Builder, <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> lisansı koşulları altında lisanslanmış ücretsiz ve açık kaynak yazılımdır.",
             "privacy": "Gizlilik",
             "privacy-text": "Herhangi bir veri toplamıyoruz.",
             "source-code": "Kaynak Kodu",
@@ -64,11 +64,11 @@
             "translators": "Çevirmenler"
         },
         "build": {
-            "click-here-to-select": "Click here to select one.",
+            "click-here-to-select": "Seçmek için buraya tıklayın.",
             "copy-build-to-finder": "Copy build to Finder",
             "filter-by": "Filter by {{name}}",
-            "no-perks": "No perks available.",
-            "no-x-selected": "No <b>{{name}}</b> selected.",
+            "no-perks": "Uygun perk bulunmuyor.",
+            "no-x-selected": "<b>{{name}}</b> seçilmedi.",
             "part-select-dialog-title": "Select weapon part",
             "power-surged-add": "Power Surge",
             "power-surged-remove": "Base Power",
@@ -77,22 +77,22 @@
             "toggle-unique-effects": "Toggle display of unique effects"
         },
         "build-finder": {
-            "builds-title": "Builds ({{num}})",
-            "clear-items": "Öğeleri Sil",
-            "clear-perks": "Clear All Perks",
-            "dev-number-of-builds": "Number of Builds: {{num}}",
-            "dev-number-of-perks": "Number of Perks selected: {{num}}",
-            "dev-options-title": "Development Options",
-            "dev-set-perks": "Set Perks",
-            "filter-perks": "Filter Perks...",
+            "builds-title": "Buildler ({{num}})",
+            "clear-items": "Dizilimi Temizle",
+            "clear-perks": "Tüm Perkleri Temizle",
+            "dev-number-of-builds": "Build Sayısı: {{num}}",
+            "dev-number-of-perks": "Seçilen Perk Sayısı: {{num}}",
+            "dev-options-title": "Geliştirici Seçenekleri",
+            "dev-set-perks": "Perkleri Ayarla",
+            "filter-perks": "Perkleri filtrele...",
             "filter-title": "Filtre",
             "options-title": "Şeçenekler",
-            "perk-matching-enabled": "Enable smart perk selection (High performance costs, if you notice performance issues uncheck this)",
+            "perk-matching-enabled": "Akıllı perk seçimini etkinleştirin (Yüksek performans maliyeti, performans sorunları fark ederseniz bunu işaretlemeyin)",
             "perks-title": "$t(terms.perks)",
-            "preselect-title": "Öğeleri seç",
-            "remove-exotics": "Remove Exotic Items",
-            "remove-legendary": "Remove Legendary Weapons",
-            "title": "Build Finder"
+            "preselect-title": "Dizilimi Seç",
+            "remove-exotics": "Egzotik Eşyaları Çıkart",
+            "remove-legendary": "Efsanevi Silahları Çıkart",
+            "title": "Build Bulucu"
         },
         "favorites": {
             "build-name": "Build Adı",
@@ -100,7 +100,7 @@
             "title": "Buildlerim"
         },
         "home": {
-            "contributing-text": "Eğer kod katkısı veya özellikle yerelleştirmeler konusunda ilgileniyorsanız, lütfen <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a> hesabımıza uğrayın!",
+            "contributing-text": "Eğer kod katkısında bulunmak veya yerelleştirmeler konusunda ilgiliyseniz, lütfen <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a> hesabımıza uğrayın!",
             "contributing-title": "Katkıda Bulunma",
             "links": {
                 "discord": "Discord",
@@ -109,11 +109,11 @@
                 "matrix": "Matrix"
             },
             "links-title": "Bağlantılar",
-            "localization-text": "Dauntless Builder artık yerelleştirmeleri destekliyor. Eğer tercih ettiğiniz dil otomatik olarak algılanmadıysa, Ayarlar sayfasına yönelin. Desteklenmeyen bir dil seçtiyseniz ve yardımcı olmak isterseniz, lütfen aşağıdaki \"Katkıda Bulunma\" bölümünü okuyun.",
+            "localization-text": "Dauntless Builder artık yerelleştirmeleri destekliyor. Eğer tercih ettiğiniz dil otomatik olarak algılanmadıysa, Ayarlar sayfasına gidin. Desteklenmeyen bir dil seçtiyseniz ve yardımcı olmak isterseniz, lütfen aşağıdaki \"Katkıda Bulunma\" bölümünü okuyun.",
             "localization-title": "Yerelleştirme",
-            "test-builds": "Test Builds",
+            "test-builds": "Test Build'leri",
             "title": "Ana sayfa",
-            "welcome-text": "a free and open source web application for creating and sharing builds for the popular free to play monster hunting game Dauntless.",
+            "welcome-text": "popüler ücretsiz oynanabilen canavar avlama oyunu Dauntless için build oluşturmayı ve paylaşmayı sağlayan ücretsiz ve açık kaynaklı bir web uygulaması.",
             "welcome-title": "Dauntless Builder'a hoş geldiniz,"
         },
         "metabuilds": {
@@ -176,7 +176,7 @@
                 },
                 "categories": {
                     "Artificer": {
-                        "description": "Artificer features a drone you can control that has multiple functions depending on what you are targeting: if targeting the ground, it creates a healing and shielding aura that blocks Behemoth's projectiles; if targeting a player it creates a healing and shield aura that follows them; if targeting a downed slayer it revives them and creates a healing and shielding aura that follows them; and, if targeting a Behemoth, it marks a part to take extra damage.",
+                        "description": "Artificer, hedeflediğiniz şeye bağlı olarak birden fazla işlevi olan bir dronu kontrol etmenizi sağlar: Eğer yere hedef alıyorsanız, Behemoth'un saldırılarını engelleyen bir iyileştirme ve kalkan alanı oluşturur; eğer bir oyuncuyu hedefliyorsanız, onu takip eden bir iyileştirme ve kalkan alanı oluşturur; eğer yere düşmüş bir slayer'ı hedefliyorsanız, onu hayata döndürür ve onu takip eden bir iyileştirme ve kalkan alanı oluşturur; ve eğer bir Behemoth'u hedefliyorsanız, ekstra hasar alması için bir parçasını işaretler.",
                         "name": "Artificer"
                     },
                     "Bastion": {
@@ -209,7 +209,7 @@
                         "name": "Iceborne"
                     },
                     "Revenant": {
-                        "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 125 healing over 10 seconds — after Revenant expires.",
+                        "description": "Revenant, yüksek riskli yüksek ödüllü bir Omnicell'dir. Bu Omnicell, 500 HP tüketen aktif bir yetenek kullanarak en fazla beş gölge sarmaşığı çağırır. Bu gölge sarmaşıkları yüksek hasar verir ve seni Revenant durumuna sokar. Sarmaşıklar hedefi vurduğunda, karanlık küreler oluştururlar. Onları toplamak, Revenant durumundayken %4 ek hasar, Revenant durumunun 1 saniye uzaması ve Revenant sona erdikten sonra 10 saniye boyunca 125 iyileşme sağlar.",
                         "name": "Revenant"
                     },
                     "Tempest": {
@@ -219,14 +219,14 @@
                 },
                 "title": "Dauntless Meta Builds - 1.10+"
             },
-            "note": "The builds listed here are automatically extracted from the <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>Community Meta Builds Spreadsheet</a>, if you have feedback please pass it along to the people in the #meta-discussion channel on the <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>official Dauntless Discord server</a>!",
+            "note": "Burada listelenen buildler, otomatik olarak <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>Topluluk Meta Buildleri Veri Tablosu</a>'ndan çekilmiştir, geri bildiriminiz varsa lütfen <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>resmi Dauntless Discord sunucusu</a>'ndaki #meta-discussion kanalındaki insanlara iletmekten çekinmeyin!",
             "subcategories": {
                 "The Hunger": "The Hunger",
                 "heroics": "Heroics",
                 "legendaries": "Legendaries",
                 "preEsca": "Pre-Escalation"
             },
-            "title": "Meta Builds",
+            "title": "Meta Buildleri",
             "vsElement": {
                 "Blaze": "vs. Blaze",
                 "Frost": "vs. Frost",
@@ -241,15 +241,15 @@
         },
         "settings": {
             "community-language": "Bu dil resmi olarak Dauntless tarafından desteklenmemektedir, ancak topluluğumuzun üyeleri Dauntless Builder için bir çeviri eklediler.",
-            "data": "Application Data",
-            "data-export": "Export",
-            "data-import": "Import",
-            "data-text": "Dauntless Builder is currently storing all data inside your browser, which means switching devices or browsers will not retain any of your favorite builds and/or other data. In the future we plan to allow some sort of cloud data syncing but until then, you can use Import/Export to backup your data and/or move it between devices.",
+            "data": "Uygulama Verileri",
+            "data-export": "Dışa Aktar",
+            "data-import": "İçe Aktar",
+            "data-text": "Dauntless Builder şu anda tüm verilerinizi tarayıcınızın içinde saklamaktadır, bu da cihaz veya tarayıcı değişikliği durumunda favori yapılarınız veya diğer verilerinizin kaybolabileceği anlamına gelir. Gelecekte bulut veri senkronizasyonuna izin verecek bir yöntem planlıyoruz, ancak o zamana kadar veri İçe Aktar/Dışa Aktar özelliğini kullanarak verilerinizi yedekleyebilir ve cihazlar arasında taşıyabilirsiniz.",
             "dev-mode-toggle": "Geliştirici modunu aç",
             "enable-light-mode": "Aydınlık Modunu Etkinleştirin (Bunu kendi sorumluluğunuzda kullanın!)",
             "export-logs": "Günlüğü dışa aktar",
-            "finder-options": "Build Finder Options",
-            "general": "General",
+            "finder-options": "Build Bulucu Seçenekleri",
+            "general": "Genel",
             "language": "Dil",
             "misc": "Diğer",
             "title": "Seçenekler"
@@ -298,7 +298,7 @@
             "Legs": "Leg and foot",
             "Torso": "Torso"
         },
-        "arms-armour": "Arms Armour",
+        "arms-armour": "Kol Zırhı",
         "behemoths": {
             "Agarus": "Agarus",
             "Alyra": "Alyra",
@@ -357,7 +357,7 @@
             "Prismatic": "Prismatic"
         },
         "cells": "Cells",
-        "close": "Close",
+        "close": "Kapat",
         "elemental-type": "Element",
         "elemental-types": {
             "Blaze": "Blaze",
@@ -367,10 +367,10 @@
             "Terra": "Terra",
             "Umbral": "Umbral"
         },
-        "head-armour": "Head Armour",
+        "head-armour": "Kafa Zırhı",
         "hold": "Hold",
-        "lantern": "Lantern",
-        "legs-armour": "Legs Armour",
+        "lantern": "Lamba",
+        "legs-armour": "Bacak Zırhı",
         "omnicell": "Omnicell",
         "part": "Part",
         "parts": {
@@ -380,20 +380,20 @@
             "special": "Special"
         },
         "passive": "Passive",
-        "perks": "Perks",
+        "perks": "Perkler",
         "power": "Power",
         "resistance": "Resistance",
         "save": "Kaydet",
         "search": "Ara",
-        "torso-armour": "Torso Armour",
+        "torso-armour": "Gövde Zırhı",
         "unique-effect": "Unique Effect",
-        "unselect": "Select Nothing",
+        "unselect": "Seçimi Temizle",
         "weapon": "Silah",
         "weapon-type": "Silah Türü",
         "weapon-types": {
             "AetherStrikers": "Aether Strikers",
             "Axe": "Balta",
-            "ChainBlades": "Chain Blades",
+            "ChainBlades": "Zincir Bıçakları",
             "Hammer": "Çekiç",
             "Repeater": "Repeater",
             "Sword": "Kılıç",
