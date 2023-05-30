@@ -61,7 +61,7 @@
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15850385/medium/675bc3b9ee60fefba3d417341c70539d.jpg",
-        "contributions": 162,
+        "contributions": 206,
         "proofreader": false,
         "username": "CilginImam"
     },
@@ -190,6 +190,12 @@
         "contributions": 5,
         "proofreader": false,
         "username": "DerJohnYT"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15852577/medium/15ed822951779d184773464b4c64efb5.jpeg",
+        "contributions": 5,
+        "proofreader": false,
+        "username": "naxoss"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15585593/medium/4d600ec1d3c8003c3def52260e212688.jpeg",

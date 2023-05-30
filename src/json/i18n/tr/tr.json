@@ -6,7 +6,7 @@
     "components": {
         "build-menu": {
             "added-build-to-favorites": "\"{{name}}\" adlı build favorilere eklendi.",
-            "build-name": "Build Adı",
+            "build-name": "Build İsmi",
             "copied-to-clipboard": "Panoya kopyalandı",
             "copy-to-clipboard": "Build'i panoya kopyala",
             "favorite-build": "Bu build'i favorilerime ekle",
@@ -56,7 +56,7 @@
             "build-info": "Son güncelleme: {{buildString}}",
             "contributors": "Katkıda bulunanlar",
             "dependencies": "Dependencies ({{number}})",
-            "main-text": "Dauntless Builder, <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> lisansı koşulları altında lisanslanmış ücretsiz ve açık kaynak yazılımdır.",
+            "main-text": "Dauntless Builder, <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> lisansı koşulları altında lisanslanmış ücretsiz ve açık kaynaklı bir yazılımdır.",
             "privacy": "Gizlilik",
             "privacy-text": "Herhangi bir veri toplamıyoruz.",
             "source-code": "Kaynak Kodu",
@@ -67,7 +67,7 @@
             "click-here-to-select": "Seçmek için buraya tıklayın.",
             "copy-build-to-finder": "Copy build to Finder",
             "filter-by": "Filter by {{name}}",
-            "no-perks": "Uygun perk bulunmuyor.",
+            "no-perks": "Hiçbir perk bulunmuyor.",
             "no-x-selected": "<b>{{name}}</b> seçilmedi.",
             "part-select-dialog-title": "Select weapon part",
             "power-surged-add": "Power Surge",
@@ -95,12 +95,12 @@
             "title": "Build Bulucu"
         },
         "favorites": {
-            "build-name": "Build Adı",
+            "build-name": "Build İsmi",
             "edit-name": "Edit Favorite Name",
             "title": "Buildlerim"
         },
         "home": {
-            "contributing-text": "Eğer kod katkısında bulunmak veya yerelleştirmeler konusunda ilgiliyseniz, lütfen <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a> hesabımıza uğrayın!",
+            "contributing-text": "Eğer kod katkısında bulunmak istiyorsanız veya yerelleştirmeler konusunda ilgiliyseniz, lütfen <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a> hesabımıza uğrayın!",
             "contributing-title": "Katkıda Bulunma",
             "links": {
                 "discord": "Discord",
@@ -111,66 +111,66 @@
             "links-title": "Bağlantılar",
             "localization-text": "Dauntless Builder artık yerelleştirmeleri destekliyor. Eğer tercih ettiğiniz dil otomatik olarak algılanmadıysa, Ayarlar sayfasına gidin. Desteklenmeyen bir dil seçtiyseniz ve yardımcı olmak isterseniz, lütfen aşağıdaki \"Katkıda Bulunma\" bölümünü okuyun.",
             "localization-title": "Yerelleştirme",
-            "test-builds": "Test Build'leri",
+            "test-builds": "Test Buildleri",
             "title": "Ana sayfa",
-            "welcome-text": "popüler ücretsiz oynanabilen canavar avlama oyunu Dauntless için build oluşturmayı ve paylaşmayı sağlayan ücretsiz ve açık kaynaklı bir web uygulaması.",
+            "welcome-text": "Popüler ve ücretsiz oynanabilen canavar avlama oyunu Dauntless için build oluşturmayı ve paylaşmayı sağlayan ücretsiz ve açık kaynaklı bir web uygulaması.",
             "welcome-title": "Dauntless Builder'a hoş geldiniz,"
         },
         "metabuilds": {
             "generated": {
                 "buildTitles": {
-                    "Agarus (K) Speed": "$t(terms.behemoths.Agarus) (K) Speed",
-                    "Agarus (K) Survival": "$t(terms.behemoths.Agarus) (K) Survival",
+                    "Agarus (K) Speed": "$t(terms.behemoths.Agarus) (K) Hız",
+                    "Agarus (K) Survival": "$t(terms.behemoths.Agarus) (K) Hayatta Kalma",
                     "Agarus (Khara) Resolve": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Resolve",
-                    "Agarus (Khara) Wound": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Wound",
+                    "Agarus (Khara) Wound": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Yaralama",
                     "Agarus (Kharabak)": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak))",
                     "Charrogg": "$t(terms.behemoths.Charrogg)",
-                    "Chrono (R) Speed": "$t(terms.behemoths.Chronovore) (R) Speed",
+                    "Chrono (R) Speed": "$t(terms.behemoths.Chronovore) (R) Hız",
                     "Chrono (Reza)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Rezakiri))",
-                    "Chrono (Reza) Wound": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Rezakiri)) Wound",
-                    "Chrono (V) Speed": "$t(terms.behemoths.Chronovore) (V) Speed",
-                    "Chrono (V) Survival": "$t(terms.behemoths.Chronovore) (V) Survival",
+                    "Chrono (Reza) Wound": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Rezakiri)) Yaralama",
+                    "Chrono (V) Speed": "$t(terms.behemoths.Chronovore) (V) Hız",
+                    "Chrono (V) Survival": "$t(terms.behemoths.Chronovore) (V) Hayatta Kalma",
                     "Chrono (Valo)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr))",
                     "Chrono (Valo) Resolve": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Resolve",
-                    "Chrono (Valo) Wound": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Wound",
+                    "Chrono (Valo) Wound": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Yaralama",
                     "Disc Pred": "Disc Pred",
                     "Disc Sav": "Disc Sav",
                     "Hellion": "$t(terms.behemoths.Hellion)",
                     "Kharabak": "$t(terms.behemoths.Kharabak)",
-                    "Malk (S) Speed": "$t(terms.behemoths.Malkarion) (S) Speed",
-                    "Malk (S) Survival": "$t(terms.behemoths.Malkarion) (S) Survival",
+                    "Malk (S) Speed": "$t(terms.behemoths.Malkarion) (S) Hız",
+                    "Malk (S) Survival": "$t(terms.behemoths.Malkarion) (S) Hayatta Kalma",
                     "Malk (Sahvyt)": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt))",
                     "Malk (Sahvyt) Resolve": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt)) Resolve",
-                    "Malk (Sahvyt) Wound": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt)) Wound",
+                    "Malk (Sahvyt) Wound": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt)) Yaralama",
                     "Pangar": "$t(terms.behemoths.Pangar)",
                     "Prismedic": "Prismedic",
                     "Rage Pred": "Rage Pred",
                     "Rezakiri": "$t(terms.behemoths.Rezakiri)",
                     "Riftstalker": "$t(terms.behemoths.Riftstalker)",
                     "Sahvyt": "$t(terms.behemoths.Sahvyt)",
-                    "Thrax (R) Speed": "$t(terms.behemoths.Thrax) (R) Speed",
-                    "Thrax (R)Speed": "$t(terms.behemoths.Thrax) (R)Speed",
+                    "Thrax (R) Speed": "$t(terms.behemoths.Thrax) (R) Hız",
+                    "Thrax (R)Speed": "$t(terms.behemoths.Thrax) (R) Hız",
                     "Thrax (Rift)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker))",
                     "Thrax (Rift) Resolve": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Resolve",
-                    "Thrax (Rift) Wound": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Wound",
-                    "Torg (C) Speed": "$t(terms.behemoths.Torgadoro) (C) Speed",
-                    "Torg (C) Survival": "$t(terms.behemoths.Torgadoro) (C) Survival",
+                    "Thrax (Rift) Wound": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Yaralama",
+                    "Torg (C) Speed": "$t(terms.behemoths.Torgadoro) (C) Hız",
+                    "Torg (C) Survival": "$t(terms.behemoths.Torgadoro) (C) Hayatta Kalma",
                     "Torg (Charrogg)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Charrogg))",
                     "Torg (Charrogg) Resolve": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Charrogg)) Resolve",
-                    "Torg (H) Speed": "$t(terms.behemoths.Torgadoro) (H) Speed",
-                    "Torg (H) Survival": "$t(terms.behemoths.Torgadoro) (H) Survival",
+                    "Torg (H) Speed": "$t(terms.behemoths.Torgadoro) (H) Hız",
+                    "Torg (H) Survival": "$t(terms.behemoths.Torgadoro) (H) Hayatta Kalma",
                     "Torg (Hellion)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion))",
-                    "Torg (Hellion) Wound": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion)) Wound",
+                    "Torg (Hellion) Wound": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion)) Yaralama",
                     "Urska (Boreus)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Boreus))",
-                    "Urska (F)    Speed": "$t(terms.behemoths.Urska) (F) Speed",
-                    "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Speed",
-                    "Urska (F) Speed": "$t(terms.behemoths.Urska) (F) Speed",
-                    "Urska (F) Survival": "$t(terms.behemoths.Urska) (F) Survival",
+                    "Urska (F)    Speed": "$t(terms.behemoths.Urska) (F) Hız",
+                    "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Hız",
+                    "Urska (F) Speed": "$t(terms.behemoths.Urska) (F) Hız",
+                    "Urska (F) Survival": "$t(terms.behemoths.Urska) (F) Hayatta Kalma",
                     "Urska (Frostwulf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Frostwülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Pangar)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar))",
                     "Urska (Pangar) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Resolve",
-                    "Urska (Pangar) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Wound",
+                    "Urska (Pangar) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Yaralama",
                     "Urska (Wülf) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Resolve",
                     "Valomyr": "$t(terms.behemoths.Valomyr)"
                 },
@@ -180,7 +180,7 @@
                         "name": "Artificer"
                     },
                     "Bastion": {
-                        "description": "Bastion features higher shield gain from perks and the passive ability to generate shields when damage is dealt. Its active ability consumes all the shield you currently have and deals damage based on how much shield was consumed. Neglecting the active ability significantly lowers your potential damage.",
+                        "description": "Bastion, perkler sayesinde daha yüksek kalkan kazanımı sunar ve hasar verildiğinde kalkan üretme yeteneğine sahiptir. Aktif yeteneği, mevcut kalkanınızın tamamını tüketir ve tüketilen kalkan miktarına bağlı olarak hasar verir. Aktif yeteneği ihmal etmek potansiyel hasarınızı önemli ölçüde düşürür.",
                         "name": "Bastion"
                     },
                     "Catalyst": {
@@ -193,7 +193,7 @@
                     },
                     "Escalations": {
                         "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear. ",
-                        "name": "Escalations",
+                        "name": "Escalation",
                         "subcategoryDescription": {
                             "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive. Bulwark for survivability.",
                             "legendaries": "Builds for the various Escalations.",
@@ -213,11 +213,11 @@
                         "name": "Revenant"
                     },
                     "Tempest": {
-                        "description": "Tempest features 10% passive attack speed bonus and the ability to build up stacks of Velocity when dodging through attacks. You spend the stacks to dash and deal damage based on how much movespeed you currently have. The movespeed bonus damage only applies to unbroken parts.",
+                        "description": "Tempest, pasif saldırı hızına %10 bonus sağlar ve saldırılardan kaçarken Hız stackleri biriktirme yeteneğine sahiptir. Stackleri kullanarak hızlı bir şekilde atılır ve şu anki hareket hızınıza bağlı olarak hasar verirsiniz. Bonus hasar sadece sağlam parçalara uygulanır.",
                         "name": "Tempest"
                     }
                 },
-                "title": "Dauntless Meta Builds - 1.10+"
+                "title": "Dauntless Meta Buildleri - 1.10+"
             },
             "note": "Burada listelenen buildler, otomatik olarak <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>Topluluk Meta Buildleri Veri Tablosu</a>'ndan çekilmiştir, geri bildiriminiz varsa lütfen <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>resmi Dauntless Discord sunucusu</a>'ndaki #meta-discussion kanalındaki insanlara iletmekten çekinmeyin!",
             "subcategories": {
@@ -255,15 +255,15 @@
             "title": "Seçenekler"
         },
         "trials": {
-            "description": "Meta builds for Trials encounters, these are not general hunt builds.",
+            "description": "Trial karşılaşmaları için meta buildleri, bunlar genel av buildleri değildir.",
             "generated": {
                 "tips": {
                     "Boreus [*].0": "You can use the Bombers and the Weak Spot to delay Boreus' Aethercharge. (the shield phase)",
-                    "Charrogg.0": "Charrogg's left arm slam doesn't hit you if you are close to its neck.",
-                    "Charrogg.1": "Charrogg's weakest parts are the firesacs (1 on each side of the head, 1 on each side of the belly).",
+                    "Charrogg.0": "Charrogg'un sol kol darbesi, boynuna yakın olduğunuzda sizi vuramaz.",
+                    "Charrogg.1": "Charrogg'ın en zayıf bölgesi ateş keseleridir (kafa yanlarında birer adet, karın yanlarında birer adet).",
                     "Embermane.0": "Use Embermane to protect yourself from the shock pylon's orbs.",
                     "Gnasher.0": "You can bait Gnasher's interrupt by getting close to him at the start of the fight. The cooldown resets on enrage.",
-                    "Kharabak.0": "*Don't get hit by the bees.",
+                    "Kharabak.0": "Arıların sana vurmasına izin verme.",
                     "Kharabak.1": "*For wound focused weapons use insight tonic instead of aetherdrive",
                     "Koshai.0": "You can bait the frontal interrupt into the turn-around interrupt in a loop.",
                     "Koshai.1": "Like all Behemoths, Koshai's enrage resets the timer on the interrupt, position yourself to bait it right after the animation ends.",
@@ -273,20 +273,20 @@
                     "Quillshot.0": "You can build Skarn lantern/Frostwülf shield on the platform.",
                     "Rezakiri.0": " Be sure to use revenant between 500 and 600 HP to keep shroud unique effect active.",
                     "Shadowtouched Koshai.0": "You can bait the interrupt at the start pretty easily, and the turn-around interrupt afterwards, just like normal Koshai.",
-                    "Shadowtouched Koshai.1": "The second time Shadowtouched Koshai goes into the ground, he spawns as far away as possible somewhere in the arena and shoots umbral orbs at you, during this time he is extremely vulnerable to damage.",
+                    "Shadowtouched Koshai.1": "Shadowtouched Koshai ikinci kez yerin altına girdiğinde, arenanın mümkün olduğunca uzak bir noktasında belirir ve sana karanlık küreler fırlatır. Bu süre zarfında, hasara karşı son derece savunmasızdır.",
                     "Shadowtouched Nayzaga.0": "Just like normal Nayzaga, U. Nayzaga starts the fight with his dual slide interrupt.",
                     "Shadowtouched Nayzaga.1": "Nayzaga's clone-summoning stomp doesn't deal damage, only the clone does.",
                     "Shadowtouched Nayzaga.2": "After it goes into its portal, get ready for the following interrupt.",
-                    "Shrike.0": "Shrike's weakest parts are its head and wings.",
+                    "Shrike.0": "Shrike'nin en zayıf bölgeleri başı ve kanatlarıdır.",
                     "Shrike.1": "Shrike can be instantly booped after enrage.",
                     "Shrowd.0": "You can use Discipline's Parry on enrage, if you jump at Shrowd the moment he teleports.",
                     "Skarn.0": "If not using blunt weapons (strikers, hammer) focus the tail during enrage, the rock hitbox has a big gap there.",
                     "Skarn.1": "Unlike other weapons Repeaters prefer Drask bond because you want to be shooting the head for the whole run.",
                     "Thunderdeep Drask.0": "He do be a fast boi."
                 },
-                "title": "Dauntless Trials Builds - 1.10+"
+                "title": "Dauntless Trial Buildleri - 1.10+"
             },
-            "title": "Trials"
+            "title": "Trial"
         }
     },
     "terms": {
