@@ -13,7 +13,7 @@
             "open-last-edited-build": "Son düzenlediğiniz build'i açın",
             "remove-build-from-favorites": "\"{{name}}\" adlı build favorilerden kaldırıldı.",
             "set-build-name": "Build İsmini Belirle",
-            "unfavorite-build": "Bu build'i favorilerinizden kaldırın"
+            "unfavorite-build": "Bu build'i favorilerimden kaldır"
         },
         "build-warning": {
             "invalid-build": "Due to changes in Dauntless this build is no longer compatible with the current version of Dauntless Builder, one or more parts have been removed in order to display it.",
@@ -65,16 +65,16 @@
         },
         "build": {
             "click-here-to-select": "Seçmek için buraya tıklayın.",
-            "copy-build-to-finder": "Copy build to Finder",
-            "filter-by": "Filter by {{name}}",
+            "copy-build-to-finder": "Build bulucuda ara",
+            "filter-by": "{{name}}'e göre filtrele",
             "no-perks": "Hiçbir perk bulunmuyor.",
             "no-x-selected": "<b>{{name}}</b> seçilmedi.",
             "part-select-dialog-title": "Select weapon part",
             "power-surged-add": "Power Surge",
-            "power-surged-remove": "Base Power",
+            "power-surged-remove": "Temel Güç",
             "title": "{{weaponName}} {{omnicell}} Build",
-            "toggle-filters": "Toggle display of filters",
-            "toggle-unique-effects": "Toggle display of unique effects"
+            "toggle-filters": "Filtrelerin görünürlüğünü değiştir",
+            "toggle-unique-effects": "Benzersiz efektlerin görünürlüğünü değiştir"
         },
         "build-finder": {
             "builds-title": "Buildler ({{num}})",
@@ -101,7 +101,7 @@
         },
         "home": {
             "contributing-text": "Eğer kod katkısında bulunmak istiyorsanız veya yerelleştirmeler konusunda ilgiliyseniz, lütfen <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a> hesabımıza uğrayın!",
-            "contributing-title": "Katkıda Bulunma",
+            "contributing-title": "Katkıda Bulunmak",
             "links": {
                 "discord": "Discord",
                 "github": "Github",
@@ -180,7 +180,7 @@
                         "name": "Artificer"
                     },
                     "Bastion": {
-                        "description": "Bastion, perkler sayesinde daha yüksek kalkan kazanımı sunar ve hasar verildiğinde kalkan üretme yeteneğine sahiptir. Aktif yeteneği, mevcut kalkanınızın tamamını tüketir ve tüketilen kalkan miktarına bağlı olarak hasar verir. Aktif yeteneği ihmal etmek potansiyel hasarınızı önemli ölçüde düşürür.",
+                        "description": "Bastion, avantaj olarak perklerden daha fazla kalkan kazanma özelliğine sahiptir ve hasar verildiğinde kalkan üretebilen pasif bir yeteneğe sahiptir. Aktif yeteneği mevcut tüm kalkanını tüketir ve tüketilen kalkana bağlı olarak hasar verir. Aktif yeteneği göz ardı etmek potansiyel hasarınızı önemli ölçüde düşürür.",
                         "name": "Bastion"
                     },
                     "Catalyst": {
@@ -213,7 +213,7 @@
                         "name": "Revenant"
                     },
                     "Tempest": {
-                        "description": "Tempest, pasif saldırı hızına %10 bonus sağlar ve saldırılardan kaçarken Hız stackleri biriktirme yeteneğine sahiptir. Stackleri kullanarak hızlı bir şekilde atılır ve şu anki hareket hızınıza bağlı olarak hasar verirsiniz. Bonus hasar sadece sağlam parçalara uygulanır.",
+                        "description": "Tempest, pasif olarak saldırı hızına %10 bonus sağlar ve saldırılardan kaçarken Hız stackleri biriktirebilir. Biriktirdiğiniz stackleri kullanarak hızlıca atılırsınız ve mevcut hareket hızınıza bağlı olarak hasar verirsiniz. Bonus hasar sadece sağlam parçalara uygulanır.",
                         "name": "Tempest"
                     }
                 },
@@ -255,13 +255,13 @@
             "title": "Seçenekler"
         },
         "trials": {
-            "description": "Trial karşılaşmaları için meta buildleri, bunlar genel av buildleri değildir.",
+            "description": "Trial karşılaşmaları için meta buildleri, bu buildler genel av için uygun değildir.",
             "generated": {
                 "tips": {
                     "Boreus [*].0": "You can use the Bombers and the Weak Spot to delay Boreus' Aethercharge. (the shield phase)",
-                    "Charrogg.0": "Charrogg'un sol kol darbesi, boynuna yakın olduğunuzda sizi vuramaz.",
+                    "Charrogg.0": "Charrogg'ın sol kol darbesi, boynuna yakın olduğunuzda sizi vuramaz.",
                     "Charrogg.1": "Charrogg'ın en zayıf bölgesi ateş keseleridir (kafa yanlarında birer adet, karın yanlarında birer adet).",
-                    "Embermane.0": "Use Embermane to protect yourself from the shock pylon's orbs.",
+                    "Embermane.0": "Embermane'ı kullanarak shock pylonunun kürelerine karşı kendinizi koruyun.",
                     "Gnasher.0": "You can bait Gnasher's interrupt by getting close to him at the start of the fight. The cooldown resets on enrage.",
                     "Kharabak.0": "Arıların sana vurmasına izin verme.",
                     "Kharabak.1": "*For wound focused weapons use insight tonic instead of aetherdrive",
@@ -277,7 +277,7 @@
                     "Shadowtouched Nayzaga.0": "Just like normal Nayzaga, U. Nayzaga starts the fight with his dual slide interrupt.",
                     "Shadowtouched Nayzaga.1": "Nayzaga's clone-summoning stomp doesn't deal damage, only the clone does.",
                     "Shadowtouched Nayzaga.2": "After it goes into its portal, get ready for the following interrupt.",
-                    "Shrike.0": "Shrike'nin en zayıf bölgeleri başı ve kanatlarıdır.",
+                    "Shrike.0": "Shrike'ın en zayıf bölgeleri başı ve kanatlarıdır.",
                     "Shrike.1": "Shrike can be instantly booped after enrage.",
                     "Shrowd.0": "You can use Discipline's Parry on enrage, if you jump at Shrowd the moment he teleports.",
                     "Skarn.0": "If not using blunt weapons (strikers, hammer) focus the tail during enrage, the rock hitbox has a big gap there.",
@@ -356,7 +356,7 @@
             "Insight": "Insight",
             "Prismatic": "Prismatic"
         },
-        "cells": "Cells",
+        "cells": "Cell",
         "close": "Kapat",
         "elemental-type": "Element",
         "elemental-types": {
@@ -380,8 +380,8 @@
             "special": "Special"
         },
         "passive": "Passive",
-        "perks": "Perkler",
-        "power": "Power",
+        "perks": "Perk",
+        "power": "Güç",
         "resistance": "Resistance",
         "save": "Kaydet",
         "search": "Ara",
