@@ -43,7 +43,7 @@
         "dauntless-version": "Dauntless v{{version}}",
         "discord-server": "Serveur Discord de Dauntless Builder",
         "github-repository": "Dépôt Github",
-        "matrix-channel": "Serveur Matrix de Dauntless Builder",
+        "matrix-channel": "Matrice de serveurs de Dauntless Builder",
         "patch-url": "https://playdauntless.com/fr/patch-notes/{{version}}"
     },
     "pages": {
@@ -77,7 +77,7 @@
             "toggle-unique-effects": "Activer/Désactiver l'affichage des effets uniques"
         },
         "build-finder": {
-            "builds-title": "Nombre de Builds trouver ({{num}})",
+            "builds-title": "Nombre de Builds trouvés ({{num}})",
             "clear-items": "Retirer l'équipements",
             "clear-perks": "Retirer tous les effets",
             "dev-number-of-builds": "Nombre de builds: {{num}}",
@@ -196,7 +196,7 @@
                         "name": "Ascensions",
                         "subcategoryDescription": {
                             "heroics": "Builds pour les Ascension Héroïques. Utilise Catalyse. Toniques recommandés : Furie, Frappe éclair, Surcharge d'aether. Ou Fortification pour plus de survie.",
-                            "legendaries": "Buils pour les Ascension.",
+                            "legendaries": "Builds pour les Ascensions.",
                             "preEsca": "Build pour les ascensions. Ils ne contiennent pas de cellule issues des épreuve ni d'équipement d'ascension."
                         }
                     },
@@ -248,7 +248,7 @@
             "dev-mode-toggle": "Mode développeur",
             "enable-light-mode": "Passer en mode claire (à vos risques et périls)",
             "export-logs": "Exporter les logs",
-            "finder-options": "Build Finder Options",
+            "finder-options": "Options du chercher de build",
             "general": "Général",
             "language": "Langue",
             "misc": "Autres",
@@ -266,7 +266,7 @@
                     "Kharabak.0": "Ne vous faites pas toucher par les abeilles.",
                     "Kharabak.1": "*For wound focused weapons use insight tonic instead of aetherdrive",
                     "Koshai.0": "You can bait the frontal interrupt into the turn-around interrupt in a loop.",
-                    "Koshai.1": "Like all Behemoths, Koshai's enrage resets the timer on the interrupt, position yourself to bait it right after the animation ends.",
+                    "Koshai.1": "Comme tous les Behemoths, la rage du Koshai réinitialise le chronomètre de l'interruption, placez-vous pour l'appâter dès la fin de l'animation.",
                     "Koshai.2": "Les bois du Koshai poussent environ au bout de 1 minute, soyez prêt pour la fenêtre de dégâts qui suit.",
                     "Pangar.0": "Pangar's interruptable roll is very easy to bait (does it twice in a row only), and the cooldown gets reset on enrage.",
                     "Pangar.1": "Pangar's interruptable roll is currently bugged and doesn't do any damage until the very end of it, so use that for extremely easy interrupts.",
