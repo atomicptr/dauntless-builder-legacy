@@ -19,7 +19,7 @@
             "invalid-build": "Dû à des changements dans Dauntless, ce build n'est plus compatible avec la version actuelle de Dauntless Builder, une ou plusieurs pièces ont étés supprimées dans le but de les afficher.",
             "upgraded-build": "Ce build a été fait dans une version antérieure de Dauntless et peut être obselète."
         },
-        "event-marker": "This item was part of an event and might not be obtainable anymore.",
+        "event-marker": "Cet objet fait partie d'un événement et peut ne plus être obtensible.",
         "item-picker": {
             "lantern-hold-line": "<b>$t(terms.hold)</b>: {{hold}}",
             "omnicell-passive-line": "<b>$t(terms.passive)</b>: {{passive}}"
@@ -61,11 +61,11 @@
             "privacy-text": "Nous ne collectons aucune donnée.",
             "source-code": "Code Source",
             "title": "A propos",
-            "translators": "Translators"
+            "translators": "Traducteurs"
         },
         "build": {
             "click-here-to-select": "Cliquez pour ajouter.",
-            "copy-build-to-finder": "Copy build to Finder",
+            "copy-build-to-finder": "Copier le build vers Finder",
             "filter-by": "Filtrer par {{name}}",
             "no-perks": "Aucun effet disponible.",
             "no-x-selected": "<b>{{name}}</b>",
@@ -87,7 +87,7 @@
             "filter-perks": "Rechercher un effet...",
             "filter-title": "Filtre",
             "options-title": "Options",
-            "perk-matching-enabled": "Enable smart perk selection (High performance costs, if you notice performance issues uncheck this)",
+            "perk-matching-enabled": "Activer la sélection d'avantages intelligents (coûts de performances élevés, si vous remarquez des problèmes de performance, décochez ceci)",
             "perks-title": "$t(terms.perks)",
             "preselect-title": "Sélectionner l'équipements",
             "remove-exotics": "Enlever les équipements éxotiques",
@@ -121,9 +121,10 @@
                 "buildTitles": {
                     "Agarus (K) Speed": "$t(terms.behemoths.Agarus) (K) Speed\n\nVitesse",
                     "Agarus (K) Survival": "$t(terms.behemoths.Agarus) (K) Survival\n\nSurvie",
-                    "Agarus (Khara) Resolve": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Resolve",
+                    "Agarus (Khar) Wound": "$t(terms.behemoths.Agarus) (Khar) Wound",
                     "Agarus (Khara) Wound": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Wound\nBlessure",
                     "Agarus (Kharabak)": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak))",
+                    "Agarus (Koshai)": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Koshai))",
                     "Charrogg": "$t(terms.behemoths.Charrogg)",
                     "Chrono (R) Speed": "$t(terms.behemoths.Chronovore) (R) Vitesse",
                     "Chrono (Reza)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Rezakiri))",
@@ -131,32 +132,26 @@
                     "Chrono (V) Speed": "$t(terms.behemoths.Chronovore) (R) Vitesse",
                     "Chrono (V) Survival": "$t(terms.behemoths.Chronovore) (V) Survie",
                     "Chrono (Valo)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr))",
-                    "Chrono (Valo) Resolve": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Resolve",
-                    "Chrono (Valo) Wound": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Wound",
+                    "Disc Adrenaline": "Discipline adrénaline",
                     "Disc Pred": "Discipline Prédateur",
                     "Disc Sav": "Disc Sav",
                     "Hellion": "$t(terms.behemoths.Hellion)",
                     "Kharabak": "$t(terms.behemoths.Kharabak)",
-                    "Malk (S) Speed": "$t(terms.behemoths.Malkarion) (S) Speed",
+                    "Malk (S) Speed": "$t(terms.behemoths.Malkarion) (S) Vitesse",
                     "Malk (S) Survival": "$t(terms.behemoths.Malkarion) (S) Survie",
                     "Malk (Sahvyt)": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt))",
-                    "Malk (Sahvyt) Resolve": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt)) Resolve",
                     "Malk (Sahvyt) Wound": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt)) Blessure",
                     "Pangar": "$t(terms.behemoths.Pangar)",
                     "Prismedic": "Grâce Prismatique médecin",
-                    "Rage Pred": "Rage Prédateur",
                     "Rezakiri": "$t(terms.behemoths.Rezakiri)",
                     "Riftstalker": "$t(terms.behemoths.Riftstalker)",
                     "Sahvyt": "$t(terms.behemoths.Sahvyt)",
-                    "Thrax (R) Speed": "$t(terms.behemoths.Thrax) (R) Vitesse",
-                    "Thrax (R)Speed": "$t(terms.behemoths.Thrax) (R)Speed",
                     "Thrax (Rift)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker))",
-                    "Thrax (Rift) Resolve": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Resolve",
                     "Thrax (Rift) Wound": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Wound",
+                    "Thrax (Shrowd)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Shrowd))",
                     "Torg (C) Speed": "$t(terms.behemoths.Torgadoro) (C) Speed",
                     "Torg (C) Survival": "$t(terms.behemoths.Torgadoro) (C) Survival",
                     "Torg (Charrogg)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Charrogg))",
-                    "Torg (Charrogg) Resolve": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Charrogg)) Resolve",
                     "Torg (H) Speed": "$t(terms.behemoths.Torgadoro) (H) Speed",
                     "Torg (H) Survival": "$t(terms.behemoths.Torgadoro) (H) Survival",
                     "Torg (Hellion)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion))",
@@ -166,17 +161,14 @@
                     "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Speed",
                     "Urska (F) Speed": "$t(terms.behemoths.Urska) (F) Speed",
                     "Urska (F) Survival": "$t(terms.behemoths.Urska) (F) Survival",
-                    "Urska (Frostwulf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Frostwülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Pangar)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar))",
-                    "Urska (Pangar) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Resolve",
-                    "Urska (Pangar) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Wound",
-                    "Urska (Wülf) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Resolve",
+                    "Urska (Wülf) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Wound",
                     "Valomyr": "$t(terms.behemoths.Valomyr)"
                 },
                 "categories": {
                     "Artificer": {
-                        "description": "Artificer possède un drone que vous pouvez contrôler qui a plusieurs fonctions en fonction de ce que vous visez :\nSi vous visez le sol, elle crée une aura de soin et de bouclier qui bloque les projectiles des Behemoths.\nSi vous ciblez un joueur, cela crée une aura de soin et de bouclier qui les suit.\nSi vous visez une Slayer à terre il la ressuscite et crée une aura de guérison et de bouclier qui les suit.\nSi vous ciblez un Behemoth, il marque un élément pour subir des dégâts supplémentaires.",
+                        "description": "L'artificer possède un drone que vous pouvez contrôler qui a plusieurs fonctions en dependantes de ce que vous visez :\nSi vous visez le sol, elle créera une aura de soin et de bouclier qui bloque les projectiles des Behemoths.\nSi vous ciblez un joueur, cela créera une aura de soin et de bouclier qui les suit.\nSi vous visez un slayer à terre il le ressuscite et créera une aura de guérison et de bouclier qui le suit.\nSi vous ciblez un Behemoth, il marque une partie qui va subir des dégâts supplémentaires.",
                         "name": "Artificier"
                     },
                     "Bastion": {
@@ -188,7 +180,7 @@
                         "name": "Catalyse"
                     },
                     "Discipline": {
-                        "description": "Discipline is a high-risk high-reward Omnicell, featuring a high damage parry ability that grants you stacks of critical damage if timed correctly and, at max stacks, grants you a high amount of critical chance.",
+                        "description": "La discipline est une omnicellule et une récompense élevée à haut risque , avec une capacité de parade de dégâts élevés qui vous accorde des accumulations de dégâts critiques si le temps est écoulé correctement et, à une accumulation maximale, vous confère une grande probabilité de critique.",
                         "name": "Discipline"
                     },
                     "Escalations": {
@@ -209,7 +201,7 @@
                         "name": "Sang froid"
                     },
                     "Revenant": {
-                        "description": "Drainez jusqu'à 500 points de santé pour passer en état de Spectre et générer un Orbe du vide. Tous les 100 points de santé drainés, invoquez une Vigne obscure qui inflige d'importants dégâts obscurs. Si une Vigne obscure touche une cible, elle génère un Orbe du vide supplémentaire à l’impact. Ramasser un Orbe du vide confère une charge d’Énergie du vide, ce qui confère +4 % de dégâts et prolonge l’état de Spectre de 1 seconde. L’état de Spectre dure 15 secondes et empêche toute guérison.\nLorsque l’état de Spectre prend fin, chaque charge d’Énergie du vide confère 115 points de santé par seconde pendant 10 secondes.",
+                        "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 115 healing over 10 seconds — after Revenant expires.",
                         "name": "Spectre"
                     },
                     "Tempest": {
@@ -271,7 +263,7 @@
                     "Pangar.0": "Pangar's interruptable roll is very easy to bait (does it twice in a row only), and the cooldown gets reset on enrage.",
                     "Pangar.1": "Pangar's interruptable roll is currently bugged and doesn't do any damage until the very end of it, so use that for extremely easy interrupts.",
                     "Quillshot.0": "Vous pouvez créer un bouclier sur la plateforme.",
-                    "Rezakiri.0": " Be sure to use revenant between 500 and 600 HP to keep shroud unique effect active.",
+                    "Rezakiri.0": "Be sure to use Revenant between 500 and 600 HP to keep Shrowd's Unique Effect active.",
                     "Shadowtouched Koshai.0": "You can bait the interrupt at the start pretty easily, and the turn-around interrupt afterwards, just like normal Koshai.",
                     "Shadowtouched Koshai.1": "La deuxième fois que le Koshai Assombri entre dans le sol, il re-apparaître le plus loin possible de vous quelque part dans l'arène et tire des orbes obscurs, pendant ce temps, il est extrêmement vulnérable aux dégâts.",
                     "Shadowtouched Nayzaga.0": "Just like normal Nayzaga, U. Nayzaga starts the fight with his dual slide interrupt.",
@@ -281,8 +273,8 @@
                     "Shrike.1": "Le Shrike peut être interrompu instantanément après sont enragement.",
                     "Shrowd.0": "You can use Discipline's Parry on enrage, if you jump at Shrowd the moment he teleports.",
                     "Skarn.0": "If not using blunt weapons (strikers, hammer) focus the tail during enrage, the rock hitbox has a big gap there.",
-                    "Skarn.1": "Unlike other weapons Repeaters prefer Drask bond because you want to be shooting the head for the whole run.",
-                    "Thunderdeep Drask.0": "He do be a fast boi."
+                    "Skarn.1": "Contrairement aux autres armes, les répéteurs préfèrent le lien Drask parce que vous voudrez viser la tête pendant toute la partie.",
+                    "Thunderdeep Drask.0": "Il est un gars rapide."
                 },
                 "title": "Builds Épreuves Dauntless - 1.10+"
             },
