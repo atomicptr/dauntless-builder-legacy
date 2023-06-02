@@ -121,9 +121,10 @@
                 "buildTitles": {
                     "Agarus (K) Speed": "$t(terms.behemoths.Agarus) (K) Hız",
                     "Agarus (K) Survival": "$t(terms.behemoths.Agarus) (K) Hayatta Kalma",
-                    "Agarus (Khara) Resolve": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Resolve",
+                    "Agarus (Khar) Wound": "$t(terms.behemoths.Agarus) (Khar) Yaralama",
                     "Agarus (Khara) Wound": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Yaralama",
                     "Agarus (Kharabak)": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak))",
+                    "Agarus (Koshai)": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Koshai))",
                     "Charrogg": "$t(terms.behemoths.Charrogg)",
                     "Chrono (R) Speed": "$t(terms.behemoths.Chronovore) (R) Hız",
                     "Chrono (Reza)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Rezakiri))",
@@ -131,8 +132,7 @@
                     "Chrono (V) Speed": "$t(terms.behemoths.Chronovore) (V) Hız",
                     "Chrono (V) Survival": "$t(terms.behemoths.Chronovore) (V) Hayatta Kalma",
                     "Chrono (Valo)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr))",
-                    "Chrono (Valo) Resolve": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Resolve",
-                    "Chrono (Valo) Wound": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr)) Yaralama",
+                    "Disc Adrenaline": "Disc Adrenaline",
                     "Disc Pred": "Disc Pred",
                     "Disc Sav": "Disc Sav",
                     "Hellion": "$t(terms.behemoths.Hellion)",
@@ -140,23 +140,18 @@
                     "Malk (S) Speed": "$t(terms.behemoths.Malkarion) (S) Hız",
                     "Malk (S) Survival": "$t(terms.behemoths.Malkarion) (S) Hayatta Kalma",
                     "Malk (Sahvyt)": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt))",
-                    "Malk (Sahvyt) Resolve": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt)) Resolve",
                     "Malk (Sahvyt) Wound": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt)) Yaralama",
                     "Pangar": "$t(terms.behemoths.Pangar)",
                     "Prismedic": "Prismedic",
-                    "Rage Pred": "Rage Pred",
                     "Rezakiri": "$t(terms.behemoths.Rezakiri)",
                     "Riftstalker": "$t(terms.behemoths.Riftstalker)",
                     "Sahvyt": "$t(terms.behemoths.Sahvyt)",
-                    "Thrax (R) Speed": "$t(terms.behemoths.Thrax) (R) Hız",
-                    "Thrax (R)Speed": "$t(terms.behemoths.Thrax) (R) Hız",
                     "Thrax (Rift)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker))",
-                    "Thrax (Rift) Resolve": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Resolve",
                     "Thrax (Rift) Wound": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Yaralama",
+                    "Thrax (Shrowd)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Shrowd))",
                     "Torg (C) Speed": "$t(terms.behemoths.Torgadoro) (C) Hız",
                     "Torg (C) Survival": "$t(terms.behemoths.Torgadoro) (C) Hayatta Kalma",
                     "Torg (Charrogg)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Charrogg))",
-                    "Torg (Charrogg) Resolve": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Charrogg)) Resolve",
                     "Torg (H) Speed": "$t(terms.behemoths.Torgadoro) (H) Hız",
                     "Torg (H) Survival": "$t(terms.behemoths.Torgadoro) (H) Hayatta Kalma",
                     "Torg (Hellion)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion))",
@@ -166,12 +161,9 @@
                     "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Hız",
                     "Urska (F) Speed": "$t(terms.behemoths.Urska) (F) Hız",
                     "Urska (F) Survival": "$t(terms.behemoths.Urska) (F) Hayatta Kalma",
-                    "Urska (Frostwulf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Frostwülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Pangar)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar))",
-                    "Urska (Pangar) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Resolve",
-                    "Urska (Pangar) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar)) Yaralama",
-                    "Urska (Wülf) Resolve": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Resolve",
+                    "Urska (Wülf) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Yaralama",
                     "Valomyr": "$t(terms.behemoths.Valomyr)"
                 },
                 "categories": {
@@ -188,7 +180,7 @@
                         "name": "Catalyst"
                     },
                     "Discipline": {
-                        "description": "Discipline is a high-risk high-reward Omnicell, featuring a high damage parry ability that grants you stacks of critical damage if timed correctly and, at max stacks, grants you a high amount of critical chance.",
+                        "description": "Discipline, riskli ama kazançlı bir Omnicell'dir. Doğru zamanlamayla kullanıldığında size kritik hasar stack'leri veren yüksek hasarlı bir savuşturma yeteneğine sahiptir. Maksimum stack'lere ulaşıldığında yüksek miktarda kritik şans sağlar.",
                         "name": "Discipline"
                     },
                     "Escalations": {
@@ -209,7 +201,7 @@
                         "name": "Iceborne"
                     },
                     "Revenant": {
-                        "description": "Revenant, yüksek riskli yüksek ödüllü bir Omnicell'dir. Bu Omnicell, 500 HP tüketen aktif bir yetenek kullanarak en fazla beş gölge sarmaşığı çağırır. Bu gölge sarmaşıkları yüksek hasar verir ve seni Revenant durumuna sokar. Sarmaşıklar hedefi vurduğunda, karanlık küreler oluştururlar. Onları toplamak, Revenant durumundayken %4 ek hasar, Revenant durumunun 1 saniye uzaması ve Revenant sona erdikten sonra 10 saniye boyunca 125 iyileşme sağlar.",
+                        "description": "Revenant, riskli ama kazançlı bir Omnicell'dir. Bu Omnicell, 500 HP tüketen aktif bir yetenek kullanarak en fazla beş gölge sarmaşığı çağırır. Bu gölge sarmaşıkları yüksek hasar verir ve seni Revenant durumuna sokar. Sarmaşıklar hedefi vurduğunda, karanlık küreler oluştururlar. Onları toplamak, Revenant durumundayken %4 ek hasar, Revenant durumunun 1 saniye uzaması ve Revenant sona erdikten sonra 10 saniye boyunca 115 iyileşme sağlar.",
                         "name": "Revenant"
                     },
                     "Tempest": {
@@ -255,7 +247,7 @@
             "title": "Seçenekler"
         },
         "trials": {
-            "description": "Trial karşılaşmaları için meta buildleri, bu buildler genel av için uygun değildir.",
+            "description": "Trial karşılaşmaları için meta buildleri, bu buildler av için uygun değildir.",
             "generated": {
                 "tips": {
                     "Boreus [*].0": "You can use the Bombers and the Weak Spot to delay Boreus' Aethercharge. (the shield phase)",
@@ -271,7 +263,7 @@
                     "Pangar.0": "Pangar's interruptable roll is very easy to bait (does it twice in a row only), and the cooldown gets reset on enrage.",
                     "Pangar.1": "Pangar's interruptable roll is currently bugged and doesn't do any damage until the very end of it, so use that for extremely easy interrupts.",
                     "Quillshot.0": "You can build Skarn lantern/Frostwülf shield on the platform.",
-                    "Rezakiri.0": " Be sure to use revenant between 500 and 600 HP to keep shroud unique effect active.",
+                    "Rezakiri.0": "Be sure to use Revenant between 500 and 600 HP to keep Shrowd's Unique Effect active.",
                     "Shadowtouched Koshai.0": "You can bait the interrupt at the start pretty easily, and the turn-around interrupt afterwards, just like normal Koshai.",
                     "Shadowtouched Koshai.1": "Shadowtouched Koshai ikinci kez yerin altına girdiğinde, arenanın mümkün olduğunca uzak bir noktasında belirir ve sana karanlık küreler fırlatır. Bu süre zarfında, hasara karşı son derece savunmasızdır.",
                     "Shadowtouched Nayzaga.0": "Just like normal Nayzaga, U. Nayzaga starts the fight with his dual slide interrupt.",
@@ -379,7 +371,7 @@
             "mod": "Mod",
             "special": "Special"
         },
-        "passive": "Passive",
+        "passive": "Pasif",
         "perks": "Perk",
         "power": "Güç",
         "resistance": "Resistance",
