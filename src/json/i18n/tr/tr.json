@@ -87,7 +87,7 @@
             "filter-perks": "Perkleri filtrele...",
             "filter-title": "Filtre",
             "options-title": "Şeçenekler",
-            "perk-matching-enabled": "Akıllı perk seçimini etkinleştirin (Yüksek performans maliyeti, performans sorunları fark ederseniz bunu işaretlemeyin)",
+            "perk-matching-enabled": "Akıllı perk seçimini etkinleştirin (Yüksek kaynak tüketimine yol açar, performans sorunları fark ederseniz bunu işaretlemeyin)",
             "perks-title": "$t(terms.perks)",
             "preselect-title": "Dizilimi Seç",
             "remove-exotics": "Egzotik Eşyaları Çıkart",
