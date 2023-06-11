@@ -180,12 +180,6 @@
         "username": "emanuele.gandellini"
     },
     {
-        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15840515/medium/22e288bf7c22d228fbcffbf1fc08dd7d.png",
-        "contributions": 6,
-        "proofreader": false,
-        "username": "Timschcko"
-    },
-    {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15656457/medium/4da98e52132fa0fcc47cd02f5bf2eb33.png",
         "contributions": 5,
         "proofreader": false,
@@ -232,6 +226,18 @@
         "contributions": 3,
         "proofreader": false,
         "username": "Odino"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15840515/medium/22e288bf7c22d228fbcffbf1fc08dd7d.png",
+        "contributions": 2,
+        "proofreader": false,
+        "username": "Timschcko"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15859741/medium/7ae6ca197c201549deac55999baea7ea.jpeg",
+        "contributions": 2,
+        "proofreader": false,
+        "username": "mortnostermor"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14003855/medium/fe47b38132d54f1e95875ef3511cc623_default.png",
