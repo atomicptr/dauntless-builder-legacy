@@ -72,6 +72,12 @@
         "username": "Jax08"
     },
     {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15800989/medium/3b97e23e0038048915169d31308e2712_default.png",
+        "contributions": 110,
+        "proofreader": false,
+        "username": "PayneD"
+    },
+    {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15832355/medium/8172f9d21111cc3ad1ce4ec89a70c198.jpg",
         "contributions": 83,
         "proofreader": false,
@@ -132,10 +138,10 @@
         "username": "GaabNavarro"
     },
     {
-        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15512286/medium/a525c8ea11eb0c051f48e8a04ae8a117_default.png",
-        "contributions": 18,
-        "proofreader": true,
-        "username": "scouvs"
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15859741/medium/7ae6ca197c201549deac55999baea7ea.jpeg",
+        "contributions": 22,
+        "proofreader": false,
+        "username": "mortnostermor"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15855243/medium/3ea744bc6d41feeab2369d8b7a382b29_default.png",
@@ -144,10 +150,10 @@
         "username": "Anteria_"
     },
     {
-        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15800989/medium/3b97e23e0038048915169d31308e2712_default.png",
-        "contributions": 13,
-        "proofreader": false,
-        "username": "PayneD"
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15512286/medium/a525c8ea11eb0c051f48e8a04ae8a117_default.png",
+        "contributions": 15,
+        "proofreader": true,
+        "username": "scouvs"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15530051/medium/9ebfbbcc0e20cf4b5b02519c8c5bc6f1.png",
@@ -226,12 +232,6 @@
         "contributions": 4,
         "proofreader": false,
         "username": "sassenkevin181002"
-    },
-    {
-        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15859741/medium/7ae6ca197c201549deac55999baea7ea.jpeg",
-        "contributions": 3,
-        "proofreader": false,
-        "username": "mortnostermor"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15865179/medium/2e6ecead2ab82be59724349d3a4581eb_default.png",

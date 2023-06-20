@@ -213,7 +213,7 @@
             },
             "note": "Die Builds die hier aufgelistet sind wurden automatisch von der <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>Community Meta Builds Tabelle</a> extrahiert, solltest du Feedback haben bitte gib dies an die Leute im #meta-discussion Channel im <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>offiziellen Dauntless Discord Server</a>!",
             "subcategories": {
-                "The Hunger": "The Hunger",
+                "The Hunger": "Der Hunger",
                 "heroics": "Heroics",
                 "legendaries": "Legendaries",
                 "preEsca": "Pre-Escalation"
