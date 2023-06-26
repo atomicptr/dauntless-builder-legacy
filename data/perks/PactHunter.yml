@@ -1,0 +1,41 @@
+name: Pact Hunter
+description: Deal additional damage for a short time after killing fauna.
+type: Brutality
+effects:
+  '1':
+    description: &description >-
+      Gain {{percentBonusDamage}}% bonus damage for {{time}} seconds after killing Fauna. Stacks up to {{stacks}} times.
+    values:
+      percentBonusDamage: 1
+      time: 20
+      stacks: 5
+  '2':
+    description: *description
+    values:
+      percentBonusDamage: 2
+      time: 20
+      stacks: 5
+  '3':
+    description: *description
+    values:
+      percentBonusDamage: 4
+      time: 20
+      stacks: 5
+  '4':
+    description: *description
+    values:
+      percentBonusDamage: 6
+      time: 20
+      stacks: 5
+  '5':
+    description: *description
+    values:
+      percentBonusDamage: 8
+      time: 20
+      stacks: 5
+  '6':
+    description: *description
+    values:
+      percentBonusDamage: 10
+      time: 20
+      stacks: 5

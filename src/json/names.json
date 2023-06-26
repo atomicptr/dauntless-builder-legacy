@@ -370,7 +370,16 @@
         "231": "+3 Impulse Cell",
         "232": "+1 Inertia Cell",
         "233": "+2 Inertia Cell",
-        "234": "+3 Inertia Cell"
+        "234": "+3 Inertia Cell",
+        "235": "+1 Pack Caller Cell",
+        "236": "+2 Pack Caller Cell",
+        "237": "+3 Pack Caller Cell",
+        "238": "+1 Pack Walker Cell",
+        "239": "+2 Pack Walker Cell",
+        "240": "+3 Pack Walker Cell",
+        "241": "+1 Pact Hunter Cell",
+        "242": "+2 Pact Hunter Cell",
+        "243": "+3 Pact Hunter Cell"
     },
     "Lanterns": {
         "1": "Drask's Eye",
@@ -560,7 +569,10 @@
         "76": "Water",
         "77": "Inertia",
         "78": "Impulse",
-        "79": "Conservation"
+        "79": "Conservation",
+        "80": "Pact Hunter",
+        "81": "Pack Walker",
+        "82": "Pack Caller"
     },
     "Weapons": {
         "1": "Brutality of Boreus",

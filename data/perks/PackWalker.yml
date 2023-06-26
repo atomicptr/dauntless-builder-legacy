@@ -1,0 +1,29 @@
+name: Pack Walker
+description: Gain movement speed and attack speed while near fauna.
+type: Alacrity
+effects:
+  '1':
+    description: &description >-
+      While near fauna, gain {{percentMovementAndAttackSpeed}}% movement speed and attack speed.
+    values:
+      percentMovementAndAttackSpeed: 5
+  '2':
+    description: *description
+    values:
+      percentMovementAndAttackSpeed: 5
+  '3':
+    description: *description
+    values:
+      percentMovementAndAttackSpeed: 5
+  '4':
+    description: *description
+    values:
+      percentMovementAndAttackSpeed: 5
+  '5':
+    description: *description
+    values:
+      percentMovementAndAttackSpeed: 5
+  '6':
+    description: *description
+    values:
+      percentMovementAndAttackSpeed: 5

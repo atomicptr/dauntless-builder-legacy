@@ -1,0 +1,15 @@
+name: Pack Walker Cell
+slot: Alacrity
+variants:
+  +1 Pack Walker Cell:
+    rarity: uncommon
+    perks:
+      Pack Walker: 1
+  +2 Pack Walker Cell:
+    rarity: rare
+    perks:
+      Pack Walker: 2
+  +3 Pack Walker Cell:
+    rarity: epic
+    perks:
+      Pack Walker: 3

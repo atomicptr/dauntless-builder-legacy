@@ -1,0 +1,35 @@
+name: Pack Caller
+description: Summon Bomber fauna when behemoth parts are broken.
+type: Insight
+effects:
+  '1':
+    description: &description >-
+      Spawn {{numSpawnBombers}} Bombers when a Behemoth part is broken. Up to {{maxSpawnBombers}} Bombers can be spawned at a time.
+    values:
+      numSpawnBombers: 1
+      maxSpawnBombers: 1
+  '2':
+    description: *description
+    values:
+      numSpawnBombers: 1
+      maxSpawnBombers: 2
+  '3':
+    description: *description
+    values:
+      numSpawnBombers: 1
+      maxSpawnBombers: 3
+  '4':
+    description: *description
+    values:
+      numSpawnBombers: 2
+      maxSpawnBombers: 3
+  '5':
+    description: *description
+    values:
+      numSpawnBombers: 2
+      maxSpawnBombers: 6
+  '6':
+    description: *description
+    values:
+      numSpawnBombers: 3
+      maxSpawnBombers: 6
