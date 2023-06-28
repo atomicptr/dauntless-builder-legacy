@@ -36,16 +36,16 @@
         "username": "radge91"
     },
     {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15859741/medium/7ae6ca197c201549deac55999baea7ea.jpeg",
+        "contributions": 465,
+        "proofreader": false,
+        "username": "mortnostermor"
+    },
+    {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13738209/medium/f86ce4a76c429dd334d138f714b0a1ee.jpg",
         "contributions": 430,
         "proofreader": true,
         "username": "Medaey"
-    },
-    {
-        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15859741/medium/7ae6ca197c201549deac55999baea7ea.jpeg",
-        "contributions": 415,
-        "proofreader": false,
-        "username": "mortnostermor"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15369904/medium/738a7359164e42ad54a0ee7f08d2151f.png",
@@ -55,7 +55,7 @@
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15573079/medium/0d2d150defb2da02eab96555502a83fd.png",
-        "contributions": 312,
+        "contributions": 308,
         "proofreader": false,
         "username": "Shadowrunner"
     },
@@ -85,7 +85,7 @@
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15800989/medium/3b97e23e0038048915169d31308e2712_default.png",
-        "contributions": 119,
+        "contributions": 118,
         "proofreader": false,
         "username": "PayneD"
     },
@@ -139,7 +139,7 @@
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15749259/medium/e6de9251b9360da6bfea2978b4eba634.png",
-        "contributions": 31,
+        "contributions": 30,
         "proofreader": false,
         "username": "Phaesta"
     },
@@ -198,22 +198,10 @@
         "username": "emanuele.gandellini"
     },
     {
-        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15656457/medium/4da98e52132fa0fcc47cd02f5bf2eb33.png",
-        "contributions": 5,
-        "proofreader": false,
-        "username": "Gahrstpack"
-    },
-    {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15803375/medium/37313d34268cb502e047416e8fb17d2a.png",
         "contributions": 5,
         "proofreader": false,
         "username": "DerJohnYT"
-    },
-    {
-        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15852577/medium/15ed822951779d184773464b4c64efb5.jpeg",
-        "contributions": 5,
-        "proofreader": false,
-        "username": "naxoss"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15857429/medium/f913380ae95d1e5be2115e498b1ce4f6_default.png",
@@ -240,16 +228,16 @@
         "username": "sassenkevin181002"
     },
     {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15852577/medium/15ed822951779d184773464b4c64efb5.jpeg",
+        "contributions": 4,
+        "proofreader": false,
+        "username": "naxoss"
+    },
+    {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15865179/medium/2e6ecead2ab82be59724349d3a4581eb_default.png",
         "contributions": 3,
         "proofreader": false,
         "username": "Odino"
-    },
-    {
-        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15840515/medium/22e288bf7c22d228fbcffbf1fc08dd7d.png",
-        "contributions": 2,
-        "proofreader": false,
-        "username": "Timschcko"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14003855/medium/fe47b38132d54f1e95875ef3511cc623_default.png",
@@ -268,6 +256,12 @@
         "contributions": 1,
         "proofreader": false,
         "username": "dragoxsix"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15656457/medium/4da98e52132fa0fcc47cd02f5bf2eb33.png",
+        "contributions": 1,
+        "proofreader": false,
+        "username": "Gahrstpack"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15683755/medium/3fc49dd2c723feb7c4da89211e0b5afd_default.png",
