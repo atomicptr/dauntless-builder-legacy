@@ -168,7 +168,7 @@
                 },
                 "categories": {
                     "Artificer": {
-                        "description": "Artificer features a drone you can control that has multiple functions depending on what you are targeting: if targeting the ground, it creates a healing and shielding aura that blocks Behemoth's projectiles; if targeting a player it creates a healing and shielding aura that follows them; if targeting a downed slayer it revives them and creates a healing and shielding aura that follows them; and, if targeting a Behemoth, it marks a part to take extra damage.",
+                        "description": "O Artífice apresenta um drone que você pode controlar que tem várias funções, dependendo no que você está mirando: se estiver direcionando para o chão, isto cria uma aura de cura e blindagem que bloqueia projéteis do Behemoth; se atingir um jogador ativo, cria um escudo curativo que os segue; se mirar em um Slayer nocauteado, ele os revive e cria uma aura de cura e proteção que os segue; se for direcionado a um Behemoth, ele marca uma parte que receberá dano extra.",
                         "name": "Artífice"
                     },
                     "Bastion": {
@@ -201,7 +201,7 @@
                         "name": "Glacinata"
                     },
                     "Revenant": {
-                        "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 115 healing over 10 seconds — after Revenant expires.",
+                        "description": "Aparição é uma Omnicélula de alto risco e alta recompensa com uma habilidade ativa que consome até 500 HP para invocar até cinco tentáculos sombrios que causam alto dano e colocam você no estado Vingativo. Quando os tentáculos atingem um alvo, eles geram Orbes do Vazio, coletando-os concede instâncias de Energia do Vazio, cada um fornece 4% de dano enquanto no estado Vingativo, uma extensão de 1 segundo ao estado Vingativo, e 115 de cura ao longo de 10 segundos — após Aparição acabar.",
                         "name": "Aparição"
                     },
                     "Tempest": {
@@ -263,7 +263,7 @@
                     "Pangar.0": "A rolagem de interrupção do Pangar é muito fácil de se provocar (Ele faz isso duas vezes em seguida, apenas) e o tempo de espera é reiniciado ao se enfurecer.",
                     "Pangar.1": "A rolagem de interrupção do Pangar atualmente está bugada e não causa nenhum dano até a parte final, então a use para obter interrupções fáceis.",
                     "Quillshot.0": "Você pode construir um escudo de Skarn/Frostwülf na plataforma.",
-                    "Rezakiri.0": "Be sure to use Revenant between 500 and 600 HP to keep Shrowd's Unique Effect active.",
+                    "Rezakiri.0": "Certifique-se de usar o Estado Aparição entre 500 e 600 de Vida para manter ativo o efeito único da arma do Shrowd.",
                     "Shadowtouched Koshai.0": "Você pode provocar a interrupção de saída com muita facilidade, e voltar a interromper depois, como o Koshai normal.",
                     "Shadowtouched Koshai.1": "A segunda vez que Koshai Tocado pelas Sombras entra no chão, ele gera o mais longe possível em algum lugar na arena e atira orbes sombrias em você, enquanto faz isso ele é extremamente vulnerável a danos.",
                     "Shadowtouched Nayzaga.0": "Assim como o Nayzaga normal, o Nayzaga Tocado Pelas Sombras começa a luta com seu deslize duplo.",
