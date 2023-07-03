@@ -1,15 +1,15 @@
-name: Pact Hunter Cell
+name: Pack Hunter Cell
 slot: Brutality
 variants:
-  +1 Pact Hunter Cell:
+  +1 Pack Hunter Cell:
     rarity: uncommon
     perks:
-      Pact Hunter: 1
-  +2 Pact Hunter Cell:
+      Pack Hunter: 1
+  +2 Pack Hunter Cell:
     rarity: rare
     perks:
-      Pact Hunter: 2
-  +3 Pact Hunter Cell:
+      Pack Hunter: 2
+  +3 Pack Hunter Cell:
     rarity: epic
     perks:
-      Pact Hunter: 3
+      Pack Hunter: 3
