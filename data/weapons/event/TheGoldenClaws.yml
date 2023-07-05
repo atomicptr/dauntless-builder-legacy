@@ -41,11 +41,12 @@ unique_effects:
     description: >-
       After dodging through an attack, your next attack within 5 seconds deals +{{percentPartDamage}}% part damage
       After dodging through an attack, your next attack within 5 seconds deals +{{staggerDamage}} stagger damage
-      While below 30% of your maximum health, gain +{{percentAttackSpeed}}% attack speed
+      While below {{percentBelowMaxHealth}}% of your maximum health, gain +{{percentAttackSpeed}}% attack speed
     values:
       percentPartDamage: 150
       percentAttackSpeed: 15
       staggerDamage: 150
+      percentBelowMaxHealth: 25
     powerSurged: true
   - name: Unsupported
     title: Disclaimer
