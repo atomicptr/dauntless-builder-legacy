@@ -55,7 +55,7 @@
             "assets-text": "Dauntless ile ilgili tüm kaynaklar, Phoenix Labs'in fikri mülkiyetidir.",
             "build-info": "Son güncelleme: {{buildString}}",
             "contributors": "Katkıda bulunanlar",
-            "dependencies": "Dependencies ({{number}})",
+            "dependencies": "Bağlılıklar ({{number}})",
             "main-text": "Dauntless Builder, <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> lisansı koşulları altında lisanslanmış ücretsiz ve açık kaynaklı bir yazılımdır.",
             "privacy": "Gizlilik",
             "privacy-text": "Herhangi bir veri toplamıyoruz.",
@@ -69,7 +69,7 @@
             "filter-by": "{{name}}'e göre filtrele",
             "no-perks": "Hiçbir perk bulunmuyor.",
             "no-x-selected": "<b>{{name}}</b> seçilmedi.",
-            "part-select-dialog-title": "Select weapon part",
+            "part-select-dialog-title": "Silah parçasını seçin",
             "power-surged-add": "Power Surge",
             "power-surged-remove": "Temel Güç",
             "title": "{{weaponName}} {{omnicell}} Build",
@@ -96,7 +96,7 @@
         },
         "favorites": {
             "build-name": "Build İsmi",
-            "edit-name": "Edit Favorite Name",
+            "edit-name": "Favori Adını Düzenle",
             "title": "Buildlerim"
         },
         "home": {
@@ -176,7 +176,7 @@
                         "name": "Bastion"
                     },
                     "Catalyst": {
-                        "description": "These are the best builds you can have for general hunting, maximizing damage and using Blitz tonics as your source of attack speed.\nRecommended tonics for maximum damage: Frenzy, Blitz, Aetherdrive.",
+                        "description": "Bunlar, genel avlanma, hasarı en üst düzeye çıkarma ve saldırı hızı kaynağınız olarak Blitz toniklerini kullanmak için sahip olabileceğiniz en iyi yapılardır. Maksimum hasar için önerilen tonikler: Frenzy, Blitz, Aetherdrive.",
                         "name": "Catalyst"
                     },
                     "Discipline": {
@@ -194,7 +194,7 @@
                     },
                     "Exotics": {
                         "description": "Builds that use the Exotic Weapons and Helmets. Off-meta and generally worse than using regular weapons, with the exception of Molten Edict.",
-                        "name": "Exotics"
+                        "name": "Egzotikler"
                     },
                     "Iceborne": {
                         "description": "Iceborne provides lifesteal and damage reduction the less health you have, with an active ability that grants hyperarmor and more lifesteal. The active deals more damage when used at maximum health.",
@@ -214,9 +214,9 @@
             "note": "Burada listelenen buildler, otomatik olarak <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>Topluluk Meta Buildleri Veri Tablosu</a>'ndan çekilmiştir, geri bildiriminiz varsa lütfen <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>resmi Dauntless Discord sunucusu</a>'ndaki #meta-discussion kanalındaki insanlara iletmekten çekinmeyin!",
             "subcategories": {
                 "The Hunger": "The Hunger",
-                "heroics": "Heroics",
-                "legendaries": "Legendaries",
-                "preEsca": "Pre-Escalation"
+                "heroics": "Destansı",
+                "legendaries": "Efsanevi",
+                "preEsca": "Eskalasyon Öncesi"
             },
             "title": "Meta Buildleri",
             "vsElement": {
@@ -282,13 +282,13 @@
         }
     },
     "terms": {
-        "active": "Active",
-        "active-ability": "Active Ability",
+        "active": "Aktif",
+        "active-ability": "Aktif Beceri",
         "armour-alt": {
-            "Arms": "Arms",
-            "Head": "Head",
-            "Legs": "Leg and foot",
-            "Torso": "Torso"
+            "Arms": "Kollar",
+            "Head": "Kafa",
+            "Legs": "Bacak ve ayak",
+            "Torso": "Gövde"
         },
         "arms-armour": "Kol Zırhı",
         "behemoths": {
@@ -336,17 +336,17 @@
             "Urska": "Urska",
             "Valomyr": "Valomyr"
         },
-        "bond-weapon": "Bond Weapon",
+        "bond-weapon": "Bağlı Silah",
         "cancel": "İptal Et",
         "cell": "Cell",
-        "cell-slot": "Cell Slot",
+        "cell-slot": "Hücre Yuvası",
         "cell-type": {
             "Alacrity": "Alacrity",
             "Brutality": "Brutality",
             "Finesse": "Finesse",
             "Fortitude": "Fortitude",
             "Insight": "Insight",
-            "Prismatic": "Prismatic"
+            "Prismatic": "Prizmatik"
         },
         "cells": "Cell",
         "close": "Kapat",
@@ -360,25 +360,25 @@
             "Umbral": "Umbral"
         },
         "head-armour": "Kafa Zırhı",
-        "hold": "Hold",
+        "hold": "Basılı Tut",
         "lantern": "Lamba",
         "legs-armour": "Bacak Zırhı",
         "omnicell": "Omnicell",
-        "part": "Part",
+        "part": "Parça",
         "parts": {
-            "chamber": "Chamber",
-            "grip": "Grip",
+            "chamber": "Silah Haznesi",
+            "grip": "Kabza",
             "mod": "Mod",
-            "special": "Special"
+            "special": "Özel"
         },
         "passive": "Pasif",
         "perks": "Perk",
         "power": "Güç",
-        "resistance": "Resistance",
+        "resistance": "Direnç",
         "save": "Kaydet",
         "search": "Ara",
         "torso-armour": "Gövde Zırhı",
-        "unique-effect": "Unique Effect",
+        "unique-effect": "Eşsiz Etki",
         "unselect": "Seçimi Temizle",
         "weapon": "Silah",
         "weapon-type": "Silah Türü",

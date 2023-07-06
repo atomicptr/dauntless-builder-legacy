@@ -121,7 +121,7 @@
                 "buildTitles": {
                     "Agarus (K) Speed": "$t(terms.behemoths.Agarus) (K) Velocidade",
                     "Agarus (K) Survival": "$t(terms.behemoths.Agarus) (K) Sobrevivência",
-                    "Agarus (Khar) Wound": "$t(terms.behemoths.Agarus) (Khar) Wound",
+                    "Agarus (Khar) Wound": "$t(terms.behemoths.Agarus) (K) Velocidade",
                     "Agarus (Khara) Wound": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Ferida",
                     "Agarus (Kharabak)": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak))",
                     "Agarus (Koshai)": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Koshai))",
@@ -132,7 +132,7 @@
                     "Chrono (V) Speed": "$t(terms.behemoths.Chronovore) (V) Velocidade",
                     "Chrono (V) Survival": "$t(terms.behemoths.Chronovore) (V) Sobrevivência",
                     "Chrono (Valo)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr))",
-                    "Disc Adrenaline": "Disc Adrenaline",
+                    "Disc Adrenaline": "Adrenalina Máxima",
                     "Disc Pred": "Disc Pred",
                     "Disc Sav": "Discipligeria",
                     "Hellion": "$t(terms.behemoths.Hellion)",
@@ -163,7 +163,7 @@
                     "Urska (F) Survival": "$t(terms.behemoths.Urska) (F) Sobrevivência",
                     "Urska (Frostwülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Pangar)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar))",
-                    "Urska (Wülf) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Wound",
+                    "Urska (Wülf) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Ferida",
                     "Valomyr": "$t(terms.behemoths.Valomyr)"
                 },
                 "categories": {

@@ -1,7 +1,7 @@
 [
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15101141/medium/f0e4f75afce7ea3035cd7dc38c64d487.png",
-        "contributions": 13155,
+        "contributions": 13110,
         "proofreader": true,
         "username": "atomicptr"
     },
@@ -91,7 +91,7 @@
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14678168/medium/a0e203ec6ebde0041aaf991f3c271ca1.jpg",
-        "contributions": 89,
+        "contributions": 87,
         "proofreader": false,
         "username": "akirazord"
     },
@@ -100,6 +100,12 @@
         "contributions": 83,
         "proofreader": false,
         "username": "Makhuta"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15370062/medium/bcdb07c9b450fc2ce90caa3c5139a3e2.jpeg",
+        "contributions": 82,
+        "proofreader": false,
+        "username": "Zorotrancheur"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15446450/medium/b470a789fdf88bf2da3da42bfd979f29.png",
@@ -114,8 +120,14 @@
         "username": "srthehail"
     },
     {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15902063/medium/2c3f71c1c4cd3cfb3fe60776c6328037.png",
+        "contributions": 51,
+        "proofreader": false,
+        "username": "melihdemirtel"
+    },
+    {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15894867/medium/65cf73a8c742d5d5e633591a4e92d053.jpeg",
-        "contributions": 44,
+        "contributions": 40,
         "proofreader": false,
         "username": "caco007"
     },
@@ -130,12 +142,6 @@
         "contributions": 34,
         "proofreader": false,
         "username": "playlinsor"
-    },
-    {
-        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15370062/medium/bcdb07c9b450fc2ce90caa3c5139a3e2.jpeg",
-        "contributions": 33,
-        "proofreader": false,
-        "username": "Zorotrancheur"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15714911/medium/52abfb86cb3d18e1f3af42cd6a7d2f1d_default.png",
@@ -157,9 +163,15 @@
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15896219/medium/70eae48a5c14dee5550a1a4f7121db2c.jpeg",
-        "contributions": 25,
+        "contributions": 28,
         "proofreader": false,
         "username": "mestre.rds"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15900461/medium/974c4ae8d9d22b54afed2014e6c36b52_default.png",
+        "contributions": 21,
+        "proofreader": false,
+        "username": "Nath89-52"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15451128/medium/a0c3c4c4c85666314b4f60b4c62dc9e0.jpeg",
@@ -298,5 +310,11 @@
         "contributions": 1,
         "proofreader": false,
         "username": "hoird000"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15902305/medium/90c26d4a5a789772c13f75b6f379d57d.png",
+        "contributions": 1,
+        "proofreader": false,
+        "username": "Janii"
     }
 ]
