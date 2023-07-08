@@ -205,7 +205,7 @@
                         "name": "Spectre"
                     },
                     "Tempest": {
-                        "description": "Tempest features 10% passive attack speed bonus and the ability to build up stacks of Velocity when dodging through attacks. You spend the stacks to dash and deal damage based on how much movespeed you currently have. The movespeed bonus damage only applies to unbroken parts.",
+                        "description": "La Tempête offre un bonus passif de 10% à la vitesse d'attaque et permet de gagner des charges de vélocité en esquivant les attaques. Vous dépensez les charges pour infliger des dégâts en fonction de votre vitesse de déplacement actuelle. Les dégâts du bonus de déplacement ne s'appliquent qu'aux parties non brisées.",
                         "name": "Tempête"
                     }
                 },
