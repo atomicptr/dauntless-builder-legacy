@@ -180,6 +180,12 @@
         "username": "Anteria_"
     },
     {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15880259/medium/321f6a0a1a6dd452e807ba5132170349.png",
+        "contributions": 17,
+        "proofreader": false,
+        "username": "Draconnier"
+    },
+    {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15896219/medium/70eae48a5c14dee5550a1a4f7121db2c.jpeg",
         "contributions": 17,
         "proofreader": false,
@@ -190,12 +196,6 @@
         "contributions": 15,
         "proofreader": true,
         "username": "scouvs"
-    },
-    {
-        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15880259/medium/321f6a0a1a6dd452e807ba5132170349.png",
-        "contributions": 12,
-        "proofreader": false,
-        "username": "Draconnier"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15530051/medium/9ebfbbcc0e20cf4b5b02519c8c5bc6f1.png",
