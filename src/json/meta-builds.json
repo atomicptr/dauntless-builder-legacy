@@ -2151,12 +2151,6 @@
                     "vsElement": "Blaze"
                 },
                 {
-                    "buildId": "pnfXTKLCwCWgt11UxUkteTX3uObcMCdpS73SLCNOUZCZCvFeJhdCxkseSzksn",
-                    "subcategory": "heroics",
-                    "title": "Urska (F) Survival",
-                    "vsElement": "Blaze"
-                },
-                {
                     "buildId": "Brf8TNvf3CqLsjjUdcVtJTWkfJOIkCXAs71SVC6KFVCJCBXin1hOCNFqFpyu3",
                     "subcategory": "heroics",
                     "title": "Urska (F) Speed",
@@ -2569,7 +2563,7 @@
             "index": 8,
             "name": "Escalations",
             "subcategoryDescription": {
-                "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive. Bulwark for survivability.",
+                "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive.",
                 "legendaries": "Builds for the various Escalations.",
                 "preEsca": "Builds for the various Escalations. Contains no Trials cells nor Escalation gear."
             }
