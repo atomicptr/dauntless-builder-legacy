@@ -10,20 +10,20 @@ effects:
   '2':
     description: *description
     values:
-      percentMovementAndAttackSpeed: 5
+      percentMovementAndAttackSpeed: 10
   '3':
     description: *description
     values:
-      percentMovementAndAttackSpeed: 5
+      percentMovementAndAttackSpeed: 15
   '4':
     description: *description
     values:
-      percentMovementAndAttackSpeed: 5
+      percentMovementAndAttackSpeed: 20
   '5':
     description: *description
     values:
-      percentMovementAndAttackSpeed: 5
+      percentMovementAndAttackSpeed: 25
   '6':
     description: *description
     values:
-      percentMovementAndAttackSpeed: 5
+      percentMovementAndAttackSpeed: 30
