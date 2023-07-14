@@ -1305,7 +1305,7 @@
     "item.perks.pack-hunter.effects.6.description": "$t(item.perks.pack-hunter.effects.1.description)",
     "item.perks.pack-hunter.name": "Rudeljäger",
     "item.perks.pack-walker.description": "Gewährt Bewegungsgeschwindigkeit und Angriffsgeschwindigkeit in der Nähe von Fauna.",
-    "item.perks.pack-walker.effects.1.description": "Gewährt {{percentMovementAndAttackSpeed}} Bewegungsgeschwindigkeit und Angriffsgeschwindigkeit in der Nähe von Fauna.",
+    "item.perks.pack-walker.effects.1.description": "Gewährt {{percentMovementAndAttackSpeed}}% Bewegungsgeschwindigkeit und Angriffsgeschwindigkeit in der Nähe von Fauna.",
     "item.perks.pack-walker.effects.2.description": "$t(item.perks.pack-walker.effects.1.description)",
     "item.perks.pack-walker.effects.3.description": "$t(item.perks.pack-walker.effects.1.description)",
     "item.perks.pack-walker.effects.4.description": "$t(item.perks.pack-walker.effects.1.description)",
