@@ -204,6 +204,12 @@
         "username": "suica.047"
     },
     {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15920695/medium/b53b01e2d1f6606d0d8caf7f78e4db85.jpeg",
+        "contributions": 10,
+        "proofreader": false,
+        "username": "mikaeraru215"
+    },
+    {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15417372/medium/55432e1b6226d72202ab32f74aa14bc7.jpeg",
         "contributions": 9,
         "proofreader": false,
@@ -316,5 +322,11 @@
         "contributions": 1,
         "proofreader": false,
         "username": "Janii"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15919689/medium/d6a5e525e3a7c62add2cc7a35549e5d9.png",
+        "contributions": 1,
+        "proofreader": false,
+        "username": "maurfag28"
     }
 ]
