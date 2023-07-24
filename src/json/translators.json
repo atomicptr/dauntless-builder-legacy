@@ -1,7 +1,7 @@
 [
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15101141/medium/f0e4f75afce7ea3035cd7dc38c64d487.png",
-        "contributions": 13110,
+        "contributions": 13109,
         "proofreader": true,
         "username": "atomicptr"
     },
@@ -91,7 +91,7 @@
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15370062/medium/bcdb07c9b450fc2ce90caa3c5139a3e2.jpeg",
-        "contributions": 92,
+        "contributions": 100,
         "proofreader": false,
         "username": "Zorotrancheur"
     },
@@ -162,12 +162,6 @@
         "username": "Phaesta"
     },
     {
-        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15900461/medium/974c4ae8d9d22b54afed2014e6c36b52_default.png",
-        "contributions": 21,
-        "proofreader": false,
-        "username": "Nath89-52"
-    },
-    {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15451128/medium/a0c3c4c4c85666314b4f60b4c62dc9e0.jpeg",
         "contributions": 20,
         "proofreader": false,
@@ -198,16 +192,22 @@
         "username": "scouvs"
     },
     {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15920695/medium/b53b01e2d1f6606d0d8caf7f78e4db85.jpeg",
+        "contributions": 14,
+        "proofreader": false,
+        "username": "mikaeraru215"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15900461/medium/974c4ae8d9d22b54afed2014e6c36b52_default.png",
+        "contributions": 13,
+        "proofreader": false,
+        "username": "Nath89-52"
+    },
+    {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15530051/medium/9ebfbbcc0e20cf4b5b02519c8c5bc6f1.png",
         "contributions": 11,
         "proofreader": false,
         "username": "suica.047"
-    },
-    {
-        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15920695/medium/b53b01e2d1f6606d0d8caf7f78e4db85.jpeg",
-        "contributions": 10,
-        "proofreader": false,
-        "username": "mikaeraru215"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15417372/medium/55432e1b6226d72202ab32f74aa14bc7.jpeg",
