@@ -19,16 +19,16 @@ perks:
     value: 3
     powerSurged: true
 unique_effects:
-  - name: HitBonusDamagePercent
+  - name: HitBonusPercentDamage
     description: &embermaneUeDescription >-
-      The {{hitSuccession}}th hit in row deals +{{bonusDamage}} part damage.
+      The {hitSuccession}th hit in a row deals +{{percentPartDamage}}% part damage
     values:
       hitSuccession: 6
-      bonusDamage: 100
+      percentPartDamage: 150
     powerSurged: false
-  - name: HitBonusDamagePercent
+  - name: HitBonusPercentDamage
     description: *embermaneUeDescription
     values:
       hitSuccession: 6
-      bonusDamage: 250
+      percentPartDamage: 250
     powerSurged: true
