@@ -14,21 +14,13 @@ jobs:
     environment: CI
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: "yarn"
-      - run: yarn install
+      - uses: antongolub/action-setup-bun@v1
+      - run: bun install
       - name: Lint & Sanity Checks
         run: |
-          yarn lint
-          yarn build:deps
+          bun lint
+          bun build:deps
           tsc
-      - name: Tests
+      - name: Tests & Benchmarks
         run: |
-          yarn test
-      - name: Benchmarks
-        run: |
-          yarn benchmark
-        # only run on pull requests
-        if: github.event_name == 'pull_request'
+          bun test
