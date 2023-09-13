@@ -7,24 +7,19 @@
     "license": "AGPLv3",
     "private": true,
     "scripts": {
-        "build": "yarn build:deps && yarn build:frontend",
-        "build:deps": "ts-node -P ./builder/tsconfig.json ./builder/src/main.ts",
-        "build:data": "yarn build:deps --run data i18n build-finder-intermediate-data",
-        "build:frontend": "vite build",
-        "dev": "vite dev",
-        "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
-        "bench": "yarn benchmark",
-        "benchmark": "yarn test --projects jest-benchmark.config.ts",
-        "deploy": "yarn build && ./scripts/deploy.sh",
-        "lint": "yarn lint:json && eslint .",
+        "build": "bun build:deps && bun build:frontend",
+        "build:deps": "bun ./builder/src/main.ts",
+        "build:data": "bun build:deps --run data i18n build-finder-intermediate-data",
+        "build:frontend": "bunx --bun vite build",
+        "dev": "bunx --bun vite dev",
+        "deploy": "bun run build && ./scripts/deploy.sh",
+        "lint": "bun lint:json && bunx --bun eslint .",
         "lint:json": "scripts/json-linter -r src tsconfig.json .eslintrc",
         "lint:fix": "prettier . --write && yarn lint:fix:json && eslint . --fix",
-        "lint:fix:json": "yarn lint:json --fix"
+        "lint:fix:json": "bun lint:json --fix"
     },
     "engines": {
-        "node": ">=18.0.0 && <20.0.0",
-        "npm": "please-use-yarn",
-        "yarn": ">=1.20.0"
+        "bun": "^1"
     },
     "dependencies": {
         "@emotion/react": "^11.10.6",
@@ -49,6 +44,7 @@
         "react-router-dom": "^6.9.0",
         "react-virtualized-auto-sizer": "^1.0.7",
         "react-window": "^1.8.8",
+        "sharp": "^0.32.5",
         "ts-pattern": "^4.2.2"
     },
     "devDependencies": {
@@ -91,7 +87,6 @@
         "queue-promise": "^2.2.1",
         "sort-json": "^2.0.1",
         "ts-jest": "^29",
-        "ts-node": "^10.9.1",
         "typescript": "^5.0.2",
         "vite": "^4.2.1",
         "vite-plugin-favicon2": "^1.1.5",
