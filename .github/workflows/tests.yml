@@ -20,7 +20,7 @@ jobs:
         run: |
           bun lint
           bun build:deps
-          bun x --bun tsc
+          bun x tsc
       - name: Tests & Benchmarks
         run: |
           bun test
