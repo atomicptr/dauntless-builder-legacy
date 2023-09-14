@@ -21,7 +21,7 @@ perks:
 unique_effects:
   - name: HitBonusPercentDamage
     description: &embermaneUeDescription >-
-      The {hitSuccession}th hit in a row deals +{{percentPartDamage}}% part damage
+      The {{hitSuccession}}th hit in a row deals +{{percentPartDamage}}% part damage
     values:
       hitSuccession: 6
       percentPartDamage: 150

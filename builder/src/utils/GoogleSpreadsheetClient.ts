@@ -37,7 +37,10 @@ const axiosConfig = {
 } as AxiosRequestConfig;
 
 export class GoogleSpreadsheetClient {
-    constructor(private apiKey: string, private spreadsheetId: string) {}
+    constructor(
+        private apiKey: string,
+        private spreadsheetId: string,
+    ) {}
 
     private get baseUrl(): string {
         return `https://sheets.googleapis.com/v4/spreadsheets/${this.spreadsheetId}`;
@@ -88,9 +91,9 @@ export class GoogleSpreadsheetClient {
             if ((err as AxiosError).response) {
                 const res = (err as AxiosError).response;
                 throw new Error(
-                    `Could not batchGet data from Google Sheets Api: ${res?.status} ${
-                        res?.statusText
-                    }: ${JSON.stringify(res?.data)}`,
+                    `Could not batchGet data from Google Sheets Api: ${res?.status} ${res?.statusText}: ${JSON.stringify(
+                        res?.data,
+                    )}`,
                 );
             }
             return {};

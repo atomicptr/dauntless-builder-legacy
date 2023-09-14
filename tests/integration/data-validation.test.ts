@@ -15,6 +15,7 @@ import { Perk, PerkValue } from "@src/data/Perks";
 import { Weapon } from "@src/data/Weapon";
 import SchemaValidator from "ajv";
 import axios from "axios";
+import { describe, expect, it } from "bun:test";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";

@@ -14,6 +14,7 @@ import {
 import { NamesMapType } from "@src/data/NamesMap";
 import { PartType } from "@src/data/Part";
 import { WeaponType } from "@src/data/Weapon";
+import { describe, expect, it } from "bun:test";
 
 describe("parse build (v6): YwfzTb6sgCRwU8NsZTmTKTzUPrcJC43ta5C0CQBh8eU0CvAI3whxCxXswFMvFX", () => {
     const buildId = "YwfzTb6sgCRwU8NsZTmTKTzUPrcJC43ta5C0CQBh8eU0CvAI3whxCxXswFMvFX";

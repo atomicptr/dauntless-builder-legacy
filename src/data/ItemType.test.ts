@@ -1,4 +1,5 @@
 import { isArmourType, ItemType, itemTypeData, itemTypeLocalizationIdentifier } from "@src/data/ItemType";
+import { describe, expect, it } from "bun:test";
 
 describe("is amrour type", () => {
     it("weapon should not be an armour type", () => {

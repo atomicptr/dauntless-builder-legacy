@@ -70,7 +70,7 @@ import AvailablePerksChecker from "@src/worker/available-perks-checker?worker";
 import BuildFinderWorker from "@src/worker/build-finder?worker";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { BiMinus } from "react-icons/all";
+import { BiMinus } from "react-icons/bi";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import { match } from "ts-pattern";
 
