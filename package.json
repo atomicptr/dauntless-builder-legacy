@@ -10,10 +10,10 @@
         "build": "bun build:deps && bun build:frontend",
         "build:deps": "bun ./builder/src/main.ts",
         "build:data": "bun build:deps --run data i18n build-finder-intermediate-data",
-        "build:frontend": "bunx --bun vite build",
-        "dev": "bunx --bun vite dev",
+        "build:frontend": "bun x vite build",
+        "dev": "bun x vite dev",
         "deploy": "bun run build && ./scripts/deploy.sh",
-        "lint": "bun lint:json && bunx --bun eslint .",
+        "lint": "bun lint:json && bun x eslint .",
         "lint:json": "scripts/json-linter -r src tsconfig.json .eslintrc",
         "lint:fix": "prettier . --write && yarn lint:fix:json && eslint . --fix",
         "lint:fix:json": "bun lint:json --fix"
