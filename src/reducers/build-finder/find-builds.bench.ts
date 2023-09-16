@@ -145,9 +145,9 @@ for (const suiteName in suites) {
 }
 
 /* eslint-disable no-console */
-suite.on("cycle", (ev: Event) => console.log("BENCH: ", String(ev.target)));
+suite.on("cycle", (ev: Event) => console.log("BENCH:\t", String(ev.target)));
 suite.on("error", console.error);
 suite.on("complete", () => console.log("BENCH: done"));
 
-console.log("dauntless-builder.com️benchmark tool - findBuilds");
+console.log("dauntless-builder.com: Benchmark Tool - findBuilds");
 suite.run({ name: "findBuilds" });

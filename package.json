@@ -41,7 +41,8 @@
         "react-router-dom": "^6.15.0",
         "react-virtualized-auto-sizer": "^1.0.20",
         "react-window": "^1.8.9",
-        "ts-pattern": "^5.0.5"
+        "ts-pattern": "^5.0.5",
+        "vite-plugin-favicon": "^1.0.8"
     },
     "devDependencies": {
         "@crowdin/crowdin-api-client": "^1.24.0",
@@ -87,5 +88,8 @@
         "vite": "^4.4.9",
         "vite-plugin-pwa": "^0.16.5",
         "yauzl": "^2.10.0"
-    }
+    },
+    "trustedDependencies": [
+        "sharp"
+    ]
 }
