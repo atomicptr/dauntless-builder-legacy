@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -ex
 
 # install and setup bun
 curl -fsSL https://bun.sh/install | bash

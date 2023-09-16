@@ -25,7 +25,7 @@ export class DependenciesStep extends WithStepLogger implements Step {
         const filepath = path.join(runConfig.targetDir, "dependencies.json");
 
         return new Promise(resolve => {
-            const child = spawn("npx", ["license-checker", "--production", "--json"], { shell: true });
+            const child = spawn("bun", ["x", "license-checker", "--production", "--json"], { shell: true });
 
             let data = "";
 
