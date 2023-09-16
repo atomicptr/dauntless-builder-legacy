@@ -14,20 +14,21 @@ jobs:
     environment: CI
     steps:
       - uses: actions/checkout@v3
-      - run: |
-          curl -fsSL https://bun.sh/install | bash
-          export PATH="~/.bun/bin:$PATH"
-          bun install
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "yarn"
+      - run: yarn install
       - name: Lint & Sanity Checks
         run: |
-          bun lint
-          bun build:deps
-          bun x tsc --noEmit
+          yarn lint
+          yarn build:deps
+          tsc
       - name: Tests
         run: |
-          bun test
+          yarn test
       - name: Benchmarks
         run: |
-          bun benchmark
+          yarn benchmark
         # only run on pull requests
         if: github.event_name == 'pull_request'

@@ -10,8 +10,8 @@ import { selectConfiguration } from "@src/reducers/configuration/configuration-s
 import { selectFavorites } from "@src/reducers/favorites/favorites-slice";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { SiMatrix } from "react-icons/all";
 import { FaDiscord } from "react-icons/fa";
-import { SiMatrix } from "react-icons/si";
 
 const numberOfBuilds = 5;
 

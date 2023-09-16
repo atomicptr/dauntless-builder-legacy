@@ -30,13 +30,15 @@
             "vite/client",
             "vite-plugin-pwa/client",
             "node",
-            "bun-types",
-            "web"
+            "jest"
         ],
         "useDefineForClassFields": true
     },
     "include": [
         "src",
         "tests"
-    ]
+    ],
+    "ts-node": {
+        "esm": true
+    }
 }

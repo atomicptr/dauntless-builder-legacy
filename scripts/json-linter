@@ -4,11 +4,5 @@ if [[ -z $(command -v python) ]]; then
   exit 1
 fi
 
-if [[ -z $(command -v pipx) ]]; then
-  echo "ERR: pipx is required!"
-  echo "Install via: pip install pipx"
-  exit 1
-fi
-
-python -m pipx install json-linter -U > /dev/null
-pipx run json-linter ${@}
+python -m pip install json-linter -U > /dev/null
+python -m json_linter ${@}

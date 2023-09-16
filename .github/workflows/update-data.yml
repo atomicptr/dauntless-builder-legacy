@@ -12,11 +12,12 @@ jobs:
     if: github.repository == 'atomicptr/dauntless-builder'
     steps:
       - uses: actions/checkout@v3
-      - run: |
-          curl -fsSL https://bun.sh/install | bash
-          export PATH="~/.bun/bin:$PATH"
-          bun install
-      - run: bun build:deps
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "yarn"
+      - run: yarn install
+      - run: yarn build:deps
         env:
           CROWDIN_TOKEN: ${{ secrets.CROWDIN_TOKEN }}
           GOOGLE_SHEETS_APIKEY: ${{ secrets.GOOGLE_SHEETS_APIKEY }}

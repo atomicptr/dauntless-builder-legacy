@@ -22,16 +22,17 @@ We're using Crowdin for managing localizations: https://crowdin.com/project/daun
 Requirements:
 
 -   Linux / MacOS / WSL v2+, regular Windows is unsupported
--   Bun v1.0.x - https://bun.sh
+-   Node.js 18+ (Non LTS versions are unsupported)
+-   yarn package manager (install via `npm install -g yarn`)
 
 ```bash
 # Assumption: You have already cloned the repository and are inside the directory
 # Install dependencies
-$ bun install
+$ yarn
 # Build dependency data (item data, i18n files, about page stuff, etc.)
-$ bun run build:deps
+$ yarn build:deps
 # Run the development environment
-$ bun run dev
+$ yarn dev
 ```
 
 You should now have Dauntless Builder running on your system via http://localhost:3000

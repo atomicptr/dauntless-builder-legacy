@@ -1,8 +1,8 @@
 import { WeaponType } from "@src/data/Weapon";
 import { findBuilds } from "@src/reducers/build-finder/find-builds";
-import Benchmark, { Event } from "benchmark";
+import { benchmarkSuite } from "jest-bench";
 
-const suites: { [name: string]: () => void } = {
+benchmarkSuite("findBuilds", {
     ["a random build test"]: () => {
         findBuilds(
             WeaponType.Repeater,
@@ -136,18 +136,4 @@ const suites: { [name: string]: () => void } = {
             },
         );
     },
-};
-
-const suite = new Benchmark.Suite();
-
-for (const suiteName in suites) {
-    suite.add(suiteName, suites[suiteName]);
-}
-
-/* eslint-disable no-console */
-suite.on("cycle", (ev: Event) => console.log("BENCH:\t", String(ev.target)));
-suite.on("error", console.error);
-suite.on("complete", () => console.log("BENCH: done"));
-
-console.log("dauntless-builder.com: Benchmark Tool - findBuilds");
-suite.run({ name: "findBuilds" });
+});

@@ -43,8 +43,8 @@ import { selectConfiguration } from "@src/reducers/configuration/configuration-s
 import { selectFavorites } from "@src/reducers/favorites/favorites-slice";
 import React, { ReactNode, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { SiMatrix } from "react-icons/all";
 import { FaDiscord, FaGithub } from "react-icons/fa";
-import { SiMatrix } from "react-icons/si";
 import { NavLink } from "react-router-dom";
 
 import { AppBar } from "./AppBar";

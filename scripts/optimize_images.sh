@@ -44,5 +44,4 @@ optimize_path ./public/assets/icons/perks
 optimize_path ./public/assets/icons/generic
 optimize_path ./public/assets/icons/omnicells
 optimize_path ./public/assets/icons/abilities
-find ./public/assets/favicons -name '*.png' -exec optipng -silent -O2 {} \;
 echo "...done"
