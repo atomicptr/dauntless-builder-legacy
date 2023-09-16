@@ -37,8 +37,5 @@
     "include": [
         "src",
         "tests"
-    ],
-    "ts-node": {
-        "esm": true
-    }
+    ]
 }
