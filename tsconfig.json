@@ -30,7 +30,8 @@
             "vite/client",
             "vite-plugin-pwa/client",
             "node",
-            "bun-types"
+            "bun-types",
+            "web",
         ],
         "useDefineForClassFields": true
     },

@@ -20,7 +20,7 @@ jobs:
         run: |
           bun lint
           bun build:deps
-          # bun x tsc # TODO: re-enable this
+          bun x tsc --noEmit
       - name: Tests
         run: |
           bun test
