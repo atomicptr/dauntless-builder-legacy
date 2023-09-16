@@ -12,8 +12,10 @@ jobs:
     if: github.repository == 'atomicptr/dauntless-builder'
     steps:
       - uses: actions/checkout@v3
-      - uses: antongolub/action-setup-bun@v1
-      - run: bun install
+      - run: |
+          curl -fsSL https://bun.sh/install | bash
+          export PATH="~/.bun/bin:$PATH"
+          bun install
       - run: bun build:deps
         env:
           CROWDIN_TOKEN: ${{ secrets.CROWDIN_TOKEN }}

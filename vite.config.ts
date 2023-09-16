@@ -1,12 +1,11 @@
 import react from "@vitejs/plugin-react";
 import { fileURLToPath } from "url";
 import { defineConfig } from "vite";
-import ViteFaviconsPlugin from "vite-plugin-favicon";
 import { VitePWA } from "vite-plugin-pwa";
 
 const maximumFileSizeToCacheInBytes = 5 * 1024 * 1024; // 5 MB
 
-export default defineConfig(({  command, mode }) => {
+export default defineConfig(({  mode }) => {
     const isDevMode = mode === "development";
 
     return {
@@ -77,18 +76,6 @@ export default defineConfig(({  command, mode }) => {
                     sourcemap: isDevMode,
                 }
             }),
-            command === "build"
-                ? ViteFaviconsPlugin({
-                    favicons: {
-                        appDescription: "Create and share Dauntless builds with your friends!",
-                        appName: "Dauntless Builder",
-                        appleStatusBarStyle: "black-translucent",
-                        background: "#121212",
-                        theme_color: "#272727",
-                    },
-                    logo: "public/assets/icon.png",
-                })
-                : undefined,
         ],
         resolve: {
             alias: {

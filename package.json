@@ -10,12 +10,13 @@
         "build": "bun build:deps && bun build:frontend",
         "build:deps": "bun ./builder/src/main.ts",
         "build:data": "bun build:deps --run data i18n build-finder-intermediate-data",
-        "build:frontend": "bun x vite build",
+        "build:frontend": "bunx --bun vite build",
+        "dev": "bunx --bun vite dev",
         "deploy": "./scripts/deploy.sh",
         "benchmark": "find . -name '*.bench.ts' -exec bun {} \\;",
-        "lint": "bun lint:json && bun x eslint .",
+        "lint": "bun lint:json && bunx eslint .",
         "lint:json": "scripts/json-linter -r src tsconfig.json .eslintrc",
-        "lint:fix": "prettier . --write && bun lint:fix:json && eslint . --fix",
+        "lint:fix": "prettier . --write && bun lint:fix:json && bunx eslint . --fix",
         "lint:fix:json": "bun lint:json --fix"
     },
     "dependencies": {
@@ -41,8 +42,7 @@
         "react-router-dom": "^6.15.0",
         "react-virtualized-auto-sizer": "^1.0.20",
         "react-window": "^1.8.9",
-        "ts-pattern": "^5.0.5",
-        "vite-plugin-favicon": "^1.0.8"
+        "ts-pattern": "^5.0.5"
     },
     "devDependencies": {
         "@crowdin/crowdin-api-client": "^1.24.0",
