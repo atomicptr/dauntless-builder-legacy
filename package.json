@@ -11,7 +11,7 @@
         "build:deps": "bun ./builder/src/main.ts",
         "build:data": "bun build:deps --run data i18n build-finder-intermediate-data",
         "build:frontend": "bun x vite build",
-        "deploy": "bun run build && ./scripts/deploy.sh",
+        "deploy": "./scripts/deploy.sh",
         "benchmark": "find . -name '*.bench.ts' -exec bun {} \\;",
         "lint": "bun lint:json && bun x eslint .",
         "lint:json": "scripts/json-linter -r src tsconfig.json .eslintrc",
