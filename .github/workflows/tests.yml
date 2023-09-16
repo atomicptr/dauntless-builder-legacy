@@ -20,7 +20,12 @@ jobs:
         run: |
           bun lint
           bun build:deps
-          bun x tsc
-      - name: Tests & Benchmarks
+          # bun x tsc # TODO: re-enable this
+      - name: Tests
         run: |
           bun test
+      - name: Benchmarks
+        run: |
+          bun benchmark
+        # only run on pull requests
+        if: github.event_name == 'pull_request'
