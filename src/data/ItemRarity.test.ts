@@ -1,5 +1,6 @@
 import { findArmourByName, findWeaponByName } from "@src/data/BuildModel";
 import { isExotic } from "@src/data/ItemRarity";
+import { describe, expect, it } from "bun:test";
 
 describe("is item exotic", () => {
     it("Recruits Axe should not be exotic", () => {

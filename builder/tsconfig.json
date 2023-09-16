@@ -1,12 +1,8 @@
 {
     "compilerOptions": {
         "paths": {},
-        "types": ["node", "jest"]
+        "types": ["node", "bun-types"]
     },
     "extends": "../tsconfig.json",
-    "include": ["src"],
-    "ts-node": {
-        "esm": true,
-        "experimentalSpecifierResolution": "node"
-    }
+    "include": ["src"]
 }
