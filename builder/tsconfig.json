@@ -4,5 +4,5 @@
         "types": ["node", "bun-types"]
     },
     "extends": "../tsconfig.json",
-    "include": ["src"],
+    "include": ["src"]
 }
