@@ -2,8 +2,11 @@
 set -ex
 
 # install and setup bun
-curl -fsSL https://bun.sh/install | bash
-export PATH="/opt/buildhome/.bun/bin:$PATH"
+if [[ ! $(command -v bun) ]]; then
+	curl -fsSL https://bun.sh/install | bash
+	export PATH="/opt/buildhome/.bun/bin:~/.bun/bin:$PATH"
+fi
+
 bun --version
 
 # install dependencies and build project
