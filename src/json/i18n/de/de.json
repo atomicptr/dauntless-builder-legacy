@@ -194,7 +194,7 @@
                     },
                     "Exotics": {
                         "description": "Builds that use the Exotic Weapons and Helmets. Off-meta and generally worse than using regular weapons, with the exception of Molten Edict.",
-                        "name": "Exotics"
+                        "name": "Exotische"
                     },
                     "Iceborne": {
                         "description": "Eisgeboren gibt dir Lebensraub und Schadensreduktion, je weniger Gesundheit du hast. Die aktive Fähigkeit gibt dir Hyperrüstung und noch mehr Lebensraub, und sie fügt bei maximaler Gesundheit mehr Schaden zu.",
@@ -215,7 +215,7 @@
             "subcategories": {
                 "The Hunger": "Der Hunger",
                 "heroics": "Heroics",
-                "legendaries": "Legendaries",
+                "legendaries": "Legendäre",
                 "preEsca": "Pre-Escalation"
             },
             "title": "Meta Builds",
