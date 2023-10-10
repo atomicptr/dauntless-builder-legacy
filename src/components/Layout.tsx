@@ -9,6 +9,7 @@ import {
     ManageSearch,
     Menu,
     Settings,
+    Shield,
     Stars,
 } from "@mui/icons-material";
 import {
@@ -30,10 +31,13 @@ import {
     Typography,
     useTheme,
 } from "@mui/material";
+import AdSpace from "@src/components/AdSpace";
+import AdSpaceFloating from "@src/components/AdSpaceFloating";
 import BuildMenu from "@src/components/BuildMenu";
 import LinkBox from "@src/components/LinkBox";
 import { drawerWidth } from "@src/components/theme";
 import { crowdinLink, discordServerUrl, githubUrl, xTwitterUrl } from "@src/constants";
+import Tracking from "@src/components/Tracking";
 import dauntlessBuilderData from "@src/data/Data";
 import useDevMode from "@src/hooks/dev-mode";
 import useIsMobile from "@src/hooks/is-mobile";
@@ -76,6 +80,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         { icon: <ManageSearch />, link: "/b/finder", text: t("drawer.build-finder") },
         { icon: <Stars />, link: "/b/meta", text: t("drawer.meta-builds") },
         { icon: <Info />, link: "/about", text: t("drawer.about") },
+        { icon: <Shield />, link: "/privacy", text: t("drawer.privacy") },
         { icon: <Settings />, link: "/settings", text: t("drawer.settings") },
     ];
 
@@ -178,12 +183,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         </ListItem>
                     ))}
                 </List>
+
+                {isMobile ? <Box sx={{ flexGrow: 10 }} /> : <AdSpace />}
+
                 <Box
                     sx={{
-                        bottom: 0,
-                        marginTop: "auto",
+                        marginTop: 1,
                         pb: 0,
-                        position: "fixed",
                         textAlign: "center",
                         width: drawerWidth,
                     }}
@@ -255,6 +261,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     <Box>{children}</Box>
                 </ErrorBoundary>
             </Container>
+
+            <Tracking />
+            <AdSpaceFloating />
         </Box>
     );
 };
