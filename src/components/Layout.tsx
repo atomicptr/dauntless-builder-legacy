@@ -33,7 +33,7 @@ import {
 import BuildMenu from "@src/components/BuildMenu";
 import LinkBox from "@src/components/LinkBox";
 import { drawerWidth } from "@src/components/theme";
-import { crowdinLink, discordServerUrl, githubUrl, matrixChannelUrl } from "@src/constants";
+import { crowdinLink, discordServerUrl, githubUrl, matrixChannelUrl, xTwitterUrl } from "@src/constants";
 import dauntlessBuilderData from "@src/data/Data";
 import useIsMobile from "@src/hooks/is-mobile";
 import useIsLightMode from "@src/hooks/light-mode";
@@ -44,6 +44,7 @@ import { selectFavorites } from "@src/reducers/favorites/favorites-slice";
 import React, { ReactNode, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaDiscord, FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { SiMatrix } from "react-icons/si";
 import { NavLink } from "react-router-dom";
 
@@ -225,6 +226,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                                 title={t("misc.discord-server")}
                             >
                                 <FaDiscord />
+                            </IconButton>
+                            <IconButton
+                                component="a"
+                                href={xTwitterUrl}
+                                target="_blank"
+                                title={t("misc.x-twitter")}
+                            >
+                                <FaXTwitter />
                             </IconButton>
                         </ListItem>
                     </List>
