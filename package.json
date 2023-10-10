@@ -8,7 +8,7 @@
     "private": true,
     "scripts": {
         "build": "yarn build:deps && yarn build:frontend",
-        "build:deps": "ts-node -P ./builder/tsconfig.json ./builder/src/main.ts",
+        "build:deps": "tsx ./builder/tsconfig.json ./builder/src/main.ts",
         "build:data": "yarn build:deps --run data i18n build-finder-intermediate-data",
         "build:frontend": "vite build",
         "dev": "vite dev",
@@ -22,9 +22,7 @@
         "lint:fix:json": "yarn lint:json --fix"
     },
     "engines": {
-        "node": ">=18.0.0 && <20.0.0",
-        "npm": "please-use-yarn",
-        "yarn": ">=1.20.0"
+        "node": ">=18.0.0"
     },
     "dependencies": {
         "@emotion/react": "^11.10.6",
@@ -91,7 +89,7 @@
         "queue-promise": "^2.2.1",
         "sort-json": "^2.0.1",
         "ts-jest": "^29",
-        "ts-node": "^10.9.1",
+        "tsx": "^3.13.0",
         "typescript": "^5.0.2",
         "vite": "^4.2.1",
         "vite-plugin-favicon2": "^1.1.5",

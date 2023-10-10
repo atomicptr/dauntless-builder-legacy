@@ -23,16 +23,15 @@ Requirements:
 
 -   Linux / MacOS / WSL v2+, regular Windows is unsupported
 -   Node.js 18+ (Non LTS versions are unsupported)
--   yarn package manager (install via `npm install -g yarn`)
 
 ```bash
 # Assumption: You have already cloned the repository and are inside the directory
 # Install dependencies
-$ yarn
+$ npm install
 # Build dependency data (item data, i18n files, about page stuff, etc.)
-$ yarn build:deps
+$ npm run build:deps
 # Run the development environment
-$ yarn dev
+$ npm run dev
 ```
 
 You should now have Dauntless Builder running on your system via http://localhost:3000
