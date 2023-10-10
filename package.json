@@ -8,7 +8,7 @@
     "private": true,
     "scripts": {
         "build": "npm run build:deps && npm run build:frontend",
-        "build:deps": "tsx ./builder/tsconfig.json ./builder/src/main.ts",
+        "build:deps": "tsx --tsconfig ./builder/tsconfig.json ./builder/src/main.ts",
         "build:data": "npm run build:deps --run data i18n build-finder-intermediate-data",
         "build:frontend": "vite build",
         "dev": "vite dev",
