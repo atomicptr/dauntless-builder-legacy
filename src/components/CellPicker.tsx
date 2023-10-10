@@ -1,4 +1,4 @@
-import { Box, Card, CardActionArea, CardMedia, Typography, useTheme } from "@mui/material";
+import { Box, Card, CardActionArea, CardMedia, Typography } from "@mui/material";
 import { itemPickerDefaultImageSize, rarityColor } from "@src/components/theme";
 import { findCellByVariantName } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
@@ -21,7 +21,6 @@ interface CellPickerProps {
 const imageSize = itemPickerDefaultImageSize;
 
 const CellPicker: React.FC<CellPickerProps> = ({ variant, index, itemType, cellType, onClicked }) => {
-    const theme = useTheme();
     const { t } = useTranslation();
     const isMobile = useIsMobile();
     const isLightMode = useIsLightMode();
@@ -34,15 +33,14 @@ const CellPicker: React.FC<CellPickerProps> = ({ variant, index, itemType, cellT
         variant === null
             ? { filter: isLightMode ? "invert(100%)" : undefined }
             : {
-                background: rarityColor[cell?.variants[variant]?.rarity ?? ItemRarity.Uncommon].main,
-                borderRadius: "200px",
-                padding: 1,
-            };
+                  background: rarityColor[cell?.variants[variant]?.rarity ?? ItemRarity.Uncommon].main,
+                  borderRadius: "200px",
+                  padding: 1,
+              };
 
     return (
         <Card
             sx={{
-                mb: `${theme.spacing(1)} !important`,
                 userSelect: "none",
                 width: isMobile ? undefined : imageSize * 4,
             }}

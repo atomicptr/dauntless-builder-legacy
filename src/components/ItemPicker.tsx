@@ -124,7 +124,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
             <Stack
                 direction={isMobile ? "column" : "row"}
                 spacing={isMobile ? 0 : 1}
-                sx={{ width: "100%" }}
+                sx={{ mb: 1, width: "100%" }}
             >
                 <Card sx={{ flexGrow: 5, mb: 1, userSelect: "none", width: "100%" }}>
                     <CardActionArea
@@ -165,7 +165,6 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                                 <EventMarker item={item as Weapon | Armour} />
                                             </Box>
                                         )}
-
                                         {t(itemTranslationIdentifier(type, item.name, "name"))}
                                         {isPowerSurged && canBePowerSurged ? <Star sx={{ ml: 1 }} /> : null}
                                     </Typography>

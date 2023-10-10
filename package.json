@@ -9,17 +9,17 @@
     "scripts": {
         "build": "npm run build:deps && npm run build:frontend",
         "build:deps": "tsx --tsconfig ./builder/tsconfig.json ./builder/src/main.ts",
-        "build:data": "npm run build:deps --run data i18n build-finder-intermediate-data",
+        "build:data": "npm run build:deps -- --run data i18n build-finder-intermediate-data",
         "build:frontend": "vite build",
         "dev": "vite dev",
         "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
         "bench": "npm run benchmark",
-        "benchmark": "node --experimental-vm-modules ./node_modules/.bin/jest --projects jest-benchmark.config.ts",
+        "benchmark": "npm run test -- --projects jest-benchmark.config.ts",
         "deploy": "npm run build && ./scripts/deploy.sh",
         "lint": "npm run lint:json && eslint .",
         "lint:json": "scripts/json-linter -r src tsconfig.json .eslintrc",
         "lint:fix": "prettier . --write && npm run lint:fix:json && eslint . --fix",
-        "lint:fix:json": "npm run lint:json --fix"
+        "lint:fix:json": "npm run lint:json -- --fix"
     },
     "engines": {
         "node": ">=18.0.0",

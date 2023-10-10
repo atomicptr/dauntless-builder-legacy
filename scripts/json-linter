@@ -4,5 +4,12 @@ if [[ -z $(command -v python) ]]; then
   exit 1
 fi
 
-python -m pip install json-linter -U > /dev/null
-python -m json_linter ${@}
+if [[ -z $(command -v pipx) ]]; then
+  python -m pip install pipx
+fi
+
+if [[ -z $(command -v json-linter) ]]; then
+  python -m pipx install json-linter
+fi
+
+json-linter ${@}
