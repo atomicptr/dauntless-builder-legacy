@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import glob from "glob";
+import { glob } from "glob";
 import yaml from "js-yaml";
 import md5 from "md5";
 import path from "path";

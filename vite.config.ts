@@ -1,7 +1,7 @@
 import react from "@vitejs/plugin-react";
 import { fileURLToPath } from "url";
 import { defineConfig } from "vite";
-import ViteFaviconsPlugin from "vite-plugin-favicon2";
+import ViteFaviconsPlugin from "vite-plugin-favicon";
 import { VitePWA } from "vite-plugin-pwa";
 
 const maximumFileSizeToCacheInBytes = 5 * 1024 * 1024; // 5 MB

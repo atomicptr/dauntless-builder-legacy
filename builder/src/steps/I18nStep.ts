@@ -81,10 +81,11 @@ export class I18nStep extends WithStepLogger implements Step {
 
                         if (ue.description) {
                             const firstItem =
-                                Object.values(items as GenericEntity[]).find(item =>
-                                    item.unique_effects?.find(
-                                        uniqueEffect => uniqueEffect.description === ue.description,
-                                    ),
+                                Object.values(items as GenericEntity[]).find(
+                                    item =>
+                                        item.unique_effects?.find(
+                                            uniqueEffect => uniqueEffect.description === ue.description,
+                                        ),
                                 ) ?? item;
                             const firstIndex = Object.values(firstItem.unique_effects).findIndex(
                                 uniqueEffect => (uniqueEffect as GenericEntity).description === ue.description,
