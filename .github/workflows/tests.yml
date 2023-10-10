@@ -17,18 +17,18 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: "yarn"
-      - run: yarn install
+          cache: "npm"
+      - run: npm install
       - name: Lint & Sanity Checks
         run: |
-          yarn lint
-          yarn build:deps
+          npm run lint
+          npm run build:deps
           tsc
       - name: Tests
         run: |
-          yarn test
+          npm run test
       - name: Benchmarks
         run: |
-          yarn benchmark
+          npm run benchmark
         # only run on pull requests
         if: github.event_name == 'pull_request'

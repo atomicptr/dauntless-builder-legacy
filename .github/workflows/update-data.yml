@@ -15,9 +15,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: "yarn"
-      - run: yarn install
-      - run: yarn build:deps
+          cache: "npm"
+      - run: npm install
+      - run: npm run build:deps
         env:
           CROWDIN_TOKEN: ${{ secrets.CROWDIN_TOKEN }}
           GOOGLE_SHEETS_APIKEY: ${{ secrets.GOOGLE_SHEETS_APIKEY }}
