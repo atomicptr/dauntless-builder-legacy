@@ -11,6 +11,11 @@ const Privacy: React.FC = () => {
             <PageTitle title={t("pages.privacy.title")} />
 
             <Typography>Lorem ipsum dolor sit amet</Typography>
+
+            <PageTitle title={t("pages.privacy.netlify")} />
+            <PageTitle title={t("pages.privacy.cloudflare")} />
+            <PageTitle title={t("pages.privacy.google-analytics")} />
+            <PageTitle title={t("pages.privacy.playwire")} />
         </Box>
     );
 };
