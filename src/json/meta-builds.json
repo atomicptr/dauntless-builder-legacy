@@ -15,6 +15,12 @@
                     "vsElement": "Blaze"
                 },
                 {
+                    "buildId": "Brf8TNOC3C1Ztp6sdcECJTWdu0eukC3oS7PiVCYmuBktJCBXinpuOCNFgSJKu3",
+                    "subcategory": null,
+                    "title": "Urska (Wülf)",
+                    "vsElement": "Blaze"
+                },
+                {
                     "buildId": "7xfVTj7CKCbeU4AsrcYCnTgpFK8i8Cp8hmAfWCdmsmvTaC8FBWSvCe5i7S3Psk",
                     "subcategory": null,
                     "title": "Urska (Wülf) Wound",
@@ -22,6 +28,12 @@
                 },
                 {
                     "buildId": "jJfvTXAfXC1VtXwCbcjC4TvMFkWiaCqNuALUvC2Fa3cgCd8CKEsACxQirSOEsj",
+                    "subcategory": null,
+                    "title": "Urska (Frostwülf)",
+                    "vsElement": "Blaze"
+                },
+                {
+                    "buildId": "wKfQTgQf4CnNiAQfzcVUZTb6ux0iaCgPFzkcvC6EFELTeCJXFqEu5C4FoSwQFz",
                     "subcategory": null,
                     "title": "Urska (Frostwülf)",
                     "vsElement": "Blaze"
@@ -57,6 +69,12 @@
                     "vsElement": "Frost"
                 },
                 {
+                    "buildId": "gxfJTM4C2CJ0H5EIWc0CWTAhOgiLCeAfpwI7C3zTxBT4CJKt0eImC8bFmSmqTP",
+                    "subcategory": null,
+                    "title": "Torg (Hellion)",
+                    "vsElement": "Frost"
+                },
+                {
                     "buildId": "dJfvTawhgCRyTLrt8cNCwTNhBmiACzaHjxfMCBPC3wUjCkdijguwCQjTyS2ATj",
                     "subcategory": null,
                     "title": "Torg (Hellion) Wound",
@@ -64,6 +82,12 @@
                 },
                 {
                     "buildId": "axfWTxNsOCKVimQijc0CgTQSjYi3C45cdkipCAbT7U2CjmHztnCkji7SMRtV",
+                    "subcategory": null,
+                    "title": "Torg (Hellion)",
+                    "vsElement": "Frost"
+                },
+                {
+                    "buildId": "mNf6TKKtjCPJHWeFXcWUETYf7bCpCOxTa8cqCNkUXrTBCL2TXkHaCeasrSKpf2",
                     "subcategory": null,
                     "title": "Torg (Hellion)",
                     "vsElement": "Frost"
@@ -99,6 +123,12 @@
                     "vsElement": "Shock"
                 },
                 {
+                    "buildId": "axfWTxLiOCWPHpJHjc0CgT8CjYi3Cp2HdkipCAbTbaT2Cq4izRunCvOc7SMRtV",
+                    "subcategory": null,
+                    "title": "Agarus (Kharabak)",
+                    "vsElement": "Shock"
+                },
+                {
                     "buildId": "JjfoT7dFxCM6idEf4ceCJTYCpaiJCOmTKOfnCodsRNTqCOJIjOuJCA3ToSwMFN",
                     "subcategory": null,
                     "title": "Agarus (Khar) Wound",
@@ -106,6 +136,12 @@
                 },
                 {
                     "buildId": "YwfzTb4ugC3OTJgCRcECKTLs27fJCNLCyJi0CxqI8eU0CvAI3QuxCxNioSKrfX",
+                    "subcategory": null,
+                    "title": "Agarus (Kharabak)",
+                    "vsElement": "Shock"
+                },
+                {
+                    "buildId": "wKfQTgMC4CXrHAQfzcVUZTQTx0iaCgPFzkcvC6EFELTeCJXFqEu5CpmioSwQFz",
                     "subcategory": null,
                     "title": "Agarus (Kharabak)",
                     "vsElement": "Shock"
@@ -147,6 +183,12 @@
                     "vsElement": "Terra"
                 },
                 {
+                    "buildId": "JjfoTresxCR2cdEf4ceCJTaPcpaiJCOmTKOfnCodsRNTqCOJIjOuJCA3ToSwMFN",
+                    "subcategory": null,
+                    "title": "Malk (Sahvyt) Wound",
+                    "vsElement": "Terra"
+                },
+                {
                     "buildId": "XafXTEgtYCvqHXgCEcAC5TbnUrpi7CKYFz1iJC1niLgc3CR0c8OU4CA5uJSoBsY",
                     "subcategory": null,
                     "title": "Malk (Sahvyt)",
@@ -156,6 +198,12 @@
                     "buildId": "R4f8Tmbf7CPQH54IecMUvT5LSEgibCaVizdcZC6bf06fyCBNs2udCV7tLSW1uE",
                     "subcategory": null,
                     "title": "Malk (Sahvyt)",
+                    "vsElement": "Terra"
+                },
+                {
+                    "buildId": "VafqTnqcrCwZi2QCwcvupTbMt3wczCX3cdpfBC0pcaLTbCrNijNuMC30TPSqviY",
+                    "subcategory": null,
+                    "title": "Malk (Sahvyt) Wound",
                     "vsElement": "Terra"
                 },
                 {
@@ -189,6 +237,12 @@
                     "vsElement": "Radiant"
                 },
                 {
+                    "buildId": "YwfzTb2HgCvmIJLFRcECKTkJF27fJCNLCyrf0C0pUe4T0CZQu3whxC1qFoSKrfX",
+                    "subcategory": null,
+                    "title": "Thrax (Rift) Wound",
+                    "vsElement": "Radiant"
+                },
+                {
                     "buildId": "oNfqTN1fwCm1HgoSPcPCQTNaCnRi4C51UOqUxCkLiLdcXC87UYuyC17fNSYnfM",
                     "subcategory": null,
                     "title": "Thrax (Rift)",
@@ -198,6 +252,12 @@
                     "buildId": "mNf6TKvijCPJHWzCXcWUETXzt7bCpCOxTgPIqCxgieXcBCzOSvuaCBoTrSKpf2",
                     "subcategory": null,
                     "title": "Thrax (Rift)",
+                    "vsElement": "Radiant"
+                },
+                {
+                    "buildId": "EQfPTjwSNC4zSbrubSgu6TEWtadiJCPeHOkfoC7viZrTbCLquBquBCrZhLSdYhd",
+                    "subcategory": null,
+                    "title": "Thrax (Rift) Wound",
                     "vsElement": "Radiant"
                 },
                 {
@@ -336,6 +396,12 @@
                 },
                 {
                     "buildId": "2Pf4TmvugCYPTMxS8cNteTKu0OupCKYHZLiqCAOT4atkCxMiv3ueCLVcaSXYS3",
+                    "subcategory": null,
+                    "title": "Torg (Hellion)",
+                    "vsElement": "Frost"
+                },
+                {
+                    "buildId": "oNfqTNmTwCm1HgpuPcPCQTyhnRi4C51URjixCWosd2TXCrgid7CyC1kFNSYnfe",
                     "subcategory": null,
                     "title": "Torg (Hellion)",
                     "vsElement": "Frost"
@@ -2866,7 +2932,7 @@
                     "vsElement": "Shock"
                 },
                 {
-                    "buildId": "8MfgTj4iOCyLu0vHoUytQTRVi1kSpC8VI7zSeC2EuVZTYCn7s2uMCYPcjSWkcY",
+                    "buildId": "xgfJT5WubCEjHr8IdUwt8TQ1syQizCLrUq1cxCRPUM1TkCZwsNu5CMaUJSnXix",
                     "subcategory": null,
                     "title": "Malk (Sahvyt)",
                     "vsElement": "Terra"
