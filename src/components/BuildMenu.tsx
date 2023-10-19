@@ -1,5 +1,6 @@
 import { Bookmark, BookmarkBorder, ContentCopy, Undo } from "@mui/icons-material";
 import { Fab, IconButton, useTheme } from "@mui/material";
+import { adSpaceMobileBannerHeight } from "@src/components/AdSpaceFloating";
 import InputDialog from "@src/components/InputDialog";
 import useIsMobile from "@src/hooks/is-mobile";
 import { buildModelView, lastSelectedBuildModelView } from "@src/state/build";
@@ -54,6 +55,8 @@ const BuildMenu: React.FC = () => {
         setInputDialogOpen(false);
     };
 
+    const adsEnabled = true;
+
     return (
         <>
             {isUserEditedBuild ? null : (
@@ -93,7 +96,7 @@ const BuildMenu: React.FC = () => {
                         color="primary"
                         onClick={handleCopyToClipboardClicked}
                         sx={{
-                            bottom: theme.spacing(2),
+                            bottom: adsEnabled ? `${adSpaceMobileBannerHeight}px` : theme.spacing(2),
                             position: "fixed",
                             right: theme.spacing(3),
                         }}

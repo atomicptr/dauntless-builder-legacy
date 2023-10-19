@@ -32,9 +32,10 @@ import {
     useTheme,
 } from "@mui/material";
 import AdSpace from "@src/components/AdSpace";
-import AdSpaceFloating from "@src/components/AdSpaceFloating";
+import AdSpaceFloating, { adSpaceRightSideMinSize } from "@src/components/AdSpaceFloating";
 import BuildMenu from "@src/components/BuildMenu";
 import LinkBox from "@src/components/LinkBox";
+import Spacer from "@src/components/Spacer";
 import { drawerWidth } from "@src/components/theme";
 import { crowdinLink, discordServerUrl, githubUrl, xTwitterUrl } from "@src/constants";
 import Tracking from "@src/components/Tracking";
@@ -43,6 +44,7 @@ import useDevMode from "@src/hooks/dev-mode";
 import useIsMobile from "@src/hooks/is-mobile";
 import { currentLanguage, getNativeLanguageName, isBetaLanguage, Language } from "@src/i18n";
 import { favoritesView } from "@src/state/favorites";
+import useWindowSize from "@src/hooks/window-size";
 import log from "@src/utils/logger";
 import { useAtomValue } from "jotai";
 import React, { ReactNode, useState } from "react";
@@ -64,6 +66,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     const theme = useTheme();
 
     const isMobile = useIsMobile();
+    const { width } = useWindowSize();
     const [open, setOpen] = useState(false);
     const { t } = useTranslation();
     const devMode = useDevMode();
@@ -83,6 +86,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         { icon: <Shield />, link: "/privacy", text: t("drawer.privacy") },
         { icon: <Settings />, link: "/settings", text: t("drawer.settings") },
     ];
+
+    const showLeftSideAdSpace = (width - theme.breakpoints.values.xl) * 0.5 <= adSpaceRightSideMinSize;
 
     return (
         <Box sx={{ display: "flex" }}>
@@ -184,7 +189,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     ))}
                 </List>
 
-                {isMobile ? <Box sx={{ flexGrow: 10 }} /> : <AdSpace />}
+                {isMobile ? <Spacer /> : showLeftSideAdSpace ? <AdSpace /> : <Spacer />}
 
                 <Box
                     sx={{
