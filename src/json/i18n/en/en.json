@@ -45,6 +45,7 @@
         "dauntless-version": "Dauntless v{{version}}",
         "discord-server": "Dauntless Builder Discord Server",
         "github-repository": "Github Repository",
+        "only-english": "This part is only available in English.",
         "patch-url": "https://playdauntless.com/patch-notes/{{version}}",
         "something-went-wrong": "Something went wrong! Please send the error log below to me in our Discord and try to reload the website. Thank you very much!",
         "x-twitter": "Dauntless Builder on X.com"
@@ -233,7 +234,8 @@
             "title": "Create a new build"
         },
         "privacy": {
-            "title": "Privacy"
+            "title": "Privacy",
+            "title-alt": "Privacy Policy for Dauntless Builder"
         },
         "settings": {
             "community-language": "This language is not officially supported by Dauntless, but members of our community decided to add a translation for Dauntless Builder regardless.",
