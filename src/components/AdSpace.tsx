@@ -4,6 +4,10 @@ import { Box, useTheme } from "@mui/material";
 const AdSpace = () => {
     const theme = useTheme();
 
+    if (!DB_ENABLE_ADS) {
+        return null;
+    }
+
     if (DB_DEVMODE) {
         return (
             <Box

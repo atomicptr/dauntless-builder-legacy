@@ -87,7 +87,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         { icon: <Settings />, link: "/settings", text: t("drawer.settings") },
     ];
 
-    const showLeftSideAdSpace = (width - theme.breakpoints.values.xl) * 0.5 <= adSpaceRightSideMinSize;
+    const showLeftSideAdSpace = DB_ENABLE_ADS && (width - theme.breakpoints.values.xl) * 0.5 <= adSpaceRightSideMinSize;
 
     return (
         <Box sx={{ display: "flex" }}>

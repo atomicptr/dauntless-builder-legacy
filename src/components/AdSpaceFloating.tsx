@@ -12,6 +12,10 @@ const AdSpaceFloating = () => {
     const isMobile = useIsMobile();
     const { width } = useWindowSize();
 
+    if (!DB_ENABLE_ADS) {
+        return null;
+    }
+
     const rightSideSpace = (width - theme.breakpoints.values.xl) * 0.5;
     const rightSideHasEnoughSpace = rightSideSpace > adSpaceRightSideMinSize;
 

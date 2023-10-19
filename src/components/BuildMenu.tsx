@@ -55,8 +55,6 @@ const BuildMenu: React.FC = () => {
         setInputDialogOpen(false);
     };
 
-    const adsEnabled = true;
-
     return (
         <>
             {isUserEditedBuild ? null : (
@@ -96,7 +94,7 @@ const BuildMenu: React.FC = () => {
                         color="primary"
                         onClick={handleCopyToClipboardClicked}
                         sx={{
-                            bottom: adsEnabled ? `${adSpaceMobileBannerHeight}px` : theme.spacing(2),
+                            bottom: DB_ENABLE_ADS ? `${adSpaceMobileBannerHeight}px` : theme.spacing(2),
                             position: "fixed",
                             right: theme.spacing(3),
                         }}

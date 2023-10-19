@@ -22,6 +22,7 @@ export default defineConfig(({ command, mode }) => {
         define: {
             DB_BUILD_TIME: Date.now(),
             DB_DEVMODE: isDevMode,
+            DB_ENABLE_ADS: process.env["DB_ENABLE_ADS"] === "true",
             DB_GA4_MEASUREMENT_ID: JSON.stringify(process.env["DB_GA4_MEASUREMENT_ID"]),
         },
         plugins: [
