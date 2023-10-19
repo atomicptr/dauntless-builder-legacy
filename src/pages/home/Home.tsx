@@ -3,7 +3,7 @@ import { Button, Grid, Stack, Typography } from "@mui/material";
 import BuildCard from "@src/components/BuildCard";
 import LinkBox from "@src/components/LinkBox";
 import PageTitle from "@src/components/PageTitle";
-import { crowdinLink, discordServerUrl, githubUrl, matrixChannelUrl } from "@src/constants";
+import { crowdinLink, discordServerUrl, githubUrl } from "@src/constants";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppSelector } from "@src/hooks/redux";
 import { selectConfiguration } from "@src/reducers/configuration/configuration-slice";
@@ -11,7 +11,6 @@ import { selectFavorites } from "@src/reducers/favorites/favorites-slice";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { FaDiscord } from "react-icons/fa";
-import { SiMatrix } from "react-icons/si";
 
 const numberOfBuilds = 5;
 
@@ -95,15 +94,6 @@ const Home: React.FC = () => {
                             variant={isMobile ? "outlined" : "text"}
                         >
                             {t("pages.home.links.github")}
-                        </Button>
-                        <Button
-                            component="a"
-                            href={matrixChannelUrl}
-                            startIcon={<SiMatrix />}
-                            target="_blank"
-                            variant={isMobile ? "outlined" : "text"}
-                        >
-                            {t("pages.home.links.matrix")}
                         </Button>
                         <Button
                             component="a"

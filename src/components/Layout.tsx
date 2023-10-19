@@ -33,7 +33,7 @@ import {
 import BuildMenu from "@src/components/BuildMenu";
 import LinkBox from "@src/components/LinkBox";
 import { drawerWidth } from "@src/components/theme";
-import { crowdinLink, discordServerUrl, githubUrl, matrixChannelUrl, xTwitterUrl } from "@src/constants";
+import { crowdinLink, discordServerUrl, githubUrl, xTwitterUrl } from "@src/constants";
 import dauntlessBuilderData from "@src/data/Data";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppSelector } from "@src/hooks/redux";
@@ -44,7 +44,6 @@ import React, { ReactNode, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { SiMatrix } from "react-icons/si";
 import { NavLink } from "react-router-dom";
 
 import { AppBar } from "./AppBar";
@@ -208,14 +207,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                                 title={t("misc.github-repository")}
                             >
                                 <FaGithub />
-                            </IconButton>
-                            <IconButton
-                                component="a"
-                                href={matrixChannelUrl}
-                                target="_blank"
-                                title={t("misc.matrix-channel")}
-                            >
-                                <SiMatrix />
                             </IconButton>
                             <IconButton
                                 component="a"

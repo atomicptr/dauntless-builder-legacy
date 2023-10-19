@@ -44,7 +44,8 @@
         "discord-server": "Dauntless Builder Discord Server",
         "github-repository": "Github Repository",
         "matrix-channel": "Dauntless Builder Matrix Server",
-        "patch-url": "https://playdauntless.com/patch-notes/{{version}}"
+        "patch-url": "https://playdauntless.com/patch-notes/{{version}}",
+        "x-tiwtter": "My X/Twitter"
     },
     "pages": {
         "404": {
@@ -105,8 +106,7 @@
             "links": {
                 "discord": "Discord",
                 "github": "Github",
-                "localize": "Help with localization",
-                "matrix": "Matrix"
+                "localize": "Help with localization"
             },
             "links-title": "Links",
             "localization-text": "Dauntless Builder now supports localizations, please head over to the Settings page and select your preferred language if it wasn't already picked up automatically! If that language is currently unsupported and you'd be interested in helping, please read the \"Contributing\" section below.",
