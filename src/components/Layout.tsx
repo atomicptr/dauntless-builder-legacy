@@ -31,15 +31,15 @@ import {
     Typography,
     useTheme,
 } from "@mui/material";
-import AdSpace from "@src/components/AdSpace";
+import AdSpace, { UnitType } from "@src/components/AdSpace";
 import AdSpaceFloating, { adSpaceRightSideMinSize } from "@src/components/AdSpaceFloating";
 import BuildMenu from "@src/components/BuildMenu";
 import LinkBox from "@src/components/LinkBox";
 import SomethingWentWrong from "@src/components/SometingWentWrong";
 import Spacer from "@src/components/Spacer";
 import { drawerWidth } from "@src/components/theme";
+import TrackingRampSetup from "@src/components/TrackingRampSetup";
 import { crowdinLink, discordServerUrl, githubUrl, xTwitterUrl } from "@src/constants";
-import Tracking from "@src/components/Tracking";
 import dauntlessBuilderData from "@src/data/Data";
 import useDevMode from "@src/hooks/dev-mode";
 import useIsMobile from "@src/hooks/is-mobile";
@@ -88,7 +88,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         { icon: <Settings />, link: "/settings", text: t("drawer.settings") },
     ];
 
-    const showLeftSideAdSpace = adsEnabled() && (width - theme.breakpoints.values.xl) * 0.5 <= adSpaceRightSideMinSize;
+    const showLeftSideAdSpace = adsEnabled && (width - theme.breakpoints.values.xl) * 0.5 <= adSpaceRightSideMinSize;
 
     return (
         <Box sx={{ display: "flex" }}>
@@ -190,7 +190,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     ))}
                 </List>
 
-                {isMobile ? <Spacer /> : showLeftSideAdSpace ? <AdSpace /> : <Spacer />}
+                {isMobile ? <Spacer /> : showLeftSideAdSpace ? <AdSpace unitType={UnitType.LeftRail} /> : <Spacer />}
 
                 <Box
                     sx={{
@@ -269,7 +269,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </ErrorBoundary>
             </Container>
 
-            <Tracking />
+            <TrackingRampSetup />
             <AdSpaceFloating />
         </Box>
     );

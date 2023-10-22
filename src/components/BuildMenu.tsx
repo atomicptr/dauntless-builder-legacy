@@ -95,7 +95,7 @@ const BuildMenu: React.FC = () => {
                         color="primary"
                         onClick={handleCopyToClipboardClicked}
                         sx={{
-                            bottom: adsEnabled() ? `${adSpaceMobileBannerHeight}px` : theme.spacing(2),
+                            bottom: adsEnabled ? `${adSpaceMobileBannerHeight}px` : theme.spacing(2),
                             position: "fixed",
                             right: theme.spacing(3),
                         }}

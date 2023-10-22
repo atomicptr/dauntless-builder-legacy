@@ -1,5 +1,5 @@
 import { Box, useTheme } from "@mui/material";
-import AdSpace from "@src/components/AdSpace";
+import AdSpace, { UnitType } from "@src/components/AdSpace";
 import useIsMobile from "@src/hooks/is-mobile";
 import useWindowSize from "@src/hooks/window-size";
 import { adsEnabled } from "@src/utils/env-tools";
@@ -13,7 +13,7 @@ const AdSpaceFloating = () => {
     const isMobile = useIsMobile();
     const { width } = useWindowSize();
 
-    if (!adsEnabled()) {
+    if (!adsEnabled) {
         return null;
     }
 
@@ -49,7 +49,7 @@ const AdSpaceFloating = () => {
 
     return (
         <Box sx={style}>
-            <AdSpace />
+            <AdSpace unitType={isMobile ? UnitType.BottomRail : UnitType.RightRail} />
         </Box>
     );
 };
