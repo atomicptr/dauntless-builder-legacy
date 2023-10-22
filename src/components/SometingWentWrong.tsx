@@ -1,10 +1,5 @@
 import { Download } from "@mui/icons-material";
-import {
-    Alert,
-    Box,
-    Button,
-    Card,
-} from "@mui/material";
+import { Alert, Box, Button, Card } from "@mui/material";
 import { downloadJsonObject } from "@src/utils/download-json";
 import log, { Logger } from "@src/utils/logger";
 import React from "react";

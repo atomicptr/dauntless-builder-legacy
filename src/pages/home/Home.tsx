@@ -27,8 +27,6 @@ const Home: React.FC = () => {
     const favorites = useAtomValue(favoritesView);
     const isMobile = useIsMobile();
 
-    throw Error("Yolo");
-
     return (
         <Grid
             container
