@@ -2,6 +2,7 @@ import { Box, useTheme } from "@mui/material";
 import AdSpace from "@src/components/AdSpace";
 import useIsMobile from "@src/hooks/is-mobile";
 import useWindowSize from "@src/hooks/window-size";
+import { adsEnabled } from "@src/utils/env-tools";
 import React from "react";
 
 export const adSpaceRightSideMinSize = 300;
@@ -12,7 +13,7 @@ const AdSpaceFloating = () => {
     const isMobile = useIsMobile();
     const { width } = useWindowSize();
 
-    if (!DB_ENABLE_ADS) {
+    if (!adsEnabled()) {
         return null;
     }
 

@@ -35,6 +35,7 @@ import AdSpace from "@src/components/AdSpace";
 import AdSpaceFloating, { adSpaceRightSideMinSize } from "@src/components/AdSpaceFloating";
 import BuildMenu from "@src/components/BuildMenu";
 import LinkBox from "@src/components/LinkBox";
+import SomethingWentWrong from "@src/components/SometingWentWrong";
 import Spacer from "@src/components/Spacer";
 import { drawerWidth } from "@src/components/theme";
 import { crowdinLink, discordServerUrl, githubUrl, xTwitterUrl } from "@src/constants";
@@ -45,6 +46,7 @@ import useIsMobile from "@src/hooks/is-mobile";
 import { currentLanguage, getNativeLanguageName, isBetaLanguage, Language } from "@src/i18n";
 import { favoritesView } from "@src/state/favorites";
 import useWindowSize from "@src/hooks/window-size";
+import { adsEnabled } from "@src/utils/env-tools";
 import log from "@src/utils/logger";
 import { useAtomValue } from "jotai";
 import React, { ReactNode, useState } from "react";
@@ -56,7 +58,6 @@ import { NavLink } from "react-router-dom";
 
 import { AppBar } from "./AppBar";
 import { DrawerHeader } from "./Drawer";
-import SomethingWentWrong from "./SomethingWentWrong";
 
 interface LayoutProps {
     children: ReactNode;
@@ -87,7 +88,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         { icon: <Settings />, link: "/settings", text: t("drawer.settings") },
     ];
 
-    const showLeftSideAdSpace = DB_ENABLE_ADS && (width - theme.breakpoints.values.xl) * 0.5 <= adSpaceRightSideMinSize;
+    const showLeftSideAdSpace = adsEnabled() && (width - theme.breakpoints.values.xl) * 0.5 <= adSpaceRightSideMinSize;
 
     return (
         <Box sx={{ display: "flex" }}>
@@ -242,6 +243,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     </List>
                 </Box>
             </Drawer>
+
             <Container maxWidth={"xl"}>
                 <DrawerHeader sx={{ marginBottom: "16px" }} />
 

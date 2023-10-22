@@ -14,6 +14,7 @@ import {
 import { buildIdRegex } from "@src/utils/build-id";
 import { defaultBuildName } from "@src/utils/default-build-name";
 import { useAtomValue, useSetAtom } from "jotai";
+import { adsEnabled } from "@src/utils/env-tools";
 import { useSnackbar } from "notistack";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -94,7 +95,7 @@ const BuildMenu: React.FC = () => {
                         color="primary"
                         onClick={handleCopyToClipboardClicked}
                         sx={{
-                            bottom: DB_ENABLE_ADS ? `${adSpaceMobileBannerHeight}px` : theme.spacing(2),
+                            bottom: adsEnabled() ? `${adSpaceMobileBannerHeight}px` : theme.spacing(2),
                             position: "fixed",
                             right: theme.spacing(3),
                         }}

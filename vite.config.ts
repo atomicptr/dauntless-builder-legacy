@@ -8,6 +8,30 @@ import { VitePWA } from "vite-plugin-pwa";
 
 const maximumFileSizeToCacheInBytes = 5 * 1024 * 1024; // 5 MB
 
+const env = (key: string, type: "string"|"bool" = "string") : string|null|boolean => {
+    let val = process.env[key];
+
+    if (type === "string") {
+        if (!val) {
+            return null;
+        }
+
+        return JSON.stringify(val);
+    }
+
+    if (type === "bool") {
+        if (!val) {
+            return false;
+        }
+
+        val = val.toLowerCase();
+
+        return val === "true" || val === "1" || val === "on" || val === "yes";
+    }
+
+    throw Error("Invalid argument for type");
+};
+
 export default defineConfig(({ command, mode }) => {
     const isDevMode = mode === "development";
 
@@ -22,8 +46,10 @@ export default defineConfig(({ command, mode }) => {
         define: {
             DB_BUILD_TIME: Date.now(),
             DB_DEVMODE: isDevMode,
-            DB_ENABLE_ADS: process.env["DB_ENABLE_ADS"] === "true",
-            DB_GA4_MEASUREMENT_ID: JSON.stringify(process.env["DB_GA4_MEASUREMENT_ID"]),
+            DB_ENABLE_ADS: env("DB_ENABLE_ADS", "bool"),
+            DB_GA4_MEASUREMENT_ID:env("DB_GA4_MEASUREMENT_ID"),
+            DB_PW_PUBLISHER_ID: env("DB_PW_PUBLISHER_ID"),
+            DB_PW_WEBSITE_ID: env("DB_PW_WEBSITE_ID"),
         },
         plugins: [
             react({ babel: { plugins: [jotaiDebugLabel, jotaiReactRefresh] } }),

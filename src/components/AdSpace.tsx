@@ -1,10 +1,11 @@
 import { FeaturedVideo } from "@mui/icons-material";
 import { Box, useTheme } from "@mui/material";
+import { adsEnabled } from "@src/utils/env-tools";
 
 const AdSpace = () => {
     const theme = useTheme();
 
-    if (!DB_ENABLE_ADS) {
+    if (!adsEnabled()) {
         return null;
     }
 
