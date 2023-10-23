@@ -1,4 +1,6 @@
 import react from "@vitejs/plugin-react";
+import jotaiDebugLabel from "jotai/babel/plugin-debug-label";
+import jotaiReactRefresh from "jotai/babel/plugin-react-refresh";
 import { fileURLToPath } from "url";
 import { defineConfig } from "vite";
 import ViteFaviconsPlugin from "vite-plugin-favicon";
@@ -22,7 +24,7 @@ export default defineConfig(({ command, mode }) => {
             DB_DEVMODE: isDevMode,
         },
         plugins: [
-            react(),
+            react({ babel: { plugins: [jotaiDebugLabel, jotaiReactRefresh] } }),
             VitePWA({
                 includeAssets: [
                     // only install app critical icons
