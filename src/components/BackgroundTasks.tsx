@@ -1,6 +1,7 @@
 import { BuildModel } from "@src/data/BuildModel";
+import useDevMode from "@src/hooks/dev-mode";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
-import { selectConfiguration, setDevMode } from "@src/reducers/configuration/configuration-slice";
+import { setDevMode } from "@src/reducers/configuration/configuration-slice";
 import { addFavorite, isBuildInFavorites, selectFavorites } from "@src/reducers/favorites/favorites-slice";
 import log, { LogLevel } from "@src/utils/logger";
 import React, { useEffect } from "react";
@@ -8,7 +9,7 @@ import React, { useEffect } from "react";
 const BackgroundTasks: React.FC = () => {
     const dispatch = useAppDispatch();
     const favorites = useAppSelector(selectFavorites);
-    const configuration = useAppSelector(selectConfiguration);
+    const devMode = useDevMode();
 
     useEffect(() => {
         // import old favorites
@@ -41,8 +42,8 @@ const BackgroundTasks: React.FC = () => {
     }, [dispatch, favorites]);
 
     useEffect(() => {
-        log.setLogLevel(configuration.devMode ? LogLevel.Debug : LogLevel.Info);
-    }, [configuration.devMode]);
+        log.setLogLevel(devMode ? LogLevel.Debug : LogLevel.Info);
+    }, [devMode]);
 
     return null;
 };

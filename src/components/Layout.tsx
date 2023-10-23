@@ -35,10 +35,10 @@ import LinkBox from "@src/components/LinkBox";
 import { drawerWidth } from "@src/components/theme";
 import { crowdinLink, discordServerUrl, githubUrl, xTwitterUrl } from "@src/constants";
 import dauntlessBuilderData from "@src/data/Data";
+import useDevMode from "@src/hooks/dev-mode";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppSelector } from "@src/hooks/redux";
 import { currentLanguage, getNativeLanguageName, isBetaLanguage, Language } from "@src/i18n";
-import { selectConfiguration } from "@src/reducers/configuration/configuration-slice";
 import { selectFavorites } from "@src/reducers/favorites/favorites-slice";
 import log from "@src/utils/logger";
 import React, { ReactNode, useState } from "react";
@@ -62,7 +62,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     const isMobile = useIsMobile();
     const [open, setOpen] = useState(false);
     const { t } = useTranslation();
-    const configuration = useAppSelector(selectConfiguration);
+    const devMode = useDevMode();
 
     const handleDrawerOpen = () => setOpen(true);
     const handleDrawerClose = () => setOpen(false);
@@ -121,7 +121,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         {t("app-name")}
                     </Typography>
 
-                    {configuration.devMode ? (
+                    {devMode ? (
                         <Chip
                             color="error"
                             icon={<Build />}

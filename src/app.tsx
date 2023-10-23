@@ -25,17 +25,16 @@ import BackgroundTasks from "@src/components/BackgroundTasks";
 import Favorites from "@src/pages/favorites/Favorites";
 import useIsMobile from "@src/hooks/is-mobile";
 import log from "@src/utils/logger";
-import { useAppSelector } from "@src/hooks/redux";
-import { selectConfiguration } from "@src/reducers/configuration/configuration-slice";
 import SomethingWentWrong from "@src/components/SomethingWentWrong";
 import { ErrorBoundary } from "react-error-boundary";
+import useIsLightMode from "@src/hooks/light-mode";
 
 const DauntlessBuilderApp = () => {
     const isMobile = useIsMobile();
 
-    const configuration = useAppSelector(selectConfiguration);
+    const lightModeEnabled = useIsLightMode();
 
-    const theme = makeTheme(configuration.lightModeEnabled ? "light" : "dark");
+    const theme = makeTheme(lightModeEnabled ? "light" : "dark");
 
     return (
         <ThemeProvider theme={theme}>
