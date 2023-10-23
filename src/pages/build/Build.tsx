@@ -40,9 +40,9 @@ import {
     setBuildFinderWeaponType,
     setPerkValue,
 } from "@src/reducers/build-finder/build-finder-selection-slice";
-import { resetFilter, setWeaponTypeFilter } from "@src/reducers/item-select-filter/item-select-filter-slice";
 import { buildAtom, buildModelView, setBuildId, updateBuild } from "@src/state/build";
 import { configurationAtom } from "@src/state/configuration";
+import { itemSelectFilterAtom, resetFilter, setWeaponTypeFilter } from "@src/state/item-select-filter";
 import { defaultBuildName } from "@src/utils/default-build-name";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import { useAtomValue, useSetAtom } from "jotai";
@@ -73,6 +73,7 @@ const Build: React.FC = () => {
 
     const dispatch = useAppDispatch();
     const setBuildState = useSetAtom(buildAtom);
+    const setItemSelectFilter = useSetAtom(itemSelectFilterAtom);
     const configuration = useAtomValue(configurationAtom);
 
     const build = useAtomValue(buildModelView);
@@ -151,7 +152,7 @@ const Build: React.FC = () => {
             .otherwise(() => []);
 
         if (itemType === ItemType.Weapon && build.data.weapon !== null) {
-            dispatch(setWeaponTypeFilter([build.data.weapon.type]));
+            setItemSelectFilter(setWeaponTypeFilter([build.data.weapon.type]));
         }
 
         setPickerSelection({ filters, itemType });
@@ -159,10 +160,10 @@ const Build: React.FC = () => {
     };
 
     const onItemPickerItemSelected = (item: ItemPickerItem, itemType: ItemType, isPowerSurged: boolean) => {
-        dispatch(resetFilter());
+        setItemSelectFilter(resetFilter());
 
         if (item !== null && itemType === ItemType.Weapon) {
-            dispatch(setWeaponTypeFilter([(item as Weapon).type]));
+            setItemSelectFilter(setWeaponTypeFilter([(item as Weapon).type]));
         }
 
         const buildUpdates = match(itemType)

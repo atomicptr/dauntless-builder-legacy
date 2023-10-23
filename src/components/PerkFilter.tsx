@@ -4,13 +4,9 @@ import dauntlessBuilderData from "@src/data/Data";
 import { isArmourType, ItemType, itemTypeData } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
 import useIsLightMode from "@src/hooks/light-mode";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
-import {
-    GenericItemType,
-    selectItemSelectFilter,
-    setPerkFilter,
-} from "@src/reducers/item-select-filter/item-select-filter-slice";
+import { itemSelectFilterAtom, ItemSelectFilterState, setPerkFilter } from "@src/state/item-select-filter";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
+import { useAtom } from "jotai";
 import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -19,8 +15,7 @@ interface PerkFilterProps {
 }
 
 const PerkFilter: React.FC<PerkFilterProps> = ({ itemType }) => {
-    const dispatch = useAppDispatch();
-    const itemSelectFilter = useAppSelector(selectItemSelectFilter);
+    const [itemSelectFilter, setItemSelectFilter] = useAtom(itemSelectFilterAtom);
     const { t } = useTranslation();
     const isLightMode = useIsLightMode();
 
@@ -47,7 +42,7 @@ const PerkFilter: React.FC<PerkFilterProps> = ({ itemType }) => {
             <InputLabel>{t("pages.build.filter-by", { name: t("terms.perks") })}</InputLabel>
             <Select
                 multiple
-                onChange={ev => dispatch(setPerkFilter([itemType, ev.target.value as string[]]))}
+                onChange={ev => setItemSelectFilter(setPerkFilter(itemType, ev.target.value as string[]))}
                 renderValue={(selected: string[]) => (
                     <Stack
                         direction="row"
@@ -76,7 +71,7 @@ const PerkFilter: React.FC<PerkFilterProps> = ({ itemType }) => {
                         })}
                     </Stack>
                 )}
-                value={itemSelectFilter[itemType as GenericItemType].perks}
+                value={itemSelectFilter[itemType as keyof ItemSelectFilterState].perks}
                 variant="standard"
             >
                 {perksAvailable.map(perk => (

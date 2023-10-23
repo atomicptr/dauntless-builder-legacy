@@ -2,7 +2,6 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import buildFinderSelectionReducer from "./reducers/build-finder/build-finder-selection-slice";
 import favoritesReducer from "./reducers/favorites/favorites-slice";
-import itemSelectFilterReducer from "./reducers/item-select-filter/item-select-filter-slice";
 import metaBuildsSelectionReducer from "./reducers/meta-builds-selection/meta-builds-selection-slice";
 
 const stateIdentifier = "state";
@@ -16,7 +15,6 @@ export const store = configureStore({
     reducer: {
         buildFinderSelection: buildFinderSelectionReducer,
         favorites: favoritesReducer,
-        itemSelectFilter: itemSelectFilterReducer,
         metaBuildsSelection: metaBuildsSelectionReducer,
     },
 });

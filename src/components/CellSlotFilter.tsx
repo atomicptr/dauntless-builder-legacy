@@ -2,12 +2,8 @@ import { Box, FormControl, InputLabel, ListItemIcon, ListItemText, MenuItem, Sel
 import { CellType } from "@src/data/Cell";
 import { ItemType } from "@src/data/ItemType";
 import useIsLightMode from "@src/hooks/light-mode";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
-import {
-    GenericItemType,
-    selectItemSelectFilter,
-    setCellSlotsFilter,
-} from "@src/reducers/item-select-filter/item-select-filter-slice";
+import { itemSelectFilterAtom, ItemSelectFilterState, setCellSlotsFilter } from "@src/state/item-select-filter";
+import { useAtom } from "jotai";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -16,8 +12,7 @@ interface CellSlotFilterProps {
 }
 
 const CellSlotFilter: React.FC<CellSlotFilterProps> = ({ itemType }) => {
-    const dispatch = useAppDispatch();
-    const itemSelectFilter = useAppSelector(selectItemSelectFilter);
+    const [itemSelectFilter, setItemSelectFilter] = useAtom(itemSelectFilterAtom);
     const { t } = useTranslation();
     const isLightMode = useIsLightMode();
 
@@ -28,7 +23,7 @@ const CellSlotFilter: React.FC<CellSlotFilterProps> = ({ itemType }) => {
             <InputLabel>{t("pages.build.filter-by", { name: t("terms.cell-slot") })}</InputLabel>
             <Select
                 multiple
-                onChange={ev => dispatch(setCellSlotsFilter([itemType, ev.target.value as CellType[]]))}
+                onChange={ev => setItemSelectFilter(setCellSlotsFilter(itemType, ev.target.value as CellType[]))}
                 renderValue={selected => (
                     <Stack
                         direction="row"
@@ -56,7 +51,7 @@ const CellSlotFilter: React.FC<CellSlotFilterProps> = ({ itemType }) => {
                         })}
                     </Stack>
                 )}
-                value={itemSelectFilter[itemType as GenericItemType].cellSlots}
+                value={itemSelectFilter[itemType as keyof ItemSelectFilterState].cellSlots}
                 variant="standard"
             >
                 {Object.keys(CellType)

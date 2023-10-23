@@ -39,15 +39,11 @@ import { Omnicell } from "@src/data/Omnicell";
 import { Weapon, WeaponType } from "@src/data/Weapon";
 import useIsMobile from "@src/hooks/is-mobile";
 import useIsLightMode from "@src/hooks/light-mode";
-import { useAppSelector } from "@src/hooks/redux";
 import i18n from "@src/i18n";
-import {
-    GenericItemType,
-    selectFilterCount,
-    selectItemSelectFilter,
-} from "@src/reducers/item-select-filter/item-select-filter-slice";
+import { filterCountView, itemSelectFilterAtom, ItemSelectFilterState } from "@src/state/item-select-filter";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import { matchesSearch, matchesSearchIn } from "@src/utils/search";
+import { useAtomValue } from "jotai";
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { match } from "ts-pattern";
@@ -97,8 +93,8 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
 
     const filterAreaRef = useRef<HTMLDivElement>(null);
 
-    const itemFilter = useAppSelector(selectItemSelectFilter);
-    const filterCount = useAppSelector(selectFilterCount);
+    const itemFilter = useAtomValue(itemSelectFilterAtom);
+    const filterCount = useAtomValue(filterCountView);
 
     const preFilteredItems = useMemo(
         () =>
@@ -126,7 +122,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                 );
         }
         if (isArmourType(itemType)) {
-            const { elementTypes, perks, cellSlots } = itemFilter[itemType as GenericItemType];
+            const { elementTypes, perks, cellSlots } = itemFilter[itemType as keyof ItemSelectFilterState];
             return preFilteredItems
                 .filter(item =>
                     elementTypes.length > 0 ? elementTypes.some(et => filterByElement(et)(item, itemType)) : true,
