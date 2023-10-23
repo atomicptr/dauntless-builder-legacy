@@ -85,11 +85,11 @@ const DauntlessBuilderApp = () => {
                                                     path=":category"
                                                 />
                                             </Route>
-                                            <Route
-                                                element={<Build />}
-                                                path=":buildId"
-                                            />
                                         </Route>
+                                        <Route
+                                            element={<Build />}
+                                            path=":buildId"
+                                        />
                                     </Route>
 
                                     <Route
