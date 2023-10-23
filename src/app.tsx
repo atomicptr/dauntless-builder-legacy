@@ -75,11 +75,21 @@ const DauntlessBuilderApp = () => {
                                         <Route
                                             element={<MetaBuilds />}
                                             path="meta"
-                                        />
-                                        <Route
-                                            element={<Build />}
-                                            path=":buildId"
-                                        />
+                                        >
+                                            <Route
+                                                element={<MetaBuilds />}
+                                                path=":weaponType"
+                                            >
+                                                <Route
+                                                    element={<MetaBuilds />}
+                                                    path=":category"
+                                                />
+                                            </Route>
+                                            <Route
+                                                element={<Build />}
+                                                path=":buildId"
+                                            />
+                                        </Route>
                                     </Route>
 
                                     <Route

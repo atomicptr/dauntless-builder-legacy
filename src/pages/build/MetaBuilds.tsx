@@ -8,13 +8,15 @@ import PageTitle from "@src/components/PageTitle";
 import WeaponTypeSelector from "@src/components/WeaponTypeSelector";
 import { BuildModel } from "@src/data/BuildModel";
 import { ElementalType } from "@src/data/ElementalType";
-import { WeaponType } from "@src/data/Weapon";
+import { findByKebabCaseName, WeaponType } from "@src/data/Weapon";
 import { useCache } from "@src/hooks/cache";
 import { metaBuildsAtom, removeNote, setBuildCategoryIndex, setMetaBuildsWeaponType } from "@src/state/meta-builds";
 import { useAtom } from "jotai";
+import kebabCase from "just-kebab-case";
 import React, { ReactNode, useCallback, useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
+import { useParams } from "react-router-dom";
 
 interface TabPanelProps {
     children?: ReactNode;
@@ -53,10 +55,35 @@ const trialsCategoryName = "Trials";
 
 const MetaBuilds: React.FC = () => {
     const { t } = useTranslation();
+    const params = useParams();
 
     const [{ weaponType, buildCategoryIndex, showNote }, setMetaBuildsSelection] = useAtom(metaBuildsAtom);
 
     const categories = useMemo(() => metaBuildsJson.categories.map(c => c.name).concat([trialsCategoryName]), []);
+
+    useEffect(() => {
+        if (params.weaponType) {
+            const urlWeaponType = findByKebabCaseName(params.weaponType);
+            if (urlWeaponType) {
+                setMetaBuildsSelection(setMetaBuildsWeaponType(urlWeaponType));
+            }
+        }
+
+        if (params.category) {
+            const urlCategory = categories.filter(category => kebabCase(category) === params.category);
+            if (urlCategory.length > 0) {
+                setMetaBuildsSelection(
+                    setBuildCategoryIndex(categories.findIndex(category => kebabCase(category) === params.category)),
+                );
+            }
+        }
+    }, [params, categories, setMetaBuildsSelection]);
+
+    useEffect(() => {
+        const weapon = kebabCase(weaponType.toString());
+        const category = kebabCase(categories[buildCategoryIndex]);
+        history.replaceState({}, "", `/b/meta/${weapon}/${category}`);
+    }, [weaponType, categories, buildCategoryIndex]);
 
     const builds = useCache(
         "metabuilds-builds",
