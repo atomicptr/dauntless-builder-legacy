@@ -40,7 +40,9 @@ import { useAppSelector } from "@src/hooks/redux";
 import { currentLanguage, getNativeLanguageName, isBetaLanguage, Language } from "@src/i18n";
 import { selectConfiguration } from "@src/reducers/configuration/configuration-slice";
 import { selectFavorites } from "@src/reducers/favorites/favorites-slice";
+import log from "@src/utils/logger";
 import React, { ReactNode, useState } from "react";
+import { ErrorBoundary } from "react-error-boundary";
 import { useTranslation } from "react-i18next";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -48,6 +50,7 @@ import { NavLink } from "react-router-dom";
 
 import { AppBar } from "./AppBar";
 import { DrawerHeader } from "./Drawer";
+import SomethingWentWrong from "./SomethingWentWrong";
 
 interface LayoutProps {
     children: ReactNode;
@@ -100,7 +103,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", mr: 2 }}>
                         <img
                             alt={t("app-name")}
-                            src={`/assets/icon.png`}
+                            src={"/assets/icon.png"}
                             style={{
                                 height: 36,
                                 userSelect: "none",
@@ -245,7 +248,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     </Alert>
                 ) : null}
 
-                {children}
+                <ErrorBoundary
+                    FallbackComponent={SomethingWentWrong}
+                    onError={(e, info) => log.error(e.message, { info })}
+                >
+                    <Box>{children}</Box>
+                </ErrorBoundary>
             </Container>
         </Box>
     );

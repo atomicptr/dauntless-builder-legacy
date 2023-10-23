@@ -3,13 +3,11 @@
 import "./i18n";
 import { store } from "./store";
 /* eslint-enable simple-import-sort/imports */
-
 import { registerSW } from "virtual:pwa-register";
-import { ThemeProvider } from "@mui/material";
-import { Slide } from "@mui/material";
+import { Slide, ThemeProvider } from "@mui/material";
 import About from "@src/pages/about/About";
 import { SnackbarProvider } from "notistack";
-import { StrictMode } from "react";
+import React, { StrictMode } from "react";
 import { createRoot, Root } from "react-dom/client";
 import { Provider } from "react-redux";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
@@ -29,6 +27,8 @@ import useIsMobile from "@src/hooks/is-mobile";
 import log from "@src/utils/logger";
 import { useAppSelector } from "@src/hooks/redux";
 import { selectConfiguration } from "@src/reducers/configuration/configuration-slice";
+import SomethingWentWrong from "@src/components/SomethingWentWrong";
+import { ErrorBoundary } from "react-error-boundary";
 
 const DauntlessBuilderApp = () => {
     const isMobile = useIsMobile();
@@ -39,71 +39,76 @@ const DauntlessBuilderApp = () => {
 
     return (
         <ThemeProvider theme={theme}>
-            <BrowserRouter>
-                <SnackbarProvider
-                    TransitionComponent={Slide}
-                    anchorOrigin={{
-                        horizontal: isMobile ? "center" : "right",
-                        vertical: "bottom",
-                    }}
-                    maxSnack={3}
-                >
-                    <Layout>
-                        <Routes>
-                            <Route path="/">
-                                <Route
-                                    element={<Home />}
-                                    index
-                                />
-
-                                <Route path="b">
+            <ErrorBoundary
+                FallbackComponent={SomethingWentWrong}
+                onError={(e, info) => log.error(e.message, { info })}
+            >
+                <BrowserRouter>
+                    <SnackbarProvider
+                        TransitionComponent={Slide}
+                        anchorOrigin={{
+                            horizontal: isMobile ? "center" : "right",
+                            vertical: "bottom",
+                        }}
+                        maxSnack={3}
+                    >
+                        <Layout>
+                            <Routes>
+                                <Route path="/">
                                     <Route
-                                        element={<Navigate to={"/b/new"} />}
+                                        element={<Home />}
                                         index
                                     />
+
+                                    <Route path="b">
+                                        <Route
+                                            element={<Navigate to={"/b/new"} />}
+                                            index
+                                        />
+                                        <Route
+                                            element={<NewBuild />}
+                                            path="new"
+                                        />
+                                        <Route
+                                            element={<BuildFinder />}
+                                            path="finder"
+                                        />
+                                        <Route
+                                            element={<MetaBuilds />}
+                                            path="meta"
+                                        />
+                                        <Route
+                                            element={<Build />}
+                                            path=":buildId"
+                                        />
+                                    </Route>
+
                                     <Route
-                                        element={<NewBuild />}
-                                        path="new"
+                                        element={<Favorites />}
+                                        path="/favorites"
                                     />
+
                                     <Route
-                                        element={<BuildFinder />}
-                                        path="finder"
+                                        element={<About />}
+                                        path="/about"
                                     />
+
                                     <Route
-                                        element={<MetaBuilds />}
-                                        path="meta"
+                                        element={<Settings />}
+                                        path="/settings"
                                     />
+
                                     <Route
-                                        element={<Build />}
-                                        path=":buildId"
+                                        element={<NotFound />}
+                                        path="*"
                                     />
                                 </Route>
-
-                                <Route
-                                    element={<Favorites />}
-                                    path="/favorites"
-                                />
-
-                                <Route
-                                    element={<About />}
-                                    path="/about"
-                                />
-
-                                <Route
-                                    element={<Settings />}
-                                    path="/settings"
-                                />
-
-                                <Route
-                                    element={<NotFound />}
-                                    path="*"
-                                />
-                            </Route>
-                        </Routes>
-                        <BackgroundTasks />
-                    </Layout>
-                </SnackbarProvider>
-            </BrowserRouter>
+                            </Routes>
+                            <BackgroundTasks />
+                        </Layout>
+                    </SnackbarProvider>
+                </BrowserRouter>
+            </ErrorBoundary>
         </ThemeProvider>
     );
 };

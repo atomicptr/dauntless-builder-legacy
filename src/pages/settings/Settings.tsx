@@ -41,6 +41,7 @@ import {
     setLightModeEnabled,
 } from "@src/reducers/configuration/configuration-slice";
 import { exportState, persistState } from "@src/store";
+import { downloadJsonObject } from "@src/utils/download-json";
 import log, { Logger } from "@src/utils/logger";
 import React from "react";
 import ReactCountryFlag from "react-country-flag";
@@ -242,16 +243,6 @@ const Settings: React.FC = () => {
             </Card>
         </>
     );
-};
-
-const downloadJsonObject = (data: unknown, fileName: string) => {
-    const jsonString = JSON.stringify(data, null, "    ");
-    const dataString = `data:text/json;charset=utf-8,${encodeURIComponent(jsonString)}`;
-    return {
-        component: "a",
-        download: `${fileName}.${Date.now()}.json`,
-        href: dataString,
-    };
 };
 
 export default Settings;
