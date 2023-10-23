@@ -1,15 +1,14 @@
 import { BuildModel } from "@src/data/BuildModel";
 import useDevMode from "@src/hooks/dev-mode";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
-import { addFavorite, isBuildInFavorites, selectFavorites } from "@src/reducers/favorites/favorites-slice";
 import { configurationAtom, setDevMode } from "@src/state/configuration";
+import { addFavorite, favoritesAtom, favoritesView, isBuildInFavorites } from "@src/state/favorites";
 import log, { LogLevel } from "@src/utils/logger";
-import { useSetAtom } from "jotai";
+import { useAtomValue, useSetAtom } from "jotai";
 import React, { useEffect } from "react";
 
 const BackgroundTasks: React.FC = () => {
-    const dispatch = useAppDispatch();
-    const favorites = useAppSelector(selectFavorites);
+    const favorites = useAtomValue(favoritesView);
+    const setFavorites = useSetAtom(favoritesAtom);
     const devMode = useDevMode();
     const setConfiguration = useSetAtom(configurationAtom);
 
@@ -21,7 +20,7 @@ const BackgroundTasks: React.FC = () => {
             Object.entries(favoritesData).forEach(([buildId, value]) => {
                 if (BuildModel.isValid(buildId) && !isBuildInFavorites(favorites, buildId)) {
                     const name = value as string;
-                    dispatch(addFavorite({ buildId, name }));
+                    setFavorites(addFavorite({ buildId, name }));
                 }
             });
             localStorage.removeItem("__db_favorites");
@@ -54,7 +53,7 @@ const BackgroundTasks: React.FC = () => {
         }
 
          */
-    }, [setConfiguration, dispatch, favorites]);
+    }, [setConfiguration, setFavorites, favorites]);
 
     useEffect(() => {
         log.setLogLevel(devMode ? LogLevel.Debug : LogLevel.Info);

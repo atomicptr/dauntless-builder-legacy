@@ -2,23 +2,22 @@ import { Bookmark, BookmarkBorder, ContentCopy, Undo } from "@mui/icons-material
 import { Fab, IconButton, useTheme } from "@mui/material";
 import InputDialog from "@src/components/InputDialog";
 import useIsMobile from "@src/hooks/is-mobile";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
+import { buildModelView, lastSelectedBuildModelView } from "@src/state/build";
 import {
     addFavorite,
+    favoritesAtom,
+    favoritesView,
     isBuildInFavorites,
     removeFavoriteByBuildId,
-    selectFavorites,
-} from "@src/reducers/favorites/favorites-slice";
-import { buildModelView, lastSelectedBuildModelView } from "@src/state/build";
+} from "@src/state/favorites";
 import { defaultBuildName } from "@src/utils/default-build-name";
-import { useAtomValue } from "jotai";
+import { useAtomValue, useSetAtom } from "jotai";
 import { useSnackbar } from "notistack";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink, useLocation } from "react-router-dom";
 
 const BuildMenu: React.FC = () => {
-    const dispatch = useAppDispatch();
     const { t } = useTranslation();
     const location = useLocation();
     const { enqueueSnackbar } = useSnackbar();
@@ -28,7 +27,8 @@ const BuildMenu: React.FC = () => {
     const build = useAtomValue(buildModelView);
     const lastEditedBuild = useAtomValue(lastSelectedBuildModelView);
 
-    const favorites = useAppSelector(selectFavorites);
+    const favorites = useAtomValue(favoritesView);
+    const setFavorites = useSetAtom(favoritesAtom);
 
     const [inputDialogOpen, setInputDialogOpen] = useState(false);
 
@@ -50,7 +50,7 @@ const BuildMenu: React.FC = () => {
     };
 
     const handleSaveToFavorites = (name: string) => {
-        dispatch(addFavorite({ buildId, name }));
+        setFavorites(addFavorite({ buildId, name }));
         enqueueSnackbar(t("components.build-menu.added-build-to-favorites", { name }));
         setInputDialogOpen(false);
     };
@@ -73,7 +73,7 @@ const BuildMenu: React.FC = () => {
                 onClick={() => {
                     if (isFavorite) {
                         const name = favorites.find(fav => fav.buildId === buildId)?.name ?? defaultBuildName(build);
-                        dispatch(removeFavoriteByBuildId(buildId));
+                        setFavorites(removeFavoriteByBuildId(buildId));
                         enqueueSnackbar(t("components.build-menu.remove-build-from-favorites", { name }));
                         return;
                     }

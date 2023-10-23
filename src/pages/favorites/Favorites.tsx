@@ -3,23 +3,24 @@ import { Box, Button, Stack } from "@mui/material";
 import BuildCard from "@src/components/BuildCard";
 import InputDialog from "@src/components/InputDialog";
 import PageTitle from "@src/components/PageTitle";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import {
     Favorite,
+    favoritesAtom,
+    favoritesView,
     moveDownByBuildId,
     moveUpByBuildId,
     removeFavoriteByBuildId,
-    selectFavorites,
     updateFavorite,
-} from "@src/reducers/favorites/favorites-slice";
+} from "@src/state/favorites";
+import { useAtomValue, useSetAtom } from "jotai";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
 const Favorites: React.FC = () => {
-    const dispatch = useAppDispatch();
     const { t } = useTranslation();
 
-    const favorites = useAppSelector(selectFavorites);
+    const favorites = useAtomValue(favoritesView);
+    const setFavorites = useSetAtom(favoritesAtom);
 
     const [open, setOpen] = React.useState<boolean>(false);
     const [currentFavorite, setCurrentFavorite] = React.useState<Favorite | null>(null);
@@ -38,7 +39,7 @@ const Favorites: React.FC = () => {
         if (currentFavorite === null) {
             return;
         }
-        dispatch(updateFavorite({ ...currentFavorite, name }));
+        setFavorites(updateFavorite({ ...currentFavorite, name }));
         setCurrentFavorite(null);
         setOpen(false);
     };
@@ -60,13 +61,13 @@ const Favorites: React.FC = () => {
                     >
                         <Button
                             disabled={index === 0}
-                            onClick={() => dispatch(moveUpByBuildId(fav.buildId))}
+                            onClick={() => setFavorites(moveUpByBuildId(fav.buildId))}
                         >
                             <KeyboardArrowUp />
                         </Button>
                         <Button
                             disabled={index === favorites.length - 1}
-                            onClick={() => dispatch(moveDownByBuildId(fav.buildId))}
+                            onClick={() => setFavorites(moveDownByBuildId(fav.buildId))}
                         >
                             <KeyboardArrowDown />
                         </Button>
@@ -83,7 +84,7 @@ const Favorites: React.FC = () => {
                         <Button onClick={() => openDialog(fav)}>
                             <Edit />
                         </Button>
-                        <Button onClick={() => dispatch(removeFavoriteByBuildId(fav.buildId))}>
+                        <Button onClick={() => setFavorites(removeFavoriteByBuildId(fav.buildId))}>
                             <Delete />
                         </Button>
                     </Stack>
