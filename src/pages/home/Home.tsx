@@ -6,8 +6,9 @@ import PageTitle from "@src/components/PageTitle";
 import { crowdinLink, discordServerUrl, githubUrl } from "@src/constants";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppSelector } from "@src/hooks/redux";
-import { selectConfiguration } from "@src/reducers/configuration/configuration-slice";
 import { selectFavorites } from "@src/reducers/favorites/favorites-slice";
+import { configurationAtom } from "@src/state/configuration";
+import { useAtomValue } from "jotai";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { FaDiscord } from "react-icons/fa";
@@ -23,7 +24,7 @@ const testBuilds = [
 
 const Home: React.FC = () => {
     const { t } = useTranslation();
-    const configuration = useAppSelector(selectConfiguration);
+    const configuration = useAtomValue(configurationAtom);
     const favorites = useAppSelector(selectFavorites);
     const isMobile = useIsMobile();
 

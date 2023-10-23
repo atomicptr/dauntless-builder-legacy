@@ -1,11 +1,9 @@
-import { createSelector } from "@reduxjs/toolkit";
-import { useAppSelector } from "@src/hooks/redux";
-import { selectConfiguration } from "@src/reducers/configuration/configuration-slice";
-
-const selectLightMode = createSelector([selectConfiguration], config => config.lightModeEnabled);
+import { configurationAtom } from "@src/state/configuration";
+import { useAtomValue } from "jotai";
 
 const useIsLightMode = () => {
-    return useAppSelector(selectLightMode);
+    const configuration = useAtomValue(configurationAtom);
+    return configuration.lightModeEnabled;
 };
 
 export default useIsLightMode;

@@ -1,15 +1,17 @@
 import { BuildModel } from "@src/data/BuildModel";
 import useDevMode from "@src/hooks/dev-mode";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
-import { setDevMode } from "@src/reducers/configuration/configuration-slice";
 import { addFavorite, isBuildInFavorites, selectFavorites } from "@src/reducers/favorites/favorites-slice";
+import { configurationAtom, setDevMode } from "@src/state/configuration";
 import log, { LogLevel } from "@src/utils/logger";
+import { useSetAtom } from "jotai";
 import React, { useEffect } from "react";
 
 const BackgroundTasks: React.FC = () => {
     const dispatch = useAppDispatch();
     const favorites = useAppSelector(selectFavorites);
     const devMode = useDevMode();
+    const setConfiguration = useSetAtom(configurationAtom);
 
     useEffect(() => {
         // import old favorites
@@ -27,7 +29,7 @@ const BackgroundTasks: React.FC = () => {
 
         // import developer mode setting
         if ("__db_developer_mode" in localStorage) {
-            dispatch(setDevMode(localStorage.getItem("__db_developer_mode") === "enabled"));
+            setConfiguration(setDevMode(localStorage.getItem("__db_developer_mode") === "enabled"));
             localStorage.removeItem("__db_developer_mode");
         }
 
@@ -39,7 +41,20 @@ const BackgroundTasks: React.FC = () => {
                 }
             },
         );
-    }, [dispatch, favorites]);
+
+        // replace old redux state with jotai
+        /* TODO: enable after redux is gone
+        if ("state" in localStorage) {
+            const state = JSON.parse(localStorage.getItem("state") ?? "{}");
+            log.debug("Found old redux state, replacing it with jotai...");
+            Object.entries(state).forEach(([key, value]) => {
+                localStorage.setItem(stateIdent(key), JSON.stringify(value));
+            });
+            localStorage.removeItem("state");
+        }
+
+         */
+    }, [setConfiguration, dispatch, favorites]);
 
     useEffect(() => {
         log.setLogLevel(devMode ? LogLevel.Debug : LogLevel.Info);

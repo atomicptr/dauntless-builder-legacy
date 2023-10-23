@@ -34,15 +34,15 @@ import { Omnicell } from "@src/data/Omnicell";
 import { Part, partBuildIdentifier, PartType, partTypeData } from "@src/data/Part";
 import { Weapon, weaponBuildIdentifier, WeaponType } from "@src/data/Weapon";
 import useIsMobile from "@src/hooks/is-mobile";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
+import { useAppDispatch } from "@src/hooks/redux";
 import {
     clearPerks,
     setBuildFinderWeaponType,
     setPerkValue,
 } from "@src/reducers/build-finder/build-finder-selection-slice";
-import { selectConfiguration } from "@src/reducers/configuration/configuration-slice";
 import { resetFilter, setWeaponTypeFilter } from "@src/reducers/item-select-filter/item-select-filter-slice";
 import { buildAtom, buildModelView, setBuildId, updateBuild } from "@src/state/build";
+import { configurationAtom } from "@src/state/configuration";
 import { defaultBuildName } from "@src/utils/default-build-name";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import { useAtomValue, useSetAtom } from "jotai";
@@ -73,7 +73,7 @@ const Build: React.FC = () => {
 
     const dispatch = useAppDispatch();
     const setBuildState = useSetAtom(buildAtom);
-    const configuration = useAppSelector(selectConfiguration);
+    const configuration = useAtomValue(configurationAtom);
 
     const build = useAtomValue(buildModelView);
 

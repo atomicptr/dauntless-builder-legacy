@@ -1,6 +1,6 @@
 import crowdinStats from "@json/crowdin-stats.json";
 import { csCZ, deDE, enUS, esES, frFR, huHU, itIT, jaJP, ptBR, ruRU, trTR } from "@mui/material/locale";
-import { store } from "@src/store";
+import { stateIdent } from "@src/state/common";
 import log from "@src/utils/logger";
 import i18n, { CallbackError } from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
@@ -98,8 +98,11 @@ export const ttry = (tryIdent: string, elseIdent: string): string => {
 
 const detector = new LanguageDetector();
 detector.addDetector({
-    lookup: () => store.getState().configuration.language,
-    name: "reduxState",
+    lookup: () => {
+        const configuration = JSON.parse(localStorage.getItem(stateIdent("configuration")) ?? "{}");
+        return configuration.language;
+    },
+    name: "storedState",
 });
 detector.addDetector({
     lookup: () => {
@@ -153,7 +156,7 @@ i18n.use(dynamicallyImportLanguageFiles)
         debug: DB_DEVMODE,
         detection: {
             caches: [],
-            order: ["queryParams", "reduxState", "navigator"],
+            order: ["queryParams", "storedState", "navigator"],
         },
         fallbackLng: Language.English,
         interpolation: {

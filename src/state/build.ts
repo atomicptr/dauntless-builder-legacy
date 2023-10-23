@@ -1,5 +1,6 @@
 import { BuildModel, CURRENT_BUILD_ID, switchAroundWeaponCellsIfNecessary } from "@src/data/BuildModel";
 import { validateBuild } from "@src/data/validate-build";
+import { stateIdent } from "@src/state/common";
 import log from "@src/utils/logger";
 import { atom } from "jotai";
 import { atomWithStorage } from "jotai/utils";
@@ -14,7 +15,7 @@ export interface BuildUpdate {
     [field: string]: string | boolean | null;
 }
 
-export const buildAtom = atomWithStorage<BuildState>("state.build", {
+export const buildAtom = atomWithStorage<BuildState>(stateIdent("build"), {
     build: BuildModel.empty().serialize(),
     lastEditedBuild: null,
 });

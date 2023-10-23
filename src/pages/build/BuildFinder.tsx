@@ -62,12 +62,13 @@ import {
     MatchingBuild,
     perks,
 } from "@src/reducers/build-finder/find-builds";
-import { selectConfiguration, setFinderPerkMatching } from "@src/reducers/configuration/configuration-slice";
+import { configurationAtom, setFinderPerkMatching } from "@src/state/configuration";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import log from "@src/utils/logger";
 import { matchesSearchIn } from "@src/utils/search";
 import AvailablePerksChecker from "@src/worker/available-perks-checker?worker";
 import BuildFinderWorker from "@src/worker/build-finder?worker";
+import { useAtom } from "jotai";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { BiMinus } from "react-icons/bi";
@@ -171,7 +172,7 @@ const BuildFinder: React.FC = () => {
         pickerArms,
         pickerLegs,
     } = useAppSelector(selectBuildFinderSelection);
-    const configuration = useAppSelector(selectConfiguration);
+    const [configuration, setConfiguration] = useAtom(configurationAtom);
     const isMobile = useIsMobile();
 
     const [builds, setBuilds] = useState<BuildModel[]>([]);
@@ -536,7 +537,7 @@ const BuildFinder: React.FC = () => {
                     control={
                         <Checkbox
                             checked={configuration.finderPerkMatchingEnabled}
-                            onChange={e => dispatch(setFinderPerkMatching(e.target.checked))}
+                            onChange={e => setConfiguration(setFinderPerkMatching(e.target.checked))}
                         />
                     }
                     label={t("pages.build-finder.perk-matching-enabled")}
