@@ -35,7 +35,6 @@ import { Part, partBuildIdentifier, PartType, partTypeData } from "@src/data/Par
 import { Weapon, weaponBuildIdentifier, WeaponType } from "@src/data/Weapon";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
-import { selectBuild, setBuildId, updateBuild } from "@src/reducers/build/build-slice";
 import {
     clearPerks,
     setBuildFinderWeaponType,
@@ -43,8 +42,10 @@ import {
 } from "@src/reducers/build-finder/build-finder-selection-slice";
 import { selectConfiguration } from "@src/reducers/configuration/configuration-slice";
 import { resetFilter, setWeaponTypeFilter } from "@src/reducers/item-select-filter/item-select-filter-slice";
+import { buildAtom, buildModelView, setBuildId, updateBuild } from "@src/state/build";
 import { defaultBuildName } from "@src/utils/default-build-name";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
+import { useAtomValue, useSetAtom } from "jotai";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
@@ -71,8 +72,10 @@ const Build: React.FC = () => {
     const isMobile = useIsMobile();
 
     const dispatch = useAppDispatch();
-    const build = useAppSelector(selectBuild);
+    const setBuildState = useSetAtom(buildAtom);
     const configuration = useAppSelector(selectConfiguration);
+
+    const build = useAtomValue(buildModelView);
 
     const [itemDialogOpen, setItemDialogOpen] = useState<boolean>(false);
     const [cellDialogOpen, setCellDialogOpen] = useState<boolean>(false);
@@ -82,8 +85,8 @@ const Build: React.FC = () => {
 
     useEffect(() => {
         const build = BuildModel.tryDeserialize(buildId ?? null);
-        dispatch(setBuildId(build.serialize()));
-    }, [buildId, dispatch]);
+        setBuildState(setBuildId(build.serialize()));
+    }, [buildId, setBuildState]);
 
     useEffect(() => {
         history.replaceState({}, "", `/b/${build.serialize()}`);
@@ -172,7 +175,7 @@ const Build: React.FC = () => {
             .with(ItemType.Omnicell, () => ({ omnicell: (item as Omnicell)?.name }))
             .otherwise(() => ({}));
 
-        dispatch(updateBuild({ ...buildUpdates }));
+        setBuildState(updateBuild({ ...buildUpdates }));
         setItemDialogOpen(false);
     };
 
@@ -196,7 +199,7 @@ const Build: React.FC = () => {
             .with(ItemType.Lantern, () => ({ lanternCell: variant }))
             .otherwise(() => ({}));
 
-        dispatch(updateBuild({ ...buildUpdates }));
+        setBuildState(updateBuild({ ...buildUpdates }));
         setCellDialogOpen(false);
     };
 
@@ -227,7 +230,7 @@ const Build: React.FC = () => {
             return;
         }
 
-        dispatch(updateBuild({ [slotName]: item?.name ?? null }));
+        setBuildState(updateBuild({ [slotName]: item?.name ?? null }));
         setPartDialogOpen(false);
     };
 
@@ -249,7 +252,7 @@ const Build: React.FC = () => {
     };
 
     const onBondWeaponSelected = (item: GenericItem | null) => {
-        dispatch(updateBuild({ bondWeapon: item?.name ?? null }));
+        setBuildState(updateBuild({ bondWeapon: item?.name ?? null }));
         setBondDialogOpen(false);
     };
 

@@ -1,6 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import buildReducer from "./reducers/build/build-slice";
 import buildFinderSelectionReducer from "./reducers/build-finder/build-finder-selection-slice";
 import configurationReducer from "./reducers/configuration/configuration-slice";
 import favoritesReducer from "./reducers/favorites/favorites-slice";
@@ -16,7 +15,6 @@ const persistedState =
 export const store = configureStore({
     preloadedState: { ...persistedState },
     reducer: {
-        build: buildReducer,
         buildFinderSelection: buildFinderSelectionReducer,
         configuration: configurationReducer,
         favorites: favoritesReducer,

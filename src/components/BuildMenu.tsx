@@ -3,14 +3,15 @@ import { Fab, IconButton, useTheme } from "@mui/material";
 import InputDialog from "@src/components/InputDialog";
 import useIsMobile from "@src/hooks/is-mobile";
 import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
-import { selectBuild, selectLastEditedBuild } from "@src/reducers/build/build-slice";
 import {
     addFavorite,
     isBuildInFavorites,
     removeFavoriteByBuildId,
     selectFavorites,
 } from "@src/reducers/favorites/favorites-slice";
+import { buildModelView, lastSelectedBuildModelView } from "@src/state/build";
 import { defaultBuildName } from "@src/utils/default-build-name";
+import { useAtomValue } from "jotai";
 import { useSnackbar } from "notistack";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -24,8 +25,9 @@ const BuildMenu: React.FC = () => {
     const isMobile = useIsMobile();
     const theme = useTheme();
 
-    const build = useAppSelector(selectBuild);
-    const lastEditedBuild = useAppSelector(selectLastEditedBuild);
+    const build = useAtomValue(buildModelView);
+    const lastEditedBuild = useAtomValue(lastSelectedBuildModelView);
+
     const favorites = useAppSelector(selectFavorites);
 
     const [inputDialogOpen, setInputDialogOpen] = useState(false);
