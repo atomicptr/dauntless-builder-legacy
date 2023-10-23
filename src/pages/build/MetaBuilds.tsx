@@ -10,13 +10,8 @@ import { BuildModel } from "@src/data/BuildModel";
 import { ElementalType } from "@src/data/ElementalType";
 import { WeaponType } from "@src/data/Weapon";
 import { useCache } from "@src/hooks/cache";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
-import {
-    removeNote,
-    selectMetaBuildsSelection,
-    setBuildCategoryIndex,
-    setMetaBuildsWeaponType,
-} from "@src/reducers/meta-builds-selection/meta-builds-selection-slice";
+import { metaBuildsAtom, removeNote, setBuildCategoryIndex, setMetaBuildsWeaponType } from "@src/state/meta-builds";
+import { useAtom } from "jotai";
 import React, { ReactNode, useCallback, useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
@@ -58,9 +53,8 @@ const trialsCategoryName = "Trials";
 
 const MetaBuilds: React.FC = () => {
     const { t } = useTranslation();
-    const dispatch = useAppDispatch();
 
-    const { weaponType, buildCategoryIndex, showNote } = useAppSelector(selectMetaBuildsSelection);
+    const [{ weaponType, buildCategoryIndex, showNote }, setMetaBuildsSelection] = useAtom(metaBuildsAtom);
 
     const categories = useMemo(() => metaBuildsJson.categories.map(c => c.name).concat([trialsCategoryName]), []);
 
@@ -194,11 +188,11 @@ const MetaBuilds: React.FC = () => {
             const category = metaBuildsJson.categories[i];
 
             if (hasBuilds(category.name)) {
-                dispatch(setBuildCategoryIndex(i));
+                setMetaBuildsSelection(setBuildCategoryIndex(i));
                 return;
             }
         }
-    }, [buildCategoryIndex, weaponType, hasBuilds, dispatch]);
+    }, [buildCategoryIndex, weaponType, hasBuilds, setMetaBuildsSelection]);
 
     const categoryTranslate = useCallback(
         (defaultKey: string, trialsKey?: string, category: string | null = currentCategory) => {
@@ -431,7 +425,7 @@ const MetaBuilds: React.FC = () => {
 
             {showNote && (
                 <Alert
-                    onClose={() => dispatch(removeNote())}
+                    onClose={() => setMetaBuildsSelection(removeNote())}
                     severity="info"
                 >
                     <LinkBox
@@ -444,7 +438,7 @@ const MetaBuilds: React.FC = () => {
             )}
 
             <WeaponTypeSelector
-                onChange={weaponType => dispatch(setMetaBuildsWeaponType(weaponType))}
+                onChange={weaponType => setMetaBuildsSelection(setMetaBuildsWeaponType(weaponType))}
                 value={weaponType}
             />
 
@@ -452,7 +446,7 @@ const MetaBuilds: React.FC = () => {
                 <Box>
                     <Tabs
                         allowScrollButtonsMobile
-                        onChange={(_ev, category) => dispatch(setBuildCategoryIndex(category))}
+                        onChange={(_ev, category) => setMetaBuildsSelection(setBuildCategoryIndex(category))}
                         scrollButtons
                         value={buildCategoryIndex}
                         variant="scrollable"

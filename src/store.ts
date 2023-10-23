@@ -1,7 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import buildFinderSelectionReducer from "./reducers/build-finder/build-finder-selection-slice";
-import metaBuildsSelectionReducer from "./reducers/meta-builds-selection/meta-builds-selection-slice";
 
 const stateIdentifier = "state";
 const reducersNotToBePersisted = ["itemSelectFilter"];
@@ -13,7 +12,6 @@ export const store = configureStore({
     preloadedState: { ...persistedState },
     reducer: {
         buildFinderSelection: buildFinderSelectionReducer,
-        metaBuildsSelection: metaBuildsSelectionReducer,
     },
 });
 
