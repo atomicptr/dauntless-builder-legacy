@@ -71,7 +71,7 @@ const Home: React.FC = () => {
                         {t("pages.home.contributing-title")}
                     </Typography>
 
-                    <Typography>
+                    <Typography component={"span"}>
                         <LinkBox text={t("pages.home.contributing-text", { githubUrl })} />
                     </Typography>
 
