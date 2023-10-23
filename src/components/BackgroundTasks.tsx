@@ -7,6 +7,7 @@ import { addFavorite, favoritesAtom, favoritesView, isBuildInFavorites } from "@
 import log, { LogLevel } from "@src/utils/logger";
 import { useAtom, useAtomValue, useSetAtom } from "jotai";
 import React, { useEffect } from "react";
+import useDevMode from "@src/hooks/dev-mode";
 
 const BackgroundTasks: React.FC = () => {
     const favorites = useAtomValue(favoritesView);
