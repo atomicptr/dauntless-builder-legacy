@@ -5,6 +5,8 @@
 
 Create and share Dauntless builds with your friends!
 
+![](./public/assets/icon.png)
+
 ![Screenshot of Dauntless Builder](docs/assets/app-screenshot.png)
 
 ## Documentation

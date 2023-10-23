@@ -36,7 +36,6 @@ import { drawerWidth } from "@src/components/theme";
 import { crowdinLink, discordServerUrl, githubUrl, matrixChannelUrl, xTwitterUrl } from "@src/constants";
 import dauntlessBuilderData from "@src/data/Data";
 import useIsMobile from "@src/hooks/is-mobile";
-import useIsLightMode from "@src/hooks/light-mode";
 import { useAppSelector } from "@src/hooks/redux";
 import { currentLanguage, getNativeLanguageName, isBetaLanguage, Language } from "@src/i18n";
 import { selectConfiguration } from "@src/reducers/configuration/configuration-slice";
@@ -57,7 +56,6 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
     const theme = useTheme();
-    const isLightMode = useIsLightMode();
 
     const isMobile = useIsMobile();
     const [open, setOpen] = useState(false);
@@ -103,7 +101,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", mr: 2 }}>
                         <img
                             alt={t("app-name")}
-                            src={`/assets/${isLightMode ? "icon_lm" : "icon"}.png`}
+                            src={`/assets/icon.png`}
                             style={{
                                 height: 36,
                                 userSelect: "none",
