@@ -58,7 +58,6 @@ import { NavLink } from "react-router-dom";
 
 import { AppBar } from "./AppBar";
 import { DrawerHeader } from "./Drawer";
-import useDevMode from "@src/hooks/dev-mode";
 
 interface LayoutProps {
     children: ReactNode;
