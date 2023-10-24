@@ -34,14 +34,9 @@ import { Omnicell } from "@src/data/Omnicell";
 import { Part, partBuildIdentifier, PartType, partTypeData } from "@src/data/Part";
 import { Weapon, weaponBuildIdentifier, WeaponType } from "@src/data/Weapon";
 import useIsMobile from "@src/hooks/is-mobile";
-import { useAppDispatch } from "@src/hooks/redux";
-import {
-    clearPerks,
-    setBuildFinderWeaponType,
-    setPerkValue,
-} from "@src/reducers/build-finder/build-finder-selection-slice";
 import { buildAtom, buildModelView, setBuildId, updateBuild } from "@src/state/build";
 import { configurationAtom } from "@src/state/configuration";
+import { clearPerks, finderAtom, setBuildFinderWeaponType, setPerkValue } from "@src/state/finder";
 import { itemSelectFilterAtom, resetFilter, setWeaponTypeFilter } from "@src/state/item-select-filter";
 import { defaultBuildName } from "@src/utils/default-build-name";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
@@ -71,7 +66,7 @@ const Build: React.FC = () => {
     const navigate = useNavigate();
     const isMobile = useIsMobile();
 
-    const dispatch = useAppDispatch();
+    const setFinder = useSetAtom(finderAtom);
     const setBuildState = useSetAtom(buildAtom);
     const setItemSelectFilter = useSetAtom(itemSelectFilterAtom);
     const configuration = useAtomValue(configurationAtom);
@@ -120,10 +115,10 @@ const Build: React.FC = () => {
     }, [build]);
 
     const onCopyBuildToFinderButtonClicked = useCallback(() => {
-        dispatch(clearPerks());
+        setFinder(clearPerks());
 
         if (build.data.weapon) {
-            dispatch(setBuildFinderWeaponType(build.data.weapon.type));
+            setFinder(setBuildFinderWeaponType(build.data.weapon.type));
         }
 
         const perks = perkData(build);
@@ -131,11 +126,11 @@ const Build: React.FC = () => {
         for (const perk of perks) {
             const perkName = perk.name;
             const value = perk.count <= 3 ? 3 : 6;
-            dispatch(setPerkValue({ perkName, value }));
+            setFinder(setPerkValue({ perkName, value }));
         }
 
         navigate("/b/finder");
-    }, [build, dispatch, navigate]);
+    }, [build, setFinder, navigate]);
 
     if (!buildId || !BuildModel.isValid(buildId)) {
         navigate("/b/new");

@@ -1,6 +1,6 @@
 import { WeaponType } from "@src/data/Weapon";
-import { AssignedPerkValue } from "@src/reducers/build-finder/build-finder-selection-slice";
-import { findBuilds, FinderItemDataOptions } from "@src/reducers/build-finder/find-builds";
+import { findBuilds, FinderItemDataOptions } from "@src/pages/build/find-builds";
+import { AssignedPerkValue } from "@src/state/finder";
 
 interface Data {
     weaponType: WeaponType | null;

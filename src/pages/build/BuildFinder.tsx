@@ -4,23 +4,17 @@ import {
     Box,
     Button,
     Card,
-    CardActionArea,
     CardContent,
     Checkbox,
     CircularProgress,
     FormControlLabel,
     FormGroup,
-    Grid,
-    IconButton,
-    InputAdornment,
-    LinearProgress,
-    OutlinedInput,
     Skeleton,
     Stack,
-    Tooltip,
     Typography,
 } from "@mui/material";
 import BuildCard from "@src/components/BuildCard";
+import FinderPerkPicker from "@src/components/FinderPerkPicker";
 import InputDialog from "@src/components/InputDialog";
 import ItemSelectDialog, {
     filterByArmourType,
@@ -32,46 +26,38 @@ import ItemSelectDialog, {
 import MiniItemPicker from "@src/components/MiniItemPicker";
 import PageTitle from "@src/components/PageTitle";
 import { perkData } from "@src/components/PerkList";
-import PerkTooltip from "@src/components/PerkTooltip";
-import RarityCard from "@src/components/RarityCard";
 import WeaponTypeSelector from "@src/components/WeaponTypeSelector";
 import { Armour, ArmourType } from "@src/data/Armour";
 import { BuildModel } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
-import { ItemRarity } from "@src/data/ItemRarity";
 import { ItemType } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
 import { Weapon, WeaponType } from "@src/data/Weapon";
 import { cacheAsync } from "@src/hooks/cache";
 import useIsMobile from "@src/hooks/is-mobile";
-import useIsLightMode from "@src/hooks/light-mode";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
-import {
-    AssignedPerkValue,
-    clearPerks,
-    selectBuildFinderSelection,
-    setBuildFinderWeaponType,
-    setPerkValue,
-    setPicker,
-    setRemoveExotics,
-    setRemoveLegendary,
-} from "@src/reducers/build-finder/build-finder-selection-slice";
 import {
     convertFindBuildResultsToBuildModel,
     FinderItemDataOptions,
     MatchingBuild,
     perks,
-} from "@src/reducers/build-finder/find-builds";
+} from "@src/pages/build/find-builds";
 import { configurationAtom, setFinderPerkMatching } from "@src/state/configuration";
-import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
+import {
+    AssignedPerkValue,
+    clearPerks,
+    finderAtom,
+    setBuildFinderWeaponType,
+    setPerkValue,
+    setPicker,
+    setRemoveExotics,
+    setRemoveLegendary,
+} from "@src/state/finder";
 import log from "@src/utils/logger";
-import { matchesSearchIn } from "@src/utils/search";
 import AvailablePerksChecker from "@src/worker/available-perks-checker?worker";
 import BuildFinderWorker from "@src/worker/build-finder?worker";
 import { useAtom } from "jotai";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { BiMinus } from "react-icons/bi";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import { match } from "ts-pattern";
 
@@ -158,20 +144,23 @@ const findAvailablePerks = async (
 };
 
 const BuildFinder: React.FC = () => {
-    const isLightMode = useIsLightMode();
     const { t } = useTranslation();
 
-    const {
-        weaponType,
-        selectedPerks,
-        removeExotics,
-        removeLegendary,
-        pickerWeapon,
-        pickerHead,
-        pickerTorso,
-        pickerArms,
-        pickerLegs,
-    } = useAppSelector(selectBuildFinderSelection);
+    const [
+        {
+            weaponType,
+            selectedPerks,
+            removeExotics,
+            removeLegendary,
+            pickerWeapon,
+            pickerHead,
+            pickerTorso,
+            pickerArms,
+            pickerLegs,
+        },
+        setFinder,
+    ] = useAtom(finderAtom);
+
     const [configuration, setConfiguration] = useAtom(configurationAtom);
     const isMobile = useIsMobile();
 
@@ -183,9 +172,6 @@ const BuildFinder: React.FC = () => {
     const [itemSelectDialogOpen, setItemSelectDialogOpen] = useState(false);
     const [itemSelectDialogType, setItemSelectDialogType] = useState<ItemType>(ItemType.Weapon);
     const [itemSelectFilters, setItemSelectFilters] = useState<FilterFunc[]>([]);
-    const [perkSearch, setPerkSearch] = useState("");
-
-    const dispatch = useAppDispatch();
 
     const finderOptions: FinderItemDataOptions = useMemo(
         () => ({
@@ -376,18 +362,6 @@ const BuildFinder: React.FC = () => {
         ],
     );
 
-    const onPerkClicked = (perk: Perk) => {
-        const value = perk.name in selectedPerks ? selectedPerks[perk.name] + 3 : 3;
-        dispatch(setPerkValue({ perkName: perk.name, value }));
-    };
-
-    const renderPerkLevel = (perk: Perk) => {
-        if (!(perk.name in selectedPerks)) {
-            return null;
-        }
-        return `+${selectedPerks[perk.name]}`;
-    };
-
     const onPickerClicked = (itemType: ItemType) => {
         const filters = match(itemType)
             .with(
@@ -412,24 +386,6 @@ const BuildFinder: React.FC = () => {
         setItemSelectDialogOpen(true);
     };
 
-    const renderToolTip = useCallback(
-        (perk: Perk, count: number) => (
-            <PerkTooltip
-                count={count}
-                filterLevels={["3", "6"]}
-                perk={perk}
-                withDescription
-            />
-        ),
-        [],
-    );
-
-    const canRenderPerk = useCallback(
-        (perk: Perk) =>
-            matchesSearchIn(perkSearch, [perk.name, t(itemTranslationIdentifier(ItemType.Perk, perk.name, "name"))]),
-        [perkSearch, t],
-    );
-
     if (webworkerDisabled) {
         return (
             <Alert
@@ -450,8 +406,8 @@ const BuildFinder: React.FC = () => {
 
             <WeaponTypeSelector
                 onChange={weaponType => {
-                    dispatch(setBuildFinderWeaponType(weaponType));
-                    dispatch(setPicker({ item: null, itemType: ItemType.Weapon }));
+                    setFinder(setBuildFinderWeaponType(weaponType));
+                    setFinder(setPicker(ItemType.Weapon, null));
                 }}
                 value={weaponType}
             />
@@ -462,7 +418,7 @@ const BuildFinder: React.FC = () => {
                     control={
                         <Checkbox
                             checked={removeExotics}
-                            onChange={e => dispatch(setRemoveExotics(e.target.checked))}
+                            onChange={e => setFinder(setRemoveExotics(e.target.checked))}
                         />
                     }
                     label={t("pages.build-finder.remove-exotics")}
@@ -471,7 +427,7 @@ const BuildFinder: React.FC = () => {
                     control={
                         <Checkbox
                             checked={removeLegendary}
-                            onChange={e => dispatch(setRemoveLegendary(e.target.checked))}
+                            onChange={e => setFinder(setRemoveLegendary(e.target.checked))}
                         />
                     }
                     label={t("pages.build-finder.remove-legendary")}
@@ -486,11 +442,11 @@ const BuildFinder: React.FC = () => {
                 {!isMobile && <Box sx={{ flexGrow: 2 }} />}
                 <Button
                     onClick={() => {
-                        dispatch(setPicker({ item: null, itemType: ItemType.Weapon }));
-                        dispatch(setPicker({ item: null, itemType: ItemType.Head }));
-                        dispatch(setPicker({ item: null, itemType: ItemType.Torso }));
-                        dispatch(setPicker({ item: null, itemType: ItemType.Arms }));
-                        dispatch(setPicker({ item: null, itemType: ItemType.Legs }));
+                        setFinder(setPicker(ItemType.Weapon, null));
+                        setFinder(setPicker(ItemType.Head, null));
+                        setFinder(setPicker(ItemType.Torso, null));
+                        setFinder(setPicker(ItemType.Arms, null));
+                        setFinder(setPicker(ItemType.Legs, null));
                     }}
                     startIcon={<Clear />}
                     variant={isMobile ? "outlined" : undefined}
@@ -581,11 +537,11 @@ const BuildFinder: React.FC = () => {
                         multiline
                         onClose={() => setInputDialogOpen(false)}
                         onConfirm={input => {
-                            dispatch(clearPerks());
+                            setFinder(clearPerks());
                             try {
                                 const json = JSON.parse(input) as AssignedPerkValue;
                                 for (const [perkName, value] of Object.entries(json)) {
-                                    dispatch(setPerkValue({ perkName, value }));
+                                    setFinder(setPerkValue({ perkName, value }));
                                 }
                             } catch (e) {
                                 log.error("Could not set perk values", { e });
@@ -598,163 +554,10 @@ const BuildFinder: React.FC = () => {
                 </>
             )}
 
-            <Stack
-                direction={isMobile ? "column" : "row"}
-                spacing={isMobile ? 2 : undefined}
-            >
-                <Typography variant="h5">{t("pages.build-finder.perks-title")}</Typography>
-                {!isMobile && <Box sx={{ flexGrow: 2 }} />}
-                <Button
-                    onClick={() => {
-                        dispatch(clearPerks());
-                        setPerkSearch("");
-                    }}
-                    startIcon={<Clear />}
-                    variant={isMobile ? "outlined" : undefined}
-                >
-                    {t("pages.build-finder.clear-perks")}
-                </Button>
-            </Stack>
-
-            {isDeterminingSelectablePerks ? <LinearProgress /> : null}
-
-            <OutlinedInput
-                endAdornment={
-                    perkSearch.length > 0 ? (
-                        <InputAdornment position="end">
-                            <IconButton onClick={() => setPerkSearch("")}>
-                                <Clear />
-                            </IconButton>
-                        </InputAdornment>
-                    ) : undefined
-                }
-                onChange={ev => setPerkSearch(ev.target.value)}
-                placeholder={t("pages.build-finder.filter-perks")}
-                value={perkSearch}
+            <FinderPerkPicker
+                canAddPerk={canAddPerk}
+                disabled={isDeterminingSelectablePerks}
             />
-
-            <Grid
-                container
-                gap={1}
-            >
-                {Object.keys(perks).map(cellType => (
-                    <Grid
-                        key={cellType}
-                        item
-                        sx={{ flexGrow: 1 }}
-                        xs={isMobile ? 12 : undefined}
-                    >
-                        <Stack spacing={1}>
-                            {(isMobile
-                                ? perks[cellType as keyof typeof perks].filter(canRenderPerk).length > 0
-                                : true) && (
-                                <Stack
-                                    spacing={1}
-                                    sx={{ alignItems: "center", my: 2 }}
-                                >
-                                    <img
-                                        src={`/assets/icons/perks/${cellType}.png`}
-                                        style={{
-                                            filter: isLightMode ? "invert(100%)" : undefined,
-                                            height: "64px",
-                                            width: "64px",
-                                        }}
-                                    />
-                                    <Typography>{t(`terms.cell-type.${cellType}`)}</Typography>
-                                </Stack>
-                            )}
-
-                            {perks[cellType as keyof typeof perks].map(
-                                (perk: Perk) =>
-                                    canRenderPerk(perk) && (
-                                        <Stack
-                                            key={perk.name}
-                                            direction="row"
-                                            spacing={1}
-                                        >
-                                            <Tooltip
-                                                arrow
-                                                disableFocusListener={isMobile}
-                                                disableHoverListener={isMobile}
-                                                disableTouchListener={isMobile}
-                                                followCursor
-                                                title={renderToolTip(perk, selectedPerks[perk.name] ?? 0)}
-                                            >
-                                                <RarityCard
-                                                    disabled={!canAddPerk(perk)}
-                                                    elevation={canAddPerk(perk) ? 1 : 0}
-                                                    rarity={
-                                                        selectedPerks[perk.name] === 6
-                                                            ? ItemRarity.Epic
-                                                            : selectedPerks[perk.name] === 3
-                                                                ? ItemRarity.Uncommon
-                                                                : undefined
-                                                    }
-                                                    sx={{ flexGrow: 2 }}
-                                                >
-                                                    <CardActionArea
-                                                        disabled={!canAddPerk(perk)}
-                                                        onClick={() => onPerkClicked(perk)}
-                                                    >
-                                                        <CardContent>
-                                                            <Box sx={{ fontSize: isMobile ? "1rem" : undefined }}>
-                                                                {t(
-                                                                    itemTranslationIdentifier(
-                                                                        ItemType.Perk,
-                                                                        perk.name,
-                                                                        "name",
-                                                                    ),
-                                                                )}
-                                                                {" "}
-                                                                {renderPerkLevel(perk)}
-                                                            </Box>
-                                                            <Box hidden={!isMobile}>
-                                                                {t(
-                                                                    itemTranslationIdentifier(
-                                                                        ItemType.Perk,
-                                                                        perk.name,
-                                                                        "description",
-                                                                    ),
-                                                                )}
-                                                            </Box>
-                                                        </CardContent>
-                                                    </CardActionArea>
-                                                </RarityCard>
-                                            </Tooltip>
-
-                                            {perk.name in selectedPerks && (
-                                                <Card sx={{ width: "50px" }}>
-                                                    <CardActionArea
-                                                        disabled={isDeterminingSelectablePerks}
-                                                        onClick={() =>
-                                                            dispatch(
-                                                                setPerkValue({
-                                                                    perkName: perk.name,
-                                                                    value: Math.max(0, selectedPerks[perk.name] - 3),
-                                                                }),
-                                                            )
-                                                        }
-                                                        sx={{
-                                                            alignItems: "center",
-                                                            display: "flex",
-                                                            height: "100%",
-                                                            justifyContent: "center",
-                                                            width: "100%",
-                                                        }}
-                                                    >
-                                                        <Box>
-                                                            <BiMinus />
-                                                        </Box>
-                                                    </CardActionArea>
-                                                </Card>
-                                            )}
-                                        </Stack>
-                                    ),
-                            )}
-                        </Stack>
-                    </Grid>
-                ))}
-            </Grid>
 
             {(isDeterminingSelectablePerks || isSearchingBuilds) && (
                 <Box
@@ -797,7 +600,7 @@ const BuildFinder: React.FC = () => {
                 handleClose={() => setItemSelectDialogOpen(false)}
                 itemType={itemSelectDialogType}
                 onItemSelected={(item, itemType, _isPowerSurged) => {
-                    dispatch(setPicker({ item: item as Weapon | Armour | null, itemType }));
+                    setFinder(setPicker(itemType, item as Weapon | Armour | null));
                     setItemSelectDialogOpen(false);
                 }}
                 open={itemSelectDialogOpen}

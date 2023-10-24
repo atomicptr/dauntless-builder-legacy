@@ -1,5 +1,6 @@
 import { BuildModel } from "@src/data/BuildModel";
 import useDevMode from "@src/hooks/dev-mode";
+import { stateIdent } from "@src/state/common";
 import { configurationAtom, setDevMode } from "@src/state/configuration";
 import { addFavorite, favoritesAtom, favoritesView, isBuildInFavorites } from "@src/state/favorites";
 import log, { LogLevel } from "@src/utils/logger";
@@ -42,7 +43,6 @@ const BackgroundTasks: React.FC = () => {
         );
 
         // replace old redux state with jotai
-        /* TODO: enable after redux is gone
         if ("state" in localStorage) {
             const state = JSON.parse(localStorage.getItem("state") ?? "{}");
             log.debug("Found old redux state, replacing it with jotai...");
@@ -50,9 +50,8 @@ const BackgroundTasks: React.FC = () => {
                 localStorage.setItem(stateIdent(key), JSON.stringify(value));
             });
             localStorage.removeItem("state");
+            window.location.reload();
         }
-
-         */
     }, [setConfiguration, setFavorites, favorites]);
 
     useEffect(() => {

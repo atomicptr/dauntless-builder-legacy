@@ -39,9 +39,9 @@ import {
     setLanguage,
     setLightModeEnabled,
 } from "@src/state/configuration";
-import { exportState, persistState } from "@src/store";
 import { downloadJsonObject } from "@src/utils/download-json";
 import log, { Logger } from "@src/utils/logger";
+import { exportState, persistState } from "@src/utils/state";
 import { useAtomValue, useSetAtom } from "jotai";
 import React from "react";
 import ReactCountryFlag from "react-country-flag";
