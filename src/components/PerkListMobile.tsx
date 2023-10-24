@@ -22,9 +22,9 @@ import { itemPickerDefaultImageSize } from "@src/components/theme";
 import { ItemType } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
 import useIsLightMode from "@src/hooks/light-mode";
-import { useAppSelector } from "@src/hooks/redux";
-import { selectBuild } from "@src/reducers/build/build-slice";
+import { buildModelView } from "@src/state/build";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
+import { useAtomValue } from "jotai";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -51,7 +51,7 @@ const PerkListMobile: React.FC = () => {
     const theme = useTheme();
     const isLightMode = useIsLightMode();
 
-    const build = useAppSelector(selectBuild);
+    const build = useAtomValue(buildModelView);
     const { t } = useTranslation();
 
     type PerkEntry = { count: number; data: Perk; name: string };

@@ -27,24 +27,28 @@ import WeaponTypeFilter from "@src/components/WeaponTypeFilter";
 import { Armour, ArmourType } from "@src/data/Armour";
 import { BuildModel, findPartSlotName } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
-import { isExotic } from "@src/data/ItemRarity";
+import { isExotic, ItemRarity } from "@src/data/ItemRarity";
 import { isArmourType, ItemType } from "@src/data/ItemType";
 import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
 import { Part, partBuildIdentifier, PartType, partTypeData } from "@src/data/Part";
 import { Weapon, weaponBuildIdentifier, WeaponType } from "@src/data/Weapon";
 import useIsMobile from "@src/hooks/is-mobile";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
-import { selectBuild, setBuildId, updateBuild } from "@src/reducers/build/build-slice";
+import { buildAtom, buildModelView, setBuildId, updateBuild } from "@src/state/build";
+import { configurationAtom } from "@src/state/configuration";
 import {
     clearPerks,
+    finderAtom,
     setBuildFinderWeaponType,
     setPerkValue,
-} from "@src/reducers/build-finder/build-finder-selection-slice";
-import { selectConfiguration } from "@src/reducers/configuration/configuration-slice";
-import { resetFilter, setWeaponTypeFilter } from "@src/reducers/item-select-filter/item-select-filter-slice";
+    setPicker,
+    setRemoveExotics,
+    setRemoveLegendary,
+} from "@src/state/finder";
+import { itemSelectFilterAtom, resetFilter, setWeaponTypeFilter } from "@src/state/item-select-filter";
 import { defaultBuildName } from "@src/utils/default-build-name";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
+import { useAtomValue, useSetAtom } from "jotai";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
@@ -70,9 +74,12 @@ const Build: React.FC = () => {
     const navigate = useNavigate();
     const isMobile = useIsMobile();
 
-    const dispatch = useAppDispatch();
-    const build = useAppSelector(selectBuild);
-    const configuration = useAppSelector(selectConfiguration);
+    const setFinder = useSetAtom(finderAtom);
+    const setBuildState = useSetAtom(buildAtom);
+    const setItemSelectFilter = useSetAtom(itemSelectFilterAtom);
+    const configuration = useAtomValue(configurationAtom);
+
+    const build = useAtomValue(buildModelView);
 
     const [itemDialogOpen, setItemDialogOpen] = useState<boolean>(false);
     const [cellDialogOpen, setCellDialogOpen] = useState<boolean>(false);
@@ -82,8 +89,8 @@ const Build: React.FC = () => {
 
     useEffect(() => {
         const build = BuildModel.tryDeserialize(buildId ?? null);
-        dispatch(setBuildId(build.serialize()));
-    }, [buildId, dispatch]);
+        setBuildState(setBuildId(build.serialize()));
+    }, [buildId, setBuildState]);
 
     useEffect(() => {
         history.replaceState({}, "", `/b/${build.serialize()}`);
@@ -116,10 +123,22 @@ const Build: React.FC = () => {
     }, [build]);
 
     const onCopyBuildToFinderButtonClicked = useCallback(() => {
-        dispatch(clearPerks());
+        // reset finder options
+        setFinder(clearPerks());
+        [ItemType.Weapon, ItemType.Head, ItemType.Torso, ItemType.Arms, ItemType.Legs].forEach(itemType =>
+            setFinder(setPicker(itemType, null)),
+        );
 
         if (build.data.weapon) {
-            dispatch(setBuildFinderWeaponType(build.data.weapon.type));
+            setFinder(setBuildFinderWeaponType(build.data.weapon.type));
+
+            if (build.data.weapon.rarity === ItemRarity.Exotic) {
+                setFinder(setRemoveExotics(false));
+            }
+
+            if (build.data.weapon.bond) {
+                setFinder(setRemoveLegendary(false));
+            }
         }
 
         const perks = perkData(build);
@@ -127,11 +146,11 @@ const Build: React.FC = () => {
         for (const perk of perks) {
             const perkName = perk.name;
             const value = perk.count <= 3 ? 3 : 6;
-            dispatch(setPerkValue({ perkName, value }));
+            setFinder(setPerkValue({ perkName, value }));
         }
 
         navigate("/b/finder");
-    }, [build, dispatch, navigate]);
+    }, [build, setFinder, navigate]);
 
     if (!buildId || !BuildModel.isValid(buildId)) {
         navigate("/b/new");
@@ -148,7 +167,7 @@ const Build: React.FC = () => {
             .otherwise(() => []);
 
         if (itemType === ItemType.Weapon && build.data.weapon !== null) {
-            dispatch(setWeaponTypeFilter([build.data.weapon.type]));
+            setItemSelectFilter(setWeaponTypeFilter([build.data.weapon.type]));
         }
 
         setPickerSelection({ filters, itemType });
@@ -156,10 +175,10 @@ const Build: React.FC = () => {
     };
 
     const onItemPickerItemSelected = (item: ItemPickerItem, itemType: ItemType, isPowerSurged: boolean) => {
-        dispatch(resetFilter());
+        setItemSelectFilter(resetFilter());
 
         if (item !== null && itemType === ItemType.Weapon) {
-            dispatch(setWeaponTypeFilter([(item as Weapon).type]));
+            setItemSelectFilter(setWeaponTypeFilter([(item as Weapon).type]));
         }
 
         const buildUpdates = match(itemType)
@@ -172,7 +191,7 @@ const Build: React.FC = () => {
             .with(ItemType.Omnicell, () => ({ omnicell: (item as Omnicell)?.name }))
             .otherwise(() => ({}));
 
-        dispatch(updateBuild({ ...buildUpdates }));
+        setBuildState(updateBuild({ ...buildUpdates }));
         setItemDialogOpen(false);
     };
 
@@ -196,7 +215,7 @@ const Build: React.FC = () => {
             .with(ItemType.Lantern, () => ({ lanternCell: variant }))
             .otherwise(() => ({}));
 
-        dispatch(updateBuild({ ...buildUpdates }));
+        setBuildState(updateBuild({ ...buildUpdates }));
         setCellDialogOpen(false);
     };
 
@@ -227,7 +246,7 @@ const Build: React.FC = () => {
             return;
         }
 
-        dispatch(updateBuild({ [slotName]: item?.name ?? null }));
+        setBuildState(updateBuild({ [slotName]: item?.name ?? null }));
         setPartDialogOpen(false);
     };
 
@@ -249,7 +268,7 @@ const Build: React.FC = () => {
     };
 
     const onBondWeaponSelected = (item: GenericItem | null) => {
-        dispatch(updateBuild({ bondWeapon: item?.name ?? null }));
+        setBuildState(updateBuild({ bondWeapon: item?.name ?? null }));
         setBondDialogOpen(false);
     };
 

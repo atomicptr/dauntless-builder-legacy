@@ -5,15 +5,15 @@ import { BuildModel, findCellByVariantName, findPerkByName } from "@src/data/Bui
 import { ItemType } from "@src/data/ItemType";
 import { Perk, PerkValue } from "@src/data/Perks";
 import useIsLightMode from "@src/hooks/light-mode";
-import { useAppSelector } from "@src/hooks/redux";
 import i18n from "@src/i18n";
-import { selectBuild } from "@src/reducers/build/build-slice";
+import { buildModelView } from "@src/state/build";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
+import { useAtomValue } from "jotai";
 import React, { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 
 const PerkList: React.FC = () => {
-    const build = useAppSelector(selectBuild);
+    const build = useAtomValue(buildModelView);
     const { t } = useTranslation();
 
     const isLightMode = useIsLightMode();

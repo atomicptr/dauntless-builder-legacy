@@ -1,5 +1,5 @@
 import { WeaponType } from "@src/data/Weapon";
-import { findBuilds } from "@src/reducers/build-finder/find-builds";
+import { findBuilds } from "@src/pages/build/find-builds";
 import { benchmarkSuite } from "jest-bench";
 
 benchmarkSuite("findBuilds", {

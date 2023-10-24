@@ -1,43 +1,59 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { BuildModel, CURRENT_BUILD_ID, switchAroundWeaponCellsIfNecessary } from "@src/data/BuildModel";
 import { validateBuild } from "@src/data/validate-build";
-import { RootState } from "@src/store";
+import { stateIdent } from "@src/state/common";
 import log from "@src/utils/logger";
+import { atom } from "jotai";
+import { atomWithStorage } from "jotai/utils";
 import { match } from "ts-pattern";
 
-interface BuildState {
+export interface BuildState {
     build: string;
     lastEditedBuild: string | null;
 }
 
-interface BuildUpdate {
+export interface BuildUpdate {
     [field: string]: string | boolean | null;
 }
 
-const initialState: BuildState = {
+export const buildAtom = atomWithStorage<BuildState>(stateIdent("build"), {
     build: BuildModel.empty().serialize(),
     lastEditedBuild: null,
-};
+});
 
-export const buildSlice = createSlice({
-    initialState,
-    name: "build",
-    reducers: {
-        clearBuild: state => {
-            state.build = BuildModel.empty().serialize();
-        },
-        setBuildId: (state, action: PayloadAction<string>) => {
-            state.build = action.payload;
-        },
-        updateBuild: (state, action: PayloadAction<BuildUpdate>) => {
+export const buildModelView = atom(get => {
+    const buildState = get(buildAtom);
+    return BuildModel.deserialize(buildState.build);
+});
+
+export const lastSelectedBuildModelView = atom(get => {
+    const buildState = get(buildAtom);
+    if (!buildState.lastEditedBuild) {
+        return null;
+    }
+    return BuildModel.deserialize(buildState.lastEditedBuild);
+});
+
+export const clearBuild = () => (state: BuildState) => ({
+    build: BuildModel.empty().serialize(),
+    lastEditedBuild: state.lastEditedBuild,
+});
+
+export const setBuildId = (buildId: string) => (state: BuildState) => ({
+    build: buildId,
+    lastEditedBuild: state.lastEditedBuild,
+});
+
+export const updateBuild =
+    (buildUpdate: BuildUpdate) =>
+        (state: BuildState): BuildState => {
             let build = BuildModel.deserialize(state.build);
 
             // set build id to current and reset flags when editing
             build.version = CURRENT_BUILD_ID;
             build.flags = 0;
 
-            for (const key of Object.keys(action.payload)) {
-                const value = action.payload[key];
+            for (const key of Object.keys(buildUpdate)) {
+                const value = buildUpdate[key];
                 if (key in build) {
                     match(key)
                         .with("weaponName", () => (build.weaponName = value as string | null))
@@ -68,20 +84,12 @@ export const buildSlice = createSlice({
             }
             build = switchAroundWeaponCellsIfNecessary(build);
             build = validateBuild(build);
-            log.debug("Updated Build", { build, changePayload: action.payload });
-            state.build = build.serialize();
-            state.lastEditedBuild = state.build;
-        },
-    },
-});
+            log.debug("Updated Build", { build, changePayload: buildUpdate });
 
-const initState = (state: BuildState) => Object.assign({}, initialState, state);
+            const buildId = build.serialize();
 
-export const { clearBuild, setBuildId, updateBuild } = buildSlice.actions;
-
-export const selectBuild = (state: RootState): BuildModel => BuildModel.deserialize(initState(state.build).build);
-
-export const selectLastEditedBuild = (state: RootState) =>
-    state.build.lastEditedBuild !== null ? BuildModel.deserialize(initState(state.build).lastEditedBuild ?? "") : null;
-
-export default buildSlice.reducer;
+            return {
+                build: buildId,
+                lastEditedBuild: buildId,
+            };
+        };

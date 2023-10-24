@@ -37,10 +37,10 @@ import { crowdinLink, discordServerUrl, githubUrl, xTwitterUrl } from "@src/cons
 import dauntlessBuilderData from "@src/data/Data";
 import useDevMode from "@src/hooks/dev-mode";
 import useIsMobile from "@src/hooks/is-mobile";
-import { useAppSelector } from "@src/hooks/redux";
 import { currentLanguage, getNativeLanguageName, isBetaLanguage, Language } from "@src/i18n";
-import { selectFavorites } from "@src/reducers/favorites/favorites-slice";
+import { favoritesView } from "@src/state/favorites";
 import log from "@src/utils/logger";
+import { useAtomValue } from "jotai";
 import React, { ReactNode, useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { useTranslation } from "react-i18next";
@@ -67,7 +67,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     const handleDrawerOpen = () => setOpen(true);
     const handleDrawerClose = () => setOpen(false);
 
-    const favorites = useAppSelector(selectFavorites);
+    const favorites = useAtomValue(favoritesView);
 
     const sidebarItems = [
         { icon: <Home />, link: "/", text: t("drawer.home") },

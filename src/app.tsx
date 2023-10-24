@@ -1,7 +1,5 @@
 /* eslint-disable simple-import-sort/imports */
-// these two files have to be included first and in this exact order
 import "./i18n";
-import { store } from "./store";
 /* eslint-enable simple-import-sort/imports */
 import { registerSW } from "virtual:pwa-register";
 import { Slide, ThemeProvider } from "@mui/material";
@@ -9,7 +7,6 @@ import About from "@src/pages/about/About";
 import { SnackbarProvider } from "notistack";
 import React, { StrictMode } from "react";
 import { createRoot, Root } from "react-dom/client";
-import { Provider } from "react-redux";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 import Layout from "./components/Layout";
@@ -71,11 +68,31 @@ const DauntlessBuilderApp = () => {
                                         <Route
                                             element={<BuildFinder />}
                                             path="finder"
-                                        />
+                                        >
+                                            <Route
+                                                element={<BuildFinder />}
+                                                path=":weaponType"
+                                            >
+                                                <Route
+                                                    element={<BuildFinder />}
+                                                    path=":finderConfig"
+                                                />
+                                            </Route>
+                                        </Route>
                                         <Route
                                             element={<MetaBuilds />}
                                             path="meta"
-                                        />
+                                        >
+                                            <Route
+                                                element={<MetaBuilds />}
+                                                path=":weaponType"
+                                            >
+                                                <Route
+                                                    element={<MetaBuilds />}
+                                                    path=":category"
+                                                />
+                                            </Route>
+                                        </Route>
                                         <Route
                                             element={<Build />}
                                             path=":buildId"
@@ -148,9 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     root?.render(
         <StrictMode>
-            <Provider store={store}>
-                <DauntlessBuilderApp />
-            </Provider>
+            <DauntlessBuilderApp />
         </StrictMode>,
     );
 });

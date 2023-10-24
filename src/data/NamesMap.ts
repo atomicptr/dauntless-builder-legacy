@@ -11,6 +11,7 @@ export enum NamesMapType {
     RepeaterPart = "Parts:Repeater",
     SwordPart = "Parts:Sword",
     WarpikePart = "Parts:Warpike",
+    Perks = "Perks",
 }
 
 export type NamesMap = {

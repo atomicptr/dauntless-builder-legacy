@@ -8,7 +8,7 @@ import { ItemRarity } from "@src/data/ItemRarity";
 import { Lantern } from "@src/data/Lantern";
 import { Perk } from "@src/data/Perks";
 import { Weapon, WeaponType } from "@src/data/Weapon";
-import { AssignedPerkValue } from "@src/reducers/build-finder/build-finder-selection-slice";
+import { AssignedPerkValue } from "@src/state/finder";
 import { deepCopy } from "@src/utils/deep-copy";
 import sortObjectByKeys from "@src/utils/sort-object-by-keys";
 import md5 from "md5";

@@ -1,4 +1,5 @@
 import { Tags } from "@src/data/Tags";
+import kebabCase from "just-kebab-case";
 import { match } from "ts-pattern";
 
 import { CellType } from "./Cell";
@@ -58,3 +59,12 @@ export const weaponBuildIdentifier = (weaponType: WeaponType): WeaponName =>
         .with(WeaponType.Sword, () => "sword")
         .with(WeaponType.WarPike, () => "warpike")
         .run();
+
+export const findByKebabCaseName = (name: string): WeaponType | null => {
+    for (const weaponName of Object.keys(WeaponType)) {
+        if (kebabCase(weaponName) === name) {
+            return WeaponType[weaponName as keyof typeof WeaponType];
+        }
+    }
+    return null;
+};

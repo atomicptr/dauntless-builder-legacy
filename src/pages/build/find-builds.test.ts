@@ -1,7 +1,7 @@
 import { findArmourByName, findWeaponByName } from "@src/data/BuildModel";
 import { WeaponType } from "@src/data/Weapon";
-import { AssignedPerkValue } from "@src/reducers/build-finder/build-finder-selection-slice";
-import { findBuilds, MatchingBuild } from "@src/reducers/build-finder/find-builds";
+import { findBuilds, MatchingBuild } from "@src/pages/build/find-builds";
+import { AssignedPerkValue } from "@src/state/finder";
 
 describe("findBuilds", () => {
     const hasWhatYouWanted = (requestedPerks: AssignedPerkValue, build: MatchingBuild) => {

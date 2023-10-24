@@ -1,13 +1,13 @@
 import { Error, Warning } from "@mui/icons-material";
 import { Alert } from "@mui/material";
 import { BuildFlags } from "@src/data/BuildModel";
-import { useAppSelector } from "@src/hooks/redux";
-import { selectBuild } from "@src/reducers/build/build-slice";
+import { buildModelView } from "@src/state/build";
+import { useAtomValue } from "jotai";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
 const BuildWarning = () => {
-    const build = useAppSelector(selectBuild);
+    const build = useAtomValue(buildModelView);
     const { t } = useTranslation();
 
     if (build.hasFlag(BuildFlags.UpgradedBuild)) {

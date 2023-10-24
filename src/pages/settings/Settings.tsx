@@ -31,27 +31,27 @@ import {
 } from "@mui/material";
 import PageTitle from "@src/components/PageTitle";
 import useIsMobile from "@src/hooks/is-mobile";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
 import { currentLanguage, flagCode, getNativeLanguageName, isCommunityLanguage, Language } from "@src/i18n";
 import {
-    selectConfiguration,
+    configurationAtom,
     setDevMode,
     setFinderPerkMatching,
     setLanguage,
     setLightModeEnabled,
-} from "@src/reducers/configuration/configuration-slice";
-import { exportState, persistState } from "@src/store";
+} from "@src/state/configuration";
 import { downloadJsonObject } from "@src/utils/download-json";
 import log, { Logger } from "@src/utils/logger";
+import { exportState, persistState } from "@src/utils/state";
+import { useAtomValue, useSetAtom } from "jotai";
 import React from "react";
 import ReactCountryFlag from "react-country-flag";
 import { useTranslation } from "react-i18next";
 
 const Settings: React.FC = () => {
-    const dispatch = useAppDispatch();
     const { t } = useTranslation();
     const isMobile = useIsMobile();
-    const configuration = useAppSelector(selectConfiguration);
+    const configuration = useAtomValue(configurationAtom);
+    const setConfiguration = useSetAtom(configurationAtom);
 
     const handleFileImport = (e: React.ChangeEvent<HTMLInputElement>) => {
         const files = e.target.files;
@@ -120,7 +120,7 @@ const Settings: React.FC = () => {
                                 <InputLabel>{t("pages.settings.language")}</InputLabel>
                                 <Select
                                     label={t("pages.settings.language")}
-                                    onChange={ev => dispatch(setLanguage(ev.target.value as Language))}
+                                    onChange={ev => setConfiguration(setLanguage(ev.target.value as Language))}
                                     value={currentLanguage()}
                                 >
                                     {Object.keys(Language).map((key: string) => (
@@ -162,7 +162,7 @@ const Settings: React.FC = () => {
                             <ListItemText primary={t("pages.settings.enable-light-mode")} />
                             <Switch
                                 checked={configuration.lightModeEnabled}
-                                onChange={ev => dispatch(setLightModeEnabled(ev.target.checked))}
+                                onChange={ev => setConfiguration(setLightModeEnabled(ev.target.checked))}
                             />
                         </ListItem>
                     </List>
@@ -207,7 +207,7 @@ const Settings: React.FC = () => {
                             <ListItemText primary={t("pages.build-finder.perk-matching-enabled")} />
                             <Switch
                                 checked={configuration.finderPerkMatchingEnabled}
-                                onChange={ev => dispatch(setFinderPerkMatching(ev.target.checked))}
+                                onChange={ev => setConfiguration(setFinderPerkMatching(ev.target.checked))}
                             />
                         </ListItem>
                     </List>
@@ -226,7 +226,7 @@ const Settings: React.FC = () => {
                             <Switch
                                 checked={configuration.devMode}
                                 disabled={DB_DEVMODE}
-                                onChange={ev => dispatch(setDevMode(ev.target.checked))}
+                                onChange={ev => setConfiguration(setDevMode(ev.target.checked))}
                             />
                         </ListItem>
                         <ListItem>

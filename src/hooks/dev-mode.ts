@@ -1,11 +1,9 @@
-import { createSelector } from "@reduxjs/toolkit";
-import { useAppSelector } from "@src/hooks/redux";
-import { selectConfiguration } from "@src/reducers/configuration/configuration-slice";
-
-const selectDevMode = createSelector([selectConfiguration], config => config.devMode);
+import { configurationAtom } from "@src/state/configuration";
+import { useAtomValue } from "jotai";
 
 const useDevMode = () => {
-    return useAppSelector(selectDevMode);
+    const configuration = useAtomValue(configurationAtom);
+    return configuration.devMode;
 };
 
 export default useDevMode;

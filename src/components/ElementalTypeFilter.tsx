@@ -1,12 +1,8 @@
 import { Box, FormControl, InputLabel, ListItemIcon, ListItemText, MenuItem, Select, Stack } from "@mui/material";
 import { ElementalType } from "@src/data/ElementalType";
 import { ItemType } from "@src/data/ItemType";
-import { useAppDispatch, useAppSelector } from "@src/hooks/redux";
-import {
-    GenericItemType,
-    selectItemSelectFilter,
-    setElementFilter,
-} from "@src/reducers/item-select-filter/item-select-filter-slice";
+import { itemSelectFilterAtom, ItemSelectFilterState, setElementFilter } from "@src/state/item-select-filter";
+import { useAtom } from "jotai";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -15,8 +11,7 @@ interface ElementalTypeFilterProps {
 }
 
 const ElementalTypeFilter: React.FC<ElementalTypeFilterProps> = ({ itemType }) => {
-    const dispatch = useAppDispatch();
-    const itemSelectFilter = useAppSelector(selectItemSelectFilter);
+    const [itemSelectFilter, setItemSelectFilter] = useAtom(itemSelectFilterAtom);
     const { t } = useTranslation();
 
     return (
@@ -24,7 +19,7 @@ const ElementalTypeFilter: React.FC<ElementalTypeFilterProps> = ({ itemType }) =
             <InputLabel>{t("pages.build.filter-by", { name: t("terms.elemental-type") })}</InputLabel>
             <Select
                 multiple
-                onChange={ev => dispatch(setElementFilter([itemType, ev.target.value as ElementalType[]]))}
+                onChange={ev => setItemSelectFilter(setElementFilter(itemType, ev.target.value as ElementalType[]))}
                 renderValue={selected => (
                     <Stack
                         direction="row"
@@ -50,7 +45,7 @@ const ElementalTypeFilter: React.FC<ElementalTypeFilterProps> = ({ itemType }) =
                         ))}
                     </Stack>
                 )}
-                value={itemSelectFilter[itemType as GenericItemType].elementTypes}
+                value={itemSelectFilter[itemType as keyof ItemSelectFilterState].elementTypes}
                 variant="standard"
             >
                 {Object.keys(ElementalType)
