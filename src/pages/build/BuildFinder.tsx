@@ -1,6 +1,5 @@
-import { Clear, Error } from "@mui/icons-material";
+import { Clear } from "@mui/icons-material";
 import {
-    Alert,
     Box,
     Button,
     Card,
@@ -64,11 +63,6 @@ import { match } from "ts-pattern";
 const buildLimit = 200;
 const buildDisplayLimit = 50;
 
-// Currently import statements within web workers seem to only work in Chrome, this is not an issue when
-// this gets compiled, therefore we only disable this when DB_DEVMODE is set and we're not using Chrome.
-// Firefox related issue: https://bugzilla.mozilla.org/show_bug.cgi?id=1247687
-const webworkerDisabled = DB_DEVMODE && navigator.userAgent.search("Chrome") === -1;
-
 const findBuilds = async (
     weaponType: WeaponType | null,
     requestedPerks: AssignedPerkValue,
@@ -76,12 +70,7 @@ const findBuilds = async (
     options: FinderItemDataOptions = {},
     useCache = true,
 ): Promise<BuildModel[]> => {
-    const buildFinder = webworkerDisabled ? null : new BuildFinderWorker();
-
-    if (buildFinder === null) {
-        log.warn("Web Worker based build finder is currently disabled due to not using Chrome!");
-        return Promise.resolve([]);
-    }
+    const buildFinder = new BuildFinderWorker();
 
     const fetchBuilds = async () => {
         return new Promise<MatchingBuild[]>(resolve => {
@@ -115,12 +104,7 @@ const findAvailablePerks = async (
     options: FinderItemDataOptions = {},
     useCache = true,
 ): Promise<AvailablePerkCheckResult> => {
-    const perkChecker = webworkerDisabled ? null : new AvailablePerksChecker();
-
-    if (perkChecker === null) {
-        log.warn("Web Worker based build finder is currently disabled due to not using Chrome!");
-        return Promise.resolve({});
-    }
+    const perkChecker = new AvailablePerksChecker();
 
     const checkAvailablePerks = async () => {
         return new Promise<AvailablePerkCheckResult>(resolve => {
@@ -385,17 +369,6 @@ const BuildFinder: React.FC = () => {
         setItemSelectDialogType(itemType);
         setItemSelectDialogOpen(true);
     };
-
-    if (webworkerDisabled) {
-        return (
-            <Alert
-                color="error"
-                icon={<Error />}
-            >
-                {t("feature-disabled-browser")}
-            </Alert>
-        );
-    }
 
     return (
         <Stack
