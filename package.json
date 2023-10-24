@@ -49,6 +49,7 @@
         "react-router-dom": "^6.17.0",
         "react-virtualized-auto-sizer": "^1.0.20",
         "react-window": "^1.8.9",
+        "sqids": "^0.3.0",
         "ts-pattern": "^5.0.5",
         "vite-plugin-favicon": "^1.0.8"
     },

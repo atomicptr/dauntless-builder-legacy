@@ -68,7 +68,17 @@ const DauntlessBuilderApp = () => {
                                         <Route
                                             element={<BuildFinder />}
                                             path="finder"
-                                        />
+                                        >
+                                            <Route
+                                                element={<BuildFinder />}
+                                                path=":weaponType"
+                                            >
+                                                <Route
+                                                    element={<BuildFinder />}
+                                                    path=":finderConfig"
+                                                />
+                                            </Route>
+                                        </Route>
                                         <Route
                                             element={<MetaBuilds />}
                                             path="meta"

@@ -31,7 +31,7 @@ import { BuildModel } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
 import { ItemType } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
-import { Weapon, WeaponType } from "@src/data/Weapon";
+import { findByKebabCaseName, Weapon, WeaponType } from "@src/data/Weapon";
 import { cacheAsync } from "@src/hooks/cache";
 import useIsMobile from "@src/hooks/is-mobile";
 import {
@@ -42,9 +42,11 @@ import {
 } from "@src/pages/build/find-builds";
 import { configurationAtom, setFinderPerkMatching } from "@src/state/configuration";
 import {
+    applyFinderConfigString,
     AssignedPerkValue,
     clearPerks,
     finderAtom,
+    finderConfigView,
     setBuildFinderWeaponType,
     setPerkValue,
     setPicker,
@@ -54,10 +56,12 @@ import {
 import log from "@src/utils/logger";
 import AvailablePerksChecker from "@src/worker/available-perks-checker?worker";
 import BuildFinderWorker from "@src/worker/build-finder?worker";
-import { useAtom } from "jotai";
+import { useAtom, useAtomValue } from "jotai";
+import kebabCase from "just-kebab-case";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
+import { useParams } from "react-router-dom";
 import { match } from "ts-pattern";
 
 const buildLimit = 200;
@@ -129,6 +133,7 @@ const findAvailablePerks = async (
 
 const BuildFinder: React.FC = () => {
     const { t } = useTranslation();
+    const params = useParams();
 
     const [
         {
@@ -144,6 +149,7 @@ const BuildFinder: React.FC = () => {
         },
         setFinder,
     ] = useAtom(finderAtom);
+    const finderConfigString = useAtomValue(finderConfigView);
 
     const [configuration, setConfiguration] = useAtom(configurationAtom);
     const isMobile = useIsMobile();
@@ -171,6 +177,28 @@ const BuildFinder: React.FC = () => {
     );
 
     const totalPerkCount = useMemo(() => Object.values(selectedPerks).reduce((sum, n) => sum + n, 0), [selectedPerks]);
+
+    useEffect(() => {
+        if (params.weaponType) {
+            const urlWeaponType = findByKebabCaseName(params.weaponType);
+            if (urlWeaponType) {
+                setFinder(setBuildFinderWeaponType(urlWeaponType));
+            }
+        }
+
+        if (params.finderConfig) {
+            try {
+                setFinder(applyFinderConfigString(params.finderConfig));
+            } catch (err) {
+                log.error("finder config from url error", { err });
+            }
+        }
+    }, [params, setFinder]);
+
+    useEffect(() => {
+        const weapon = kebabCase(weaponType.toString());
+        history.replaceState({}, "", `/b/finder/${weapon}/${finderConfigString}`);
+    }, [weaponType, finderConfigString]);
 
     useEffect(() => {
         log.timer("findBuilds");
