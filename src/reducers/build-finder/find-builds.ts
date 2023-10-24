@@ -365,12 +365,12 @@ export const findBuilds = (
         const createBuildIdentifier = (build: IntermediateBuild, cellsSlotted: CellsSlottedMap): string =>
             md5(
                 "build::" +
-                Object.keys(sortObjectByKeys(build))
-                    .map(key => build[key as keyof IntermediateBuild].name)
-                    .join("::") +
-                Object.keys(sortObjectByKeys(cellsSlotted))
-                    .map(key => cellsSlotted[key as keyof CellsSlottedMap] ?? "Null")
-                    .join("::"),
+                    Object.keys(sortObjectByKeys(build))
+                        .map(key => build[key as keyof IntermediateBuild].name)
+                        .join("::") +
+                    Object.keys(sortObjectByKeys(cellsSlotted))
+                        .map(key => cellsSlotted[key as keyof CellsSlottedMap] ?? "Null")
+                        .join("::"),
             );
 
         const stepPerkSize = 3;
@@ -478,8 +478,7 @@ export const findBuilds = (
                         fillInRemainingArmourPieces(i + 1, weapon, armourSelections);
                         armourSelections[armourPieces[i]] = null;
                     }
-                }
-                else {
+                } else {
                     fillInRemainingArmourPieces(i + 1, weapon, armourSelections);
                 }
             }

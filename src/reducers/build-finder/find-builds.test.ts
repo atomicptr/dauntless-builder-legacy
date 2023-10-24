@@ -630,16 +630,16 @@ describe("findBuilds", () => {
         const builds = findBuilds(
             WeaponType.Axe,
             {
-                "Adrenaline": 3,
+                Adrenaline: 3,
                 "Assassin's Vigour": 6,
-                "Knockout King": 3
+                "Knockout King": 3,
             },
             50,
             {
+                pickerLegs: findArmourByName("Agaric Roots"),
+                pickerWeapon: findWeaponByName("Call of the Firebird"),
                 removeExotics: false,
                 removeLegendary: false,
-                pickerWeapon: findWeaponByName("Call of the Firebird"),
-                pickerLegs: findArmourByName("Agaric Roots"),
             },
         );
         expect(builds.length > 0).toBeTruthy();
@@ -647,16 +647,16 @@ describe("findBuilds", () => {
         const builds2 = findBuilds(
             WeaponType.Axe,
             {
-                "Adrenaline": 3,
+                Adrenaline: 3,
                 "Assassin's Vigour": 6,
-                "Knockout King": 6
+                "Knockout King": 6,
             },
             50,
             {
+                pickerLegs: findArmourByName("Agaric Roots"),
+                pickerWeapon: findWeaponByName("Call of the Firebird"),
                 removeExotics: false,
                 removeLegendary: false,
-                pickerWeapon: findWeaponByName("Call of the Firebird"),
-                pickerLegs: findArmourByName("Agaric Roots"),
             },
         );
         expect(builds2.length > 0).toBeTruthy();
