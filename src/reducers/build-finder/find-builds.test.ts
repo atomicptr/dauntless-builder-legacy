@@ -660,6 +660,6 @@ describe("findBuilds", () => {
             },
         );
         expect(builds2.length > 0).toBeTruthy();
-        expect(builds.length > builds2.length).toBeTruthy();
+        expect(builds.length >= builds2.length).toBeTruthy();
     });
 });

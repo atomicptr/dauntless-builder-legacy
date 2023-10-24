@@ -43,7 +43,7 @@ You should now have Dauntless Builder running on your system via http://localhos
 
 ### Data changes & the map file
 
-If you change something in data/ make sure to call `yarn build:data` which will update .map/names.json
+If you change something in data/ make sure to call `npm run build:data` which will update .map/names.json
 and include that in your pull request.
 
 ### English Language
