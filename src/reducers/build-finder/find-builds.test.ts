@@ -625,4 +625,41 @@ describe("findBuilds", () => {
         );
         expect(builds.length > 0).toBeTruthy();
     });
+
+    it("regression #434: less restrictive build should have more options", () => {
+        const builds = findBuilds(
+            WeaponType.Axe,
+            {
+                Adrenaline: 3,
+                "Assassin's Vigour": 6,
+                "Knockout King": 3,
+            },
+            50,
+            {
+                pickerLegs: findArmourByName("Agaric Roots"),
+                pickerWeapon: findWeaponByName("Call of the Firebird"),
+                removeExotics: false,
+                removeLegendary: false,
+            },
+        );
+        expect(builds.length > 0).toBeTruthy();
+
+        const builds2 = findBuilds(
+            WeaponType.Axe,
+            {
+                Adrenaline: 3,
+                "Assassin's Vigour": 6,
+                "Knockout King": 6,
+            },
+            50,
+            {
+                pickerLegs: findArmourByName("Agaric Roots"),
+                pickerWeapon: findWeaponByName("Call of the Firebird"),
+                removeExotics: false,
+                removeLegendary: false,
+            },
+        );
+        expect(builds2.length > 0).toBeTruthy();
+        expect(builds.length >= builds2.length).toBeTruthy();
+    });
 });
