@@ -27,7 +27,7 @@ import WeaponTypeFilter from "@src/components/WeaponTypeFilter";
 import { Armour, ArmourType } from "@src/data/Armour";
 import { BuildModel, findPartSlotName } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
-import { isExotic } from "@src/data/ItemRarity";
+import { isExotic, ItemRarity } from "@src/data/ItemRarity";
 import { isArmourType, ItemType } from "@src/data/ItemType";
 import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
@@ -36,7 +36,15 @@ import { Weapon, weaponBuildIdentifier, WeaponType } from "@src/data/Weapon";
 import useIsMobile from "@src/hooks/is-mobile";
 import { buildAtom, buildModelView, setBuildId, updateBuild } from "@src/state/build";
 import { configurationAtom } from "@src/state/configuration";
-import { clearPerks, finderAtom, setBuildFinderWeaponType, setPerkValue } from "@src/state/finder";
+import {
+    clearPerks,
+    finderAtom,
+    setBuildFinderWeaponType,
+    setPerkValue,
+    setPicker,
+    setRemoveExotics,
+    setRemoveLegendary,
+} from "@src/state/finder";
 import { itemSelectFilterAtom, resetFilter, setWeaponTypeFilter } from "@src/state/item-select-filter";
 import { defaultBuildName } from "@src/utils/default-build-name";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
@@ -115,10 +123,22 @@ const Build: React.FC = () => {
     }, [build]);
 
     const onCopyBuildToFinderButtonClicked = useCallback(() => {
+        // reset finder options
         setFinder(clearPerks());
+        [ItemType.Weapon, ItemType.Head, ItemType.Torso, ItemType.Arms, ItemType.Legs].forEach(itemType =>
+            setFinder(setPicker(itemType, null)),
+        );
 
         if (build.data.weapon) {
             setFinder(setBuildFinderWeaponType(build.data.weapon.type));
+
+            if (build.data.weapon.rarity === ItemRarity.Exotic) {
+                setFinder(setRemoveExotics(false));
+            }
+
+            if (build.data.weapon.bond) {
+                setFinder(setRemoveLegendary(false));
+            }
         }
 
         const perks = perkData(build);
