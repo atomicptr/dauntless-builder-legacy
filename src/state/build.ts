@@ -3,7 +3,6 @@ import { validateBuild } from "@src/data/validate-build";
 import { stateIdent } from "@src/state/common";
 import log from "@src/utils/logger";
 import { atom } from "jotai";
-import { atomWithStorage } from "jotai/utils";
 import { match } from "ts-pattern";
 
 export interface BuildState {
@@ -15,7 +14,7 @@ export interface BuildUpdate {
     [field: string]: string | boolean | null;
 }
 
-export const buildAtom = atomWithStorage<BuildState>(stateIdent("build"), {
+export const buildAtom = atom<BuildState>({
     build: BuildModel.empty().serialize(),
     lastEditedBuild: null,
 });
