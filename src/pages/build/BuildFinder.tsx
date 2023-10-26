@@ -1,12 +1,4 @@
-import {
-    Box,
-    Checkbox,
-    CircularProgress,
-    FormControlLabel,
-    FormGroup,
-    Stack,
-    Typography,
-} from "@mui/material";
+import { Box, Checkbox, CircularProgress, FormControlLabel, FormGroup, Stack, Typography } from "@mui/material";
 import FinderBuildList from "@src/components/FinderBuildList";
 import FinderDevMenu from "@src/components/FinderDevMenu";
 import FinderItemPreselect from "@src/components/FinderItemPreselect";

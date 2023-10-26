@@ -4,14 +4,11 @@ import { ItemType } from "@src/data/ItemType";
 import dauntlessBuilderNamesMap, { NamesMapType } from "@src/data/NamesMap";
 import { Weapon, WeaponType } from "@src/data/Weapon";
 import { stateIdent } from "@src/state/common";
+import { buildIdsDecode, buildIdsEncode } from "@src/utils/build-id";
 import sortObjectByKeys from "@src/utils/sort-object-by-keys";
 import { atom } from "jotai";
 import { atomWithStorage } from "jotai/utils";
-import Sqids from "sqids";
 import { match } from "ts-pattern";
-
-const alphabet = "MNWboUQG19y_Oja2ZEh4liLfst053FTCkpBVrw~Ix.7dJDnmugeKYS6-vcR8zqHAPX";
-const sqids = new Sqids({ alphabet });
 
 export interface AssignedPerkValue {
     [perkName: string]: number;
@@ -61,7 +58,7 @@ export const finderConfigView = atom(get => {
         }
     }
 
-    return sqids.encode([
+    return buildIdsEncode([
         1,
         finder.removeExotics ? 1 : 0,
         finder.removeLegendary ? 1 : 0,
@@ -135,7 +132,7 @@ export const setRemoveLegendary =
 export const applyFinderConfigString =
     (finderConfig: string) =>
         (state: BuildFinderSelectionState): BuildFinderSelectionState => {
-            const data = sqids.decode(finderConfig);
+            const data = buildIdsDecode(finderConfig);
 
             const config = data.splice(0, 8);
             const perks = data.splice(0, data.length);

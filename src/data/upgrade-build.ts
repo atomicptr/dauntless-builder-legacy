@@ -1,10 +1,13 @@
-import { BuildFlags, BuildModel, CURRENT_BUILD_ID, HASHIDS_SALT } from "@src/data/BuildModel";
-import Hashids from "hashids";
+import { BuildFlags, BuildModel, CURRENT_BUILD_ID } from "@src/data/BuildModel";
+import { buildIdsDecode, buildIdsEncode, buildIdsProgressiveDecode, BuildIdsProvider } from "@src/utils/build-id";
 
-export const convertVersion2To3 = (version2BuildId: string): string => {
-    const hashids = new Hashids(HASHIDS_SALT);
+interface UpgradeResult {
+    buildId: string;
+    wasUpgraded: boolean;
+}
 
-    const numbers = hashids.decode(version2BuildId);
+export const convertVersion2To3 = (version2BuildId: string): UpgradeResult => {
+    const numbers = buildIdsDecode(version2BuildId, BuildIdsProvider.HASHIDS);
 
     /* eslint-disable sort-keys */
     /* eslint-disable sort-keys-fix/sort-keys-fix */
@@ -37,13 +40,11 @@ export const convertVersion2To3 = (version2BuildId: string): string => {
     };
     /* eslint-enable sort-keys */
     /* eslint-enable sort-keys-fix/sort-keys-fix */
-    return hashids.encode(Object.values(data));
+    return { buildId: buildIdsEncode(Object.values(data), BuildIdsProvider.HASHIDS), wasUpgraded: true };
 };
 
-export const convertVersion3To4 = (version3BuildId: string): string => {
-    const hashids = new Hashids(HASHIDS_SALT);
-
-    const numbers = hashids.decode(version3BuildId);
+export const convertVersion3To4 = (version3BuildId: string): UpgradeResult => {
+    const numbers = buildIdsDecode(version3BuildId, BuildIdsProvider.HASHIDS);
 
     /* eslint-disable sort-keys */
     /* eslint-disable sort-keys-fix/sort-keys-fix */
@@ -77,17 +78,15 @@ export const convertVersion3To4 = (version3BuildId: string): string => {
     };
     /* eslint-enable sort-keys */
     /* eslint-enable sort-keys-fix/sort-keys-fix */
-    return hashids.encode(Object.values(data));
+    return { buildId: buildIdsEncode(Object.values(data), BuildIdsProvider.HASHIDS), wasUpgraded: true };
 };
 
-export const convertVersion4To5 = (version4BuildId: string): string => {
-    const hashids = new Hashids(HASHIDS_SALT);
-
-    const numbers = hashids.decode(version4BuildId);
+export const convertVersion4To5 = (version4BuildId: string): UpgradeResult => {
+    const numbers = buildIdsDecode(version4BuildId, BuildIdsProvider.HASHIDS);
 
     // if this is a v4 build with 24 numbers its actually an already converted build
     if (numbers.length === 24) {
-        return version4BuildId;
+        return { buildId: version4BuildId, wasUpgraded: false };
     }
 
     /* eslint-disable sort-keys */
@@ -122,6 +121,7 @@ export const convertVersion4To5 = (version4BuildId: string): string => {
     /* eslint-enable sort-keys-fix/sort-keys-fix */
 
     // replace old modular Repeater with Recruits Repeater
+    let wasUpgraded = false;
     const modularRepeaterWeaponId = 27;
     if (data.weapon_name === modularRepeaterWeaponId) {
         data.weapon_name = 169; // Recruits Repeater
@@ -131,15 +131,14 @@ export const convertVersion4To5 = (version4BuildId: string): string => {
         data.weapon_part1_name = numbers[6];
         data.weapon_part2_name = numbers[7];
         data.weapon_part3_name = numbers[10];
+        wasUpgraded = true;
     }
 
-    return hashids.encode(Object.values(data));
+    return { buildId: buildIdsEncode(Object.values(data), BuildIdsProvider.HASHIDS), wasUpgraded };
 };
 
-export const convertVersion5To6 = (version6BuildId: string): string => {
-    const hashids = new Hashids(HASHIDS_SALT);
-
-    const numbers = hashids.decode(version6BuildId);
+export const convertVersion5To6 = (version6BuildId: string): UpgradeResult => {
+    const numbers = buildIdsDecode(version6BuildId, BuildIdsProvider.HASHIDS);
 
     /* eslint-disable sort-keys */
     /* eslint-disable sort-keys-fix/sort-keys-fix */
@@ -173,13 +172,17 @@ export const convertVersion5To6 = (version6BuildId: string): string => {
     /* eslint-enable sort-keys */
     /* eslint-enable sort-keys-fix/sort-keys-fix */
 
-    return hashids.encode(Object.values(data));
+    return { buildId: buildIdsEncode(Object.values(data), BuildIdsProvider.HASHIDS), wasUpgraded: false };
+};
+
+export const convertVersion6To7 = (version6BuildId: string): UpgradeResult => {
+    const numbers = buildIdsDecode(version6BuildId, BuildIdsProvider.HASHIDS);
+    numbers[0] = 7;
+    return { buildId: buildIdsEncode(numbers), wasUpgraded: false };
 };
 
 export const upgradeBuild = (buildId: string): string => {
-    const hashids = new Hashids(HASHIDS_SALT);
-
-    const buildVersion = () => hashids.decode(buildId)[0];
+    const buildVersion = () => buildIdsProgressiveDecode(buildId)[0];
 
     let buildWasUpgraded = false;
 
@@ -188,23 +191,33 @@ export const upgradeBuild = (buildId: string): string => {
     }
 
     if (buildVersion() === 2) {
-        buildId = convertVersion2To3(buildId);
-        buildWasUpgraded = true;
+        const { buildId: newBuildId, wasUpgraded } = convertVersion2To3(buildId);
+        buildId = newBuildId;
+        buildWasUpgraded = wasUpgraded;
     }
 
     if (buildVersion() === 3) {
-        buildId = convertVersion3To4(buildId);
-        buildWasUpgraded = true;
+        const { buildId: newBuildId, wasUpgraded } = convertVersion3To4(buildId);
+        buildId = newBuildId;
+        buildWasUpgraded = wasUpgraded;
     }
 
     if (buildVersion() === 4) {
-        buildId = convertVersion4To5(buildId);
-        buildWasUpgraded = true;
+        const { buildId: newBuildId, wasUpgraded } = convertVersion4To5(buildId);
+        buildId = newBuildId;
+        buildWasUpgraded = wasUpgraded;
     }
 
     if (buildVersion() === 5) {
-        buildId = convertVersion5To6(buildId);
-        buildWasUpgraded = true;
+        const { buildId: newBuildId, wasUpgraded } = convertVersion5To6(buildId);
+        buildId = newBuildId;
+        buildWasUpgraded = wasUpgraded;
+    }
+
+    if (buildVersion() === 6) {
+        const { buildId: newBuildId, wasUpgraded } = convertVersion6To7(buildId);
+        buildId = newBuildId;
+        buildWasUpgraded = wasUpgraded;
     }
 
     const build = BuildModel.deserialize(buildId);

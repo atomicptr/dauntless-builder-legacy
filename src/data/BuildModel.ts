@@ -1,7 +1,7 @@
 import { ArmourItemType, ItemType } from "@src/data/ItemType";
 import { upgradeBuild } from "@src/data/upgrade-build";
 import { validateBuild } from "@src/data/validate-build";
-import Hashids from "hashids";
+import { buildIdsEncode, buildIdsProgressiveDecode } from "@src/utils/build-id";
 import { match } from "ts-pattern";
 
 import { Armour } from "./Armour";
@@ -14,10 +14,7 @@ import { Part, PartType } from "./Part";
 import { Perk } from "./Perks";
 import { Weapon, WeaponType } from "./Weapon";
 
-export const HASHIDS_SALT = "spicy";
-export const CURRENT_BUILD_ID = 6;
-
-const hashids = new Hashids(HASHIDS_SALT);
+export const CURRENT_BUILD_ID = 7;
 
 export enum BuildFlags {
     UpgradedBuild = 0b0001,
@@ -165,11 +162,11 @@ export class BuildModel {
             this.omnicell !== null ? mapIdByName(NamesMapType.Omnicell, this.omnicell) : 0,
         ];
 
-        return hashids.encode(...params);
+        return buildIdsEncode([...params]);
     }
 
     public static deserialize(buildId: string): BuildModel {
-        const data = hashids.decode(buildId) as number[];
+        const data = buildIdsProgressiveDecode(buildId) as number[];
 
         const nameById = (type: NamesMapType, id: number): string | null => {
             if (id === 0) {
@@ -238,7 +235,7 @@ export class BuildModel {
     }
 
     public static isValid(buildId: string): boolean {
-        const data = hashids.decode(buildId);
+        const data = buildIdsProgressiveDecode(buildId);
 
         return match(data[BuildFields.Version])
             .with(1, () => false) // v1 is invalid by definition
@@ -247,6 +244,7 @@ export class BuildModel {
             .with(4, () => data.length === 26 || data.length === 24) // Patch 1.7.0
             .with(5, () => data.length === 24) // Patch 1.7.3
             .with(6, () => data.length === 25)
+            .with(7, () => data.length === 25)
             .otherwise(() => false);
     }
 }
