@@ -1,12 +1,4 @@
-import {
-    Box,
-    Checkbox,
-    CircularProgress,
-    FormControlLabel,
-    FormGroup,
-    Stack,
-    Typography,
-} from "@mui/material";
+import { Checkbox, FormControlLabel, FormGroup, Stack, Typography } from "@mui/material";
 import FinderBuildList from "@src/components/FinderBuildList";
 import FinderDevMenu from "@src/components/FinderDevMenu";
 import FinderItemPreselect from "@src/components/FinderItemPreselect";
@@ -21,8 +13,8 @@ import { Perk } from "@src/data/Perks";
 import { findByKebabCaseName, WeaponType } from "@src/data/Weapon";
 import {
     convertFindBuildResultsToBuildModel,
+    findBuilds,
     FinderItemDataOptions,
-    MatchingBuild,
     perks,
 } from "@src/pages/build/find-builds";
 import { configurationAtom, setFinderPerkMatching } from "@src/state/configuration";
@@ -37,8 +29,6 @@ import {
     setRemoveLegendary,
 } from "@src/state/finder";
 import log from "@src/utils/logger";
-import AvailablePerksChecker from "@src/worker/available-perks-checker?worker";
-import BuildFinderWorker from "@src/worker/build-finder?worker";
 import { useQuery } from "@tanstack/react-query";
 import { useAtom, useAtomValue } from "jotai";
 import kebabCase from "just-kebab-case";
@@ -49,52 +39,26 @@ import { useParams } from "react-router-dom";
 export const buildLimit = 200;
 export const buildDisplayLimit = 50;
 
-const findBuilds = async (
-    weaponType: WeaponType | null,
-    requestedPerks: AssignedPerkValue,
-    maxBuilds: number,
-    options: FinderItemDataOptions = {},
-): Promise<BuildModel[]> => {
-    const buildFinder = new BuildFinderWorker();
-
-    const fetchBuilds = async () => {
-        return new Promise<MatchingBuild[]>(resolve => {
-            buildFinder.postMessage({ maxBuilds, options, requestedPerks, weaponType });
-
-            buildFinder.addEventListener("message", message => {
-                const builds = message.data;
-                resolve(builds);
-            });
-        });
-    };
-
-    const builds = await fetchBuilds();
-
-    return convertFindBuildResultsToBuildModel(builds);
-};
-
 type AvailablePerkCheckResult = { [perkName: string]: boolean };
 
-const findAvailablePerks = async (
+const findAvailablePerks = (
     weaponType: WeaponType | null,
     requestedPerks: AssignedPerkValue,
     perksToAdd: string[],
     options: FinderItemDataOptions = {},
-): Promise<AvailablePerkCheckResult> => {
-    const perkChecker = new AvailablePerksChecker();
+): AvailablePerkCheckResult => {
+    const result: AvailablePerkCheckResult = {};
 
-    const checkAvailablePerks = async () => {
-        return new Promise<AvailablePerkCheckResult>(resolve => {
-            perkChecker.postMessage({ options, perksToAdd, requestedPerks, weaponType });
+    for (const perk of perksToAdd) {
+        const requestedPerkValue = perk in requestedPerks ? requestedPerks[perk] + 3 : 3;
+        const newRequestedPerks = { ...requestedPerks, [perk]: requestedPerkValue };
 
-            perkChecker.addEventListener("message", message => {
-                const results = message.data;
-                resolve(results);
-            });
-        });
-    };
+        const builds = findBuilds(weaponType, newRequestedPerks, 1, options);
 
-    return await checkAvailablePerks();
+        result[perk] = builds.length > 0;
+    }
+
+    return result;
 };
 
 const perkFitsInEmptyCellSlot = (build: BuildModel, perk: Perk): boolean => {
@@ -201,7 +165,9 @@ const BuildFinder: React.FC = () => {
     const { isPending: isSearchingBuilds, data: builds } = useQuery({
         queryFn: async () => {
             log.timer("findBuilds");
-            const builds = await findBuilds(weaponType, selectedPerks, buildLimit, finderOptions);
+            const builds = convertFindBuildResultsToBuildModel(
+                findBuilds(weaponType, selectedPerks, buildLimit, finderOptions),
+            );
             log.timerEnd("findBuilds");
             log.debug(`Found ${builds.length} builds for given criteria`, { selectedPerks });
             return builds;
@@ -291,12 +257,7 @@ const BuildFinder: React.FC = () => {
                 return newCanBeAddedMap;
             }
 
-            const deepSearchPerksResult = await findAvailablePerks(
-                weaponType,
-                selectedPerks,
-                deepSearchPerks,
-                finderOptions,
-            );
+            const deepSearchPerksResult = findAvailablePerks(weaponType, selectedPerks, deepSearchPerks, finderOptions);
 
             Object.entries(deepSearchPerksResult).forEach(([key, value]) => {
                 newCanBeAddedMap[key as keyof typeof newCanBeAddedMap] = value;
@@ -387,19 +348,7 @@ const BuildFinder: React.FC = () => {
 
                 <FinderDevMenu />
 
-                <FinderPerkPicker
-                    canAddPerk={canAddPerk}
-                    disabled={isDeterminingSelectablePerks}
-                />
-
-                {isDeterminingSelectablePerks || isSearchingBuilds ? (
-                    <Box
-                        display="flex"
-                        justifyContent="center"
-                    >
-                        <CircularProgress />
-                    </Box>
-                ) : null}
+                <FinderPerkPicker canAddPerk={canAddPerk} />
 
                 {!isDeterminingSelectablePerks && !isSearchingBuilds && Object.keys(selectedPerks).length > 0 ? (
                     <FinderBuildList />

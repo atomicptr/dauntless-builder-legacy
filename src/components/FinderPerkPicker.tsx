@@ -8,7 +8,6 @@ import {
     Grid,
     IconButton,
     InputAdornment,
-    LinearProgress,
     OutlinedInput,
     Stack,
     Tooltip,
@@ -31,11 +30,10 @@ import { useTranslation } from "react-i18next";
 import { BiMinus } from "react-icons/bi";
 
 interface FinderPerkPickerProps {
-    disabled: boolean;
     canAddPerk: (perk: Perk) => boolean;
 }
 
-const FinderPerkPicker: React.FC<FinderPerkPickerProps> = ({ disabled, canAddPerk }) => {
+const FinderPerkPicker: React.FC<FinderPerkPickerProps> = ({ canAddPerk }) => {
     const { t } = useTranslation();
     const isMobile = useIsMobile();
     const isLightMode = useIsLightMode();
@@ -96,8 +94,6 @@ const FinderPerkPicker: React.FC<FinderPerkPickerProps> = ({ disabled, canAddPer
                     {t("pages.build-finder.clear-perks")}
                 </Button>
             </Stack>
-
-            {disabled ? <LinearProgress /> : null}
 
             <OutlinedInput
                 endAdornment={
@@ -206,7 +202,6 @@ const FinderPerkPicker: React.FC<FinderPerkPickerProps> = ({ disabled, canAddPer
                                             {perk.name in selectedPerks && (
                                                 <Card sx={{ width: "50px" }}>
                                                     <CardActionArea
-                                                        disabled={disabled}
                                                         onClick={() =>
                                                             setFinder(
                                                                 setPerkValue({
