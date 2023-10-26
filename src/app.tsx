@@ -25,6 +25,7 @@ import log from "@src/utils/logger";
 import SomethingWentWrong from "@src/components/SomethingWentWrong";
 import { ErrorBoundary } from "react-error-boundary";
 import useIsLightMode from "@src/hooks/light-mode";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const DauntlessBuilderApp = () => {
     const isMobile = useIsMobile();
@@ -33,97 +34,101 @@ const DauntlessBuilderApp = () => {
 
     const theme = makeTheme(lightModeEnabled ? "light" : "dark");
 
+    const queryClient = new QueryClient();
+
     return (
         <ThemeProvider theme={theme}>
             <ErrorBoundary
                 FallbackComponent={SomethingWentWrong}
                 onError={(e, info) => log.error(e.message, { info })}
             >
-                <BrowserRouter>
-                    <SnackbarProvider
-                        TransitionComponent={Slide}
-                        anchorOrigin={{
-                            horizontal: isMobile ? "center" : "right",
-                            vertical: "bottom",
-                        }}
-                        maxSnack={3}
-                    >
-                        <Layout>
-                            <Routes>
-                                <Route path="/">
-                                    <Route
-                                        element={<Home />}
-                                        index
-                                    />
-
-                                    <Route path="b">
+                <QueryClientProvider client={queryClient}>
+                    <BrowserRouter>
+                        <SnackbarProvider
+                            TransitionComponent={Slide}
+                            anchorOrigin={{
+                                horizontal: isMobile ? "center" : "right",
+                                vertical: "bottom",
+                            }}
+                            maxSnack={3}
+                        >
+                            <Layout>
+                                <Routes>
+                                    <Route path="/">
                                         <Route
-                                            element={<Navigate to={"/b/new"} />}
+                                            element={<Home />}
                                             index
                                         />
-                                        <Route
-                                            element={<NewBuild />}
-                                            path="new"
-                                        />
-                                        <Route
-                                            element={<BuildFinder />}
-                                            path="finder"
-                                        >
+
+                                        <Route path="b">
+                                            <Route
+                                                element={<Navigate to={"/b/new"} />}
+                                                index
+                                            />
+                                            <Route
+                                                element={<NewBuild />}
+                                                path="new"
+                                            />
                                             <Route
                                                 element={<BuildFinder />}
-                                                path=":weaponType"
+                                                path="finder"
                                             >
                                                 <Route
                                                     element={<BuildFinder />}
-                                                    path=":finderConfig"
-                                                />
+                                                    path=":weaponType"
+                                                >
+                                                    <Route
+                                                        element={<BuildFinder />}
+                                                        path=":finderConfig"
+                                                    />
+                                                </Route>
                                             </Route>
-                                        </Route>
-                                        <Route
-                                            element={<MetaBuilds />}
-                                            path="meta"
-                                        >
                                             <Route
                                                 element={<MetaBuilds />}
-                                                path=":weaponType"
+                                                path="meta"
                                             >
                                                 <Route
                                                     element={<MetaBuilds />}
-                                                    path=":category"
-                                                />
+                                                    path=":weaponType"
+                                                >
+                                                    <Route
+                                                        element={<MetaBuilds />}
+                                                        path=":category"
+                                                    />
+                                                </Route>
                                             </Route>
+                                            <Route
+                                                element={<Build />}
+                                                path=":buildId"
+                                            />
                                         </Route>
+
                                         <Route
-                                            element={<Build />}
-                                            path=":buildId"
+                                            element={<Favorites />}
+                                            path="/favorites"
+                                        />
+
+                                        <Route
+                                            element={<About />}
+                                            path="/about"
+                                        />
+
+                                        <Route
+                                            element={<Settings />}
+                                            path="/settings"
+                                        />
+
+                                        <Route
+                                            element={<NotFound />}
+                                            path="*"
                                         />
                                     </Route>
-
-                                    <Route
-                                        element={<Favorites />}
-                                        path="/favorites"
-                                    />
-
-                                    <Route
-                                        element={<About />}
-                                        path="/about"
-                                    />
-
-                                    <Route
-                                        element={<Settings />}
-                                        path="/settings"
-                                    />
-
-                                    <Route
-                                        element={<NotFound />}
-                                        path="*"
-                                    />
-                                </Route>
-                            </Routes>
-                            <BackgroundTasks />
-                        </Layout>
-                    </SnackbarProvider>
-                </BrowserRouter>
+                                </Routes>
+                                <BackgroundTasks />
+                            </Layout>
+                        </SnackbarProvider>
+                    </BrowserRouter>
+                </QueryClientProvider>
             </ErrorBoundary>
         </ThemeProvider>
     );

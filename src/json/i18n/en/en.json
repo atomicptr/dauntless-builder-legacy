@@ -43,10 +43,9 @@
         "dauntless-version": "Dauntless v{{version}}",
         "discord-server": "Dauntless Builder Discord Server",
         "github-repository": "Github Repository",
-        "matrix-channel": "Dauntless Builder Matrix Server",
         "patch-url": "https://playdauntless.com/patch-notes/{{version}}",
         "something-went-wrong": "Something went wrong! Please send the error log below to me in our Discord and try to reload the website. Thank you very much!",
-        "x-tiwtter": "My X/Twitter"
+        "x-twitter": "Dauntless Builder on X.com"
     },
     "pages": {
         "404": {
