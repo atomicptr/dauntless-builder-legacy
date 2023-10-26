@@ -49,6 +49,7 @@ const BackgroundTasks: React.FC = () => {
             Object.entries(state).forEach(([key, value]) => {
                 localStorage.setItem(stateIdent(key), JSON.stringify(value));
             });
+            localStorage.setItem("__state_old", localStorage.getItem("state"));
             localStorage.removeItem("state");
             window.location.reload();
         }
