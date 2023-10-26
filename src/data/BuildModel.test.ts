@@ -18,6 +18,7 @@ import { WeaponType } from "@src/data/Weapon";
 
 describe("parse build (v6): YwfzTb6sgCRwU8NsZTmTKTzUPrcJC43ta5C0CQBh8eU0CvAI3whxCxXswFMvFX", () => {
     const buildId = "YwfzTb6sgCRwU8NsZTmTKTzUPrcJC43ta5C0CQBh8eU0CvAI3whxCxXswFMvFX";
+    const buildIdInCurrent = "~yoa5ZV.955k81Z28ZozstihQqEe0jYWo~OjkFOg50~orgTRYzMhgo8mFOEE5C";
 
     it("should be valid", () => {
         expect(BuildModel.isValid(buildId)).toBeTruthy();
@@ -54,7 +55,61 @@ describe("parse build (v6): YwfzTb6sgCRwU8NsZTmTKTzUPrcJC43ta5C0CQBh8eU0CvAI3whx
 
     it("should properly serialize again", () => {
         const build = BuildModel.tryDeserialize(buildId);
-        expect(build.serialize()).toBe("~yoa5ZV.955k81Z28ZozstihQqEe0jYWo~OjkFOg50~orgTRYzMhgo8mFOEE5C");
+        expect(build.serialize()).toBe(buildIdInCurrent);
+    });
+
+    it("should be able to use build.data", () => {
+        const build = BuildModel.tryDeserialize(buildId);
+        expect(build.data.weapon).not.toBeNull();
+        expect(build.data.head).not.toBeNull();
+        expect(build.data.torso).not.toBeNull();
+        expect(build.data.arms).not.toBeNull();
+        expect(build.data.legs).not.toBeNull();
+        expect(build.data.omnicell).not.toBeNull();
+        expect(build.data.lantern).not.toBeNull();
+        expect(build.data.bondWeapon).not.toBeNull();
+    });
+});
+
+describe("parse build (v7): ~yoa5ZV.955k81Z28ZozstihQqEe0jYWo~OjkFOg50~orgTRYzMhgo8mFOEE5C", () => {
+    const buildId = "~yoa5ZV.955k81Z28ZozstihQqEe0jYWo~OjkFOg50~orgTRYzMhgo8mFOEE5C";
+
+    it("should be valid", () => {
+        expect(BuildModel.isValid(buildId)).toBeTruthy();
+    });
+
+    it("should deserialize properly", () => {
+        const build = BuildModel.tryDeserialize(buildId);
+
+        expect(build.version).toBe(CURRENT_BUILD_ID);
+        expect(build.weaponName).toBe("Hypothermica");
+        expect(build.weaponSurged).toBe(true);
+        expect(build.weaponPart1).toBeNull();
+        expect(build.weaponPart2).toBeNull();
+        expect(build.weaponPart3).toBeNull();
+        expect(build.bondWeapon).toBe("Onus of Boreus");
+        expect(build.weaponCell1).toBe("+3 Assassin's Frenzy Cell");
+        expect(build.weaponCell2).toBe("+3 Adrenaline Cell");
+        expect(build.headName).toBe("Timeweave Helm");
+        expect(build.headSurged).toBe(true);
+        expect(build.headCell).toBe("+3 Predator Cell");
+        expect(build.torsoName).toBe("Timeweave Robes");
+        expect(build.torsoSurged).toBe(true);
+        expect(build.torsoCell).toBe("+3 Berserker Cell");
+        expect(build.armsName).toBe("Torgadoro's Brawn");
+        expect(build.armsSurged).toBe(true);
+        expect(build.armsCell).toBe("+3 Berserker Cell");
+        expect(build.legsName).toBe("Thrax's Guile");
+        expect(build.legsSurged).toBe(true);
+        expect(build.legsCell).toBe("+3 Cunning Cell");
+        expect(build.lantern).toBe("Pangar's Shine");
+        expect(build.lanternCell).toBe("+3 Energized Cell");
+        expect(build.omnicell).toBe("Discipline");
+    });
+
+    it("should properly serialize again", () => {
+        const build = BuildModel.tryDeserialize(buildId);
+        expect(build.serialize()).toBe(buildId);
     });
 
     it("should be able to use build.data", () => {
