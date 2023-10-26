@@ -1,5 +1,6 @@
 import {
     BuildModel,
+    CURRENT_BUILD_ID,
     findArmourByName,
     findCellByVariantName,
     findLanternByName,
@@ -25,7 +26,7 @@ describe("parse build (v6): YwfzTb6sgCRwU8NsZTmTKTzUPrcJC43ta5C0CQBh8eU0CvAI3whx
     it("should deserialize properly", () => {
         const build = BuildModel.tryDeserialize(buildId);
 
-        expect(build.version).toBe(6);
+        expect(build.version).toBe(CURRENT_BUILD_ID);
         expect(build.weaponName).toBe("Hypothermica");
         expect(build.weaponSurged).toBe(true);
         expect(build.weaponPart1).toBeNull();
@@ -53,7 +54,7 @@ describe("parse build (v6): YwfzTb6sgCRwU8NsZTmTKTzUPrcJC43ta5C0CQBh8eU0CvAI3whx
 
     it("should properly serialize again", () => {
         const build = BuildModel.tryDeserialize(buildId);
-        expect(build.serialize()).toBe(buildId);
+        expect(build.serialize()).toBe("~yoa5ZV.955k81Z28ZozstihQqEe0jYWo~OjkFOg50~orgTRYzMhgo8mFOEE5C");
     });
 
     it("should be able to use build.data", () => {
@@ -79,7 +80,7 @@ describe("parse build with mods: (v6) EQfPT1ZsNC6McwsmcyC6TwPIoeIJC3pUBzFoCpMfPZ
     it("should deserialize properly", () => {
         const build = BuildModel.tryDeserialize(buildId);
 
-        expect(build.version).toBe(6);
+        expect(build.version).toBe(CURRENT_BUILD_ID);
         expect(build.weaponName).toBe("Electric Cruelties");
         expect(build.weaponSurged).toBe(true);
         expect(build.weaponPart1).toBe("Reaper's Dance");
