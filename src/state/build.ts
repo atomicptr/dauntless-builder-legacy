@@ -1,6 +1,5 @@
 import { BuildModel, CURRENT_BUILD_ID, switchAroundWeaponCellsIfNecessary } from "@src/data/BuildModel";
 import { validateBuild } from "@src/data/validate-build";
-import { stateIdent } from "@src/state/common";
 import log from "@src/utils/logger";
 import { atom } from "jotai";
 import { match } from "ts-pattern";
