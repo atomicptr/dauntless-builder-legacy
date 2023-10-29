@@ -10,6 +10,7 @@ import {
     isBuildInFavorites,
     removeFavoriteByBuildId,
 } from "@src/state/favorites";
+import { buildIdRegex } from "@src/utils/build-id";
 import { defaultBuildName } from "@src/utils/default-build-name";
 import { useAtomValue, useSetAtom } from "jotai";
 import { useSnackbar } from "notistack";
@@ -38,9 +39,7 @@ const BuildMenu: React.FC = () => {
     const isFavorite = isBuildInFavorites(favorites, buildId);
     const isCopyToClipboardEnabled = navigator.clipboard !== undefined;
 
-    const buildRegex = /\/b\/[A-Za-z0-9]{50,}/;
-
-    if (buildRegex.exec(location.pathname) === null) {
+    if (buildIdRegex.exec(location.pathname) === null) {
         return null;
     }
 

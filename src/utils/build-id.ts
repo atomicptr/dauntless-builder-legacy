@@ -1,6 +1,8 @@
 import Hashids from "hashids";
 import Sqids from "sqids";
 
+export const buildIdRegex = /\/b\/[A-Za-z0-9_.\-~]{50,}/;
+
 const alphabet = "MNWboUQG19y_Oja2ZEh4liLfst053FTCkpBVrw~Ix.7dJDnmugeKYS6-vcR8zqHAPX";
 
 const sqids = new Sqids({ alphabet });
