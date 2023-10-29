@@ -1,9 +1,10 @@
 import { Box, Button, Card, CardContent, Stack, Typography } from "@mui/material";
 import InputDialog from "@src/components/InputDialog";
 import { BuildsContext } from "@src/pages/build/BuildFinder";
+import { configurationAtom } from "@src/state/configuration";
 import { AssignedPerkValue, clearPerks, finderAtom, setPerkValue } from "@src/state/finder";
 import log from "@src/utils/logger";
-import { useAtom } from "jotai";
+import { useAtom, useAtomValue } from "jotai";
 import React, { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -14,6 +15,11 @@ const FinderDevMenu = () => {
     const [inputDialogOpen, setInputDialogOpen] = useState(false);
 
     const builds = useContext(BuildsContext);
+    const configuration = useAtomValue(configurationAtom);
+
+    if (!configuration.devMode) {
+        return null;
+    }
 
     return (
         <>
