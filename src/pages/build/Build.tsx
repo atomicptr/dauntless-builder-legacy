@@ -1,4 +1,4 @@
-import { ManageSearch, Star } from "@mui/icons-material";
+import { ManageSearch } from "@mui/icons-material";
 import { Box, Button, Grid, ListSubheader, Typography } from "@mui/material";
 import BondWeaponPicker from "@src/components/BondWeaponPicker";
 import BuildWarning from "@src/components/BuildWarning";
@@ -22,6 +22,7 @@ import PartPicker from "@src/components/PartPicker";
 import PerkFilter from "@src/components/PerkFilter";
 import PerkList, { perkData } from "@src/components/PerkList";
 import PerkListMobile from "@src/components/PerkListMobile";
+import TagIcons from "@src/components/TagIcons";
 import UniqueEffectCard from "@src/components/UniqueEffectCard";
 import WeaponTypeFilter from "@src/components/WeaponTypeFilter";
 import { Armour, ArmourType } from "@src/data/Armour";
@@ -32,6 +33,7 @@ import { isArmourType, ItemType } from "@src/data/ItemType";
 import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
 import { Part, partBuildIdentifier, PartType, partTypeData } from "@src/data/Part";
+import { ItemWithTags } from "@src/data/Tags";
 import { Weapon, weaponBuildIdentifier, WeaponType } from "@src/data/Weapon";
 import useIsMobile from "@src/hooks/is-mobile";
 import { buildAtom, buildModelView, setBuildId, updateBuild } from "@src/state/build";
@@ -54,8 +56,6 @@ import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
 import { match } from "ts-pattern";
-import TagIcons from "@src/components/TagIcons";
-import { ItemWithTags } from "@src/data/Tags";
 
 interface PickerSelection {
     itemType: ItemType;

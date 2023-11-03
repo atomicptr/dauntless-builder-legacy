@@ -1,4 +1,5 @@
 import dauntlessBuilderData, { RegularWeaponParts, RepeaterParts } from "@src/data/Data";
+import { Tags } from "@src/data/Tags";
 import { WeaponType } from "@src/data/Weapon";
 import { match } from "ts-pattern";
 
@@ -16,6 +17,7 @@ export interface Part {
     values: {
         [key: string]: string;
     };
+    tags?: Tags[];
 }
 
 export type PartName = keyof RegularWeaponParts | keyof RepeaterParts;
