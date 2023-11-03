@@ -1,5 +1,5 @@
-import { ManageSearch } from "@mui/icons-material";
-import { Button, Grid, ListSubheader, Typography } from "@mui/material";
+import { ManageSearch, Star } from "@mui/icons-material";
+import { Box, Button, Grid, ListSubheader, Typography } from "@mui/material";
 import BondWeaponPicker from "@src/components/BondWeaponPicker";
 import BuildWarning from "@src/components/BuildWarning";
 import CellPicker from "@src/components/CellPicker";
@@ -54,6 +54,8 @@ import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
 import { match } from "ts-pattern";
+import TagIcons from "@src/components/TagIcons";
+import { ItemWithTags } from "@src/data/Tags";
 
 interface PickerSelection {
     itemType: ItemType;
@@ -555,6 +557,15 @@ const Build: React.FC = () => {
                                     variant="h5"
                                 >
                                     {t(itemTranslationIdentifier(itemType, weaponIdent, partIdent, item.name, "name"))}
+                                    <Box
+                                        alignItems={"center"}
+                                        display={"flex"}
+                                        flexDirection={"row"}
+                                        gap={1}
+                                        sx={{ ml: 1 }}
+                                    >
+                                        <TagIcons item={item as ItemWithTags} />
+                                    </Box>
                                 </Typography>
 
                                 {(item as Part).part_effect.map((_, index) => (
