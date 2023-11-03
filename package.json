@@ -16,10 +16,13 @@
         "bench": "npm run benchmark",
         "benchmark": "npm run test -- --projects jest-benchmark.config.ts",
         "deploy": "npm run build && ./scripts/deploy.sh",
-        "lint": "npm run lint:json && eslint .",
+        "lint": "concurrently 'npm:lint:*(!fix)'",
+        "lint:tsc": "tsc",
+        "lint:code": "eslint .",
         "lint:json": "scripts/json-linter -r src tsconfig.json .eslintrc",
-        "lint:fix": "prettier . --write && npm run lint:fix:json && eslint . --fix",
-        "lint:fix:json": "npm run lint:json -- --fix"
+        "lint:fix": "concurrently npm:lint:fix:*",
+        "lint:fix:json": "npm run lint:json -- --fix",
+        "lint:fix:code": "prettier . --write && eslint . --fix"
     },
     "engines": {
         "node": ">=18.0.0",
@@ -76,6 +79,7 @@
         "ajv": "^8.12.0",
         "axios": "^1.6.0",
         "command-line-args": "^5.2.1",
+        "concurrently": "^8.2.2",
         "eslint": "^8.52.0",
         "eslint-plugin-i18next": "^6.0.3",
         "eslint-plugin-react": "^7.33.2",
