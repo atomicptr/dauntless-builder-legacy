@@ -26,7 +26,8 @@
         },
         "item-select-dialog": {
             "select-text": "Select {{name}}"
-        }
+        },
+        "recommended": "This item is verified as being great please use it."
     },
     "drawer": {
         "about": "$t(pages.about.title)",

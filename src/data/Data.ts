@@ -1,4 +1,5 @@
 import dataJson from "@json/data.json";
+import { Tags } from "@src/data/Tags";
 
 import { Armour } from "./Armour";
 import { Cell } from "./Cell";
@@ -25,6 +26,7 @@ export interface RegularWeaponParts {
     specials: {
         [name: string]: Part;
     };
+    tags?: Tags[];
 }
 
 export interface RepeaterParts {

@@ -9,3 +9,5 @@ part_effect:
 values:
   percentAttackSpeed: 15
   attackSpeedTime: 15
+tags:
+  - Recommended

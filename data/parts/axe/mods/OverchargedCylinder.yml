@@ -4,3 +4,5 @@ part_effect:
   - Determination can now stack up to {{times}} times.
 values:
   times: 4
+tags:
+  - Recommended

@@ -7,3 +7,5 @@ part_effect:
 values:
   damageTime: 5
   percentDamage: 30
+tags:
+  - Recommended

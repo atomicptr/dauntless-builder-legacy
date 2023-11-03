@@ -1,7 +1,9 @@
 import { QuestionMark } from "@mui/icons-material";
 import { Box, Card, CardActionArea, CardContent, CardMedia, Skeleton, Typography } from "@mui/material";
+import TagIcons from "@src/components/TagIcons";
 import { itemPickerDefaultImageSize } from "@src/components/theme";
 import { Part, PartType } from "@src/data/Part";
+import { ItemWithTags } from "@src/data/Tags";
 import { WeaponType } from "@src/data/Weapon";
 import { partsTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
@@ -107,6 +109,15 @@ const PartPicker: React.FC<PartPickerProps> = ({ type, item, weaponType, onClick
                                 variant="h5"
                             >
                                 {t(partsTranslationIdentifier(weaponType, type, item.name, "name"))}
+                                <Box
+                                    alignItems={"center"}
+                                    display={"flex"}
+                                    flexDirection={"row"}
+                                    gap={1}
+                                    sx={{ ml: 1 }}
+                                >
+                                    <TagIcons item={item as ItemWithTags} />
+                                </Box>
                             </Typography>
                         </Box>
                         {item.part_effect.map((pe, index) => (

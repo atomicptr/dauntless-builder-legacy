@@ -9,3 +9,5 @@ values:
   damageWave: 500
   damageNearbyTarget: 166
   damage: 100
+tags:
+  - Recommended

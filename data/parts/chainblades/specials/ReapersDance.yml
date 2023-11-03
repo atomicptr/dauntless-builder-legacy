@@ -10,3 +10,5 @@ part_effect:
 values:
   momentum: 1
   momentumIfNoFollow: 1
+tags:
+  - Recommended

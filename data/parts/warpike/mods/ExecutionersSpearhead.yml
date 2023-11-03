@@ -8,3 +8,5 @@ values:
   percentDamage: 8
   damageTime: 45
   stacks: 5
+tags:
+  - Recommended

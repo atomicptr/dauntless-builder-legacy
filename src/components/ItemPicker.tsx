@@ -1,13 +1,14 @@
 import { Star } from "@mui/icons-material";
 import { Box, Card, CardActionArea, CardContent, CardMedia, Skeleton, Stack, Typography } from "@mui/material";
 import ElementalIcon from "@src/components/ElementalIcon";
-import EventMarker from "@src/components/EventMarker";
 import PerksText from "@src/components/PerksText";
+import TagIcons from "@src/components/TagIcons";
 import { itemPickerDefaultImageSize } from "@src/components/theme";
 import { Armour } from "@src/data/Armour";
 import { ArmourItemType, isArmourType, ItemType } from "@src/data/ItemType";
 import { Lantern } from "@src/data/Lantern";
 import { Omnicell } from "@src/data/Omnicell";
+import { ItemWithTags } from "@src/data/Tags";
 import { Weapon } from "@src/data/Weapon";
 import useIsMobile from "@src/hooks/is-mobile";
 import useIsLightMode from "@src/hooks/light-mode";
@@ -160,13 +161,19 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                         sx={{ alignItems: "center", display: "flex", mb: 1 }}
                                         variant="h5"
                                     >
+                                        {t(itemTranslationIdentifier(type, item.name, "name"))}
                                         {(type === ItemType.Weapon || isArmourType(type)) && (
-                                            <Box sx={{ mr: 1 }}>
-                                                <EventMarker item={item as Weapon | Armour} />
+                                            <Box
+                                                alignItems={"center"}
+                                                display={"flex"}
+                                                flexDirection={"row"}
+                                                gap={1}
+                                                sx={{ ml: 1 }}
+                                            >
+                                                {isPowerSurged && canBePowerSurged ? <Star /> : null}
+                                                <TagIcons item={item as ItemWithTags} />
                                             </Box>
                                         )}
-                                        {t(itemTranslationIdentifier(type, item.name, "name"))}
-                                        {isPowerSurged && canBePowerSurged ? <Star sx={{ ml: 1 }} /> : null}
                                     </Typography>
                                 </Box>
 

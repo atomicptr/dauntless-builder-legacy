@@ -14,3 +14,5 @@ values:
   valourRegen: 1
   valourTime: 4
   valourCost: 1
+tags:
+  - Recommended

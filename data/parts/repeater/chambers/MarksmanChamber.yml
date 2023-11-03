@@ -12,3 +12,5 @@ values:
   damageTime: 10
   empoweredPercentDamage: 60
   empoweredPercentAllyDamage: 25
+tags:
+  - Recommended

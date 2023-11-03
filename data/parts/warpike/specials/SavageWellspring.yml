@@ -8,3 +8,5 @@ part_effect:
 values:
   percentCritChance: 30
   critChanceTime: 10
+tags:
+  - Recommended

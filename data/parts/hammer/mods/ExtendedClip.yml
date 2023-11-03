@@ -4,3 +4,5 @@ part_effect:
   - Ammo increased to {{ammoIncrease}}.
 values:
   ammoIncrease: 6
+tags:
+  - Recommended

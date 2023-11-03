@@ -21,6 +21,12 @@
                 "type": "string"
             }
         },
+        "tags": {
+            "type": ["array", "null"],
+            "items": {
+                "type": "string"
+            }
+        },
         "values": {
             "patternProperties": {
                 "^.*$": {

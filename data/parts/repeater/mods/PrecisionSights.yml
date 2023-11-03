@@ -7,3 +7,5 @@ part_effect:
 values:
   damage: 8
   stacks: 5
+tags:
+  - Recommended

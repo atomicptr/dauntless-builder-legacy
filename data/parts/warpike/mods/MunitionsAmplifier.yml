@@ -6,3 +6,5 @@ part_effect:
     quality is also increased by an additional {{ammoQuality}}%.
 values:
   ammoQuality: 25
+tags:
+  - Recommended
