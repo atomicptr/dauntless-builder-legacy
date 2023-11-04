@@ -26,7 +26,8 @@
         },
         "item-select-dialog": {
             "select-text": "{{name}} Seç"
-        }
+        },
+        "recommended": "This item is verified as being great please use it."
     },
     "drawer": {
         "about": "$t(pages.about.title)",
@@ -43,8 +44,9 @@
         "dauntless-version": "Dauntless v{{version}}",
         "discord-server": "Dauntless Builder Discord Sunucusu",
         "github-repository": "Github Reposu",
-        "matrix-channel": "Dauntless Builder Matrix Sunucusu",
-        "patch-url": "https://playdauntless.com/patch-notes/{{version}}"
+        "patch-url": "https://playdauntless.com/patch-notes/{{version}}",
+        "something-went-wrong": "Bir şeyler ters gitti! Lütfen aşağıdaki hata kaydını Discord üzerinden bana gönderin ve web sitesini yeniden yüklemeyi deneyin. Çok teşekkür ederim!",
+        "x-twitter": "Dauntless Builder on X.com"
     },
     "pages": {
         "404": {
@@ -100,13 +102,12 @@
             "title": "Buildlerim"
         },
         "home": {
-            "contributing-text": "Eğer kod katkısında bulunmak istiyorsanız veya yerelleştirmeler konusunda ilgiliyseniz, lütfen <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a> hesabımıza uğrayın!",
+            "contributing-text": "Kodlamaya katkıda bulunmak istiyorsanız veya yerelleştirmeler konusunda ilgiliyseniz, lütfen <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a> hesabımıza uğrayın!",
             "contributing-title": "Katkıda Bulunmak",
             "links": {
                 "discord": "Discord",
                 "github": "Github",
-                "localize": "Yerelleştirme konusunda bize yardımcı olun",
-                "matrix": "Matrix"
+                "localize": "Yerelleştirme konusunda bize yardımcı olun"
             },
             "links-title": "Bağlantılar",
             "localization-text": "Dauntless Builder artık yerelleştirmeleri destekliyor. Eğer tercih ettiğiniz dil otomatik olarak algılanmadıysa, Ayarlar sayfasına gidin. Desteklenmeyen bir dil seçtiyseniz ve yardımcı olmak isterseniz, lütfen aşağıdaki \"Katkıda Bulunma\" bölümünü okuyun.",
@@ -133,6 +134,7 @@
                     "Chrono (V) Survival": "$t(terms.behemoths.Chronovore) (V) Hayatta Kalma",
                     "Chrono (Valo)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr))",
                     "Disc Adrenaline": "Disc Adrenaline",
+                    "Disc Impulse": "Disc Impulse",
                     "Disc Pred": "Disc Pred",
                     "Disc Sav": "Disc Sav",
                     "Hellion": "$t(terms.behemoths.Hellion)",
@@ -146,6 +148,8 @@
                     "Rezakiri": "$t(terms.behemoths.Rezakiri)",
                     "Riftstalker": "$t(terms.behemoths.Riftstalker)",
                     "Sahvyt": "$t(terms.behemoths.Sahvyt)",
+                    "Thrax (R) Speed": "$t(terms.behemoths.Thrax) (R) Speed",
+                    "Thrax (R) Survival": "$t(terms.behemoths.Thrax) (R) Survival",
                     "Thrax (Rift)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker))",
                     "Thrax (Rift) Wound": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Yaralama",
                     "Thrax (Shrowd)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Shrowd))",
@@ -156,6 +160,7 @@
                     "Torg (H) Survival": "$t(terms.behemoths.Torgadoro) (H) Hayatta Kalma",
                     "Torg (Hellion)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion))",
                     "Torg (Hellion) Wound": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion)) Yaralama",
+                    "Torg (hellion)": "$t(terms.behemoths.Torgadoro) (hellion)",
                     "Urska (Boreus)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Boreus))",
                     "Urska (F)    Speed": "$t(terms.behemoths.Urska) (F) Hız",
                     "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Hız",
@@ -163,6 +168,7 @@
                     "Urska (F) Survival": "$t(terms.behemoths.Urska) (F) Hayatta Kalma",
                     "Urska (Frostwülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Pangar)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar))",
+                    "Urska (Wülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Wülf) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Yaralama",
                     "Valomyr": "$t(terms.behemoths.Valomyr)"
                 },
@@ -187,7 +193,7 @@
                         "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear. ",
                         "name": "Escalation",
                         "subcategoryDescription": {
-                            "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive. Bulwark for survivability.",
+                            "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive.",
                             "legendaries": "Builds for the various Escalations.",
                             "preEsca": "Builds for the various Escalations. Contains no Trials cells nor Escalation gear."
                         }

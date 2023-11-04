@@ -26,7 +26,8 @@
         },
         "item-select-dialog": {
             "select-text": "Select {{name}}"
-        }
+        },
+        "recommended": "This item is verified as being great please use it."
     },
     "drawer": {
         "about": "$t(pages.about.title)",
@@ -43,8 +44,9 @@
         "dauntless-version": "Dauntless v{{version}}",
         "discord-server": "Dauntless Builder Discord Server",
         "github-repository": "Github Repository",
-        "matrix-channel": "Dauntless Builder Matrix Server",
-        "patch-url": "https://playdauntless.com/patch-notes/{{version}}"
+        "patch-url": "https://playdauntless.com/patch-notes/{{version}}",
+        "something-went-wrong": "Something went wrong! Please send the error log below to me in our Discord and try to reload the website. Thank you very much!",
+        "x-twitter": "Dauntless Builder on X.com"
     },
     "pages": {
         "404": {
@@ -105,8 +107,7 @@
             "links": {
                 "discord": "Discord",
                 "github": "Github",
-                "localize": "Help with localization",
-                "matrix": "Matrix"
+                "localize": "Help with localization"
             },
             "links-title": "Links",
             "localization-text": "Dauntless Builder now supports localizations, please head over to the Settings page and select your preferred language if it wasn't already picked up automatically! If that language is currently unsupported and you'd be interested in helping, please read the \"Contributing\" section below.",
@@ -133,6 +134,7 @@
                     "Chrono (V) Survival": "$t(terms.behemoths.Chronovore) (V) Survival",
                     "Chrono (Valo)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr))",
                     "Disc Adrenaline": "Disc Adrenaline",
+                    "Disc Impulse": "Disc Impulse",
                     "Disc Pred": "Disc Pred",
                     "Disc Sav": "Disc Sav",
                     "Hellion": "$t(terms.behemoths.Hellion)",
@@ -146,6 +148,8 @@
                     "Rezakiri": "$t(terms.behemoths.Rezakiri)",
                     "Riftstalker": "$t(terms.behemoths.Riftstalker)",
                     "Sahvyt": "$t(terms.behemoths.Sahvyt)",
+                    "Thrax (R) Speed": "$t(terms.behemoths.Thrax) (R) Speed",
+                    "Thrax (R) Survival": "$t(terms.behemoths.Thrax) (R) Survival",
                     "Thrax (Rift)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker))",
                     "Thrax (Rift) Wound": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Wound",
                     "Thrax (Shrowd)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Shrowd))",
@@ -156,6 +160,7 @@
                     "Torg (H) Survival": "$t(terms.behemoths.Torgadoro) (H) Survival",
                     "Torg (Hellion)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion))",
                     "Torg (Hellion) Wound": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion)) Wound",
+                    "Torg (hellion)": "$t(terms.behemoths.Torgadoro) (hellion)",
                     "Urska (Boreus)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Boreus))",
                     "Urska (F)    Speed": "$t(terms.behemoths.Urska) (F) Speed",
                     "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Speed",
@@ -163,6 +168,7 @@
                     "Urska (F) Survival": "$t(terms.behemoths.Urska) (F) Survival",
                     "Urska (Frostwülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Pangar)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar))",
+                    "Urska (Wülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Wülf) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Wound",
                     "Valomyr": "$t(terms.behemoths.Valomyr)"
                 },
@@ -187,7 +193,7 @@
                         "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear. ",
                         "name": "Escalations",
                         "subcategoryDescription": {
-                            "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive. Bulwark for survivability.",
+                            "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive.",
                             "legendaries": "Builds for the various Escalations.",
                             "preEsca": "Builds for the various Escalations. Contains no Trials cells nor Escalation gear."
                         }

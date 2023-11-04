@@ -26,7 +26,8 @@
         },
         "item-select-dialog": {
             "select-text": "Selecione {{name}}"
-        }
+        },
+        "recommended": "This item is verified as being great please use it."
     },
     "drawer": {
         "about": "$t(pages.about.title)",
@@ -43,8 +44,9 @@
         "dauntless-version": "Dauntless Ver.:{{version}}",
         "discord-server": "Servidor do Discord do Dauntless Builder",
         "github-repository": "Repositório do GitHub",
-        "matrix-channel": "Servidor Matrix do Construtor do Dauntless",
-        "patch-url": "https://playdauntless.com/patch-notes/{{version}}"
+        "patch-url": "https://playdauntless.com/patch-notes/{{version}}",
+        "something-went-wrong": "Algo deu errado... Por favor, envie o relatório de erro abaixo para mim em nosso Discord e tente recarregar o site. Muito obrigado!",
+        "x-twitter": "Dauntless Builder on X.com"
     },
     "pages": {
         "404": {
@@ -105,8 +107,7 @@
             "links": {
                 "discord": "Discord",
                 "github": "GitHub",
-                "localize": "Ajude-nos com a localização",
-                "matrix": "Matrix"
+                "localize": "Ajude-nos com a localização"
             },
             "links-title": "Links",
             "localization-text": "O Construtor do Dauntless agora suporta localizações, por favor, vá para a página de Configurações e selecione sua língua preferida se já não foi escolhida automaticamente! Se o idioma não é suportado no momento e você está interessado em ajudar, por favor leia a seção \"Contribuindo\" abaixo.",
@@ -133,6 +134,7 @@
                     "Chrono (V) Survival": "$t(terms.behemoths.Chronovore) (V) Sobrevivência",
                     "Chrono (Valo)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr))",
                     "Disc Adrenaline": "Adrenalina Máxima",
+                    "Disc Impulse": "Impulso/disciplina",
                     "Disc Pred": "Disc Pred",
                     "Disc Sav": "Discipligeria",
                     "Hellion": "$t(terms.behemoths.Hellion)",
@@ -146,6 +148,8 @@
                     "Rezakiri": "$t(terms.behemoths.Rezakiri)",
                     "Riftstalker": "$t(terms.behemoths.Riftstalker)",
                     "Sahvyt": "$t(terms.behemoths.Sahvyt)",
+                    "Thrax (R) Speed": "$t(terms.behemoths.Thrax) (R) Velocidade",
+                    "Thrax (R) Survival": "$t(terms.behemoths.Thrax) (R) Sobrevivência",
                     "Thrax (Rift)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker))",
                     "Thrax (Rift) Wound": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Ferida",
                     "Thrax (Shrowd)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Shrowd))",
@@ -156,6 +160,7 @@
                     "Torg (H) Survival": "$t(terms.behemoths.Torgadoro) (H) Sobrevivência",
                     "Torg (Hellion)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion))",
                     "Torg (Hellion) Wound": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion)) Ferida",
+                    "Torg (hellion)": "$t(terms.behemoths.Torgadoro) (Hellion)",
                     "Urska (Boreus)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Boreus))",
                     "Urska (F)    Speed": "$t(terms.behemoths.Urska) (F) Velocidade",
                     "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Velocidade",
@@ -163,6 +168,7 @@
                     "Urska (F) Survival": "$t(terms.behemoths.Urska) (F) Sobrevivência",
                     "Urska (Frostwülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Pangar)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar))",
+                    "Urska (Wülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Wülf) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Ferida",
                     "Valomyr": "$t(terms.behemoths.Valomyr)"
                 },
@@ -187,7 +193,7 @@
                         "description": "Construções para lidar com Intensificações. Inclui Builds sem equipamento de Intensificações e Provações. ",
                         "name": "Intensificações",
                         "subcategoryDescription": {
-                            "heroics": "Construções para várias Intensificações Heroicas. Usa catalisador. Elixires recomendados: Frenzy, Blitz, Sobrecarga Aethérica. Proteção para a sobrevivência.",
+                            "heroics": "Builds para várias Intensificações Heroicas. Utiliza catalisador. Elixires recomendados: Frenesi, Blitz, Sobrecarga Etérica.",
                             "legendaries": "Builds para os várias Intensificações.",
                             "preEsca": "Builds para várias Intensificações. Não contém células de Provações ou equipamento de Intensificação."
                         }

@@ -26,7 +26,8 @@
         },
         "item-select-dialog": {
             "select-text": "Seleccionar {{name}}"
-        }
+        },
+        "recommended": "This item is verified as being great please use it."
     },
     "drawer": {
         "about": "$t(pages.about.title)",
@@ -43,8 +44,9 @@
         "dauntless-version": "Dauntless v{{version}}",
         "discord-server": "Servidor de Discord de Dauntless Builder",
         "github-repository": "Repositorio de Github",
-        "matrix-channel": "Servidor de Matrix de Dauntless Builder",
-        "patch-url": "https://playdauntless.com/patch-notes/{{version}}"
+        "patch-url": "https://playdauntless.com/patch-notes/{{version}}",
+        "something-went-wrong": "Something went wrong! Please send the error log below to me in our Discord and try to reload the website. Thank you very much!",
+        "x-twitter": "Dauntless Builder on X.com"
     },
     "pages": {
         "404": {
@@ -105,8 +107,7 @@
             "links": {
                 "discord": "Discord",
                 "github": "Github",
-                "localize": "Ayuda con la traducción",
-                "matrix": "Matrix"
+                "localize": "Ayuda con la traducción"
             },
             "links-title": "Enlaces",
             "localization-text": "¡Dauntless Builder ahora soporta traducciones, por favor ve a ajustes y selecciona tu idioma preferido si no fue elegido automáticamente! Si ese idioma no está actualmente listo y te interesaría ayudar, por favor lee la sección \"Contribuir\" a continuación.",
@@ -133,6 +134,7 @@
                     "Chrono (V) Survival": "$t(Chronovore) (V) Supervivencia",
                     "Chrono (Valo)": "$t(Chronovore) ($t(Valomyr))",
                     "Disc Adrenaline": "Disc Adrenaline",
+                    "Disc Impulse": "Disc Impulse",
                     "Disc Pred": "Disc Pred",
                     "Disc Sav": "Disc Sav",
                     "Hellion": "$t(terms.behemoths.Hellion)",
@@ -146,6 +148,8 @@
                     "Rezakiri": "$t(terms.behemoths.Rezakiri)",
                     "Riftstalker": "$t(terms.behemoths.Riftstalker)",
                     "Sahvyt": "$t(terms.behemoths.Sahvyt)",
+                    "Thrax (R) Speed": "$t(terms.behemoths.Thrax) (R) Speed",
+                    "Thrax (R) Survival": "$t(terms.behemoths.Thrax) (R) Survival",
                     "Thrax (Rift)": "$t(Thrax) $t(Riftstalker)",
                     "Thrax (Rift) Wound": "$t(Thrax) ($t(Riftstalker)) Herida",
                     "Thrax (Shrowd)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Shrowd))",
@@ -156,6 +160,7 @@
                     "Torg (H) Survival": "$t(terms.behemoths.Torgadoro) (H) Supervivencia",
                     "Torg (Hellion)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion))",
                     "Torg (Hellion) Wound": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion)) Herida",
+                    "Torg (hellion)": "$t(terms.behemoths.Torgadoro) (hellion)",
                     "Urska (Boreus)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Boreus))",
                     "Urska (F)    Speed": "$t(terms.behemoths.Urska) (F) Velocidad",
                     "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Velocidad",
@@ -163,6 +168,7 @@
                     "Urska (F) Survival": "$t(terms.behemoths.Urska) (F) Survival",
                     "Urska (Frostwülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Pangar)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar))",
+                    "Urska (Wülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Wülf) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Wound",
                     "Valomyr": "$t(terms.behemoths.Valomyr)"
                 },
@@ -187,7 +193,7 @@
                         "description": "Equipamientos para hacer frente a las Escaladas. Incluye equipamientos sin equipo de Escaladas y Retos. ",
                         "name": "Escaladas",
                         "subcategoryDescription": {
-                            "heroics": "Equipamiento para las variadas escaladas heróicas. Usa Catalizador. Tónicos recomendados: Frenesí, Fervor, Afinación Aethérica. Baluarte para supervivencia.",
+                            "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive.",
                             "legendaries": "Equipamientos para varias escaladas.",
                             "preEsca": "Equipamiento para varias escaladas. No contiene células de retos o equipo de escalada."
                         }

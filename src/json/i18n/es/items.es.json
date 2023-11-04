@@ -1724,7 +1724,7 @@
     "item.weapons.ember-scythe.unique_effects.1.description": "$t(item.weapons.ember-scythe.unique_effects.0.description)",
     "item.weapons.ember-shots.description": "$t(item.weapons.agents-of-decay.description)",
     "item.weapons.ember-shots.name": "Disparos de ascuas",
-    "item.weapons.ember-shots.unique_effects.0.description": "El {{hitSuccession}}° ataque consecutivo infligirá +{{bonusDamage}} daño a partes.",
+    "item.weapons.ember-shots.unique_effects.0.description": "The {{hitSuccession}}th hit in a row deals +{{percentPartDamage}}% part damage",
     "item.weapons.ember-shots.unique_effects.1.description": "$t(item.weapons.ember-shots.unique_effects.0.description)",
     "item.weapons.existential-crisis.description": "$t(item.weapons.agents-of-decay.description)",
     "item.weapons.existential-crisis.name": "Crisis existencial",
