@@ -26,7 +26,8 @@
         },
         "item-select-dialog": {
             "select-text": "Выбрать «{{name}}»"
-        }
+        },
+        "recommended": "This item is verified as being great please use it."
     },
     "drawer": {
         "about": "$t(pages.about.title)",
@@ -43,8 +44,9 @@
         "dauntless-version": "Dauntless v{{version}}",
         "discord-server": "Discord сервер конструктора Dauntless",
         "github-repository": "Хранилище Github",
-        "matrix-channel": "Matrix сервер Конструктора Dauntless",
-        "patch-url": "https://playdauntless.com/patch-notes/{{version}}"
+        "patch-url": "https://playdauntless.com/patch-notes/{{version}}",
+        "something-went-wrong": "Something went wrong! Please send the error log below to me in our Discord and try to reload the website. Thank you very much!",
+        "x-twitter": "Dauntless Builder on X.com"
     },
     "pages": {
         "404": {
@@ -105,8 +107,7 @@
             "links": {
                 "discord": "Discord",
                 "github": "GitHub",
-                "localize": "Помощь с локализацией",
-                "matrix": "Matrix"
+                "localize": "Помощь с локализацией"
             },
             "links-title": "Ссылки",
             "localization-text": "Dauntless Builder теперь поддерживает локализацию, пожалуйста, перейдите на страницу Настройки и выберите предпочитаемый язык, если он еще не выбран автоматически! Если этот язык сейчас не поддерживается и вы хотите помочь, пожалуйста, прочитайте раздел \"Вклад\" ниже.",
@@ -133,6 +134,7 @@
                     "Chrono (V) Survival": "$t(terms.behemoths.Chronovore) (V) Выживание",
                     "Chrono (Valo)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr))",
                     "Disc Adrenaline": "Disc Adrenaline",
+                    "Disc Impulse": "Disc Impulse",
                     "Disc Pred": "Дисциплина / Хищник",
                     "Disc Sav": "Дисциплина / Свирепость",
                     "Hellion": "$t(terms.behemoths.Hellion)",
@@ -146,6 +148,8 @@
                     "Rezakiri": "$t(terms.behemoths.Rezakiri)",
                     "Riftstalker": "$t(terms.behemoths.Riftstalker)",
                     "Sahvyt": "$t(terms.behemoths.Sahvyt)",
+                    "Thrax (R) Speed": "$t(terms.behemoths.Thrax) (R) Speed",
+                    "Thrax (R) Survival": "$t(terms.behemoths.Thrax) (R) Survival",
                     "Thrax (Rift)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker))",
                     "Thrax (Rift) Wound": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Рана",
                     "Thrax (Shrowd)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Shrowd))",
@@ -156,6 +160,7 @@
                     "Torg (H) Survival": "$t(terms.behemoths.Torgadoro) (H) Выживание",
                     "Torg (Hellion)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion))",
                     "Torg (Hellion) Wound": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion)) Рана",
+                    "Torg (hellion)": "$t(terms.behemoths.Torgadoro) (hellion)",
                     "Urska (Boreus)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Boreus))",
                     "Urska (F)    Speed": "$t(terms.behemoths.Urska) (F) Скорость",
                     "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Скорость",
@@ -163,6 +168,7 @@
                     "Urska (F) Survival": "$t(terms.behemoths.Urska) (F) Выживание",
                     "Urska (Frostwülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Pangar)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar))",
+                    "Urska (Wülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Wülf) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Wound",
                     "Valomyr": "$t(terms.behemoths.Valomyr)"
                 },
@@ -187,7 +193,7 @@
                         "description": "Сборки для Восхождений. Включают сборки без предметов из Восхождений и Испытаний. ",
                         "name": "Восхождения",
                         "subcategoryDescription": {
-                            "heroics": "Сборки для различных Героических Восхождений. Используют Катализацию. Рекомендуемые зелья: Ярости, Скорости, Эфирного насыщения. Бастион для выживания.",
+                            "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive.",
                             "legendaries": "Сборки для различных Восхождений.",
                             "preEsca": "Сборки для различных Восхождений. Не содержат ни ячеек Испытаний, ни предметов из Восхождения."
                         }

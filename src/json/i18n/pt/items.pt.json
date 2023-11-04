@@ -1724,7 +1724,7 @@
     "item.weapons.ember-scythe.unique_effects.1.description": "$t(item.weapons.ember-scythe.unique_effects.0.description)",
     "item.weapons.ember-shots.description": "$t(item.weapons.agents-of-decay.description)",
     "item.weapons.ember-shots.name": "Disparos Flamejantes",
-    "item.weapons.ember-shots.unique_effects.0.description": "O {{hitSuccession}} acerto consecutivo causa +{{bonusDamage}} dano de quebra adicional.",
+    "item.weapons.ember-shots.unique_effects.0.description": "O {{hitSuccession}} acerto consecutivo causa +{{percentPartDamage}}% de dano de quebra",
     "item.weapons.ember-shots.unique_effects.1.description": "$t(item.weapons.ember-shots.unique_effects.0.description)",
     "item.weapons.existential-crisis.description": "$t(item.weapons.agents-of-decay.description)",
     "item.weapons.existential-crisis.name": "Crise Existencial",

@@ -1724,7 +1724,7 @@
     "item.weapons.ember-scythe.unique_effects.1.description": "$t(item.weapons.ember-scythe.unique_effects.0.description)",
     "item.weapons.ember-shots.description": "$t(item.weapons.agents-of-decay.description)",
     "item.weapons.ember-shots.name": "Янтарные разряды",
-    "item.weapons.ember-shots.unique_effects.0.description": "Каждый {{hitSuccession}}-й выстрел наносит +{{bonusDamage}}% урона части тела.",
+    "item.weapons.ember-shots.unique_effects.0.description": "The {{hitSuccession}}th hit in a row deals +{{percentPartDamage}}% part damage",
     "item.weapons.ember-shots.unique_effects.1.description": "$t(item.weapons.ember-shots.unique_effects.0.description)",
     "item.weapons.existential-crisis.description": "$t(item.weapons.agents-of-decay.description)",
     "item.weapons.existential-crisis.name": "Экзистенциальный кризис",
