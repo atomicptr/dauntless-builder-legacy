@@ -33,6 +33,7 @@ import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 import { ErrorBoundary } from "react-error-boundary";
 import SomethingWentWrong from "@src/components/SometingWentWrong";
+import Privacy from "./pages/about/Privacy";
 
 const DauntlessBuilderApp = () => {
     const isMobile = useIsMobile();
@@ -133,6 +134,11 @@ const DauntlessBuilderApp = () => {
                                             <Route
                                                 element={<About />}
                                                 path="/about"
+                                            />
+
+                                            <Route
+                                                element={<Privacy />}
+                                                path="/privacy"
                                             />
 
                                             <Route

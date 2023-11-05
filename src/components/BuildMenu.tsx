@@ -13,8 +13,8 @@ import {
 } from "@src/state/favorites";
 import { buildIdRegex } from "@src/utils/build-id";
 import { defaultBuildName } from "@src/utils/default-build-name";
-import { useAtomValue, useSetAtom } from "jotai";
 import { adsEnabled } from "@src/utils/env-tools";
+import { useAtomValue, useSetAtom } from "jotai";
 import { useSnackbar } from "notistack";
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";

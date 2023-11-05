@@ -43,9 +43,9 @@ import { crowdinLink, discordServerUrl, githubUrl, xTwitterUrl } from "@src/cons
 import dauntlessBuilderData from "@src/data/Data";
 import useDevMode from "@src/hooks/dev-mode";
 import useIsMobile from "@src/hooks/is-mobile";
+import useWindowSize from "@src/hooks/window-size";
 import { currentLanguage, getNativeLanguageName, isBetaLanguage, Language } from "@src/i18n";
 import { favoritesView } from "@src/state/favorites";
-import useWindowSize from "@src/hooks/window-size";
 import { adsEnabled } from "@src/utils/env-tools";
 import log from "@src/utils/logger";
 import { useAtomValue } from "jotai";

@@ -1,13 +1,13 @@
 import { UnitType } from "@src/components/AdSpace";
-import { useAppDispatch } from "@src/hooks/redux";
-import { playwireSetupFinished } from "@src/reducers/events/events-slice";
+import { eventsAtom, playwireSetupHasFinished } from "@src/state/events";
 import { adsEnabled } from "@src/utils/env-tools";
 import log from "@src/utils/logger";
+import { useSetAtom } from "jotai";
 import React, { useEffect } from "react";
 import ReactGA from "react-ga4";
 
 const TrackingRampSetup = () => {
-    const dispatch = useAppDispatch();
+    const setEvents = useSetAtom(eventsAtom);
 
     useEffect(() => {
         const ga4Enabled = navigator.doNotTrack !== "1" && DB_GA4_MEASUREMENT_ID !== null;
@@ -61,7 +61,7 @@ const TrackingRampSetup = () => {
                     window.ramp.displayUnits();
                 }
 
-                dispatch(playwireSetupFinished());
+                setEvents(playwireSetupHasFinished());
             });
 
             const rampScript = document.createElement("script");
@@ -69,7 +69,7 @@ const TrackingRampSetup = () => {
             rampScript.async = true;
             document.body.appendChild(rampScript);
         }
-    }, [dispatch]);
+    }, [setEvents]);
 
     return null;
 };

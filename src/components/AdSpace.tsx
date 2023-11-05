@@ -1,9 +1,9 @@
 import { FeaturedVideo } from "@mui/icons-material";
 import { Box, useTheme } from "@mui/material";
-import { useAppSelector } from "@src/hooks/redux";
-import { selectEvents } from "@src/reducers/events/events-slice";
+import { eventsAtom } from "@src/state/events";
 import { adsEnabled } from "@src/utils/env-tools";
 import log from "@src/utils/logger";
+import { useAtomValue } from "jotai";
 import React, { useEffect } from "react";
 
 export enum UnitType {
@@ -19,7 +19,7 @@ interface AdSpaceProps {
 const AdSpace: React.FC<AdSpaceProps> = ({ unitType }) => {
     const theme = useTheme();
 
-    const events = useAppSelector(selectEvents);
+    const events = useAtomValue(eventsAtom);
 
     const selectorName = `db_unit_${unitType.toString()}`;
 
