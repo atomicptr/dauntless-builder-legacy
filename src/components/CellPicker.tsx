@@ -29,6 +29,8 @@ const CellPicker: React.FC<CellPickerProps> = ({ variant, index, itemType, cellT
 
     const variantIndex = cell != null && variant !== null ? Object.keys(cell.variants).indexOf(variant) : -1;
 
+    const needsSpaceBelow = isMobile && index === 0 && itemType === ItemType.Weapon;
+
     const cellStyle =
         variant === null
             ? { filter: isLightMode ? "invert(100%)" : undefined }
@@ -41,6 +43,7 @@ const CellPicker: React.FC<CellPickerProps> = ({ variant, index, itemType, cellT
     return (
         <Card
             sx={{
+                mb: needsSpaceBelow ? 1 : undefined,
                 userSelect: "none",
                 width: isMobile ? undefined : imageSize * 4,
             }}
