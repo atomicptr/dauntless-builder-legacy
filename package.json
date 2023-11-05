@@ -54,8 +54,7 @@
         "react-virtualized-auto-sizer": "^1.0.20",
         "react-window": "^1.8.9",
         "sqids": "^0.3.0",
-        "ts-pattern": "^5.0.5",
-        "vite-plugin-favicon": "^1.0.8"
+        "ts-pattern": "^5.0.5"
     },
     "devDependencies": {
         "@crowdin/crowdin-api-client": "^1.26.0",
@@ -101,6 +100,7 @@
         "typescript": "^5.2.2",
         "vite": "^4.5.0",
         "vite-plugin-pwa": "^0.16.7",
+        "vite-plugin-favicon": "^1.0.8",
         "yauzl": "^2.10.0"
     }
 }
