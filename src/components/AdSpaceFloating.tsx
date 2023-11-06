@@ -49,7 +49,7 @@ const AdSpaceFloating = () => {
 
     return (
         <Box sx={style}>
-            <AdSpace unitType={isMobile ? UnitType.BottomRail : UnitType.RightRail} />
+            <AdSpace name={"AdSpaceFloating"} unitType={isMobile ? UnitType.BottomRail : UnitType.Skyscraper} />
         </Box>
     );
 };

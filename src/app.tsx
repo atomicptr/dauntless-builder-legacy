@@ -34,6 +34,7 @@ import createCache from "@emotion/cache";
 import { ErrorBoundary } from "react-error-boundary";
 import SomethingWentWrong from "@src/components/SometingWentWrong";
 import Privacy from "./pages/about/Privacy";
+import TrackingRampSetup from "@src/components/TrackingRampSetup";
 
 const DauntlessBuilderApp = () => {
     const isMobile = useIsMobile();
@@ -65,6 +66,7 @@ const DauntlessBuilderApp = () => {
                     FallbackComponent={SomethingWentWrong}
                     onError={(e, info) => log.error(e.message, { info })}
                 >
+                    <TrackingRampSetup />
                     <QueryClientProvider client={queryClient}>
                         <BrowserRouter>
                             <SnackbarProvider

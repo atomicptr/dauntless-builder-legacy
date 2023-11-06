@@ -38,15 +38,12 @@ import LinkBox from "@src/components/LinkBox";
 import SomethingWentWrong from "@src/components/SometingWentWrong";
 import Spacer from "@src/components/Spacer";
 import { drawerWidth } from "@src/components/theme";
-import TrackingRampSetup from "@src/components/TrackingRampSetup";
 import { crowdinLink, discordServerUrl, githubUrl, xTwitterUrl } from "@src/constants";
 import dauntlessBuilderData from "@src/data/Data";
 import useDevMode from "@src/hooks/dev-mode";
 import useIsMobile from "@src/hooks/is-mobile";
-import useWindowSize from "@src/hooks/window-size";
 import { currentLanguage, getNativeLanguageName, isBetaLanguage, Language } from "@src/i18n";
 import { favoritesView } from "@src/state/favorites";
-import { adsEnabled } from "@src/utils/env-tools";
 import log from "@src/utils/logger";
 import { useAtomValue } from "jotai";
 import React, { ReactNode, useState } from "react";
@@ -67,7 +64,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     const theme = useTheme();
 
     const isMobile = useIsMobile();
-    const { width } = useWindowSize();
     const [open, setOpen] = useState(false);
     const { t } = useTranslation();
     const devMode = useDevMode();
@@ -87,8 +83,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         { icon: <Shield />, link: "/privacy", text: t("drawer.privacy") },
         { icon: <Settings />, link: "/settings", text: t("drawer.settings") },
     ];
-
-    const showLeftSideAdSpace = adsEnabled && (width - theme.breakpoints.values.xl) * 0.5 <= adSpaceRightSideMinSize;
 
     return (
         <Box sx={{ display: "flex" }}>
@@ -190,7 +184,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     ))}
                 </List>
 
-                {isMobile ? <Spacer /> : showLeftSideAdSpace ? <AdSpace unitType={UnitType.LeftRail} /> : <Spacer />}
+                <Spacer />
 
                 <Box
                     sx={{
@@ -269,7 +263,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </ErrorBoundary>
             </Container>
 
-            <TrackingRampSetup />
             <AdSpaceFloating />
         </Box>
     );

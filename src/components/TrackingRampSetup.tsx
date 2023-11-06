@@ -42,25 +42,8 @@ const TrackingRampSetup = () => {
                 });
             }
 
-            window.ramp.que.push(async () => {
-                try {
-                    await window.ramp.addUnits([
-                        {
-                            type: UnitType.RightRail,
-                        },
-                        {
-                            type: UnitType.BottomRail,
-                        },
-                        {
-                            type: UnitType.LeftRail,
-                        },
-                    ]);
-                    window.ramp.displayUnits();
-                } catch (error) {
-                    log.error("ramp: could not add units", { error });
-                    window.ramp.displayUnits();
-                }
-
+            window.ramp.que.push(() => {
+                log.debug("playwire has been setup")
                 setEvents(playwireSetupHasFinished());
             });
 
