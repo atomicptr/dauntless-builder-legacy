@@ -1,5 +1,5 @@
 import crowdinStats from "@json/crowdin-stats.json";
-import { csCZ, deDE, enUS, esES, frFR, huHU, itIT, jaJP, ptBR, ruRU, trTR } from "@mui/material/locale";
+import { arSA, csCZ, deDE, enUS, esES, frFR, huHU, itIT, jaJP, ptBR, ruRU, trTR } from "@mui/material/locale";
 import { stateIdent } from "@src/state/common";
 import log from "@src/utils/logger";
 import i18n, { CallbackError } from "i18next";
@@ -20,6 +20,7 @@ export enum Language {
     Russian = "ru",
     Turkish = "tr",
     Czech = "cs",
+    Arabic = "ar",
 }
 
 const nativeLanguageNames = {
@@ -34,10 +35,12 @@ const nativeLanguageNames = {
     [Language.Russian]: "русский",
     [Language.Turkish]: "Türkçe",
     [Language.Czech]: "čeština",
+    [Language.Arabic]: "العربية",
 };
 
 // Languages that aren't officially supported by Dauntless
-const communityLanguages = [Language.Hungarian, Language.Turkish, Language.Czech];
+const communityLanguages = [Language.Hungarian, Language.Turkish, Language.Czech, Language.Arabic];
+const rtlLanguages = [Language.Arabic];
 
 const betaThreshold = 95;
 
@@ -56,6 +59,7 @@ export const muiLocaleComponent = () =>
         .with(Language.Russian, () => ruRU)
         .with(Language.Turkish, () => trTR)
         .with(Language.Czech, () => csCZ)
+        .with(Language.Arabic, () => arSA) // looks like MUI has no MSA so I picked SA for now...
         .otherwise(() => enUS);
 
 export const getNativeLanguageName = (lang: Language): string | null => nativeLanguageNames[lang] ?? null;
@@ -73,6 +77,7 @@ export const isBetaLanguage = (lang: Language): boolean => {
 };
 
 export const isCommunityLanguage = (lang: Language): boolean => communityLanguages.indexOf(lang) > -1;
+export const isRtlLanguage = (lang: Language): boolean => rtlLanguages.indexOf(lang) > -1;
 
 export const flagCode = (lang: Language): string =>
     match(lang)
@@ -87,6 +92,7 @@ export const flagCode = (lang: Language): string =>
         .with(Language.Russian, () => "ru")
         .with(Language.Turkish, () => "tr")
         .with(Language.Czech, () => "cz")
+        .with(Language.Arabic, () => "sa") // again no flag for MSA so I picked SA for now...
         .otherwise(() => "x");
 
 export const ttry = (tryIdent: string, elseIdent: string): string => {

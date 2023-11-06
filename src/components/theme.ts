@@ -1,6 +1,6 @@
 import { createTheme, PaletteColor } from "@mui/material";
 import { ItemRarity } from "@src/data/ItemRarity";
-import { muiLocaleComponent } from "@src/i18n";
+import { isRtlLanguage, Language, muiLocaleComponent } from "@src/i18n";
 
 export const drawerWidth = 240;
 export const itemPickerDefaultImageSize = 64;
@@ -18,10 +18,11 @@ export const rarityColor: { [key in ItemRarity]: PaletteColor } = {
     [ItemRarity.Uncommon]: baseTheme.palette.augmentColor({ color: { main: "#00CA3C" } }),
 };
 
-export const makeTheme = (mode: "dark" | "light") => {
+export const makeTheme = (mode: "dark" | "light", language: Language) => {
     return createTheme(
         baseTheme,
         createTheme({
+            direction: isRtlLanguage(language) ? "rtl" : "ltr",
             palette: {
                 mode,
             },
