@@ -1,17 +1,18 @@
 import { BuildModel } from "@src/data/BuildModel";
 import useDevMode from "@src/hooks/dev-mode";
+import { isRtlLanguage, Language } from "@src/i18n";
 import { stateIdent } from "@src/state/common";
 import { configurationAtom, setDevMode } from "@src/state/configuration";
 import { addFavorite, favoritesAtom, favoritesView, isBuildInFavorites } from "@src/state/favorites";
 import log, { LogLevel } from "@src/utils/logger";
-import { useAtomValue, useSetAtom } from "jotai";
+import { useAtom, useAtomValue, useSetAtom } from "jotai";
 import React, { useEffect } from "react";
 
 const BackgroundTasks: React.FC = () => {
     const favorites = useAtomValue(favoritesView);
     const setFavorites = useSetAtom(favoritesAtom);
     const devMode = useDevMode();
-    const setConfiguration = useSetAtom(configurationAtom);
+    const [configuration, setConfiguration] = useAtom(configurationAtom);
 
     useEffect(() => {
         // import old favorites
@@ -58,6 +59,14 @@ const BackgroundTasks: React.FC = () => {
     useEffect(() => {
         log.setLogLevel(devMode ? LogLevel.Debug : LogLevel.Info);
     }, [devMode]);
+
+    useEffect(() => {
+        if (!configuration.language) {
+            return;
+        }
+        document.documentElement.lang = configuration.language.toString();
+        document.dir = isRtlLanguage(configuration.language as Language) ? "rtl" : "ltr";
+    }, [configuration.language]);
 
     return null;
 };
