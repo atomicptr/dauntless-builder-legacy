@@ -9,6 +9,7 @@ interface Window {
         passiveMode: boolean;
         addUnits: (units: PlaywireUnit[]) => Promise<void>;
         displayUnits: () => void;
+        destroyUnits: (what: string) => void;
     };
 
     _pwGA4PageviewId: string;

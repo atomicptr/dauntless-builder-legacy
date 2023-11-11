@@ -46,6 +46,7 @@ export default defineConfig(({ command, mode }) => {
         define: {
             DB_BUILD_TIME: Date.now(),
             DB_DEVMODE: isDevMode,
+            DB_DISPLAY_AD_PLACEHOLDERS: env("DB_DISPLAY_AD_PLACEHOLDERS", "bool"),
             DB_ENABLE_ADS: env("DB_ENABLE_ADS", "bool"),
             DB_GA4_MEASUREMENT_ID:env("DB_GA4_MEASUREMENT_ID"),
             DB_PW_PUBLISHER_ID: env("DB_PW_PUBLISHER_ID"),

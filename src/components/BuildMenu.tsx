@@ -1,9 +1,11 @@
 import { Bookmark, BookmarkBorder, ContentCopy, Undo } from "@mui/icons-material";
 import { Fab, IconButton, useTheme } from "@mui/material";
-import { adSpaceMobileBannerHeight } from "@src/components/AdSpaceFloating";
+import { adSpaceSize, UnitType } from "@src/components/AdSpace";
 import InputDialog from "@src/components/InputDialog";
+import { playwireUnitMobileBottomRail } from "@src/constants";
 import useIsMobile from "@src/hooks/is-mobile";
 import { buildModelView, lastSelectedBuildModelView } from "@src/state/build";
+import { eventsAtom, playwireIsUnitInitialized } from "@src/state/events";
 import {
     addFavorite,
     favoritesAtom,
@@ -40,6 +42,8 @@ const BuildMenu: React.FC = () => {
     const isUserEditedBuild = build.serialize() === lastEditedBuild?.serialize();
     const isFavorite = isBuildInFavorites(favorites, buildId);
     const isCopyToClipboardEnabled = navigator.clipboard !== undefined;
+
+    const events = useAtomValue(eventsAtom);
 
     if (buildIdRegex.exec(location.pathname) === null) {
         return null;
@@ -95,7 +99,14 @@ const BuildMenu: React.FC = () => {
                         color="primary"
                         onClick={handleCopyToClipboardClicked}
                         sx={{
-                            bottom: adsEnabled ? `${adSpaceMobileBannerHeight}px` : theme.spacing(2),
+                            bottom:
+                                (adsEnabled || DB_DISPLAY_AD_PLACEHOLDERS) &&
+                                playwireIsUnitInitialized(events, playwireUnitMobileBottomRail)
+                                    ? `${
+                                        adSpaceSize[UnitType.BottomRail].height +
+                                          parseInt(theme.spacing(3).slice(0, -2))
+                                    }px`
+                                    : theme.spacing(2), // TODO: edit this
                             position: "fixed",
                             right: theme.spacing(3),
                         }}

@@ -1,55 +1,66 @@
 import { Box, useTheme } from "@mui/material";
+import { Breakpoint } from "@mui/system";
 import AdSpace, { UnitType } from "@src/components/AdSpace";
-import useIsMobile from "@src/hooks/is-mobile";
 import useWindowSize from "@src/hooks/window-size";
 import { adsEnabled } from "@src/utils/env-tools";
 import React from "react";
 
-export const adSpaceRightSideMinSize = 300;
-export const adSpaceMobileBannerHeight = 96;
+interface AdSpaceFloatingProps {
+    name: string;
+    unitType: UnitType;
+    fromBreakpoint?: Breakpoint;
+    untilBreakpoint?: Breakpoint;
+    left?: number;
+    right?: number;
+    top?: number;
+    bottom?: number;
+    withoutHeader?: boolean;
+}
 
-const AdSpaceFloating = () => {
+const AdSpaceFloating: React.FC<AdSpaceFloatingProps> = ({
+    name,
+    unitType,
+    fromBreakpoint,
+    untilBreakpoint,
+    left,
+    right,
+    top,
+    bottom,
+    withoutHeader,
+}) => {
     const theme = useTheme();
-    const isMobile = useIsMobile();
     const { width } = useWindowSize();
 
-    if (!adsEnabled) {
+    if (!adsEnabled && !DB_DISPLAY_AD_PLACEHOLDERS) {
         return null;
     }
 
-    const rightSideSpace = (width - theme.breakpoints.values.xl) * 0.5;
-    const rightSideHasEnoughSpace = rightSideSpace > adSpaceRightSideMinSize;
+    const canRenderUsingFromRule = fromBreakpoint ? width >= theme.breakpoints.values[fromBreakpoint] : true;
+    const canRenderUsingUntilRule = untilBreakpoint ? width <= theme.breakpoints.values[untilBreakpoint] : true;
 
-    const baseStyle = {
-        background: theme.palette.background.default,
-        display: "flex",
-        position: "fixed",
-    };
-
-    if (!isMobile && !rightSideHasEnoughSpace) {
+    if (!canRenderUsingFromRule || !canRenderUsingUntilRule) {
         return null;
     }
-
-    const style = {
-        ...baseStyle,
-        ...(isMobile
-            ? {
-                bottom: 0,
-                height: `${adSpaceMobileBannerHeight}px`,
-                left: 0,
-                right: 0,
-            }
-            : {
-                bottom: 0,
-                right: 0,
-                top: 64,
-                width: `${rightSideSpace - adSpaceRightSideMinSize * 0.5}px`,
-            }),
-    };
 
     return (
-        <Box sx={style}>
-            <AdSpace name={"AdSpaceFloating"} unitType={isMobile ? UnitType.BottomRail : UnitType.Skyscraper} />
+        <Box
+            sx={{
+                bottom,
+                display: "flex",
+                justifyContent: "center",
+                left,
+                pointerEvents: "none",
+                position: "fixed",
+                right,
+                top,
+                zIndex: 99999,
+            }}
+        >
+            <AdSpace
+                name={name}
+                unitType={unitType}
+                withoutHeader={withoutHeader}
+            />
         </Box>
     );
 };

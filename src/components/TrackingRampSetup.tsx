@@ -1,5 +1,4 @@
-import { UnitType } from "@src/components/AdSpace";
-import { eventsAtom, playwireSetupHasFinished } from "@src/state/events";
+import { eventsAtom, playwireClearInitializedUnits, playwireSetupHasFinished } from "@src/state/events";
 import { adsEnabled } from "@src/utils/env-tools";
 import log from "@src/utils/logger";
 import { useSetAtom } from "jotai";
@@ -19,7 +18,7 @@ const TrackingRampSetup = () => {
             log.debug("enabled GA4");
         }
 
-        if (adsEnabled) {
+        if (adsEnabled && !DB_DISPLAY_AD_PLACEHOLDERS) {
             if (window.ramp) {
                 return;
             }
@@ -43,7 +42,7 @@ const TrackingRampSetup = () => {
             }
 
             window.ramp.que.push(() => {
-                log.debug("playwire has been setup")
+                log.debug("playwire has been setup");
                 setEvents(playwireSetupHasFinished());
             });
 
@@ -51,6 +50,25 @@ const TrackingRampSetup = () => {
             rampScript.src = `https://cdn.intergient.com/${DB_PW_PUBLISHER_ID}/${DB_PW_WEBSITE_ID}/ramp.js`;
             rampScript.async = true;
             document.body.appendChild(rampScript);
+        }
+
+        if (adsEnabled || DB_DISPLAY_AD_PLACEHOLDERS) {
+            let timer: NodeJS.Timeout | null = null;
+
+            window.addEventListener("resize", () => {
+                if (timer) {
+                    clearTimeout(timer);
+                }
+                timer = setTimeout(() => {
+                    if (!window.ramp) {
+                        return;
+                    }
+
+                    log.debug("resized window: destroy units...");
+                    window.ramp.destroyUnits("all");
+                    setEvents(playwireClearInitializedUnits());
+                }, 100);
+            });
         }
     }, [setEvents]);
 

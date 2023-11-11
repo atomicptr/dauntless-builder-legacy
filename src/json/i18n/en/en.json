@@ -42,6 +42,7 @@
     },
     "feature-disabled-browser": "This feature is currently disabled for this web browser.",
     "misc": {
+        "ad": "Ad",
         "dauntless-version": "Dauntless v{{version}}",
         "discord-server": "Dauntless Builder Discord Server",
         "github-repository": "Github Repository",

@@ -31,14 +31,21 @@ import {
     Typography,
     useTheme,
 } from "@mui/material";
-import AdSpace, { UnitType } from "@src/components/AdSpace";
-import AdSpaceFloating, { adSpaceRightSideMinSize } from "@src/components/AdSpaceFloating";
+import { UnitType } from "@src/components/AdSpace";
+import AdSpaceFloating from "@src/components/AdSpaceFloating";
 import BuildMenu from "@src/components/BuildMenu";
 import LinkBox from "@src/components/LinkBox";
 import SomethingWentWrong from "@src/components/SometingWentWrong";
 import Spacer from "@src/components/Spacer";
 import { drawerWidth } from "@src/components/theme";
-import { crowdinLink, discordServerUrl, githubUrl, xTwitterUrl } from "@src/constants";
+import {
+    crowdinLink,
+    discordServerUrl,
+    githubUrl,
+    playwireUnitMobileBottomRail,
+    playwireUnitRightSide,
+    xTwitterUrl,
+} from "@src/constants";
 import dauntlessBuilderData from "@src/data/Data";
 import useDevMode from "@src/hooks/dev-mode";
 import useIsMobile from "@src/hooks/is-mobile";
@@ -263,7 +270,23 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </ErrorBoundary>
             </Container>
 
-            <AdSpaceFloating />
+            <AdSpaceFloating
+                bottom={0}
+                fromBreakpoint={"xl"}
+                name={playwireUnitRightSide}
+                right={0}
+                unitType={UnitType.Skyscraper160x600}
+                withoutHeader
+            />
+            <AdSpaceFloating
+                bottom={0}
+                left={0}
+                name={playwireUnitMobileBottomRail}
+                right={0}
+                unitType={UnitType.BottomRail}
+                untilBreakpoint={"md"}
+                withoutHeader
+            />
         </Box>
     );
 };
