@@ -9,18 +9,14 @@ import React, { useEffect } from "react";
 
 export enum UnitType {
     BottomRail = "bottom_rail",
-    Skyscraper160x600 = "sky_atf",
-    Skyscraper300x600 = "sky_btf",
-    MediumRect300x250 = "med_rect_atf",
-    MediumRect320x50 = "med_rect_ctf",
+    Skyscraper = "sky_atf",
+    MediumRect = "med_rect_atf",
 }
 
 export const adSpaceSize = {
     [UnitType.BottomRail]: { height: 50, width: 320 },
-    [UnitType.Skyscraper160x600]: { height: 600, width: 160 },
-    [UnitType.Skyscraper300x600]: { height: 600, width: 300 },
-    [UnitType.MediumRect300x250]: { height: 250, width: 300 },
-    [UnitType.MediumRect320x50]: { height: 50, width: 320 },
+    [UnitType.Skyscraper]: { height: 600, width: 160 },
+    [UnitType.MediumRect]: { height: 250, width: 300 },
 };
 
 interface AdSpaceProps {

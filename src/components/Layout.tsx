@@ -201,7 +201,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                             <ConstraintBox constraints={[new OutsideBoundsConstraint(900, 1200)]}>
                                 <AdSpace
                                     name={playwireUnitLeftSide}
-                                    unitType={UnitType.Skyscraper300x600}
+                                    unitType={UnitType.Skyscraper}
                                 />
                             </ConstraintBox>
                             <ConstraintBox
@@ -212,7 +212,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                             >
                                 <AdSpace
                                     name={playwireUnitLeftSideSmall}
-                                    unitType={UnitType.MediumRect300x250}
+                                    unitType={UnitType.MediumRect}
                                 />
                             </ConstraintBox>
                         </>
