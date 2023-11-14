@@ -14,7 +14,6 @@ interface AdSpaceFloatingProps {
     right?: number;
     top?: number;
     bottom?: number;
-    withoutHeader?: boolean;
 }
 
 const AdSpaceFloating: React.FC<AdSpaceFloatingProps> = ({
@@ -26,7 +25,6 @@ const AdSpaceFloating: React.FC<AdSpaceFloatingProps> = ({
     right,
     top,
     bottom,
-    withoutHeader,
 }) => {
     const theme = useTheme();
     const { width } = useWindowSize();
@@ -59,7 +57,6 @@ const AdSpaceFloating: React.FC<AdSpaceFloatingProps> = ({
             <AdSpace
                 name={name}
                 unitType={unitType}
-                withoutHeader={withoutHeader}
             />
         </Box>
     );

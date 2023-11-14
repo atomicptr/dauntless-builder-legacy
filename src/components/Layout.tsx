@@ -31,9 +31,11 @@ import {
     Typography,
     useTheme,
 } from "@mui/material";
-import { UnitType } from "@src/components/AdSpace";
+import AdSpace, { UnitType } from "@src/components/AdSpace";
 import AdSpaceFloating from "@src/components/AdSpaceFloating";
 import BuildMenu from "@src/components/BuildMenu";
+import CenterBox from "@src/components/CenterBox";
+import ConstraintBox, { OutsideBoundsConstraint, WithinBoundsConstraint } from "@src/components/ConstraintBox";
 import LinkBox from "@src/components/LinkBox";
 import SomethingWentWrong from "@src/components/SometingWentWrong";
 import Spacer from "@src/components/Spacer";
@@ -42,8 +44,9 @@ import {
     crowdinLink,
     discordServerUrl,
     githubUrl,
+    playwireUnitLeftSide,
+    playwireUnitLeftSideSmall,
     playwireUnitMobileBottomRail,
-    playwireUnitRightSide,
     xTwitterUrl,
 } from "@src/constants";
 import dauntlessBuilderData from "@src/data/Data";
@@ -51,6 +54,7 @@ import useDevMode from "@src/hooks/dev-mode";
 import useIsMobile from "@src/hooks/is-mobile";
 import { currentLanguage, getNativeLanguageName, isBetaLanguage, Language } from "@src/i18n";
 import { favoritesView } from "@src/state/favorites";
+import { adsEnabled } from "@src/utils/env-tools";
 import log from "@src/utils/logger";
 import { useAtomValue } from "jotai";
 import React, { ReactNode, useState } from "react";
@@ -144,7 +148,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         />
                     ) : null}
 
-                    <Box sx={{ flexGrow: 1 }}>{/* Spacer */}</Box>
+                    <Spacer />
 
                     <BuildMenu />
                 </Toolbar>
@@ -191,7 +195,31 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     ))}
                 </List>
 
-                <Spacer />
+                {adsEnabled || DB_DISPLAY_AD_PLACEHOLDERS ? (
+                    <CenterBox flexGrow={100}>
+                        <>
+                            <ConstraintBox constraints={[new OutsideBoundsConstraint(900, 1200)]}>
+                                <AdSpace
+                                    name={playwireUnitLeftSide}
+                                    unitType={UnitType.Skyscraper300x600}
+                                />
+                            </ConstraintBox>
+                            <ConstraintBox
+                                constraints={[
+                                    new WithinBoundsConstraint(Infinity, 1199),
+                                    new OutsideBoundsConstraint(900, 860),
+                                ]}
+                            >
+                                <AdSpace
+                                    name={playwireUnitLeftSideSmall}
+                                    unitType={UnitType.MediumRect300x250}
+                                />
+                            </ConstraintBox>
+                        </>
+                    </CenterBox>
+                ) : (
+                    <Spacer />
+                )}
 
                 <Box
                     sx={{
@@ -272,20 +300,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             <AdSpaceFloating
                 bottom={0}
-                fromBreakpoint={"xl"}
-                name={playwireUnitRightSide}
-                right={0}
-                unitType={UnitType.Skyscraper160x600}
-                withoutHeader
-            />
-            <AdSpaceFloating
-                bottom={0}
                 left={0}
                 name={playwireUnitMobileBottomRail}
                 right={0}
                 unitType={UnitType.BottomRail}
                 untilBreakpoint={"md"}
-                withoutHeader
             />
         </Box>
     );

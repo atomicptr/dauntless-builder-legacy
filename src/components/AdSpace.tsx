@@ -1,55 +1,34 @@
 import { FeaturedVideo } from "@mui/icons-material";
-import { Box, ListSubheader, useTheme } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import { eventsAtom, playwireAddInitializedUnit } from "@src/state/events";
 import { adsEnabled } from "@src/utils/env-tools";
 import log from "@src/utils/logger";
 import { useAtom } from "jotai";
 import md5 from "md5";
 import React, { useEffect } from "react";
-import { useTranslation } from "react-i18next";
 
 export enum UnitType {
     BottomRail = "bottom_rail",
     Skyscraper160x600 = "sky_atf",
     Skyscraper300x600 = "sky_btf",
+    MediumRect300x250 = "med_rect_atf",
+    MediumRect320x50 = "med_rect_ctf",
 }
 
 export const adSpaceSize = {
     [UnitType.BottomRail]: { height: 50, width: 320 },
     [UnitType.Skyscraper160x600]: { height: 600, width: 160 },
     [UnitType.Skyscraper300x600]: { height: 600, width: 300 },
+    [UnitType.MediumRect300x250]: { height: 250, width: 300 },
+    [UnitType.MediumRect320x50]: { height: 50, width: 320 },
 };
 
 interface AdSpaceProps {
     name: string;
     unitType: UnitType;
-    withoutHeader?: boolean;
 }
 
-interface AdSpaceWrapperProps {
-    children: React.ReactElement;
-    withoutHeader?: boolean;
-}
-
-const AdSpaceWrapper: React.FC<AdSpaceWrapperProps> = ({ children, withoutHeader }) => {
-    const { t } = useTranslation();
-    return (
-        <Box
-            sx={{
-                alignItems: "center",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                textAlign: "center",
-            }}
-        >
-            {withoutHeader ? null : <ListSubheader sx={{ userSelect: "none" }}>{t("misc.ad")}</ListSubheader>}
-            <Box>{children}</Box>
-        </Box>
-    );
-};
-
-const AdSpace: React.FC<AdSpaceProps> = ({ name, unitType, withoutHeader }) => {
+const AdSpace: React.FC<AdSpaceProps> = ({ name, unitType }) => {
     const theme = useTheme();
 
     const [events, setEvents] = useAtom(eventsAtom);
@@ -99,25 +78,23 @@ const AdSpace: React.FC<AdSpaceProps> = ({ name, unitType, withoutHeader }) => {
 
     if (DB_DISPLAY_AD_PLACEHOLDERS) {
         return (
-            <AdSpaceWrapper withoutHeader={withoutHeader}>
-                <Box
-                    id={selectorName}
-                    sx={{
-                        alignItems: "center",
-                        background: theme.palette.background.default,
-                        border: `5px dashed ${theme.palette.primary.main}`,
-                        color: theme.palette.primary.main,
-                        display: "flex",
-                        height: `${size?.height}px`,
-                        justifyContent: "center",
-                        m: 1,
-                        p: 1,
-                        width: `${size?.width}px`,
-                    }}
-                >
-                    <FeaturedVideo />
-                </Box>
-            </AdSpaceWrapper>
+            <Box
+                id={selectorName}
+                sx={{
+                    alignItems: "center",
+                    background: theme.palette.background.default,
+                    border: `5px dashed ${theme.palette.primary.main}`,
+                    color: theme.palette.primary.main,
+                    display: "flex",
+                    height: `${size?.height}px`,
+                    justifyContent: "center",
+                    m: 1,
+                    p: 1,
+                    width: `${size?.width}px`,
+                }}
+            >
+                <FeaturedVideo />
+            </Box>
         );
     }
 
@@ -125,11 +102,7 @@ const AdSpace: React.FC<AdSpaceProps> = ({ name, unitType, withoutHeader }) => {
         return null;
     }
 
-    return (
-        <AdSpaceWrapper>
-            <div id={selectorName} />
-        </AdSpaceWrapper>
-    );
+    return <div id={selectorName} />;
 };
 
 export default React.memo(AdSpace);

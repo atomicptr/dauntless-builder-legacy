@@ -8,3 +8,6 @@ export const assetsCdnPrefix = "https://cdn.jsdelivr.net/gh/atomicptr/dauntless-
 
 export const playwireUnitRightSide = "SkyscraperRightSide";
 export const playwireUnitMobileBottomRail = "MobileBottomRail";
+export const playwireUnitLeftSide = "LeftSideBar";
+export const playwireUnitUnderPerkList = "UnderPerkList";
+export const playwireUnitLeftSideSmall = "LeftSideBarSmaller";
