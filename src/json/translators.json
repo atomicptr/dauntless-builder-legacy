@@ -1,7 +1,7 @@
 [
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15101141/medium/f0e4f75afce7ea3035cd7dc38c64d487.png",
-        "contributions": 13110,
+        "contributions": 14284,
         "proofreader": true,
         "username": "atomicptr"
     },
@@ -214,6 +214,12 @@
         "contributions": 11,
         "proofreader": false,
         "username": "suica.047"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16105518/medium/5b05fe646b11a9cc7444fe74c6d93aab.jpeg",
+        "contributions": 10,
+        "proofreader": false,
+        "username": "krzy0108"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15417372/medium/55432e1b6226d72202ab32f74aa14bc7.jpeg",
