@@ -27,7 +27,7 @@
         "item-select-dialog": {
             "select-text": "Selecione {{name}}"
         },
-        "recommended": "This item is verified as being great please use it."
+        "recommended": "Este item foi verificado como ótimo. Use-o, por favor."
     },
     "drawer": {
         "about": "$t(pages.about.title)",
@@ -46,7 +46,7 @@
         "github-repository": "Repositório do GitHub",
         "patch-url": "https://playdauntless.com/patch-notes/{{version}}",
         "something-went-wrong": "Algo deu errado... Por favor, envie o relatório de erro abaixo para mim em nosso Discord e tente recarregar o site. Muito obrigado!",
-        "x-twitter": "Dauntless Builder on X.com"
+        "x-twitter": "Dauntless Builder no X.com"
     },
     "pages": {
         "404": {
