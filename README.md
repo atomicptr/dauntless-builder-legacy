@@ -3,9 +3,11 @@
 [![Build Status](https://github.com/atomicptr/dauntless-builder/actions/workflows/tests.yml/badge.svg)](https://github.com/atomicptr/dauntless-builder/actions/workflows/tests.yml)
 [![Crowdin](https://badges.crowdin.net/dauntless-builder/localized.svg)](https://crowdin.com/project/dauntless-builder)
 
-Create and share Dauntless builds with your friends!
+<p align="center">
+    <img height="160px" src="https://raw.githubusercontent.com/atomicptr/dauntless-builder/master/public/assets/icon.png" />
+</p>
 
-![](./public/assets/icon.png)
+Create and share Dauntless builds with your friends!
 
 ![Screenshot of Dauntless Builder](docs/assets/app-screenshot.png)
 
