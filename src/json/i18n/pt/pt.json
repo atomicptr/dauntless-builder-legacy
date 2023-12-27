@@ -1,6 +1,6 @@
 {
     "alert": {
-        "translation-warning": "Você está vendo esta página, pois sua língua está definida para <b>{{languageName}}</b>, traduções ainda estão em desenvolvimento. Se você fala essa língua, por favor considere <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">contribuir com a tradução</a>."
+        "translation-warning": "Atualmente, você está visualizando esta página com seu idioma definido como <b>{{languageName}}</b>, as traduções estão em fase beta e são muito limitadas. Se você fala este idioma, por favor, considere <a style=\"color: #fff;\" target=\"_blank\" href=\"{{crowdinLink}}\">contribuir para os esforços de tradução</a>."
     },
     "app-name": "Dauntless Builder",
     "components": {
@@ -19,7 +19,7 @@
             "invalid-build": "Devido a mudanças no Dauntless esta build não é mais compatível com a versão atual do site, uma ou mais partes foram removidas para a correta exibição.",
             "upgraded-build": "Esta Build foi feita para uma versão antiga do Dauntless e pode estar desatualizada."
         },
-        "event-marker": "Este item foi parte de um evento e pode não ser possível obtê-lo mais.",
+        "event-marker": "Este item fazia parte de um evento e pode não estar mais disponível para obtenção.",
         "item-picker": {
             "lantern-hold-line": "<b>$t(terms.hold)</b>: {{hold}}",
             "omnicell-passive-line": "<b>$t(terms.passive)</b>: {{passive}}"
@@ -27,7 +27,7 @@
         "item-select-dialog": {
             "select-text": "Selecione {{name}}"
         },
-        "recommended": "Este item foi verificado como ótimo. Use-o, por favor."
+        "recommended": "Este item foi verificado como sendo excelente. Por favor, use-o."
     },
     "drawer": {
         "about": "$t(pages.about.title)",
@@ -45,7 +45,7 @@
         "discord-server": "Servidor do Discord do Dauntless Builder",
         "github-repository": "Repositório do GitHub",
         "patch-url": "https://playdauntless.com/patch-notes/{{version}}",
-        "something-went-wrong": "Algo deu errado... Por favor, envie o relatório de erro abaixo para mim em nosso Discord e tente recarregar o site. Muito obrigado!",
+        "something-went-wrong": "Desculpe, algo deu errado! Por favor, envie o registro de erros abaixo para mim em nosso Discord e tente recarregar o site. Muito obrigado!",
         "x-twitter": "Dauntless Builder no X.com"
     },
     "pages": {
@@ -89,7 +89,7 @@
             "filter-perks": "Filtrar habilidades...",
             "filter-title": "Filtrar",
             "options-title": "Opções",
-            "perk-matching-enabled": "Ativar a seleção inteligente de perks (custo pesado de desempenho, se você notar quedas de desempenho desmarque isso)",
+            "perk-matching-enabled": "Habilite a seleção inteligente de perks (alto custo de desempenho, se notar problemas de desempenho, desmarque esta opção)",
             "perks-title": "$t(terms.perks)",
             "preselect-title": "Selecionar Itens",
             "remove-exotics": "Remover Itens Exóticos",
@@ -98,24 +98,24 @@
         },
         "favorites": {
             "build-name": "Nome da build",
-            "edit-name": "Editar nome do favorito",
+            "edit-name": "Editar Nome Favorito",
             "title": "Minhas builds"
         },
         "home": {
-            "contributing-text": "Se você está interessado em contribuir com o código ou especialmente com localizações, por favor, acesse o nosso <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a>!",
+            "contributing-text": "Se você estiver interessado em contribuir com código, especialmente em traduções, por favor, visite nosso <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a>!",
             "contributing-title": "Contribuindo",
             "links": {
                 "discord": "Discord",
                 "github": "GitHub",
-                "localize": "Ajude-nos com a localização"
+                "localize": "Ajude-nos com a tradução"
             },
             "links-title": "Links",
-            "localization-text": "O Construtor do Dauntless agora suporta localizações, por favor, vá para a página de Configurações e selecione sua língua preferida se já não foi escolhida automaticamente! Se o idioma não é suportado no momento e você está interessado em ajudar, por favor leia a seção \"Contribuindo\" abaixo.",
-            "localization-title": "Localização",
+            "localization-text": "O Dauntless Builder agora oferece suporte a traduções. Por favor, vá até a página de Configurações e selecione seu idioma preferido, caso ainda não tenha sido detectado automaticamente! Se esse idioma não for suportado atualmente e você estiver interessado em ajudar, por favor, leia a seção \"Contribuição\" abaixo.",
+            "localization-title": "Traduções",
             "test-builds": "Builds de teste",
             "title": "Início",
-            "welcome-text": "uma aplicação web grátis de código aberto para criar e compartilhar Builds para o popular o jogo de caça aos monstros de acesso gratuito Dauntless.",
-            "welcome-title": "Bem-vindo ao Construtor do Dauntless,"
+            "welcome-text": "uma aplicação web gratuita e de código aberto para criar e compartilhar Builds para o popular jogo de caça a monstros gratuito, Dauntless.",
+            "welcome-title": "Bem-vindo ao Builder do Dauntless,"
         },
         "metabuilds": {
             "generated": {
@@ -174,28 +174,28 @@
                 },
                 "categories": {
                     "Artificer": {
-                        "description": "O Artífice apresenta um drone que você pode controlar que tem várias funções, dependendo no que você está mirando: se estiver direcionando para o chão, isto cria uma aura de cura e blindagem que bloqueia projéteis do Behemoth; se atingir um jogador ativo, cria um escudo curativo que os segue; se mirar em um Slayer nocauteado, ele os revive e cria uma aura de cura e proteção que os segue; se for direcionado a um Behemoth, ele marca uma parte que receberá dano extra.",
+                        "description": "Artífice apresenta um drone que você pode controlar, com diversas funções dependendo do alvo: se mirar no chão, cria uma aura de cura e escudo que bloqueia os projéteis do Behemoth; se mirar em um jogador, cria uma aura de cura e escudo que o segue; se mirar em um caçador nocauteado, o revive e cria uma aura de cura e escudo que o segue; e, se mirar em um Behemoth, marca uma parte para receber dano extra.",
                         "name": "Artífice"
                     },
                     "Bastion": {
-                        "description": "A Bastião apresenta um maior ganho de escudo de vida e a habilidade passiva de gerar escudos quando causar dano. Sua habilidade ativa consome todo o escudo que você tem atualmente e causa dano baseado em quanto escudo foi Gasto. Negligenciar a habilidade ativa reduzirá significativamente o seu potencial de dano.",
+                        "description": "Bastião apresenta um ganho de escudo maior por meio de perks e a habilidade passiva de gerar escudos ao causar dano. Sua habilidade ativa consome todo o escudo que você tem no momento e causa dano com base na quantidade de escudo consumido. Desconsiderar a habilidade ativa reduz significativamente seu potencial de dano.",
                         "name": "Bastião"
                     },
                     "Catalyst": {
-                        "description": "Estas são as melhores Builds para caça em geral, maximizando o dano e usando Elixires de Mãos Rápidas como sua fonte de velocidade de ataque.\nElixires recomendados para dano máximo: Frenesi, Blitz, Sobrecarga Éterica.",
+                        "description": "Estas são as melhores Builds que você pode ter para caça em geral, maximizando o dano e utilizando tônicos de Mãos Rápidas como sua fonte de velocidade de ataque.\nTônicos recomendados para dano máximo: Frenesi, Mãos Rápidas, Sobrecarga Etética.",
                         "name": "Catalisador"
                     },
                     "Discipline": {
-                        "description": "Disciplina é uma Ominicélula de alto risco com uma habilidade de alto dano que lhe concede instâncias de críticos se tiverem sucesso e com no acúmulo máximo, concede a você uma grande chance de dano crítico.",
+                        "description": "Disciplina é uma Omnicélula de alto risco e alta recompensa, apresentando uma habilidade de interromper de alto dano que concede a você, acúmulos de dano crítico se cronometrada corretamente e, com os acúmulos no máximo, oferece uma alta quantidade de chance crítica.",
                         "name": "Disciplina"
                     },
                     "Escalations": {
-                        "description": "Construções para lidar com Intensificações. Inclui Builds sem equipamento de Intensificações e Provações. ",
+                        "description": "Builds para lidar com Intensificações. Inclui Builds sem equipamento de Intensificações e Provações. ",
                         "name": "Intensificações",
                         "subcategoryDescription": {
-                            "heroics": "Builds para várias Intensificações Heroicas. Utiliza catalisador. Elixires recomendados: Frenesi, Blitz, Sobrecarga Etérica.",
-                            "legendaries": "Builds para os várias Intensificações.",
-                            "preEsca": "Builds para várias Intensificações. Não contém células de Provações ou equipamento de Intensificação."
+                            "heroics": "Builds para as diversas Intensificações Heroicas. Usa Catalisador. Tônicos recomendados: Frenesi, Mãos Rápidas, Sobrecarga Etérica.",
+                            "legendaries": "Builds para as diversas Intensificações.",
+                            "preEsca": "Construções para as diversas Intensificações. Não contém células de Provações ou equipamentos de Intensificação."
                         }
                     },
                     "Exotics": {
@@ -203,21 +203,21 @@
                         "name": "Exóticos"
                     },
                     "Iceborne": {
-                        "description": "Glacinata fornece roubo de vida e reduz o dano o quanto menos de saúde que você tiver, com uma habilidade ativa que concede hiper-armadura e roubo de vida adicional. A habilidade ativa causa mais dano quando usado com a vida no máximo.",
+                        "description": "Glacinata proporciona roubo de vida e redução de dano quanto menos vida você tiver, com uma habilidade ativa que concede hiperarmadura e roubo de vida adicional. A habilidade ativa causa mais dano quando usada com vida máxima.",
                         "name": "Glacinata"
                     },
                     "Revenant": {
-                        "description": "Aparição é uma Omnicélula de alto risco e alta recompensa com uma habilidade ativa que consome até 500 HP para invocar até cinco tentáculos sombrios que causam alto dano e colocam você no estado Vingativo. Quando os tentáculos atingem um alvo, eles geram Orbes do Vazio, coletando-os concede instâncias de Energia do Vazio, cada um fornece 4% de dano enquanto no estado Vingativo, uma extensão de 1 segundo ao estado Vingativo, e 115 de cura ao longo de 10 segundos — após Aparição acabar.",
+                        "description": "Aparição é uma Omnicélula de alto risco e alta recompensa, apresentando uma habilidade ativa que consome até 500 HP para invocar até cinco tentáculos umbrais que causam alto dano e colocam você no estado de Aparição. Quando os tentáculos atingem um alvo, eles geram Orbes do Vazio; coletá-las concede acúmulos de Energia do Vazio, cada uma proporcionando um aumento de 4% de dano enquanto estiver no estado de Aparição, uma extensão de 1 segundo para o estado de Aparição e 115 de cura ao longo de 10 segundos após o término do estado de Aparição.",
                         "name": "Aparição"
                     },
                     "Tempest": {
-                        "description": "A Tempestade possui 10% de bônus de velocidade de ataque passivo e a habilidade de acumular instâncias de Velocidade ao esquivar através de ataques. Você gasta instãncias para fazer uma investida e causar dano baseado em quantas instâncias de Velocidade você tem no momento. O bônus de dano que a velocidade de movimento concede só se aplica a partes não quebradas.",
+                        "description": "A Tempestade apresenta um bônus passivo de 10% na velocidade de ataque e a capacidade de acumular Velocidade ao esquivar-se de ataques. Você gasta os acúmulos para se deslocar rapidamente e causar dano com base na sua velocidade de movimento atual. O dano adicional devido à velocidade de movimento se aplica apenas a partes não quebradas.",
                         "name": "Tempestade"
                     }
                 },
                 "title": "Dauntless Meta Builds - 1.10+"
             },
-            "note": "As compilações listadas aqui são automaticamente extraídas da <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>Planilha de Meta Builds da Comunidade</a>, Se você tiver comentários, por favor, passe-o para as pessoas no canal de discussão #meta-discussão no <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>servidor Discord oficial de Dauntless</a>!",
+            "note": "As builds listadas aqui são automaticamente extraídas da <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>Planilha de Builds Meta da Comunidade</a>. Se você tiver feedback, por favor, compartilhe-o no canal #meta-discussion no <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>servidor oficial do Discord do Dauntless</a>!",
             "subcategories": {
                 "The Hunger": "A Fome",
                 "heroics": "Heroicos",
@@ -238,49 +238,49 @@
             "title": "Criar uma nova Build"
         },
         "settings": {
-            "community-language": "Esta linguagem não é oficialmente suportada em Dauntless, mas membros de nossa comunidade decidiram adicionar uma tradução para o Construtor do Dauntless independente disso.",
+            "community-language": "Esta língua não é oficialmente suportada pelo Dauntless, mas membros de nossa comunidade decidiram adicionar uma tradução para o Dauntless Builder de qualquer forma.",
             "data": "Dados de Aplicação",
             "data-export": "Exportar",
             "data-import": "Importar",
-            "data-text": "Dauntless Builder está atualmente armazenando todos os dados dentro do seu navegador o que significa trocar de dispositivo ou navegadores não fará perpetuar nenhuma de suas Builds favoritas ou quaisquer outros dados. Futuramente, planejamos permitir algum tipo de sincronização de dados na nuvem, mas até lá você pode usar Importar/Exportar para backup de seus dados e/ou movê-lo entre dispositivos.",
+            "data-text": "O Dauntless Builder está atualmente armazenando todos os dados dentro do seu navegador, o que significa que trocar de dispositivos ou navegadores não manterá nenhuma de suas builds favoritas e/ou outros dados. No futuro, planejamos permitir algum tipo de sincronização de dados na nuvem, mas até lá, você pode usar a função de Importar/Exportar para fazer backup dos seus dados e/ou movê-los entre dispositivos.",
             "dev-mode-toggle": "Alternar para Modo de desenvolvedor",
             "enable-light-mode": "Ativar o Modo Claro (Use por sua conta e risco!)",
             "export-logs": "Exportar logs",
-            "finder-options": "Opções da busca de builds",
+            "finder-options": "Opções do Localizador de Builds",
             "general": "Geral",
             "language": "Idioma",
             "misc": "Outros",
             "title": "Configurações"
         },
         "trials": {
-            "description": "Builds meta para Provações, Não são compilações de caçada em geral.",
+            "description": "Builds meta para encontros nas Provações, essas não são builds gerais para caçadas.",
             "generated": {
                 "tips": {
                     "Boreus [*].0": "Você pode usar os Bombardeiros e o Ponto Fraco para atrasar a Carga Etérica do Boreus (Fase da armadura)",
                     "Charrogg.0": "O braço esquerdo do Charrogg não o atingirá se você estiver perto de seu pescoço.",
-                    "Charrogg.1": "As partes mais fracas do Charrogg são as Fornalhas (1 em cada lado da cabeça, 1 em cada lado da barriga).",
+                    "Charrogg.1": "As partes mais vulneráveis de Charrogg são os sacos de fogo (um de cada lado da cabeça e um de cada lado da barriga).",
                     "Embermane.0": "Use um Embermane para se proteger das orbes dos pilões elétricos.",
-                    "Gnasher.0": "Você pode provocar a interrupção de Gnasher se aproximando dele assim que o encontrar. O reinicia após ele se enfurecer.",
+                    "Gnasher.0": "Você pode provocar a interrupção do Gnasher se aproximando dele no início da luta. O tempo de recarga é resetado durante a fúria.",
                     "Kharabak.0": "Não seja atingido pelas abelhas.",
                     "Kharabak.1": "*Para armas com foco em feridas, utilize o Elixir Mãos Precisas ao invés de Drive Etérico",
-                    "Koshai.0": "Você pode provocar o interruptor frontal na interrupção virada em ciclo.",
-                    "Koshai.1": "Como todos os Behemoths, o temporizador de enfurecer do Koshai reinicia na interrupção, posicione-se para provocá-lo logo após o término da animação.",
-                    "Koshai.2": "Koshai cresce suas galhadas em cerca de 1 minuto, esteja preparado para a janela de dano que seguirá.",
-                    "Pangar.0": "A rolagem de interrupção do Pangar é muito fácil de se provocar (Ele faz isso duas vezes em seguida, apenas) e o tempo de espera é reiniciado ao se enfurecer.",
+                    "Koshai.0": "Você pode provocar a interrupção frontal para a interrupção de virada em um loop.",
+                    "Koshai.1": "Como todos os Behemoths, a fúria do Koshai reinicia o temporizador da interrupção; posicione-se para provocá-lo logo após o término da animação.",
+                    "Koshai.2": "Koshai cresce suas galhadas por volta de 1 minuto, esteja preparado para a janela de dano que aparece.",
+                    "Pangar.0": "A rotação do Pangar que pode ser interrompida é muito fácil de provocar (ela ocorre duas vezes seguidas), e o tempo de recarga é resetado ao se enfurecer.",
                     "Pangar.1": "A rolagem de interrupção do Pangar atualmente está bugada e não causa nenhum dano até a parte final, então a use para obter interrupções fáceis.",
                     "Quillshot.0": "Você pode construir um escudo de Skarn/Frostwülf na plataforma.",
                     "Rezakiri.0": "Certifique-se de usar o Estado Aparição entre 500 e 600 de Vida para manter ativo o efeito único da arma do Shrowd.",
-                    "Shadowtouched Koshai.0": "Você pode provocar a interrupção de saída com muita facilidade, e voltar a interromper depois, como o Koshai normal.",
-                    "Shadowtouched Koshai.1": "A segunda vez que Koshai Tocado pelas Sombras entra no chão, ele gera o mais longe possível em algum lugar na arena e atira orbes sombrias em você, enquanto faz isso ele é extremamente vulnerável a danos.",
-                    "Shadowtouched Nayzaga.0": "Assim como o Nayzaga normal, o Nayzaga Tocado Pelas Sombras começa a luta com seu deslize duplo.",
-                    "Shadowtouched Nayzaga.1": "O pisão que chama o clone do Nayzaga Tocado pelas Sombras não causa dano, apenas o clone causa.",
-                    "Shadowtouched Nayzaga.2": "Assim que ele entra no portal, prepare-se para a interrupção a seguir.",
+                    "Shadowtouched Koshai.0": "Você pode facilmente provocar a interrupção no início e a interrupção de virada depois, assim como no Koshai normal.",
+                    "Shadowtouched Koshai.1": "A segunda vez que o Koshai Tocado pela Sombra entra no chão, ele surge o mais longe possível em algum lugar na arena e dispara orbes umbral em você, durante esse tempo ele é extremamente vulnerável a danos.",
+                    "Shadowtouched Nayzaga.0": "Assim como o Nayzaga normal, o Nayzaga Tocado pela Sombra inicia a luta com sua interrupção de deslize duplo.",
+                    "Shadowtouched Nayzaga.1": "O pisoteio de invocação de clones do Nayzaga não causa dano, apenas o clone causa.",
+                    "Shadowtouched Nayzaga.2": "Depois que ele entra em seu portal, esteja pronto para a interrupção seguinte.",
                     "Shrike.0": "As partes mais fracas do Shrike são cabeça e asas.",
                     "Shrike.1": "Shrike pode ser derrubado instantaneamente após se enfurecer.",
-                    "Shrowd.0": "Você pode Aparar com Disciplina o enfurecimento, se você pular no Shrowd no momento em que ele se teleportar.",
-                    "Skarn.0": "Se não estiver usando armas de contusão(golpeadores, martelos) foque na cauda durante a fúria, a área de colisão tem uma grande falha lá.",
-                    "Skarn.1": "Diferente de outras armas nas Repetidoras prefira a ligação do Drask porque você vai querer atirar na cabeça durante toda a caçada.",
-                    "Thunderdeep Drask.0": "Esse menino corre muito."
+                    "Shrowd.0": "Você pode usar a apara de Disciplina no enfurecimento, se pular em direção ao Shrowd no momento em que ele teleporta.",
+                    "Skarn.0": "Se não estiver usando armas contundentes (golpeadoras, martelo), concentre-se na cauda durante a fúria, a hitbox da pedra tem uma grande falha lá.",
+                    "Skarn.1": "Ao contrário de outras armas, as Repetidoras preferem o vínculo com Drask porque você deseja estar atirando na cabeça durante toda a caçada.",
+                    "Thunderdeep Drask.0": "Ele é realmente rápido."
                 },
                 "title": "Builds das Provações do Dauntless - 1.10+"
             },
@@ -365,10 +365,10 @@
             "Terra": "Telúrico",
             "Umbral": "Umbral"
         },
-        "head-armour": "Armadura para Cabeça",
-        "hold": "Ao segurar",
+        "head-armour": "Armadura para a Cabeça",
+        "hold": "Segurar",
         "lantern": "Lanterna",
-        "legs-armour": "Armadura das Pernas",
+        "legs-armour": "Armadura para as Pernas",
         "omnicell": "Omnicélula",
         "part": "Parte",
         "parts": {
@@ -383,9 +383,9 @@
         "resistance": "Resistência",
         "save": "Salvar",
         "search": "Buscar",
-        "torso-armour": "Armadura do Tronco",
+        "torso-armour": "Armadura para o Tronco",
         "unique-effect": "Efeito Único",
-        "unselect": "Desselecionar",
+        "unselect": "Selecionar Nada",
         "weapon": "Arma",
         "weapon-type": "Tipo de Arma",
         "weapon-types": {
