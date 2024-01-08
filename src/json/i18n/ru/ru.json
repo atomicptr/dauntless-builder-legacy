@@ -27,7 +27,7 @@
         "item-select-dialog": {
             "select-text": "Выбрать «{{name}}»"
         },
-        "recommended": "This item is verified as being great please use it."
+        "recommended": "Этот предмет верифицирован как отличный, пожалуйста, используйте его."
     },
     "drawer": {
         "about": "$t(pages.about.title)",
@@ -45,7 +45,7 @@
         "discord-server": "Discord сервер конструктора Dauntless",
         "github-repository": "Хранилище Github",
         "patch-url": "https://playdauntless.com/patch-notes/{{version}}",
-        "something-went-wrong": "Something went wrong! Please send the error log below to me in our Discord and try to reload the website. Thank you very much!",
+        "something-went-wrong": "Что-то пошло не так! Пожалуйста, отправьте мне журнал ошибок ниже в нашем Discord и попробуйте перезагрузить веб-сайт. Спасибо!",
         "x-twitter": "Dauntless Builder on X.com"
     },
     "pages": {
