@@ -15,5 +15,5 @@ passive_values:
   shieldTime: 25
   maxShields: 500
 active_values:
-  percentShieldDamage: 175
-  damageCooldown: 30
+  percentShieldDamage: 200
+  damageCooldown: 20
