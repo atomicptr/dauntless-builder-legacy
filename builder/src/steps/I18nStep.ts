@@ -223,7 +223,7 @@ export class I18nStep extends WithStepLogger implements Step {
                                     effect.description[index] === null
                                         ? null
                                         : firstEffectKey.toString() === key.toString() &&
-                                          firstIndex.toString() === index.toString()
+                                            firstIndex.toString() === index.toString()
                                             ? effect.description[index]
                                             : `$t(${createItemTranslationIdentifier(
                                                 category,

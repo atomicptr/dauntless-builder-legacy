@@ -8,7 +8,6 @@ import {
     Grid,
     IconButton,
     InputAdornment,
-    LinearProgress,
     OutlinedInput,
     Stack,
     Tooltip,
@@ -96,8 +95,6 @@ const FinderPerkPicker: React.FC<FinderPerkPickerProps> = ({ disabled, canAddPer
                     {t("pages.build-finder.clear-perks")}
                 </Button>
             </Stack>
-
-            {disabled ? <LinearProgress /> : null}
 
             <OutlinedInput
                 endAdornment={

@@ -1,7 +1,7 @@
 [
     {
         "license": "MIT",
-        "name": "@babel/code-frame@7.22.13",
+        "name": "@babel/code-frame@7.23.5",
         "repository": "https://github.com/babel/babel"
     },
     {
@@ -11,7 +11,7 @@
     },
     {
         "license": "MIT",
-        "name": "@babel/helper-string-parser@7.22.5",
+        "name": "@babel/helper-string-parser@7.23.4",
         "repository": "https://github.com/babel/babel"
     },
     {
@@ -21,17 +21,17 @@
     },
     {
         "license": "MIT",
-        "name": "@babel/highlight@7.22.20",
+        "name": "@babel/highlight@7.23.4",
         "repository": "https://github.com/babel/babel"
     },
     {
         "license": "MIT",
-        "name": "@babel/runtime@7.23.1",
+        "name": "@babel/runtime@7.23.5",
         "repository": "https://github.com/babel/babel"
     },
     {
         "license": "MIT",
-        "name": "@babel/types@7.23.0",
+        "name": "@babel/types@7.23.5",
         "repository": "https://github.com/babel/babel"
     },
     {
@@ -101,12 +101,7 @@
     },
     {
         "license": "MIT",
-        "name": "@esbuild/linux-x64@0.18.20",
-        "repository": "https://github.com/evanw/esbuild"
-    },
-    {
-        "license": "MIT",
-        "name": "@floating-ui/core@1.5.0",
+        "name": "@floating-ui/core@1.5.1",
         "repository": "https://github.com/floating-ui/floating-ui"
     },
     {
@@ -116,7 +111,7 @@
     },
     {
         "license": "MIT",
-        "name": "@floating-ui/react-dom@2.0.2",
+        "name": "@floating-ui/react-dom@2.0.4",
         "repository": "https://github.com/floating-ui/floating-ui"
     },
     {
@@ -126,207 +121,47 @@
     },
     {
         "license": "MIT",
-        "name": "@jimp/bmp@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/core@0.16.13",
-        "repository": "https://github.com/jimp-dev/jimp"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/custom@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/gif@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/jpeg@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-blit@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-blur@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-circle@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-color@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-contain@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-cover@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-crop@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-displace@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-dither@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-fisheye@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-flip@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-gaussian@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-invert@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-mask@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-normalize@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-print@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-resize@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-rotate@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-scale@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-shadow@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugin-threshold@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/plugins@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/png@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/tiff@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/types@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jimp/utils@0.16.13"
-    },
-    {
-        "license": "MIT",
-        "name": "@jridgewell/gen-mapping@0.3.3",
-        "repository": "https://github.com/jridgewell/gen-mapping"
-    },
-    {
-        "license": "MIT",
-        "name": "@jridgewell/resolve-uri@3.1.0",
-        "repository": "https://github.com/jridgewell/resolve-uri"
-    },
-    {
-        "license": "MIT",
-        "name": "@jridgewell/set-array@1.1.2",
-        "repository": "https://github.com/jridgewell/set-array"
-    },
-    {
-        "license": "MIT",
-        "name": "@jridgewell/source-map@0.3.3",
-        "repository": "https://github.com/jridgewell/source-map"
-    },
-    {
-        "license": "MIT",
-        "name": "@jridgewell/sourcemap-codec@1.4.14",
-        "repository": "https://github.com/jridgewell/sourcemap-codec"
-    },
-    {
-        "license": "MIT",
-        "name": "@jridgewell/sourcemap-codec@1.4.15",
-        "repository": "https://github.com/jridgewell/sourcemap-codec"
-    },
-    {
-        "license": "MIT",
-        "name": "@jridgewell/trace-mapping@0.3.18",
-        "repository": "https://github.com/jridgewell/trace-mapping"
-    },
-    {
-        "license": "MIT",
-        "name": "@mui/base@5.0.0-beta.18",
+        "name": "@mui/base@5.0.0-beta.25",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/core-downloads-tracker@5.14.12",
+        "name": "@mui/core-downloads-tracker@5.14.19",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/icons-material@5.14.12",
+        "name": "@mui/icons-material@5.14.19",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/material@5.14.12",
+        "name": "@mui/material@5.14.19",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/private-theming@5.14.12",
+        "name": "@mui/private-theming@5.14.19",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/styled-engine@5.14.12",
+        "name": "@mui/styled-engine@5.14.19",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/system@5.14.12",
+        "name": "@mui/system@5.14.19",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/types@7.2.5",
+        "name": "@mui/types@7.2.10",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/utils@5.14.12",
+        "name": "@mui/utils@5.14.19",
         "repository": "https://github.com/mui/material-ui"
     },
     {
@@ -336,33 +171,18 @@
     },
     {
         "license": "MIT",
-        "name": "@reduxjs/toolkit@1.9.7",
-        "repository": "https://github.com/reduxjs/redux-toolkit"
-    },
-    {
-        "license": "MIT",
-        "name": "@remix-run/router@1.9.0",
+        "name": "@remix-run/router@1.13.1",
         "repository": "https://github.com/remix-run/react-router"
     },
     {
         "license": "MIT",
-        "name": "@tokenizer/token@0.3.0",
-        "repository": "https://github.com/Borewit/tokenizer-token"
+        "name": "@tanstack/query-core@5.12.1",
+        "repository": "https://github.com/TanStack/query"
     },
     {
         "license": "MIT",
-        "name": "@types/hoist-non-react-statics@3.3.1",
-        "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
-    },
-    {
-        "license": "MIT",
-        "name": "@types/node@16.9.1",
-        "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
-    },
-    {
-        "license": "MIT",
-        "name": "@types/node@20.8.4",
-        "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+        "name": "@tanstack/react-query@5.12.2",
+        "repository": "https://github.com/TanStack/query"
     },
     {
         "license": "MIT",
@@ -371,22 +191,17 @@
     },
     {
         "license": "MIT",
-        "name": "@types/prop-types@15.7.8",
+        "name": "@types/prop-types@15.7.11",
         "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
     },
     {
         "license": "MIT",
-        "name": "@types/react-dom@18.2.12",
+        "name": "@types/react-transition-group@4.4.9",
         "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
     },
     {
         "license": "MIT",
-        "name": "@types/react-transition-group@4.4.6",
-        "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
-    },
-    {
-        "license": "MIT",
-        "name": "@types/react@18.2.27",
+        "name": "@types/react@18.2.41",
         "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
     },
     {
@@ -396,83 +211,8 @@
     },
     {
         "license": "MIT",
-        "name": "@types/use-sync-external-store@0.0.3",
-        "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
-    },
-    {
-        "license": "MIT",
-        "name": "acorn@8.10.0",
-        "repository": "https://github.com/acornjs/acorn"
-    },
-    {
-        "license": "MIT",
-        "name": "ajv@6.12.6",
-        "repository": "https://github.com/ajv-validator/ajv"
-    },
-    {
-        "license": "MIT",
-        "name": "ansi-regex@2.1.1",
-        "repository": "https://github.com/chalk/ansi-regex"
-    },
-    {
-        "license": "MIT",
-        "name": "ansi-regex@5.0.1",
-        "repository": "https://github.com/chalk/ansi-regex"
-    },
-    {
-        "license": "MIT",
         "name": "ansi-styles@3.2.1",
         "repository": "https://github.com/chalk/ansi-styles"
-    },
-    {
-        "license": "MIT",
-        "name": "any-base@1.1.0",
-        "repository": "https://github.com/HarasimowiczKamil/any-base"
-    },
-    {
-        "license": "ISC",
-        "name": "aproba@1.2.0",
-        "repository": "https://github.com/iarna/aproba"
-    },
-    {
-        "license": "ISC",
-        "name": "are-we-there-yet@1.1.7",
-        "repository": "https://github.com/iarna/are-we-there-yet"
-    },
-    {
-        "license": "MIT",
-        "name": "arrify@1.0.1",
-        "repository": "https://github.com/sindresorhus/arrify"
-    },
-    {
-        "license": "MIT",
-        "name": "asn1@0.2.6",
-        "repository": "https://github.com/joyent/node-asn1"
-    },
-    {
-        "license": "MIT",
-        "name": "assert-plus@1.0.0",
-        "repository": "https://github.com/mcavage/node-assert-plus"
-    },
-    {
-        "license": "MIT",
-        "name": "asynckit@0.4.0",
-        "repository": "https://github.com/alexindigo/asynckit"
-    },
-    {
-        "license": "MIT",
-        "name": "author-regex@1.0.0",
-        "repository": "https://github.com/jonschlinkert/author-regex"
-    },
-    {
-        "license": "Apache-2.0",
-        "name": "aws-sign2@0.7.0",
-        "repository": "https://github.com/mikeal/aws-sign"
-    },
-    {
-        "license": "MIT",
-        "name": "aws4@1.12.0",
-        "repository": "https://github.com/mhart/aws4"
     },
     {
         "license": "MIT",
@@ -481,78 +221,8 @@
     },
     {
         "license": "MIT",
-        "name": "base64-js@1.5.1",
-        "repository": "https://github.com/beatgammit/base64-js"
-    },
-    {
-        "license": "BSD-3-Clause",
-        "name": "bcrypt-pbkdf@1.0.2",
-        "repository": "https://github.com/joyent/node-bcrypt-pbkdf"
-    },
-    {
-        "license": "MIT",
-        "name": "bignumber.js@2.4.0",
-        "repository": "https://github.com/MikeMcl/bignumber.js"
-    },
-    {
-        "license": "MIT",
-        "name": "bl@4.1.0",
-        "repository": "https://github.com/rvagg/bl"
-    },
-    {
-        "license": "MIT",
-        "name": "bmp-js@0.0.1",
-        "repository": "https://github.com/shaozilee/bmp-js"
-    },
-    {
-        "license": "MIT",
-        "name": "bmp-js@0.0.3",
-        "repository": "https://github.com/shaozilee/bmp-js"
-    },
-    {
-        "license": "MIT",
-        "name": "bmp-js@0.1.0",
-        "repository": "https://github.com/shaozilee/bmp-js"
-    },
-    {
-        "license": "MIT",
-        "name": "buffer-alloc-unsafe@1.1.0",
-        "repository": "https://github.com/LinusU/buffer-alloc-unsafe"
-    },
-    {
-        "license": "MIT",
-        "name": "buffer-alloc@1.2.0",
-        "repository": "https://github.com/LinusU/buffer-alloc"
-    },
-    {
-        "license": "MIT",
-        "name": "buffer-equal@0.0.1",
-        "repository": "https://github.com/substack/node-buffer-equal"
-    },
-    {
-        "license": "MIT",
-        "name": "buffer-fill@1.0.0",
-        "repository": "https://github.com/LinusU/buffer-fill"
-    },
-    {
-        "license": "MIT",
-        "name": "buffer-from@1.1.2",
-        "repository": "https://github.com/LinusU/buffer-from"
-    },
-    {
-        "license": "MIT",
-        "name": "buffer@5.7.1",
-        "repository": "https://github.com/feross/buffer"
-    },
-    {
-        "license": "MIT",
         "name": "callsites@3.1.0",
         "repository": "https://github.com/sindresorhus/callsites"
-    },
-    {
-        "license": "Apache-2.0",
-        "name": "caseless@0.12.0",
-        "repository": "https://github.com/mikeal/caseless"
     },
     {
         "license": "MIT",
@@ -563,31 +233,6 @@
         "license": "BSD-3-Clause",
         "name": "charenc@0.0.2",
         "repository": "https://github.com/pvorb/node-charenc"
-    },
-    {
-        "license": "ISC",
-        "name": "chownr@1.1.4",
-        "repository": "https://github.com/isaacs/chownr"
-    },
-    {
-        "license": "MIT",
-        "name": "clone-buffer@1.0.0",
-        "repository": "https://github.com/gulpjs/clone-buffer"
-    },
-    {
-        "license": "MIT",
-        "name": "clone-stats@1.0.0",
-        "repository": "https://github.com/hughsk/clone-stats"
-    },
-    {
-        "license": "MIT",
-        "name": "clone@2.1.2",
-        "repository": "https://github.com/pvorb/node-clone"
-    },
-    {
-        "license": "MIT",
-        "name": "cloneable-readable@1.1.3",
-        "repository": "https://github.com/mcollina/cloneable-readable"
     },
     {
         "license": "MIT",
@@ -601,11 +246,6 @@
     },
     {
         "license": "MIT",
-        "name": "code-point-at@1.1.0",
-        "repository": "https://github.com/sindresorhus/code-point-at"
-    },
-    {
-        "license": "MIT",
         "name": "color-convert@1.9.3",
         "repository": "https://github.com/Qix-/color-convert"
     },
@@ -616,53 +256,8 @@
     },
     {
         "license": "MIT",
-        "name": "color-name@1.1.4",
-        "repository": "https://github.com/colorjs/color-name"
-    },
-    {
-        "license": "MIT",
-        "name": "color-string@1.9.1",
-        "repository": "https://github.com/Qix-/color-string"
-    },
-    {
-        "license": "MIT",
-        "name": "color@3.2.1",
-        "repository": "https://github.com/Qix-/color"
-    },
-    {
-        "license": "MIT",
-        "name": "colors@1.4.0",
-        "repository": "https://github.com/Marak/colors.js"
-    },
-    {
-        "license": "MIT",
-        "name": "combined-stream@1.0.8",
-        "repository": "https://github.com/felixge/node-combined-stream"
-    },
-    {
-        "license": "MIT",
-        "name": "commander@2.20.3",
-        "repository": "https://github.com/tj/commander.js"
-    },
-    {
-        "license": "ISC",
-        "name": "console-control-strings@1.1.0",
-        "repository": "https://github.com/iarna/console-control-strings"
-    },
-    {
-        "license": "MIT",
         "name": "convert-source-map@1.9.0",
         "repository": "https://github.com/thlorenz/convert-source-map"
-    },
-    {
-        "license": "MIT",
-        "name": "core-util-is@1.0.2",
-        "repository": "https://github.com/isaacs/core-util-is"
-    },
-    {
-        "license": "MIT",
-        "name": "core-util-is@1.0.3",
-        "repository": "https://github.com/isaacs/core-util-is"
     },
     {
         "license": "MIT",
@@ -675,39 +270,14 @@
         "repository": "https://github.com/pvorb/node-crypt"
     },
     {
+        "license": "Apache-2.0",
+        "name": "cssjanus@2.1.0",
+        "repository": "https://github.com/cssjanus/cssjanus"
+    },
+    {
         "license": "MIT",
         "name": "csstype@3.1.2",
         "repository": "https://github.com/frenic/csstype"
-    },
-    {
-        "license": "MIT",
-        "name": "dashdash@1.14.1",
-        "repository": "https://github.com/trentm/node-dashdash"
-    },
-    {
-        "license": "MIT",
-        "name": "decompress-response@4.2.1",
-        "repository": "https://github.com/sindresorhus/decompress-response"
-    },
-    {
-        "license": "MIT",
-        "name": "deep-extend@0.6.0",
-        "repository": "https://github.com/unclechu/node-deep-extend"
-    },
-    {
-        "license": "MIT",
-        "name": "delayed-stream@1.0.0",
-        "repository": "https://github.com/felixge/node-delayed-stream"
-    },
-    {
-        "license": "MIT",
-        "name": "delegates@1.0.0",
-        "repository": "https://github.com/visionmedia/node-delegates"
-    },
-    {
-        "license": "Apache-2.0",
-        "name": "detect-libc@1.0.3",
-        "repository": "https://github.com/lovell/detect-libc"
     },
     {
         "license": "MIT",
@@ -716,38 +286,8 @@
     },
     {
         "license": "MIT",
-        "name": "dom-walk@0.1.2",
-        "repository": "https://github.com/Raynos/dom-walk"
-    },
-    {
-        "license": "MIT",
-        "name": "ecc-jsbn@0.1.2",
-        "repository": "https://github.com/quartzjer/ecc-jsbn"
-    },
-    {
-        "license": "MIT",
-        "name": "emoji-regex@8.0.0",
-        "repository": "https://github.com/mathiasbynens/emoji-regex"
-    },
-    {
-        "license": "MIT",
-        "name": "end-of-stream@1.4.4",
-        "repository": "https://github.com/mafintosh/end-of-stream"
-    },
-    {
-        "license": "MIT",
         "name": "error-ex@1.3.2",
         "repository": "https://github.com/qix-/node-error-ex"
-    },
-    {
-        "license": "MIT",
-        "name": "es6-promise@3.3.1",
-        "repository": "https://github.com/stefanpenner/es6-promise"
-    },
-    {
-        "license": "MIT",
-        "name": "esbuild@0.18.20",
-        "repository": "https://github.com/evanw/esbuild"
     },
     {
         "license": "MIT",
@@ -760,74 +300,9 @@
         "repository": "https://github.com/sindresorhus/escape-string-regexp"
     },
     {
-        "license": "MIT*",
-        "name": "exif-parser@0.1.12",
-        "repository": "https://github.com/bwindels/exif-parser"
-    },
-    {
-        "license": "(MIT OR WTFPL)",
-        "name": "expand-template@2.0.3",
-        "repository": "https://github.com/ralphtheninja/expand-template"
-    },
-    {
-        "license": "MIT",
-        "name": "extend@3.0.2",
-        "repository": "https://github.com/justmoon/node-extend"
-    },
-    {
-        "license": "MIT",
-        "name": "extsprintf@1.3.0",
-        "repository": "https://github.com/davepacheco/node-extsprintf"
-    },
-    {
-        "license": "MIT",
-        "name": "extsprintf@1.4.1",
-        "repository": "https://github.com/davepacheco/node-extsprintf"
-    },
-    {
-        "license": "MIT",
-        "name": "fast-deep-equal@3.1.3",
-        "repository": "https://github.com/epoberezkin/fast-deep-equal"
-    },
-    {
-        "license": "MIT",
-        "name": "fast-json-stable-stringify@2.1.0",
-        "repository": "https://github.com/epoberezkin/fast-json-stable-stringify"
-    },
-    {
-        "license": "MIT",
-        "name": "favicons@6.2.2",
-        "repository": "https://github.com/itgalaxy/favicons"
-    },
-    {
-        "license": "MIT",
-        "name": "file-type@16.5.4",
-        "repository": "https://github.com/sindresorhus/file-type"
-    },
-    {
-        "license": "MIT",
-        "name": "file-type@3.9.0",
-        "repository": "https://github.com/sindresorhus/file-type"
-    },
-    {
         "license": "MIT",
         "name": "find-root@1.1.0",
         "repository": "https://github.com/js-n/find-root"
-    },
-    {
-        "license": "Apache-2.0",
-        "name": "forever-agent@0.6.1",
-        "repository": "https://github.com/mikeal/forever-agent"
-    },
-    {
-        "license": "MIT",
-        "name": "form-data@2.3.3",
-        "repository": "https://github.com/form-data/form-data"
-    },
-    {
-        "license": "MIT",
-        "name": "fs-constants@1.0.0",
-        "repository": "https://github.com/mafintosh/fs-constants"
     },
     {
         "license": "MIT",
@@ -835,59 +310,14 @@
         "repository": "https://github.com/Raynos/function-bind"
     },
     {
-        "license": "ISC",
-        "name": "gauge@2.7.4",
-        "repository": "https://github.com/iarna/gauge"
-    },
-    {
-        "license": "MIT",
-        "name": "get-stream@2.3.1",
-        "repository": "https://github.com/sindresorhus/get-stream"
-    },
-    {
-        "license": "MIT",
-        "name": "getpass@0.1.7",
-        "repository": "https://github.com/arekinath/node-getpass"
-    },
-    {
-        "license": "MIT",
-        "name": "gifwrap@0.9.4",
-        "repository": "https://github.com/jtlapp/gifwrap"
-    },
-    {
-        "license": "MIT",
-        "name": "github-from-package@0.0.0",
-        "repository": "https://github.com/substack/github-from-package"
-    },
-    {
-        "license": "MIT",
-        "name": "global@4.4.0",
-        "repository": "https://github.com/Raynos/global"
-    },
-    {
         "license": "MIT",
         "name": "goober@2.1.13",
         "repository": "https://github.com/cristianbote/goober"
     },
     {
-        "license": "ISC",
-        "name": "har-schema@2.0.0",
-        "repository": "https://github.com/ahmadnassri/har-schema"
-    },
-    {
-        "license": "MIT",
-        "name": "har-validator@5.1.5",
-        "repository": "https://github.com/ahmadnassri/node-har-validator"
-    },
-    {
         "license": "MIT",
         "name": "has-flag@3.0.0",
         "repository": "https://github.com/sindresorhus/has-flag"
-    },
-    {
-        "license": "ISC",
-        "name": "has-unicode@2.0.1",
-        "repository": "https://github.com/iarna/has-unicode"
     },
     {
         "license": "MIT",
@@ -911,17 +341,12 @@
     },
     {
         "license": "MIT",
-        "name": "http-signature@1.2.0",
-        "repository": "https://github.com/joyent/node-http-signature"
-    },
-    {
-        "license": "MIT",
-        "name": "i18next-browser-languagedetector@7.1.0",
+        "name": "i18next-browser-languagedetector@7.2.0",
         "repository": "https://github.com/i18next/i18next-browser-languageDetector"
     },
     {
         "license": "MIT",
-        "name": "i18next-resources-to-backend@1.1.4",
+        "name": "i18next-resources-to-backend@1.2.0",
         "repository": "https://github.com/i18next/i18next-resources-to-backend"
     },
     {
@@ -930,58 +355,13 @@
         "repository": "https://github.com/i18next/i18next"
     },
     {
-        "license": "BSD-3-Clause",
-        "name": "ieee754@1.2.1",
-        "repository": "https://github.com/feross/ieee754"
-    },
-    {
-        "license": "MIT",
-        "name": "image-q@4.0.0",
-        "repository": "https://github.com/ibezkrovnyi/image-quantization"
-    },
-    {
-        "license": "MIT",
-        "name": "image-size@0.5.5",
-        "repository": "https://github.com/image-size/image-size"
-    },
-    {
-        "license": "MIT",
-        "name": "image-size@0.8.3",
-        "repository": "https://github.com/image-size/image-size"
-    },
-    {
-        "license": "MIT",
-        "name": "immer@9.0.21",
-        "repository": "https://github.com/immerjs/immer"
-    },
-    {
         "license": "MIT",
         "name": "import-fresh@3.3.0",
         "repository": "https://github.com/sindresorhus/import-fresh"
     },
     {
-        "license": "ISC",
-        "name": "inherits@2.0.4",
-        "repository": "https://github.com/isaacs/inherits"
-    },
-    {
-        "license": "ISC",
-        "name": "ini@1.3.8",
-        "repository": "https://github.com/isaacs/ini"
-    },
-    {
-        "license": "MIT",
-        "name": "ip-regex@1.0.3",
-        "repository": "https://github.com/sindresorhus/ip-regex"
-    },
-    {
         "license": "MIT",
         "name": "is-arrayish@0.2.1",
-        "repository": "https://github.com/qix-/node-is-arrayish"
-    },
-    {
-        "license": "MIT",
-        "name": "is-arrayish@0.3.2",
         "repository": "https://github.com/qix-/node-is-arrayish"
     },
     {
@@ -996,58 +376,8 @@
     },
     {
         "license": "MIT",
-        "name": "is-fullwidth-code-point@1.0.0",
-        "repository": "https://github.com/sindresorhus/is-fullwidth-code-point"
-    },
-    {
-        "license": "MIT",
-        "name": "is-fullwidth-code-point@3.0.0",
-        "repository": "https://github.com/sindresorhus/is-fullwidth-code-point"
-    },
-    {
-        "license": "MIT",
-        "name": "is-function@1.0.2",
-        "repository": "https://github.com/grncdr/js-is-function"
-    },
-    {
-        "license": "MIT",
-        "name": "is-typedarray@1.0.0",
-        "repository": "https://github.com/hughsk/is-typedarray"
-    },
-    {
-        "license": "MIT",
-        "name": "isarray@1.0.0",
-        "repository": "https://github.com/juliangruber/isarray"
-    },
-    {
-        "license": "MIT",
-        "name": "isstream@0.1.2",
-        "repository": "https://github.com/rvagg/isstream"
-    },
-    {
-        "license": "MIT",
-        "name": "jimp@0.16.13",
-        "repository": "https://github.com/jimp-dev/jimp"
-    },
-    {
-        "license": "MIT",
-        "name": "jimp@0.2.28",
-        "repository": "https://github.com/oliver-moran/jimp"
-    },
-    {
-        "license": "BSD-3-Clause",
-        "name": "jpeg-js@0.1.2",
-        "repository": "https://github.com/eugeneware/jpeg-js"
-    },
-    {
-        "license": "BSD-3-Clause",
-        "name": "jpeg-js@0.2.0",
-        "repository": "https://github.com/eugeneware/jpeg-js"
-    },
-    {
-        "license": "BSD-3-Clause",
-        "name": "jpeg-js@0.4.4",
-        "repository": "https://github.com/eugeneware/jpeg-js"
+        "name": "jotai@2.6.0",
+        "repository": "https://github.com/pmndrs/jotai"
     },
     {
         "license": "MIT",
@@ -1056,38 +386,13 @@
     },
     {
         "license": "MIT",
-        "name": "jsbn@0.1.1",
-        "repository": "https://github.com/andyperlitch/jsbn"
-    },
-    {
-        "license": "MIT",
         "name": "json-parse-even-better-errors@2.3.1",
         "repository": "https://github.com/npm/json-parse-even-better-errors"
     },
     {
         "license": "MIT",
-        "name": "json-schema-traverse@0.4.1",
-        "repository": "https://github.com/epoberezkin/json-schema-traverse"
-    },
-    {
-        "license": "(AFL-2.1 OR BSD-3-Clause)",
-        "name": "json-schema@0.4.0",
-        "repository": "https://github.com/kriszyp/json-schema"
-    },
-    {
-        "license": "ISC",
-        "name": "json-stringify-safe@5.0.1",
-        "repository": "https://github.com/isaacs/json-stringify-safe"
-    },
-    {
-        "license": "MIT",
-        "name": "jsontoxml@1.0.1",
-        "repository": "https://github.com/soldair/node-jsontoxml"
-    },
-    {
-        "license": "MIT",
-        "name": "jsprim@1.4.2",
-        "repository": "https://github.com/joyent/node-jsprim"
+        "name": "just-kebab-case@4.2.0",
+        "repository": "https://github.com/angus-c/just"
     },
     {
         "license": "MIT",
@@ -1096,17 +401,7 @@
     },
     {
         "license": "MIT",
-        "name": "load-bmfont@1.4.1",
-        "repository": "https://github.com/Jam3/load-bmfont"
-    },
-    {
-        "license": "MIT",
         "name": "lodash.debounce@4.0.8",
-        "repository": "https://github.com/lodash/lodash"
-    },
-    {
-        "license": "MIT",
-        "name": "lodash.defaultsdeep@4.6.1",
         "repository": "https://github.com/lodash/lodash"
     },
     {
@@ -1120,11 +415,6 @@
         "repository": "https://github.com/zertosh/loose-envify"
     },
     {
-        "license": "ISC",
-        "name": "lru-cache@6.0.0",
-        "repository": "https://github.com/isaacs/node-lru-cache"
-    },
-    {
         "license": "BSD-3-Clause",
         "name": "md5@2.3.0",
         "repository": "https://github.com/pvorb/node-md5"
@@ -1136,93 +426,8 @@
     },
     {
         "license": "MIT",
-        "name": "mime-db@1.52.0",
-        "repository": "https://github.com/jshttp/mime-db"
-    },
-    {
-        "license": "MIT",
-        "name": "mime-types@2.1.35",
-        "repository": "https://github.com/jshttp/mime-types"
-    },
-    {
-        "license": "MIT",
-        "name": "mime@1.6.0",
-        "repository": "https://github.com/broofa/node-mime"
-    },
-    {
-        "license": "MIT",
-        "name": "mimic-response@2.1.0",
-        "repository": "https://github.com/sindresorhus/mimic-response"
-    },
-    {
-        "license": "MIT",
-        "name": "min-document@2.19.0",
-        "repository": "https://github.com/Raynos/min-document"
-    },
-    {
-        "license": "MIT",
-        "name": "minimist@0.0.8",
-        "repository": "https://github.com/substack/minimist"
-    },
-    {
-        "license": "MIT",
-        "name": "minimist@1.2.8",
-        "repository": "https://github.com/minimistjs/minimist"
-    },
-    {
-        "license": "MIT",
-        "name": "mkdirp-classic@0.5.3",
-        "repository": "https://github.com/mafintosh/mkdirp-classic"
-    },
-    {
-        "license": "MIT",
-        "name": "mkdirp@0.5.1",
-        "repository": "https://github.com/substack/node-mkdirp"
-    },
-    {
-        "license": "MIT",
-        "name": "mkdirp@0.5.6",
-        "repository": "https://github.com/substack/node-mkdirp"
-    },
-    {
-        "license": "MIT",
-        "name": "nanoid@3.3.6",
-        "repository": "https://github.com/ai/nanoid"
-    },
-    {
-        "license": "MIT",
-        "name": "napi-build-utils@1.0.2",
-        "repository": "https://github.com/inspiredware/napi-build-utils"
-    },
-    {
-        "license": "MIT",
-        "name": "node-abi@2.30.1",
-        "repository": "https://github.com/lgeiger/node-abi"
-    },
-    {
-        "license": "MIT",
-        "name": "node-addon-api@3.2.1",
-        "repository": "https://github.com/nodejs/node-addon-api"
-    },
-    {
-        "license": "MIT",
         "name": "notistack@3.0.1",
         "repository": "https://github.com/iamhosseindhv/notistack"
-    },
-    {
-        "license": "ISC",
-        "name": "npmlog@4.1.2",
-        "repository": "https://github.com/npm/npmlog"
-    },
-    {
-        "license": "MIT",
-        "name": "number-is-nan@1.0.1",
-        "repository": "https://github.com/sindresorhus/number-is-nan"
-    },
-    {
-        "license": "Apache-2.0",
-        "name": "oauth-sign@0.9.0",
-        "repository": "https://github.com/mikeal/oauth-sign"
     },
     {
         "license": "MIT",
@@ -1231,63 +436,13 @@
     },
     {
         "license": "MIT",
-        "name": "omggif@1.0.10",
-        "repository": "https://github.com/deanm/omggif"
-    },
-    {
-        "license": "ISC",
-        "name": "once@1.4.0",
-        "repository": "https://github.com/isaacs/once"
-    },
-    {
-        "license": "(MIT AND Zlib)",
-        "name": "pako@1.0.11",
-        "repository": "https://github.com/nodeca/pako"
-    },
-    {
-        "license": "MIT",
         "name": "parent-module@1.0.1",
         "repository": "https://github.com/sindresorhus/parent-module"
     },
     {
         "license": "MIT",
-        "name": "parse-author@2.0.0",
-        "repository": "https://github.com/jonschlinkert/parse-author"
-    },
-    {
-        "license": "MIT",
-        "name": "parse-bmfont-ascii@1.0.6",
-        "repository": "https://github.com/mattdesl/parse-bmfont-ascii"
-    },
-    {
-        "license": "MIT",
-        "name": "parse-bmfont-binary@1.0.6",
-        "repository": "https://github.com/Jam3/parse-bmfont-binary"
-    },
-    {
-        "license": "MIT",
-        "name": "parse-bmfont-xml@1.1.4",
-        "repository": "https://github.com/mattdesl/parse-bmfont-xml"
-    },
-    {
-        "license": "MIT",
-        "name": "parse-headers@2.0.5",
-        "repository": "https://github.com/kesla/parse-headers"
-    },
-    {
-        "license": "MIT",
         "name": "parse-json@5.2.0",
         "repository": "https://github.com/sindresorhus/parse-json"
-    },
-    {
-        "license": "MIT",
-        "name": "parse-png@1.1.2",
-        "repository": "https://github.com/kevva/parse-png"
-    },
-    {
-        "license": "MIT",
-        "name": "parse5@6.0.1",
-        "repository": "https://github.com/inikulin/parse5"
     },
     {
         "license": "MIT",
@@ -1301,98 +456,8 @@
     },
     {
         "license": "MIT",
-        "name": "peek-readable@4.1.0",
-        "repository": "https://github.com/Borewit/peek-readable"
-    },
-    {
-        "license": "MIT",
-        "name": "performance-now@2.1.0",
-        "repository": "https://github.com/braveg1rl/performance-now"
-    },
-    {
-        "license": "MIT",
-        "name": "phin@2.9.3",
-        "repository": "https://github.com/ethanent/phin"
-    },
-    {
-        "license": "ISC",
-        "name": "picocolors@1.0.0",
-        "repository": "https://github.com/alexeyraspopov/picocolors"
-    },
-    {
-        "license": "MIT",
-        "name": "pinkie-promise@2.0.1",
-        "repository": "https://github.com/floatdrop/pinkie-promise"
-    },
-    {
-        "license": "MIT",
-        "name": "pinkie@2.0.4",
-        "repository": "https://github.com/floatdrop/pinkie"
-    },
-    {
-        "license": "ISC",
-        "name": "pixelmatch@4.0.2",
-        "repository": "https://github.com/mapbox/pixelmatch"
-    },
-    {
-        "license": "MIT",
-        "name": "pngjs@3.4.0",
-        "repository": "https://github.com/lukeapage/pngjs2"
-    },
-    {
-        "license": "MIT",
-        "name": "postcss@8.4.31",
-        "repository": "https://github.com/postcss/postcss"
-    },
-    {
-        "license": "MIT",
-        "name": "prebuild-install@6.1.4",
-        "repository": "https://github.com/prebuild/prebuild-install"
-    },
-    {
-        "license": "MIT",
-        "name": "process-nextick-args@2.0.1",
-        "repository": "https://github.com/calvinmetcalf/process-nextick-args"
-    },
-    {
-        "license": "MIT",
-        "name": "process@0.11.10",
-        "repository": "https://github.com/shtylman/node-process"
-    },
-    {
-        "license": "MIT",
         "name": "prop-types@15.8.1",
         "repository": "https://github.com/facebook/prop-types"
-    },
-    {
-        "license": "MIT",
-        "name": "psl@1.9.0",
-        "repository": "https://github.com/lupomontero/psl"
-    },
-    {
-        "license": "MIT",
-        "name": "pump@3.0.0",
-        "repository": "https://github.com/mafintosh/pump"
-    },
-    {
-        "license": "MIT",
-        "name": "punycode@2.3.0",
-        "repository": "https://github.com/mathiasbynens/punycode.js"
-    },
-    {
-        "license": "BSD-3-Clause",
-        "name": "qs@6.5.3",
-        "repository": "https://github.com/ljharb/qs"
-    },
-    {
-        "license": "MIT",
-        "name": "queue@6.0.1",
-        "repository": "https://github.com/jessetane/queue"
-    },
-    {
-        "license": "(BSD-2-Clause OR MIT OR Apache-2.0)",
-        "name": "rc@1.2.8",
-        "repository": "https://github.com/dominictarr/rc"
     },
     {
         "license": "MIT",
@@ -1402,6 +467,11 @@
         "license": "MIT",
         "name": "react-dom@18.2.0",
         "repository": "https://github.com/facebook/react"
+    },
+    {
+        "license": "MIT",
+        "name": "react-error-boundary@4.0.11",
+        "repository": "https://github.com/bvaughn/react-error-boundary"
     },
     {
         "license": "MIT",
@@ -1415,12 +485,12 @@
     },
     {
         "license": "MIT",
-        "name": "react-i18next@13.2.2",
+        "name": "react-i18next@13.5.0",
         "repository": "https://github.com/i18next/react-i18next"
     },
     {
         "license": "MIT",
-        "name": "react-icons@4.11.0",
+        "name": "react-icons@4.12.0",
         "repository": "https://github.com/react-icons/react-icons"
     },
     {
@@ -1440,17 +510,12 @@
     },
     {
         "license": "MIT",
-        "name": "react-redux@8.1.3",
-        "repository": "https://github.com/reduxjs/react-redux"
-    },
-    {
-        "license": "MIT",
-        "name": "react-router-dom@6.16.0",
+        "name": "react-router-dom@6.20.1",
         "repository": "https://github.com/remix-run/react-router"
     },
     {
         "license": "MIT",
-        "name": "react-router@6.16.0",
+        "name": "react-router@6.20.1",
         "repository": "https://github.com/remix-run/react-router"
     },
     {
@@ -1470,7 +535,7 @@
     },
     {
         "license": "MIT",
-        "name": "react-window@1.8.9",
+        "name": "react-window@1.8.10",
         "repository": "https://github.com/bvaughn/react-window"
     },
     {
@@ -1480,73 +545,8 @@
     },
     {
         "license": "MIT",
-        "name": "read-chunk@1.0.1",
-        "repository": "https://github.com/sindresorhus/read-chunk"
-    },
-    {
-        "license": "MIT",
-        "name": "readable-stream@2.3.8",
-        "repository": "https://github.com/nodejs/readable-stream"
-    },
-    {
-        "license": "MIT",
-        "name": "readable-stream@3.6.2",
-        "repository": "https://github.com/nodejs/readable-stream"
-    },
-    {
-        "license": "MIT",
-        "name": "readable-web-to-node-stream@3.0.2",
-        "repository": "https://github.com/Borewit/readable-web-to-node-stream"
-    },
-    {
-        "license": "MIT",
-        "name": "redux-thunk@2.4.2",
-        "repository": "https://github.com/reduxjs/redux-thunk"
-    },
-    {
-        "license": "MIT",
-        "name": "redux@4.2.1",
-        "repository": "https://github.com/reduxjs/redux"
-    },
-    {
-        "license": "MIT",
-        "name": "regenerator-runtime@0.13.11",
-        "repository": "https://github.com/facebook/regenerator/tree/main/packages/runtime"
-    },
-    {
-        "license": "MIT",
         "name": "regenerator-runtime@0.14.0",
         "repository": "https://github.com/facebook/regenerator/tree/main/packages/runtime"
-    },
-    {
-        "license": "ISC",
-        "name": "remove-trailing-separator@1.1.0",
-        "repository": "https://github.com/darsain/remove-trailing-separator"
-    },
-    {
-        "license": "MIT",
-        "name": "replace-ext@1.0.1",
-        "repository": "https://github.com/gulpjs/replace-ext"
-    },
-    {
-        "license": "Apache-2.0",
-        "name": "request@2.88.2",
-        "repository": "https://github.com/request/request"
-    },
-    {
-        "license": "MIT",
-        "name": "require-directory@2.1.1",
-        "repository": "https://github.com/troygoode/node-require-directory"
-    },
-    {
-        "license": "MIT",
-        "name": "reselect@4.1.8",
-        "repository": "https://github.com/reduxjs/reselect"
-    },
-    {
-        "license": "MIT",
-        "name": "resize-img@1.1.2",
-        "repository": "https://github.com/kevva/resize-img"
     },
     {
         "license": "MIT",
@@ -1560,83 +560,8 @@
     },
     {
         "license": "MIT",
-        "name": "rollup@3.29.4",
-        "repository": "https://github.com/rollup/rollup"
-    },
-    {
-        "license": "MIT",
-        "name": "safe-buffer@5.1.2",
-        "repository": "https://github.com/feross/safe-buffer"
-    },
-    {
-        "license": "MIT",
-        "name": "safe-buffer@5.2.1",
-        "repository": "https://github.com/feross/safe-buffer"
-    },
-    {
-        "license": "MIT",
-        "name": "safer-buffer@2.1.2",
-        "repository": "https://github.com/ChALkeR/safer-buffer"
-    },
-    {
-        "license": "ISC",
-        "name": "sax@1.2.4",
-        "repository": "https://github.com/isaacs/sax-js"
-    },
-    {
-        "license": "MIT",
         "name": "scheduler@0.23.0",
         "repository": "https://github.com/facebook/react"
-    },
-    {
-        "license": "ISC",
-        "name": "semver@5.7.2",
-        "repository": "https://github.com/npm/node-semver"
-    },
-    {
-        "license": "ISC",
-        "name": "semver@7.5.4",
-        "repository": "https://github.com/npm/node-semver"
-    },
-    {
-        "license": "ISC",
-        "name": "set-blocking@2.0.0",
-        "repository": "https://github.com/yargs/set-blocking"
-    },
-    {
-        "license": "Apache-2.0",
-        "name": "sharp@0.28.3",
-        "repository": "https://github.com/lovell/sharp"
-    },
-    {
-        "license": "ISC",
-        "name": "signal-exit@3.0.7",
-        "repository": "https://github.com/tapjs/signal-exit"
-    },
-    {
-        "license": "MIT",
-        "name": "simple-concat@1.0.1",
-        "repository": "https://github.com/feross/simple-concat"
-    },
-    {
-        "license": "MIT",
-        "name": "simple-get@3.1.1",
-        "repository": "https://github.com/feross/simple-get"
-    },
-    {
-        "license": "MIT",
-        "name": "simple-swizzle@0.2.2",
-        "repository": "https://github.com/qix-/node-simple-swizzle"
-    },
-    {
-        "license": "BSD-3-Clause",
-        "name": "source-map-js@1.0.2",
-        "repository": "https://github.com/7rulnik/source-map-js"
-    },
-    {
-        "license": "MIT",
-        "name": "source-map-support@0.5.21",
-        "repository": "https://github.com/evanw/node-source-map-support"
     },
     {
         "license": "BSD-3-Clause",
@@ -1644,68 +569,23 @@
         "repository": "https://github.com/mozilla/source-map"
     },
     {
-        "license": "BSD-3-Clause",
-        "name": "source-map@0.6.1",
-        "repository": "https://github.com/mozilla/source-map"
+        "license": "MIT",
+        "name": "sqids@0.3.0",
+        "repository": "https://github.com/sqids/sqids-javascript"
     },
     {
         "license": "MIT",
-        "name": "sshpk@1.17.0",
-        "repository": "https://github.com/joyent/node-sshpk"
-    },
-    {
-        "license": "MIT",
-        "name": "stream-to-buffer@0.1.0",
-        "repository": "https://github.com/jonathanong/stream-to-buffer"
-    },
-    {
-        "license": "MIT",
-        "name": "stream-to@0.2.2",
-        "repository": "https://github.com/stream-utils/stream-to"
-    },
-    {
-        "license": "MIT",
-        "name": "string_decoder@1.1.1",
-        "repository": "https://github.com/nodejs/string_decoder"
-    },
-    {
-        "license": "MIT",
-        "name": "string_decoder@1.3.0",
-        "repository": "https://github.com/nodejs/string_decoder"
-    },
-    {
-        "license": "MIT",
-        "name": "string-width@1.0.2",
-        "repository": "https://github.com/sindresorhus/string-width"
-    },
-    {
-        "license": "MIT",
-        "name": "string-width@4.2.3",
-        "repository": "https://github.com/sindresorhus/string-width"
-    },
-    {
-        "license": "MIT",
-        "name": "strip-ansi@3.0.1",
-        "repository": "https://github.com/chalk/strip-ansi"
-    },
-    {
-        "license": "MIT",
-        "name": "strip-ansi@6.0.1",
-        "repository": "https://github.com/chalk/strip-ansi"
-    },
-    {
-        "license": "MIT",
-        "name": "strip-json-comments@2.0.1",
-        "repository": "https://github.com/sindresorhus/strip-json-comments"
-    },
-    {
-        "license": "MIT",
-        "name": "strtok3@6.3.0",
-        "repository": "https://github.com/Borewit/strtok3"
+        "name": "stylis-plugin-rtl@2.1.1",
+        "repository": "https://github.com/styled-components/stylis-plugin-rtl"
     },
     {
         "license": "MIT",
         "name": "stylis@4.2.0",
+        "repository": "https://github.com/thysultan/stylis.js"
+    },
+    {
+        "license": "MIT",
+        "name": "stylis@4.3.0",
         "repository": "https://github.com/thysultan/stylis.js"
     },
     {
@@ -1720,53 +600,8 @@
     },
     {
         "license": "MIT",
-        "name": "tar-fs@2.1.1",
-        "repository": "https://github.com/mafintosh/tar-fs"
-    },
-    {
-        "license": "MIT",
-        "name": "tar-stream@2.2.0",
-        "repository": "https://github.com/mafintosh/tar-stream"
-    },
-    {
-        "license": "BSD-2-Clause",
-        "name": "terser@5.17.1",
-        "repository": "https://github.com/terser/terser"
-    },
-    {
-        "license": "MIT",
-        "name": "through2@4.0.2",
-        "repository": "https://github.com/rvagg/through2"
-    },
-    {
-        "license": "MIT",
-        "name": "timm@1.7.1",
-        "repository": "https://github.com/guigrpa/timm"
-    },
-    {
-        "license": "MIT",
-        "name": "tinycolor2@1.6.0",
-        "repository": "https://github.com/bgrins/TinyColor"
-    },
-    {
-        "license": "MIT",
         "name": "to-fast-properties@2.0.0",
         "repository": "https://github.com/sindresorhus/to-fast-properties"
-    },
-    {
-        "license": "MIT",
-        "name": "to-ico@1.1.5",
-        "repository": "https://github.com/kevva/to-ico"
-    },
-    {
-        "license": "MIT",
-        "name": "token-types@4.2.1",
-        "repository": "https://github.com/Borewit/token-types"
-    },
-    {
-        "license": "BSD-3-Clause",
-        "name": "tough-cookie@2.5.0",
-        "repository": "https://github.com/salesforce/tough-cookie"
     },
     {
         "license": "MIT",
@@ -1774,114 +609,9 @@
         "repository": "https://github.com/gvergnaud/ts-pattern"
     },
     {
-        "license": "Apache-2.0",
-        "name": "tunnel-agent@0.6.0",
-        "repository": "https://github.com/mikeal/tunnel-agent"
-    },
-    {
-        "license": "Unlicense",
-        "name": "tweetnacl@0.14.5",
-        "repository": "https://github.com/dchest/tweetnacl-js"
-    },
-    {
-        "license": "MIT",
-        "name": "undici-types@5.25.3",
-        "repository": "https://github.com/nodejs/undici"
-    },
-    {
-        "license": "BSD-2-Clause",
-        "name": "uri-js@4.4.1",
-        "repository": "https://github.com/garycourt/uri-js"
-    },
-    {
-        "license": "MIT",
-        "name": "url-regex@3.2.0",
-        "repository": "https://github.com/kevva/url-regex"
-    },
-    {
-        "license": "MIT",
-        "name": "use-sync-external-store@1.2.0",
-        "repository": "https://github.com/facebook/react"
-    },
-    {
-        "license": "MIT",
-        "name": "utif@2.0.1",
-        "repository": "https://github.com/photopea/UTIF.js"
-    },
-    {
-        "license": "MIT",
-        "name": "util-deprecate@1.0.2",
-        "repository": "https://github.com/TooTallNate/util-deprecate"
-    },
-    {
-        "license": "MIT",
-        "name": "uuid@3.4.0",
-        "repository": "https://github.com/uuidjs/uuid"
-    },
-    {
-        "license": "MIT",
-        "name": "verror@1.10.0",
-        "repository": "https://github.com/davepacheco/node-verror"
-    },
-    {
-        "license": "MIT",
-        "name": "vinyl@2.2.1",
-        "repository": "https://github.com/gulpjs/vinyl"
-    },
-    {
-        "license": "MIT",
-        "name": "vite-plugin-favicon@1.0.8",
-        "repository": "https://github.com/josh-hemphill/vite-plugin-favicon"
-    },
-    {
-        "license": "MIT",
-        "name": "vite@4.4.11",
-        "repository": "https://github.com/vitejs/vite"
-    },
-    {
         "license": "MIT",
         "name": "void-elements@3.1.0",
         "repository": "https://github.com/pugjs/void-elements"
-    },
-    {
-        "license": "ISC",
-        "name": "wide-align@1.1.5",
-        "repository": "https://github.com/iarna/wide-align"
-    },
-    {
-        "license": "ISC",
-        "name": "wrappy@1.0.2",
-        "repository": "https://github.com/npm/wrappy"
-    },
-    {
-        "license": "MIT",
-        "name": "xhr@2.6.0",
-        "repository": "https://github.com/naugtur/xhr"
-    },
-    {
-        "license": "MIT",
-        "name": "xml-parse-from-string@1.0.1",
-        "repository": "https://github.com/Jam3/xml-parse-from-string"
-    },
-    {
-        "license": "MIT",
-        "name": "xml2js@0.4.23",
-        "repository": "https://github.com/Leonidas-from-XIV/node-xml2js"
-    },
-    {
-        "license": "MIT",
-        "name": "xmlbuilder@11.0.1",
-        "repository": "https://github.com/oozcitak/xmlbuilder-js"
-    },
-    {
-        "license": "MIT",
-        "name": "xtend@4.0.2",
-        "repository": "https://github.com/Raynos/xtend"
-    },
-    {
-        "license": "ISC",
-        "name": "yallist@4.0.0",
-        "repository": "https://github.com/isaacs/yallist"
     },
     {
         "license": "ISC",
