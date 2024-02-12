@@ -148,8 +148,8 @@
                     "Rezakiri": "$t(terms.behemoths.Rezakiri)",
                     "Riftstalker": "$t(terms.behemoths.Riftstalker)",
                     "Sahvyt": "$t(terms.behemoths.Sahvyt)",
-                    "Thrax (R) Speed": "$t(terms.behemoths.Thrax) (R) Speed",
-                    "Thrax (R) Survival": "$t(terms.behemoths.Thrax) (R) Survival",
+                    "Thrax (R) Speed": "$t(terms.behemoths.Thrax) (R) Скорость",
+                    "Thrax (R) Survival": "$t(terms.behemoths.Thrax) (R) Выживание",
                     "Thrax (Rift)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker))",
                     "Thrax (Rift) Wound": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Рана",
                     "Thrax (Shrowd)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Shrowd))",
@@ -169,7 +169,7 @@
                     "Urska (Frostwülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Pangar)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar))",
                     "Urska (Wülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
-                    "Urska (Wülf) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Wound",
+                    "Urska (Wülf) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Рана",
                     "Valomyr": "$t(terms.behemoths.Valomyr)"
                 },
                 "categories": {
@@ -193,7 +193,7 @@
                         "description": "Сборки для Восхождений. Включают сборки без предметов из Восхождений и Испытаний. ",
                         "name": "Восхождения",
                         "subcategoryDescription": {
-                            "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive.",
+                            "heroics": "Сборки для различных Героических Восхождений. Используют Катализацию. Рекомендуемые зелья: Ярости, Скорости, Эфирного насыщения.",
                             "legendaries": "Сборки для различных Восхождений.",
                             "preEsca": "Сборки для различных Восхождений. Не содержат ни ячеек Испытаний, ни предметов из Восхождения."
                         }
@@ -207,7 +207,7 @@
                         "name": "Закаленность"
                     },
                     "Revenant": {
-                        "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 115 healing over 10 seconds — after Revenant expires.",
+                        "description": "Ревенант - омниген с высоким риском и высокой наградой, использование активной способности поглощает 500 ХП для призыва сумрачных щупалец, которые наносят высокий урон и вводят вас в состояние Ревенанта. Когда щупальца наносят урон цели - они создают Сферы Пустоты, собирая их вы накапливаете Энергию Пустоты, каждая из которых повышает урон на 4% в состоянии Ревенанта и продлевает это состояние на 1 секунду, а также после окончания Ревенанта лечит на 115 на продолжении 10 секунд.",
                         "name": "Ревенант"
                     },
                     "Tempest": {
@@ -269,7 +269,7 @@
                     "Pangar.0": "Нестабильную атаку Пангара в виде кувырков очень легко прервать (всего два кувырка), перезарядка нестабильной атки происходит в состоянии ярости.",
                     "Pangar.1": "Нестабильная атака Пангара в виде кувырков на текущий момент времени сломано и не наносит урона до конечного этапа, так что используйте это для прерывания атаки.",
                     "Quillshot.0": "Вы можете построить на основе Фонаря Скарна/щита Фроствульфа.",
-                    "Rezakiri.0": "Be sure to use Revenant between 500 and 600 HP to keep Shrowd's Unique Effect active.",
+                    "Rezakiri.0": "Удостоверьтесь, что используете Ревенант при уровне здоровья между 500 и 600 для поддержания уникального эффекта Шрауда активным.",
                     "Shadowtouched Koshai.0": "Вы можете довольно просто прервать нестабильную атаку в начале и во время движения по кругу, так же как и у обычного Кошая.",
                     "Shadowtouched Koshai.1": "После повторного побега под землю Мракородный Кошай появляется в случайном, наиболее удаленном от вас месте на арене и запускает сумрачную сферу в вас. В это время он чрезвычайно уязвим к урону.",
                     "Shadowtouched Nayzaga.0": "Так же как и обычная Найзага начинает бой с двойной нестабильной атаки в виде скольжения.",

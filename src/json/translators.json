@@ -180,6 +180,12 @@
         "username": "Phaesta"
     },
     {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15669045/medium/10305c44f17ea2f7656e72e969215a57.png",
+        "contributions": 27,
+        "proofreader": false,
+        "username": "kostery"
+    },
+    {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15451128/medium/a0c3c4c4c85666314b4f60b4c62dc9e0.jpeg",
         "contributions": 20,
         "proofreader": false,
@@ -328,6 +334,12 @@
         "contributions": 2,
         "proofreader": false,
         "username": "francescosarcina6"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16228808/medium/f98b16685d5786d68b0a94a8c54ebecc.jpeg",
+        "contributions": 2,
+        "proofreader": false,
+        "username": "Pekelnik"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14003855/medium/fe47b38132d54f1e95875ef3511cc623_default.png",
