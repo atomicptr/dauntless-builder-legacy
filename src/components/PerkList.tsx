@@ -7,6 +7,7 @@ import { Perk, PerkValue } from "@src/data/Perks";
 import useIsLightMode from "@src/hooks/light-mode";
 import i18n from "@src/i18n";
 import { buildModelView } from "@src/state/build";
+import { assetUrl } from "@src/utils/asset-url";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import { useAtomValue } from "jotai";
 import React, { useCallback } from "react";
@@ -58,7 +59,7 @@ const PerkList: React.FC = () => {
                     >
                         <ListItemIcon sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
                             <img
-                                src={`/assets/icons/perks/${perk.data.type}.png`}
+                                src={assetUrl(`/assets/icons/perks/${perk.data.type}.png`)}
                                 style={{ filter: isLightMode ? "invert(100%)" : undefined, height: 32, width: 32 }}
                             />
                         </ListItemIcon>

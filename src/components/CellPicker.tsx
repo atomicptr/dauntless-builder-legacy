@@ -6,6 +6,7 @@ import { ItemRarity } from "@src/data/ItemRarity";
 import { ItemType } from "@src/data/ItemType";
 import useIsMobile from "@src/hooks/is-mobile";
 import useIsLightMode from "@src/hooks/light-mode";
+import { assetUrl } from "@src/utils/asset-url";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -65,7 +66,7 @@ const CellPicker: React.FC<CellPickerProps> = ({ variant, index, itemType, cellT
                 <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", pl: 2, pr: 2 }}>
                     <CardMedia
                         component="img"
-                        image={`/assets/icons/perks/${cell?.slot ?? cellType}.png`}
+                        image={assetUrl(`/assets/icons/perks/${cell?.slot ?? cellType}.png`)}
                         sx={{ height: imageSize, width: imageSize, ...cellStyle }}
                     />
                 </Box>

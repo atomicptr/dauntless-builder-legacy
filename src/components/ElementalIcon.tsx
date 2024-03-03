@@ -3,6 +3,7 @@ import { Armour } from "@src/data/Armour";
 import { ElementalType } from "@src/data/ElementalType";
 import { ItemType } from "@src/data/ItemType";
 import { Weapon } from "@src/data/Weapon";
+import { assetUrl } from "@src/utils/asset-url";
 import React from "react";
 
 interface ElementalProps {
@@ -66,7 +67,7 @@ const ElementalBox: React.FC<ElementalBoxProps> = ({ elemental, isStrength }) =>
         </b>
         <img
             alt={elemental}
-            src={`/assets/icons/elements/${elemental}.png`}
+            src={assetUrl(`/assets/icons/elements/${elemental}.png`)}
         />
     </Box>
 );

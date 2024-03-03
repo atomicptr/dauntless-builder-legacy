@@ -41,6 +41,7 @@ import useIsMobile from "@src/hooks/is-mobile";
 import useIsLightMode from "@src/hooks/light-mode";
 import i18n from "@src/i18n";
 import { filterCountView, itemSelectFilterAtom, ItemSelectFilterState } from "@src/state/item-select-filter";
+import { assetUrl } from "@src/utils/asset-url";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import { matchesSearch, matchesSearchIn } from "@src/utils/search";
 import { useAtomValue } from "jotai";
@@ -316,7 +317,9 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                                                                         sx={{ alignItems: "center", display: "flex" }}
                                                                     >
                                                                         <img
-                                                                            src={`/assets/icons/perks/${cellType}.png`}
+                                                                            src={assetUrl(
+                                                                                `/assets/icons/perks/${cellType}.png`,
+                                                                            )}
                                                                             style={{
                                                                                 filter,
                                                                                 height: "16px",

@@ -2,6 +2,7 @@ import { Box, Card, CardActionArea, CardContent, CardMedia } from "@mui/material
 import { GenericItem } from "@src/components/GenericItemSelectDialog";
 import { ItemType, itemTypeIcon, itemTypeLocalizationIdentifier } from "@src/data/ItemType";
 import useIsLightMode from "@src/hooks/light-mode";
+import { assetUrl } from "@src/utils/asset-url";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -26,7 +27,7 @@ const MiniItemPicker: React.FC<MiniItemPickerProps> = ({ itemType, value, onClic
                 <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
                     <CardMedia
                         component={"img"}
-                        image={value ? value.icon : itemTypeIcon(itemType)}
+                        image={assetUrl(value && value.icon ? value.icon : itemTypeIcon(itemType))}
                         sx={{
                             filter: isLightMode && !value ? "invert(100%)" : undefined,
                             height: imageSize,

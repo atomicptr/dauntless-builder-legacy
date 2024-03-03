@@ -31,6 +31,7 @@ import { ItemType, itemTypeLocalizationIdentifier } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
 import useIsMobile from "@src/hooks/is-mobile";
 import useIsLightMode from "@src/hooks/light-mode";
+import { assetUrl } from "@src/utils/asset-url";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import { matchesSearchIn } from "@src/utils/search";
 import React, { useEffect, useMemo, useRef, useState } from "react";
@@ -221,7 +222,7 @@ const CellSelectDialog: React.FC<CellSelectDialogProps> = ({
                                             >
                                                 <CardMedia
                                                     component="img"
-                                                    image={`/assets/icons/perks/${cell.slot}.png`}
+                                                    image={assetUrl(`/assets/icons/perks/${cell.slot}.png`)}
                                                     sx={{
                                                         filter: isLightMode ? "invert(100%)" : undefined,
                                                         height: imageSize,

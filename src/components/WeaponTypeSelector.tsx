@@ -1,6 +1,7 @@
 import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import { WeaponType } from "@src/data/Weapon";
 import useIsMobile from "@src/hooks/is-mobile";
+import { assetUrl } from "@src/utils/asset-url";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -44,7 +45,7 @@ const WeaponTypeSelector: React.FC<WeaponTypeSelectorProps> = ({ value, onChange
                                 <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
                                     <CardMedia
                                         component={"img"}
-                                        image={`/assets/icons/generic/${weaponType}.png`}
+                                        image={assetUrl(`/assets/icons/generic/${weaponType}.png`)}
                                         sx={{ height: imageSize, width: imageSize }}
                                     />
                                 </Box>

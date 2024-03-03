@@ -3,6 +3,7 @@ import { CellType } from "@src/data/Cell";
 import { ItemType } from "@src/data/ItemType";
 import useIsLightMode from "@src/hooks/light-mode";
 import { itemSelectFilterAtom, ItemSelectFilterState, setCellSlotsFilter } from "@src/state/item-select-filter";
+import { assetUrl } from "@src/utils/asset-url";
 import { useAtom } from "jotai";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -39,7 +40,7 @@ const CellSlotFilter: React.FC<CellSlotFilterProps> = ({ itemType }) => {
                                     sx={{ alignItems: "center", display: "flex" }}
                                 >
                                     <img
-                                        src={`/assets/icons/perks/${cellType}.png`}
+                                        src={assetUrl(`/assets/icons/perks/${cellType}.png`)}
                                         style={{ filter, height: "16px", width: "16px" }}
                                     />
                                     <Box component="span">
@@ -63,7 +64,7 @@ const CellSlotFilter: React.FC<CellSlotFilterProps> = ({ itemType }) => {
                         >
                             <ListItemIcon>
                                 <img
-                                    src={`/assets/icons/perks/${cellType}.png`}
+                                    src={assetUrl(`/assets/icons/perks/${cellType}.png`)}
                                     style={{ filter, height: "16px", width: "16px" }}
                                 />
                             </ListItemIcon>

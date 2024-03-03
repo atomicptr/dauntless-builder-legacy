@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import PageTitle from "@src/components/PageTitle";
+import { assetUrl } from "@src/utils/asset-url";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -12,7 +13,7 @@ const NotFound: React.FC = () => {
             <Box sx={{ bottom: 0, position: "absolute", right: 0 }}>
                 <img
                     alt="Sad hoots"
-                    src="/assets/sadhoots.png"
+                    src={assetUrl("/assets/sadhoots.png")}
                     style={{ maxWidth: "70%" }}
                 />
             </Box>

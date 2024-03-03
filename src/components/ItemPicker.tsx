@@ -12,6 +12,7 @@ import { ItemWithTags } from "@src/data/Tags";
 import { Weapon } from "@src/data/Weapon";
 import useIsMobile from "@src/hooks/is-mobile";
 import useIsLightMode from "@src/hooks/light-mode";
+import { assetUrl } from "@src/utils/asset-url";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React, { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
@@ -79,15 +80,17 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                     <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
                         <CardMedia
                             component="img"
-                            image={match(type)
-                                .with(ItemType.Weapon, () => "/assets/icons/generic/Weapon.png")
-                                .with(ItemType.Head, () => "/assets/icons/generic/Head.png")
-                                .with(ItemType.Torso, () => "/assets/icons/generic/Torso.png")
-                                .with(ItemType.Arms, () => "/assets/icons/generic/Arms.png")
-                                .with(ItemType.Legs, () => "/assets/icons/generic/Legs.png")
-                                .with(ItemType.Lantern, () => "/assets/icons/generic/Lantern.png")
-                                .with(ItemType.Omnicell, () => "/assets/icons/generic/Omnicell.png")
-                                .otherwise(() => "/assets/noicon.png")}
+                            image={assetUrl(
+                                match(type)
+                                    .with(ItemType.Weapon, () => "/assets/icons/generic/Weapon.png")
+                                    .with(ItemType.Head, () => "/assets/icons/generic/Head.png")
+                                    .with(ItemType.Torso, () => "/assets/icons/generic/Torso.png")
+                                    .with(ItemType.Arms, () => "/assets/icons/generic/Arms.png")
+                                    .with(ItemType.Legs, () => "/assets/icons/generic/Legs.png")
+                                    .with(ItemType.Lantern, () => "/assets/icons/generic/Lantern.png")
+                                    .with(ItemType.Omnicell, () => "/assets/icons/generic/Omnicell.png")
+                                    .otherwise(() => "/assets/noicon.png"),
+                            )}
                             sx={{
                                 filter: isLightMode ? "invert(100%)" : undefined,
                                 height: imageSize,
@@ -145,7 +148,7 @@ const ItemPicker: React.FC<ItemPickerProps> = ({
                                 <CardMedia
                                     alt={t(itemTranslationIdentifier(type, item.name, "name"))}
                                     component={"img"}
-                                    image={item.icon ?? "/assets/noicon.png"}
+                                    image={assetUrl(item.icon ?? "/assets/noicon.png")}
                                     sx={{ height: imageSize, width: imageSize }}
                                 />
                             </LazyLoadComponent>

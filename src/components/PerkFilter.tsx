@@ -5,6 +5,7 @@ import { isArmourType, ItemType, itemTypeData } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
 import useIsLightMode from "@src/hooks/light-mode";
 import { itemSelectFilterAtom, ItemSelectFilterState, setPerkFilter } from "@src/state/item-select-filter";
+import { assetUrl } from "@src/utils/asset-url";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import { useAtom } from "jotai";
 import React, { useMemo } from "react";
@@ -59,7 +60,7 @@ const PerkFilter: React.FC<PerkFilterProps> = ({ itemType }) => {
                                     sx={{ alignItems: "center", display: "flex" }}
                                 >
                                     <img
-                                        src={`/assets/icons/perks/${perk?.type}.png`}
+                                        src={assetUrl(`/assets/icons/perks/${perk?.type}.png`)}
                                         style={{ filter, height: "16px", width: "16px" }}
                                     />
                                     <Box component="span">
@@ -81,7 +82,7 @@ const PerkFilter: React.FC<PerkFilterProps> = ({ itemType }) => {
                     >
                         <ListItemIcon>
                             <img
-                                src={`/assets/icons/perks/${perk.type}.png`}
+                                src={assetUrl(`/assets/icons/perks/${perk.type}.png`)}
                                 style={{ filter, height: "16px", width: "16px" }}
                             />
                         </ListItemIcon>

@@ -23,6 +23,7 @@ import { ItemType } from "@src/data/ItemType";
 import { Perk } from "@src/data/Perks";
 import useIsLightMode from "@src/hooks/light-mode";
 import { buildModelView } from "@src/state/build";
+import { assetUrl } from "@src/utils/asset-url";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import { useAtomValue } from "jotai";
 import React from "react";
@@ -86,7 +87,7 @@ const PerkListMobile: React.FC = () => {
                         <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
                             <CardMedia
                                 component="img"
-                                image={`/assets/icons/perks/${perk.data.type}.png`}
+                                image={assetUrl(`/assets/icons/perks/${perk.data.type}.png`)}
                                 sx={{
                                     filter: isLightMode ? "invert(100%)" : undefined,
                                     height: imageSize,

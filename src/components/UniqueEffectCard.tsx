@@ -5,6 +5,7 @@ import { ItemType } from "@src/data/ItemType";
 import { UniqueEffect } from "@src/data/UniqueEffect";
 import { Weapon } from "@src/data/Weapon";
 import { ttry } from "@src/i18n";
+import { assetUrl } from "@src/utils/asset-url";
 import { renderItemText } from "@src/utils/item-text-renderer";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import log from "@src/utils/logger";
@@ -62,7 +63,7 @@ const UniqueEffectCard: React.FC<UniqueEffectCardProps> = ({ uniqueEffect, item,
                                 "terms.unique-effect",
                             )}
                             component={"img"}
-                            image={uniqueEffect.icon ?? "/assets/noicon.png"}
+                            image={assetUrl(uniqueEffect.icon ?? "/assets/noicon.png")}
                             sx={{ height: imageSize, width: imageSize }}
                         />
                     </LazyLoadComponent>

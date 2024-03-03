@@ -17,6 +17,7 @@ import { perkData, perkEffectDescriptionById } from "@src/components/PerkList";
 import { BuildFlags, BuildModel } from "@src/data/BuildModel";
 import { ItemType } from "@src/data/ItemType";
 import useIsMobile from "@src/hooks/is-mobile";
+import { assetUrl } from "@src/utils/asset-url";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import log from "@src/utils/logger";
 import React from "react";
@@ -61,7 +62,7 @@ const ItemIcon: React.FC<ItemIconProps> = ({ item, miniMode, sx }) => {
         >
             <CardMedia
                 component={"img"}
-                image={item.icon ?? "/assets/noicon.png"}
+                image={assetUrl(item.icon ?? "/assets/noicon.png")}
                 sx={{ height: imageSize, width: imageSize, ...(sx ?? {}) }}
             />
         </LazyLoadComponent>

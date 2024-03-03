@@ -48,6 +48,7 @@ import {
     setRemoveLegendary,
 } from "@src/state/finder";
 import { itemSelectFilterAtom, resetFilter, setWeaponTypeFilter } from "@src/state/item-select-filter";
+import { assetUrl } from "@src/utils/asset-url";
 import { defaultBuildName } from "@src/utils/default-build-name";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import { useAtomValue, useSetAtom } from "jotai";
@@ -337,9 +338,7 @@ const Build: React.FC = () => {
                     property="og:description"
                 />
                 <meta
-                    content={`https://www.dauntless-builder.com${
-                        build.data.weapon?.icon ?? build.data.omnicell?.icon ?? "/assets/icon.png"
-                    }`}
+                    content={assetUrl(build.data.weapon?.icon ?? build.data.omnicell?.icon ?? "/assets/icon.png")}
                     property="og:image"
                 />
             </Helmet>
