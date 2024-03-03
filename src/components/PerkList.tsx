@@ -7,11 +7,11 @@ import { Perk, PerkValue } from "@src/data/Perks";
 import useIsLightMode from "@src/hooks/light-mode";
 import i18n from "@src/i18n";
 import { buildModelView } from "@src/state/build";
+import { assetUrl } from "@src/utils/asset-url";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import { useAtomValue } from "jotai";
 import React, { useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { assetUrl } from "@src/utils/asset-url";
 
 const PerkList: React.FC = () => {
     const build = useAtomValue(buildModelView);
