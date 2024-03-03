@@ -26,7 +26,7 @@
     },
     {
         "license": "MIT",
-        "name": "@babel/runtime@7.23.5",
+        "name": "@babel/runtime@7.23.9",
         "repository": "https://github.com/babel/babel"
     },
     {
@@ -61,12 +61,12 @@
     },
     {
         "license": "MIT",
-        "name": "@emotion/react@11.11.1",
+        "name": "@emotion/react@11.11.4",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/react"
     },
     {
         "license": "MIT",
-        "name": "@emotion/serialize@1.1.2",
+        "name": "@emotion/serialize@1.1.3",
         "repository": "https://github.com/emotion-js/emotion/tree/main/packages/serialize"
     },
     {
@@ -101,67 +101,67 @@
     },
     {
         "license": "MIT",
-        "name": "@floating-ui/core@1.5.1",
+        "name": "@floating-ui/core@1.6.0",
         "repository": "https://github.com/floating-ui/floating-ui"
     },
     {
         "license": "MIT",
-        "name": "@floating-ui/dom@1.5.3",
+        "name": "@floating-ui/dom@1.6.3",
         "repository": "https://github.com/floating-ui/floating-ui"
     },
     {
         "license": "MIT",
-        "name": "@floating-ui/react-dom@2.0.4",
+        "name": "@floating-ui/react-dom@2.0.8",
         "repository": "https://github.com/floating-ui/floating-ui"
     },
     {
         "license": "MIT",
-        "name": "@floating-ui/utils@0.1.6",
+        "name": "@floating-ui/utils@0.2.1",
         "repository": "https://github.com/floating-ui/floating-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/base@5.0.0-beta.25",
+        "name": "@mui/base@5.0.0-beta.37",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/core-downloads-tracker@5.14.19",
+        "name": "@mui/core-downloads-tracker@5.15.11",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/icons-material@5.14.19",
+        "name": "@mui/icons-material@5.15.11",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/material@5.14.19",
+        "name": "@mui/material@5.15.11",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/private-theming@5.14.19",
+        "name": "@mui/private-theming@5.15.11",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/styled-engine@5.14.19",
+        "name": "@mui/styled-engine@5.15.11",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/system@5.14.19",
+        "name": "@mui/system@5.15.11",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/types@7.2.10",
+        "name": "@mui/types@7.2.13",
         "repository": "https://github.com/mui/material-ui"
     },
     {
         "license": "MIT",
-        "name": "@mui/utils@5.14.19",
+        "name": "@mui/utils@5.15.11",
         "repository": "https://github.com/mui/material-ui"
     },
     {
@@ -171,17 +171,17 @@
     },
     {
         "license": "MIT",
-        "name": "@remix-run/router@1.13.1",
+        "name": "@remix-run/router@1.15.2",
         "repository": "https://github.com/remix-run/react-router"
     },
     {
         "license": "MIT",
-        "name": "@tanstack/query-core@5.12.1",
+        "name": "@tanstack/query-core@5.24.1",
         "repository": "https://github.com/TanStack/query"
     },
     {
         "license": "MIT",
-        "name": "@tanstack/react-query@5.12.2",
+        "name": "@tanstack/react-query@5.24.1",
         "repository": "https://github.com/TanStack/query"
     },
     {
@@ -196,12 +196,12 @@
     },
     {
         "license": "MIT",
-        "name": "@types/react-transition-group@4.4.9",
+        "name": "@types/react-transition-group@4.4.10",
         "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
     },
     {
         "license": "MIT",
-        "name": "@types/react@18.2.41",
+        "name": "@types/react@18.2.61",
         "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped"
     },
     {
@@ -241,7 +241,7 @@
     },
     {
         "license": "MIT",
-        "name": "clsx@2.0.0",
+        "name": "clsx@2.1.0",
         "repository": "https://github.com/lukeed/clsx"
     },
     {
@@ -276,7 +276,7 @@
     },
     {
         "license": "MIT",
-        "name": "csstype@3.1.2",
+        "name": "csstype@3.1.3",
         "repository": "https://github.com/frenic/csstype"
     },
     {
@@ -376,7 +376,7 @@
     },
     {
         "license": "MIT",
-        "name": "jotai@2.6.0",
+        "name": "jotai@2.7.0",
         "repository": "https://github.com/pmndrs/jotai"
     },
     {
@@ -470,7 +470,7 @@
     },
     {
         "license": "MIT",
-        "name": "react-error-boundary@4.0.11",
+        "name": "react-error-boundary@4.0.13",
         "repository": "https://github.com/bvaughn/react-error-boundary"
     },
     {
@@ -485,12 +485,12 @@
     },
     {
         "license": "MIT",
-        "name": "react-i18next@13.5.0",
+        "name": "react-i18next@14.0.5",
         "repository": "https://github.com/i18next/react-i18next"
     },
     {
         "license": "MIT",
-        "name": "react-icons@4.12.0",
+        "name": "react-icons@5.0.1",
         "repository": "https://github.com/react-icons/react-icons"
     },
     {
@@ -510,12 +510,12 @@
     },
     {
         "license": "MIT",
-        "name": "react-router-dom@6.20.1",
+        "name": "react-router-dom@6.22.2",
         "repository": "https://github.com/remix-run/react-router"
     },
     {
         "license": "MIT",
-        "name": "react-router@6.20.1",
+        "name": "react-router@6.22.2",
         "repository": "https://github.com/remix-run/react-router"
     },
     {
@@ -530,7 +530,7 @@
     },
     {
         "license": "MIT",
-        "name": "react-virtualized-auto-sizer@1.0.20",
+        "name": "react-virtualized-auto-sizer@1.0.23",
         "repository": "https://github.com/bvaughn/react-virtualized-auto-sizer"
     },
     {
@@ -585,7 +585,7 @@
     },
     {
         "license": "MIT",
-        "name": "stylis@4.3.0",
+        "name": "stylis@4.3.1",
         "repository": "https://github.com/thysultan/stylis.js"
     },
     {
@@ -605,7 +605,7 @@
     },
     {
         "license": "MIT",
-        "name": "ts-pattern@5.0.5",
+        "name": "ts-pattern@5.0.8",
         "repository": "https://github.com/gvergnaud/ts-pattern"
     },
     {
