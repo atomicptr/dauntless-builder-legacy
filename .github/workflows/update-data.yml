@@ -22,7 +22,7 @@ jobs:
           CROWDIN_TOKEN: ${{ secrets.CROWDIN_TOKEN }}
           GOOGLE_SHEETS_APIKEY: ${{ secrets.GOOGLE_SHEETS_APIKEY }}
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v6
         with:
           title: "[DATA] Updated External Data"
           commit-message: "update external data"
