@@ -313,6 +313,12 @@ const Build: React.FC = () => {
 
     const buildName = defaultBuildName(build);
 
+    const icon = build.data.weapon?.icon
+        ? assetUrl(build.data.weapon?.icon)
+        : build.data.omnicell?.icon
+            ? assetUrl(build.data.omnicell?.icon)
+            : "/assets/icon.png";
+
     return (
         <>
             <PageTitle
@@ -338,7 +344,7 @@ const Build: React.FC = () => {
                     property="og:description"
                 />
                 <meta
-                    content={assetUrl(build.data.weapon?.icon ?? build.data.omnicell?.icon ?? "/assets/icon.png")}
+                    content={icon}
                     property="og:image"
                 />
             </Helmet>

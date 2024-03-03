@@ -27,6 +27,7 @@ export default defineConfig(({ command, mode }) => {
             react({ babel: { plugins: [jotaiDebugLabel, jotaiReactRefresh] } }),
             VitePWA({
                 includeAssets: [
+                    "assets/*.png",
                     // these are technically not necessary, but it's annoying that you can't access these with your
                     // browser anymore without this. Maybe we should switch to a network first SW.
                     "*.json",
@@ -86,7 +87,7 @@ export default defineConfig(({ command, mode }) => {
                         background: "#121212",
                         theme_color: "#272727",
                     },
-                    logo: "assets/icon.png",
+                    logo: "public/assets/icon.png",
                 })
                 : undefined,
         ],
