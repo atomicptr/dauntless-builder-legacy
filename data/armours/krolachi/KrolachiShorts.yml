@@ -1,0 +1,9 @@
+name: Krolachi Shorts
+description: "Ready yourself for the challenges of a Krolachi Slayer."
+icon: /assets/icons/armours/krolachi/KrolachiShorts.png
+type: Legs
+strength: null
+weakness: null
+cells: null
+resistance:
+  base: 0

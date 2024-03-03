@@ -1,0 +1,9 @@
+name: Krolachi Tunic
+description: "Ready yourself for the challenges of a Krolachi Slayer."
+icon: /assets/icons/armours/krolachi/KrolachiTunic.png
+type: Torso
+strength: null
+weakness: null
+cells: null
+resistance:
+  base: 0
