@@ -25,6 +25,7 @@ import VirtualizedList from "@src/components/VirtualizedList";
 import { ItemType } from "@src/data/ItemType";
 import useIsMobile from "@src/hooks/is-mobile";
 import useIsLightMode from "@src/hooks/light-mode";
+import { assetUrl } from "@src/utils/asset-url";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import { matchesSearchIn } from "@src/utils/search";
 import React, { ReactNode, useEffect, useMemo, useRef, useState } from "react";
@@ -183,7 +184,7 @@ const GenericItemSelectDialog: React.FC<GenericItemSelectDialogProps> = ({
                                                 >
                                                     <CardMedia
                                                         component="img"
-                                                        image={item.icon ?? "/assets/noicon.png"}
+                                                        image={assetUrl(item.icon ?? "/assets/noicon.png")}
                                                         sx={{ height: imageSize, width: imageSize }}
                                                     />
                                                 </Box>

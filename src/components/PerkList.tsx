@@ -11,6 +11,7 @@ import { itemTranslationIdentifier } from "@src/utils/item-translation-identifie
 import { useAtomValue } from "jotai";
 import React, { useCallback } from "react";
 import { useTranslation } from "react-i18next";
+import { assetUrl } from "@src/utils/asset-url";
 
 const PerkList: React.FC = () => {
     const build = useAtomValue(buildModelView);
@@ -58,7 +59,7 @@ const PerkList: React.FC = () => {
                     >
                         <ListItemIcon sx={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
                             <img
-                                src={`/assets/icons/perks/${perk.data.type}.png`}
+                                src={assetUrl(`/assets/icons/perks/${perk.data.type}.png`)}
                                 style={{ filter: isLightMode ? "invert(100%)" : undefined, height: 32, width: 32 }}
                             />
                         </ListItemIcon>

@@ -2,6 +2,7 @@ import { Box, FormControl, InputLabel, ListItemIcon, ListItemText, MenuItem, Sel
 import { ElementalType } from "@src/data/ElementalType";
 import { ItemType } from "@src/data/ItemType";
 import { itemSelectFilterAtom, ItemSelectFilterState, setElementFilter } from "@src/state/item-select-filter";
+import { assetUrl } from "@src/utils/asset-url";
 import { useAtom } from "jotai";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -34,7 +35,7 @@ const ElementalTypeFilter: React.FC<ElementalTypeFilterProps> = ({ itemType }) =
                                 sx={{ alignItems: "center", display: "flex" }}
                             >
                                 <img
-                                    src={`/assets/icons/elements/${elementalType}.png`}
+                                    src={assetUrl(`/assets/icons/elements/${elementalType}.png`)}
                                     style={{ height: "16px", width: "16px" }}
                                 />
                                 <Box component="span">
@@ -57,7 +58,7 @@ const ElementalTypeFilter: React.FC<ElementalTypeFilterProps> = ({ itemType }) =
                         >
                             <ListItemIcon>
                                 <img
-                                    src={`/assets/icons/elements/${elementalType}.png`}
+                                    src={assetUrl(`/assets/icons/elements/${elementalType}.png`)}
                                     style={{ height: "16px", width: "16px" }}
                                 />
                             </ListItemIcon>

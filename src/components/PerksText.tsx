@@ -4,6 +4,7 @@ import { ItemType } from "@src/data/ItemType";
 import { PerkValue } from "@src/data/Perks";
 import useIsMobile from "@src/hooks/is-mobile";
 import useIsLightMode from "@src/hooks/light-mode";
+import { assetUrl } from "@src/utils/asset-url";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -37,7 +38,7 @@ const PerksText: React.FC<PerksTextProps> = ({ perks, itemSurged }) => {
 
             <img
                 alt={findPerkByName(perk.name)?.type}
-                src={`/assets/icons/perks/${findPerkByName(perk.name)?.type}.png`}
+                src={assetUrl(`/assets/icons/perks/${findPerkByName(perk.name)?.type}.png`)}
                 style={{ filter, height: "16px", width: "16px" }}
             />
 

@@ -2,6 +2,7 @@ import { Box, CardContent, CardMedia, Typography } from "@mui/material";
 import { itemPickerDefaultImageSize } from "@src/components/theme";
 import { ItemType } from "@src/data/ItemType";
 import { Omnicell } from "@src/data/Omnicell";
+import { assetUrl } from "@src/utils/asset-url";
 import { renderItemText } from "@src/utils/item-text-renderer";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
@@ -28,7 +29,7 @@ const OmnicellCard: React.FC<OmnicellCardProps> = ({ item }) => {
                         "terms.active-ability",
                     )}`}
                     component="img"
-                    image={(item as Omnicell).ability_icon ?? "/assets/noicon.png"}
+                    image={assetUrl((item as Omnicell).ability_icon ?? "/assets/noicon.png")}
                     sx={{ height: imageSize, width: imageSize }}
                 />
             </Box>

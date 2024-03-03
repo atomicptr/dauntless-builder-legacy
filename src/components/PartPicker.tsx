@@ -5,6 +5,7 @@ import { itemPickerDefaultImageSize } from "@src/components/theme";
 import { Part, PartType } from "@src/data/Part";
 import { ItemWithTags } from "@src/data/Tags";
 import { WeaponType } from "@src/data/Weapon";
+import { assetUrl } from "@src/utils/asset-url";
 import { partsTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -92,7 +93,7 @@ const PartPicker: React.FC<PartPickerProps> = ({ type, item, weaponType, onClick
                         <CardMedia
                             alt={t(partsTranslationIdentifier(weaponType, type, item.name, "name"))}
                             component={"img"}
-                            image={item.icon ?? "/assets/noicon.png"}
+                            image={assetUrl(item.icon ?? "/assets/noicon.png")}
                             sx={{ height: imageSize, width: imageSize }}
                         />
                     </LazyLoadComponent>

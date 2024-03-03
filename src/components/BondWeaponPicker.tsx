@@ -3,6 +3,7 @@ import PerksText from "@src/components/PerksText";
 import { itemPickerDefaultImageSize } from "@src/components/theme";
 import { ItemType } from "@src/data/ItemType";
 import { Weapon } from "@src/data/Weapon";
+import { assetUrl } from "@src/utils/asset-url";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -43,7 +44,7 @@ const BondWeaponPicker: React.FC<BondWeaponPickerProps> = ({
                     <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", p: 2 }}>
                         <CardMedia
                             component="img"
-                            image={"/assets/icons/generic/Weapon.png"}
+                            image={assetUrl("/assets/icons/generic/Weapon.png")}
                             sx={{ height: imageSize, width: imageSize }}
                         />
                     </Box>
@@ -91,7 +92,7 @@ const BondWeaponPicker: React.FC<BondWeaponPickerProps> = ({
                         <CardMedia
                             alt={t(itemTranslationIdentifier(ItemType.Weapon, bondWeapon.name, "name"))}
                             component={"img"}
-                            image={bondWeapon.icon ?? "/assets/noicon.png"}
+                            image={assetUrl(bondWeapon.icon ?? "/assets/noicon.png")}
                             sx={{ height: imageSize, width: imageSize }}
                         />
                     </LazyLoadComponent>

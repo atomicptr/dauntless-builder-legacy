@@ -39,6 +39,7 @@ import useDevMode from "@src/hooks/dev-mode";
 import useIsMobile from "@src/hooks/is-mobile";
 import { currentLanguage, getNativeLanguageName, isBetaLanguage, Language } from "@src/i18n";
 import { favoritesView } from "@src/state/favorites";
+import { assetUrl } from "@src/utils/asset-url";
 import log from "@src/utils/logger";
 import { useAtomValue } from "jotai";
 import React, { ReactNode, useState } from "react";
@@ -103,7 +104,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     <Box sx={{ alignItems: "center", display: "flex", justifyContent: "center", mr: 2 }}>
                         <img
                             alt={t("app-name")}
-                            src={"/assets/icon.png"}
+                            src={assetUrl("/assets/icon.png")}
                             style={{
                                 height: 36,
                                 userSelect: "none",

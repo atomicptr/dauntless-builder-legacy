@@ -1,6 +1,7 @@
 import { Box, FormControl, InputLabel, ListItemIcon, ListItemText, MenuItem, Select, Stack } from "@mui/material";
 import { WeaponType } from "@src/data/Weapon";
 import { itemSelectFilterAtom, setWeaponTypeFilter, weaponFilterView } from "@src/state/item-select-filter";
+import { assetUrl } from "@src/utils/asset-url";
 import { useAtomValue, useSetAtom } from "jotai";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -33,7 +34,7 @@ const WeaponTypeFilter: React.FC = () => {
                                 sx={{ alignItems: "center", display: "flex" }}
                             >
                                 <img
-                                    src={`/assets/icons/generic/${getWeaponTypeKeyByValue(weaponType)}.png`}
+                                    src={assetUrl(`/assets/icons/generic/${getWeaponTypeKeyByValue(weaponType)}.png`)}
                                     style={{ height: "16px", width: "16px" }}
                                 />
                                 <Box component="span">
@@ -56,7 +57,7 @@ const WeaponTypeFilter: React.FC = () => {
                         >
                             <ListItemIcon>
                                 <img
-                                    src={`/assets/icons/generic/${weaponType}.png`}
+                                    src={assetUrl(`/assets/icons/generic/${weaponType}.png`)}
                                     style={{ height: "16px", width: "16px" }}
                                 />
                             </ListItemIcon>

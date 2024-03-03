@@ -22,6 +22,7 @@ import useIsMobile from "@src/hooks/is-mobile";
 import useIsLightMode from "@src/hooks/light-mode";
 import { perks } from "@src/pages/build/find-builds";
 import { clearPerks, finderAtom, setPerkValue } from "@src/state/finder";
+import { assetUrl } from "@src/utils/asset-url";
 import { itemTranslationIdentifier } from "@src/utils/item-translation-identifier";
 import { matchesSearchIn } from "@src/utils/search";
 import { useAtom } from "jotai";
@@ -131,7 +132,7 @@ const FinderPerkPicker: React.FC<FinderPerkPickerProps> = ({ disabled, canAddPer
                                     sx={{ alignItems: "center", my: 2 }}
                                 >
                                     <img
-                                        src={`/assets/icons/perks/${cellType}.png`}
+                                        src={assetUrl(`/assets/icons/perks/${cellType}.png`)}
                                         style={{
                                             filter: isLightMode ? "invert(100%)" : undefined,
                                             height: "64px",
