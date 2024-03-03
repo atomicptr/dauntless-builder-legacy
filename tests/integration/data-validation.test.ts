@@ -144,7 +144,7 @@ describe("data.json integrity", () => {
                 const item = dataWrapper[itemName];
 
                 if (item.icon) {
-                    const iconPath = path.join(process.cwd(), "public", item[iconFieldName]);
+                    const iconPath = path.join(process.cwd(), item[iconFieldName]);
 
                     try {
                         expect(fs.existsSync(iconPath)).toBeTruthy();
