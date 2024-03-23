@@ -186,6 +186,12 @@
         "username": "Phaesta"
     },
     {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16292480/medium/bc5b83b46fc30daaa8be9f68e481dbf2.jpeg",
+        "contributions": 30,
+        "proofreader": false,
+        "username": "PierreYvesFlamand"
+    },
+    {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15669045/medium/10305c44f17ea2f7656e72e969215a57.png",
         "contributions": 27,
         "proofreader": false,
@@ -418,5 +424,11 @@
         "contributions": 1,
         "proofreader": false,
         "username": "maurfag28"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16292888/medium/2fbb6e4d09c67bfcb7aa6b9803f7b4d8.png",
+        "contributions": 1,
+        "proofreader": false,
+        "username": "sahanonurt"
     }
 ]

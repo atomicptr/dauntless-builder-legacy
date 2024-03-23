@@ -27,7 +27,7 @@
         "item-select-dialog": {
             "select-text": "Selectionner {{name}}"
         },
-        "recommended": "This item is verified as being great please use it."
+        "recommended": "Cet objet est recommandé, veuillez l'utiliser."
     },
     "drawer": {
         "about": "$t(pages.about.title)",
@@ -45,8 +45,8 @@
         "discord-server": "Serveur Discord de Dauntless Builder",
         "github-repository": "Dépôt Github",
         "patch-url": "https://playdauntless.com/fr/patch-notes/{{version}}",
-        "something-went-wrong": "Something went wrong! Please send the error log below to me in our Discord and try to reload the website. Thank you very much!",
-        "x-twitter": "Dauntless Builder on X.com"
+        "something-went-wrong": "Quelque chose s'est mal passé ! S'il vous plaît envoyez le log d'erreur ci-dessous dans notre Discord et essayez de recharger le site Web. Merci beaucoup !",
+        "x-twitter": "Dauntless Builder sur X.com"
     },
     "pages": {
         "404": {
@@ -122,7 +122,7 @@
                 "buildTitles": {
                     "Agarus (K) Speed": "$t(terms.behemoths.Agarus) (K) Speed\n\nVitesse",
                     "Agarus (K) Survival": "$t(terms.behemoths.Agarus) (K) Survival\n\nSurvie",
-                    "Agarus (Khar) Wound": "$t(terms.behemoths.Agarus) (Khar) Wound",
+                    "Agarus (Khar) Wound": "$t(terms.behemoths.Agarus) (Khar) Mutilation",
                     "Agarus (Khara) Wound": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Wound\nBlessure",
                     "Agarus (Kharabak)": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak))",
                     "Agarus (Koshai)": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Koshai))",
@@ -134,9 +134,9 @@
                     "Chrono (V) Survival": "$t(terms.behemoths.Chronovore) (V) Survie",
                     "Chrono (Valo)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr))",
                     "Disc Adrenaline": "Discipline adrénaline",
-                    "Disc Impulse": "Disc Impulse",
+                    "Disc Impulse": "Discipline Impulsion",
                     "Disc Pred": "Discipline Prédateur",
-                    "Disc Sav": "Disc Sav",
+                    "Disc Sav": "Discipline Sauvagerie",
                     "Hellion": "$t(terms.behemoths.Hellion)",
                     "Kharabak": "$t(terms.behemoths.Kharabak)",
                     "Malk (S) Speed": "$t(terms.behemoths.Malkarion) (S) Vitesse",
@@ -148,13 +148,13 @@
                     "Rezakiri": "$t(terms.behemoths.Rezakiri)",
                     "Riftstalker": "$t(terms.behemoths.Riftstalker)",
                     "Sahvyt": "$t(terms.behemoths.Sahvyt)",
-                    "Thrax (R) Speed": "$t(terms.behemoths.Thrax) (R) Speed",
-                    "Thrax (R) Survival": "$t(terms.behemoths.Thrax) (R) Survival",
+                    "Thrax (R) Speed": "$t(terms.behemoths.Thrax) (R) Vitesse",
+                    "Thrax (R) Survival": "$t(terms.behemoths.Thrax) (R) Survie",
                     "Thrax (Rift)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker))",
-                    "Thrax (Rift) Wound": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Wound",
+                    "Thrax (Rift) Wound": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Mutilation",
                     "Thrax (Shrowd)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Shrowd))",
-                    "Torg (C) Speed": "$t(terms.behemoths.Torgadoro) (C) Speed",
-                    "Torg (C) Survival": "$t(terms.behemoths.Torgadoro) (C) Survival",
+                    "Torg (C) Speed": "$t(terms.behemoths.Torgadoro) (C) Vitesse",
+                    "Torg (C) Survival": "$t(terms.behemoths.Torgadoro) (C) Survie",
                     "Torg (Charrogg)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Charrogg))",
                     "Torg (H) Speed": "$t(terms.behemoths.Torgadoro) Vitesse (H)",
                     "Torg (H) Survival": "$t(terms.behemoths.Torgadoro) Survie (H)",
@@ -162,14 +162,14 @@
                     "Torg (Hellion) Wound": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion)) Blessé",
                     "Torg (hellion)": "$t(terms.behemoths.Torgadoro) (hellion)",
                     "Urska (Boreus)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Boreus))",
-                    "Urska (F)    Speed": "$t(terms.behemoths.Urska) (F) Speed",
-                    "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Speed",
-                    "Urska (F) Speed": "$t(terms.behemoths.Urska) (F) Speed",
-                    "Urska (F) Survival": "$t(terms.behemoths.Urska) (F) Survival",
+                    "Urska (F)    Speed": "$t(terms.behemoths.Urska) (F) Vitesse",
+                    "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Vitesse",
+                    "Urska (F) Speed": "$t(terms.behemoths.Urska) (F) Vitesse",
+                    "Urska (F) Survival": "$t(terms.behemoths.Urska) (F) Survie",
                     "Urska (Frostwülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
                     "Urska (Pangar)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Pangar))",
                     "Urska (Wülf)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf))",
-                    "Urska (Wülf) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Wound",
+                    "Urska (Wülf) Wound": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Frostwülf)) Mutilation",
                     "Valomyr": "$t(terms.behemoths.Valomyr)"
                 },
                 "categories": {
@@ -190,10 +190,10 @@
                         "name": "Discipline"
                     },
                     "Escalations": {
-                        "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear. ",
+                        "description": "Build pour Ascensions. Inclus des builds sans équipements d'ascension et d'épreuve.",
                         "name": "Ascensions",
                         "subcategoryDescription": {
-                            "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive.",
+                            "heroics": "Builds pour les Ascensions Héroïques. Utilisent Catalyse. Toniques recommandés : Furie, Frappe éclair, Surcharge d'aether.",
                             "legendaries": "Builds pour les Ascensions.",
                             "preEsca": "Build pour les ascensions. Ils ne contiennent pas de cellule issues des épreuve ni d'équipement d'ascension."
                         }
@@ -207,7 +207,7 @@
                         "name": "Sang froid"
                     },
                     "Revenant": {
-                        "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 115 healing over 10 seconds — after Revenant expires.",
+                        "description": "Spectre est une Omnicellule à haut risque et haute récompense doté d'une capacité active qui consomme jusqu'à 500 HP pour invoquer jusqu'à cinq tentacules d'ombres qui infligent des dégâts élevés et vous mettent dans l'état Spectre. Lorsque les tentacules d'ombres touchent une cible, elles génèrent des orbes du Vide, et leur collecte vous donne des stacks du Vide, chacune augmentant de 4% les dégâts en état Spectre, une extension de 1 seconde à l'état Spectre et 115 soins sur 10 secondes - après l'expiration de l'état Spectre.",
                         "name": "Spectre"
                     },
                     "Tempest": {
@@ -256,29 +256,29 @@
             "description": "Les builds méta sont pour les épreuves, ce ne sont pas des builds pour de la chasse en général.",
             "generated": {
                 "tips": {
-                    "Boreus [*].0": "You can use the Bombers and the Weak Spot to delay Boreus' Aethercharge. (the shield phase)",
+                    "Boreus [*].0": "Vous pouvez utiliser les Bombardiers et le point faible pour retarder la charge d'aether du Boreus. (la phase du bouclier)",
                     "Charrogg.0": "Le coup du bras gauche du Charrogg ne vous touche pas si vous êtes près de son cou.",
                     "Charrogg.1": "Les parties les plus faibles du Charrogg sont les flammes (1 de chaque côté de là tête, 1 de chaque côté de là queue).",
                     "Embermane.0": "Utilisez l'Embermane pour vous protéger des orbes du pylône foudroyant.",
                     "Gnasher.0": "Vous pouvez provoquer l'interruption d'un Gnasher en vous approchant de lui au début du combat. Le temps de recharge se réinitialise en rage.",
                     "Kharabak.0": "Ne vous faites pas toucher par les abeilles.",
                     "Kharabak.1": "*Pour les armes centrées sur les blessures, utilisez un tonique de furie au lieu de surcharge d'aether",
-                    "Koshai.0": "You can bait the frontal interrupt into the turn-around interrupt in a loop.",
+                    "Koshai.0": "Vous pouvez forcer l'interruption frontale et l'interruption de rotation en boucle.",
                     "Koshai.1": "Comme tous les Behemoths, la rage du Koshai réinitialise le chronomètre de l'interruption, placez-vous pour l'appâter dès la fin de l'animation.",
                     "Koshai.2": "Les bois du Koshai poussent environ au bout de 1 minute, soyez prêt pour la fenêtre de dégâts qui suit.",
                     "Pangar.0": "L'attaque d'interruptible du Pangar est très facile à provoquer (ne le fait que deux fois à la suite seulement), et le temps de recharge est réinitialisé en cas d'enragement.",
                     "Pangar.1": "L'attaque interruptible du Pangar est actuellement bugué et ne fait aucun dommage avant la fin de celui-ci, alors utilisez-le pour des interruptions extrêmement faciles.",
                     "Quillshot.0": "Vous pouvez créer un bouclier sur la plateforme.",
                     "Rezakiri.0": "Assurez-vous d'utiliser Revenant entre 500 et 600 PV pour garder l'effet unique de l'arme du Shrowd actif.",
-                    "Shadowtouched Koshai.0": "You can bait the interrupt at the start pretty easily, and the turn-around interrupt afterwards, just like normal Koshai.",
+                    "Shadowtouched Koshai.0": "Vous pouvez forcer l'interruption au début assez facilement, et l'interruption de rotation par la suite, tout comme le Koshai normal.",
                     "Shadowtouched Koshai.1": "La deuxième fois que le Koshai Assombri entre dans le sol, il re-apparaître le plus loin possible de vous quelque part dans l'arène et tire des orbes obscurs, pendant ce temps, il est extrêmement vulnérable aux dégâts.",
                     "Shadowtouched Nayzaga.0": "Tout comme le Nayzaga normal, U. Le Nayzaga commence le combat avec sa double glissade interruptible.",
-                    "Shadowtouched Nayzaga.1": "Nayzaga's clone-summoning stomp doesn't deal damage, only the clone does.",
+                    "Shadowtouched Nayzaga.1": "Le coup qui fait apparaitre le clone du Nayzaga n'inflige pas de dégâts, seul le clone fait.",
                     "Shadowtouched Nayzaga.2": "Après qu'il soit entré dans son portail, préparez-vous à l'interruption.",
                     "Shrike.0": "La tête et les ailes sont les membres les plus faibles du Shrike.",
                     "Shrike.1": "Le Shrike peut être interrompu instantanément après sont enragement.",
                     "Shrowd.0": "Vous pouvez utiliser la parade de discipline si vous sautez sur le Shrowd dès qu'il se téléporte.",
-                    "Skarn.0": "If not using blunt weapons (strikers, hammer) focus the tail during enrage, the rock hitbox has a big gap there.",
+                    "Skarn.0": "Si vous n'utilisez pas d'armes contondantes (cestes, marteau), concentre les dégâts sur la queue pendant l'enragement, la hitbox des cailloux est un espacement à cet endroit-là.",
                     "Skarn.1": "Contrairement aux autres armes, les répéteurs préfèrent le lien Drask parce que vous voudrez viser la tête pendant toute la partie.",
                     "Thunderdeep Drask.0": "Il est un gars rapide."
                 },
