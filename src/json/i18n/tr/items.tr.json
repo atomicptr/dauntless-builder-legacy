@@ -6,7 +6,7 @@
     "item.armours.adversarys-pride.description": "$t(item.armours.adversarys-drive.description)",
     "item.armours.adversarys-pride.name": "Adversary's Pride",
     "item.armours.adversarys-wrath.description": "$t(item.armours.adversarys-drive.description)",
-    "item.armours.adversarys-wrath.name": "Adversary's Wrath",
+    "item.armours.adversarys-wrath.name": "Düşmanın Gazabı",
     "item.armours.aegis-of-valour.description": "$t(item.armours.adversarys-drive.description)",
     "item.armours.aegis-of-valour.name": "Aegis of Valour",
     "item.armours.agaric-bole.description": "$t(item.armours.adversarys-drive.description)",
