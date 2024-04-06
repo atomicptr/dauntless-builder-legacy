@@ -16,7 +16,7 @@
             "unfavorite-build": "Bu build'i favorilerimden kaldır"
         },
         "build-warning": {
-            "invalid-build": "Due to changes in Dauntless this build is no longer compatible with the current version of Dauntless Builder, one or more parts have been removed in order to display it.",
+            "invalid-build": "Dauntless'taki değişiklikler nedeniyle bu build artık Dauntless Builder'ın mevcut sürümüyle uyumlu değildir, görüntülemek için bir veya daha fazla parça kaldırılmıştır.",
             "upgraded-build": "Bu build, Dauntless'ın daha önceki bir sürümü için hazırlanmış olup güncel olmayabilir."
         },
         "event-marker": "Bu öğe bir etkinliğin parçasıydı ve artık elde edilebilir olmayabilir.",
@@ -46,7 +46,7 @@
         "github-repository": "Github Reposu",
         "patch-url": "https://playdauntless.com/patch-notes/{{version}}",
         "something-went-wrong": "Bir şeyler ters gitti! Lütfen aşağıdaki hata kaydını Discord üzerinden bana gönderin ve web sitesini yeniden yüklemeyi deneyin. Çok teşekkür ederim!",
-        "x-twitter": "Dauntless Builder on X.com"
+        "x-twitter": "Dauntless Builder X.com Hesabı"
     },
     "pages": {
         "404": {
@@ -68,7 +68,7 @@
         "build": {
             "click-here-to-select": "Seçmek için buraya tıklayın.",
             "copy-build-to-finder": "Build bulucuda ara",
-            "filter-by": "{{name}}'e göre filtrele",
+            "filter-by": "{{name}} seçerek filtrele",
             "no-perks": "Hiçbir perk bulunmuyor.",
             "no-x-selected": "<b>{{name}}</b> seçilmedi.",
             "part-select-dialog-title": "Silah parçasını seçin",
@@ -148,8 +148,8 @@
                     "Rezakiri": "$t(terms.behemoths.Rezakiri)",
                     "Riftstalker": "$t(terms.behemoths.Riftstalker)",
                     "Sahvyt": "$t(terms.behemoths.Sahvyt)",
-                    "Thrax (R) Speed": "$t(terms.behemoths.Thrax) (R) Speed",
-                    "Thrax (R) Survival": "$t(terms.behemoths.Thrax) (R) Survival",
+                    "Thrax (R) Speed": "$t(terms.behemoths.Thrax) (R) Hız",
+                    "Thrax (R) Survival": "$t(terms.behemoths.Thrax) (R) Hayatta Kalma",
                     "Thrax (Rift)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker))",
                     "Thrax (Rift) Wound": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Yaralama",
                     "Thrax (Shrowd)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Shrowd))",
@@ -160,7 +160,7 @@
                     "Torg (H) Survival": "$t(terms.behemoths.Torgadoro) (H) Hayatta Kalma",
                     "Torg (Hellion)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion))",
                     "Torg (Hellion) Wound": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion)) Yaralama",
-                    "Torg (hellion)": "$t(terms.behemoths.Torgadoro) (hellion)",
+                    "Torg (hellion)": "$t(terms.behemoths.Torgadoro) (Hellion)",
                     "Urska (Boreus)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Boreus))",
                     "Urska (F)    Speed": "$t(terms.behemoths.Urska) (F) Hız",
                     "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Hız",
@@ -178,7 +178,7 @@
                         "name": "Artificer"
                     },
                     "Bastion": {
-                        "description": "Bastion, avantaj olarak perklerden daha fazla kalkan kazanma özelliğine sahiptir ve hasar verildiğinde kalkan üretebilen pasif bir yeteneğe sahiptir. Aktif yeteneği mevcut tüm kalkanını tüketir ve tüketilen kalkana bağlı olarak hasar verir. Aktif yeteneği göz ardı etmek potansiyel hasarınızı önemli ölçüde düşürür.",
+                        "description": "Bastion, yeteneklerden daha yüksek kalkan kazanımı ve hasar verildiğinde kalkan üretme pasif yeteneğine sahiptir. Aktif yeteneği, sahip olduğunuz tüm kalkanı tüketir ve tüketilen kalkan miktarına bağlı olarak hasar verir. Aktif yeteneği ihmal etmek, potansiyel hasarınızı önemli ölçüde azaltır.",
                         "name": "Bastion"
                     },
                     "Catalyst": {
@@ -186,7 +186,7 @@
                         "name": "Catalyst"
                     },
                     "Discipline": {
-                        "description": "Discipline, riskli ama kazançlı bir Omnicell'dir. Doğru zamanlamayla kullanıldığında size kritik hasar stack'leri veren yüksek hasarlı bir savuşturma yeteneğine sahiptir. Maksimum stack'lere ulaşıldığında yüksek miktarda kritik şans sağlar.",
+                        "description": "Discipline, riskli ama kazançlı bir Omnicell'dir. Doğru zamanlamayla kullanıldığında size kritik hasar yükleri veren yüksek hasarlı bir savuşturma yeteneğine sahiptir. Maksimum yüke ulaşıldığında yüksek miktarda kritik şansı sağlar.",
                         "name": "Discipline"
                     },
                     "Escalations": {
@@ -194,7 +194,7 @@
                         "name": "Escalation",
                         "subcategoryDescription": {
                             "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive.",
-                            "legendaries": "Builds for the various Escalations.",
+                            "legendaries": "Çeşitli Escalation'lar için Oluşturulan Build'ler.",
                             "preEsca": "Builds for the various Escalations. Contains no Trials cells nor Escalation gear."
                         }
                     },
@@ -203,15 +203,15 @@
                         "name": "Egzotikler"
                     },
                     "Iceborne": {
-                        "description": "Iceborne provides lifesteal and damage reduction the less health you have, with an active ability that grants hyperarmor and more lifesteal. The active deals more damage when used at maximum health.",
+                        "description": "Iceborne, sahip olduğunuz can miktarı azaldıkça can çalma ve hasar azaltma sağlar; ayrıca, hiperzırh ve daha fazla can çalma imkanı veren aktif bir yeteneğe sahiptir. Bu aktif yetenek, maksimum can seviyesindeyken kullanıldığında daha fazla hasar verir.",
                         "name": "Iceborne"
                     },
                     "Revenant": {
-                        "description": "Revenant, riskli ama kazançlı bir Omnicell'dir. Bu Omnicell, 500 HP tüketen aktif bir yetenek kullanarak en fazla beş gölge sarmaşığı çağırır. Bu gölge sarmaşıkları yüksek hasar verir ve seni Revenant durumuna sokar. Sarmaşıklar hedefi vurduğunda, karanlık küreler oluştururlar. Onları toplamak, Revenant durumundayken %4 ek hasar, Revenant durumunun 1 saniye uzaması ve Revenant sona erdikten sonra 10 saniye boyunca 115 iyileşme sağlar.",
+                        "description": "Revenant, riskli ama kazançlı bir Omnicell'dir. Revenant, 500 HP tüketen aktif bir yetenek kullanarak en fazla beş gölge sarmaşığı çağırır. Bu gölge sarmaşıkları yüksek hasar verir ve seni Revenant durumuna sokar. Sarmaşıklar hedefi vurduğunda, karanlık küreler oluştururlar. Küreleri toplamak, Revenant durumundayken %4 ek hasar, Revenant durumunun 1 saniye uzaması ve Revenant sona erdikten sonra 10 saniye boyunca 115 iyileşme sağlar.",
                         "name": "Revenant"
                     },
                     "Tempest": {
-                        "description": "Tempest, pasif olarak saldırı hızına %10 bonus sağlar ve saldırılardan kaçarken Hız stackleri biriktirebilir. Biriktirdiğiniz stackleri kullanarak hızlıca atılırsınız ve mevcut hareket hızınıza bağlı olarak hasar verirsiniz. Bonus hasar sadece sağlam parçalara uygulanır.",
+                        "description": "Tempest, pasif olarak saldırı hızına %10 bonus sağlar ve saldırılardan kaçarken Hız yükleri biriktirebilir. Biriktirdiğiniz yükleri kullanarak hızlıca atılırsınız ve mevcut hareket hızınıza bağlı olarak hasar verirsiniz. Bonus hasar sadece sağlam parçalara uygulanır.",
                         "name": "Tempest"
                     }
                 },
@@ -222,7 +222,7 @@
                 "The Hunger": "The Hunger",
                 "heroics": "Destansı",
                 "legendaries": "Efsanevi",
-                "preEsca": "Eskalasyon Öncesi"
+                "preEsca": "Escalation Öncesi"
             },
             "title": "Meta Buildleri",
             "vsElement": {
@@ -345,7 +345,7 @@
         "bond-weapon": "Bağlı Silah",
         "cancel": "İptal Et",
         "cell": "Cell",
-        "cell-slot": "Hücre Yuvası",
+        "cell-slot": "Cell Yuvası",
         "cell-type": {
             "Alacrity": "Alacrity",
             "Brutality": "Brutality",
