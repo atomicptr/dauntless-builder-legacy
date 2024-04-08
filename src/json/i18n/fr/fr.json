@@ -46,7 +46,7 @@
         "github-repository": "Dépôt Github",
         "patch-url": "https://playdauntless.com/fr/patch-notes/{{version}}",
         "something-went-wrong": "Quelque chose s'est mal passé ! S'il vous plaît envoyez le log d'erreur ci-dessous dans notre Discord et essayez de recharger le site Web. Merci beaucoup !",
-        "x-twitter": "Dauntless Builder sur X.com"
+        "x-twitter": "X"
     },
     "pages": {
         "404": {
