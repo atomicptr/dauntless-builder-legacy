@@ -27,7 +27,7 @@
         "item-select-dialog": {
             "select-text": "{{name}} Seç"
         },
-        "recommended": "This item is verified as being great please use it."
+        "recommended": "Bu öğenin harika olduğu doğrulanmıştır, lütfen kullanın."
     },
     "drawer": {
         "about": "$t(pages.about.title)",
@@ -76,7 +76,7 @@
             "power-surged-remove": "Temel Güç",
             "title": "{{weaponName}} {{omnicell}} Build",
             "toggle-filters": "Filtrelerin görünürlüğünü değiştir",
-            "toggle-unique-effects": "Benzersiz efektlerin görünürlüğünü değiştir"
+            "toggle-unique-effects": "Benzersiz etkilerin görünürlüğünü değiştir"
         },
         "build-finder": {
             "builds-title": "Buildler ({{num}})",
@@ -92,8 +92,8 @@
             "perk-matching-enabled": "Akıllı perk seçimini etkinleştirin (Yüksek kaynak tüketimine yol açar, performans sorunları fark ederseniz bunu işaretlemeyin)",
             "perks-title": "$t(terms.perks)",
             "preselect-title": "Dizilimi Seç",
-            "remove-exotics": "Egzotik Eşyaları Çıkart",
-            "remove-legendary": "Efsanevi Silahları Çıkart",
+            "remove-exotics": "Egzotik Öğeleri Hariç tut",
+            "remove-legendary": "Efsanevi Silahları Hariç Tut",
             "title": "Build Bulucu"
         },
         "favorites": {
@@ -193,7 +193,7 @@
                         "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear. ",
                         "name": "Escalation",
                         "subcategoryDescription": {
-                            "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive.",
+                            "heroics": "Çeşitli Heroic Escalationlar için buildler. Catalyst içerir. Tavsiye edilen tonikler: Frenzy, Blitz, Aetherdrive.",
                             "legendaries": "Çeşitli Escalation'lar için Oluşturulan Build'ler.",
                             "preEsca": "Builds for the various Escalations. Contains no Trials cells nor Escalation gear."
                         }
@@ -259,7 +259,7 @@
                     "Boreus [*].0": "You can use the Bombers and the Weak Spot to delay Boreus' Aethercharge. (the shield phase)",
                     "Charrogg.0": "Charrogg'ın sol kol darbesi, boynuna yakın olduğunuzda sizi vuramaz.",
                     "Charrogg.1": "Charrogg'ın en zayıf bölgesi ateş keseleridir (kafa yanlarında birer adet, karın yanlarında birer adet).",
-                    "Embermane.0": "Embermane'ı kullanarak shock pylonunun kürelerine karşı kendinizi koruyun.",
+                    "Embermane.0": "Embermane'ı kullanarak shock direğinin kürelerine karşı kendinizi koruyun.",
                     "Gnasher.0": "You can bait Gnasher's interrupt by getting close to him at the start of the fight. The cooldown resets on enrage.",
                     "Kharabak.0": "Arıların sana vurmasına izin verme.",
                     "Kharabak.1": "*For wound focused weapons use insight tonic instead of aetherdrive",
@@ -269,7 +269,7 @@
                     "Pangar.0": "Pangar's interruptable roll is very easy to bait (does it twice in a row only), and the cooldown gets reset on enrage.",
                     "Pangar.1": "Pangar's interruptable roll is currently bugged and doesn't do any damage until the very end of it, so use that for extremely easy interrupts.",
                     "Quillshot.0": "You can build Skarn lantern/Frostwülf shield on the platform.",
-                    "Rezakiri.0": "Be sure to use Revenant between 500 and 600 HP to keep Shrowd's Unique Effect active.",
+                    "Rezakiri.0": "Shrowd'un Benzersiz Etkisini aktif tutmak için Revenant'ı 500 ile 600 HP arasında kullanmaya özen gösterin.",
                     "Shadowtouched Koshai.0": "You can bait the interrupt at the start pretty easily, and the turn-around interrupt afterwards, just like normal Koshai.",
                     "Shadowtouched Koshai.1": "Shadowtouched Koshai ikinci kez yerin altına girdiğinde, arenanın mümkün olduğunca uzak bir noktasında belirir ve sana karanlık küreler fırlatır. Bu süre zarfında, hasara karşı son derece savunmasızdır.",
                     "Shadowtouched Nayzaga.0": "Just like normal Nayzaga, U. Nayzaga starts the fight with his dual slide interrupt.",
@@ -384,7 +384,7 @@
         "save": "Kaydet",
         "search": "Ara",
         "torso-armour": "Gövde Zırhı",
-        "unique-effect": "Eşsiz Etki",
+        "unique-effect": "Benzersiz Etki",
         "unselect": "Seçimi Temizle",
         "weapon": "Silah",
         "weapon-type": "Silah Türü",
