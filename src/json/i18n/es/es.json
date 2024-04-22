@@ -27,7 +27,7 @@
         "item-select-dialog": {
             "select-text": "Seleccionar {{name}}"
         },
-        "recommended": "This item is verified as being great please use it."
+        "recommended": "Se ha verificado que este artículo es excelente, úselo."
     },
     "drawer": {
         "about": "$t(pages.about.title)",
@@ -46,7 +46,7 @@
         "github-repository": "Repositorio de Github",
         "patch-url": "https://playdauntless.com/patch-notes/{{version}}",
         "something-went-wrong": "Something went wrong! Please send the error log below to me in our Discord and try to reload the website. Thank you very much!",
-        "x-twitter": "Dauntless Builder on X.com"
+        "x-twitter": "Dauntless Builder en X.com"
     },
     "pages": {
         "404": {
@@ -133,8 +133,8 @@
                     "Chrono (V) Speed": "$t(Chronovore) (V) Velocidad",
                     "Chrono (V) Survival": "$t(Chronovore) (V) Supervivencia",
                     "Chrono (Valo)": "$t(Chronovore) ($t(Valomyr))",
-                    "Disc Adrenaline": "Disc Adrenaline",
-                    "Disc Impulse": "Disc Impulse",
+                    "Disc Adrenaline": "Disc Adrenalina",
+                    "Disc Impulse": "Disc Impulso",
                     "Disc Pred": "Disc Pred",
                     "Disc Sav": "Disc Sav",
                     "Hellion": "$t(terms.behemoths.Hellion)",
@@ -193,7 +193,7 @@
                         "description": "Equipamientos para hacer frente a las Escaladas. Incluye equipamientos sin equipo de Escaladas y Retos. ",
                         "name": "Escaladas",
                         "subcategoryDescription": {
-                            "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive.",
+                            "heroics": "Equipamiento para las Escaladas Heroicas. Usa Catalizador. Tónicos recomendados: Frenesí, Fervor, Afinación Aethérica.",
                             "legendaries": "Equipamientos para varias escaladas.",
                             "preEsca": "Equipamiento para varias escaladas. No contiene células de retos o equipo de escalada."
                         }
