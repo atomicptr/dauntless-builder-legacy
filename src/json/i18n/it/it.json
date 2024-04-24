@@ -347,23 +347,23 @@
         "cell": "Cella",
         "cell-slot": "Slot cella",
         "cell-type": {
-            "Alacrity": "Alacrity",
-            "Brutality": "Brutality",
-            "Finesse": "Finesse",
-            "Fortitude": "Fortitude",
-            "Insight": "Insight",
-            "Prismatic": "Prismatic"
+            "Alacrity": "Alacrità",
+            "Brutality": "Brutalità",
+            "Finesse": "Eleganza",
+            "Fortitude": "Vigore",
+            "Insight": "Intuizione",
+            "Prismatic": "Prismatica"
         },
         "cells": "Celle",
-        "close": "Close",
-        "elemental-type": "Element",
+        "close": "Chiudi",
+        "elemental-type": "Elemento",
         "elemental-types": {
-            "Blaze": "Blaze",
-            "Frost": "Frost",
-            "Radiant": "Radiant",
-            "Shock": "Shock",
-            "Terra": "Terra",
-            "Umbral": "Umbral"
+            "Blaze": "Ardente",
+            "Frost": "Gelida",
+            "Radiant": "Radiante",
+            "Shock": "Folgorante",
+            "Terra": "Terrestre",
+            "Umbral": "Oscura"
         },
         "head-armour": "Elmo",
         "hold": "Hold",
