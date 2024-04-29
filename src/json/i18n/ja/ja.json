@@ -5,21 +5,21 @@
     "app-name": "Dauntless Builder",
     "components": {
         "build-menu": {
-            "added-build-to-favorites": "Added build \"{{name}}\" to favorites.",
+            "added-build-to-favorites": "お気に入りにビルド \"{{name}}\" を追加しました。",
             "build-name": "ビルドの名前",
             "copied-to-clipboard": "クリップボードにコピーされました",
             "copy-to-clipboard": "クリップボードにコピー",
-            "favorite-build": "Add this build to your favorites",
-            "open-last-edited-build": "Open your last edited build",
-            "remove-build-from-favorites": "Removed build \"{{name}}\" from favorites.",
-            "set-build-name": "Set Build Name",
+            "favorite-build": "このビルドをお気に入りに追加",
+            "open-last-edited-build": "前回編集したビルドを開く",
+            "remove-build-from-favorites": "お気に入りからビルド \"{{name}}\" を削除しました。",
+            "set-build-name": "ビルド名を設定",
             "unfavorite-build": "マイビルドから削除"
         },
         "build-warning": {
-            "invalid-build": "Due to changes in Dauntless this build is no longer compatible with the current version of Dauntless Builder, one or more parts have been removed in order to display it.",
-            "upgraded-build": "This build was made for an earlier version of Dauntless and might be outdated."
+            "invalid-build": "Dauntlessの仕様変更により、このビルドはDauntlessビルダーの現在のバージョンと互換性がなくなりました。 そのため、変更されなかった装備品だけを表示しています。",
+            "upgraded-build": "このビルドは以前のバージョンのDauntless用に作られており、最新バージョンでは利用出来ない可能性があります。"
         },
-        "event-marker": "This item was part of an event and might not be obtainable anymore.",
+        "event-marker": "このアイテムはイベント限定品のため、もう入手できない可能性があります。",
         "item-picker": {
             "lantern-hold-line": "<b>$t(terms.hold)</b>: {{hold}}",
             "omnicell-passive-line": "<b>$t(terms.passive)</b>: {{passive}}"
@@ -27,7 +27,7 @@
         "item-select-dialog": {
             "select-text": "{{name}} を選択"
         },
-        "recommended": "This item is verified as being great please use it."
+        "recommended": "このアイテムは使って楽しいものだと検証されている"
     },
     "drawer": {
         "about": "$t(pages.about.title)",
@@ -39,14 +39,14 @@
         "settings": "$t(pages.settings.title)",
         "trials": "$t(pages.trials.title)"
     },
-    "feature-disabled-browser": "This feature is currently disabled for this web browser.",
+    "feature-disabled-browser": "この機能は現在、このウェブブラウザで無効になっています。",
     "misc": {
         "dauntless-version": "ドーントレスパッチ{{version}}",
         "discord-server": "Dauntless Builder Discordサーバー",
         "github-repository": "Githubリポジトリ",
         "patch-url": "https://playdauntless.com/ja/patch-notes/{{version}}",
-        "something-went-wrong": "Something went wrong! Please send the error log below to me in our Discord and try to reload the website. Thank you very much!",
-        "x-twitter": "Dauntless Builder on X.com"
+        "something-went-wrong": "不具合が発生しました！Discordで以下のエラーログを送信し、ウェブサイトを再読み込みしてください。ご協力ありがとうございます！",
+        "x-twitter": "X.comに掲載されているDauntlessビルダー"
     },
     "pages": {
         "404": {
@@ -54,55 +54,55 @@
         },
         "about": {
             "assets": "アセット",
-            "assets-text": "All Dauntless related assets are the intellectual property of Phoenix Labs.",
-            "build-info": "Last update: {{buildString}}",
+            "assets-text": "Dauntless関連資産はすべてPhoenix Labsの知的財産です。",
+            "build-info": "最終更新日: {{buildString}}",
             "contributors": "貢献者",
-            "dependencies": "Dependencies ({{number}})",
-            "main-text": "Dauntless Builder is free and open source software licensed under the terms of the <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> license.",
+            "dependencies": "関連するもの（{{number}} 個）",
+            "main-text": "Dauntlessビルダーは、 <a style=\"color: #fff;\" href=\"{{licenseUrl}}\" target=\"_blank\">AGPLv3</a> ライセンスの条項に基づいてライセンスされているフリーでオープンソースのソフトウェアです。",
             "privacy": "プライバシー",
-            "privacy-text": "We are not collecting any data.",
+            "privacy-text": "データは収集していません。",
             "source-code": "ソースコード",
             "title": "について",
             "translators": "訳者"
         },
         "build": {
-            "click-here-to-select": "Click here to select one.",
-            "copy-build-to-finder": "Copy build to Finder",
-            "filter-by": "Filter by {{name}}",
-            "no-perks": "No perks available.",
-            "no-x-selected": "No <b>{{name}}</b> selected.",
-            "part-select-dialog-title": "Select weapon part",
+            "click-here-to-select": "クリックして選択",
+            "copy-build-to-finder": "Finderにビルドをコピー",
+            "filter-by": "{{name}} でフィルター",
+            "no-perks": "パークがありません。",
+            "no-x-selected": "<b>{{name}}</b> が選択されていません。",
+            "part-select-dialog-title": "武器の種類を選択",
             "power-surged-add": "パワー活性",
-            "power-surged-remove": "Base Power",
+            "power-surged-remove": "基本攻撃力",
             "title": "{{weaponName}} {{omnicell}} ビルド",
-            "toggle-filters": "Toggle display of filters",
-            "toggle-unique-effects": "Toggle display of unique effects"
+            "toggle-filters": "フィルターの表示を切り替える",
+            "toggle-unique-effects": "ユニークエフェクトの表示を切り替える"
         },
         "build-finder": {
-            "builds-title": "Builds ({{num}})",
-            "clear-items": "Clear Items",
-            "clear-perks": "Clear All Perks",
-            "dev-number-of-builds": "Number of Builds: {{num}}",
-            "dev-number-of-perks": "Number of Perks selected: {{num}}",
+            "builds-title": "ビルド ({{num}})",
+            "clear-items": "項目をクリア",
+            "clear-perks": "すべてのパークを削除",
+            "dev-number-of-builds": "ビルドの数： {{num}}",
+            "dev-number-of-perks": "選択したパーク数: {{num}}",
             "dev-options-title": "開発者向けオプション",
             "dev-set-perks": "パークを選択",
-            "filter-perks": "Filter Perks...",
+            "filter-perks": "パークをフィルターする",
             "filter-title": "フィルター",
-            "options-title": "Options",
-            "perk-matching-enabled": "Enable smart perk selection (High performance costs, if you notice performance issues uncheck this)",
+            "options-title": "オプション",
+            "perk-matching-enabled": "スマートパークの選択を有効にします（パフォーマンスの問題に気付いた場合は、チェックを外してください）",
             "perks-title": "$t(terms.perks)",
-            "preselect-title": "Select Items",
-            "remove-exotics": "Remove Exotic Items",
-            "remove-legendary": "Remove Legendary Weapons",
+            "preselect-title": "項目を選択",
+            "remove-exotics": "エキゾチックアイテムを削除",
+            "remove-legendary": "レジェンダリー武器を削除",
             "title": "ビルドファインダー"
         },
         "favorites": {
             "build-name": "ビルドの名前",
-            "edit-name": "Edit Favorite Name",
+            "edit-name": "お気に入りの名前を編集",
             "title": "マイビルド"
         },
         "home": {
-            "contributing-text": "If you're interested in contributing code or especially localizations please head over to our <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a>!",
+            "contributing-text": "コードの貢献や、特にローカライズに興味がある場合は、 <a style='color: white;' href='{{githubUrl}}' target='_blank'>GitHub</a> をご覧ください!",
             "contributing-title": "貢献",
             "links": {
                 "discord": "Discord",
@@ -110,11 +110,11 @@
                 "localize": "アプリの翻訳を協力してください"
             },
             "links-title": "リンク",
-            "localization-text": "Dauntless Builder now supports localizations, please head over to the Settings page and select your preferred language if it wasn't already picked up automatically! If that language is currently unsupported and you'd be interested in helping, please read the \"Contributing\" section below.",
+            "localization-text": "Dauntlessビルダーでローカライズがサポートされるようになりました。設定ページに移動し、自動的に言語が設定されていない場合は再設定してください。 その言語が現在サポートされておらず、ヘルプに興味がある場合は、以下の「貢献」の項目をお読みください。",
             "localization-title": "ローカリゼーション",
             "test-builds": "テストビルド",
             "title": "ホーム",
-            "welcome-text": "a free and open source web application for creating and sharing builds for the popular free to play monster hunting game Dauntless.",
+            "welcome-text": "ハンティングゲームDauntlessをプレイするためのビルドを作成し、共有するための無料のオープンソースのWebアプリケーションです",
             "welcome-title": "Dauntless Builderへようこそ"
         },
         "metabuilds": {
