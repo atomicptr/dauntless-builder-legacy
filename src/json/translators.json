@@ -60,16 +60,16 @@
         "username": "Shadowrunner"
     },
     {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16155318/medium/2e4663f3328003eb288d50575005b137.jpeg",
+        "contributions": 302,
+        "proofreader": false,
+        "username": "o0oMaRcUso0o"
+    },
+    {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15575103/medium/6978a2772d6b420610ab6893d21583a2_default.png",
         "contributions": 266,
         "proofreader": false,
         "username": "ezIvan"
-    },
-    {
-        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16155318/medium/2e4663f3328003eb288d50575005b137.jpeg",
-        "contributions": 263,
-        "proofreader": false,
-        "username": "o0oMaRcUso0o"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15850385/medium/675bc3b9ee60fefba3d417341c70539d.jpg",
@@ -430,11 +430,5 @@
         "contributions": 1,
         "proofreader": false,
         "username": "sahanonurt"
-    },
-    {
-        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16338274/medium/deeecd33e19d6292c597b849c6157c05.png",
-        "contributions": 1,
-        "proofreader": false,
-        "username": "sakuragi787567643"
     }
 ]
