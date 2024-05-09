@@ -497,16 +497,16 @@ const Build: React.FC = () => {
                     sm={12}
                     sx={{ width: isMobile ? "100%" : undefined }}
                 >
+                    {isMobile ? <PerkListMobile /> : <PerkList />}
+
                     <ConstraintBox constraints={[]}>
                         <CenterBox>
                             <AdSpace
                                 name={playwireUnitUnderPerkList}
-                                unitType={UnitType.MediumRect}
+                                unitType={UnitType.RightRail}
                             />
                         </CenterBox>
                     </ConstraintBox>
-
-                    {isMobile ? <PerkListMobile /> : <PerkList />}
 
                     <Button
                         onClick={onCopyBuildToFinderButtonClicked}

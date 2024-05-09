@@ -11,12 +11,14 @@ export enum UnitType {
     BottomRail = "bottom_rail",
     Skyscraper = "sky_atf",
     MediumRect = "med_rect_atf",
+    RightRail = "right_rail",
 }
 
 export const adSpaceSize = {
     [UnitType.BottomRail]: { height: 50, width: 320 },
     [UnitType.Skyscraper]: { height: 600, width: 160 },
     [UnitType.MediumRect]: { height: 250, width: 300 },
+    [UnitType.RightRail]: { height: 600, width: 120},
 };
 
 interface AdSpaceProps {
