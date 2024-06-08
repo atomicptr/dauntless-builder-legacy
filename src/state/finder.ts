@@ -3,11 +3,9 @@ import { findArmourByName, findWeaponByName, mapIdByName } from "@src/data/Build
 import { ItemType } from "@src/data/ItemType";
 import dauntlessBuilderNamesMap, { NamesMapType } from "@src/data/NamesMap";
 import { Weapon, WeaponType } from "@src/data/Weapon";
-import { stateIdent } from "@src/state/common";
 import { buildIdsDecode, buildIdsEncode } from "@src/utils/build-id";
 import sortObjectByKeys from "@src/utils/sort-object-by-keys";
 import { atom } from "jotai";
-import { atomWithStorage } from "jotai/utils";
 import { match } from "ts-pattern";
 
 export interface AssignedPerkValue {
@@ -31,7 +29,7 @@ export interface BuildFinderSelectionState {
     pickerLegs: Armour | null;
 }
 
-export const finderAtom = atomWithStorage<BuildFinderSelectionState>(stateIdent("buildFinderSelection"), {
+export const finderAtom = atom<BuildFinderSelectionState>({
     pickerArms: null,
     pickerHead: null,
     pickerLegs: null,

@@ -424,7 +424,8 @@ export class MetaBuildsStep extends WithStepLogger implements Step {
         subcategory: string | null = null,
         element: string | null = null,
     ): MetaBuildsBuild | string {
-        const regex = /=[a-zA-Z]+\(\\?"https:\/\/www\.dauntless-builder\.com\/b\/([a-zA-Z0-9_.\-~]+)\\?",\s*\\?"(.*)\\?"\)/g;
+        const regex =
+            /=[a-zA-Z]+\(\\?"https:\/\/www\.dauntless-builder\.com\/b\/([a-zA-Z0-9_.\-~]+)\\?",\s*\\?"(.*)\\?"\)/g;
         const matches = regex.exec(entry.replace("\n", " "));
 
         if (!matches) {

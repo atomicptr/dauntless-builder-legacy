@@ -1,6 +1,5 @@
 import { WeaponType } from "@src/data/Weapon";
-import { stateIdent } from "@src/state/common";
-import { atomWithStorage } from "jotai/utils";
+import { atom } from "jotai";
 
 export interface MetaBuildsSelectionState {
     weaponType: WeaponType;
@@ -8,7 +7,7 @@ export interface MetaBuildsSelectionState {
     showNote: boolean;
 }
 
-export const metaBuildsAtom = atomWithStorage(stateIdent("metaBuildsSelection"), {
+export const metaBuildsAtom = atom<MetaBuildsSelectionState>({
     buildCategoryIndex: 0,
     showNote: true,
     weaponType: WeaponType.Sword,
