@@ -191,7 +191,7 @@
                     },
                     "Escalations": {
                         "description": "Builds for tackling Escalations. Includes builds without Escalation & Trials gear. ",
-                        "name": "Escalations",
+                        "name": "Eskalationen",
                         "subcategoryDescription": {
                             "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive.",
                             "legendaries": "Builds for the various Escalations.",
@@ -220,7 +220,7 @@
             "note": "Die Builds die hier aufgelistet sind wurden automatisch von der <a href='{{spreadsheetLink}}' target='_blank' style='color: white;'>Community Meta Builds Tabelle</a> extrahiert, solltest du Feedback haben bitte gib dies an die Leute im #meta-discussion Channel im <a href='{{officialDiscordServer}}' target='_blank' style='color: white;'>offiziellen Dauntless Discord Server</a>!",
             "subcategories": {
                 "The Hunger": "Der Hunger",
-                "heroics": "Heroics",
+                "heroics": "Heroisch",
                 "legendaries": "Legendäre",
                 "preEsca": "Pre-Escalation"
             },
@@ -257,7 +257,7 @@
             "generated": {
                 "tips": {
                     "Boreus [*].0": "You can use the Bombers and the Weak Spot to delay Boreus' Aethercharge. (the shield phase)",
-                    "Charrogg.0": "Charrogg's left arm slam doesn't hit you if you are close to its neck.",
+                    "Charrogg.0": "Charroggs linker Armschlag trifft dich nicht, wenn du dich in der Nähe seines Halses befindest.",
                     "Charrogg.1": "Charrogg's weakest parts are the firesacs (1 on each side of the head, 1 on each side of the belly).",
                     "Embermane.0": "Use Embermane to protect yourself from the shock pylon's orbs.",
                     "Gnasher.0": "You can bait Gnasher's interrupt by getting close to him at the start of the fight. The cooldown resets on enrage.",
