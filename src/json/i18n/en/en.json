@@ -159,7 +159,6 @@
                     "Torg (H) Survival": "$t(terms.behemoths.Torgadoro) (H) Survival",
                     "Torg (Hellion)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion))",
                     "Torg (Hellion) Wound": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion)) Wound",
-                    "Torg (hellion)": "$t(terms.behemoths.Torgadoro) (hellion)",
                     "Urska (Boreus)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Boreus))",
                     "Urska (F)    Speed": "$t(terms.behemoths.Urska) (F) Speed",
                     "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Speed",
@@ -176,7 +175,7 @@
                         "name": "Artificer"
                     },
                     "Bastion": {
-                        "description": "Bastion features higher shield gain from perks and the passive ability to generate shields when damage is dealt. Its active ability consumes all the shield you currently have and deals damage based on how much shield was consumed. Neglecting the active ability significantly lowers your potential damage.",
+                        "description": "Bastion features faster shield gain from perks and the passive ability to generate shields when damage is dealt. Its active ability consumes all the shield you currently have and deals damage based on how much shield was consumed. Neglecting the active ability significantly lowers your potential damage.",
                         "name": "Bastion"
                     },
                     "Catalyst": {
