@@ -19,7 +19,7 @@ const VirtualizedList: React.FC<VirtualizedListProps> = ({
     const rowHeights = useRef<{ [index: number]: number }>({});
 
     const getRowHeight = (index: number) =>
-        index in rowHeights.current ? rowHeights.current[index] : defaultRowHeight ?? 0;
+        index in rowHeights.current ? rowHeights.current[index] : (defaultRowHeight ?? 0);
 
     const setRowHeight = (index: number, size: number) => {
         listRef.current?.resetAfterIndex(0);

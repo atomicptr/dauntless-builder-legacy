@@ -150,7 +150,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
 
     const getCells = (item: ItemPickerItem) =>
         Array.isArray((item as Weapon | Armour | Lantern | null)?.cells)
-            ? ((item as Weapon | Armour | Lantern | null)?.cells as CellType[]) ?? []
+            ? (((item as Weapon | Armour | Lantern | null)?.cells as CellType[]) ?? [])
             : [(item as Weapon | Armour | Lantern | null)?.cells];
 
     const filter = isLightMode ? "invert(100%)" : undefined;
@@ -344,7 +344,7 @@ const ItemSelectDialog: React.FC<ItemSelectDialogProps> = ({
                             </ListItem>
                         );
                     }}
-                    subtractFromHeight={showFilters ? filterAreaRef.current?.clientHeight ?? 0 : 0}
+                    subtractFromHeight={showFilters ? (filterAreaRef.current?.clientHeight ?? 0) : 0}
                 />
             </DialogContent>
 

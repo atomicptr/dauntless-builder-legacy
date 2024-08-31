@@ -178,6 +178,12 @@ export const convertVersion5To6 = (version6BuildId: string): UpgradeResult => {
 export const convertVersion6To7 = (version6BuildId: string): UpgradeResult => {
     const numbers = buildIdsDecode(version6BuildId, BuildIdsProvider.HASHIDS);
     numbers[0] = 7;
+    return { buildId: buildIdsEncode(numbers, BuildIdsProvider.SQIDS_V7), wasUpgraded: false };
+};
+
+export const convertVersion7To8 = (version7BuildId: string): UpgradeResult => {
+    const numbers = buildIdsDecode(version7BuildId, BuildIdsProvider.SQIDS_V7);
+    numbers[0] = 8;
     return { buildId: buildIdsEncode(numbers), wasUpgraded: false };
 };
 
@@ -216,6 +222,12 @@ export const upgradeBuild = (buildId: string): string => {
 
     if (buildVersion() === 6) {
         const { buildId: newBuildId, wasUpgraded } = convertVersion6To7(buildId);
+        buildId = newBuildId;
+        buildWasUpgraded = wasUpgraded;
+    }
+
+    if (buildVersion() === 7) {
+        const { buildId: newBuildId, wasUpgraded } = convertVersion7To8(buildId);
         buildId = newBuildId;
         buildWasUpgraded = wasUpgraded;
     }

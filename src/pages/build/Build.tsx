@@ -277,7 +277,7 @@ const Build: React.FC = () => {
 
     const renderCellSlots = (item: ItemPickerItem, type: ItemType) =>
         (Array.isArray((item as Weapon | Armour | Lantern | null)?.cells)
-            ? ((item as Weapon | Armour | Lantern | null)?.cells as CellType[]) ?? []
+            ? (((item as Weapon | Armour | Lantern | null)?.cells as CellType[]) ?? [])
             : [(item as Weapon | Armour | Lantern | null)?.cells]
         ).map((cellType, index) =>
             cellType ? (

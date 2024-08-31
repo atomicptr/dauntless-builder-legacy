@@ -7,7 +7,7 @@ export const validateDoCellSlotsFitInTheirSlots = (
     markBuildInvalidOnFailure: boolean,
 ): BuildModel => {
     const weaponCells = Array.isArray(build.data.weapon?.cells)
-        ? build.data.weapon?.cells ?? []
+        ? (build.data.weapon?.cells ?? [])
         : [build.data.weapon?.cells ?? null];
 
     if (build.data.weapon !== null && !doesCellFitIntoSlot(weaponCells[0] as CellType | null, build.weaponCell1)) {

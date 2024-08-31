@@ -18,7 +18,7 @@ import { WeaponType } from "@src/data/Weapon";
 
 describe("parse build (v6): YwfzTb6sgCRwU8NsZTmTKTzUPrcJC43ta5C0CQBh8eU0CvAI3whxCxXswFMvFX", () => {
     const buildId = "YwfzTb6sgCRwU8NsZTmTKTzUPrcJC43ta5C0CQBh8eU0CvAI3whxCxXswFMvFX";
-    const buildIdInCurrent = "~yoa5ZV.955k81Z28ZozstihQqEe0jYWo~OjkFOg50~orgTRYzMhgo8mFOEE5C";
+    const buildIdInCurrent = "kpTHkUfTM79mpW5_V-eDyQtZSFJ21CHOqFdO461iJsRyS3yxA4-uxBuD_16lXX";
 
     it("should be valid", () => {
         expect(BuildModel.isValid(buildId)).toBeTruthy();
@@ -73,6 +73,7 @@ describe("parse build (v6): YwfzTb6sgCRwU8NsZTmTKTzUPrcJC43ta5C0CQBh8eU0CvAI3whx
 
 describe("parse build (v7): ~yoa5ZV.955k81Z28ZozstihQqEe0jYWo~OjkFOg50~orgTRYzMhgo8mFOEE5C", () => {
     const buildId = "~yoa5ZV.955k81Z28ZozstihQqEe0jYWo~OjkFOg50~orgTRYzMhgo8mFOEE5C";
+    const buildIdInCurrent = "kpTHkUfTM79mpW5_V-eDyQtZSFJ21CHOqFdO461iJsRyS3yxA4-uxBuD_16lXX";
 
     it("should be valid", () => {
         expect(BuildModel.isValid(buildId)).toBeTruthy();
@@ -109,7 +110,7 @@ describe("parse build (v7): ~yoa5ZV.955k81Z28ZozstihQqEe0jYWo~OjkFOg50~orgTRYzMh
 
     it("should properly serialize again", () => {
         const build = BuildModel.tryDeserialize(buildId);
-        expect(build.serialize()).toBe(buildId);
+        expect(build.serialize()).toBe(buildIdInCurrent);
     });
 
     it("should be able to use build.data", () => {

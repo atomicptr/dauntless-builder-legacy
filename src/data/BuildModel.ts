@@ -14,7 +14,7 @@ import { Part, PartType } from "./Part";
 import { Perk } from "./Perks";
 import { Weapon, WeaponType } from "./Weapon";
 
-export const CURRENT_BUILD_ID = 7;
+export const CURRENT_BUILD_ID = 8;
 
 export enum BuildFlags {
     UpgradedBuild = 0b0001,
@@ -245,6 +245,7 @@ export class BuildModel {
             .with(5, () => data.length === 24) // Patch 1.7.3
             .with(6, () => data.length === 25)
             .with(7, () => data.length === 25)
+            .with(8, () => data.length === 25)
             .otherwise(() => false);
     }
 }
@@ -468,7 +469,7 @@ export const doesCellFitIntoSlot = (cellSlot: CellType | null, variantName: stri
 
 export const switchAroundWeaponCellsIfNecessary = (build: BuildModel): BuildModel => {
     const weaponCells = Array.isArray(build.data.weapon?.cells)
-        ? build.data.weapon?.cells ?? []
+        ? (build.data.weapon?.cells ?? [])
         : [build.data.weapon?.cells ?? null];
 
     if (build.weaponCell1 !== null && !doesCellFitIntoSlot(weaponCells[0], build.weaponCell1)) {
