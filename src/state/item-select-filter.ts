@@ -111,7 +111,7 @@ export const setElementFilter =
                 ...state,
                 [itemType as keyof ItemSelectFilterState]: {
                     ...state[itemType as keyof ItemSelectFilterState],
-                    elementalType: elementalType,
+                    elementTypes: elementalType,
                 },
             };
         };
