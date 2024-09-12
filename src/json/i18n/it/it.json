@@ -27,7 +27,7 @@
         "item-select-dialog": {
             "select-text": "Seleziona {{name}}"
         },
-        "recommended": "This item is verified as being great please use it."
+        "recommended": "Quest'oggetto è conosciuto per essere fantastico, per favore usalo."
     },
     "drawer": {
         "about": "$t(pages.about.title)",
@@ -45,8 +45,8 @@
         "discord-server": "Server Discord del Dauntless Builder",
         "github-repository": "Github Repository",
         "patch-url": "https://playdauntless.com/patch-notes/{{version}}",
-        "something-went-wrong": "Something went wrong! Please send the error log below to me in our Discord and try to reload the website. Thank you very much!",
-        "x-twitter": "Dauntless Builder on X.com"
+        "something-went-wrong": "Qualcosa è andato storto! Per favore invia il registro dell'errore qui sotto nel nostro Discord e prova a ricaricare il sito. Grazie mille!",
+        "x-twitter": "Dauntless Builder su X.com"
     },
     "pages": {
         "404": {
@@ -89,7 +89,7 @@
             "filter-perks": "Filtra Celle...",
             "filter-title": "Filtro",
             "options-title": "Impostazioni",
-            "perk-matching-enabled": "Enable smart perk selection (High performance costs, if you notice performance issues uncheck this)",
+            "perk-matching-enabled": "Abilita la selezione intelligente dei vantaggi (Costi elevati nelle prestazioni, se noti qualche problema con le prestazioni togli la spunta qui)",
             "perks-title": "$t(terms.perks)",
             "preselect-title": "Seleziona elementi",
             "remove-exotics": "Rimuovi oggetti esotici",
@@ -123,7 +123,7 @@
                     "Agarus (K) Speed": "$t(terms.behemoths.Agarus) (K) Rapidità",
                     "Agarus (K) Survival": "$t(terms.behemoths.Agarus) (K) Sopravvivenza",
                     "Agarus (Khar) Wound": "$t(terms.behemoths.Agarus) (Khar) Wound",
-                    "Agarus (Khara) Wound": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Wound",
+                    "Agarus (Khara) Wound": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak)) Ferita",
                     "Agarus (Kharabak)": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Kharabak))",
                     "Agarus (Koshai)": "$t(terms.behemoths.Agarus) ($t(terms.behemoths.Koshai))",
                     "Charrogg": "$t(terms.behemoths.Charrogg)",
@@ -133,10 +133,10 @@
                     "Chrono (V) Speed": "$t(terms.behemoths.Chronovore) (V) Speed",
                     "Chrono (V) Survival": "$t(terms.behemoths.Chronovore) (V) Survival",
                     "Chrono (Valo)": "$t(terms.behemoths.Chronovore) ($t(terms.behemoths.Valomyr))",
-                    "Disc Adrenaline": "Disc Adrenaline",
-                    "Disc Impulse": "Disc Impulse",
-                    "Disc Pred": "Disc Pred",
-                    "Disc Sav": "Disc Sav",
+                    "Disc Adrenaline": "Cella Adrenalina",
+                    "Disc Impulse": "Cella Impulso",
+                    "Disc Pred": "Cella del Predatore",
+                    "Disc Sav": "Cella della Ferocia",
                     "Hellion": "$t(terms.behemoths.Hellion)",
                     "Kharabak": "$t(terms.behemoths.Kharabak)",
                     "Malk (S) Speed": "$t(terms.behemoths.Malkarion) (S) Speed",
@@ -144,7 +144,7 @@
                     "Malk (Sahvyt)": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt))",
                     "Malk (Sahvyt) Wound": "$t(terms.behemoths.Malkarion) ($t(terms.behemoths.Sahvyt)) Wound",
                     "Pangar": "$t(terms.behemoths.Pangar)",
-                    "Prismedic": "Prismedic",
+                    "Prismedic": "Prismatica",
                     "Rezakiri": "$t(terms.behemoths.Rezakiri)",
                     "Riftstalker": "$t(terms.behemoths.Riftstalker)",
                     "Sahvyt": "$t(terms.behemoths.Sahvyt)",
@@ -174,26 +174,26 @@
                 },
                 "categories": {
                     "Artificer": {
-                        "description": "Artificer features a drone you can control that has multiple functions depending on what you are targeting: if targeting the ground, it creates a healing and shielding aura that blocks Behemoth's projectiles; if targeting a player it creates a healing and shielding aura that follows them; if targeting a downed slayer it revives them and creates a healing and shielding aura that follows them; and, if targeting a Behemoth, it marks a part to take extra damage.",
+                        "description": "L'Artificere dispone di un drone che è possibile controllare. Esso ha più funzioni a seconda di ciò che si sta mirando: se il bersaglio è il terreno, crea un'aura curativa e protettiva che blocca i proiettili dei Behemoth; se il bersaglio è un giocatore crea un'aura di guarigione e di protezione che segue il giocatore; se il bersaglio è un giocatore abbattuto lo fa rivivere e crea un'aura di guarigione e di protezione che lo segue; e, se si punta ad un Behemoth, ne marca una parte che subisce danni extra.",
                         "name": "Artificiere"
                     },
                     "Bastion": {
-                        "description": "Bastion features higher shield gain from perks and the passive ability to generate shields when damage is dealt. Its active ability consumes all the shield you currently have and deals damage based on how much shield was consumed. Neglecting the active ability significantly lowers your potential damage.",
+                        "description": "Il Bastione presenta un guadagno di scudi più alto dai potenziamenti e la capacità passiva di generare scudi quando viene inflitto del danno. La sua abilità attiva consuma tutto lo scudo che attualmente hai e infligge danni in base a quanto scudo è stato consumato. Trascurare l'abilità attiva può potenzialmente ridurre significativamente i tuoi danni.",
                         "name": "Bastione"
                     },
                     "Catalyst": {
-                        "description": "These are the best builds you can have for general hunting, maximizing damage and using Blitz tonics as your source of attack speed.\nRecommended tonics for maximum damage: Frenzy, Blitz, Aetherdrive.",
+                        "description": "Queste sono le migliori build che puoi avere per la caccia generale, massimizzando i danni e utilizzando il tonico incalzante come fonte di velocità di attacco.\nTonici consigliati per danni massimi: Frenesia, Incalzante, Aether.",
                         "name": "Catalizzatore"
                     },
                     "Discipline": {
-                        "description": "Discipline is a high-risk high-reward Omnicell, featuring a high damage parry ability that grants you stacks of critical damage if timed correctly and, at max stacks, grants you a high amount of critical chance.",
+                        "description": "La Disciplina è un Omnicella ad alto rischio ma anche ad alto guadagno, caratterizzata da una capacità di parata ai danni che ti permette di accumulare danni critici se viene attivata correttamente l'abilità. Al massimo delle cariche, ti garantisce una grande probabilità di critico.",
                         "name": "Disciplina"
                     },
                     "Escalations": {
                         "description": "Build per affrontare le ascese. Include build senza Equipaggiamento delle ascese / prove",
                         "name": "Ascese",
                         "subcategoryDescription": {
-                            "heroics": "Builds for the various Heroic Escalations. Uses Catalyst. Recommended tonics: Frenzy, Blitz, Aetherdrive.",
+                            "heroics": "Build per le varie ascese eroiche. Usa \"Catalizzatore\". Tonici consigliati: Frenesia, Incalzante, dell'Aether.\nIl tonico del bastione per la soppravivenza.",
                             "legendaries": "Build per le varie ascese.",
                             "preEsca": "Build per le varie ascese. Non contiene ne celle delle prove ne equipaggiamento delle ascese."
                         }
@@ -261,7 +261,7 @@
                     "Charrogg.1": "Le parti più deboli del Charrogg sono le sacche lanciafiamme (una su ogni lato della testa e del ventre).",
                     "Embermane.0": "Usa l'Embermane per proteggerti dalle sfere dei piloni elettrizzanti.",
                     "Gnasher.0": "You can bait Gnasher's interrupt by getting close to him at the start of the fight. The cooldown resets on enrage.",
-                    "Kharabak.0": "*Don't get hit by the bees.",
+                    "Kharabak.0": "*Non farti colpire dalle api.",
                     "Kharabak.1": "*For wound focused weapons use insight tonic instead of aetherdrive",
                     "Koshai.0": "You can bait the frontal interrupt into the turn-around interrupt in a loop.",
                     "Koshai.1": "Like all Behemoths, Koshai's enrage resets the timer on the interrupt, position yourself to bait it right after the animation ends.",
@@ -270,15 +270,15 @@
                     "Pangar.1": "La rotolata interrompibile del Pangar al momento è buggata e non infligge alcun danno se non prorpio alla fine. Sfruttala per interruzioni molto semplici.",
                     "Quillshot.0": "You can build Skarn lantern/Frostwülf shield on the platform.",
                     "Rezakiri.0": "Be sure to use Revenant between 500 and 600 HP to keep Shrowd's Unique Effect active.",
-                    "Shadowtouched Koshai.0": "You can bait the interrupt at the start pretty easily, and the turn-around interrupt afterwards, just like normal Koshai.",
-                    "Shadowtouched Koshai.1": "The second time Shadowtouched Koshai goes into the ground, he spawns as far away as possible somewhere in the arena and shoots umbral orbs at you, during this time he is extremely vulnerable to damage.",
-                    "Shadowtouched Nayzaga.0": "Just like normal Nayzaga, U. Nayzaga starts the fight with his dual slide interrupt.",
+                    "Shadowtouched Koshai.0": "Puoi innescare l'interruzione all'inizio abbastanza facilmente, e l'interruzione della svolta in seguito, proprio come il normale Koshai.",
+                    "Shadowtouched Koshai.1": "La seconda volta che il Koshai Foscomanto va sotto terra, emerge il più lontano possibile da qualche parte nell'arena e spara palle d'ombra verso di te, durante questo periodo è estremamente vulnerabile ai danni.",
+                    "Shadowtouched Nayzaga.0": "Proprio come il normale Nayzaga, il Nayzaga Foscomanto inizia la lotta con la sua doppia interruzione in scivolata.",
                     "Shadowtouched Nayzaga.1": "L'impatto evoca-clone del Nayzaga non infligge danno, solo il clone lo fa.",
-                    "Shadowtouched Nayzaga.2": "After it goes into its portal, get ready for the following interrupt.",
-                    "Shrike.0": "Shrike's weakest parts are its head and wings.",
-                    "Shrike.1": "Shrike can be instantly booped after enrage.",
-                    "Shrowd.0": "You can use Discipline's Parry on enrage, if you jump at Shrowd the moment he teleports.",
-                    "Skarn.0": "If not using blunt weapons (strikers, hammer) focus the tail during enrage, the rock hitbox has a big gap there.",
+                    "Shadowtouched Nayzaga.2": "Nel momento in cui entra nel suo portale, preparati per l'interruzione.",
+                    "Shrike.0": "Le parti più vulnerabili dello Shrike sono la testa e le ali.",
+                    "Shrike.1": "Gli Shrike possono essere subito colpiti dopo la loro furia.",
+                    "Shrowd.0": "Se salti su uno Shrowd al momento del suo teletrasporto, puoi usare il contrattacco della Disciplina mentre si infuria.",
+                    "Skarn.0": "Se non usi armi stordenti (pugni corazzati, martelli) concentrati sulla coda durante la furia, l'hitbox prende molto spazio lì.",
                     "Skarn.1": "Unlike other weapons Repeaters prefer Drask bond because you want to be shooting the head for the whole run.",
                     "Thunderdeep Drask.0": "He do be a fast boi."
                 },
@@ -288,8 +288,8 @@
         }
     },
     "terms": {
-        "active": "Active",
-        "active-ability": "Active Ability",
+        "active": "Attiva",
+        "active-ability": "Abilità Attiva",
         "armour-alt": {
             "Arms": "Braccia",
             "Head": "Elmo",
@@ -366,21 +366,21 @@
             "Umbral": "Oscura"
         },
         "head-armour": "Elmo",
-        "hold": "Hold",
+        "hold": "Trattenuto",
         "lantern": "Lanterna",
         "legs-armour": "Gambali",
         "omnicell": "Omnicella",
-        "part": "Part",
+        "part": "Parte",
         "parts": {
-            "chamber": "Chamber",
+            "chamber": "Camera",
             "grip": "Calcio",
-            "mod": "Mod",
+            "mod": "Modifica",
             "special": "Special"
         },
-        "passive": "Passive",
-        "perks": "Perks",
-        "power": "Power",
-        "resistance": "Resistance",
+        "passive": "Passiva",
+        "perks": "Abilità",
+        "power": "Potenza",
+        "resistance": "Resistenza",
         "save": "Salva",
         "search": "Cerca",
         "torso-armour": "Corazza",
