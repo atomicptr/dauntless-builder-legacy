@@ -152,7 +152,6 @@
                     "Thrax (Rift)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker))",
                     "Thrax (Rift) Wound": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Riftstalker)) Wound",
                     "Thrax (Shrowd)": "$t(terms.behemoths.Thrax) ($t(terms.behemoths.Shrowd))",
-                    "Torg (C) Speed": "$t(terms.behemoths.Torgadoro) (C) Speed",
                     "Torg (C) Survival": "$t(terms.behemoths.Torgadoro) (C) Survival",
                     "Torg (Charrogg)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Charrogg))",
                     "Torg (H) Speed": "$t(terms.behemoths.Torgadoro) (H) Speed",
