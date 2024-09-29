@@ -18,7 +18,7 @@ export const adSpaceSize = {
     [UnitType.BottomRail]: { height: 50, width: 320 },
     [UnitType.Skyscraper]: { height: 600, width: 160 },
     [UnitType.MediumRect]: { height: 250, width: 300 },
-    [UnitType.RightRail]: { height: 600, width: 120},
+    [UnitType.RightRail]: { height: 600, width: 120 },
 };
 
 interface AdSpaceProps {
