@@ -4,9 +4,11 @@ import log from "@src/utils/logger";
 import { useSetAtom } from "jotai";
 import React, { useEffect } from "react";
 import ReactGA from "react-ga4";
+import { useLocation } from "react-router-dom";
 
 const TrackingRampSetup = () => {
     const setEvents = useSetAtom(eventsAtom);
+    const location = useLocation();
 
     useEffect(() => {
         const ga4Enabled = navigator.doNotTrack !== "1" && DB_GA4_MEASUREMENT_ID !== null;
@@ -71,6 +73,12 @@ const TrackingRampSetup = () => {
             });
         }
     }, [setEvents]);
+
+    useEffect(() => {
+        if (adsEnabled && !DB_DISPLAY_AD_PLACEHOLDERS) {
+            window.ramp.processPage(location.pathname);
+        }
+    }, [location]);
 
     return null;
 };

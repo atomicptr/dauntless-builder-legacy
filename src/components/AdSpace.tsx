@@ -72,6 +72,10 @@ const AdSpace: React.FC<AdSpaceProps> = ({ name, unitType }) => {
             log.debug(`ramp: initialized unit ${name} (${unitType})`);
         };
         initUnit();
+
+        return () => {
+            window.ramp.destroyUnits(selectorName).then(() => window.ramp.processPage(window.location.pathname));
+        };
     }, [events.playwireSetupHasFinished, events.playwireInitializedUnits, selectorName, unitType, setEvents, name]);
 
     if (DB_DISPLAY_AD_PLACEHOLDERS) {

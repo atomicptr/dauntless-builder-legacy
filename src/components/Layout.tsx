@@ -38,13 +38,7 @@ import LinkBox from "@src/components/LinkBox";
 import SomethingWentWrong from "@src/components/SometingWentWrong";
 import Spacer from "@src/components/Spacer";
 import { drawerWidth } from "@src/components/theme";
-import {
-    crowdinLink,
-    discordServerUrl,
-    githubUrl,
-    playwireUnitMobileBottomRail,
-    xTwitterUrl,
-} from "@src/constants";
+import { crowdinLink, discordServerUrl, githubUrl, playwireUnitMobileBottomRail, xTwitterUrl } from "@src/constants";
 import dauntlessBuilderData from "@src/data/Data";
 import useDevMode from "@src/hooks/dev-mode";
 import useIsMobile from "@src/hooks/is-mobile";

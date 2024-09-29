@@ -66,9 +66,9 @@ const DauntlessBuilderApp = () => {
                     FallbackComponent={SomethingWentWrong}
                     onError={(e, info) => log.error(e.message, { info })}
                 >
-                    <TrackingRampSetup />
                     <QueryClientProvider client={queryClient}>
                         <BrowserRouter>
+                            <TrackingRampSetup />
                             <SnackbarProvider
                                 TransitionComponent={Slide}
                                 anchorOrigin={{
