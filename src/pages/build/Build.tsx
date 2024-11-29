@@ -1,10 +1,13 @@
 import { ManageSearch } from "@mui/icons-material";
 import { Box, Button, Grid, ListSubheader, Typography } from "@mui/material";
+import AdSpace, { UnitType } from "@src/components/AdSpace";
 import BondWeaponPicker from "@src/components/BondWeaponPicker";
 import BuildWarning from "@src/components/BuildWarning";
 import CellPicker from "@src/components/CellPicker";
 import CellSelectDialog from "@src/components/CellSelectDialog";
 import CellSlotFilter from "@src/components/CellSlotFilter";
+import CenterBox from "@src/components/CenterBox";
+import ConstraintBox from "@src/components/ConstraintBox";
 import ElementalTypeFilter from "@src/components/ElementalTypeFilter";
 import GenericItemSelectDialog, { GenericItem } from "@src/components/GenericItemSelectDialog";
 import ItemPicker, { ItemPickerItem } from "@src/components/ItemPicker";
@@ -25,6 +28,7 @@ import PerkListMobile from "@src/components/PerkListMobile";
 import TagIcons from "@src/components/TagIcons";
 import UniqueEffectCard from "@src/components/UniqueEffectCard";
 import WeaponTypeFilter from "@src/components/WeaponTypeFilter";
+import { playwireUnitUnderPerkList } from "@src/constants";
 import { Armour, ArmourType } from "@src/data/Armour";
 import { BuildModel, findPartSlotName } from "@src/data/BuildModel";
 import { CellType } from "@src/data/Cell";
@@ -494,6 +498,15 @@ const Build: React.FC = () => {
                     sx={{ width: isMobile ? "100%" : undefined }}
                 >
                     {isMobile ? <PerkListMobile /> : <PerkList />}
+
+                    <ConstraintBox constraints={[]}>
+                        <CenterBox>
+                            <AdSpace
+                                name={playwireUnitUnderPerkList}
+                                unitType={UnitType.RightRail}
+                            />
+                        </CenterBox>
+                    </ConstraintBox>
 
                     <Button
                         onClick={onCopyBuildToFinderButtonClicked}

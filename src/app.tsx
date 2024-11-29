@@ -22,8 +22,6 @@ import BackgroundTasks from "@src/components/BackgroundTasks";
 import Favorites from "@src/pages/favorites/Favorites";
 import useIsMobile from "@src/hooks/is-mobile";
 import log from "@src/utils/logger";
-import SomethingWentWrong from "@src/components/SomethingWentWrong";
-import { ErrorBoundary } from "react-error-boundary";
 import useIsLightMode from "@src/hooks/light-mode";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { isRtlLanguage, Language } from "@src/i18n";
@@ -33,6 +31,10 @@ import rtlPlugin from "stylis-plugin-rtl";
 import { prefixer } from "stylis";
 import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
+import { ErrorBoundary } from "react-error-boundary";
+import SomethingWentWrong from "@src/components/SometingWentWrong";
+import Privacy from "./pages/about/Privacy";
+import TrackingRampSetup from "@src/components/TrackingRampSetup";
 
 const DauntlessBuilderApp = () => {
     const isMobile = useIsMobile();
@@ -66,6 +68,7 @@ const DauntlessBuilderApp = () => {
                 >
                     <QueryClientProvider client={queryClient}>
                         <BrowserRouter>
+                            <TrackingRampSetup />
                             <SnackbarProvider
                                 TransitionComponent={Slide}
                                 anchorOrigin={{
@@ -133,6 +136,11 @@ const DauntlessBuilderApp = () => {
                                             <Route
                                                 element={<About />}
                                                 path="/about"
+                                            />
+
+                                            <Route
+                                                element={<Privacy />}
+                                                path="/privacy"
                                             />
 
                                             <Route

@@ -5,7 +5,7 @@ if [[ -z $(command -v python) ]]; then
 fi
 
 if [[ -z $(command -v pipx) ]]; then
-  python -m pip install pipx
+  python -m install pipx -U > /dev/null
 fi
 
 if [[ -z $(command -v json-linter) ]]; then

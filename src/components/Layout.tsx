@@ -9,6 +9,7 @@ import {
     ManageSearch,
     Menu,
     Settings,
+    Shield,
     Stars,
 } from "@mui/icons-material";
 import {
@@ -30,10 +31,14 @@ import {
     Typography,
     useTheme,
 } from "@mui/material";
+import { UnitType } from "@src/components/AdSpace";
+import AdSpaceFloating from "@src/components/AdSpaceFloating";
 import BuildMenu from "@src/components/BuildMenu";
 import LinkBox from "@src/components/LinkBox";
+import SomethingWentWrong from "@src/components/SometingWentWrong";
+import Spacer from "@src/components/Spacer";
 import { drawerWidth } from "@src/components/theme";
-import { crowdinLink, discordServerUrl, githubUrl, xTwitterUrl } from "@src/constants";
+import { crowdinLink, discordServerUrl, githubUrl, playwireUnitMobileBottomRail, xTwitterUrl } from "@src/constants";
 import dauntlessBuilderData from "@src/data/Data";
 import useDevMode from "@src/hooks/dev-mode";
 import useIsMobile from "@src/hooks/is-mobile";
@@ -50,7 +55,6 @@ import { NavLink } from "react-router-dom";
 
 import { AppBar } from "./AppBar";
 import { DrawerHeader } from "./Drawer";
-import SomethingWentWrong from "./SomethingWentWrong";
 
 interface LayoutProps {
     children: ReactNode;
@@ -76,6 +80,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         { icon: <ManageSearch />, link: "/b/finder", text: t("drawer.build-finder") },
         { icon: <Stars />, link: "/b/meta", text: t("drawer.meta-builds") },
         { icon: <Info />, link: "/about", text: t("drawer.about") },
+        { icon: <Shield />, link: "/privacy", text: t("drawer.privacy") },
         { icon: <Settings />, link: "/settings", text: t("drawer.settings") },
     ];
 
@@ -132,7 +137,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         />
                     ) : null}
 
-                    <Box sx={{ flexGrow: 1 }}>{/* Spacer */}</Box>
+                    <Spacer />
 
                     <BuildMenu />
                 </Toolbar>
@@ -178,12 +183,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         </ListItem>
                     ))}
                 </List>
+
+                <Spacer />
+
                 <Box
                     sx={{
-                        bottom: 0,
-                        marginTop: "auto",
+                        marginTop: 1,
                         pb: 0,
-                        position: "fixed",
                         textAlign: "center",
                         width: drawerWidth,
                     }}
@@ -231,6 +237,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     </List>
                 </Box>
             </Drawer>
+
             <Container maxWidth={"xl"}>
                 <DrawerHeader sx={{ marginBottom: "16px" }} />
 
@@ -255,6 +262,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     <Box>{children}</Box>
                 </ErrorBoundary>
             </Container>
+
+            <AdSpaceFloating
+                bottom={0}
+                left={0}
+                name={playwireUnitMobileBottomRail}
+                right={0}
+                unitType={UnitType.BottomRail}
+                untilBreakpoint={"md"}
+            />
         </Box>
     );
 };

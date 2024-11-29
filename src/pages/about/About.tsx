@@ -172,15 +172,6 @@ const About: React.FC = () => {
                 component="div"
                 variant="h4"
             >
-                {t("pages.about.privacy")}
-            </Typography>
-
-            <Typography>{t("pages.about.privacy-text")}</Typography>
-
-            <Typography
-                component="div"
-                variant="h4"
-            >
                 {t("pages.about.assets")}
             </Typography>
 
