@@ -207,7 +207,7 @@
                         "name": "Sangue Freddo"
                     },
                     "Revenant": {
-                        "description": "Revenant is a high-risk high-reward Omnicell, featuring an active ability that consumes up to 500 HP to summon up to five umbral tendrils that deal high damage and put you in the Revenant state. When tendrils hit a target, they generate Void Orbs, collecting them gives you stacks of Void Energy, each providing a 4% damage while in Revenant state, a 1 second extension to Revenant state, and 115 healing over 10 seconds — after Revenant expires.",
+                        "description": "Redivivo è un' Omnicella con rischio-ricompensa, caratterizzata da un'abilità attiva che consuma fino a 500 HP per evocare fino a cinque tentacoli oscuri che infliggono gravi danni e scatena lo stato Redivivo. Quando un tentacolo colpisce il bersaglio, genera un nucleo di Vuoto e raccogliendoli, ciascuno garantisce +4% di danno durante lo stato Redivivo e aumentano la durata dello stato di 1 secondo e dopo il termine dello stato Redivivo, curano 115 HP per 10 secondi.",
                         "name": "Redivivo"
                     },
                     "Tempest": {
@@ -239,32 +239,32 @@
         },
         "settings": {
             "community-language": "Questa lingua non è ufficialmente supportata da Dauntless, ma i membri della nostra community hanno deciso di aggiungere la traduzione per Dauntless Builder in ogni caso.",
-            "data": "Application Data",
+            "data": "Dati dell'applicazione",
             "data-export": "Esporta",
             "data-import": "Importa",
             "data-text": "Al momento Dauntless Builder sta archiviando tutti i dati nel tuo Browser, cambiare dispositivo o Browser non manterrà nessuna delle tue builds preferite e/o altri dati. In futuro permetteremo di archiviare i dati in cloud, intanto è consigliato utilizzare la funzione \"importa/esporta\"(in impostazioni) per fare un backup dei dati e/o trasferirli tra dispositivi.",
             "dev-mode-toggle": "Attiva/Disattiva Modalità Sviluppatore",
             "enable-light-mode": "Abilità la modalità luminosa (usare a proprio rischio)",
             "export-logs": "Export logs",
-            "finder-options": "Build Finder Options",
+            "finder-options": "Opzioni Trova build",
             "general": "Generali",
             "language": "Lingua",
             "misc": "Varie",
             "title": "Impostazioni"
         },
         "trials": {
-            "description": "Meta builds for Trials encounters, these are not general hunt builds.",
+            "description": "Build meta per le sfide, queste non sono build di caccia.",
             "generated": {
                 "tips": {
-                    "Boreus [*].0": "You can use the Bombers and the Weak Spot to delay Boreus' Aethercharge. (the shield phase)",
+                    "Boreus [*].0": "Puoi usare i Bombardieri e il Punto debole per ritardare la carica di aether del Boreus. (la fase dello scudo)",
                     "Charrogg.0": "L'impatto della zampa anteriore sinistra del Charrogg non ti colpisce se sei vicino al suo collo.",
                     "Charrogg.1": "Le parti più deboli del Charrogg sono le sacche lanciafiamme (una su ogni lato della testa e del ventre).",
                     "Embermane.0": "Usa l'Embermane per proteggerti dalle sfere dei piloni elettrizzanti.",
-                    "Gnasher.0": "You can bait Gnasher's interrupt by getting close to him at the start of the fight. The cooldown resets on enrage.",
+                    "Gnasher.0": "Puoi attirare l'attacco interrompibile dello Gnasher avvicinandoti al behemoth all'inizio del combattimento. Il tempo di recupero si resetta quando si infuria.",
                     "Kharabak.0": "*Non farti colpire dalle api.",
                     "Kharabak.1": "*For wound focused weapons use insight tonic instead of aetherdrive",
                     "Koshai.0": "You can bait the frontal interrupt into the turn-around interrupt in a loop.",
-                    "Koshai.1": "Like all Behemoths, Koshai's enrage resets the timer on the interrupt, position yourself to bait it right after the animation ends.",
+                    "Koshai.1": "Come tutti i behemoth, la furia del Koshai resetta il timer all'interruzione, posizionati per attirarlo non appena finisce l'animazione.",
                     "Koshai.2": "Koshai grows its antlers at around 1 minute, be ready for the damage window that follows.",
                     "Pangar.0": "Pangar's interruptable roll is very easy to bait (does it twice in a row only), and the cooldown gets reset on enrage.",
                     "Pangar.1": "La rotolata interrompibile del Pangar al momento è buggata e non infligge alcun danno se non prorpio alla fine. Sfruttala per interruzioni molto semplici.",

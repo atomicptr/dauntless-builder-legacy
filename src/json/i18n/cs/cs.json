@@ -160,7 +160,7 @@
                     "Torg (H) Survival": "$t(terms.behemoths.Torgadoro) (H) Přežití",
                     "Torg (Hellion)": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion))",
                     "Torg (Hellion) Wound": "$t(terms.behemoths.Torgadoro) ($t(terms.behemoths.Hellion)) Rána",
-                    "Torg (hellion)": "$t(terms.behemoths.Torgadoro) (hellion)",
+                    "Torg (hellion)": "$t(terms.behemoths.Torgadoro) hellion",
                     "Urska (Boreus)": "$t(terms.behemoths.Urska) ($t(terms.behemoths.Boreus))",
                     "Urska (F)    Speed": "$t(terms.behemoths.Urska) (F) Rychlost",
                     "Urska (F)  Speed": "$t(terms.behemoths.Urska) (F) Rychlost",
@@ -182,7 +182,7 @@
                         "name": "Bašta"
                     },
                     "Catalyst": {
-                        "description": "These are the best builds you can have for general hunting, maximizing damage and using Blitz tonics as your source of attack speed.\nRecommended tonics for maximum damage: Frenzy, Blitz, Aetherdrive.",
+                        "description": ".",
                         "name": "Katalyzátor"
                     },
                     "Discipline": {
@@ -244,7 +244,7 @@
             "data-import": "Import",
             "data-text": "Dauntless Builder is currently storing all data inside your browser, which means switching devices or browsers will not retain any of your favorite builds and/or other data. In the future we plan to allow some sort of cloud data syncing but until then, you can use Import/Export to backup your data and/or move it between devices.",
             "dev-mode-toggle": "Toggle Developer Mode",
-            "enable-light-mode": "Enable Light Mode (Use this at your own risk!)",
+            "enable-light-mode": "",
             "export-logs": "Export logs",
             "finder-options": "Build Finder Options",
             "general": "General",

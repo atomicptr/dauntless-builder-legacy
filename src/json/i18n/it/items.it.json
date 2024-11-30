@@ -632,7 +632,7 @@
     "item.omnicells.tempest.active": "<b>Scatto tempestoso:</b> {{shockDamage}} danni folgoranti. +{{percentDamageToUnbrokenPart}}% di danno alle parti non lacerate per ogni {{percentMovementIncreaseThreshold}}% di incremento alla velocità di movimento. Dà la priorità alle parti non lacerate. Consuma una carica di Velocità.\n<b>Ricarica:</b> {{cooldown}}s. ",
     "item.omnicells.tempest.name": "Tempesta",
     "item.omnicells.tempest.passive": "+{{percentAttackSpeed}}% di velocità di attacco\n<b>Velocità:</b> Ottieni una carica di Velocità quando schivi un attacco. +{{percentMovespeed}}% di velocità di movimento per {{stackTime}}s (massimo 5 cariche).\n",
-    "item.parts.aetherstrikers.mods.cyclonic-strikeplate.name": "Cyclonic Strikeplate",
+    "item.parts.aetherstrikers.mods.cyclonic-strikeplate.name": "Placca tifonica",
     "item.parts.aetherstrikers.mods.cyclonic-strikeplate.part_effect.0": "Tempest Form duration increased by {{timeIncreased}} seconds. When Tempest Form has less than {{timeLess}} seconds remaining, deal +{{damage}}% damage.",
     "item.parts.aetherstrikers.mods.echo-bracedriver.name": "Echo Bracedriver",
     "item.parts.aetherstrikers.mods.echo-bracedriver.part_effect.0": "Critical strikes increase the damage dealt by Karma Breaker's damage over time by {{damage}}% until the debuff ends or is refreshed.",
