@@ -1,3 +1,11 @@
+# Dauntless Builder (Legacy)
+
+This is the repository of Dauntless Builder from a time before "Dauntless Awakened" released, please head over to the new repository here:
+
+- [https://github.com/atomicptr/dauntless-builder](https://github.com/atomicptr/dauntless-builder)
+
+----
+
 # dauntless-builder
 
 [![Build Status](https://github.com/atomicptr/dauntless-builder/actions/workflows/tests.yml/badge.svg)](https://github.com/atomicptr/dauntless-builder/actions/workflows/tests.yml)
