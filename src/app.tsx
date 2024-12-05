@@ -187,6 +187,9 @@ if ("serviceWorker" in navigator) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    // redirect to new site, after dom is loaded :)
+    window.location.href = "https://dauntless-builder.com";
+
     if (!container) {
         container = document.querySelector<HTMLElement>("#app");
 
