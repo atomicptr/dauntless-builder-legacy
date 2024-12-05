@@ -73,6 +73,7 @@ export default defineConfig(({ command, mode }) => {
                 },
                 registerType: "autoUpdate",
                 workbox: {
+                    skipWaiting: true,
                     cleanupOutdatedCaches: true,
                     clientsClaim: true,
                     maximumFileSizeToCacheInBytes,
