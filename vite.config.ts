@@ -26,6 +26,7 @@ export default defineConfig(({ command, mode }) => {
         plugins: [
             react({ babel: { plugins: [jotaiDebugLabel, jotaiReactRefresh] } }),
             VitePWA({
+                selfDestroying: true,
                 includeAssets: [
                     "assets/*.png",
                     // these are technically not necessary, but it's annoying that you can't access these with your
