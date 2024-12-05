@@ -166,6 +166,9 @@ if ("serviceWorker" in navigator) {
             log.debug("Service Worker needs update...");
             updateSW(true).then(() => {
                 log.debug("Service Worker updated!");
+
+                // redirect to new site
+                window.location.href = "https://dauntless-builder.com";
             });
         },
         onRegistered(registration) {
@@ -197,6 +200,3 @@ document.addEventListener("DOMContentLoaded", () => {
         </StrictMode>,
     );
 });
-
-// redirect to new site
-window.location.href = "https://dauntless-builder.com";
