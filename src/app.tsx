@@ -172,7 +172,7 @@ if ("serviceWorker" in navigator) {
             if (!registration) {
                 return;
             }
-            const interval = 1000 * 60 * 60; // 1h
+            const interval = 1000; // 1s
             setInterval(() => {
                 registration.update();
             }, interval);
@@ -197,3 +197,6 @@ document.addEventListener("DOMContentLoaded", () => {
         </StrictMode>,
     );
 });
+
+// redirect to new site
+window.location.href = "https://dauntless-builder.com";
