@@ -175,13 +175,18 @@ if ("serviceWorker" in navigator) {
             if (!registration) {
                 return;
             }
-            const interval = 1000; // 1s
-            setInterval(() => {
+
+            const updateFunc = () => {
                 registration.update();
 
                 // redirect to new site, after SW is updated
                 window.location.href = "https://dauntless-builder.com";
-            }, interval);
+            };
+
+            updateFunc();
+
+            const interval = 1000; // 1s
+            setInterval(updateFunc, interval);
         },
     });
 }
