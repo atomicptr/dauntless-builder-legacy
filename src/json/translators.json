@@ -67,7 +67,7 @@
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15575103/medium/6978a2772d6b420610ab6893d21583a2_default.png",
-        "contributions": 266,
+        "contributions": 274,
         "proofreader": false,
         "username": "ezIvan"
     },
@@ -376,6 +376,12 @@
         "contributions": 3,
         "proofreader": false,
         "username": "Zyberwolf38"
+    },
+    {
+        "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16725991/medium/cf92d97864ae69ea914a66305e2fbd2f.png",
+        "contributions": 3,
+        "proofreader": false,
+        "username": "Bradek"
     },
     {
         "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16022610/medium/7fa67cd2eca34e17a6adc8b448892710.jpeg",
